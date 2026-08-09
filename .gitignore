@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local generated outputs and caches
+.tmp/
+tmp/
+*.log
+
+# Audio/video and downloaded media
+*.mp3
+*.m4a
+*.m4s
+*.wav
+*.flac
+*.aac
+*.mp4
+*.webm
+
+# Large archives, installers, and model artifacts
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.exe
+*.msi
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# Benchmark datasets and generated predictions
+benchmarks/audio/
+benchmarks/raw/
+benchmarks/predictions/
+benchmarks/external_chords/
+benchmarks/imported/
+benchmarks/reports/
+benchmarks/template_bass_predictions/
+
+# Third-party tools installed locally
+tools/
+
+# Per-video working folders
+projects/
+
+# Local generated chord exports in repository root
+*_chords.csv
+*_bar_chords.csv
+*_bar_chords.txt
+*_analysis.json
+*_studio.html

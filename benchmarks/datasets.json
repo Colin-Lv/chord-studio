@@ -1,0 +1,33 @@
+{
+  "billboard": {
+    "name": "McGill Billboard Chord Recognition Dataset",
+    "tasks": ["chord", "key", "transition_statistics"],
+    "official_url": "https://ddmal.ca/research/The_McGill_Billboard_Project_%28Chord_Analysis_Dataset%29/",
+    "code_or_annotations": "https://github.com/DDMAL/billboard",
+    "audio_note": "Audio is not bundled; use legally obtained matching recordings."
+  },
+  "isophonics": {
+    "name": "Isophonics Datasets",
+    "tasks": ["chord", "beat", "downbeat", "key", "structure"],
+    "official_url": "https://isophonics.net/datasets",
+    "audio_note": "Annotations are provided separately from copyrighted audio."
+  },
+  "ballroom": {
+    "name": "Ballroom Dataset / BallroomAnnotations",
+    "tasks": ["tempo", "beat", "bar", "meter"],
+    "official_url": "https://github.com/CPJKU/BallroomAnnotations",
+    "audio_note": "Use the dataset according to its distribution terms."
+  },
+  "salami": {
+    "name": "SALAMI Structural Annotations",
+    "tasks": ["section", "structure", "progression_context"],
+    "official_url": "https://github.com/DDMAL/salami-data-public",
+    "audio_note": "Structural annotations only; audio matching is user-provided."
+  },
+  "rwc_pop": {
+    "name": "RWC Music Database: Popular Music",
+    "tasks": ["chord", "pop_generalization"],
+    "official_url": "https://staff.aist.go.jp/m.goto/RWC-MDB/",
+    "audio_note": "Requires proper access to the RWC database."
+  }
+}

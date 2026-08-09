@@ -1,0 +1,182 @@
+# Audio Checklist: manifest.isophonics_beatles_all.csv
+
+- [ ] 001. The Beatles - 01 - I Saw Her Standing There | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_01_-_I_Saw_Her_Standing_There` | key: E
+- [ ] 002. The Beatles - 02 - Misery | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery` | key: C
+- [ ] 003. The Beatles - 03 - Anna Go To Him | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him` | key: D
+- [ ] 004. The Beatles - 04 - Chains | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains` | key: Bb
+- [ ] 005. The Beatles - 05 - Boys | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys` | key: E
+- [ ] 006. The Beatles - 06 - Ask Me Why | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why` | key: E
+- [ ] 007. The Beatles - 07 - Please Please Me | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me` | key: E
+- [ ] 008. The Beatles - 08 - Love Me Do | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_08_-_Love_Me_Do` | key: G
+- [ ] 009. The Beatles - 09 - P. S. I Love You | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You` | key: D:aeolian
+- [ ] 010. The Beatles - 10 - Baby It s You | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You` | key: G
+- [ ] 011. The Beatles - 11 - Do You Want To Know A Secret | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_11_-_Do_You_Want_To_Know_A_Secret` | key: E
+- [ ] 012. The Beatles - 12 - A Taste Of Honey | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_12_-_A_Taste_Of_Honey` | key: F#m
+- [ ] 013. The Beatles - 13 - There s A Place | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place` | key: E
+- [ ] 014. The Beatles - 14 - Twist And Shout | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_14_-_Twist_And_Shout` | key: D
+- [ ] 015. The Beatles - 01 - It Won t Be Long | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long` | key: E
+- [ ] 016. The Beatles - 02 - All I ve Got To Do | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do` | key: E
+- [ ] 017. The Beatles - 03 - All My Loving | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving` | key: E
+- [ ] 018. The Beatles - 04 - Don t Bother Me | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me` | key: Em
+- [ ] 019. The Beatles - 05 - Little Child | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_05_-_Little_Child` | key: E
+- [ ] 020. The Beatles - 06 - Till There Was You | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You` | key: F
+- [ ] 021. The Beatles - 07 - Please Mister Postman | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman` | key: A
+- [ ] 022. The Beatles - 08 - Roll Over Beethoven | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven` | key: D
+- [ ] 023. The Beatles - 09 - Hold Me Tight | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_09_-_Hold_Me_Tight` | key: F
+- [ ] 024. The Beatles - 10 - You Really Got A Hold On Me | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_10_-_You_Really_Got_A_Hold_On_Me` | key: A
+- [ ] 025. The Beatles - 11 - I Wanna Be Your Man | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man` | key: E
+- [ ] 026. The Beatles - 12 - Devil In Her Heart | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart` | key: G
+- [ ] 027. The Beatles - 13 - Not A Second Time | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_13_-_Not_A_Second_Time` | key: Em
+- [ ] 028. The Beatles - 14 - Money | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_14_-_Money` | key: E
+- [ ] 029. The Beatles - 01 - A Hard Day s Night | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night` | key: G
+- [ ] 030. The Beatles - 02 - I Should Have Known Better | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_02_-_I_Should_Have_Known_Better` | key: G
+- [ ] 031. The Beatles - 03 - If I Fell | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell` | key: D
+- [ ] 032. The Beatles - 04 - I m Happy Just To Dance With You | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You` | key: E
+- [ ] 033. The Beatles - 05 - And I Love Her | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_05_-_And_I_Love_Her` | key: E
+- [ ] 034. The Beatles - 06 - Tell Me Why | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_06_-_Tell_Me_Why` | key: D
+- [ ] 035. The Beatles - 07 - Can t Buy Me Love | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_07_-_Can_t_Buy_Me_Love` | key: C
+- [ ] 036. The Beatles - 08 - Any Time At All | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_08_-_Any_Time_At_All` | key: D
+- [ ] 037. The Beatles - 09 - I ll Cry Instead | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_09_-_I_ll_Cry_Instead` | key: G
+- [ ] 038. The Beatles - 10 - Things We Said Today | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_10_-_Things_We_Said_Today` | key: Am
+- [ ] 039. The Beatles - 11 - When I Get Home | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home` | key: C
+- [ ] 040. The Beatles - 12 - You Can t Do That | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_12_-_You_Can_t_Do_That` | key: G
+- [ ] 041. The Beatles - 13 - I ll Be Back | album: 03 - A Hard Day s Night | id: `isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back` | key: A
+- [ ] 042. The Beatles - 01 - No Reply | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_01_-_No_Reply` | key: C
+- [ ] 043. The Beatles - 02 - I m a Loser | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_02_-_I_m_a_Loser` | key: G
+- [ ] 044. The Beatles - 03 - Baby s In Black | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_03_-_Baby_s_In_Black` | key: A
+- [ ] 045. The Beatles - 04 - Rock and Roll Music | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_04_-_Rock_and_Roll_Music` | key: A
+- [ ] 046. The Beatles - 05 - I ll Follow the Sun | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_05_-_I_ll_Follow_the_Sun` | key: C
+- [ ] 047. The Beatles - 06 - Mr. Moonlight | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_06_-_Mr._Moonlight` | key: F#
+- [ ] 048. The Beatles - 07 - Kansas City- Hey Hey Hey Hey | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_07_-_Kansas_City-_Hey__Hey__Hey__Hey` | key: G
+- [ ] 049. The Beatles - 08 - Eight Days a Week | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_08_-_Eight_Days_a_Week` | key: D
+- [ ] 050. The Beatles - 09 - Words of Love | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_09_-_Words_of_Love` | key: A
+- [ ] 051. The Beatles - 10 - Honey Don t | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_10_-_Honey_Don_t` | key: E
+- [ ] 052. The Beatles - 11 - Every Little Thing | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_11_-_Every_Little_Thing` | key: A
+- [ ] 053. The Beatles - 12 - I Don t Want to Spoil the Party | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_12_-_I_Don_t_Want_to_Spoil_the_Party` | key: G
+- [ ] 054. The Beatles - 13 - What You re Doing | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_13_-_What_You_re_Doing` | key: D
+- [ ] 055. The Beatles - 14 - Everybody s Trying to Be My Baby | album: 04 - Beatles for Sale | id: `isophonics_all_The_Beatles_04_-_Beatles_for_Sale_14_-_Everybody_s_Trying_to_Be_My_Baby` | key: E
+- [ ] 056. The Beatles - 01 - Help | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_01_-_Help` | key: A
+- [ ] 057. The Beatles - 02 - The Night Before | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_02_-_The_Night_Before` | key: D
+- [ ] 058. The Beatles - 03 - You ve Got To Hide Your Love Away | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away` | key: G:mixolydian
+- [ ] 059. The Beatles - 04 - I Need You | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_04_-_I_Need_You` | key: A
+- [ ] 060. The Beatles - 05 - Another Girl | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl` | key: A
+- [ ] 061. The Beatles - 06 - You re Going To Lose That Girl | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl` | key: E
+- [ ] 062. The Beatles - 07 - Ticket To Ride | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride` | key: A
+- [ ] 063. The Beatles - 08 - Act Naturally | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally` | key: G
+- [ ] 064. The Beatles - 09 - It s Only Love | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love` | key: C
+- [ ] 065. The Beatles - 10 - You Like Me Too Much | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much` | key: G
+- [ ] 066. The Beatles - 11 - Tell Me What You See | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See` | key: G
+- [ ] 067. The Beatles - 12 - I ve Just Seen a Face | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face` | key: A
+- [ ] 068. The Beatles - 13 - Yesterday | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday` | key: F
+- [ ] 069. The Beatles - 14 - Dizzy Miss Lizzy | album: 05 - Help | id: `isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy` | key: A
+- [ ] 070. The Beatles - 01 - Drive My Car | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_01_-_Drive_My_Car` | key: D
+- [ ] 071. The Beatles - 02 - Norwegian Wood This Bird Has Flown | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown` | key: E
+- [ ] 072. The Beatles - 03 - You Won t See Me | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me` | key: A
+- [ ] 073. The Beatles - 04 - Nowhere Man | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_04_-_Nowhere_Man` | key: E
+- [ ] 074. The Beatles - 05 - Think For Yourself | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_05_-_Think_For_Yourself` | key: G
+- [ ] 075. The Beatles - 06 - The Word | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word` | key: D
+- [ ] 076. The Beatles - 07 - Michelle | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle` | key: F
+- [ ] 077. The Beatles - 08 - What Goes On | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On` | key: E
+- [ ] 078. The Beatles - 09 - Girl | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_09_-_Girl` | key: Eb
+- [ ] 079. The Beatles - 10 - I m Looking Through You | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You` | key: Ab
+- [ ] 080. The Beatles - 11 - In My Life | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life` | key: A
+- [ ] 081. The Beatles - 12 - Wait | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait` | key: F#m
+- [ ] 082. The Beatles - 13 - If I Needed Someone | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_13_-_If_I_Needed_Someone` | key: A
+- [ ] 083. The Beatles - 14 - Run For Your Life | album: 06 - Rubber Soul | id: `isophonics_all_The_Beatles_06_-_Rubber_Soul_14_-_Run_For_Your_Life` | key: D
+- [ ] 084. The Beatles - 01 - Taxman | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_01_-_Taxman` | key: D
+- [ ] 085. The Beatles - 02 - Eleanor Rigby | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby` | key: Em
+- [ ] 086. The Beatles - 03 - I m Only Sleeping | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping` | key: Ebm
+- [ ] 087. The Beatles - 04 - Love You To | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To` | key: Cm
+- [ ] 088. The Beatles - 05 - Here There And Everywhere | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere` | key: G
+- [ ] 089. The Beatles - 06 - Yellow Submarine | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine` | key: G
+- [ ] 090. The Beatles - 07 - She Said She Said | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_07_-_She_Said_She_Said` | key: Bb
+- [ ] 091. The Beatles - 08 - Good Day Sunshine | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine` | key: A
+- [ ] 092. The Beatles - 09 - And Your Bird Can Sing | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing` | key: E
+- [ ] 093. The Beatles - 10 - For No One | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One` | key: B
+- [ ] 094. The Beatles - 11 - Doctor Robert | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert` | key: B
+- [ ] 095. The Beatles - 12 - I Want To Tell You | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_12_-_I_Want_To_Tell_You` | key: A
+- [ ] 096. The Beatles - 13 - Got To Get You Into My Life | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life` | key: G
+- [ ] 097. The Beatles - 14 - Tomorrow Never Knows | album: 07 - Revolver | id: `isophonics_all_The_Beatles_07_-_Revolver_14_-_Tomorrow_Never_Knows` | key: C
+- [ ] 098. The Beatles - 01 - Sgt. Pepper s Lonely Hearts Club Band | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_01_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band` | key: G
+- [ ] 099. The Beatles - 02 - With A Little Help From My Friends | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_02_-_With_A_Little_Help_From_My_Friends` | key: E
+- [ ] 100. The Beatles - 03 - Lucy In The Sky With Diamonds | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_03_-_Lucy_In_The_Sky_With_Diamonds` | key: G
+- [ ] 101. The Beatles - 04 - Getting Better | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_04_-_Getting_Better` | key: C
+- [ ] 102. The Beatles - 05 - Fixing A Hole | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_05_-_Fixing_A_Hole` | key: F:dorian
+- [ ] 103. The Beatles - 06 - She s Leaving Home | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_06_-_She_s_Leaving_Home` | key: E
+- [ ] 104. The Beatles - 07 - Being For The Benefit Of Mr. Kite | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_07_-_Being_For_The_Benefit_Of_Mr._Kite` | key: Dm
+- [ ] 105. The Beatles - 08 - Within You Without You | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_08_-_Within_You_Without_You` | key: C#:modal
+- [ ] 106. The Beatles - 09 - When I m Sixty-Four | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_09_-_When_I_m_Sixty-Four` | key: Db
+- [ ] 107. The Beatles - 10 - Lovely Rita | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_10_-_Lovely_Rita` | key: E
+- [ ] 108. The Beatles - 11 - Good Morning Good Morning | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_11_-_Good_Morning_Good_Morning` | key: A
+- [ ] 109. The Beatles - 12 - Sgt. Pepper s Lonely Hearts Club Band Reprise | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_12_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band__Reprise` | key: F
+- [ ] 110. The Beatles - 13 - A Day In The Life | album: 08 - Sgt. Pepper s Lonely Hearts Club Band | id: `isophonics_all_The_Beatles_08_-_Sgt._Pepper_s_Lonely_Hearts_Club_Band_13_-_A_Day_In_The_Life` | key: G
+- [ ] 111. The Beatles - 01 - Magical Mystery Tour | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_01_-_Magical_Mystery_Tour` | key: D
+- [ ] 112. The Beatles - 02 - The Fool On The Hill | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_02_-_The_Fool_On_The_Hill` | key: D
+- [ ] 113. The Beatles - 03 - Flying | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_03_-_Flying` | key: C
+- [ ] 114. The Beatles - 04 - Blue Jay Way | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_04_-_Blue_Jay_Way` | key: C
+- [ ] 115. The Beatles - 05 - Your Mother Should Know | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_05_-_Your_Mother_Should_Know` | key: C
+- [ ] 116. The Beatles - 06 - I Am The Walrus | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_06_-_I_Am_The_Walrus` | key: A
+- [ ] 117. The Beatles - 07 - Hello Goodbye | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_07_-_Hello_Goodbye` | key: C
+- [ ] 118. The Beatles - 08 - Strawberry Fields Forever | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_08_-_Strawberry_Fields_Forever` | key: Bb
+- [ ] 119. The Beatles - 09 - Penny Lane | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_09_-_Penny_Lane` | key: B
+- [ ] 120. The Beatles - 10 - Baby You re A Rich Man | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_10_-_Baby_You_re_A_Rich_Man` | key: G:mixolydian
+- [ ] 121. The Beatles - 11 - All You Need Is Love | album: 09 - Magical Mystery Tour | id: `isophonics_all_The_Beatles_09_-_Magical_Mystery_Tour_11_-_All_You_Need_Is_Love` | key: G
+- [ ] 122. The Beatles - 01 - Back in the USSR | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_01_-_Back_in_the_USSR` | key: A
+- [ ] 123. The Beatles - 02 - Dear Prudence | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_02_-_Dear_Prudence` | key: D:mixolydian
+- [ ] 124. The Beatles - 03 - Glass Onion | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_03_-_Glass_Onion` | key: Am
+- [ ] 125. The Beatles - 04 - Ob-La-Di Ob-La-Da | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_04_-_Ob-La-Di__Ob-La-Da` | key: B
+- [ ] 126. The Beatles - 05 - Wild Honey Pie | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_05_-_Wild_Honey_Pie` | key: G
+- [ ] 127. The Beatles - 06 - The Continuing Story of Bungalow Bill | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_06_-_The_Continuing_Story_of_Bungalow_Bill` | key: C
+- [ ] 128. The Beatles - 07 - While My Guitar Gently Weeps | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_07_-_While_My_Guitar_Gently_Weeps` | key: Am
+- [ ] 129. The Beatles - 08 - Happiness is a Warm Gun | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_08_-_Happiness_is_a_Warm_Gun` | key: C
+- [ ] 130. The Beatles - 09 - Martha My Dear | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_09_-_Martha_My_Dear` | key: Eb
+- [ ] 131. The Beatles - 10 - I m So Tired | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_10_-_I_m_So_Tired` | key: A
+- [ ] 132. The Beatles - 11 - Black Bird | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_11_-_Black_Bird` | key: G
+- [ ] 133. The Beatles - 12 - Piggies | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_12_-_Piggies` | key: A
+- [ ] 134. The Beatles - 13 - Rocky Raccoon | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_13_-_Rocky_Raccoon` | key: C
+- [ ] 135. The Beatles - 14 - Don t Pass Me By | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_14_-_Don_t_Pass_Me_By` | key: C
+- [ ] 136. The Beatles - 15 - Why Don t We Do It In The Road | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_15_-_Why_Don_t_We_Do_It_In_The_Road` | key: D
+- [ ] 137. The Beatles - 16 - I Will | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_16_-_I_Will` | key: F
+- [ ] 138. The Beatles - 17 - Julia | album: 10CD1 - The Beatles CD1 - | id: `isophonics_all_The_Beatles_10CD1_-_The_Beatles_CD1_-_17_-_Julia` | key: D
+- [ ] 139. The Beatles - 01 - Birthday | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_01_-_Birthday` | key: A
+- [ ] 140. The Beatles - 02 - Yer Blues | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_02_-_Yer_Blues` | key: E
+- [ ] 141. The Beatles - 03 - Mother Nature s Son | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_03_-_Mother_Nature_s_Son` | key: D
+- [ ] 142. The Beatles - 04 - Everybody s Got Something To Hide Except Me and My Monkey | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_04_-_Everybody_s_Got_Something_To_Hide_Except_Me_and_My_Monkey` | key: E
+- [ ] 143. The Beatles - 05 - Sexy Sadie | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_05_-_Sexy_Sadie` | key: G
+- [ ] 144. The Beatles - 06 - Helter Skelter | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_06_-_Helter_Skelter` | key: E
+- [ ] 145. The Beatles - 07 - Long Long Long | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_07_-_Long_Long_Long` | key: F
+- [ ] 146. The Beatles - 08 - Revolution 1 | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_08_-_Revolution_1` | key: B
+- [ ] 147. The Beatles - 09 - Honey Pie | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_09_-_Honey_Pie` | key: G
+- [ ] 148. The Beatles - 10 - Savoy Truffle | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_10_-_Savoy_Truffle` | key: G
+- [ ] 149. The Beatles - 11 - Cry Baby Cry | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_11_-_Cry_Baby_Cry` | key: G
+- [ ] 150. The Beatles - 12 - Revolution 9 | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_12_-_Revolution_9` | key: 
+- [ ] 151. The Beatles - 13 - Good Night | album: 10CD2 - The Beatles CD2 - | id: `isophonics_all_The_Beatles_10CD2_-_The_Beatles_CD2_-_13_-_Good_Night` | key: G
+- [ ] 152. The Beatles - 01 - Come Together | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_01_-_Come_Together` | key: Dm
+- [ ] 153. The Beatles - 02 - Something | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_02_-_Something` | key: C
+- [ ] 154. The Beatles - 03 - Maxwell s Silver Hammer | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_03_-_Maxwell_s_Silver_Hammer` | key: D
+- [ ] 155. The Beatles - 04 - Oh Darling | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_04_-_Oh__Darling` | key: A
+- [ ] 156. The Beatles - 05 - Octopus s Garden | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_05_-_Octopus_s_Garden` | key: E
+- [ ] 157. The Beatles - 06 - I Want You | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_06_-_I_Want_You` | key: Dm
+- [ ] 158. The Beatles - 07 - Here Comes The Sun | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_07_-_Here_Comes_The_Sun` | key: Am
+- [ ] 159. The Beatles - 08 - Because | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_08_-_Because` | key: C#m
+- [ ] 160. The Beatles - 09 - You Never Give Me Your Money | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_09_-_You_Never_Give_Me_Your_Money` | key: A
+- [ ] 161. The Beatles - 10 - Sun King | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_10_-_Sun_King` | key: E
+- [ ] 162. The Beatles - 11 - Mean Mr Mustard | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_11_-_Mean_Mr_Mustard` | key: E
+- [ ] 163. The Beatles - 12 - Polythene Pam | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_12_-_Polythene_Pam` | key: E
+- [ ] 164. The Beatles - 13 - She Came In Through The Bathroom Window | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_13_-_She_Came_In_Through_The_Bathroom_Window` | key: A
+- [ ] 165. The Beatles - 14 - Golden Slumbers | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_14_-_Golden_Slumbers` | key: Am
+- [ ] 166. The Beatles - 15 - Carry That Weight | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_15_-_Carry_That_Weight` | key: C
+- [ ] 167. The Beatles - 16 - The End | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_16_-_The_End` | key: A
+- [ ] 168. The Beatles - 17 - Her Majesty | album: 11 - Abbey Road | id: `isophonics_all_The_Beatles_11_-_Abbey_Road_17_-_Her_Majesty` | key: D
+- [ ] 169. The Beatles - 01 - Two of Us | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_01_-_Two_of_Us` | key: G
+- [ ] 170. The Beatles - 02 - Dig a Pony | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_02_-_Dig_a_Pony` | key: A
+- [ ] 171. The Beatles - 03 - Across the Universe | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_03_-_Across_the_Universe` | key: D
+- [ ] 172. The Beatles - 04 - I Me Mine | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_04_-_I_Me_Mine` | key: Am
+- [ ] 173. The Beatles - 05 - Dig It | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_05_-_Dig_It` | key: F
+- [ ] 174. The Beatles - 06 - Let It Be | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_06_-_Let_It_Be` | key: C
+- [ ] 175. The Beatles - 07 - Maggie Mae | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_07_-_Maggie_Mae` | key: G
+- [ ] 176. The Beatles - 08 - I ve Got A Feeling | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_08_-_I_ve_Got_A_Feeling` | key: A
+- [ ] 177. The Beatles - 09 - One After 909 | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_09_-_One_After_909` | key: B
+- [ ] 178. The Beatles - 10 - The Long and Winding Road | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_10_-_The_Long_and_Winding_Road` | key: Eb
+- [ ] 179. The Beatles - 11 - For You Blue | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_11_-_For_You_Blue` | key: D
+- [ ] 180. The Beatles - 12 - Get Back | album: 12 - Let It Be | id: `isophonics_all_The_Beatles_12_-_Let_It_Be_12_-_Get_Back` | key: A:mixolydian

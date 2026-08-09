@@ -1,0 +1,3 @@
+id,dataset,split,artist,title,audio,prediction,chord_reference,beat_reference,key,meter,notes
+chengdu_downbeat_external_bar_v1,local,dev,Zhao Lei,Chengdu,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_audio.m4a,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_downbeat_external_bar_v1_analysis.json,,,,D,6/8,alignment test item; add corrected chord/beat references when available
+chengdu_downbeat_external_compound_v1,local,dev,Zhao Lei,Chengdu,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_audio.m4a,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_downbeat_external_compound_v1_analysis.json,,,,D,6/8,compound-half comparison item; add corrected references when available

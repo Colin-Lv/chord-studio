@@ -1,0 +1,5 @@
+id,dataset,split,artist,title,audio,prediction,chord_reference,beat_reference,key,meter,notes
+chengdu_local_v1,local,dev,Zhao Lei,Chengdu,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_audio.m4a,../projects/BV1oN4y1r7WV/BV1oN4y1r7WV_downbeat_external_bar_v1_analysis.json,,,,D,6/8,local example without reference labels yet
+billboard_placeholder_001,billboard,dev,,,,predictions/billboard_placeholder_001_analysis.json,raw/billboard/annotations/001.lab,,,
+isophonics_placeholder_001,isophonics,dev,,,,predictions/isophonics_placeholder_001_analysis.json,raw/isophonics/chords/001.lab,raw/isophonics/beats/001.beats,,
+ballroom_placeholder_001,ballroom,dev,,,,predictions/ballroom_placeholder_001_analysis.json,,raw/ballroom/annotations/001.beats,,,

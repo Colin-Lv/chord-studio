@@ -1,0 +1,72 @@
+# Audio Checklist: manifest.public_dev.csv
+
+- [ ] 001. The Beatles - 01 - I Saw Her Standing There | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_01_-_I_Saw_Her_Standing_There` | key: E
+- [ ] 002. The Beatles - 02 - Misery | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery` | key: C
+- [ ] 003. The Beatles - 03 - Anna Go To Him | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him` | key: D
+- [ ] 004. The Beatles - 04 - Chains | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains` | key: Bb
+- [ ] 005. The Beatles - 05 - Boys | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys` | key: E
+- [ ] 006. The Beatles - 06 - Ask Me Why | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why` | key: E
+- [ ] 007. The Beatles - 07 - Please Please Me | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me` | key: E
+- [ ] 008. The Beatles - 08 - Love Me Do | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_08_-_Love_Me_Do` | key: G
+- [ ] 009. The Beatles - 09 - P. S. I Love You | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You` | key: D:aeolian
+- [ ] 010. The Beatles - 10 - Baby It s You | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You` | key: G
+- [ ] 011. The Beatles - 11 - Do You Want To Know A Secret | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_11_-_Do_You_Want_To_Know_A_Secret` | key: E
+- [ ] 012. The Beatles - 12 - A Taste Of Honey | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_12_-_A_Taste_Of_Honey` | key: F#m
+- [ ] 013. The Beatles - 13 - There s A Place | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place` | key: E
+- [ ] 014. The Beatles - 14 - Twist And Shout | album: 01 - Please Please Me | id: `isophonics_all_The_Beatles_01_-_Please_Please_Me_14_-_Twist_And_Shout` | key: D
+- [ ] 015. The Beatles - 01 - It Won t Be Long | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long` | key: E
+- [ ] 016. The Beatles - 02 - All I ve Got To Do | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do` | key: E
+- [ ] 017. The Beatles - 03 - All My Loving | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving` | key: E
+- [ ] 018. The Beatles - 04 - Don t Bother Me | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me` | key: Em
+- [ ] 019. The Beatles - 05 - Little Child | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_05_-_Little_Child` | key: E
+- [ ] 020. The Beatles - 06 - Till There Was You | album: 02 - With the Beatles | id: `isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You` | key: F
+- [ ] 021. Ballroom - Albums-AnaBelen_Veneo-01 | id: `ballroom_Albums-AnaBelen_Veneo-01`
+- [ ] 022. Ballroom - Albums-AnaBelen_Veneo-02 | id: `ballroom_Albums-AnaBelen_Veneo-02`
+- [ ] 023. Ballroom - Albums-AnaBelen_Veneo-03 | id: `ballroom_Albums-AnaBelen_Veneo-03`
+- [ ] 024. Ballroom - Albums-AnaBelen_Veneo-11 | id: `ballroom_Albums-AnaBelen_Veneo-11`
+- [ ] 025. Ballroom - Albums-AnaBelen_Veneo-13 | id: `ballroom_Albums-AnaBelen_Veneo-13`
+- [ ] 026. Ballroom - Albums-AnaBelen_Veneo-15 | id: `ballroom_Albums-AnaBelen_Veneo-15`
+- [ ] 027. Ballroom - Albums-Ballroom_Classics4-01 | id: `ballroom_Albums-Ballroom_Classics4-01`
+- [ ] 028. Ballroom - Albums-Ballroom_Classics4-02 | id: `ballroom_Albums-Ballroom_Classics4-02`
+- [ ] 029. Ballroom - Albums-Ballroom_Classics4-03 | id: `ballroom_Albums-Ballroom_Classics4-03`
+- [ ] 030. Ballroom - Albums-Ballroom_Classics4-04 | id: `ballroom_Albums-Ballroom_Classics4-04`
+- [ ] 031. Ballroom - Albums-Ballroom_Classics4-05 | id: `ballroom_Albums-Ballroom_Classics4-05`
+- [ ] 032. Ballroom - Albums-Ballroom_Classics4-06 | id: `ballroom_Albums-Ballroom_Classics4-06`
+- [ ] 033. Ballroom - Albums-Ballroom_Classics4-07 | id: `ballroom_Albums-Ballroom_Classics4-07`
+- [ ] 034. Ballroom - Albums-Ballroom_Classics4-08 | id: `ballroom_Albums-Ballroom_Classics4-08`
+- [ ] 035. Ballroom - Albums-Ballroom_Classics4-09 | id: `ballroom_Albums-Ballroom_Classics4-09`
+- [ ] 036. Ballroom - Albums-Ballroom_Classics4-10 | id: `ballroom_Albums-Ballroom_Classics4-10`
+- [ ] 037. Ballroom - Albums-Ballroom_Classics4-11 | id: `ballroom_Albums-Ballroom_Classics4-11`
+- [ ] 038. Ballroom - Albums-Ballroom_Classics4-12 | id: `ballroom_Albums-Ballroom_Classics4-12`
+- [ ] 039. Ballroom - Albums-Ballroom_Classics4-13 | id: `ballroom_Albums-Ballroom_Classics4-13`
+- [ ] 040. Ballroom - Albums-Ballroom_Classics4-14 | id: `ballroom_Albums-Ballroom_Classics4-14`
+- [ ] 041. Ballroom - Albums-Ballroom_Classics4-18 | id: `ballroom_Albums-Ballroom_Classics4-18`
+- [ ] 042. Ballroom - Albums-Ballroom_Classics4-19 | id: `ballroom_Albums-Ballroom_Classics4-19`
+- [ ] 043. Ballroom - Albums-Ballroom_Classics4-20 | id: `ballroom_Albums-Ballroom_Classics4-20`
+- [ ] 044. Ballroom - Albums-Ballroom_Magic-01 | id: `ballroom_Albums-Ballroom_Magic-01`
+- [ ] 045. Ballroom - Albums-Ballroom_Magic-02 | id: `ballroom_Albums-Ballroom_Magic-02`
+- [ ] 046. Ballroom - Albums-Ballroom_Magic-03 | id: `ballroom_Albums-Ballroom_Magic-03`
+- [ ] 047. Ballroom - Albums-Ballroom_Magic-04 | id: `ballroom_Albums-Ballroom_Magic-04`
+- [ ] 048. Ballroom - Albums-Ballroom_Magic-05 | id: `ballroom_Albums-Ballroom_Magic-05`
+- [ ] 049. Ballroom - Albums-Ballroom_Magic-06 | id: `ballroom_Albums-Ballroom_Magic-06`
+- [ ] 050. Ballroom - Albums-Ballroom_Magic-07 | id: `ballroom_Albums-Ballroom_Magic-07`
+- [ ] 051. Ballroom - Albums-Ballroom_Magic-08 | id: `ballroom_Albums-Ballroom_Magic-08`
+- [ ] 052. Ballroom - Albums-Ballroom_Magic-09 | id: `ballroom_Albums-Ballroom_Magic-09`
+- [ ] 053. Ballroom - Albums-Ballroom_Magic-10 | id: `ballroom_Albums-Ballroom_Magic-10`
+- [ ] 054. Ballroom - Albums-Ballroom_Magic-11 | id: `ballroom_Albums-Ballroom_Magic-11`
+- [ ] 055. Ballroom - Albums-Ballroom_Magic-15 | id: `ballroom_Albums-Ballroom_Magic-15`
+- [ ] 056. Ballroom - Albums-Ballroom_Magic-16 | id: `ballroom_Albums-Ballroom_Magic-16`
+- [ ] 057. Ballroom - Albums-Ballroom_Magic-17 | id: `ballroom_Albums-Ballroom_Magic-17`
+- [ ] 058. Ballroom - Albums-Ballroom_Magic-18 | id: `ballroom_Albums-Ballroom_Magic-18`
+- [ ] 059. Ballroom - Albums-Cafe_Paradiso-01 | id: `ballroom_Albums-Cafe_Paradiso-01`
+- [ ] 060. Ballroom - Albums-Cafe_Paradiso-02 | id: `ballroom_Albums-Cafe_Paradiso-02`
+- [ ] 061. Ballroom - Albums-Cafe_Paradiso-03 | id: `ballroom_Albums-Cafe_Paradiso-03`
+- [ ] 062. Ballroom - Albums-Cafe_Paradiso-04 | id: `ballroom_Albums-Cafe_Paradiso-04`
+- [ ] 063. Ballroom - Albums-Cafe_Paradiso-05 | id: `ballroom_Albums-Cafe_Paradiso-05`
+- [ ] 064. Ballroom - Albums-Cafe_Paradiso-06 | id: `ballroom_Albums-Cafe_Paradiso-06`
+- [ ] 065. Ballroom - Albums-Cafe_Paradiso-07 | id: `ballroom_Albums-Cafe_Paradiso-07`
+- [ ] 066. Ballroom - Albums-Cafe_Paradiso-08 | id: `ballroom_Albums-Cafe_Paradiso-08`
+- [ ] 067. Ballroom - Albums-Cafe_Paradiso-09 | id: `ballroom_Albums-Cafe_Paradiso-09`
+- [ ] 068. Ballroom - Albums-Cafe_Paradiso-10 | id: `ballroom_Albums-Cafe_Paradiso-10`
+- [ ] 069. Ballroom - Albums-Cafe_Paradiso-11 | id: `ballroom_Albums-Cafe_Paradiso-11`
+- [ ] 070. Ballroom - Albums-Cafe_Paradiso-12 | id: `ballroom_Albums-Cafe_Paradiso-12`
