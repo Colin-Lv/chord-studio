@@ -84,6 +84,7 @@ GPU 相对 CPU 约 10 倍。CUDA 失败会自动回退 CPU（代码里保留）�
 
 - **有真值**：`--truth DIR --stems DIR` → 每轨 SI-SDR / SDR + 均值
 - **无真值**：`--mix mix.wav --stems DIR` → 重构残差、每轨 RMS/活跃占比、跨轨包络相关
+- 支持四轨、六轨（guitar/piano）与两轨（vocals/instrumental）命名
 
 三档模型在同一首歌上的无真值指标：
 
@@ -92,6 +93,7 @@ GPU 相对 CPU 约 10 倍。CUDA 失败会自动回退 CPU（代码里保留）�
 | htdemucs | −25.8 dB | 0.22（鼓↔其他） |
 | htdemucs_ft | −15.5 dB | 0.19（鼓↔其他） |
 | htdemucs_6s | −20.3 dB | 0.19（鼓↔吉他） |
+| BS-RoFormer（两轨，增益校正后） | **−78.4 dB** | — |
 
 注意：**重构残差不是质量排名**。ft 的残差更大，但它的四轨是四个模型平均，本来就不保证
 相加等于原曲；这不代表它听起来更差。这条已经写进 harness 的 README。
