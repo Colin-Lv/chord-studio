@@ -24,9 +24,9 @@
 .stems-grid-panel { padding: 14px 16px 10px; }
 .grid-body { display: grid; grid-template-columns: 196px minmax(0, 1fr); align-items: start; }
 .track-heads { display: flex; flex-direction: column; }
-.ruler-spacer { height: 22px; flex-shrink: 0; }
+.ruler-spacer { height: 40px; flex-shrink: 0; }
 .grid-scroll { overflow-x: auto; overflow-y: hidden; scrollbar-color: #3d4f53 transparent; }
-.ruler { position: relative; height: 22px; }
+.ruler { position: relative; height: 40px; }
 .ruler span { position: absolute; bottom: 2px; font: 10px ui-monospace, Consolas, monospace; color: var(--muted); transform: translateX(-50%); }
 .ruler span.bar-start { color: var(--text); }
 .grid-canvas-wrap { position: relative; }
@@ -60,3 +60,7 @@
   .transport { flex-wrap: wrap; }
   .grid-body { grid-template-columns: 150px minmax(0, 1fr); }
 }
+
+.ruler .chord { bottom: auto; top: 1px; font-size: 10px; line-height: 12px; color: var(--mint); white-space: nowrap; transform: translateX(-1px); }
+.ruler .chord::before { content: ''; }
+

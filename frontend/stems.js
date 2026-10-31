@@ -3,6 +3,7 @@
 const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const PROJECT = params.get("project");
+const MODEL = params.get("model");
 const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 const state = {
@@ -56,7 +57,8 @@ async function boot() {
     $("backToWorkbench").href = "/";
   } catch (error) { showError(error.message); return; }
   try {
-    const manifest = await api(`/api/projects/${PROJECT}/stems`);
+    const query = MODEL ? `?model=${encodeURIComponent(MODEL)}` : "";
+    const manifest = await api(`/api/projects/${PROJECT}/stems${query}`);
     await start(manifest);
   } catch (error) {
     if (error.status === 404) showPending();
@@ -132,17 +134,16 @@ function resetPlayback() {
 
 function renderModelSelect(manifest) {
   const select = $("modelSelect");
-  // Only list checkpoints that already exist for this song: choosing a missing one used to
-  // start a multi-minute separation from a dropdown, which is far too easy to trigger.
-  const options = (manifest.model_options || []).filter(option => option.ready);
+  const options = manifest.model_options || [];
   select.replaceChildren();
   for (const option of options) {
     const node = document.createElement("option");
     node.value = option.id;
-    node.textContent = option.label;
+    node.textContent = `${option.label}${option.ready ? "" : "（未生成）"}`;
+    node.title = option.note || "";
     select.appendChild(node);
   }
-  select.value = manifest.model_key || options[0]?.id || "";
+  select.value = manifest.model_key || options.find(o => o.ready)?.id || "";
   select.hidden = options.length < 2;
   select.onchange = () => switchModel(select.value);
 }
@@ -151,7 +152,12 @@ async function switchModel(model) {
   if (!model || model === state.manifest?.model_key) return;
   const option = (state.manifest.model_options || []).find(item => item.id === model);
   if (!option?.ready) {
-    $("modelSelect").value = state.manifest.model_key;
+    const note = option?.note ? `\n\n${option.note}` : "";
+    if (!window.confirm(`用「${option?.label || model}」再分离一遍？${note}`)) {
+      $("modelSelect").value = state.manifest.model_key;
+      return;
+    }
+    await runSeparation(false, model);
     return;
   }
   try {
@@ -177,7 +183,9 @@ async function start(manifest) {
   $("bpm").textContent = Number(manifest.bpm).toFixed(1);
   $("gridSource").textContent = manifest.bpm_source === "beats.json" ? "小节来自拍点分析" : "小节为估计值";
   $("barLabel").textContent = state.bars.length;
-  $("modelInfo").textContent = `${manifest.model?.label || manifest.model?.name || "htdemucs"} · ${manifest.model?.seconds ?? "—"} s`;
+  const residual = manifest.reconstruction?.relative_db;
+  $("modelInfo").textContent = `${manifest.model?.label || manifest.model?.name || "htdemucs"} · ${manifest.model?.seconds ?? "—"} s`
+    + (residual == null ? "" : ` · 重构残差 ${Number(residual).toFixed(1)} dB`);
   $("clockTotal").textContent = "/ " + fmt(manifest.duration);
   $("reSeparate").hidden = false;
   $("reSeparate").onclick = () => runSeparation(true, manifest.model_key || "htdemucs");
@@ -186,6 +194,7 @@ async function start(manifest) {
   const result = await api(`/api/projects/${PROJECT}/result`).catch(() => null);
   const key = result?.key_analysis?.key;
   $("keyLabel").textContent = key ? key.replace(/m$/, "") + (key.endsWith("m") ? " 小调" : " 大调") : "—";
+  state.chords = chordTimeline(result);
 
   buildAudio();
   buildHeads();
@@ -473,6 +482,47 @@ function hexToRgba(hex, alpha) {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
+const prettifyChord = label => {
+  if (!label || label === "N") return "N";
+  const [root, quality = ""] = String(label).split(":");
+  if (!quality || quality === "maj") return root;
+  if (quality.startsWith("min")) return `${root}m${quality.slice(3)}`;
+  if (quality.startsWith("maj")) return `${root}${quality}`;
+  if (quality.startsWith("dim")) return `${root}°${quality.slice(3)}`;
+  if (quality.startsWith("aug")) return `${root}+${quality.slice(3)}`;
+  if (quality.startsWith("sus")) return `${root}${quality}`;
+  return `${root}${quality}`;
+};
+
+function chordTimeline(result) {
+  // Bar-level chords: the analysis already gives each bar its chord spans, so label the grid
+  // bar by bar (longest span wins) instead of replaying the 0.25 s cell timeline.
+  const rows = result?.bars || [];
+  const bars = state.bars || [];
+  const out = [];
+  if (!rows.length || !bars.length) return out;
+  let previous = null;
+  for (let index = 0; index < bars.length; index += 1) {
+    const start = bars[index].start;
+    const end = bars[index].end;
+    let best = null;
+    let bestOverlap = 0;
+    for (const row of rows) {
+      if (row.end <= start) continue;
+      if (row.start >= end) break;
+      for (const span of row.spans || []) {
+        const overlap = Math.min(span.end, end) - Math.max(span.start, start);
+        if (overlap > bestOverlap) { bestOverlap = overlap; best = span.chord; }
+      }
+    }
+    if (best && best !== previous) {
+      out.push({ bar: index, label: prettifyChord(best) });
+      previous = best;
+    }
+  }
+  return out;
+}
+
 function buildRuler() {
   const ruler = $("ruler");
   ruler.replaceChildren();
@@ -486,6 +536,18 @@ function buildRuler() {
     if (index % 4 === 0) span.className = "bar-start";
     ruler.appendChild(span);
   });
+  // Chord names above the bar numbers, only where a new chord starts and where they fit.
+  let lastX = -Infinity;
+  for (const chord of state.chords || []) {
+    const x = chord.bar * state.cellW;
+    if (x - lastX < 34) continue;
+    const node = document.createElement("span");
+    node.className = "chord";
+    node.textContent = chord.label;
+    node.style.left = x + "px";
+    ruler.appendChild(node);
+    lastX = x;
+  }
 }
 
 /* ------------------------------------------------------------------ transport */

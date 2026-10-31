@@ -24,10 +24,16 @@ STEMS = (
     dict(id="bass", name="贝斯", short="BAS", instrument="贝斯", color="#7fb3e6"),
     dict(id="other", name="其他", short="OTH", instrument="钢琴 / 吉他 / 铺底", color="#c9a0e6"),
 )
+STEMS_6 = STEMS + (
+    dict(id="guitar", name="吉他", short="GTR", instrument="吉他", color="#d98bd9"),
+    dict(id="piano", name="钢琴", short="KEY", instrument="钢琴", color="#9fe08a"),
+)
 MODELS = {
-    "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，约 2–3 分钟"),
-    "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，约 2 倍时间，质量更好"),
+    "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
+    "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，GPU 约 45 秒，质量更好"),
+    "htdemucs_6s": dict(id="htdemucs_6s", label="六轨", note="额外分出吉他/钢琴，整体质量弱于四轨模型", stems=6),
 }
+GPU_PYTHON = Path(r"D:\ChordStudio\runtime\gpu\Scripts\python.exe")
 MODEL_NAME = "htdemucs"
 STEPS_PER_BAR = 16
 ACTIVE_DBFS = -45.0
@@ -40,6 +46,10 @@ def data_root() -> Path:
 
 def stems_dir(sha: str, model: str = MODEL_NAME) -> Path:
     return data_root() / "stems" / sha / model
+
+
+def stems_for(model: str):
+    return STEMS_6 if MODELS.get(model, {}).get("stems") == 6 else STEMS
 
 
 def available_models(sha: str) -> list[dict]:
@@ -57,6 +67,27 @@ def _ffmpeg() -> str:
 def _model_python() -> str:
     value = read_json(ROOT / "desktop_runtime.json").get("model_python")
     return str(value) if value else sys.executable
+
+
+def _runtime() -> tuple[str, str]:
+    """(interpreter, device): the CUDA runtime when importable, else the CPU model python."""
+    candidates = []
+    configured = read_json(ROOT / "desktop_runtime.json").get("stems_python")
+    if configured:
+        candidates.append(Path(configured))
+    candidates.append(GPU_PYTHON)
+    for candidate in candidates:
+        if not candidate.is_file():
+            continue
+        try:
+            probe = subprocess.run([str(candidate), "-c",
+                                    "import torch;print(1 if torch.cuda.is_available() else 0)"],
+                                   capture_output=True, timeout=180)
+        except Exception:                              # noqa: BLE001
+            continue
+        if probe.stdout.strip() == b"1":
+            return str(candidate), "cuda"
+    return _model_python(), "cpu"
 
 
 def _run(cmd, timeout=1800):
@@ -215,6 +246,26 @@ def _annotate(path: Path, entry: dict, bars: list[float], duration: float):
         entry["dominant_pitch_class"] = _bass_pc(mono, sr)
 
 
+def _reconstruction(mix_path: Path, wav_dir: Path, tracks) -> dict:
+    """Residual = mix - sum(stems). Low residual means the stems explain the mix."""
+    if not mix_path.is_file():
+        return {}
+    mix, rate = _load(mix_path)
+    total = None
+    for track in tracks:
+        data, _ = _load(wav_dir / f"{track['id']}.wav")
+        total = data if total is None else total + data
+    if total is None:
+        return {}
+    length = min(len(mix), len(total))
+    residual = mix[:length] - total[:length]
+    mix_db = _rms_db(mix[:length].mean(axis=1))
+    residual_db = _rms_db(residual.mean(axis=1))
+    return dict(residual_db=round(residual_db, 1), mix_db=round(mix_db, 1),
+                relative_db=round(residual_db - mix_db, 1),
+                note="残差为混音减四轨之和；低不代表归属正确，只代表没有丢内容")
+
+
 def _download(project: dict, folder: Path, store) -> dict:
     target = folder / "source"
     target.mkdir(exist_ok=True)
@@ -314,8 +365,11 @@ def execute(store, job_id):
     def separate():
         source_wav = work / "input.wav"
         _decode_to_wav(audio, source_wav)
-        command = [_model_python(), "-m", "demucs.separate", "-n", model, "-o", str(work),
-                   "--filename", "{stem}.{ext}", "--device", "cpu", "-j", "1", str(source_wav)]
+        python, device = _runtime()
+        job["device"] = device
+        publish()
+        command = [python, "-m", "demucs.separate", "-n", model, "-o", str(work),
+                   "--filename", "{stem}.{ext}", "--device", device, "-j", "1", str(source_wav)]
         env = os.environ.copy()
         env["PYTHONUTF8"] = "1"
         env.setdefault("TORCH_HOME", str(Path.home() / ".cache" / "torch"))
@@ -350,13 +404,27 @@ def execute(store, job_id):
                 if overall >= shown + 3:
                     shown = overall
                     publish(stage_label=f"正在分离音轨（{overall}%）")
-        if process.wait():
+        code = process.wait()
+        if code and device == "cuda":
+            publish(stage_label="GPU 分离失败，改用 CPU 重试")
+            command = [_model_python(), "-m", "demucs.separate", "-n", model, "-o", str(work),
+                       "--filename", "{stem}.{ext}", "--device", "cpu", "-j", "1", str(source_wav)]
+            job["device"] = "cpu"
+            publish()
+            backup = subprocess.run([str(part) for part in command], cwd=str(ROOT), env=env,
+                                    capture_output=True,
+                                    creationflags=subprocess.CREATE_NO_WINDOW
+                                    if os.name == "nt" else 0)
+            if backup.returncode:
+                raise RuntimeError("demucs 分离失败，请查看任务日志。")
+            return
+        if code:
             raise RuntimeError("demucs 分离失败，请查看任务日志。")
 
-    stage("separate", f"正在分离音轨（{MODELS[model]['label']} · 4 轨）", separate)
+    stage("separate", f"正在分离音轨（{MODELS[model]['label']} · {len(stems_for(model))} 轨）", separate)
 
     def collect():
-        wanted = {stem["id"] for stem in STEMS}
+        wanted = {stem["id"] for stem in stems_for(model)}
         produced = {path.stem: path for path in work.rglob("*.wav") if path.stem in wanted}
         missing = sorted(wanted - set(produced))
         if missing:
@@ -371,10 +439,8 @@ def execute(store, job_id):
         for stem_id, path in produced.items():
             _to_mp3(path, target / f"{stem_id}.mp3")
             path.replace(wav_dir / f"{stem_id}.wav")
-        for leftover in ("input.wav", "input.mp3"):
-            (work / leftover).unlink(missing_ok=True)
-            (target / leftover).unlink(missing_ok=True)
-            (wav_dir / leftover).unlink(missing_ok=True)
+        (target / "input.mp3").unlink(missing_ok=True)
+        (wav_dir / "input.wav").unlink(missing_ok=True)
 
     stage("encode", "转码为可播放音频", encode)
 
@@ -393,7 +459,7 @@ def execute(store, job_id):
             period = 60.0 / max(40.0, float(grid["bpm"]))
             bars = [i * 4 * period for i in range(max(1, int(length / (4 * period))))]
         tracks = []
-        for stem in STEMS:
+        for stem in stems_for(model):
             entry = dict(stem)
             entry["file"] = f"{stem['id']}.mp3"
             entry["wav"] = f"wav/{stem['id']}.wav"
@@ -403,9 +469,11 @@ def execute(store, job_id):
         for index, start in enumerate(bars):
             end = bars[index + 1] if index + 1 < len(bars) else length
             bar_rows.append(dict(index=index + 1, start=round(start, 3), end=round(end, 3)))
+        reconstruction = _reconstruction(work / "input.wav", target / "wav", tracks)
         return dict(duration=round(length, 3), sample_rate=sr, bpm=round(float(grid["bpm"]), 2),
                     bpm_source=grid["bpm_source"], bars=bar_rows,
-                    beats=[round(b, 3) for b in grid["beats"][:4000]], tracks=tracks)
+                    beats=[round(b, 3) for b in grid["beats"][:4000]], tracks=tracks,
+                    reconstruction=reconstruction)
 
     analysis = stage("annotate", "标注音轨信息", annotate)
 
@@ -414,7 +482,7 @@ def execute(store, job_id):
         project_id=project["id"], audio_sha256=sha,
         created_at=now(), cached=False,
         model=dict(name=model, label=MODELS[model]["label"], package="demucs 4.1.0",
-                   device="cpu", seconds=round(time.perf_counter() - started, 1)),
+                   device=job.get("device", "cpu"), seconds=round(time.perf_counter() - started, 1)),
         source_audio=project["audio"],
         **analysis,
     )
