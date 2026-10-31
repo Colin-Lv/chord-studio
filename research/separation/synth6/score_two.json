@@ -1,0 +1,20 @@
+{
+  "mode": "reference",
+  "sample_rate": 44100,
+  "channels": 1,
+  "duration_sec": 37.2,
+  "n_stems": 2,
+  "n_scored_stems": 1,
+  "stems": {
+    "vocals": {
+      "si_sdr_db": null,
+      "sdr_db": null
+    },
+    "instrumental": {
+      "si_sdr_db": 60.0505,
+      "sdr_db": 59.8229
+    }
+  },
+  "mean_si_sdr_db": 60.0505,
+  "mean_sdr_db": 59.8229
+}

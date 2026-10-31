@@ -1,0 +1,567 @@
+{
+  "note": "rows = ground-truth part, columns = a single model output stem; cell = SI-SDR(truth, estimate) in dB, computed with stem_eval.si_sdr_db.  'baseline:mix' is the unseparated mix, i.e. what you get by claiming every stem is the full mix.",
+  "model_outputs": {
+    "bass": "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(bass)_BS-Roformer-SW.wav",
+    "drums": "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(drums)_BS-Roformer-SW.wav",
+    "guitar": "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(guitar)_BS-Roformer-SW.wav",
+    "other": "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(other)_BS-Roformer-SW.wav",
+    "piano": "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(piano)_BS-Roformer-SW.wav",
+    "vocals": "D:\\ChordStudio\\research\\separation\\synth6\\model2\\mix_(Vocals)_model_bs_roformer_ep_317_sdr_12.wav",
+    "instrumental": "D:\\ChordStudio\\research\\separation\\synth6\\model2\\mix_(Instrumental)_model_bs_roformer_ep_317_sdr_12.wav"
+  },
+  "matrix": {
+    "piano": {
+      "6stem:piano": 8.887,
+      "6stem:guitar": -20.335,
+      "6stem:bass": -46.447,
+      "6stem:drums": -30.337,
+      "6stem:vocals": -35.371,
+      "6stem:other": -21.225,
+      "2stem:vocals": -200.0,
+      "2stem:instrumental": -7.428,
+      "baseline:mix": -7.428
+    },
+    "guitar": {
+      "6stem:piano": -22.959,
+      "6stem:guitar": 14.043,
+      "6stem:bass": -62.987,
+      "6stem:drums": -31.068,
+      "6stem:vocals": -50.702,
+      "6stem:other": -51.429,
+      "2stem:vocals": -200.0,
+      "2stem:instrumental": -4.217,
+      "baseline:mix": -4.215
+    },
+    "bass": {
+      "6stem:piano": -28.466,
+      "6stem:guitar": -48.406,
+      "6stem:bass": 16.778,
+      "6stem:drums": -49.997,
+      "6stem:vocals": -68.806,
+      "6stem:other": -33.24,
+      "2stem:vocals": -200.0,
+      "2stem:instrumental": -0.159,
+      "baseline:mix": -0.161
+    },
+    "drums": {
+      "6stem:piano": -62.097,
+      "6stem:guitar": -34.115,
+      "6stem:bass": -39.077,
+      "6stem:drums": 12.83,
+      "6stem:vocals": -67.025,
+      "6stem:other": -54.248,
+      "2stem:vocals": -200.0,
+      "2stem:instrumental": -10.593,
+      "baseline:mix": -10.594
+    }
+  },
+  "best_match": {
+    "piano": {
+      "best_stem": "6stem:piano",
+      "si_sdr_db": 8.887,
+      "own_stem_si_sdr_db": 8.887,
+      "mix_baseline_si_sdr_db": -7.428
+    },
+    "guitar": {
+      "best_stem": "6stem:guitar",
+      "si_sdr_db": 14.043,
+      "own_stem_si_sdr_db": 14.043,
+      "mix_baseline_si_sdr_db": -4.215
+    },
+    "bass": {
+      "best_stem": "6stem:bass",
+      "si_sdr_db": 16.778,
+      "own_stem_si_sdr_db": 16.778,
+      "mix_baseline_si_sdr_db": -0.161
+    },
+    "drums": {
+      "best_stem": "6stem:drums",
+      "si_sdr_db": 12.83,
+      "own_stem_si_sdr_db": 12.83,
+      "mix_baseline_si_sdr_db": -10.594
+    }
+  },
+  "leakage_shares": {
+    "6stem:piano": {
+      "piano": 0.8861,
+      "guitar": 0.0029,
+      "bass": 0.0024,
+      "drums": -0.0
+    },
+    "6stem:guitar": {
+      "piano": 0.0062,
+      "guitar": 0.96,
+      "bass": -0.0,
+      "drums": 0.0
+    },
+    "6stem:bass": {
+      "piano": 0.0002,
+      "guitar": 0.0,
+      "bass": 0.9805,
+      "drums": 0.0002
+    },
+    "6stem:drums": {
+      "piano": 0.0006,
+      "guitar": 0.0003,
+      "bass": -0.0,
+      "drums": 0.9501
+    },
+    "6stem:vocals": {
+      "piano": 0.0003,
+      "guitar": 0.0,
+      "bass": -0.0,
+      "drums": 0.0
+    },
+    "6stem:other": {
+      "piano": 0.0075,
+      "guitar": 0.0,
+      "bass": 0.0004,
+      "drums": 0.0
+    },
+    "2stem:instrumental": {
+      "piano": 0.1536,
+      "guitar": 0.2671,
+      "bass": 0.5014,
+      "drums": 0.0779
+    },
+    "baseline:mix": {
+      "piano": 0.1537,
+      "guitar": 0.2672,
+      "bass": 0.5012,
+      "drums": 0.0779
+    }
+  },
+  "leakage_fit": {
+    "6stem:piano": {
+      "sum_share_of_four_truths": 0.8914,
+      "r2_vs_truth_basis": 0.8915
+    },
+    "6stem:guitar": {
+      "sum_share_of_four_truths": 0.9662,
+      "r2_vs_truth_basis": 0.9662
+    },
+    "6stem:bass": {
+      "sum_share_of_four_truths": 0.9809,
+      "r2_vs_truth_basis": 0.9808
+    },
+    "6stem:drums": {
+      "sum_share_of_four_truths": 0.951,
+      "r2_vs_truth_basis": 0.951
+    },
+    "6stem:vocals": {
+      "sum_share_of_four_truths": 0.0003,
+      "r2_vs_truth_basis": 0.0003
+    },
+    "6stem:other": {
+      "sum_share_of_four_truths": 0.0079,
+      "r2_vs_truth_basis": 0.0079
+    },
+    "2stem:instrumental": {
+      "sum_share_of_four_truths": 1.0,
+      "r2_vs_truth_basis": 1.0
+    },
+    "baseline:mix": {
+      "sum_share_of_four_truths": 1.0,
+      "r2_vs_truth_basis": 1.0
+    }
+  },
+  "truth_recovery": {
+    "piano": {
+      "r2_explained_by_all_six_stems": 0.8875,
+      "energy_share_by_model_stem": {
+        "piano": 0.8861,
+        "guitar": 0.0002,
+        "bass": -0.0002,
+        "drums": 0.0008,
+        "vocals": -0.0,
+        "other": 0.0006
+      },
+      "own_stem_share": 0.8861,
+      "off_own_stem_share": 0.0014,
+      "own_stem_corr": 0.9411
+    },
+    "guitar": {
+      "r2_explained_by_all_six_stems": 0.9628,
+      "energy_share_by_model_stem": {
+        "piano": -0.0019,
+        "guitar": 0.9646,
+        "bass": 0.0,
+        "drums": 0.0002,
+        "vocals": -0.0,
+        "other": -0.0
+      },
+      "own_stem_share": 0.9646,
+      "off_own_stem_share": -0.0017,
+      "own_stem_corr": 0.9809
+    },
+    "bass": {
+      "r2_explained_by_all_six_stems": 0.9796,
+      "energy_share_by_model_stem": {
+        "piano": -0.0002,
+        "guitar": 0.0,
+        "bass": 0.9797,
+        "drums": 0.0,
+        "vocals": -0.0,
+        "other": 0.0
+      },
+      "own_stem_share": 0.9797,
+      "off_own_stem_share": -0.0002,
+      "own_stem_corr": 0.9897
+    },
+    "drums": {
+      "r2_explained_by_all_six_stems": 0.9505,
+      "energy_share_by_model_stem": {
+        "piano": -0.0,
+        "guitar": -0.0,
+        "bass": 0.0,
+        "drums": 0.9505,
+        "vocals": -0.0,
+        "other": -0.0
+      },
+      "own_stem_share": 0.9505,
+      "off_own_stem_share": 0.0,
+      "own_stem_corr": 0.9749
+    }
+  },
+  "truth_stem_correlation": {
+    "piano~guitar": 0.0321,
+    "piano~bass": -0.0283,
+    "piano~drums": 0.0092,
+    "guitar~bass": -0.0043,
+    "guitar~drums": 0.0179,
+    "bass~drums": -0.0062
+  },
+  "truth_gram_condition_number": 6.78,
+  "alignment": {
+    "piano_vs_own": {
+      "lag_ms": 0.0,
+      "lag_samples": 0,
+      "peak_corr": 0.9411
+    },
+    "guitar_vs_own": {
+      "lag_ms": 0.0,
+      "lag_samples": 0,
+      "peak_corr": 0.9809
+    },
+    "bass_vs_own": {
+      "lag_ms": -0.023,
+      "lag_samples": -1,
+      "peak_corr": 0.9897
+    },
+    "drums_vs_own": {
+      "lag_ms": 0.0,
+      "lag_samples": 0,
+      "peak_corr": 0.9749
+    },
+    "piano_vs_6stem:guitar": {
+      "lag_ms": -3.424,
+      "lag_samples": -151,
+      "peak_corr": 0.1068
+    },
+    "piano_vs_6stem:bass": {
+      "lag_ms": 33.016,
+      "lag_samples": 1456,
+      "peak_corr": 0.202
+    },
+    "piano_vs_6stem:drums": {
+      "lag_ms": 41.655,
+      "lag_samples": 1837,
+      "peak_corr": 0.053
+    },
+    "guitar_vs_6stem:piano": {
+      "lag_ms": -47.937,
+      "lag_samples": -2114,
+      "peak_corr": 0.0777
+    },
+    "guitar_vs_6stem:bass": {
+      "lag_ms": -28.277,
+      "lag_samples": -1247,
+      "peak_corr": 0.0102
+    },
+    "guitar_vs_6stem:drums": {
+      "lag_ms": 0.0,
+      "lag_samples": 0,
+      "peak_corr": 0.028
+    },
+    "bass_vs_6stem:piano": {
+      "lag_ms": -32.993,
+      "lag_samples": -1455,
+      "peak_corr": 0.1864
+    },
+    "bass_vs_6stem:guitar": {
+      "lag_ms": 28.435,
+      "lag_samples": 1254,
+      "peak_corr": 0.0104
+    },
+    "bass_vs_6stem:drums": {
+      "lag_ms": 47.415,
+      "lag_samples": 2091,
+      "peak_corr": 0.063
+    },
+    "drums_vs_6stem:piano": {
+      "lag_ms": -50.0,
+      "lag_samples": -2205,
+      "peak_corr": 0.0387
+    },
+    "drums_vs_6stem:guitar": {
+      "lag_ms": 0.0,
+      "lag_samples": 0,
+      "peak_corr": 0.0197
+    },
+    "drums_vs_6stem:bass": {
+      "lag_ms": -28.209,
+      "lag_samples": -1244,
+      "peak_corr": 0.0573
+    }
+  },
+  "empty_stems": {
+    "other": {
+      "max_abs": 0.000396728515625,
+      "rms_dbfs": -97.614,
+      "nonzero_samples": 78521,
+      "samples": 1640520
+    },
+    "vocals": {
+      "max_abs": 7.62939453125e-05,
+      "rms_dbfs": -105.874,
+      "nonzero_samples": 57524,
+      "samples": 1640520
+    }
+  },
+  "spectral_centroid_hz": {
+    "truth:piano": 1929.0,
+    "truth:guitar": 3484.7,
+    "truth:bass": 246.8,
+    "truth:drums": 3878.4,
+    "6stem:bass": 232.0,
+    "6stem:drums": 4007.4,
+    "6stem:guitar": 3283.7,
+    "6stem:other": 7475.4,
+    "6stem:piano": 1679.9,
+    "6stem:vocals": 12054.0,
+    "baseline:mix": 2646.4
+  },
+  "levels": {
+    "eval_sample_rate": 44100,
+    "duration_sec": 37.2,
+    "truth": {
+      "piano": {
+        "rms_dbfs": -17.891,
+        "peak_dbfs": -1.02
+      },
+      "guitar": {
+        "rms_dbfs": -15.624,
+        "peak_dbfs": -0.942
+      },
+      "bass": {
+        "rms_dbfs": -12.679,
+        "peak_dbfs": -1.011
+      },
+      "drums": {
+        "rms_dbfs": -20.987,
+        "peak_dbfs": -0.996
+      }
+    },
+    "mix": {
+      "rms_dbfs": -16.4,
+      "peak_dbfs": -0.999
+    },
+    "six_stem": {
+      "bass": {
+        "rms_dbfs": -19.542,
+        "peak_dbfs": -7.417
+      },
+      "drums": {
+        "rms_dbfs": -27.717,
+        "peak_dbfs": -6.828
+      },
+      "guitar": {
+        "rms_dbfs": -22.424,
+        "peak_dbfs": -7.888
+      },
+      "other": {
+        "rms_dbfs": -97.614,
+        "peak_dbfs": -68.03
+      },
+      "piano": {
+        "rms_dbfs": -25.452,
+        "peak_dbfs": -9.1
+      },
+      "vocals": {
+        "rms_dbfs": -105.874,
+        "peak_dbfs": -82.35
+      }
+    },
+    "two_stem": {
+      "instrumental": {
+        "rms_dbfs": -16.402,
+        "peak_dbfs": -0.995
+      },
+      "vocals": {
+        "rms_dbfs": -240.0,
+        "peak_dbfs": -240.0
+      }
+    }
+  },
+  "harness_six": {
+    "mode": "reference",
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 37.2,
+    "n_stems": 4,
+    "n_scored_stems": 4,
+    "stems": {
+      "drums": {
+        "si_sdr_db": 12.8302,
+        "sdr_db": 5.0321
+      },
+      "bass": {
+        "si_sdr_db": 16.7777,
+        "sdr_db": 5.1177
+      },
+      "guitar": {
+        "si_sdr_db": 14.0434,
+        "sdr_db": 5.0551
+      },
+      "piano": {
+        "si_sdr_db": 8.8873,
+        "sdr_db": 4.1204
+      }
+    },
+    "mean_si_sdr_db": 13.1346,
+    "mean_sdr_db": 4.8313
+  },
+  "harness_two": {
+    "mode": "reference",
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 37.2,
+    "n_stems": 2,
+    "n_scored_stems": 1,
+    "stems": {
+      "vocals": {
+        "si_sdr_db": null,
+        "sdr_db": null
+      },
+      "instrumental": {
+        "si_sdr_db": 60.0505,
+        "sdr_db": 59.8229
+      }
+    },
+    "mean_si_sdr_db": 60.0505,
+    "mean_sdr_db": 59.8229
+  },
+  "harness_six_reference_free": {
+    "mode": "reference_free",
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 37.2,
+    "n_stems": 6,
+    "stems": {
+      "vocals": {
+        "rms_dbfs": -105.8738,
+        "active_ratio": 0.0
+      },
+      "drums": {
+        "rms_dbfs": -27.7175,
+        "active_ratio": 0.5714
+      },
+      "bass": {
+        "rms_dbfs": -19.5424,
+        "active_ratio": 0.8408
+      },
+      "other": {
+        "rms_dbfs": -97.6138,
+        "active_ratio": 0.0
+      },
+      "guitar": {
+        "rms_dbfs": -22.4237,
+        "active_ratio": 0.9987
+      },
+      "piano": {
+        "rms_dbfs": -25.452,
+        "active_ratio": 0.9839
+      }
+    },
+    "reconstruction": {
+      "residual_db_rel_mix": -35.1747,
+      "residual_rms_dbfs": -51.5748,
+      "stem_sum_rms_dbfs": -16.408,
+      "mix_rms_dbfs": -16.4001
+    },
+    "envelope_correlation": {
+      "frame_ms": 50.0,
+      "hop_ms": 25.0,
+      "labels": [
+        "vocals",
+        "drums",
+        "bass",
+        "other",
+        "guitar",
+        "piano"
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.568414,
+          0.100056,
+          0.416982,
+          0.160032,
+          0.284974
+        ],
+        [
+          0.568414,
+          1.0,
+          0.083167,
+          0.215537,
+          0.254991,
+          0.231452
+        ],
+        [
+          0.100056,
+          0.083167,
+          1.0,
+          0.117759,
+          0.279949,
+          0.657097
+        ],
+        [
+          0.416982,
+          0.215537,
+          0.117759,
+          1.0,
+          0.064604,
+          0.350521
+        ],
+        [
+          0.160032,
+          0.254991,
+          0.279949,
+          0.064604,
+          1.0,
+          0.30677
+        ],
+        [
+          0.284974,
+          0.231452,
+          0.657097,
+          0.350521,
+          0.30677,
+          1.0
+        ]
+      ]
+    }
+  },
+  "manifest": {
+    "mix": {
+      "path": "D:\\ChordStudio\\research\\separation\\synth6\\mix.wav",
+      "sum_peak_before_scale": 1.90907,
+      "scale_factor": 0.466195491,
+      "scale_factor_db": -6.629,
+      "peak_after_scale": 0.89,
+      "rms_dbfs": -16.416,
+      "samples": 1791634
+    },
+    "duration_sec": 37.326
+  }
+}

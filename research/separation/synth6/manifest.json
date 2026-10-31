@@ -1,0 +1,93 @@
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 105.0,
+  "bars": 16,
+  "beats_per_bar": 4,
+  "duration_sec": 37.326,
+  "progression": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G"
+  ],
+  "soundfont": "D:\\ChordStudio\\assets\\soundfonts\\FluidR3_GM.sf2",
+  "renderer": "D:\\ChordStudio\\research\\boundary-dataset\\render.py",
+  "renderer_note": "render.render_pm copied verbatim except percussion uses bank=128 (GM drum kit); bank=0 would render drum hits as piano",
+  "render_pm_copy_matches_project": true,
+  "stems": {
+    "piano": {
+      "midi": "D:\\ChordStudio\\research\\separation\\synth6\\parts\\piano.mid",
+      "wav": "D:\\ChordStudio\\research\\separation\\synth6\\truth\\piano.wav",
+      "duration_sec": 37.314,
+      "samples": 1791085,
+      "peak_dbfs": -1.012,
+      "rms_dbfs": -17.906,
+      "n_notes": 128,
+      "program": 0,
+      "is_drum": false,
+      "pitch_lo": 41,
+      "pitch_hi": 60
+    },
+    "guitar": {
+      "midi": "D:\\ChordStudio\\research\\separation\\synth6\\parts\\guitar.mid",
+      "wav": "D:\\ChordStudio\\research\\separation\\synth6\\truth\\guitar.wav",
+      "duration_sec": 37.326,
+      "samples": 1791634,
+      "peak_dbfs": -1.012,
+      "rms_dbfs": -15.641,
+      "n_notes": 128,
+      "program": 25,
+      "is_drum": false,
+      "pitch_lo": 62,
+      "pitch_hi": 72
+    },
+    "bass": {
+      "midi": "D:\\ChordStudio\\research\\separation\\synth6\\parts\\bass.mid",
+      "wav": "D:\\ChordStudio\\research\\separation\\synth6\\truth\\bass.wav",
+      "duration_sec": 37.314,
+      "samples": 1791085,
+      "peak_dbfs": -1.012,
+      "rms_dbfs": -12.692,
+      "n_notes": 48,
+      "program": 33,
+      "is_drum": false,
+      "pitch_lo": 29,
+      "pitch_hi": 48
+    },
+    "drums": {
+      "midi": "D:\\ChordStudio\\research\\separation\\synth6\\parts\\drums.mid",
+      "wav": "D:\\ChordStudio\\research\\separation\\synth6\\truth\\drums.wav",
+      "duration_sec": 37.2,
+      "samples": 1785599,
+      "peak_dbfs": -1.012,
+      "rms_dbfs": -20.987,
+      "n_notes": 192,
+      "program": 0,
+      "is_drum": true,
+      "pitch_lo": 36,
+      "pitch_hi": 42
+    }
+  },
+  "mix": {
+    "path": "D:\\ChordStudio\\research\\separation\\synth6\\mix.wav",
+    "sum_peak_before_scale": 1.90907,
+    "scale_factor": 0.466195491,
+    "scale_factor_db": -6.629,
+    "peak_after_scale": 0.89,
+    "rms_dbfs": -16.416,
+    "samples": 1791634
+  },
+  "elapsed_sec": 1.59
+}

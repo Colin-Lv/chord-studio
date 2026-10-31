@@ -1,0 +1,28 @@
+{
+  "mode": "reference",
+  "sample_rate": 44100,
+  "channels": 1,
+  "duration_sec": 37.2,
+  "n_stems": 4,
+  "n_scored_stems": 4,
+  "stems": {
+    "drums": {
+      "si_sdr_db": 12.8302,
+      "sdr_db": 5.0321
+    },
+    "bass": {
+      "si_sdr_db": 16.7777,
+      "sdr_db": 5.1177
+    },
+    "guitar": {
+      "si_sdr_db": 14.0434,
+      "sdr_db": 5.0551
+    },
+    "piano": {
+      "si_sdr_db": 8.8873,
+      "sdr_db": 4.1204
+    }
+  },
+  "mean_si_sdr_db": 13.1346,
+  "mean_sdr_db": 4.8313
+}

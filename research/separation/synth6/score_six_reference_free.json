@@ -1,0 +1,101 @@
+{
+  "mode": "reference_free",
+  "sample_rate": 44100,
+  "channels": 1,
+  "duration_sec": 37.2,
+  "n_stems": 6,
+  "stems": {
+    "vocals": {
+      "rms_dbfs": -105.8738,
+      "active_ratio": 0.0
+    },
+    "drums": {
+      "rms_dbfs": -27.7175,
+      "active_ratio": 0.5714
+    },
+    "bass": {
+      "rms_dbfs": -19.5424,
+      "active_ratio": 0.8408
+    },
+    "other": {
+      "rms_dbfs": -97.6138,
+      "active_ratio": 0.0
+    },
+    "guitar": {
+      "rms_dbfs": -22.4237,
+      "active_ratio": 0.9987
+    },
+    "piano": {
+      "rms_dbfs": -25.452,
+      "active_ratio": 0.9839
+    }
+  },
+  "reconstruction": {
+    "residual_db_rel_mix": -35.1747,
+    "residual_rms_dbfs": -51.5748,
+    "stem_sum_rms_dbfs": -16.408,
+    "mix_rms_dbfs": -16.4001
+  },
+  "envelope_correlation": {
+    "frame_ms": 50.0,
+    "hop_ms": 25.0,
+    "labels": [
+      "vocals",
+      "drums",
+      "bass",
+      "other",
+      "guitar",
+      "piano"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.568414,
+        0.100056,
+        0.416982,
+        0.160032,
+        0.284974
+      ],
+      [
+        0.568414,
+        1.0,
+        0.083167,
+        0.215537,
+        0.254991,
+        0.231452
+      ],
+      [
+        0.100056,
+        0.083167,
+        1.0,
+        0.117759,
+        0.279949,
+        0.657097
+      ],
+      [
+        0.416982,
+        0.215537,
+        0.117759,
+        1.0,
+        0.064604,
+        0.350521
+      ],
+      [
+        0.160032,
+        0.254991,
+        0.279949,
+        0.064604,
+        1.0,
+        0.30677
+      ],
+      [
+        0.284974,
+        0.231452,
+        0.657097,
+        0.350521,
+        0.30677,
+        1.0
+      ]
+    ]
+  }
+}
