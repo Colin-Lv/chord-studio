@@ -24,6 +24,10 @@ STEMS = (
     dict(id="bass", name="贝斯", short="BAS", instrument="贝斯", color="#7fb3e6"),
     dict(id="other", name="其他", short="OTH", instrument="钢琴 / 吉他 / 铺底", color="#c9a0e6"),
 )
+MODELS = {
+    "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，约 2–3 分钟"),
+    "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，约 2 倍时间，质量更好"),
+}
 MODEL_NAME = "htdemucs"
 STEPS_PER_BAR = 16
 ACTIVE_DBFS = -45.0
@@ -34,8 +38,16 @@ def data_root() -> Path:
     return Path(value) if value else Path(r"D:\ChordStudio\data")
 
 
-def stems_dir(sha: str) -> Path:
-    return data_root() / "stems" / sha
+def stems_dir(sha: str, model: str = MODEL_NAME) -> Path:
+    return data_root() / "stems" / sha / model
+
+
+def available_models(sha: str) -> list[dict]:
+    found = []
+    for model in MODELS.values():
+        ready = (stems_dir(sha, model["id"]) / "manifest.json").is_file()
+        found.append(dict(model, ready=ready))
+    return found
 
 
 def _ffmpeg() -> str:
@@ -272,17 +284,21 @@ def execute(store, job_id):
     if not audio.is_file():
         raise ValueError("音频文件不存在，请重新导入。")
     sha = signature(audio)["sha256"]
+    model = job.get("model") or MODEL_NAME
+    if model not in MODELS:
+        raise ValueError("未知的分轨模型")
     job["audio_sha256"] = sha
     publish()
 
-    target = stems_dir(sha)
+    target = stems_dir(sha, model)
     manifest_path = target / "manifest.json"
     if manifest_path.is_file() and not job.get("force"):
         manifest = read_json(manifest_path)
         manifest["cached"] = True
-        project["stems"] = dict(sha256=sha, manifest=str(manifest_path), updated_at=now(),
-                                model=manifest.get("model", {}).get("name", MODEL_NAME),
-                                bpm=manifest.get("bpm"))
+        stems = dict(project.get("stems") or {})
+        stems[model] = dict(sha256=sha, manifest=str(manifest_path), updated_at=now(),
+                            model=model, bpm=manifest.get("bpm"))
+        project["stems"] = stems
         store.save_project(project)
         publish(stage_label="复用已有分轨")
         return manifest
@@ -298,7 +314,7 @@ def execute(store, job_id):
     def separate():
         source_wav = work / "input.wav"
         _decode_to_wav(audio, source_wav)
-        command = [_model_python(), "-m", "demucs.separate", "-n", MODEL_NAME, "-o", str(work),
+        command = [_model_python(), "-m", "demucs.separate", "-n", model, "-o", str(work),
                    "--filename", "{stem}.{ext}", "--device", "cpu", "-j", "1", str(source_wav)]
         env = os.environ.copy()
         env["PYTHONUTF8"] = "1"
@@ -309,7 +325,11 @@ def execute(store, job_id):
                                    creationflags=subprocess.CREATE_NO_WINDOW
                                    if os.name == "nt" else 0)
         # demucs draws a carriage-return progress bar, so read chunks and split on CR/LF.
+        # htdemucs_ft runs four checkpoints: detect a restarted bar and fold it into one number.
+        submodels = 4 if model == "htdemucs_ft" else 1
+        cycle = 0
         last = -10
+        shown = -10
         buffer = ""
         while True:
             chunk = process.stdout.read(512) if process.stdout else b""
@@ -323,13 +343,17 @@ def execute(store, job_id):
                 if not match:
                     continue
                 percent = int(match.group(1))
-                if percent >= last + 5:
-                    last = percent
-                    publish(stage_label=f"正在分离音轨（{percent}%）")
+                if percent + 5 < last:
+                    cycle = min(submodels - 1, cycle + 1)
+                last = percent
+                overall = int((cycle + percent / 100) * 100 / submodels) if submodels > 1 else percent
+                if overall >= shown + 3:
+                    shown = overall
+                    publish(stage_label=f"正在分离音轨（{overall}%）")
         if process.wait():
             raise RuntimeError("demucs 分离失败，请查看任务日志。")
 
-    stage("separate", "正在分离音轨（htdemucs，4 轨）", separate)
+    stage("separate", f"正在分离音轨（{MODELS[model]['label']} · 4 轨）", separate)
 
     def collect():
         wanted = {stem["id"] for stem in STEMS}
@@ -389,8 +413,8 @@ def execute(store, job_id):
         schema="chord_studio_stems_v1",
         project_id=project["id"], audio_sha256=sha,
         created_at=now(), cached=False,
-        model=dict(name=MODEL_NAME, package="demucs 4.1.0", device="cpu",
-                   seconds=round(time.perf_counter() - started, 1)),
+        model=dict(name=model, label=MODELS[model]["label"], package="demucs 4.1.0",
+                   device="cpu", seconds=round(time.perf_counter() - started, 1)),
         source_audio=project["audio"],
         **analysis,
     )
@@ -399,8 +423,10 @@ def execute(store, job_id):
         path.unlink() if path.is_file() else path.rmdir()
     work.rmdir()
 
-    project["stems"] = dict(sha256=sha, manifest=str(manifest_path), updated_at=now(),
-                            model=MODEL_NAME, bpm=manifest["bpm"])
+    stems = dict(project.get("stems") or {})
+    stems[model] = dict(sha256=sha, manifest=str(manifest_path), updated_at=now(),
+                        model=model, bpm=manifest.get("bpm"))
+    project["stems"] = stems
     store.save_project(project)
     publish(stage_label="分轨完成")
     return manifest

@@ -67,33 +67,35 @@ async function boot() {
 function showPending() {
   $("pending").hidden = false;
   $("workspace").hidden = true;
+  $("modelSelect").hidden = true;
   $("songMeta").textContent = "尚未生成分轨";
   $("startSeparate").onclick = () => runSeparation(false);
 }
 
-async function runSeparation(force) {
+async function runSeparation(force, model) {
   $("pending").hidden = false;
   $("startSeparate").disabled = true;
   $("startSeparate").textContent = "正在分离…";
   $("pendingTitle").textContent = force ? "重新分离" : "正在分离";
-  $("pendingNote").textContent = "人声 / 鼓 / 贝斯 / 其他四轨，通常 1–2 分钟；关闭页面不会中断任务。";
+  $("pendingNote").textContent = "人声 / 鼓 / 贝斯 / 其他四轨；标准模型约 2–3 分钟，精细模型约 2 倍时间。";
   try {
     const job = await api(`/api/projects/${PROJECT}/separate`, {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ force: !!force }),
+      body: JSON.stringify({ force: !!force, model: model || "htdemucs" }),
     });
     if (job.profile && job.profile !== "stems") {
       throw new Error("当前有分析任务在跑，等它结束再点「开始分离」");
     }
-    await followJob(job.id);
+    await followJob(job.id, model);
   } catch (error) {
     $("separateStatus").textContent = error.message;
     $("startSeparate").disabled = false;
     $("startSeparate").textContent = "重试分离 →";
+    if (state.manifest) $("modelSelect").value = state.manifest.model_key || "htdemucs";
   }
 }
 
-async function followJob(jobId) {
+async function followJob(jobId, model) {
   for (;;) {
     await new Promise(resolve => setTimeout(resolve, 2000));
     let job;
@@ -101,7 +103,8 @@ async function followJob(jobId) {
     $("separateStatus").textContent = job.stage_label || "处理中…";
     if (job.status === "completed") {
       $("separateStatus").textContent = "分轨完成，正在载入…";
-      await start(await api(`/api/projects/${PROJECT}/stems`));
+      const query = model ? `?model=${encodeURIComponent(model)}` : "";
+      await start(await api(`/api/projects/${PROJECT}/stems${query}`));
       return;
     }
     if (job.status === "failed" || job.status === "interrupted") {
@@ -114,6 +117,53 @@ async function followJob(jobId) {
 }
 
 /* ------------------------------------------------------------------ main */
+function resetPlayback() {
+  stop();
+  state.audios = {};
+  state.mix = null;
+  state.solo = null;
+  state.muted = {};
+  state.referenceOn = false;
+  state.loopBar = false;
+  state.loopIndex = -1;
+  if ($("reference")) $("reference").checked = false;
+  if ($("loopBar")) $("loopBar").checked = false;
+}
+
+function renderModelSelect(manifest) {
+  const select = $("modelSelect");
+  // Only list checkpoints that already exist for this song: choosing a missing one used to
+  // start a multi-minute separation from a dropdown, which is far too easy to trigger.
+  const options = (manifest.model_options || []).filter(option => option.ready);
+  select.replaceChildren();
+  for (const option of options) {
+    const node = document.createElement("option");
+    node.value = option.id;
+    node.textContent = option.label;
+    select.appendChild(node);
+  }
+  select.value = manifest.model_key || options[0]?.id || "";
+  select.hidden = options.length < 2;
+  select.onchange = () => switchModel(select.value);
+}
+
+async function switchModel(model) {
+  if (!model || model === state.manifest?.model_key) return;
+  const option = (state.manifest.model_options || []).find(item => item.id === model);
+  if (!option?.ready) {
+    $("modelSelect").value = state.manifest.model_key;
+    return;
+  }
+  try {
+    const manifest = await api(`/api/projects/${PROJECT}/stems?model=${encodeURIComponent(model)}`);
+    resetPlayback();
+    await start(manifest);
+  } catch (error) {
+    $("modelSelect").value = state.manifest.model_key;
+    toast(error.message);
+  }
+}
+
 async function start(manifest) {
   state.manifest = manifest;
   state.tracks = manifest.tracks || [];
@@ -127,10 +177,11 @@ async function start(manifest) {
   $("bpm").textContent = Number(manifest.bpm).toFixed(1);
   $("gridSource").textContent = manifest.bpm_source === "beats.json" ? "小节来自拍点分析" : "小节为估计值";
   $("barLabel").textContent = state.bars.length;
-  $("modelInfo").textContent = `${manifest.model?.name || "htdemucs"} · ${manifest.model?.seconds ?? "—"} s`;
+  $("modelInfo").textContent = `${manifest.model?.label || manifest.model?.name || "htdemucs"} · ${manifest.model?.seconds ?? "—"} s`;
   $("clockTotal").textContent = "/ " + fmt(manifest.duration);
   $("reSeparate").hidden = false;
-  $("reSeparate").onclick = () => runSeparation(true);
+  $("reSeparate").onclick = () => runSeparation(true, manifest.model_key || "htdemucs");
+  renderModelSelect(manifest);
 
   const result = await api(`/api/projects/${PROJECT}/result`).catch(() => null);
   const key = result?.key_analysis?.key;

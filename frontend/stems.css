@@ -6,6 +6,7 @@
 .stems-title h1 { margin: 6px 0 4px; font-size: 24px; font-weight: 550; }
 .stems-title .muted { font-size: 12px; }
 .stems-actions { display: flex; align-items: center; gap: 14px; padding-top: 8px; }
+.model-select { background: #16201f; color: var(--text); border: 1px solid #3d4f53; border-radius: 7px; padding: 7px 10px; font-size: 12px; }
 
 .stems-pending { padding: 26px 28px; display: grid; gap: 8px; justify-items: start; }
 .stems-pending h2 { font-size: 19px; margin: 0; }
