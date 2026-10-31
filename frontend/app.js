@@ -4,7 +4,7 @@ const notation = window.HarmonyNotation, audio = $("audio");
 const state = {tab:"file",file:null,project:null,result:null,source:null,selected:0,active:-1,
   review:null,key:"",keyOrigin:"unknown",mode:"roman",drafts:new Map(),cards:new Map(),rows:[],
   busy:false,job:null,poll:null,navigation:0,objectUrl:null,loop:false,auditionEnd:null,frame:null};
-const statusNames = {ready:"待分析",queued:"排队中",running:"分析中",completed:"已完成",failed:"失败，可重试",interrupted:"已中断"};
+const statusNames = {ready:"待分析",queued:"排队中",running:"分析中",stems:"分轨中",completed:"已完成",failed:"失败，可重试",interrupted:"已中断"};
 const fmt = (time,precise=false) => {const t=Math.max(0,Number(time)||0), min=Math.floor(t/60),sec=t%60;return String(min).padStart(2,"0")+":"+(precise?sec.toFixed(2).padStart(5,"0"):String(Math.floor(sec)).padStart(2,"0"));};
 const element=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
 function toast(message){$("toast").textContent=message;$("toast").hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$("toast").hidden=true,6500);}
@@ -116,7 +116,7 @@ async function beginSeparation(){
       state.project=await api("/api/upload",{method:"POST",body:form});state.file=null;
     }
     const id=state.project.id;
-    const job=await post(`/api/projects/${id}/separate`,{force:false});
+    const job=await post(`/api/projects/${id}/separate`,{force:false});if(job.profile&&job.profile!=="stems")throw new Error("当前有分析任务在跑，等它结束再点「音轨分离」");
     $("inputStatus").textContent="分轨任务已提交（人声 / 鼓 / 贝斯 / 其他），完成后会自动打开分轨页…";
     toast("分轨通常需要 1–2 分钟，可以继续浏览其他页面");
     for(let i=0;i<300;i++){

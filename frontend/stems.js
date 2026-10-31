@@ -7,8 +7,9 @@ const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", 
 
 const state = {
   projectId: PROJECT, project: null, manifest: null,
-  audios: {}, tracks: [], bars: [], stepsPerCell: 16,
+  audios: {}, mix: null, tracks: [], bars: [], stepsPerCell: 16,
   playing: false, solo: null, muted: {}, master: 1,
+  referenceOn: false, loopBar: false, loopIndex: -1,
   cellW: 20, rowH: 74, hoverBar: -1, raf: null,
 };
 
@@ -81,6 +82,9 @@ async function runSeparation(force) {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ force: !!force }),
     });
+    if (job.profile && job.profile !== "stems") {
+      throw new Error("当前有分析任务在跑，等它结束再点「开始分离」");
+    }
     await followJob(job.id);
   } catch (error) {
     $("separateStatus").textContent = error.message;
@@ -158,6 +162,13 @@ function buildAudio() {
     document.body.appendChild(audio);
     state.audios[track.id] = audio;
   }
+  const mix = document.createElement("audio");
+  mix.className = "stem-audio";
+  mix.preload = "auto";
+  mix.src = state.manifest.audio_url || `/api/projects/${PROJECT}/audio`;
+  mix.dataset.track = "mix";
+  document.body.appendChild(mix);
+  state.mix = mix;
 }
 
 function buildHeads() {
@@ -206,17 +217,22 @@ function buildHeads() {
 }
 
 function applyAudioState() {
+  const reference = !!state.referenceOn;
   for (const track of state.tracks) {
     const audio = state.audios[track.id];
     if (!audio) continue;
     const audible = state.solo ? state.solo === track.id : !state.muted[track.id];
-    audio.muted = !audible;
+    audio.muted = reference || !audible;
     audio.volume = state.master;
+  }
+  if (state.mix) {
+    state.mix.muted = !reference;
+    state.mix.volume = state.master;
   }
   for (const head of document.querySelectorAll(".track-head")) {
     const id = head.dataset.track;
     const audible = state.solo ? state.solo === id : !state.muted[id];
-    head.classList.toggle("muted", !audible);
+    head.classList.toggle("muted", reference || !audible);
     const mute = head.querySelector("button:not(.solo)");
     const solo = head.querySelector("button.solo");
     if (mute) mute.setAttribute("aria-pressed", String(!!state.muted[id]));
@@ -376,6 +392,12 @@ function drawOverlay() {
     ctx.strokeStyle = "#b6e7ce44";
     ctx.strokeRect(current * state.cellW + 0.5, 0.5, state.cellW - 1, height - 1);
   }
+  if (state.loopBar && state.loopIndex >= 0) {
+    ctx.strokeStyle = "#ebc894aa";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(state.loopIndex * state.cellW + 1, 1, state.cellW - 2, height - 2);
+    ctx.lineWidth = 1;
+  }
   const x = xForTime(currentTime());
   ctx.strokeStyle = "#ebc894";
   ctx.lineWidth = 2;
@@ -427,6 +449,7 @@ function seek(time) {
     const audio = state.audios[track.id];
     if (audio && audio.readyState >= 1) audio.currentTime = t;
   }
+  if (state.mix && state.mix.readyState >= 1) state.mix.currentTime = t;
   renderClock(t);
   drawOverlay();
 }
@@ -440,8 +463,10 @@ async function play() {
     if (!node) continue;
     try { node.currentTime = t; } catch (_) { /* not ready yet */ }
   }
+  if (state.mix) { try { state.mix.currentTime = t; } catch (_) { /* ignore */ } }
   applyAudioState();
-  await Promise.allSettled(state.tracks.map(track => state.audios[track.id]?.play()));
+  await Promise.allSettled([...state.tracks.map(track => state.audios[track.id]?.play()),
+                            state.mix ? state.mix.play() : Promise.resolve()]);
   state.playing = true;
   $("play").textContent = "❚❚";
   $("play").setAttribute("aria-label", "暂停");
@@ -450,6 +475,7 @@ async function play() {
 
 function stop() {
   for (const track of state.tracks) state.audios[track.id]?.pause();
+  state.mix?.pause();
   state.playing = false;
   $("play").textContent = "▶";
   $("play").setAttribute("aria-label", "播放");
@@ -469,6 +495,13 @@ function loop() {
     if (Math.abs(node.currentTime - t) > 0.08 && node.readyState >= 1) {
       try { node.currentTime = t; } catch (_) { /* ignore */ }
     }
+  }
+  if (state.mix && Math.abs(state.mix.currentTime - t) > 0.08 && state.mix.readyState >= 1) {
+    try { state.mix.currentTime = t; } catch (_) { /* ignore */ }
+  }
+  if (state.loopBar && state.loopIndex >= 0 && state.bars[state.loopIndex]) {
+    const bar = state.bars[state.loopIndex];
+    if (t >= bar.end - 0.02) seek(bar.start);
   }
   renderClock(t);
   drawOverlay();
@@ -490,6 +523,20 @@ function renderClock(t = currentTime()) {
 function attachTransport() {
   $("play").onclick = () => (state.playing ? stop() : play());
   $("master").oninput = event => { state.master = Number(event.target.value); applyAudioState(); };
+  $("reference").onchange = event => {
+    state.referenceOn = event.target.checked;
+    if (state.referenceOn && state.mix) {
+      try { state.mix.currentTime = currentTime(); } catch (_) { /* ignore */ }
+      if (state.playing) state.mix.play().catch(() => {});
+    }
+    applyAudioState();
+    drawGrid();
+  };
+  $("loopBar").onchange = event => {
+    state.loopBar = event.target.checked;
+    state.loopIndex = state.loopBar ? currentBarIndex() : -1;
+    drawOverlay();
+  };
   applyAudioState();
 }
 
@@ -503,8 +550,11 @@ function attachGridEvents() {
   wrap.onmouseleave = () => { state.hoverBar = -1; drawOverlay(); };
   wrap.onclick = event => {
     const rect = wrap.getBoundingClientRect();
-    seek(timeForX(event.clientX - rect.left));
+    const x = event.clientX - rect.left;
+    seek(timeForX(x));
+    if (state.loopBar) state.loopIndex = clamp(Math.floor(x / state.cellW), 0, state.bars.length - 1);
     if (!state.playing) play();
+    drawOverlay();
   };
 }
 

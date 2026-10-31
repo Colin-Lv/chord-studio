@@ -82,7 +82,7 @@ class Jobs:
         atomic_json(path, job)
         with self.lock:
             project = self.store.project(project_id)
-            project["status"] = "running"
+            project["status"] = "stems" if job.get("profile") == "stems" else "running"
             self.store.save_project(project)
         try:
             with log_path.open("w", encoding="utf-8") as log:
