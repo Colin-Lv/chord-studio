@@ -1,0 +1,97 @@
+{
+  "sample_rate": 48000,
+  "frames": 1791634,
+  "duration_sec": 37.3257,
+  "mix_rms_dbfs": -16.416,
+  "mix_peak_dbfs": -1.012,
+  "conditions": {
+    "02_truth_harm": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\02_truth_harm.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\truth\\piano.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\truth\\bass.wav"
+      ],
+      "part_rms_dbfs": {
+        "piano": -17.907,
+        "bass": -12.694
+      },
+      "sum_rms_dbfs_before": -11.656,
+      "gain_db": -4.76,
+      "rms_dbfs_after": -16.416,
+      "peak_dbfs_after": -1.648,
+      "clip": false
+    },
+    "03_sep_harm": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\03_sep_harm.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(piano)_BS-Roformer-SW.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(bass)_BS-Roformer-SW.wav"
+      ],
+      "part_rms_dbfs": {
+        "mix_(piano)_BS-Roformer-SW": -25.465,
+        "mix_(bass)_BS-Roformer-SW": -19.557
+      },
+      "sum_rms_dbfs_before": -18.419,
+      "gain_db": 2.003,
+      "rms_dbfs_after": -16.416,
+      "peak_dbfs_after": -1.642,
+      "clip": false
+    },
+    "04_sep_harm4": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\04_sep_harm4.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(piano)_BS-Roformer-SW.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(bass)_BS-Roformer-SW.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(guitar)_BS-Roformer-SW.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(other)_BS-Roformer-SW.wav"
+      ],
+      "part_rms_dbfs": {
+        "mix_(piano)_BS-Roformer-SW": -25.465,
+        "mix_(bass)_BS-Roformer-SW": -19.557,
+        "mix_(guitar)_BS-Roformer-SW": -22.436,
+        "mix_(other)_BS-Roformer-SW": -97.802
+      },
+      "sum_rms_dbfs_before": -16.806,
+      "gain_db": 0.39,
+      "rms_dbfs_after": -16.416,
+      "peak_dbfs_after": -2.271,
+      "clip": false
+    },
+    "01_mix": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\01_mix.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\mix.wav"
+      ],
+      "gain_db": 0.0,
+      "rms_dbfs_after": -16.416,
+      "peak_dbfs_after": -1.012,
+      "clip": false,
+      "note": "byte-identical copy of synth6/mix.wav, no gain applied"
+    },
+    "06_sep_harm_natural": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\06_sep_harm_natural.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(piano)_BS-Roformer-SW.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\model6\\mix_(bass)_BS-Roformer-SW.wav"
+      ],
+      "sum_rms_dbfs_before": -18.419,
+      "gain_db": 0.0,
+      "rms_dbfs_after": -18.419,
+      "peak_dbfs_after": -3.645,
+      "clip": false
+    },
+    "07_truth_harm4": {
+      "file": "D:\\ChordStudio\\research\\separation\\chorddown\\cond\\07_truth_harm4.wav",
+      "sources": [
+        "D:\\ChordStudio\\research\\separation\\synth6\\truth\\piano.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\truth\\bass.wav",
+        "D:\\ChordStudio\\research\\separation\\synth6\\truth\\guitar.wav"
+      ],
+      "sum_rms_dbfs_before": -10.15,
+      "gain_db": -6.266,
+      "rms_dbfs_after": -16.416,
+      "peak_dbfs_after": -2.242,
+      "clip": false
+    }
+  }
+}

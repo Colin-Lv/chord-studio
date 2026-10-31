@@ -1,0 +1,431 @@
+{
+  "midi_progression": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G"
+  ],
+  "bass_roots": [
+    "C",
+    "A",
+    "F",
+    "G",
+    "C",
+    "A",
+    "F",
+    "G",
+    "C",
+    "A",
+    "F",
+    "G",
+    "C",
+    "A",
+    "F",
+    "G"
+  ],
+  "mix_chroma": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G"
+  ],
+  "truth_piano_chroma": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G"
+  ],
+  "truth_bass_chroma": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G",
+    "C",
+    "Am",
+    "F",
+    "G"
+  ],
+  "bar_seconds": 2.2857142857142856,
+  "per_bar": [
+    {
+      "bar": 0,
+      "t0": 0.0,
+      "piano_pitches": [
+        48,
+        52,
+        55,
+        60
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        7
+      ],
+      "bass_pitches": [
+        36,
+        48
+      ],
+      "piano_chord": "C",
+      "bass_root": "C"
+    },
+    {
+      "bar": 1,
+      "t0": 2.2857,
+      "piano_pitches": [
+        45,
+        48,
+        52,
+        57
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        9
+      ],
+      "bass_pitches": [
+        33,
+        45
+      ],
+      "piano_chord": "Am",
+      "bass_root": "A"
+    },
+    {
+      "bar": 2,
+      "t0": 4.5714,
+      "piano_pitches": [
+        41,
+        45,
+        48,
+        53
+      ],
+      "piano_pcs": [
+        0,
+        5,
+        9
+      ],
+      "bass_pitches": [
+        29,
+        41
+      ],
+      "piano_chord": "F",
+      "bass_root": "F"
+    },
+    {
+      "bar": 3,
+      "t0": 6.8571,
+      "piano_pitches": [
+        43,
+        47,
+        50,
+        55
+      ],
+      "piano_pcs": [
+        2,
+        7,
+        11
+      ],
+      "bass_pitches": [
+        31,
+        43
+      ],
+      "piano_chord": "G",
+      "bass_root": "G"
+    },
+    {
+      "bar": 4,
+      "t0": 9.1429,
+      "piano_pitches": [
+        48,
+        52,
+        55,
+        60
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        7
+      ],
+      "bass_pitches": [
+        36,
+        48
+      ],
+      "piano_chord": "C",
+      "bass_root": "C"
+    },
+    {
+      "bar": 5,
+      "t0": 11.4286,
+      "piano_pitches": [
+        45,
+        48,
+        52,
+        57
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        9
+      ],
+      "bass_pitches": [
+        33,
+        45
+      ],
+      "piano_chord": "Am",
+      "bass_root": "A"
+    },
+    {
+      "bar": 6,
+      "t0": 13.7143,
+      "piano_pitches": [
+        41,
+        45,
+        48,
+        53
+      ],
+      "piano_pcs": [
+        0,
+        5,
+        9
+      ],
+      "bass_pitches": [
+        29,
+        41
+      ],
+      "piano_chord": "F",
+      "bass_root": "F"
+    },
+    {
+      "bar": 7,
+      "t0": 16.0,
+      "piano_pitches": [
+        43,
+        47,
+        50,
+        55
+      ],
+      "piano_pcs": [
+        2,
+        7,
+        11
+      ],
+      "bass_pitches": [
+        31,
+        43
+      ],
+      "piano_chord": "G",
+      "bass_root": "G"
+    },
+    {
+      "bar": 8,
+      "t0": 18.2857,
+      "piano_pitches": [
+        48,
+        52,
+        55,
+        60
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        7
+      ],
+      "bass_pitches": [
+        36,
+        48
+      ],
+      "piano_chord": "C",
+      "bass_root": "C"
+    },
+    {
+      "bar": 9,
+      "t0": 20.5714,
+      "piano_pitches": [
+        45,
+        48,
+        52,
+        57
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        9
+      ],
+      "bass_pitches": [
+        33,
+        45
+      ],
+      "piano_chord": "Am",
+      "bass_root": "A"
+    },
+    {
+      "bar": 10,
+      "t0": 22.8571,
+      "piano_pitches": [
+        41,
+        45,
+        48,
+        53
+      ],
+      "piano_pcs": [
+        0,
+        5,
+        9
+      ],
+      "bass_pitches": [
+        29,
+        41
+      ],
+      "piano_chord": "F",
+      "bass_root": "F"
+    },
+    {
+      "bar": 11,
+      "t0": 25.1429,
+      "piano_pitches": [
+        43,
+        47,
+        50,
+        55
+      ],
+      "piano_pcs": [
+        2,
+        7,
+        11
+      ],
+      "bass_pitches": [
+        31,
+        43
+      ],
+      "piano_chord": "G",
+      "bass_root": "G"
+    },
+    {
+      "bar": 12,
+      "t0": 27.4286,
+      "piano_pitches": [
+        48,
+        52,
+        55,
+        60
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        7
+      ],
+      "bass_pitches": [
+        36,
+        48
+      ],
+      "piano_chord": "C",
+      "bass_root": "C"
+    },
+    {
+      "bar": 13,
+      "t0": 29.7143,
+      "piano_pitches": [
+        45,
+        48,
+        52,
+        57
+      ],
+      "piano_pcs": [
+        0,
+        4,
+        9
+      ],
+      "bass_pitches": [
+        33,
+        45
+      ],
+      "piano_chord": "Am",
+      "bass_root": "A"
+    },
+    {
+      "bar": 14,
+      "t0": 32.0,
+      "piano_pitches": [
+        41,
+        45,
+        48,
+        53
+      ],
+      "piano_pcs": [
+        0,
+        5,
+        9
+      ],
+      "bass_pitches": [
+        29,
+        41
+      ],
+      "piano_chord": "F",
+      "bass_root": "F"
+    },
+    {
+      "bar": 15,
+      "t0": 34.2857,
+      "piano_pitches": [
+        43,
+        47,
+        50,
+        55
+      ],
+      "piano_pcs": [
+        2,
+        7,
+        11
+      ],
+      "bass_pitches": [
+        31,
+        43
+      ],
+      "piano_chord": "G",
+      "bass_root": "G"
+    }
+  ]
+}
