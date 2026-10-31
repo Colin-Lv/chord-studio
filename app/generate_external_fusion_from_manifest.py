@@ -46,10 +46,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--extra-gating-min-track-agreement", type=float, default=0.0)
     parser.add_argument("--id-contains")
     parser.add_argument("--default-meter", default="4/4")
-    parser.add_argument("--harmonic-unit", choices=["bar", "half-bar", "compound-half", "beat", "auto"], default="auto")
+    parser.add_argument("--harmonic-unit", choices=["bar", "half-bar", "compound-half", "beat", "auto", "external"], default="auto")
+    parser.add_argument("--boundary-snap-tolerance", type=float, default=0.0)
     parser.add_argument("--base-weight", type=float, default=0.0)
-    parser.add_argument("--bass-root-weight", type=float, default=0.075)
-    parser.add_argument("--dominant-seventh-threshold", type=float, default=0.45)
+    parser.add_argument("--bass-root-weight", type=float, default=0.0)
+    parser.add_argument("--infer-slash-bass", action=argparse.BooleanOptionalAction, default=False,
+                        help="Opt into legacy inferred bass display; explicit source inversions are always preserved.")
+    parser.add_argument("--dominant-seventh-threshold", type=float, default=1.01,
+                        help="Default disables unvalidated template seventh inheritance; 0.45 reproduces legacy results.")
     parser.add_argument("--progression-prior", type=Path)
     parser.add_argument("--progression-prior-strength", type=float, default=0.045)
     parser.add_argument("--diatonic-shadow-weight", type=float, default=0.0)
@@ -58,16 +62,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--auto-min-gain", type=float, default=0.10)
     parser.add_argument("--auto-segment-window", type=int, default=0)
     parser.add_argument("--auto-segment-required", type=int, default=3)
-    parser.add_argument("--edge-fill", action="store_true")
-    parser.add_argument("--edge-fill-min-duration", type=float, default=0.50)
-    parser.add_argument("--edge-fill-min-score", type=float, default=0.70)
-    parser.add_argument("--edge-fill-mode", choices=["summary", "segments"], default="summary")
+    parser.add_argument("--edge-fill", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--edge-fill-include-no-chord", action=argparse.BooleanOptionalAction, default=True,
+                        help="Preserve explicit source N in edge segment mode; disable to reproduce old coverage.")
+    parser.add_argument("--edge-fill-min-duration", type=float, default=0.001)
+    parser.add_argument("--edge-fill-min-score", type=float, default=0.0)
+    parser.add_argument("--edge-fill-mode", choices=["summary", "segments"], default="segments")
     parser.add_argument("--repeat-consensus-refine", action="store_true")
     parser.add_argument("--repeat-phrase-bars", default="4,8")
     parser.add_argument("--repeat-min-support", type=int, default=3)
     parser.add_argument("--repeat-min-share", type=float, default=0.60)
     parser.add_argument("--repeat-max-score-gap", type=float, default=0.08)
     parser.add_argument("--repeat-max-current-score", type=float, default=0.86)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Write experiment outputs to this directory instead of replacing the manifest prediction paths.",
+    )
     parser.add_argument("--python", default=sys.executable)
     return parser.parse_args()
 
@@ -77,6 +88,11 @@ def analysis_path_for_row(output_dir: Path, row_id: str) -> Path:
     return output_dir / f"{safe_id}_analysis.json"
 
 
+def output_base_for_row(output_dir: Path, row_id: str) -> Path:
+    safe_id = "".join(ch if ch.isalnum() or ch in "._-" else "_" for ch in row_id)
+    return output_dir / safe_id
+
+
 def main() -> int:
     args = parse_args()
     manifest = args.manifest.resolve()
@@ -84,6 +100,9 @@ def main() -> int:
     external_dir = args.external_chords_dir.resolve()
     base_evidence_dir = args.base_evidence_dir.resolve() if args.base_evidence_dir else None
     extra_external_dirs = [path.resolve() for path in args.external_chords_dir_extra or []]
+    output_dir = args.output_dir.resolve() if args.output_dir else None
+    if output_dir:
+        output_dir.mkdir(parents=True, exist_ok=True)
     fusion_script = Path(__file__).resolve().parent / "downbeat_external_fusion.py"
 
     with manifest.open("r", encoding="utf-8-sig", newline="") as handle:
@@ -105,7 +124,7 @@ def main() -> int:
     for index, (row, prediction, beat_reference, external) in enumerate(selected, start=1):
         row_id = row.get("id", "")
         print(f"[{index}/{len(selected)}] {row_id}")
-        output_base = output_base_from_prediction(prediction)
+        output_base = output_base_for_row(output_dir, row_id) if output_dir else output_base_from_prediction(prediction)
         key = normalize_key_label(row.get("key")) or "C"
         command = [
             args.python,
@@ -117,6 +136,10 @@ def main() -> int:
             str(output_base),
             "--key",
             key,
+            "--beat-provenance",
+            "reference",
+            "--boundary-snap-tolerance",
+            str(args.boundary_snap_tolerance),
             "--meter",
             row.get("meter") or args.default_meter,
             "--harmonic-unit",
@@ -166,8 +189,9 @@ def main() -> int:
             "--extra-gating-min-track-agreement",
             f"{args.extra_gating_min_track_agreement:.6f}",
         ]
-        if args.edge_fill:
-            command.append("--edge-fill")
+        command.append("--edge-fill" if args.edge_fill else "--no-edge-fill")
+        command.append("--infer-slash-bass" if args.infer_slash_bass else "--no-infer-slash-bass")
+        command.append("--edge-fill-include-no-chord" if args.edge_fill_include_no_chord else "--no-edge-fill-include-no-chord")
         if args.repeat_consensus_refine:
             command.append("--repeat-consensus-refine")
         if args.progression_prior:

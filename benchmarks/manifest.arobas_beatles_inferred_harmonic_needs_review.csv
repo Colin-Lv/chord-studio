@@ -1,0 +1,2 @@
+﻿id,dataset,split,artist,title,key,meter,audio,prediction,chord_reference,beat_reference,notes
+arobas_beatles_inferred_harmonic_The_Beatles_I_ve_got_a_feeling_Beatles_The_-_I_ve_Got_a_Feeling,arobas_beatles_inferred_harmonic,symbolic_inferred,The Beatles,I've got a feeling,C,4/4,,,raw/arobas_beatles_inferred_harmonic/arobas_beatles_inferred_harmonic_The_Beatles_I_ve_got_a_feeling_Beatles_The_-_I_ve_Got_a_Feeling/inferred_chords.lab,,inferred from Guitar Pro note content

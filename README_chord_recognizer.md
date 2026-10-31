@@ -1,511 +1,245 @@
-# 本地音乐和弦识别工作台
+# Chord Studio：本地和弦识别与标注工作台
 
-这个工具会分析本地音频，并输出 BPM、调式、拍号、小节/拍子级和弦，以及一个可播放并同步高亮当前和弦的 HTML 界面。
+> **先读**：`D:\ChordStudio\README.md`（当前冻结模型、目录地图、归档说明）。
+> 现在在用的模型是 **`chord_retained10_v80`（音频入口 v88）**，权重 `retained10.npz`，
+> sha256 `6a37737d…eceef`，随桌面版安装包发布，不放在本仓库里。
+> 本仓库的 `benchmarks\models\_legacy_202608\` 全是历史实验模型，不要混淆。
 
-支持常见音频格式：`mp3`、`m4a`、`wav`、`flac`。
+分析本地音频，生成和弦、小节/拍点、调性及可播放、可修改的离线页面。当前实现、可信性能与优先瓶颈统一见 [PROJECT_REPORT](PROJECT_REPORT.md)。本文只保留使用方法，不再叠加历史审计日志。
 
-如果换到新电脑，先安装依赖：
+## 选择入口
+
+| 任务 | 入口 | 输出 |
+|---|---|---|
+| 网页上传音乐 / B 站链接一键识别 | `start_harmony_web.bat` | 常驻单页工作台、任务进度、分析 JSON、独立修正 LAB |
+| 分析新歌曲并打开工作台 | `recognize_harmony.bat` / `app/analyze_with_madmom.py` | 分析 JSON、HTML、和弦表 |
+| 打开已有分析并继续人工标注 | `open_chord_studio.bat` / `app/open_studio.py` | 当前样式的工作台，不重识别 |
+| 使用三源候选实验模型 | `app/recognize_harmony.py` | 带来源记录的 `harmony.lab` |
+| 单独使用大词表识别器 | `app/generate_audio_only_largevocab_labs.py` | Harte 和弦 LAB |
+
+**注意两个同名入口不同：根目录 `.bat` 是默认工作台；`app/recognize_harmony.py` 是实验模型。** 新候选模型尚未替换工作台默认路线。
+
+### 离线主调前三候选排序实验
+
+新增 `app/train_key_top3_reranker_v1.py` 是独立的回顾性开发训练入口，比较原 CNN（M0）、CNN 特征 LR（M1）、增加全曲和声特征的 LR（M2）。固定 CNN 前三候选、5 外折/3 内折，使用已有冻结缓存，不启动声学模型或工作台自动覆盖。实际成绩、误改及限制见 [项目报告](PROJECT_REPORT.md)；模型输出为未经校准的排序分数。
+
+已实际运行的训练/评价命令：
+
+```powershell
+python -B -m app.train_key_top3_reranker_v1 run --output benchmarks/reports/key_top3_rerank_20261006_v1
+```
+
+已完成的目录拒绝覆盖。重现时指定新的输出目录，先准备/冻结，再运行同一个小网格；不修改旧 protocol：
+
+```powershell
+python -B -m app.train_key_top3_reranker_v1 prepare --output benchmarks/reports/key_top3_rerank_reproduction
+python -B -m app.train_key_top3_reranker_v1 run --output benchmarks/reports/key_top3_rerank_reproduction
+python -B -m pytest tests/test_key_top3_reranker_v1.py -q
+```
+
+准备需要本机 `key_review_data_20261006` 的用途登记、`harmonic_key_v2_20261006` 的 contract/四份完整预测报告及其指向的原音频、CNN/LAB/中性网格。缺失或身份不符会列入新 manifest；无有效材料则报真实错误，不重新下载或伪造缓存。历史源码与模型须保持原位。
+
+应用已训练的离线模型：
+
+```powershell
+python -B -m app.key_top3_reranker_v1 --model benchmarks/reports/key_top3_rerank_20261006_v1/models/M2_full.json --cnn cnn.json --harmonic harmonic_v2.json --output ranked_key.json
+```
+
+`--harmonic` 可省略，缺失来源保留有效性掩码；`M1` 只使用 CNN 字段。应用入口校验特征/实现与冻结上游 contract，无法替代新歌曲输入来源身份的核对。本轮《虚拟》两模型均仍选 G，没有上线默认策略。
+
+## 日常使用
+
+### 浏览器工作台（新增）
+
+双击 `start_harmony_web.bat`，打开 **http://127.0.0.1:8765**。选择或拖入音频，立即试听，然后点击“开始分析”；也可以切换到“B 站链接”，输入 `bilibili.com/video/…` 或 BV 号，点击“获取音频并分析”。支持 `?p=2` 等分 P 参数，不自动下载整个合集。网页显示实际执行阶段和运行日志；任务后台串行执行，关闭页面后仍可从“我的音乐”重新打开。
+
+新页面默认明确选择“多来源和声 · 冻结 v1”，也可选择单来源 madmom 或显式的实验 v2。原来的离线工作台默认路线保持不变。v2 B52 与 v1 B66 训练规模不同，来源一致性不代表准确率。
+
+结果包括波形、拍点/小节、主调、段落相似性、和声循环、各来源原始区间和候选提案。主调可手动修改，和弦名称与级数可切换；编辑框支持 `C#m7`、`V7`、`6m` 等记法。候选来自有时间重叠的独立声学来源，不显示没有导出的模型分数。A/B 是相似段落标记，不能当作已确认的主歌/副歌。
+
+结果页可独立打开“和声主调 v2 · 辅助审阅”。原自动主调与冻结全曲建议并列显示；开关不会自动覆盖，原 `fused` 判断也不会换算法。点击“采用此建议”或选择自定义主调会立即保存人工审阅，跨来源统一级数，重新打开仍保留；“恢复自动估计”恢复原自动结果。原始和弦及人工和弦修订不移调。局部候选默认折叠为未验证，仅用于定位播放。缺少匹配原始音频/LAB/中性网格或契约失效时显示不可用，不抄用别的歌曲结果。显示改调不重新识别音频。
+
+“主调审阅 JSON”导出运行级自动结果、建议、人工选择和历史事件，是新增人工改调的权威记录。“分析 JSON”继续导出不可变的原始模型结果；各和弦来源的旧修改 JSON 中保留的主调仅为当时显示设置，不能替代较新的运行级审阅记录。
+
+“先听辨再看建议”入口提供独立标注页：先填写录音版本、时段、主音/可未知的大小调族、依据及标注者，锁定后显式查看建议。预测曝光和修订留痕；此功能只隐藏本页预测，不能证明从未见过其他预测，也不会把人工采用建议当成金标准。导出标注 JSON 可通过 `python -B -m app.import_key_annotations --input key_annotation.json --output imports/listening_001.jsonl` 导入；JSONL/CSV 同样支持，输出拒绝覆盖。数据用途和待补材料见 [数据协议](benchmarks/reports/key_review_data_20261006/DATA_PROTOCOL.md)。
+
+点击“应用”更新浏览器草稿，再点击“保存修改到项目”写入本机。各来源分别保存修改，原始 LAB 不覆盖；修正 LAB 保留原起止时间文本。导出链接读取上次服务器保存的版本，“导出当前草稿”可保存尚未提交的修改。两个窗口同时保存会检测版本冲突。新分析使用新的运行目录，旧输出保留，旧修改不会自动套用到新边界。
+
+首次在其他环境安装：
+
+```powershell
+.\setup_harmony_web.ps1 -ModelPython "C:\路径\到\现有模型环境\python.exe"
+.\start_harmony_web.bat
+```
+
+Web 依赖装在独立的 `.tmp/harmony_web_env`，模型继续使用原 Python 环境及原 madmom/Chordino/大词表工具链。脚本记录模型解释器位置；也可通过 `HARMONY_MODEL_PYTHON` 覆盖。模型权重和 contract 仍需原位保留，安装 Web 依赖不会下载训练数据或重训模型。
+
+开发启动与针对性验证：
+
+```powershell
+.tmp/harmony_web_env/Scripts/python.exe -B app/start_web.py --port 8765
+.tmp/harmony_web_env/Scripts/python.exe -B -m pytest tests/test_web_workbench.py -q
+# 已完成项目的 UI 验证，不重跑声学模型：
+.tmp/harmony_web_env/Scripts/python.exe -B -m app.web.check_browser <project_id>
+```
+
+服务绑定 `127.0.0.1`，单进程队列；默认接受不超过 512 MB、30 分钟的音频。B 站仅获取公开可访问的音频流，不自动读取浏览器登录信息；不可访问的视频会给出失败状态，可改用本地上传。服务器重启时中断任务标记为可重试，不冒充继续运行。
+
+代码边界为 `frontend/` 固定页面、`app/web/server.py` HTTP 接口、`jobs.py` 任务队列、`worker.py` 现有 CLI 编排。模型不生成页面。接口包括 `/api/upload`、`/api/bilibili`、`/api/projects/{id}/analyze`、`/api/jobs/{id}`、项目 `result`/`audio`/`corrections`/`export`。写接口需要 `X-Harmony-Client: studio`，页面已自动发送。
+
+数据保存在 `projects/web/<project_id>/`：音频与 `project.json`；每次分析位于 `runs/<job_id>/`，包含 `analysis.json`、各来源 LAB、模型来源侧车及 `corrections/<source_id>/corrections.json` / `corrected.lab`。任务命令、耗时、失败和日志位于 `projects/web/jobs/`。统一 JSON 使用 `sources[].rows` 保存完整区间，以 `default_source` 标记当前模型，另含 `key_analysis`、`beats`、`bars`、`waveform`、`structure` 和输入/模型哈希。
+
+实现使用 [FastAPI 文件上传](https://fastapi.tiangolo.com/tutorial/request-files/)、[Starlette 文件及范围响应](https://starlette.dev/responses/)和 [yt-dlp](https://github.com/yt-dlp/yt-dlp) 的公开接口。
+
+### 独立和声主调 v2 与 chroma 诊断（2026-10-06）
+
+这两个入口输出独立 JSON；默认工作台仍使用原 CNN/冻结裁决器。v2 将主音与条件大小调分开，保留 12 主音、各主音的两个调式、24 个组合候选及局部窗口证据。分数不是校准概率。
+
+```powershell
+python app/harmonic_key_v2.py --raw raw.lab --neutral neutral_analysis.json --contract benchmarks/reports/harmonic_key_v2_20261006/engine_contract.json --output harmonic_v2.json
+python app/key_profile_baseline.py song.mp3 --output chroma_profile.json
+```
+
+`raw.lab` 必须是独立原始和弦，`neutral_analysis.json` 来自不带 `--key`、带 `--all-key-candidates` 的分析。原始音频和这些输出必须对应同一录音。chroma 使用已有 22050 Hz / hop 512 前端，缓存核对音频及实现哈希。省略 `--contract` 仅运行未选模的工程默认规则，不能将其结果混入冻结实验。
+
+规则、schema 或特征语义改变后必须新建 contract，不能沿用已冻结制品。开发集选择只读取新开发/校准分区，已有 contract 不允许覆盖。新封存、消融、旧歌曲回归与互补 oracle 见 [PROJECT_REPORT](PROJECT_REPORT.md) 和 [交付索引](benchmarks/reports/harmonic_key_v2_20261006/delivery.json)。oracle 是离线诊断，不参与推理；本轮没有重训或启用 disagreement resolver。
+
+### 实验主调融合（2026-10-06，保留历史实现）
+
+网页“主调判断”选择 **分歧裁决 · 实验**，或在 CLI 使用：
+
+```powershell
+python app/analyze_with_madmom.py "song.mp3" --key-source fused -o projects/song_fused
+```
+
+先读取独立原始和弦与 CNN 证据，运行不带 `--key` 的独立分析，再检查全曲和声及多小节稳定性。若最终主调与独立分析不同，最多再运行一次；人工 `--key` 始终优先。网页的和弦来源本身与主调无关，只需一次独立调性分析。此模式不强制添加 Chordino/大词表。
+
+页面显示 CNN 与全曲和声两路主证据，以及联合分析、局部时间线等辅助证据。主证据一致且质量检查通过时接受；有分歧时才运行两个小型逻辑回归 gate，只有一方通过校准门槛才裁决。没有兼容模型、两方均通过或均未通过时为 `ambiguous`，显示的是**暂定主调**。可判定小节占比、未判定占比、候选在可判定部分的占比、全部有效小节支持率分别展示。
+
+输出使用 `key_fusion`、`key_source=key_disagreement_resolver_v2` 与 `key_estimation.madmom_cnn`。旧 CNN 原始证据保留；逻辑回归输出是判别分数，不是有可靠误差保证的概率。四种路径为 `agreement`、`disagreement_resolved_cnn`、`disagreement_resolved_harmonic`、`ambiguous`。旧门槛仅保存在 `legacy_policy`/`legacy_gate_checks` 供追溯，不参与新裁决。
+
+默认仍为 CNN；完整对照、回归和部署判断见 [PROJECT_REPORT](PROJECT_REPORT.md#实验主调融合2026-10-06)。旧项目不会自动重算或覆盖人工标注。实验模型默认读取 `benchmarks/models/key_resolver_v2.json`；CLI 可用 `--key-resolver 路径` 指定冻结制品。实现哈希或 CNN 权重不匹配时，必须重新生成证据并训练/校准，不能沿用旧门槛。
+
+本轮制品的校准分歧样本中没有和声纠错正例，两个自动裁决门槛均禁用；当前只能接受质量合格的主证据一致结论，分歧继续标为待审核。《虚拟》尚未自动改成 C，不建议将 fused 设为默认。
+
+离线评估入口：
+
+```powershell
+python app/evaluate_global_key_fusion.py --manifest key_eval.csv --output benchmarks/reports/key_eval
+```
+
+CSV 字段为 `id,cnn,neutral,raw,reference`，可加 `audio` 记录音频哈希；路径相对 CSV 所在目录。`neutral` 必须来自不带 `--key`、带 `--all-key-candidates` 的 studio 分析；`raw` 必须是与主调无关的原始 LAB。参考只参与最后评分，不进入推理。默认标记为回归集，`--dataset-kind held-out` 仅适用于调用者已经独立封存的数据，程序不会替代数据隔离审查。
+
+分歧裁决器实验入口（训练只读取 development/calibration）：
+
+```powershell
+python app/download_key_resolver_data.py --output benchmarks/external_key_data
+python app/prepare_key_resolver_data.py --root benchmarks/external_key_data --output benchmarks/reports/key_resolver_20261006/splits --limit 180
+python app/run_key_resolver_audio.py --split benchmarks/reports/key_resolver_20261006/splits/giantsteps_split.json --output benchmarks/reports/key_resolver_20261006/giantsteps --workers 2
+python app/train_key_disagreement.py --split benchmarks/reports/key_resolver_20261006/splits/giantsteps_split.json --cases benchmarks/reports/key_resolver_20261006/giantsteps --output benchmarks/reports/key_resolver_20261006/resolver.json
+python app/evaluate_key_disagreement.py --split benchmarks/reports/key_resolver_20261006/splits/giantsteps_split.json --cases benchmarks/reports/key_resolver_20261006/giantsteps --model benchmarks/reports/key_resolver_20261006/resolver.json --output benchmarks/reports/key_resolver_20261006/sealed_test.json
+python app/evaluate_key_disagreement.py --manifest key_eval.csv --model benchmarks/reports/key_resolver_20261006/resolver.json --output benchmarks/reports/key_resolver_20261006/regression.json
+python app/evaluate_billboard_key_reasoning.py --split benchmarks/reports/key_resolver_20261006/splits/billboard_split.json --output benchmarks/reports/key_resolver_20261006/billboard/report.json
+```
+
+已冻结 split 与模型拒绝覆盖；新实验请使用新目录。`run_key_resolver_audio.py --evidence-only` 只从校验通过的缓存重建和声证据，不会重新运行声学模型。GiantSteps+ 是公开音频的电子音乐试点；按艺术家/作品分组的 resolver 隔离不等于已验证 CNN 上游预训练完全无重叠。Billboard 入口只用公开参考和弦及插值小节测试主音推理，不是音频识别或完整大小调准确率。
+
+### 原有离线入口操作
+
+把音频拖到 `recognize_harmony.bat`，或执行：
+
+```powershell
+python app/analyze_with_madmom.py "song.mp3" -o projects/song --open
+```
+
+已有分析 JSON 可拖到 `open_chord_studio.bat`；重新打开时无需重跑模型：
+
+```powershell
+python app/open_studio.py "已有_analysis.json" --open
+```
+
+也可直接打开[现有歌曲工作台索引](benchmarks/reports/session_20260926/index.html)。页面支持播放跟随、波形定位、A/B 循环、变速、标签编辑、撤销/重做、段落建议及导出修订 JSON。浏览器本地草稿不等于项目文件，重要修改请使用页面导出功能保存。[工作台操作细节](docs/studio_ui_20260926.md)。
+
+标签保真修复适用于新生成的页面。已有 HTML 内嵌的是旧版脚本；要使用新版编辑导出，请先保存修订，再用 `open_chord_studio.bat` 打开相应分析 JSON，无需重识别音频。
+
+默认使用 madmom 的和弦、调性与拍格；轻量结构模块提供中性段落和循环建议。可显式传入已知调性、拍号，例如 `--key E --meter 4/4`。参考拍点或人工调性参与的结果应标为辅助分析，不能算完全自动识别成绩。
+
+## 实验模型
+
+```powershell
+python app/recognize_harmony.py "song.mp3" --model benchmarks/reports/session_20260926_accuracy2/multisource_candidate_reliability/selected_train66_head.joblib --output-dir projects/song_candidate
+```
+
+此入口串行运行 madmom、Chordino、ISMIR2019 大词表模型，并用 NNLS 音符证据和 HGB 模型选候选。默认保护原始根音与时间边界；`--no-preserve-root` 才允许完整候选头修改根音。输出为 `harmony.lab`、来源侧车及 `result.json`，不是已验证的工作台最终融合结果。
+
+模型文件旁的 `.contract.json` 必须保留。已有三源输出时可传 `--raw-lab`、`--chordino-lab`、`--largevocab-lab` 复用；特征缓存按音频和工具身份核验。详细成绩、限制与单独应用模型的命令见[模型实验说明](docs/model_accuracy2_20260927.md)。
+
+独立大词表入口：
+
+```powershell
+python app/generate_audio_only_largevocab_labs.py --audio "song.mp3" --output-dir projects/song_largevocab
+```
+
+结果在 `projects/song_largevocab/labs/audio.lab`。工作台导入已保留显式 slash 低音和未知标签 X；Harte 的相对低音会转为音名，如 `G:maj/3 → G/B`。后续拍格融合仍可能改变区间或标签，页面结果不能直接继承原始 LAB 的准确率。修复对照见[项目报告](PROJECT_REPORT.md)。
+
+## 独立 v2 实验入口
+
+v2 不接替上述 frozen v1 和工作台入口。新增源码、139 维 schema、权重和 contract 单独保存；源码或特征语义改变后必须重新训练并重新生成契约。当前可用的 `semantic_e1_B52_v2.joblib` 只用于已知数据诊断，分数未经置信校准。结果与限制见 [PROJECT_REPORT](PROJECT_REPORT.md#本轮-v2-实施与实际结果)。
+
+使用现成音频、三源 LAB 和整曲 NNLS NPZ，应用已训练的 v2 头；不读取参考、不自动提取缺失缓存：
+
+```powershell
+python app/apply_multisource_candidates_v2.py --audio song.mp3 --raw raw.lab --chordino chordino.lab --largevocab largevocab.lab --notes notes.npz --model benchmarks/reports/model_v2_20261003/semantic_e1/semantic_e1_B52_v2.joblib --output projects/song_v2/harmony.lab
+```
+
+以上 `song.mp3` 等是待替换的实际输入路径。输出须为新路径，同时保存来源侧车。E1 可执行复现实验如下，已有目录不会覆盖：
+
+```powershell
+python app/run_semantic_experiment_v2.py --baseline-report benchmarks/reports/model_v2_20261003/policy_diagnostic/dev14/report.json --output benchmarks/reports/semantic_e1_repeat
+```
+
+E2 掩码目标训练需先准备新的分组 manifest：JSON 行包含 `id/work_id/artist_id/recording_id/domain/grouping_evidence/split`，以及 `audio/raw_madmom/chordino/largevocab/notes/reference` 六条输入路径；相对路径以 manifest 所在目录为基准。`split` 为 `fit/development/calibration/sealed_test/known_regression`；同一作品、艺术家、录音或音频哈希不得跨组，fit/development 均须有至少两个有来源说明的风格。配置 JSON 必须显式提供七项 `weights`、`margin`、`reference_coverage_policy`，没有默认调权。本轮没有这套新的完整数据，也没有运行下列训练：
+
+```powershell
+python app/experiment_protocol_v2.py freeze-splits --manifest grouped_manifest_v2.json --output frozen_splits_v2.json
+python app/experiment_protocol_v2.py freeze-config --protocol frozen_splits_v2.json --configuration selection_config.json --output frozen_config_v2.json
+python app/train_multisource_candidate_reliability_v2.py --protocol frozen_splits_v2.json --configuration frozen_config_v2.json --baseline-v1-model benchmarks/reports/session_20260926_accuracy2/multisource_candidate_reliability/selected_train66_head.joblib --output benchmarks/reports/masked_e2
+```
+
+冻结步骤会给所有输入建立 SHA；封存参考只作不透明字节哈希，不解析标签。训练入口仅读 fit/development 的参考，保留校准与封存组，输出五类对照、字段覆盖、误改时长及退步曲目。它拒绝 frozen v1 已见训练音频作为新评估音频，但外部预训练集完整来源仍需另行核验。
+
+可选六组原声学概率导出与同 raw 边界聚合：
+
+```powershell
+python app/generate_audio_only_largevocab_labs_v2.py --audio song.mp3 --output-dir projects/song_posteriors --export-posteriors
+python app/aggregate_largevocab_posteriors_v2.py --posteriors projects/song_posteriors/posteriors/audio.npz --raw-lab raw.lab --output projects/song_posteriors/raw_aggregated.json
+```
+
+NPZ 包含 triad/bass/7/9/11/13 概率、类别映射、帧采样位置、采样率/hop 与完整来源哈希。省略 `--export-posteriors` 保持原 LAB 推理路线；缓存模式、音频、权重或前端不符会拒绝复用。聚合另支持 `--anchors largevocab` 或 `--anchors union` 配合 `--largevocab-lab`，用于分别研究边界因素，不会改写概率来源名称。目前只完成 8 秒片段的实现验证，没有后验增强模型准确率结论。
+
+## 环境
+
+本机现有环境已安装，无需因文档整理重新安装。迁移到新电脑时，主环境依赖：
 
 ```powershell
 python -m pip install -r requirements_chord_studio.txt
 ```
 
-## 当前目录结构
-
-- `app\`：程序源码，主程序是 `app\chord_studio.py`
-- `projects\panopticon\`：Panopticon 音频、正式分析结果和测试结果
-- `projects\BV1abRqB8EPb\`：另一个 B 站音频及前 60 秒分析结果
-- `projects\BV1ff4y1779y\`：简单歌曲测试音频和同步测试结果
-- `archive\cache\`：Python 缓存文件
-
-## 快速使用
-
-在当前文件夹打开 PowerShell：
-
-```powershell
-python .\app\chord_studio.py "音频文件.m4a"
-```
-
-更推荐的高准确率路径是使用 madmom 的 CNN+CRF 和弦模型，再接入本项目的拍点网格、罗马数字显示和校正界面：
-
-```powershell
-python .\app\analyze_with_madmom.py "音频文件.m4a" --key E --meter 4/4 --display roman
-```
-
-如果已知 BPM，可以一并给出，速度会更快且小节网格更稳定：
-
-```powershell
-python .\app\analyze_with_madmom.py "音频文件.m4a" --key E --meter 4/4 --bpm 161.29 --display roman
-```
-
-如果一小节内经常有两个和弦，例如 `I-V | VIm-IV | V-I`，可以直接使用半小节融合：
-
-```powershell
-python .\app\analyze_with_madmom.py "音频文件.m4a" --key G --meter 4/4 --harmonic-unit half-bar --display roman
-```
-
-如果已经生成过 madmom `.lab`，可以复用它来快速尝试不同小节粒度：
-
-```powershell
-python .\app\analyze_with_madmom.py "音频文件.m4a" -o ".\projects\song_halfbar" --key G --meter 4/4 --harmonic-unit half-bar --madmom-lab ".\projects\song_madmom.lab"
-```
-
-生成结果：
-
-- `_madmom.lab`：madmom 原始和弦识别结果
-- `_analysis.json`：融合到拍子/小节后的 Chord Studio 数据
-- `_studio.html`：可播放、可校正、可切换和弦名/罗马数字的界面
-
-也可以用批处理入口：
-
-```powershell
-.\recognize_chords.bat "音频文件.m4a"
-```
-
-生成结果：
-
-- `_bar_chords.txt`：按小节阅读的和弦表
-- `_bar_chords.csv`：适合 Excel 打开，包含 `chord`、`roman`、`bass_root`、`bass_confidence` 等列
-- `_analysis.json`：给程序或网页使用的完整分析数据
-- `_studio.html`：类似 Moises 的本地播放器界面，可切换“和弦名/级数”，小节卡片内只显示各拍和弦，并带毫秒级同步校准
-
-## 常用修正
-
-自动 BPM 不准时：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --bpm 128
-```
-
-自动调式不准时：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --key F#m
-```
-
-默认用罗马数字级数显示：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --display roman
-```
-
-## 准备评测音频
-
-公开数据集只提供标注，不提供商业音频。拿到合法的整张专辑音频后，可以用时间戳表自动切成单曲，并回填评测清单里的 `audio` 路径。例如 `Please Please Me`：
-
-```powershell
-python .\app\split_album_by_timestamps.py ".\path\to\Please Please Me full album.m4a" --segments ".\benchmarks\audio_sources\please_please_me_segments.csv" --out-dir ".\benchmarks\audio\isophonics\The Beatles\01 - Please Please Me" --format mp3 --overwrite --update-manifest ".\benchmarks\manifest.public_dev.csv"
-```
-
-`With the Beatles` 的整张专辑也可以用同样流程切分：
-
-```powershell
-python .\app\split_album_by_timestamps.py ".\path\to\With The Beatles full album.mp3" --segments ".\benchmarks\audio_sources\with_the_beatles_segments.csv" --out-dir ".\benchmarks\audio\isophonics\The Beatles\02 - With the Beatles" --format mp3 --overwrite --update-manifest ".\benchmarks\manifest.isophonics_beatles_all.csv"
-```
-
-切分完成后，前两张 Beatles 专辑共 28 首可以用 `benchmarks\manifest.beatles_first2_28.csv` 做小型回归评测。
-
-## 当前评测结论
-
-在 `Please Please Me` 专辑 14 首、Isophonics 专家标注、参考 beat grid + 专家 key 的受控评测下：
-
-| 方法 | Root accuracy | Triad accuracy |
-| --- | ---: | ---: |
-| 本项目原 template 模型 | 0.560 | 0.515 |
-| madmom 直接 `.lab` | 0.828 | 0.813 |
-| madmom + Chord Studio 网格/HTML 融合 + Beatles 进行先验 | 0.873 | 0.866 |
-
-在 `Please Please Me` + `With the Beatles` 共 28 首、参考 beat/downbeat 标签保真、专家 key 的受控评测下，当前 `madmom + Chord Studio 融合 + Beatles 进行先验` 为：
-
-| Report | Root accuracy | Triad accuracy | Beat F1 | Downbeat F1 |
-| --- | ---: | ---: | ---: | ---: |
-| `benchmarks\reports\beatles_first2_labeled_grid_prior_s0p045.json` | 0.886 | 0.860 | 1.000 | 1.000 |
-
-这版修复了参考 beat 文件里弱起、不完整小节或连续 downbeat 标签被强行按固定 4 拍循环的问题。对于小节相位错误，优先检查 beat/downbeat 标签是否被保留下来，而不是只看全局 BPM。
-
-继续接入 `A Hard Day's Night` 后，前三张 Beatles 专辑共 41 首可以用 `benchmarks\manifest.beatles_first3_41.csv` 评测：
-
-| Report | Root accuracy | Triad accuracy | Beat F1 | Downbeat F1 |
-| --- | ---: | ---: | ---: | ---: |
-| `benchmarks\reports\beatles_first3_labeled_grid_prior_s0.json` | 0.880 | 0.857 | 1.000 | 1.000 |
-
-这次还修复了评测器对 Isophonics `Point` 标记的处理：`Point` 是事件标记，不是和弦，不能参与 chord accuracy 计算。41 首参数扫描显示，当前 `--progression-prior-strength 0` 的 triad 略好，说明 Beatles 的特殊进行较多，过强的通用进行先验会误伤局部和弦。
-
-继续接入 `Help!`、`Rubber Soul`、`Revolver` 后，当前已下载 6 张 Beatles 专辑共 83 首，可用 `benchmarks\manifest.beatles_selected6_83.csv` 评测：
-
-| Report | Root accuracy | Triad accuracy | Beat F1 | Downbeat F1 |
-| --- | ---: | ---: | ---: | ---: |
-| `benchmarks\reports\beatles_selected6_labeled_grid_bar_prior_s0_final.json` | 0.864 | 0.834 | 1.000 | 1.000 |
-| `benchmarks\reports\beatles_selected6_labeled_grid_auto_prior_s0_final.json` | 0.883 | 0.854 | 1.000 | 1.000 |
-| `benchmarks\reports\beatles_selected6_no_feedback_auto_final.json` | 0.878 | 0.851 | 1.000 | 1.000 |
-
-83 首上新的 `auto + no-feedback` 是当前稳定基线。它默认保持整小节，只有当一个小节内部两个半小节的外部候选都很明确且根音不同，才局部拆成半小节。`beat` 级过碎，会放大局部候选噪声。这次扫描显示，全局调内质量加分会轻微误伤借用和弦、局部转调和大小调色彩，因此默认关闭 `diatonic_bonus`。融合脚本现在也会避免把已经融合过的 `external-fusion` JSON 再当作本地模板证据读入，防止重复评测时发生自我强化。七和弦补色保持保守：只在同根且本地证据足够强时继承 `7/m7`，不自动把普通大三和弦染成 `maj7`。
-
-融合层已支持多个外部 ACR 候选源。主目录仍放 madmom 结果；如果后续接入 Chordino、BTC 或其他模型，只要输出同名 `.lab` 文件，就可以作为额外目录加入：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --external-chords-dir-extra .\benchmarks\external_chords\chordino\beatles_selected6
-```
-
-Chordino 接入准备：
-
-```powershell
-python .\app\check_chordino_toolchain.py
-python .\app\generate_chordino_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\chordino\beatles_selected6 --force
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --external-chords-dir-extra .\benchmarks\external_chords\chordino\beatles_selected6 --external-chords-extra-weight 0.05
-```
-
-当前 `tools\sonic-annotator-1.7-win64\...` 已可运行；还需要系统可见的 Vamp Plugin Pack / NNLS Chroma Chordino 插件。检查脚本会确认 `vamp:nnls-chroma:chordino:simplechord` 是否出现在 Sonic Annotator 的 `--list` 输出里。
-
-实测 Chordino 在当前 Beatles 83 首评测集上弱于 madmom-only 融合，直接等权加入会把 triad 从 0.851 拉低到约 0.808；低权重 0.05 基本持平但没有净收益。因此 Chordino 目前更适合作为对照/诊断候选源，不建议默认启用。后续如果接入 BTC 等更强模型，可以复用同一个 `--external-chords-dir-extra` 接口。
-
-已额外接入并测试 `ISMIR2019-Large-Vocabulary-Chord-Recognition` 深度模型，生成脚本是：
-
-```powershell
-python .\app\generate_large_vocab_chords_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\largevocab\beatles_selected6_raw --force
-```
-
-这个模型在 83 首 Beatles 评测集上的原始输出为 root 0.768、triad 0.730，整体低于 madmom 原始输出；但它在约 20 首歌上局部优于 madmom。作为第二候选源进行低权重融合时，简单加权几乎没有净收益：`--external-chords-extra-weight 0.02` 只带来极小提升，0.05 以上开始拉低结果。因此它不适合直接默认加入。
-
-目前已加入实验性的第二模型门控：当整首层面 Large-Vocab 与 madmom 兼容度过低时禁用第二模型；在单个小节/半小节内，只有主模型不够明确或二者同根兼容时，才允许第二模型以低权重参与。当前最佳实验配置：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --harmonic-unit auto --progression-prior .\benchmarks\reports\isophonics_beatles_progression_prior.json --progression-prior-strength 0 --diatonic-shadow-weight 0 --diatonic-bonus 0 --external-chords-dir-extra .\benchmarks\external_chords\largevocab\beatles_selected6_raw --external-chords-extra-weight 0.05 --extra-gating conservative --extra-gating-min-track-agreement 0.70
-```
-
-对应报告 `benchmarks\reports\beatles_selected6_gate_large_w005_agree070_experimental.json`：root 0.8787、triad 0.8518。相对稳定基线 root 0.8776、triad 0.8508 有小幅提升；逐曲差异为 9 首提升、2 首下降、72 首不变。这个提升还不够大，所以暂时标记为实验配置，而不是无条件默认配置。
-
-现在还可以生成片段级错误诊断，直接查看哪些时间段错了、错成什么、各个外部模型在同一时刻给了什么候选：
-
-```powershell
-python .\app\diagnose_chord_segments.py .\benchmarks\manifest.beatles_selected6_83.csv -o .\benchmarks\reports\segment_errors_gate_large_w005_agree070.csv --madmom-dir .\benchmarks\external_chords\madmom\beatles_selected6 --largevocab-dir .\benchmarks\external_chords\largevocab\beatles_selected6_raw --chordino-dir .\benchmarks\external_chords\chordino\beatles_selected6 --level triad
-```
-
-如果要研究七和弦、slash chord 和低音显示，使用 exact 级别：
-
-```powershell
-python .\app\diagnose_chord_segments.py .\benchmarks\manifest.beatles_selected6_83.csv -o .\benchmarks\reports\segment_errors_exact_gate_large_w005_agree070.csv --madmom-dir .\benchmarks\external_chords\madmom\beatles_selected6 --largevocab-dir .\benchmarks\external_chords\largevocab\beatles_selected6_raw --chordino-dir .\benchmarks\external_chords\chordino\beatles_selected6 --level exact
-```
-
-已新增独立 bass/template 证据接口。先生成不覆盖主预测的 template/bass JSON：
-
-```powershell
-python .\app\generate_predictions_from_manifest.py .\benchmarks\manifest.beatles_selected6_83_template_bass.csv --force --use-reference-key --use-reference-beat-grid --default-meter 4/4 --feature-mode fast --harmonic-unit beat --bass-weight 0.75
-```
-
-然后在融合层读取它作为 bass evidence：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --harmonic-unit auto --progression-prior .\benchmarks\reports\isophonics_beatles_progression_prior.json --progression-prior-strength 0 --diatonic-shadow-weight 0 --diatonic-bonus 0 --base-evidence-dir .\benchmarks\template_bass_predictions --bass-root-weight 0.03 --external-chords-dir-extra .\benchmarks\external_chords\largevocab\beatles_selected6_raw --external-chords-extra-weight 0.05 --extra-gating conservative --extra-gating-min-track-agreement 0.70
-```
-
-目前 bass-root-weight 0.03 的报告 `benchmarks\reports\beatles_selected6_gate_large_bass003_experimental.json` 为 root 0.8787、triad 0.8519，只比不带 bass 的门控实验略高，收益接近噪声。因此 bass 接口已经可用，但当前低频特征还不能强力解决根音错误。
-
-片段诊断还发现一类更直接的问题：部分歌曲开头/结尾超出 beat 网格覆盖范围，最终预测为 `N`，但外部模型其实在这些边缘区域给出了明确和弦。可以启用实验性边缘补全：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --harmonic-unit auto --progression-prior .\benchmarks\reports\isophonics_beatles_progression_prior.json --progression-prior-strength 0 --diatonic-shadow-weight 0 --diatonic-bonus 0 --base-evidence-dir .\benchmarks\template_bass_predictions --bass-root-weight 0.03 --external-chords-dir-extra .\benchmarks\external_chords\largevocab\beatles_selected6_raw --external-chords-extra-weight 0.05 --extra-gating conservative --extra-gating-min-track-agreement 0.70 --edge-fill --edge-fill-min-score 0.50 --edge-fill-min-duration 0.50
-```
-
-报告 `benchmarks\reports\beatles_selected6_gate_bass_edge_experimental.json`：root 0.8790、triad 0.8523。相对稳定基线，27 首提升、8 首下降、48 首不变。`missed_chord` 明显减少，但 `false_chord` 会增加，所以这个功能适合评测和需要完整时间轴的场景；对于明确纯鼓/无和弦 intro，仍建议保留空白或人工标 `N`。
-
-更好的边缘补全方式是 segmented 模式。它不会把整个边缘空白压成一个平均和弦，而是保留外部模型在 intro/outro 里的和弦分段：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --harmonic-unit auto --progression-prior .\benchmarks\reports\isophonics_beatles_progression_prior.json --progression-prior-strength 0 --diatonic-shadow-weight 0 --diatonic-bonus 0 --base-evidence-dir .\benchmarks\template_bass_predictions --bass-root-weight 0.03 --external-chords-dir-extra .\benchmarks\external_chords\largevocab\beatles_selected6_raw --external-chords-extra-weight 0.05 --extra-gating conservative --extra-gating-min-track-agreement 0.70 --edge-fill --edge-fill-mode segments --edge-fill-min-score 0.50 --edge-fill-min-duration 0.75
-```
-
-报告 `benchmarks\reports\beatles_selected6_gate_bass_edge_segments_experimental.json`：root 0.8797、triad 0.8531。相对稳定基线，54 首提升、7 首下降、22 首不变；`missed_chord` 降到约 65.6 秒，`false_chord` 约 37.5 秒。这是当前最好的实验推荐配置。
-
-也新增了重复段落一致性实验开关 `--repeat-consensus-refine`，但它在当前 83 首 Beatles 上不如 segmented edge-fill，暂时不建议启用。
-
-## 中文流行数据集
-
-已获取并导入 POP909 标注包。这个包不含完整商业原音频，但包含 909 首中文流行歌曲的 MIDI、音频时间轴 beat/chord/key 标注，非常适合训练中文流行和声语言模型。
-
-```powershell
-python .\app\import_pop909.py .\benchmarks\raw\pop909\POP909 -o .\benchmarks\manifest.pop909.csv --import-dir .\benchmarks\imported\pop909
-python .\app\progression_stats.py .\benchmarks\manifest.pop909.csv -o .\benchmarks\reports\pop909_progression_prior.json
-```
-
-已生成：
-
-- `benchmarks\manifest.pop909.csv`
-- `benchmarks\imported\pop909\`
-- `benchmarks\reports\pop909_progression_prior.json`
-
-POP909 prior 作为弱和声语言模型接入后，在 Beatles 83 首上做跨域副作用测试也有小幅提升：
-
-```powershell
-python .\app\generate_external_fusion_from_manifest.py .\benchmarks\manifest.beatles_selected6_83.csv .\benchmarks\external_chords\madmom\beatles_selected6 --harmonic-unit auto --progression-prior .\benchmarks\reports\pop909_progression_prior.json --progression-prior-strength 0.04 --diatonic-shadow-weight 0 --diatonic-bonus 0 --base-evidence-dir .\benchmarks\template_bass_predictions --bass-root-weight 0.03 --external-chords-dir-extra .\benchmarks\external_chords\largevocab\beatles_selected6_raw --external-chords-extra-weight 0.05 --extra-gating conservative --extra-gating-min-track-agreement 0.70 --edge-fill --edge-fill-mode segments --edge-fill-min-score 0.50 --edge-fill-min-duration 0.75
-```
-
-报告 `benchmarks\reports\beatles_selected6_pop909_prior_s004_experimental.json`：root 0.8796、triad 0.8534。它真正的价值还需要用中文流行音频 challenge set 验证。
-
-所以目前默认优化方向是：让成熟 ACR 模型负责“听到了什么和弦”，本项目负责 beat/downbeat 对齐、罗马数字/功能分析、段落化展示和人工高效校正。
-
-自动拍号不准时：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --meter 3/4
-```
-
-如果小节线或拍位总是对不齐，尤其是 `3/4`、`6/8`、弱起或复合拍歌曲，可以启用 madmom 的神经网络 downbeat 追踪：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --beat-source madmom --meter 6/8
-```
-
-如果已经有一版和弦识别结果，只想替换成更准的 beat/downbeat 网格，可以先导出 madmom downbeat，再快速重排原标注：
-
-```powershell
-python .\app\downbeat_bridge.py "song.m4a" -o ".\projects\song_downbeats_6-8.json" --beats-per-bar 6
-python .\app\retime_analysis_to_downbeats.py ".\projects\song_analysis.json" ".\projects\song_downbeats_6-8.json" -o ".\projects\song_retimed" --meter 6/8
-```
-
-如果已有外部和弦模型输出，例如 madmom/Chordino/BTC 的 `.lab`，可以直接在 downbeat 网格上做快速候选融合。这个路径不会重新提取 chroma，适合先快速得到一版更稳定的小节级标注：
-
-```powershell
-python .\app\downbeat_external_fusion.py ".\projects\song_analysis.json" ".\projects\song_downbeats_6-8.json" ".\projects\song_madmom.lab" -o ".\projects\song_external_fused" --key D --meter 6/8 --harmonic-unit bar
-```
-
-`--harmonic-unit half-bar` 会把 `4/4` 拆成 `1-2 / 3-4`，适合 `176451` 这类一小节内可能换两次和弦的流行歌；`--harmonic-unit compound-half` 会把 `6/8` 拆成 `1-3 / 4-6` 两个大拍；`bar` 则更适合民谣、抒情歌这种整小节换和弦的情况。
-
-融合层会保守继承本地 template 模型中的同根属七和弦色彩，例如 D 调里较可靠的 `D7` 会显示为 `I7`，`A7` 会显示为 `V7`。可以用下面参数调节继承阈值，数值越高越保守：
-
-```powershell
-python .\app\downbeat_external_fusion.py ".\projects\song_analysis.json" ".\projects\song_downbeats_6-8.json" ".\projects\song_madmom.lab" -o ".\projects\song_external_fused" --key D --meter 6/8 --harmonic-unit compound-half --dominant-seventh-threshold 0.55
-```
-
-对于后半段有渐慢或自由速度的歌曲，madmom beat grid 会保留真实拍点时间；最终 JSON 还会写入每小节 `local_bpm` 和整体 `tempo_segments`，HTML 顶部 BPM 会显示全局 BPM 及局部范围。
-
-现在还可以从公开标注统计真实流行歌和声转移概率，并作为融合层的弱先验。当前默认的一键 madmom 流程会自动使用 `benchmarks\reports\isophonics_beatles_progression_prior.json`，如果这个文件存在：
-
-```powershell
-python .\app\progression_stats.py .\benchmarks\manifest.isophonics_beatles_all.csv -o .\benchmarks\reports\isophonics_beatles_progression_prior.json
-python .\app\analyze_with_madmom.py "song.m4a" --key D --meter 6/8 --harmonic-unit compound-half --display roman
-```
-
-也可以手动指定先验强度。当前在 `Please Please Me` 14 首回归集上，`0.045` 表现最好：
-
-```powershell
-python .\app\analyze_with_madmom.py "song.m4a" --key G --meter 4/4 --harmonic-unit half-bar --progression-prior ".\benchmarks\reports\isophonics_beatles_progression_prior.json" --progression-prior-strength 0.045
-```
-
-如果自动识别把慢歌判断成 2 倍 BPM，可以强制只比较半速候选：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --tempo-mode half
-```
-
-如果一首歌的和弦常在半小节变化，可以显式使用半小节和声单位：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --harmonic-unit half-bar
-```
-
-如果某些非重复结构的音乐被重复段先验带偏，可以关闭二次细化：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --no-repeat-refine
-```
-
-如果某些音乐的半小节换和弦非常自由，不适合流行歌两小节循环的短语位置先验，可以关闭短语细化：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --no-phrase-refine
-```
-
-生成后直接打开播放器：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --open
-```
-
-## 人工校正与导出
-
-生成的 `_studio.html` 现在可以直接校正和弦。点击某个拍子框会选中这一拍，例如点第 49 小节第 3 拍的 `I` 后，保存只会修改这一拍；点击小节空白区域或右侧和弦列表则会选中对应片段。支持 `N`、`D`、`Bm7`、`D/F#`、`C:maj`、`A:min` 这类真实和弦名，也支持 `I`、`VIm`、`VIm7`、`IV/VI`、`1`、`6m` 这类调内级数写法。页面会同步更新和弦名与罗马数字级数。
-
-右侧“曲谱导入”面板可以粘贴或上传文本和弦谱，再从指定小节开始自动铺满整首。支持常见写法：
-
-```text
-| D | Bm | G | A |
-| I | vi | IV | V |
-176451
-```
-
-在当前调内，`1 6 4 5`、`I vi IV V` 会自动转换成实际和弦。若一小节内写多个和弦，例如 `| D Bm | G A |`，会自动按半小节或拍子拆分；也可以在“单位”里指定“小节 / 半小节 / 拍”。
-
-如果某处不对齐，可以选中片段后用“拆半”“拆拍”细分到更小单位，再局部修改。相邻相同和弦可以用“合并”整理。
-
-标注时也可以用内部剪贴板快速复用：选中某一拍后点“复制格 / 粘贴格”，或选中任意小节内的拍/片段后点“复制小节 / 粘贴小节”。快捷键是 `Ctrl+C` / `Ctrl+V` 复制粘贴当前格，`Ctrl+Shift+C` / `Ctrl+Shift+V` 复制粘贴当前小节；输入框获得焦点时仍保留系统复制粘贴。
-
-右侧“导出”面板可以下载：
-
-- `LAB`：`start end chord` 标注，可作为人工参考答案或外部模型候选再次输入
-- `JSON`：带完整小节、拍子、事件信息的校正版本
-
-校正后可以用评测脚本比较下一版模型是否真的进步：
-
-```powershell
-python .\app\evaluate_chords.py ".\annotations\song_corrected.lab" ".\projects\song_analysis.json"
-```
-
-只分析某一段：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --offset 90 --duration 60
-```
-
-如果开头有人声、噪声或长前奏，可以从音乐主体开始分析：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --offset 16 --key D --meter 4/4
-```
-
-如果开头是纯鼓组或没有明确和声，不要截掉音频；可以保留小节但标为空和弦：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --blank-intro-bars 4
-```
-
-默认模型会自动使用流行歌功能和声先验，例如倾向于 `I - V/7 - vi - IV - V - I`、`IV - V - vi - IV - V - I` 这类路径；低音判断也会同时考虑根音和转位低音。也可以切回旧的局部模板模型做对照：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --analysis-model template
-```
-
-如果已经知道歌曲常用进行，可以在旧模板模型里作为人工提示传入。例如 D 大调中 `176451` 会按流行歌常见写法倾向为 `D - A/C# - Bm - G - A - D`：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --analysis-model template --key D --meter 4/4 --progressions 176451,456451
-```
-
-如果已经用 Chordino、madmom、BTC 或其他自动和弦识别模型生成了时间轴和弦，可以作为外部候选融合进默认功能和声模型。文件支持 `.lab`/`.txt` 的 `start end chord`，CSV 的 `start,end,chord`，以及含 `events` 或 `chords` 的 JSON：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --external-chords ".\model_outputs\song.lab" --external-weight 0.35
-```
-
-外部模型的常见标签会被自动归一化，例如 `C:maj` -> `C`、`A:min` -> `Am`、`G:7` -> `G7`。`--external-weight` 是软权重，建议先在 `0.25` 到 `0.50` 之间比较；权重太高会让外部模型的局部误判压过段落结构。
-
-`--external-chords` 可以重复传入多次，用于多模型融合：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --external-chords ".\model_outputs\song_madmom.lab" --external-chords ".\model_outputs\song_btc.lab" --external-weight 0.30
-```
-
-当前机器上已经额外安装了一个独立的 madmom 环境：`C:\Users\33573\.codex\acr_envs\madmom39`。如果需要重建它，可以运行：
-
-```powershell
-.\setup_madmom_env.ps1
-```
-
-madmom 在当前 Windows 环境里不能直接读取 m4a，所以项目提供了一个桥接脚本：先用主环境解码音频，再把 numpy 音频交给 madmom 的 CNN+CRF 和弦识别器输出 `.lab`。
-
-```powershell
-python .\app\madmom_bridge.py "song.m4a" -o ".\model_outputs\song_madmom.lab"
-python .\app\chord_studio.py "song.m4a" --external-chords ".\model_outputs\song_madmom.lab" --external-weight 0.35
-```
-
-Chordino 可以通过 Vamp Plugin Pack 和 Sonic Annotator 输出和弦时间轴；BTC-ISMIR19 的 `test.py` 也会输出 `.lab` 文件。它们的结果不需要改主程序，直接作为 `--external-chords` 输入即可。
-
-更简单稳定的三和弦识别：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --mode triads
-```
-
-更多复杂和弦：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --mode rich
-```
-
-降低贝斯对和弦判断的影响：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --bass-weight 0.05
-```
-
-让和弦变化更自由，减少时序平滑：
-
-```powershell
-python .\app\chord_studio.py "song.m4a" --transition-strength 0.05 --smooth 1
-```
-
-## 准确度建议
-
-这个工具使用 chroma 音级特征、低频贝斯根音估计、真实 beat 时间追踪、半速/倍速候选比较、小节相位候选、调式联合评分、相对大小调中心复核、功能和声转移矩阵、常见流行歌进行先验、两小节短语位置先验、重复段候选共识、重复段一致性细化和 Viterbi 序列推断。声学打分会同时考虑和弦音覆盖率、根音/三音/五音支撑、非和弦音比例和低音根音支撑。它适合生成扒歌初稿，但复杂编曲仍建议人工校对。
-
-如果是一整场演出或歌曲合集，先切成单曲再识别，准确度会明显更好。若 BPM 或调式识别偏了，先用 `--bpm`、`--key`、`--meter` 修正后再生成一次。
-
-如果 HTML 高亮整体早了或晚了几十到几百毫秒，打开 `_studio.html` 后调顶部“同步”滑块即可；这个校准会按当前音频记住。
-
-如果识别结果反复出现 `vii°`，但实际是流行歌里常见的低音下行 `I - V/7 - vi`，默认会把它清理成属和弦转位；若确实想保留严格的减七级和弦，可加 `--strict-diminished`。
-
-如果大调里出现 `ii/IV` 这类与 `IV6` 高度近似的结果，默认会优先按流行谱习惯清理为 `IV`，尤其是后面接 `V` 的时候。例如 G 调里 `Am/C - D` 会更倾向输出为 `C - D`。
-
-如果一首歌虽然与大调共享音阶，但主体明显以相对小调的 `vi` 为中心，默认会自动重跑相对小调模型。例如 A 大调集合里反复出现 `F#m - D - E - F#m`，会更倾向标为 F#m 小调的 `i - VI - VII - i`。小调里的 `iv/VI` 歧义也会优先清理为 `VI`。
-
-如果某些和弦明显被低音经过音带偏，可以调低 `--bass-weight`。如果和弦变化被压得过于保守，可以降低 `--transition-strength` 或 `--smooth`。
-
-## 评测
-
-如果有人工和弦标注，可以用评测脚本量化准确率，而不是只凭肉眼判断。标注支持 `.lab`/`.txt` 的 `start end chord` 格式，也支持包含 `start,end,chord` 列的 CSV：
-
-```powershell
-python .\app\evaluate_chords.py ".\annotations\song.lab" ".\projects\song_analysis.json"
-```
-
-脚本会输出根音准确率和简化三和弦准确率。后续如果要训练神经网络，建议先用这个脚本固定评测集，再比较每次模型改动的真实收益。
-
-## Benchmark 评测集
-
-当前目录已经建立了 `benchmarks\` 工作区，用来逐步接入公开数据集和本地人工校正样本：
-
-- McGill Billboard：主要评测 chord / root / triad，并统计常见和声转移
-- Isophonics：评测 chord + beat/downbeat + key，最适合完整系统
-- Ballroom：专门评测 tempo / beat / bar
-- SALAMI：后续用于段落结构和 progression context
-- RWC-Pop：有访问权限后用于流行音乐泛化测试
-
-批量评测入口：
-
-```powershell
-python .\app\run_benchmark.py .\benchmarks\manifest.csv -o .\benchmarks\reports\latest
-```
-
-单独评测 beat/downbeat：
-
-```powershell
-python .\app\evaluate_beats.py ".\annotations\song.beats" ".\projects\song_analysis.json"
-```
-
-`benchmarks\manifest.example.csv` 是模板。公开数据集的音频多数有版权限制，所以这里只管理本地路径和标注，不把音频打包进项目。
-
-如果要扩大端到端评测集，优先按 `benchmarks\audio_sources\isophonics_beatles_album_checklist.md` 下载整张专辑音频；完整逐曲清单在 `benchmarks\audio_sources\isophonics_beatles_all_audio_checklist.md`。
-
-## POP909 中文流行评测
-
-当前已经接入 POP909 的 chord / beat / key 标注，并生成了 909 首 MIDI 合成音频用于流程验证：
-
-```powershell
-python .\app\import_pop909.py .\benchmarks\raw\pop909\POP909 -o .\benchmarks\manifest.pop909.csv --import-dir .\benchmarks\imported\pop909
-python .\app\render_pop909_midi_audio.py .\benchmarks\manifest.pop909.csv .\benchmarks\raw\pop909\POP909 --audio-dir .\benchmarks\audio\pop909_synth --output-manifest .\benchmarks\manifest.pop909_synth.csv
-```
-
-合成音频只适合做 pipeline smoke test 和和声先验统计，不代表真实中文流行音频表现。前 100 首 reference beat/key 测试结果在 `benchmarks\reports\pop909_synth_first100_reference_grid.json`：Root 约 0.683，Triad 约 0.598。
-
-如果已经自行取得 POP909 对应的真实音频，把文件放到一个目录里，文件名里包含 `001`、`pop909_001`、歌名或歌手即可自动链接：
-
-```powershell
-python .\app\link_pop909_audio.py .\benchmarks\manifest.pop909.csv ".\benchmarks\audio\pop909_real" -o .\benchmarks\manifest.pop909_real.csv
-```
-
-然后用真实音频 manifest 重新生成预测和评测：
-
-```powershell
-python .\app\generate_predictions_from_manifest.py .\benchmarks\manifest.pop909_real.csv --use-reference-key --use-reference-beat-grid --feature-mode fast --harmonic-unit auto
-python .\app\run_benchmark.py .\benchmarks\manifest.pop909_real.csv -o .\benchmarks\reports\pop909_real_reference_grid
-```
+- madmom 使用独立 Python 3.9 环境。`setup_madmom_env.ps1` 要求本机预先安装 Python 3.9，默认环境位于用户目录 `.codex/acr_envs/madmom39`。
+- 三源实验额外依赖本地 Sonic Annotator、NNLS Chroma Vamp 插件、PyTorch 与 `tools/models/` 内的 ISMIR2019 源码和五个权重。不要将其 `cache_data/*.sdict` 当作可删缓存。
+- 已验证的实际包版本保留在 `benchmarks/reports/session_20260926_accuracy2/runtime_environment.json`；仅装通用 requirements 不代表已装齐所有可选后端。
+- 可选 All-In-One 段落专家使用 `.tmp/structure_env`；该目录是环境，不能按临时文件清空。首次安装可运行 `setup_structure_env.ps1`，然后使用 `--structure allin1`。其主歌/副歌仅作建议，不自动替换人工标注或现有拍格。
+
+## 文件与维护
+
+- `app/`：当前入口、公共模块、仍有调用链的研究工具。
+- `app/studio_assets/`：离线页面模板、样式、交互。
+- `benchmarks/audio/`、`raw/`、`references/`、`imported/`：音源与参考材料。
+- `benchmarks/models/`、`tools/models/`：模型资源。
+- `benchmarks/reports/`：关键评估、展示页，以及因旧路径依赖仍原位保存的训练候选 CSV；不能整目录当日志删除。
+- `projects/` 与人工修订 JSON：用户工作成果。
+- `.tmp/nnls_seventh_features/` 等：可被训练报告引用的特征证据，不是全部可以丢弃。
+
+本次整理归档了历史说明、一次性实验脚本和旧自动输出，清除了已完成结构分析的中间音轨/频谱；原音频、人工标注、模型、最终结果和当前页面路径均保留。历史文件在 `archive/cleanup_20261003/history.zip`，原路径、SHA 和动作见[清理清单](archive/cleanup_20261003/manifest.json)。恢复个别旧文件的方法见 [PROJECT_REPORT](PROJECT_REPORT.md#历史内容与恢复)。
+
+维护检查按改动范围执行，不例行重复全套测试、声学推理或旧预测逐字节复现。

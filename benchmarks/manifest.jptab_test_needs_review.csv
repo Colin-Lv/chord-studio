@@ -1,0 +1,2 @@
+"id","dataset","split","artist","title","key","meter","audio","prediction","chord_reference","beat_reference","notes"
+"jptab_test_____5724c5e1-35a6-4485-96ff-9d1b902c6cae","jptab_test","symbolic","万能青年旅店","杀死那个石家庄人","D","4/4","","","raw/jptab_test/jptab_test_____5724c5e1-35a6-4485-96ff-9d1b902c6cae/chords.lab","raw/jptab_test/jptab_test_____5724c5e1-35a6-4485-96ff-9d1b902c6cae/beats.beats","symbolic Guitar Pro import"

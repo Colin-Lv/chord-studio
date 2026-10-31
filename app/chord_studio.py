@@ -9,12 +9,15 @@ import html
 import json
 import math
 import os
+import re
 import subprocess
 import sys
 from dataclasses import dataclass, replace
 from pathlib import Path
 
 import numpy as np
+
+from audio_features import centered_magnitude_spectrum
 
 from chord_recognizer import (
     SAMPLE_RATE,
@@ -200,16 +203,16 @@ def scalar_tempo(value: object) -> float:
 def normalize_key_label(value: str | None) -> str | None:
     if value is None:
         return None
-    text = value.strip()
+    text = value.strip().replace("♭", "b").replace("♯", "#")
     if not text:
         return None
-    if ":" not in text:
-        return text.replace(":min", "m").replace(":minor", "m").replace(":maj", "")
-    root, mode = text.split(":", 1)
-    mode = mode.lower()
-    if mode in MINOR_MODE_NAMES:
+    match = re.fullmatch(r"([A-G][b#]?)(?:\s*:\s*|\s+)([A-Za-z]+)", text)
+    if not match:
+        return text
+    root, mode = match.group(1), match.group(2).lower()
+    if mode in MINOR_MODE_NAMES | {"min"}:
         return f"{root}m"
-    if mode in MAJOR_MODE_NAMES:
+    if mode in MAJOR_MODE_NAMES | {"maj"}:
         return root
     return text
 
@@ -329,10 +332,12 @@ def estimate_meter_madmom(
     duration: float,
     meter_arg: str,
     madmom_python: Path,
+    audio_offset: float = 0.0,
 ) -> MeterInfo | None:
     requested = parse_meter(meter_arg)
     candidates = [requested[0]] if requested is not None else [3, 4, 6]
     rows = run_madmom_downbeats(audio_path, candidates, madmom_python=madmom_python)
+    rows = [(time - audio_offset, beat) for time, beat in rows]
     return meter_from_downbeat_rows(rows, duration, requested)
 
 
@@ -810,19 +815,7 @@ def rms_for_intervals(y: np.ndarray, sr: int, intervals: list[BeatInterval]) -> 
 def extract_bass_chroma(y: np.ndarray, sr: int, hop_length: int, mode: str = "cqt") -> np.ndarray:
     if mode == "fast":
         n_fft = 4096
-        y_fast = np.asarray(y, dtype=np.float32)
-        peak = float(np.max(np.abs(y_fast))) if y_fast.size else 0.0
-        if peak > 0:
-            y_fast = y_fast / peak
-        if y_fast.size < n_fft:
-            y_fast = np.pad(y_fast, (0, n_fft - y_fast.size))
-        frame_count = 1 + max(0, (y_fast.size - n_fft) // hop_length)
-        starts = np.arange(frame_count) * hop_length
-        window = np.hanning(n_fft).astype(np.float32)
-        magnitude = np.empty((n_fft // 2 + 1, frame_count), dtype=np.float32)
-        for frame_index, start in enumerate(starts):
-            frame = y_fast[start : start + n_fft]
-            magnitude[:, frame_index] = np.abs(np.fft.rfft(frame * window))
+        magnitude = centered_magnitude_spectrum(y, n_fft, hop_length)
         freqs = np.fft.rfftfreq(n_fft, 1.0 / sr)
         mask = (freqs >= 32.703) & (freqs <= 246.942)
         magnitude = magnitude[mask]
@@ -927,19 +920,51 @@ def chord_member_pcs(chord: str) -> set[int]:
     root, suffix = parse_chord_name(chord)
     if root is None:
         return set()
+    # Keep the explicit vocabulary consistent with build_templates. A diminished
+    # seventh is 9 semitones, minor-major seventh is 11, and add9 has no seventh.
+    exact_intervals = {
+        "": (0, 4, 7), "m": (0, 3, 7), "dim": (0, 3, 6), "aug": (0, 4, 8),
+        "sus2": (0, 2, 7), "sus4": (0, 5, 7),
+        "7": (0, 4, 7, 10), "maj7": (0, 4, 7, 11), "m7": (0, 3, 7, 10),
+        "m7b5": (0, 3, 6, 10), "dim7": (0, 3, 6, 9), "mMaj7": (0, 3, 7, 11),
+        "6": (0, 4, 7, 9), "m6": (0, 3, 7, 9),
+        "add9": (0, 2, 4, 7), "madd9": (0, 2, 3, 7),
+        "9": (0, 2, 4, 7, 10), "m9": (0, 2, 3, 7, 10),
+        "maj9": (0, 2, 4, 7, 11), "mMaj9": (0, 2, 3, 7, 11),
+    }
+    if suffix in exact_intervals:
+        return {(root + interval) % 12 for interval in exact_intervals[suffix]}
     family = chord_quality_family(suffix)
     if family == "m":
-        intervals = [0, 3, 7, 10] if "7" in suffix else [0, 3, 7]
+        intervals = [0, 3, 7]
+        if "6" in suffix:
+            intervals.append(9)
+        if "7" in suffix or "9" in suffix:
+            intervals.append(10)
+        if "9" in suffix or "add9" in suffix:
+            intervals.append(2)
     elif family == "dim":
         intervals = [0, 3, 6, 10] if "7" in suffix else [0, 3, 6]
     elif family == "sus":
         intervals = [0, 2 if "sus2" in suffix else 5, 7]
+        if "7" in suffix or "9" in suffix:
+            intervals.append(10)
+        if "9" in suffix:
+            intervals.append(2)
     elif family == "dom":
         intervals = [0, 4, 7, 10]
+        if "9" in suffix:
+            intervals.append(2)
     elif family == "aug":
         intervals = [0, 4, 8]
     else:
-        intervals = [0, 4, 7, 11] if "maj7" in suffix else [0, 4, 7]
+        intervals = [0, 4, 7]
+        if "6" in suffix:
+            intervals.append(9)
+        if "maj7" in suffix:
+            intervals.append(11)
+        if "9" in suffix or "add9" in suffix:
+            intervals.append(2)
     return {(root + interval) % 12 for interval in intervals}
 
 
@@ -948,13 +973,14 @@ def chord_interval_pcs(chord: str) -> tuple[int | None, int | None, int | None]:
     if root is None:
         return None, None, None
     family = chord_quality_family(suffix)
-    if family == "m":
+    if family in {"m", "dim"}:
         third = (root + 3) % 12
-    elif family in {"sus", "dim"}:
+    elif family == "sus":
         third = None
     else:
         third = (root + 4) % 12
-    fifth = (root + 6) % 12 if family == "dim" else (root + 7) % 12
+    fifth_interval = 6 if family == "dim" else 8 if family == "aug" else 7
+    fifth = (root + fifth_interval) % 12
     return root, third, fifth
 
 
@@ -964,6 +990,10 @@ def should_show_slash_bass(
     bass_confidence: float,
     chord_confidence: float = 1.0,
 ) -> bool:
+    # An explicit inversion/pedal belongs to the source label. A separate
+    # template bass estimate must never overwrite it or create C/E/G.
+    if "/" in chord:
+        return False
     chord_root, _ = parse_chord_name(chord)
     bass_pc, _ = parse_chord_name(bass_root)
     if chord == "N" or chord_root is None or bass_pc is None:
@@ -1003,7 +1033,12 @@ def chord_to_roman(chord: str, key: str) -> str:
         return chord
     semitone = (chord_root - key_root) % 12
     roman_map = MINOR_ROMAN_BY_SEMITONE if key_suffix == "m" else MAJOR_ROMAN_BY_SEMITONE
-    return f"{roman_map[semitone]}{chord_suffix}"
+    label = f"{roman_map[semitone]}{chord_suffix}"
+    if "/" in chord:
+        bass_pc, _ = parse_chord_name(chord.split("/", 1)[1])
+        if bass_pc is not None:
+            label += "/" + roman_map[(bass_pc - key_root) % 12]
+    return label
 
 
 def chord_to_roman_display(
@@ -1052,13 +1087,13 @@ def diatonic_profile(key: str) -> dict[int, str]:
 
 
 def chord_quality_family(suffix: str) -> str:
-    if suffix in {"", "maj7", "6", "add9"}:
+    if suffix in {"", "maj7", "maj9", "6", "add9"}:
         return ""
-    if suffix in {"m", "m7", "m6", "m9", "madd9", "mMaj7"}:
+    if suffix in {"m", "m7", "m6", "m9", "madd9", "mMaj7", "mMaj9"}:
         return "m"
     if suffix in {"dim", "dim7", "m7b5"}:
         return "dim"
-    if suffix.startswith("sus"):
+    if suffix.startswith("sus") or "sus" in suffix:
         return "sus"
     if suffix in {"7", "9"}:
         return "dom"
@@ -1195,11 +1230,19 @@ def parse_time_seconds(value: object) -> float:
 
 
 def normalize_external_chord_label(label: object, notation: str) -> str:
+    """Normalize spelling while retaining the source quality and explicit bass.
+
+    Harte bass degrees are relative to the chord root, not the song key. See
+    https://mir-eval.readthedocs.io/latest/api/chord.html#mir_eval.chord.split
+    Unknown or malformed labels must not become evidence for silence (N).
+    """
     text = str(label).strip().strip('"').strip("'")
     if not text:
-        return "N"
+        return "X"
     lowered = text.lower()
-    if lowered in {"n", "x", "nc", "n.c.", "none", "no_chord", "no-chord", "silence"}:
+    if lowered in {"x", "unknown", "unrecognized"}:
+        return "X"
+    if lowered in {"n", "nc", "n.c.", "none", "no_chord", "no-chord", "silence"}:
         return "N"
 
     text = (
@@ -1208,22 +1251,16 @@ def normalize_external_chord_label(label: object, notation: str) -> str:
         .replace("Δ", "maj")
         .replace("−", "-")
     )
-    words = text.split()
+    body, slash, bass = text.partition("/")
+    words = body.split()
     if len(words) >= 2 and words[1].lower() in {"major", "maj", "minor", "min"}:
-        text = f"{words[0]}:{words[1]}"
-    text = text.replace(" ", "")
-    if "/" in text:
-        text = text.split("/", 1)[0]
-
-    root_pc: int | None = None
-    suffix = ""
-    for root in ROOT_NAMES:
-        if text.startswith(root):
-            root_pc = ROOT_TO_PC[root]
-            suffix = text[len(root) :]
-            break
-    if root_pc is None:
-        return "N"
+        body = f"{words[0]}:{words[1]}" + "".join(words[2:])
+    body = body.replace(" ", "")
+    match = re.fullmatch(r"([A-G])([b#]*)(.*)", body)
+    if match is None:
+        return "X"
+    letter, accidentals, suffix = match.groups()
+    root_pc = (ROOT_TO_PC[letter] + accidentals.count("#") - accidentals.count("b")) % 12
 
     if suffix.startswith(":"):
         quality = suffix[1:]
@@ -1268,10 +1305,20 @@ def normalize_external_chord_label(label: object, notation: str) -> str:
         "sus2": "sus2",
         "add9": "add9",
         "madd9": "madd9",
+        "minmaj7": "mMaj7",
+        "mmaj7": "mMaj7",
+        "minmaj9": "mMaj9",
+        "mmaj9": "mMaj9",
     }
-    normalized_suffix = quality_map.get(quality_lower)
+    # Uppercase M means major; lowercasing it first changes CM7 into Cm7.
+    major_aliases = {"M": "", "M7": "maj7", "M9": "maj9", "M11": "maj11", "M13": "maj13"}
+    normalized_suffix = major_aliases.get(quality, quality_map.get(quality_lower))
     if normalized_suffix is None:
-        if quality_lower.startswith("min"):
+        if "(" in quality:
+            # Retain Harte additions/omissions rather than reducing to a triad.
+            # In particular, min(*5) must not become the unparseable m(*5).
+            normalized_suffix = quality
+        elif quality_lower.startswith("min"):
             normalized_suffix = "m" + quality_lower[3:]
         elif quality_lower.startswith("maj"):
             normalized_suffix = "maj" + quality_lower[3:]
@@ -1280,7 +1327,23 @@ def normalize_external_chord_label(label: object, notation: str) -> str:
         else:
             normalized_suffix = quality.replace(":", "")
 
-    return f"{note_name(root_pc, notation)}{normalized_suffix}"
+    normalized = f"{note_name(root_pc, notation)}{normalized_suffix}"
+    if not slash:
+        return normalized
+
+    bass = bass.strip()
+    absolute_bass = re.fullmatch(r"([A-G])([b#]*)", bass)
+    relative_bass = re.fullmatch(r"([b#]*)([1-9][0-9]*)", bass)
+    if absolute_bass:
+        letter, accidentals = absolute_bass.groups()
+        bass_pc = ROOT_TO_PC[letter] + accidentals.count("#") - accidentals.count("b")
+    elif relative_bass:
+        accidentals, degree = relative_bass.groups()
+        interval = (0, 2, 4, 5, 7, 9, 11)[(int(degree) - 1) % 7]
+        bass_pc = root_pc + interval + accidentals.count("#") - accidentals.count("b")
+    else:
+        return "X"
+    return f"{normalized}/{note_name(bass_pc % 12, notation)}"
 
 
 def external_hint_from_mapping(row: dict[str, object], notation: str) -> ExternalChordHint | None:
@@ -1918,6 +1981,7 @@ def functional_sequence(
     cells: list[HarmonicInterval] | None = None,
     external_hints: list[ExternalChordHint] | None = None,
     external_weight: float = 0.0,
+    bass_weight: float = 0.15,
 ) -> FunctionalSequenceResult:
     states = build_functional_states(key, notation)
     if not states or vectors.size == 0:
@@ -1951,25 +2015,25 @@ def functional_sequence(
         if fifth_pc is not None:
             structural_support = structural_support + 0.02 * l1_vectors[:, fifth_pc]
         state_scores = state_scores + structural_support
-        if bass_vectors.shape[0] == vectors.shape[0]:
+        if bass_vectors.shape[0] == vectors.shape[0] and bass_weight > 0:
             root_support = bass_vectors[:, state.root_pc]
             member_support = np.clip(bass_vectors @ member_mask, 0.0, 1.0)
             outside_support = np.clip(np.max(bass_vectors, axis=1) - member_support, 0.0, 1.0)
-            state_scores = state_scores + bass_confidence * (
+            state_scores = state_scores + (bass_weight / 0.15) * bass_confidence * (
                 0.11 * root_support + 0.025 * member_support - 0.045 * outside_support
             )
             if state.bass_pc is not None:
                 bass_support = bass_vectors[:, state.bass_pc]
-                state_scores = state_scores + 0.20 * bass_confidence * bass_support
+                state_scores = state_scores + (bass_weight / 0.15) * 0.20 * bass_confidence * bass_support
         scores[:, state_index] = state_scores
 
     external_scores = external_functional_scores(cells, external_hints, states, external_weight)
     if external_scores is not None and external_scores.shape == scores.shape:
         scores = scores + external_scores
 
-    progression_strength = min(0.09, max(0.035, 0.075 * transition_strength))
+    progression_strength = min(0.09, max(0.035, 0.075 * transition_strength)) if transition_strength > 0 else 0.0
     scores = scores + progression_library_bonus(scores, states, progression_strength)
-    consensus_strength = min(0.045, max(0.015, 0.035 * transition_strength))
+    consensus_strength = min(0.045, max(0.015, 0.035 * transition_strength)) if repeat_refine and transition_strength > 0 else 0.0
     scores = scores + section_consensus_bonus(scores, vectors, consensus_strength)
     transitions = functional_transition_matrix(states, transition_strength)
     transition_modifiers = (
@@ -1984,7 +2048,7 @@ def functional_sequence(
         transition_modifiers,
         transition_scales,
     )
-    if repeat_refine and path.size:
+    if repeat_refine and transition_strength > 0 and path.size:
         repeat_strength = min(0.08, max(0.02, 0.055 * transition_strength))
         refined_scores = scores + repeated_section_bonus(scores, vectors, path, repeat_strength)
         refined_transition_scales = adaptive_transition_scales(refined_scores)
@@ -2039,6 +2103,19 @@ def functional_key_score_bonus(result: FunctionalSequenceResult) -> float:
         + pair_counts.get(("vi", "V"), 0)
     ) / pair_total
     bonus -= min(0.055, detour_ratio * 0.12)
+    fourgram_counts: dict[tuple[str, str, str, str], int] = {}
+    for a, b, c, d in zip(labels, labels[1:], labels[2:], labels[3:]):
+        fourgram_counts[(a, b, c, d)] = fourgram_counts.get((a, b, c, d), 0) + 1
+    fourgram_total = max(len(labels) - 3, 1)
+    common_major_loops = {
+        ("I", "V", "vi", "IV"),
+        ("vi", "IV", "I", "V"),
+        ("IV", "I", "V", "vi"),
+        ("IV", "V", "vi", "IV"),
+        ("I", "vi", "IV", "V"),
+    }
+    loop_ratio = sum(fourgram_counts.get(pattern, 0) for pattern in common_major_loops) / fourgram_total
+    bonus += min(0.065, loop_ratio * 0.18)
     return bonus
 
 
@@ -2059,6 +2136,8 @@ def select_meter_and_key(
     transition_strength: float,
     external_hints: list[ExternalChordHint] | None = None,
     external_weight: float = 0.0,
+    bass_weight: float = 0.15,
+    retain_all_key_candidates: bool = False,
 ) -> MeterKeySelection:
     if requested_key and base_meter.confidence >= 1.0 and not base_meter.locked_phase:
         return MeterKeySelection(
@@ -2111,11 +2190,12 @@ def select_meter_and_key(
                     bass_confidence,
                     key,
                     notation,
-                    transition_strength=max(0.75, transition_strength * 3.0),
+                    transition_strength=(3.75 * transition_strength if transition_strength < 0.2 else max(0.75, transition_strength * 3.0)),
                     repeat_refine=False,
                     cells=cells,
                     external_hints=external_hints,
                     external_weight=external_weight,
+                    bass_weight=bass_weight,
                 )
                 score = result.score + functional_key_score_bonus(result)
                 if variant_name.startswith("half") and base_meter.bpm >= 120:
@@ -2140,7 +2220,8 @@ def select_meter_and_key(
     candidates.sort(key=lambda item: item[2], reverse=True)
     best_variant, best_key, best_score, best_meter = candidates[0]
     key_scores.sort(key=lambda item: item[2], reverse=True)
-    return MeterKeySelection(best_meter, best_key, best_score, best_variant, key_scores[:8])
+    return MeterKeySelection(best_meter, best_key, best_score, best_variant,
+                             key_scores if retain_all_key_candidates else key_scores[:8])
 
 
 def template_roots_and_members(
@@ -2154,23 +2235,8 @@ def template_roots_and_members(
         roots.append(-1 if root is None else root)
         families.append(chord_quality_family(suffix))
         row = np.zeros(12, dtype=np.float32)
-        if root is not None:
-            _, parsed_suffix = parse_chord_name(name)
-            family = chord_quality_family(parsed_suffix)
-            if family == "m":
-                intervals = [0, 3, 7, 10] if "7" in parsed_suffix else [0, 3, 7]
-            elif family == "dim":
-                intervals = [0, 3, 6, 10] if "7" in parsed_suffix else [0, 3, 6]
-            elif family == "sus":
-                intervals = [0, 2 if "sus2" in parsed_suffix else 5, 7]
-            elif family == "dom":
-                intervals = [0, 4, 7, 10]
-            elif family == "aug":
-                intervals = [0, 4, 8]
-            else:
-                intervals = [0, 4, 7, 11] if "maj7" in parsed_suffix else [0, 4, 7]
-            for interval in intervals:
-                row[(root + interval) % 12] = 1.0
+        for pc in chord_member_pcs(name):
+            row[pc] = 1.0
         members.append(row)
     return np.asarray(roots, dtype=np.int16), families, np.asarray(members, dtype=np.float32)
 
@@ -2734,6 +2800,7 @@ def recognize_bar_chords_functional(
     no_chord_threshold: float,
     confidence_threshold: float,
     repeat_refine: bool = True,
+    bass_weight: float = 0.15,
 ) -> dict[int, ChordSpan]:
     bar_intervals = bar_intervals_from_beats(intervals)
     vectors = chroma_for_intervals(chroma, y, SAMPLE_RATE, 2048, bar_intervals)
@@ -2751,8 +2818,9 @@ def recognize_bar_chords_functional(
         bass_confidence,
         key,
         notation,
-        transition_strength=max(0.8, transition_strength * 3.0),
+        transition_strength=(4.0 * transition_strength if transition_strength < 0.2 else max(0.8, transition_strength * 3.0)),
         repeat_refine=repeat_refine,
+        bass_weight=bass_weight,
     )
     confidence = confidence_from_scores(result.state_scores, result.path, rms)
 
@@ -2771,7 +2839,7 @@ def recognize_bar_chords_functional(
             bass_pc = state.bass_pc
             bass_root = bass_roots[index]
             bass_conf = float(bass_confidence[index])
-            if bass_pc is not None and (
+            if bass_weight > 0 and bass_pc is not None and (
                 bass_conf < 0.68 or parse_chord_name(bass_root)[0] in {None, state.root_pc}
             ):
                 bass_root = note_name(bass_pc, notation)
@@ -2810,6 +2878,7 @@ def recognize_functional_spans(
     phrase_refine: bool = True,
     external_hints: list[ExternalChordHint] | None = None,
     external_weight: float = 0.0,
+    bass_weight: float = 0.15,
 ) -> list[ChordSpan]:
     cells = harmonic_intervals_from_beats(intervals, harmonic_unit, beats_per_bar)
     analysis_intervals = [
@@ -2836,12 +2905,13 @@ def recognize_functional_spans(
         bass_confidence,
         key,
         notation,
-        transition_strength=max(0.8, transition_strength * 3.0),
+        transition_strength=(4.0 * transition_strength if transition_strength < 0.2 else max(0.8, transition_strength * 3.0)),
         repeat_refine=repeat_refine,
         phrase_refine=phrase_refine,
         cells=cells,
         external_hints=external_hints,
         external_weight=external_weight,
+        bass_weight=bass_weight,
     )
     confidence = confidence_from_scores(result.state_scores, result.path, rms)
 
@@ -2859,7 +2929,7 @@ def recognize_functional_spans(
             chord = state.chord
             bass_root = bass_roots[index]
             bass_conf = float(bass_confidence[index])
-            if state.bass_pc is not None and (
+            if bass_weight > 0 and state.bass_pc is not None and (
                 bass_conf < 0.68 or parse_chord_name(bass_root)[0] in {None, state.root_pc}
             ):
                 bass_root = note_name(state.bass_pc, notation)
@@ -3194,6 +3264,7 @@ def make_payload(
     external_chords: list[str] | str | None = None,
     external_weight: float = 0.0,
     external_hint_count: int = 0,
+    beat_source: str | None = None,
 ) -> dict[str, object]:
     bars = []
     for bar in sorted({item.bar for item in beat_chords}):
@@ -3274,7 +3345,9 @@ def make_payload(
         "beat_period": meter.beat_period,
         "beats_per_bar": meter.beats_per_bar,
         "beat_grid": "tracked" if len(meter.beat_times) >= 2 else "constant",
-        "beat_source": "madmom" if meter.locked_phase else "librosa",
+        # A locked phase also occurs for human/reference grids. It cannot
+        # establish which algorithm (if any) produced the supplied timestamps.
+        "beat_source": beat_source or ("provided_locked_grid" if meter.locked_phase else "unknown"),
         "analysis_model": analysis_model,
         "tempo_variant": tempo_variant,
         "harmonic_unit": harmonic_unit,
@@ -3325,1941 +3398,28 @@ def write_json(path: Path, payload: dict[str, object]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-HTML_TEMPLATE = """<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chord Studio</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f6f7f8;
-      --panel: #ffffff;
-      --ink: #171a1f;
-      --muted: #68707c;
-      --line: #d9dde4;
-      --active: #0f766e;
-      --active-soft: #d9f3ef;
-      --accent: #b45309;
-      --accent-soft: #fff2cf;
-      --shadow: 0 8px 30px rgba(18, 24, 31, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      letter-spacing: 0;
-    }
-
-    .app {
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .topbar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 14px 18px;
-      display: grid;
-      gap: 12px;
-      grid-template-columns: minmax(180px, 1.2fr) minmax(280px, 2fr) minmax(180px, 0.9fr);
-      align-items: center;
-    }
-
-    .title {
-      min-width: 0;
-    }
-
-    .title h1 {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.25;
-      font-weight: 720;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .title p {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .transport {
-      display: grid;
-      grid-template-columns: 44px minmax(0, 1fr) auto;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .play {
-      width: 44px;
-      height: 44px;
-      border: 0;
-      border-radius: 8px;
-      background: var(--ink);
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .time {
-      color: var(--muted);
-      font-variant-numeric: tabular-nums;
-      font-size: 13px;
-      width: 88px;
-      text-align: right;
-    }
-
-    .seek {
-      width: 100%;
-      accent-color: var(--active);
-    }
-
-    .sync-control {
-      grid-column: 2 / -1;
-      display: grid;
-      grid-template-columns: auto minmax(100px, 1fr) 58px;
-      gap: 8px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 12px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .sync-control input {
-      width: 100%;
-      accent-color: var(--accent);
-    }
-
-    .sync-control output {
-      text-align: right;
-    }
-
-    .now {
-      display: grid;
-      justify-items: end;
-      gap: 2px;
-    }
-
-    .now .label {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .now .chord {
-      font-size: 28px;
-      line-height: 1;
-      font-weight: 800;
-      color: var(--active);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .display-toggle {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px;
-      width: 132px;
-      margin-top: 6px;
-      padding: 3px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #f8fafc;
-    }
-
-    .display-toggle button {
-      height: 28px;
-      border: 0;
-      border-radius: 6px;
-      background: transparent;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .display-toggle button.active {
-      background: var(--panel);
-      color: var(--active);
-      box-shadow: 0 1px 5px rgba(18, 24, 31, 0.12);
-    }
-
-    main {
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 18px;
-      display: grid;
-      gap: 18px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(120px, 1fr));
-      gap: 10px;
-    }
-
-    .stat {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px 14px;
-      min-height: 70px;
-    }
-
-    .stat span {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .stat strong {
-      display: block;
-      margin-top: 6px;
-      font-size: 22px;
-      line-height: 1.1;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .workspace {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .bars {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
-      gap: 10px;
-    }
-
-    .bar {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      min-height: 86px;
-      padding: 10px;
-      cursor: pointer;
-      transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
-    }
-
-    .bar:hover {
-      border-color: #94a3b8;
-      transform: translateY(-1px);
-    }
-
-    .bar.active {
-      border-color: var(--active);
-      background: var(--active-soft);
-    }
-
-    .bar.modulation {
-      border-color: #b45309;
-      background: #fff7ed;
-    }
-
-    .bar.selected {
-      outline: 2px solid var(--accent);
-      outline-offset: -2px;
-    }
-
-    .bar-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .modulation-marker {
-      margin: 8px 0 2px;
-      padding: 5px 7px;
-      border-radius: 6px;
-      background: #fed7aa;
-      color: #7c2d12;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .beats {
-      display: grid;
-      grid-template-columns: repeat(var(--beats), minmax(0, 1fr));
-      gap: 4px;
-      margin-top: 16px;
-    }
-
-    .beat {
-      min-width: 0;
-      height: 30px;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      background: #f9fafb;
-      color: #333842;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 4px;
-      font-size: 12px;
-      font-weight: 650;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .beat.active {
-      background: var(--accent-soft);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .beat.selected {
-      outline: 2px solid var(--active);
-      outline-offset: -2px;
-    }
-
-    .beat.edited {
-      border-color: var(--accent);
-    }
-
-    aside {
-      position: sticky;
-      top: 98px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-    }
-
-    .panel h2 {
-      margin: 0 0 12px;
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .event-list {
-      display: grid;
-      gap: 6px;
-      max-height: calc(100vh - 240px);
-      overflow: auto;
-      padding-right: 2px;
-    }
-
-    .event {
-      display: grid;
-      grid-template-columns: 56px minmax(0, 1fr) 50px;
-      gap: 8px;
-      align-items: center;
-      min-height: 34px;
-      padding: 6px 8px;
-      border-radius: 6px;
-      color: #2c313a;
-      cursor: pointer;
-    }
-
-    .event:hover {
-      background: #f1f5f9;
-    }
-
-    .event.active {
-      background: var(--active-soft);
-      color: var(--active);
-      font-weight: 760;
-    }
-
-    .event.selected {
-      outline: 2px solid var(--accent);
-      outline-offset: -2px;
-    }
-
-    .event.edited {
-      border-left: 3px solid var(--accent);
-    }
-
-    .event .when,
-    .event .conf {
-      color: var(--muted);
-      font-size: 12px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .edit-grid {
-      display: grid;
-      gap: 10px;
-    }
-
-    .edit-field {
-      display: grid;
-      gap: 5px;
-    }
-
-    .edit-field span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .edit-field strong {
-      min-height: 28px;
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .edit-field input,
-    .edit-field select,
-    .edit-field textarea {
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 0 10px;
-      font-size: 15px;
-      font-weight: 720;
-      color: var(--ink);
-      background: #fff;
-    }
-
-    .edit-field input,
-    .edit-field select {
-      height: 36px;
-    }
-
-    .edit-field input[type="file"] {
-      height: auto;
-      padding: 8px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .edit-field textarea {
-      min-height: 112px;
-      padding: 9px 10px;
-      resize: vertical;
-      line-height: 1.4;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-      font-size: 13px;
-      font-weight: 650;
-    }
-
-    .button-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .button-row.three {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .compact-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 8px;
-    }
-
-    .check-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .tool-button {
-      min-height: 34px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: #f8fafc;
-      color: #2c313a;
-      font-size: 12px;
-      font-weight: 760;
-      cursor: pointer;
-    }
-
-    .tool-button.primary {
-      border-color: var(--active);
-      background: var(--active);
-      color: #fff;
-    }
-
-    .tool-button.warning {
-      border-color: #f1c27a;
-      background: #fff7e6;
-      color: #8a4b0a;
-    }
-
-    .panel > .tool-button {
-      width: 100%;
-    }
-
-    .edit-status {
-      min-height: 18px;
-      color: var(--muted);
-      font-size: 12px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .panel-gap {
-      height: 8px;
-    }
-
-    audio {
-      display: none;
-    }
-
-    @media (max-width: 900px) {
-      .topbar-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .now {
-        justify-items: start;
-      }
-
-      .workspace {
-        grid-template-columns: 1fr;
-      }
-
-      aside {
-        position: static;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, minmax(120px, 1fr));
-      }
-    }
-
-    @media (max-width: 520px) {
-      main {
-        padding: 12px;
-      }
-
-      .bars {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .transport {
-        grid-template-columns: 44px minmax(0, 1fr);
-      }
-
-      .time {
-        grid-column: 1 / -1;
-        text-align: left;
-        width: auto;
-      }
-
-      .sync-control {
-        grid-column: 1 / -1;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="app">
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="title">
-          <h1 id="songTitle">Chord Studio</h1>
-          <p id="songPath"></p>
-        </div>
-        <div class="transport">
-          <button class="play" id="playBtn" title="播放/暂停">▶</button>
-          <input class="seek" id="seek" type="range" min="0" max="1000" value="0" aria-label="播放进度">
-          <div class="time"><span id="currentTime">00:00</span> / <span id="duration">00:00</span></div>
-          <label class="sync-control">
-            <span>同步</span>
-            <input id="sync" type="range" min="-1000" max="1000" step="10" value="0" aria-label="同步校准">
-            <output id="syncValue">0ms</output>
-          </label>
-        </div>
-        <div class="now">
-          <span class="label">当前和弦</span>
-          <span class="chord" id="currentChord">N</span>
-          <div class="display-toggle" role="group" aria-label="和弦表示">
-            <button type="button" data-display="name">和弦名</button>
-            <button type="button" data-display="roman">级数</button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="stats">
-        <div class="stat"><span>BPM</span><strong id="bpm"></strong></div>
-        <div class="stat"><span>调式</span><strong id="key"></strong></div>
-        <div class="stat"><span>拍号</span><strong id="meter"></strong></div>
-        <div class="stat"><span>小节数</span><strong id="barCount"></strong></div>
-      </section>
-
-      <section class="workspace">
-        <div class="bars" id="bars"></div>
-        <aside>
-          <div class="panel">
-            <h2>曲谱导入</h2>
-            <div class="edit-grid">
-              <label class="edit-field">
-                <span>文件</span>
-                <input id="scoreFile" type="file" accept=".txt,.lab,.csv,.json,.chords">
-              </label>
-              <label class="edit-field">
-                <span>曲谱</span>
-                <textarea id="scoreText" spellcheck="false" placeholder="| D | Bm | G | A |&#10;| I | vi | IV | V |&#10;176451"></textarea>
-              </label>
-              <div class="compact-row">
-                <label class="edit-field">
-                  <span>起始小节</span>
-                  <input id="scoreStart" type="number" min="1" step="1" value="1">
-                </label>
-                <label class="edit-field">
-                  <span>单位</span>
-                  <select id="scoreGrid">
-                    <option value="auto">自动</option>
-                    <option value="bar">小节</option>
-                    <option value="half">半小节</option>
-                    <option value="beat">拍</option>
-                  </select>
-                </label>
-              </div>
-              <label class="check-row">
-                <input id="scoreRepeat" type="checkbox" checked>
-                <span>循环铺满</span>
-              </label>
-              <div class="button-row">
-                <button class="tool-button primary" id="applyScore" type="button">铺谱</button>
-                <button class="tool-button" id="clearScore" type="button">清空</button>
-              </div>
-              <div class="edit-status" id="scoreStatus">等待曲谱</div>
-            </div>
-          </div>
-          <div class="panel">
-            <h2>校正</h2>
-            <div class="edit-grid">
-              <label class="edit-field">
-                <span>片段</span>
-                <strong id="editRange">--</strong>
-              </label>
-              <label class="edit-field">
-                <span>和弦</span>
-                <input id="chordInput" type="text" spellcheck="false" autocomplete="off" value="N">
-              </label>
-              <div class="button-row three">
-                <button class="tool-button primary" id="saveChord" type="button">保存</button>
-                <button class="tool-button" id="clearChord" type="button">标 N</button>
-                <button class="tool-button warning" id="resetChord" type="button">还原</button>
-              </div>
-              <div class="button-row three">
-                <button class="tool-button" id="splitHalf" type="button">拆半</button>
-                <button class="tool-button" id="splitBeats" type="button">拆拍</button>
-                <button class="tool-button" id="mergeSame" type="button">合并</button>
-              </div>
-              <div class="button-row">
-                <button class="tool-button" id="copyCell" type="button" title="复制当前拍/片段，快捷键 Ctrl+C">复制格</button>
-                <button class="tool-button" id="pasteCell" type="button" title="粘贴到当前拍/片段，快捷键 Ctrl+V">粘贴格</button>
-                <button class="tool-button" id="copyBar" type="button" title="复制当前小节，快捷键 Ctrl+Shift+C">复制小节</button>
-                <button class="tool-button" id="pasteBar" type="button" title="粘贴到当前小节，快捷键 Ctrl+Shift+V">粘贴小节</button>
-              </div>
-              <div class="edit-status" id="copyStatus">未复制</div>
-              <div class="edit-status" id="editStatus">0 修改</div>
-            </div>
-          </div>
-          <div class="panel">
-            <h2>导出</h2>
-            <div class="button-row">
-              <button class="tool-button" id="exportLab" type="button">LAB</button>
-              <button class="tool-button" id="exportJson" type="button">JSON</button>
-            </div>
-            <div class="panel-gap"></div>
-            <button class="tool-button warning" id="resetAll" type="button">还原全部</button>
-          </div>
-          <div class="panel">
-            <h2>和弦列表</h2>
-            <div class="event-list" id="eventList"></div>
-          </div>
-        </aside>
-      </section>
-    </main>
-  </div>
-
-  <audio id="audio" preload="metadata"></audio>
-
-  <script>
-    const SOURCE_DATA = __ANALYSIS_JSON__;
-    const DATA = cloneData(SOURCE_DATA);
-    const audio = document.getElementById("audio");
-    const playBtn = document.getElementById("playBtn");
-    const seek = document.getElementById("seek");
-    const sync = document.getElementById("sync");
-    const syncValue = document.getElementById("syncValue");
-    const barsEl = document.getElementById("bars");
-    const eventList = document.getElementById("eventList");
-    const currentChord = document.getElementById("currentChord");
-    const currentTimeEl = document.getElementById("currentTime");
-    const durationEl = document.getElementById("duration");
-    const displayButtons = document.querySelectorAll("[data-display]");
-    const editRange = document.getElementById("editRange");
-    const chordInput = document.getElementById("chordInput");
-    const saveChord = document.getElementById("saveChord");
-    const clearChord = document.getElementById("clearChord");
-    const resetChord = document.getElementById("resetChord");
-    const splitHalf = document.getElementById("splitHalf");
-    const splitBeats = document.getElementById("splitBeats");
-    const mergeSame = document.getElementById("mergeSame");
-    const copyCellBtn = document.getElementById("copyCell");
-    const pasteCellBtn = document.getElementById("pasteCell");
-    const copyBarBtn = document.getElementById("copyBar");
-    const pasteBarBtn = document.getElementById("pasteBar");
-    const copyStatus = document.getElementById("copyStatus");
-    const scoreFile = document.getElementById("scoreFile");
-    const scoreText = document.getElementById("scoreText");
-    const scoreStart = document.getElementById("scoreStart");
-    const scoreGrid = document.getElementById("scoreGrid");
-    const scoreRepeat = document.getElementById("scoreRepeat");
-    const applyScore = document.getElementById("applyScore");
-    const clearScore = document.getElementById("clearScore");
-    const scoreStatus = document.getElementById("scoreStatus");
-    const exportLab = document.getElementById("exportLab");
-    const exportJson = document.getElementById("exportJson");
-    const resetAll = document.getElementById("resetAll");
-    const editStatus = document.getElementById("editStatus");
-    const playbackStart = Number(DATA.audio_offset || 0);
-    const playbackDuration = Number(DATA.duration || 0);
-    const playbackEnd = playbackStart + playbackDuration;
-    const syncStorageKey = `chord-studio-sync:${DATA.source || DATA.audio_file}`;
-    const ROOT_TO_PC = { C: 0, "C#": 1, Db: 1, D: 2, "D#": 3, Eb: 3, E: 4, F: 5, "F#": 6, Gb: 6, G: 7, "G#": 8, Ab: 8, A: 9, "A#": 10, Bb: 10, B: 11 };
-    const ROOT_NAMES = Object.keys(ROOT_TO_PC).sort((a, b) => b.length - a.length);
-    const PC_TO_SHARP = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
-    const PC_TO_FLAT = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-    const MAJOR_ROMAN = { 0: "I", 1: "bII", 2: "II", 3: "bIII", 4: "III", 5: "IV", 6: "#IV", 7: "V", 8: "bVI", 9: "VI", 10: "bVII", 11: "VII" };
-    const MINOR_ROMAN = { 0: "I", 1: "bII", 2: "II", 3: "III", 4: "#III", 5: "IV", 6: "#IV", 7: "V", 8: "VI", 9: "#VI", 10: "VII", 11: "#VII" };
-    const MAJOR_DEGREES = {
-      "1": [0, ""], "2": [2, "m"], "3": [4, "m"], "4": [5, ""], "5": [7, ""], "6": [9, "m"], "7": [11, "dim"]
-    };
-    const MINOR_DEGREES = {
-      "1": [0, "m"], "2": [2, "dim"], "3": [3, ""], "4": [5, "m"], "5": [7, ""], "6": [8, ""], "7": [10, ""]
-    };
-    let events = [];
-    let beats = [];
-    let displayMode = DATA.display || "name";
-    let syncMs = storedSyncMs();
-    let rafId = null;
-    let activeBar = null;
-    let activeBeat = null;
-    let activeEvent = null;
-    let selectedEventIndex = 0;
-    let selectedBeatTarget = null;
-    let editClipboard = null;
-    const dirtyEvents = new Set();
-
-    function cloneData(value) {
-      return JSON.parse(JSON.stringify(value));
-    }
-
-    function refreshDerived() {
-      events = [...(DATA.events || [])].sort((left, right) => Number(left.start || 0) - Number(right.start || 0) || Number(left.end || 0) - Number(right.end || 0));
-      beats = (DATA.bars || [])
-        .flatMap((bar) => (bar.beats || []).map((beat) => ({ ...beat, bar: bar.bar })))
-        .sort((left, right) => Number(left.start || 0) - Number(right.start || 0) || Number(left.end || 0) - Number(right.end || 0));
-      DATA.events = events;
-    }
-
-    function storedSyncMs() {
-      try {
-        return Number(localStorage.getItem(syncStorageKey) || 0);
-      } catch (error) {
-        return 0;
-      }
-    }
-
-    function fmt(seconds) {
-      const total = Math.max(0, Math.round(seconds || 0));
-      const m = Math.floor(total / 60);
-      const s = total % 60;
-      const h = Math.floor(m / 60);
-      const mm = m % 60;
-      if (h > 0) return `${String(h).padStart(2, "0")}:${String(mm).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
-      return `${String(mm).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
-    }
-
-    function clamp(value, min, max) {
-      return Math.max(min, Math.min(max, value));
-    }
-
-    function localPlaybackTime() {
-      return clamp(Number(audio.currentTime || 0) - playbackStart, 0, playbackDuration);
-    }
-
-    function analysisTime() {
-      const local = localPlaybackTime();
-      return clamp(local + syncMs / 1000, 0, playbackDuration);
-    }
-
-    function displaySync() {
-      sync.value = String(syncMs);
-      syncValue.textContent = `${syncMs > 0 ? "+" : ""}${syncMs}ms`;
-    }
-
-    function showPlaybackError(error) {
-      const detail = error && error.message ? `：${error.message}` : "";
-      durationEl.textContent = "音频无法播放";
-      currentTimeEl.textContent = "请检查音频路径";
-      console.error("Audio playback failed", error, audio.currentSrc || audio.src);
-    }
-
-    function playAudio() {
-      const result = audio.play();
-      if (result && typeof result.catch === "function") {
-        result.catch(showPlaybackError);
-      }
-      return result;
-    }
-
-    function parseChord(label) {
-      const raw = String(label || "").trim().replace("♯", "#").replace("♭", "b");
-      if (!raw || ["N", "X", "NC"].includes(raw.toUpperCase())) {
-        return { chord: "N", chordDisplay: "N", roman: "N", romanDisplay: "N", bassRoot: "N", bassConfidence: 0 };
-      }
-      const parts = raw.split("/");
-      const body = parts[0].trim();
-      const bassRoot = parts[1] ? parts[1].trim() : "N";
-      let root = null;
-      let suffix = "";
-      for (const candidate of ROOT_NAMES) {
-        if (body.startsWith(candidate)) {
-          root = candidate;
-          suffix = body.slice(candidate.length);
-          break;
-        }
-      }
-      if (!root) {
-        return null;
-      }
-      if (suffix.startsWith(":")) {
-        const quality = suffix.slice(1).toLowerCase();
-        const map = { maj: "", major: "", min: "m", minor: "m", "7": "7", maj7: "maj7", min7: "m7", dim: "dim", aug: "aug", sus: "sus4", sus4: "sus4", sus2: "sus2" };
-        suffix = map[quality] ?? quality;
-      }
-      const chord = `${root}${suffix}`;
-      const roman = chordToRoman(chord);
-      const bassRoman = bassRoot !== "N" ? rootToRoman(bassRoot) : "";
-      return {
-        chord,
-        chordDisplay: bassRoot !== "N" ? `${chord}/${bassRoot}` : chord,
-        roman,
-        romanDisplay: bassRoman ? `${roman}/${bassRoman}` : roman,
-        bassRoot,
-        bassConfidence: bassRoot !== "N" ? 1 : 0,
-      };
-    }
-
-    function rootToRoman(rootName) {
-      const key = parseChordRoot(DATA.key || "");
-      const root = parseChordRoot(rootName || "");
-      if (!key || !root) return rootName || "";
-      const map = key.suffix === "m" ? MINOR_ROMAN : MAJOR_ROMAN;
-      return map[(root.pc - key.pc + 12) % 12] || rootName;
-    }
-
-    function chordToRoman(chord) {
-      if (chord === "N") return "N";
-      const key = parseChordRoot(DATA.key || "");
-      const parsed = parseChordRoot(chord || "");
-      if (!key || !parsed) return chord;
-      const map = key.suffix === "m" ? MINOR_ROMAN : MAJOR_ROMAN;
-      return `${map[(parsed.pc - key.pc + 12) % 12] || parsed.root}${parsed.suffix}`;
-    }
-
-    function parseChordRoot(label) {
-      const text = String(label || "").split("/", 1)[0].trim();
-      for (const candidate of ROOT_NAMES) {
-        if (text.startsWith(candidate)) {
-          return { root: candidate, pc: ROOT_TO_PC[candidate], suffix: text.slice(candidate.length) };
-        }
-      }
-      return null;
-    }
-
-    function noteName(pc) {
-      const key = String(DATA.key || "");
-      const names = key.includes("b") ? PC_TO_FLAT : PC_TO_SHARP;
-      return names[((pc % 12) + 12) % 12];
-    }
-
-    function degreeTokenToChord(token) {
-      const text = String(token || "").trim();
-      if (!text) return null;
-      if (parseChord(text)) return text;
-
-      const numeric = text.match(/^([b#]?)([1-7])([A-Za-z0-9+°ø#b]*)$/);
-      if (numeric) {
-        return degreeToChord(numeric[2], numeric[1], numeric[3] || "");
-      }
-
-      const roman = text.match(/^([b#]?)(VII|VI|IV|V|III|II|I|vii|vi|iv|v|iii|ii|i)(.*)$/);
-      if (!roman) return null;
-      const degreeMap = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6", VII: "7" };
-      const romanBody = roman[2];
-      const degree = degreeMap[romanBody.toUpperCase()];
-      const impliedMinor = romanBody === romanBody.toLowerCase();
-      let suffix = roman[3] || "";
-      if (suffix.startsWith("m")) suffix = suffix.slice(1);
-      return degreeToChord(degree, roman[1], suffix, impliedMinor);
-    }
-
-    function degreeToChord(degree, accidental = "", suffix = "", forceMinor = false) {
-      const key = parseChordRoot(DATA.key || "");
-      if (!key) return null;
-      const table = key.suffix === "m" ? MINOR_DEGREES : MAJOR_DEGREES;
-      const spec = table[degree];
-      if (!spec) return null;
-      const accidentalOffset = accidental === "b" ? -1 : accidental === "#" ? 1 : 0;
-      const root = noteName(key.pc + spec[0] + accidentalOffset);
-      let quality = forceMinor ? "m" : spec[1];
-      const lowered = String(suffix || "").toLowerCase();
-      if (lowered === "maj" || lowered === "major") {
-        quality = "";
-        suffix = "";
-      } else if (lowered === "min" || lowered === "minor") {
-        quality = "m";
-        suffix = "";
-      } else if (suffix === "m") {
-        quality = "m";
-        suffix = "";
-      }
-      if (quality === "dim" && suffix === "7") return `${root}dim7`;
-      return `${root}${quality}${suffix}`;
-    }
-
-    function parseEditableChord(label) {
-      const text = String(label || "").trim();
-      if (!text) return parseChord("N");
-      const parts = text.split("/");
-      if (parts.length === 1) {
-        const direct = parseChord(text);
-        if (direct) return direct;
-      }
-      const mainDirect = parseChord(parts[0]);
-      const chordName = mainDirect ? mainDirect.chord : degreeTokenToChord(parts[0]);
-      if (!chordName) return null;
-      let bassName = "";
-      if (parts.length > 1 && parts[1].trim()) {
-        bassName = degreeTokenToBass(parts[1].trim()) || parts[1].trim();
-      }
-      return parseChord(bassName ? `${chordName}/${bassName}` : chordName);
-    }
-
-    function degreeTokenToBass(token) {
-      const text = String(token || "").trim();
-      if (!text) return null;
-      const root = parseChordRoot(text);
-      if (root) return root.root;
-      const numeric = text.match(/^([b#]?)([1-7])$/);
-      if (numeric) {
-        return degreeRootName(numeric[2], numeric[1]);
-      }
-      const roman = text.match(/^([b#]?)(VII|VI|IV|V|III|II|I|vii|vi|iv|v|iii|ii|i)$/);
-      if (!roman) return null;
-      const degreeMap = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6", VII: "7" };
-      return degreeRootName(degreeMap[roman[2].toUpperCase()], roman[1]);
-    }
-
-    function degreeRootName(degree, accidental = "") {
-      const key = parseChordRoot(DATA.key || "");
-      if (!key) return null;
-      const table = key.suffix === "m" ? MINOR_DEGREES : MAJOR_DEGREES;
-      const spec = table[degree];
-      if (!spec) return null;
-      const accidentalOffset = accidental === "b" ? -1 : accidental === "#" ? 1 : 0;
-      return noteName(key.pc + spec[0] + accidentalOffset);
-    }
-
-    function parseScoreText(text) {
-      const bars = [];
-      const lines = String(text || "")
-        .replace(/｜/g, "|")
-        .replace(/[–—]/g, "-")
-        .split(/\\r?\\n/);
-      for (let line of lines) {
-        line = line.trim();
-        if (!line || /^\\[[^\\]]+\\]$/.test(line)) continue;
-        line = line.replace(/\\|\\|/g, "|").replace(/(^|\\s):|:(\\s|$)/g, " ");
-        if (line.includes("|")) {
-          const parts = line.split("|").map((part) => part.trim()).filter(Boolean);
-          for (const part of parts) {
-            const tokens = scoreTokensForBar(part);
-            if (tokens.length) bars.push(tokens);
-          }
-        } else {
-          const tokens = scoreTokensForBar(line);
-          if (tokens.length === 1 && /^[1-7]{2,}$/.test(tokens[0])) {
-            for (const digit of tokens[0]) bars.push([digit]);
-          } else if (tokens.length > 1) {
-            for (const token of tokens) bars.push([token]);
-          } else if (tokens.length) {
-            bars.push(tokens);
-          }
-        }
-      }
-      return bars.map((bar) => bar.map((token) => degreeTokenToChord(token) || token));
-    }
-
-    function scoreTokensForBar(text) {
-      const compact = String(text || "").trim();
-      if (!compact || compact === "%" || compact === ".") return [];
-      if (/^[1-7]{2,}$/.test(compact)) return [compact];
-      return compact
-        .replace(/[，,]/g, " ")
-        .split(/\\s+/)
-        .map((token) => token.trim().replace(/^\\(|\\)$/g, ""))
-        .filter(Boolean);
-    }
-
-    function applyChordFields(item, parsed, confidence = 1, edited = true) {
-      item.chord = parsed.chord;
-      item.chord_display = parsed.chordDisplay;
-      item.roman = parsed.roman;
-      item.roman_display = parsed.romanDisplay;
-      item.bass_root = parsed.bassRoot;
-      item.bass_confidence = parsed.bassConfidence;
-      item.confidence = confidence;
-      if (edited) item.edited = true;
-      else delete item.edited;
-    }
-
-    function overlaps(left, right) {
-      return left.start < right.end && right.start < left.end;
-    }
-
-    function sameSpan(left, right) {
-      return Math.abs(Number(left.start) - Number(right.start)) < 0.02
-        && Math.abs(Number(left.end) - Number(right.end)) < 0.02;
-    }
-
-    function updateCoveredItems(target, parsed, confidence = 1, edited = true) {
-      applyChordFields(target, parsed, confidence, edited);
-      for (const bar of DATA.bars || []) {
-        for (const span of bar.spans || []) {
-          if (sameSpan(span, target)) {
-            applyChordFields(span, parsed, confidence, edited);
-          }
-        }
-        for (const beat of bar.beats || []) {
-          if (overlaps(beat, target)) {
-            applyChordFields(beat, parsed, confidence, edited);
-          }
-        }
-      }
-    }
-
-    function editedEventCount() {
-      return events.reduce((count, event, index) => count + ((event.edited || dirtyEvents.has(index)) ? 1 : 0), 0);
-    }
-
-    function barByNumber(barNumber) {
-      return (DATA.bars || []).find((bar) => Number(bar.bar) === Number(barNumber)) || null;
-    }
-
-    function beatByNumber(barNumber, beatNumber, source = DATA) {
-      const bar = (source.bars || []).find((item) => Number(item.bar) === Number(barNumber));
-      if (!bar) return null;
-      return (bar.beats || []).find((beat) => Number(beat.beat) === Number(beatNumber)) || null;
-    }
-
-    function beatCenter(beat) {
-      return (Number(beat.start) + Number(beat.end)) / 2;
-    }
-
-    function spanUnit(beatStart, beatEnd, bar) {
-      const beatsInBar = bar.beats || [];
-      const firstBeat = beatsInBar[0]?.beat ?? 1;
-      const lastBeat = beatsInBar[beatsInBar.length - 1]?.beat ?? DATA.beats_per_bar;
-      return beatStart <= firstBeat && beatEnd >= lastBeat ? "bar" : "beat";
-    }
-
-    function eventFromBeats(bar, beatGroup, parsed, confidence = 1, edited = true) {
-      const first = beatGroup[0];
-      const last = beatGroup[beatGroup.length - 1];
-      const event = {
-        bar: bar.bar,
-        unit: spanUnit(first.beat, last.beat, bar),
-        beat_start: first.beat,
-        beat_end: last.beat,
-        start: first.start,
-        end: last.end,
-        chord: "N",
-        chord_display: "N",
-        roman: "N",
-        roman_display: "N",
-        bass_root: "N",
-        bass_confidence: 0,
-        confidence,
-      };
-      applyChordFields(event, parsed, confidence, edited);
-      return event;
-    }
-
-    function eventFromExistingBeats(bar, beatGroup) {
-      const first = beatGroup[0];
-      const last = beatGroup[beatGroup.length - 1];
-      const confidence = beatGroup.reduce((sum, beat) => sum + Number(beat.confidence || 0), 0) / Math.max(beatGroup.length, 1);
-      return {
-        bar: bar.bar,
-        unit: spanUnit(first.beat, last.beat, bar),
-        beat_start: first.beat,
-        beat_end: last.beat,
-        start: first.start,
-        end: last.end,
-        chord: first.chord || "N",
-        chord_display: first.chord_display || first.chord || "N",
-        roman: first.roman || "N",
-        roman_display: first.roman_display || first.roman || "N",
-        bass_root: first.bass_root || "N",
-        bass_confidence: first.bass_confidence || 0,
-        confidence,
-        edited: beatGroup.some((beat) => beat.edited),
-      };
-    }
-
-    function beatChordKey(beat) {
-      return [
-        beat.chord || "N",
-        beat.chord_display || beat.chord || "N",
-        beat.roman_display || beat.roman || "N",
-        beat.bass_root || "N",
-      ].join("|");
-    }
-
-    function rebuildBarSpansFromBeats(bar) {
-      const sortedBeats = [...(bar.beats || [])].sort((left, right) => left.beat - right.beat);
-      const groups = [];
-      let current = [];
-      for (const beat of sortedBeats) {
-        if (!current.length || beatChordKey(current[current.length - 1]) === beatChordKey(beat)) {
-          current.push(beat);
-        } else {
-          groups.push(current);
-          current = [beat];
-        }
-      }
-      if (current.length) groups.push(current);
-      const newEvents = groups.map((group) => eventFromExistingBeats(bar, group));
-      replaceBarSpans(bar, newEvents);
-      return newEvents;
-    }
-
-    function partitionBeats(beatsInBar, segmentCount) {
-      const beatsToUse = beatsInBar || [];
-      if (!beatsToUse.length || segmentCount <= 0) return [];
-      const count = Math.min(segmentCount, beatsToUse.length);
-      const groups = [];
-      for (let index = 0; index < count; index += 1) {
-        const startIndex = Math.floor((index * beatsToUse.length) / count);
-        const endIndex = Math.max(startIndex, Math.floor(((index + 1) * beatsToUse.length) / count) - 1);
-        groups.push(beatsToUse.slice(startIndex, endIndex + 1));
-      }
-      return groups.filter((group) => group.length);
-    }
-
-    function replaceBarSpans(bar, newEvents) {
-      const sorted = [...newEvents].sort((left, right) => left.start - right.start);
-      bar.spans = sorted.map((event) => ({ ...event }));
-      DATA.events = [
-        ...events.filter((event) => Number(event.bar) !== Number(bar.bar)),
-        ...sorted.map((event) => ({ ...event })),
-      ].sort((left, right) => left.start - right.start || left.end - right.end);
-      for (const beat of bar.beats || []) {
-        const center = beatCenter(beat);
-        const covering = sorted.find((event) => center >= event.start && center < event.end) || sorted[sorted.length - 1];
-        if (covering) {
-          applyChordFields(beat, {
-            chord: covering.chord,
-            chordDisplay: covering.chord_display,
-            roman: covering.roman,
-            romanDisplay: covering.roman_display,
-            bassRoot: covering.bass_root,
-            bassConfidence: covering.bass_confidence,
-          }, covering.confidence, Boolean(covering.edited));
-        }
-      }
-      refreshDerived();
-    }
-
-    function segmentsForBar(bar, chordLabels, gridMode = "auto") {
-      const beatsInBar = bar.beats || [];
-      const labels = chordLabels.filter(Boolean);
-      if (!labels.length || !beatsInBar.length) return [];
-      const parsed = labels.map((label) => parseEditableChord(label)).filter(Boolean);
-      if (!parsed.length) return [];
-      let segmentCount = parsed.length;
-      if (gridMode === "bar") segmentCount = 1;
-      else if (gridMode === "half") segmentCount = Math.min(Math.max(parsed.length, 2), beatsInBar.length);
-      else if (gridMode === "beat") segmentCount = beatsInBar.length;
-      else if (parsed.length === 1) segmentCount = 1;
-      else if (parsed.length === 2) segmentCount = 2;
-      else segmentCount = Math.min(parsed.length, beatsInBar.length);
-
-      const groups = partitionBeats(beatsInBar, segmentCount);
-      return groups.map((group, index) => {
-        const chord = parsed[Math.min(index, parsed.length - 1)];
-        return eventFromBeats(bar, group, chord, 1, true);
-      });
-    }
-
-    function splitSelectedEvent(mode) {
-      if (!events.length) return;
-      const target = events[selectedEventIndex];
-      const bar = barByNumber(target.bar);
-      if (!bar) return;
-      const coveredBeats = (bar.beats || []).filter((beat) => overlaps(beat, target));
-      if (coveredBeats.length <= 1) return;
-      const parsed = parseEditableChord(target.chord_display || target.chord || "N");
-      if (!parsed) return;
-      const count = mode === "beat" ? coveredBeats.length : Math.min(2, coveredBeats.length);
-      const newSegments = partitionBeats(coveredBeats, count).map((group) => eventFromBeats(bar, group, parsed, 1, true));
-      const otherSpans = (bar.spans || []).filter((span) => !sameSpan(span, target));
-      replaceBarSpans(bar, [...otherSpans, ...newSegments]);
-      selectedEventIndex = events.findIndex((event) => sameSpan(event, newSegments[0]));
-      if (selectedEventIndex < 0) selectedEventIndex = 0;
-      render();
-      selectEvent(selectedEventIndex);
-      updateActive();
-    }
-
-    function mergeAdjacentSameChords() {
-      const merged = [];
-      for (const bar of DATA.bars || []) {
-        const spans = [...(bar.spans || [])].sort((left, right) => left.start - right.start);
-        const nextSpans = [];
-        for (const span of spans) {
-          const prev = nextSpans[nextSpans.length - 1];
-          if (
-            prev
-            && prev.chord_display === span.chord_display
-            && Math.abs(prev.end - span.start) < 0.04
-          ) {
-            prev.end = span.end;
-            prev.beat_end = span.beat_end;
-            prev.unit = spanUnit(prev.beat_start, prev.beat_end, bar);
-            prev.confidence = Math.max(prev.confidence || 0, span.confidence || 0);
-            prev.edited = Boolean(prev.edited || span.edited);
-          } else {
-            nextSpans.push({ ...span });
-          }
-        }
-        replaceBarSpans(bar, nextSpans);
-        merged.push(...nextSpans);
-      }
-      DATA.events = merged.sort((left, right) => left.start - right.start || left.end - right.end);
-      refreshDerived();
-      render();
-      selectEvent(Math.min(selectedEventIndex, events.length - 1));
-      updateActive();
-    }
-
-    function applyScoreToTimeline() {
-      const pattern = parseScoreText(scoreText.value);
-      if (!pattern.length) {
-        scoreStatus.textContent = "未识别到和弦";
-        return;
-      }
-      const startBar = Math.max(1, Number(scoreStart.value || 1));
-      const repeat = Boolean(scoreRepeat.checked);
-      const gridMode = scoreGrid.value || "auto";
-      const targetBars = (DATA.bars || []).filter((bar) => Number(bar.bar) >= startBar);
-      let applied = 0;
-      for (let index = 0; index < targetBars.length; index += 1) {
-        if (!repeat && index >= pattern.length) break;
-        const spec = pattern[index % pattern.length];
-        const bar = targetBars[index];
-        const spans = segmentsForBar(bar, spec, gridMode);
-        if (!spans.length) continue;
-        replaceBarSpans(bar, spans);
-        applied += 1;
-      }
-      if (!applied) {
-        scoreStatus.textContent = "没有可应用的小节";
-        return;
-      }
-      refreshDerived();
-      selectedEventIndex = events.findIndex((event) => Number(event.bar) >= startBar);
-      if (selectedEventIndex < 0) selectedEventIndex = 0;
-      render();
-      selectEvent(selectedEventIndex);
-      updateActive();
-      scoreStatus.textContent = `${pattern.length} 小节谱，已铺 ${applied} 小节`;
-    }
-
-    function loadScoreFile(file) {
-      if (!file) return;
-      const reader = new FileReader();
-      reader.addEventListener("load", () => {
-        const text = String(reader.result || "");
-        if (file.name.toLowerCase().endsWith(".json")) {
-          try {
-            const json = JSON.parse(text);
-            const rows = json.events || json.chords || json.annotations || [];
-            scoreText.value = rows.map((row) => row.chord_display || row.chord || row.label || row.name || "").filter(Boolean).join(" ");
-          } catch (error) {
-            scoreText.value = text;
-          }
-        } else if (file.name.toLowerCase().endsWith(".lab")) {
-          scoreText.value = text.split(/\\r?\\n/).map((line) => line.trim().split(/\\s+/)[2] || "").filter(Boolean).join(" ");
-        } else if (file.name.toLowerCase().endsWith(".csv")) {
-          scoreText.value = text.split(/\\r?\\n/).slice(1).map((line) => {
-            const cols = line.split(",");
-            return cols[2] || cols[cols.length - 1] || "";
-          }).filter(Boolean).join(" ");
-        } else {
-          scoreText.value = text;
-        }
-        scoreStatus.textContent = `${file.name}`;
-      });
-      reader.readAsText(file, "utf-8");
-    }
-
-    function updateEditPanel() {
-      if (!events.length) {
-        editRange.textContent = "--";
-        chordInput.value = "N";
-        return;
-      }
-      document.querySelectorAll(".event.selected").forEach((node) => node.classList.remove("selected"));
-      document.querySelectorAll(".beat.selected").forEach((node) => node.classList.remove("selected"));
-      document.querySelectorAll(".bar.selected").forEach((node) => node.classList.remove("selected"));
-      if (selectedBeatTarget) {
-        const beat = beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat);
-        if (beat) {
-          const eventIndex = events.findIndex((event) => beatCenter(beat) >= event.start && beatCenter(beat) < event.end);
-          selectedEventIndex = eventIndex >= 0 ? eventIndex : selectedEventIndex;
-          editRange.textContent = `${selectedBeatTarget.bar}.${selectedBeatTarget.beat}  ${fmt(beat.start)}-${fmt(beat.end)}`;
-          chordInput.value = beat.chord_display || beat.chord || "N";
-          editStatus.textContent = `${editedEventCount()} 修改`;
-          const selectedBeat = document.querySelector(`.beat[data-bar="${selectedBeatTarget.bar}"][data-beat="${selectedBeatTarget.beat}"]`);
-          if (selectedBeat) selectedBeat.classList.add("selected");
-          const selectedBar = document.querySelector(`.bar[data-bar="${selectedBeatTarget.bar}"]`);
-          if (selectedBar) selectedBar.classList.add("selected");
-          const selectedRow = document.querySelector(`.event[data-event="${selectedEventIndex}"]`);
-          if (selectedRow) selectedRow.classList.add("selected");
-          return;
-        }
-        selectedBeatTarget = null;
-      }
-      selectedEventIndex = clamp(selectedEventIndex, 0, events.length - 1);
-      const item = events[selectedEventIndex];
-      const beatLabel = item.beat_start === item.beat_end ? `${item.bar}.${item.beat_start}` : `${item.bar}.${item.beat_start}-${item.beat_end}`;
-      editRange.textContent = `${beatLabel}  ${fmt(item.start)}-${fmt(item.end)}`;
-      chordInput.value = item.chord_display || item.chord || "N";
-      editStatus.textContent = `${editedEventCount()} 修改`;
-      const selectedRow = document.querySelector(`.event[data-event="${selectedEventIndex}"]`);
-      if (selectedRow) selectedRow.classList.add("selected");
-      const selectedBar = document.querySelector(`.bar[data-bar="${item.bar}"]`);
-      if (selectedBar) selectedBar.classList.add("selected");
-    }
-
-    function selectEvent(index) {
-      if (!events.length) return;
-      selectedBeatTarget = null;
-      selectedEventIndex = clamp(Number(index) || 0, 0, events.length - 1);
-      const item = events[selectedEventIndex];
-      if (item && scoreStart) scoreStart.value = String(item.bar || 1);
-      updateEditPanel();
-    }
-
-    function selectEventByObject(item) {
-      const index = events.indexOf(item);
-      if (index >= 0) selectEvent(index);
-    }
-
-    function selectBeat(barNumber, beatNumber) {
-      const beat = beatByNumber(barNumber, beatNumber);
-      if (!beat) return;
-      selectedBeatTarget = { bar: Number(barNumber), beat: Number(beatNumber) };
-      const eventIndex = events.findIndex((event) => beatCenter(beat) >= event.start && beatCenter(beat) < event.end);
-      if (eventIndex >= 0) selectedEventIndex = eventIndex;
-      if (scoreStart) scoreStart.value = String(barNumber || 1);
-      updateEditPanel();
-    }
-
-    function saveSelectedBeat(parsed) {
-      if (!selectedBeatTarget) return false;
-      const bar = barByNumber(selectedBeatTarget.bar);
-      const beat = beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat);
-      if (!bar || !beat) return false;
-      applyChordFields(beat, parsed, 1, true);
-      rebuildBarSpansFromBeats(bar);
-      refreshDerived();
-      const updatedBeat = beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat);
-      selectedEventIndex = updatedBeat
-        ? events.findIndex((event) => beatCenter(updatedBeat) >= event.start && beatCenter(updatedBeat) < event.end)
-        : selectedEventIndex;
-      if (selectedEventIndex < 0) selectedEventIndex = 0;
-      render();
-      selectBeat(selectedBeatTarget.bar, selectedBeatTarget.beat);
-      updateActive();
-      return true;
-    }
-
-    function saveSelectedChord() {
-      if (!events.length) return;
-      const parsed = parseEditableChord(chordInput.value);
-      if (!parsed) {
-        chordInput.focus();
-        chordInput.select();
-        return;
-      }
-      if (selectedBeatTarget && saveSelectedBeat(parsed)) {
-        return;
-      }
-      const item = events[selectedEventIndex];
-      updateCoveredItems(item, parsed, 1);
-      dirtyEvents.add(selectedEventIndex);
-      refreshDerived();
-      render();
-      selectEvent(selectedEventIndex);
-      updateActive();
-    }
-
-    function selectedBarNumber() {
-      if (selectedBeatTarget) return Number(selectedBeatTarget.bar);
-      const item = events[selectedEventIndex];
-      return item ? Number(item.bar) : null;
-    }
-
-    function selectedCellItem() {
-      if (selectedBeatTarget) {
-        return beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat);
-      }
-      return events[selectedEventIndex] || null;
-    }
-
-    function parsedFromItem(item) {
-      return {
-        chord: item.chord || "N",
-        chordDisplay: item.chord_display || item.chord || "N",
-        roman: item.roman || "N",
-        romanDisplay: item.roman_display || item.roman || "N",
-        bassRoot: item.bass_root || "N",
-        bassConfidence: Number(item.bass_confidence || 0),
-      };
-    }
-
-    function setCopyStatus(text) {
-      copyStatus.textContent = text;
-    }
-
-    function copySelectedCell() {
-      const item = selectedCellItem();
-      if (!item) {
-        setCopyStatus("没有可复制的单元格");
-        return;
-      }
-      editClipboard = {
-        type: "cell",
-        parsed: cloneData(parsedFromItem(item)),
-        confidence: Number(item.confidence || 1),
-        label: labelFor(item),
-      };
-      setCopyStatus(`已复制格 ${editClipboard.label}`);
-    }
-
-    function pasteSelectedCell() {
-      if (!editClipboard || editClipboard.type !== "cell") {
-        setCopyStatus("没有单元格可粘贴");
-        return;
-      }
-      const parsed = cloneData(editClipboard.parsed);
-      if (selectedBeatTarget && saveSelectedBeat(parsed)) {
-        setCopyStatus(`已粘贴格 ${editClipboard.label}`);
-        return;
-      }
-      const item = events[selectedEventIndex];
-      if (!item) {
-        setCopyStatus("没有可粘贴的位置");
-        return;
-      }
-      updateCoveredItems(item, parsed, Number(editClipboard.confidence || 1), true);
-      dirtyEvents.add(selectedEventIndex);
-      refreshDerived();
-      render();
-      selectEvent(selectedEventIndex);
-      updateActive();
-      setCopyStatus(`已粘贴格 ${editClipboard.label}`);
-    }
-
-    function copySelectedBar() {
-      const bar = barByNumber(selectedBarNumber());
-      const sourceBeats = bar ? [...(bar.beats || [])].sort((left, right) => left.beat - right.beat) : [];
-      if (!bar || !sourceBeats.length) {
-        setCopyStatus("没有可复制的小节");
-        return;
-      }
-      editClipboard = {
-        type: "bar",
-        sourceBar: Number(bar.bar),
-        beats: sourceBeats.map((beat) => ({
-          parsed: cloneData(parsedFromItem(beat)),
-          confidence: Number(beat.confidence || 1),
-          label: labelFor(beat),
-        })),
-      };
-      setCopyStatus(`已复制小节 ${String(bar.bar).padStart(3, "0")}`);
-    }
-
-    function pasteSelectedBar() {
-      if (!editClipboard || editClipboard.type !== "bar" || !editClipboard.beats?.length) {
-        setCopyStatus("没有小节可粘贴");
-        return;
-      }
-      const bar = barByNumber(selectedBarNumber());
-      const targetBeats = bar ? [...(bar.beats || [])].sort((left, right) => left.beat - right.beat) : [];
-      if (!bar || !targetBeats.length) {
-        setCopyStatus("没有可粘贴的小节");
-        return;
-      }
-      for (let index = 0; index < targetBeats.length; index += 1) {
-        const sourceIndex = Math.min(
-          editClipboard.beats.length - 1,
-          Math.floor((index * editClipboard.beats.length) / targetBeats.length)
-        );
-        const source = editClipboard.beats[sourceIndex];
-        applyChordFields(targetBeats[index], cloneData(source.parsed), Number(source.confidence || 1), true);
-      }
-      rebuildBarSpansFromBeats(bar);
-      refreshDerived();
-      const firstEventIndex = events.findIndex((event) => Number(event.bar) === Number(bar.bar));
-      selectedEventIndex = firstEventIndex >= 0 ? firstEventIndex : selectedEventIndex;
-      const keepBeatSelection = selectedBeatTarget && Number(selectedBeatTarget.bar) === Number(bar.bar);
-      const beatSelection = keepBeatSelection ? { ...selectedBeatTarget } : null;
-      render();
-      if (beatSelection) selectBeat(beatSelection.bar, beatSelection.beat);
-      else selectEvent(selectedEventIndex);
-      updateActive();
-      setCopyStatus(`已粘贴小节 ${String(editClipboard.sourceBar).padStart(3, "0")} -> ${String(bar.bar).padStart(3, "0")}`);
-    }
-
-    function restoreSelectedChord() {
-      if (!events.length) return;
-      if (selectedBeatTarget) {
-        const originalBeat = beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat, SOURCE_DATA);
-        const bar = barByNumber(selectedBeatTarget.bar);
-        const beat = beatByNumber(selectedBeatTarget.bar, selectedBeatTarget.beat);
-        if (!originalBeat || !bar || !beat) return;
-      const parsed = parseEditableChord(originalBeat.chord_display || originalBeat.chord || "N");
-        if (!parsed) return;
-        applyChordFields(beat, parsed, Number(originalBeat.confidence || 1), false);
-        rebuildBarSpansFromBeats(bar);
-        refreshDerived();
-        render();
-        selectBeat(selectedBeatTarget.bar, selectedBeatTarget.beat);
-        updateActive();
-        return;
-      }
-      const original = (SOURCE_DATA.events || [])[selectedEventIndex];
-      if (!original) return;
-      const parsed = parseEditableChord(original.chord_display || original.chord || "N");
-      if (!parsed) return;
-      const item = events[selectedEventIndex];
-      updateCoveredItems(item, parsed, Number(original.confidence || 1), false);
-      dirtyEvents.delete(selectedEventIndex);
-      refreshDerived();
-      render();
-      selectEvent(selectedEventIndex);
-      updateActive();
-    }
-
-    function resetAllEdits() {
-      const fresh = cloneData(SOURCE_DATA);
-      DATA.bars = fresh.bars || [];
-      DATA.events = fresh.events || [];
-      dirtyEvents.clear();
-      selectedBeatTarget = null;
-      refreshDerived();
-      render();
-      selectEvent(0);
-      updateActive();
-    }
-
-    function exportEventsAsLab() {
-      const lines = events.map((event) => {
-        const label = event.chord_display || event.chord || "N";
-        return `${Number(event.start).toFixed(3)} ${Number(event.end).toFixed(3)} ${label}`;
-      });
-      downloadText(`${baseExportName()}_corrected.lab`, `${lines.join("\\n")}\\n`, "text/plain;charset=utf-8");
-    }
-
-    function exportAnalysisJson() {
-      const output = cloneData(DATA);
-      output.corrected = editedEventCount() > 0;
-      output.corrected_event_count = editedEventCount();
-      output.corrected_at = new Date().toISOString();
-      downloadText(`${baseExportName()}_corrected_analysis.json`, JSON.stringify(output, null, 2), "application/json;charset=utf-8");
-    }
-
-    function baseExportName() {
-      return String(DATA.audio_file || "song").replace(/\\.[^.]+$/, "").replace(/[\\\\/:*?"<>|]+/g, "_");
-    }
-
-    function downloadText(filename, text, mimeType) {
-      const blob = new Blob([text], { type: mimeType });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(() => URL.revokeObjectURL(link.href), 1000);
-    }
-
-    function labelFor(item) {
-      return displayMode === "roman"
-        ? (item.roman_display || item.roman || item.chord_display || item.chord)
-        : (item.chord_display || item.chord);
-    }
-
-    function titleFor(item) {
-      const name = item.chord_display || item.chord;
-      const romanName = item.roman_display || item.roman;
-      const roman = romanName && romanName !== name ? ` / ${romanName}` : "";
-      const bass = item.bass_root && item.bass_root !== "N" ? ` · bass ${item.bass_root} ${Math.round((item.bass_confidence || 0) * 100)}%` : "";
-      return `${name}${roman} · ${Math.round(item.confidence * 100)}%${bass}`;
-    }
-
-    function activeIn(items, time) {
-      let lo = 0;
-      let hi = items.length - 1;
-      while (lo <= hi) {
-        const mid = (lo + hi) >> 1;
-        const item = items[mid];
-        if (time < item.start) hi = mid - 1;
-        else if (time >= item.end) lo = mid + 1;
-        else return item;
-      }
-      return items[Math.max(0, Math.min(items.length - 1, hi))] || null;
-    }
-
-    function activeFor(time) {
-      return activeIn(events, time);
-    }
-
-    function beatFor(time) {
-      return activeIn(beats, time);
-    }
-
-    function render() {
-      document.getElementById("songTitle").textContent = DATA.audio_file;
-      document.getElementById("songPath").textContent = DATA.source;
-      document.getElementById("bpm").textContent = bpmLabel();
-      document.getElementById("key").textContent = `${DATA.key} ${DATA.mode}`;
-      document.getElementById("meter").textContent = DATA.meter;
-      document.getElementById("barCount").textContent = DATA.bars.length;
-      durationEl.textContent = fmt(playbackDuration);
-      audio.src = DATA.audio_src || DATA.audio_file;
-      displaySync();
-      displayButtons.forEach((button) => {
-        button.classList.toggle("active", button.dataset.display === displayMode);
-      });
-
-      barsEl.style.setProperty("--beats", DATA.beats_per_bar);
-      barsEl.innerHTML = DATA.bars.map((bar) => {
-        const modulation = modulationForBar(bar.bar);
-        const modulationLabel = modulation && modulation.index === 0 ? "主体调" : "升调";
-        const modulationMarker = modulation ? `
-          <div class="modulation-marker">${modulationLabel}：${modulation.key} ${modulation.mode || ""} · ${modulation.progression || ""}</div>
-        ` : "";
-        const beats = bar.beats.map((beat) => `
-          <div class="beat${beat.edited ? " edited" : ""}" data-bar="${bar.bar}" data-beat="${beat.beat}" data-start="${beat.start}" title="${titleFor(beat)}">
-            ${labelFor(beat)}
-          </div>
-        `).join("");
-        return `
-          <article class="bar${modulation ? " modulation" : ""}" data-bar="${bar.bar}" data-start="${bar.start}">
-            <div class="bar-head"><span>${String(bar.bar).padStart(3, "0")}</span><span>${fmt(bar.start)}-${fmt(bar.end)}</span></div>
-            ${modulationMarker}
-            <div class="beats">${beats}</div>
-          </article>
-        `;
-      }).join("");
-
-      eventList.innerHTML = events.map((event, index) => {
-        const beat = event.beat_start === event.beat_end ? `${event.bar}.${event.beat_start}` : `${event.bar}.${event.beat_start}-${event.beat_end}`;
-        return `
-          <div class="event${event.edited ? " edited" : ""}" data-event="${index}" data-start="${event.start}" title="${titleFor(event)}">
-            <span class="when">${beat}</span>
-            <strong>${labelFor(event)}</strong>
-            <span class="conf">${Math.round(event.confidence * 100)}%</span>
-          </div>
-        `;
-      }).join("");
-      updateEditPanel();
-    }
-
-    function modulationForBar(barNumber) {
-      const modulations = Array.isArray(DATA.modulations) ? DATA.modulations : [];
-      const index = modulations.findIndex((item) => Number(item.start_bar || 0) === Number(barNumber));
-      return index >= 0 ? { ...modulations[index], index } : null;
-    }
-
-    function bpmLabel() {
-      const base = Number(DATA.bpm || 0);
-      const segments = Array.isArray(DATA.tempo_segments) ? DATA.tempo_segments : [];
-      if (!segments.length) return base.toFixed(1);
-      const values = segments
-        .flatMap((segment) => [Number(segment.min_bpm || segment.bpm || 0), Number(segment.max_bpm || segment.bpm || 0)])
-        .filter((value) => Number.isFinite(value) && value > 0);
-      if (!values.length) return base.toFixed(1);
-      const low = Math.min(...values);
-      const high = Math.max(...values);
-      if (high - low < 1.0) return base.toFixed(1);
-      return `${base.toFixed(1)} (${low.toFixed(1)}-${high.toFixed(1)})`;
-    }
-
-    function isTextEditingTarget(target) {
-      if (!target || target === document.body) return false;
-      return Boolean(target.closest("input, textarea, select") || target.isContentEditable);
-    }
-
-    function handleCopyPasteShortcut(event) {
-      if (!(event.ctrlKey || event.metaKey) || event.altKey || isTextEditingTarget(event.target)) return;
-      const key = String(event.key || "").toLowerCase();
-      if (key === "c") {
-        event.preventDefault();
-        if (event.shiftKey) copySelectedBar();
-        else copySelectedCell();
-      } else if (key === "v") {
-        event.preventDefault();
-        if (event.shiftKey) pasteSelectedBar();
-        else pasteSelectedCell();
-      }
-    }
-
-    barsEl.addEventListener("click", (event) => {
-      const beat = event.target.closest(".beat");
-      if (beat) {
-        selectBeat(Number(beat.dataset.bar || 0), Number(beat.dataset.beat || 0));
-        audio.currentTime = playbackStart + Number(beat.dataset.start || 0);
-        playAudio();
-        return;
-      }
-      const bar = event.target.closest(".bar");
-      if (!bar) return;
-      const item = activeFor(Number(bar.dataset.start || 0) + 0.001);
-      if (item) selectEventByObject(item);
-      audio.currentTime = playbackStart + Number(bar.dataset.start || 0);
-      playAudio();
-    });
-
-    eventList.addEventListener("click", (event) => {
-      const row = event.target.closest(".event");
-      if (!row) return;
-      selectEvent(Number(row.dataset.event || 0));
-      audio.currentTime = playbackStart + Number(row.dataset.start || 0);
-      playAudio();
-    });
-
-    displayButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        displayMode = button.dataset.display || "name";
-        render();
-        updateActive();
-      });
-    });
-
-    saveChord.addEventListener("click", saveSelectedChord);
-    clearChord.addEventListener("click", () => {
-      chordInput.value = "N";
-      saveSelectedChord();
-    });
-    resetChord.addEventListener("click", restoreSelectedChord);
-    splitHalf.addEventListener("click", () => splitSelectedEvent("half"));
-    splitBeats.addEventListener("click", () => splitSelectedEvent("beat"));
-    mergeSame.addEventListener("click", mergeAdjacentSameChords);
-    copyCellBtn.addEventListener("click", copySelectedCell);
-    pasteCellBtn.addEventListener("click", pasteSelectedCell);
-    copyBarBtn.addEventListener("click", copySelectedBar);
-    pasteBarBtn.addEventListener("click", pasteSelectedBar);
-    scoreFile.addEventListener("change", () => loadScoreFile(scoreFile.files && scoreFile.files[0]));
-    applyScore.addEventListener("click", applyScoreToTimeline);
-    clearScore.addEventListener("click", () => {
-      scoreText.value = "";
-      scoreStatus.textContent = "等待曲谱";
-      scoreFile.value = "";
-    });
-    exportLab.addEventListener("click", exportEventsAsLab);
-    exportJson.addEventListener("click", exportAnalysisJson);
-    resetAll.addEventListener("click", resetAllEdits);
-    chordInput.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        saveSelectedChord();
-      }
-    });
-    document.addEventListener("keydown", handleCopyPasteShortcut);
-
-    function clearActive() {
-      if (activeBar) activeBar.classList.remove("active");
-      if (activeBeat) activeBeat.classList.remove("active");
-      if (activeEvent) activeEvent.classList.remove("active");
-      activeBar = null;
-      activeBeat = null;
-      activeEvent = null;
-    }
-
-    function needsScrollIntoView(element) {
-      if (!element) return false;
-      const rect = element.getBoundingClientRect();
-      const margin = 32;
-      return rect.top < margin || rect.bottom > window.innerHeight - margin;
-    }
-
-    function setActive(nextBar, nextBeat, nextEvent) {
-      if (nextBar === activeBar && nextBeat === activeBeat && nextEvent === activeEvent) return;
-      const shouldScroll = nextBar && nextBar !== activeBar && !nextBar.matches(":hover") && needsScrollIntoView(nextBar);
-      clearActive();
-      activeBar = nextBar;
-      activeBeat = nextBeat;
-      activeEvent = nextEvent;
-      if (activeBar) activeBar.classList.add("active");
-      if (activeBeat) activeBeat.classList.add("active");
-      if (activeEvent) activeEvent.classList.add("active");
-      if (shouldScroll) {
-        activeBar.scrollIntoView({ block: "nearest", behavior: "auto" });
-      }
-    }
-
-    function updateActive() {
-      if (playbackDuration > 0 && audio.currentTime >= playbackEnd && !audio.paused) {
-        audio.pause();
-        audio.currentTime = playbackEnd;
-      }
-
-      const localTime = localPlaybackTime();
-      const lookupTime = analysisTime();
-      currentTimeEl.textContent = fmt(localTime);
-      seek.value = playbackDuration > 0 ? String(Math.round((localTime / playbackDuration) * 1000)) : "0";
-      const item = activeFor(lookupTime);
-      if (!item) return;
-      currentChord.textContent = labelFor(item);
-
-      const beat = beatFor(lookupTime);
-      const barNumber = beat ? beat.bar : item.bar;
-      const beatNumber = beat ? beat.beat : item.beat_start;
-      const nextBar = document.querySelector(`.bar[data-bar="${barNumber}"]`);
-      const nextBeat = document.querySelector(`.beat[data-bar="${barNumber}"][data-beat="${beatNumber}"]`);
-      const eventIndex = events.indexOf(item);
-      const nextEvent = document.querySelector(`.event[data-event="${eventIndex}"]`);
-      setActive(nextBar, nextBeat, nextEvent);
-    }
-
-    function startTicker() {
-      if (rafId !== null) return;
-      const tick = () => {
-        updateActive();
-        rafId = audio.paused ? null : requestAnimationFrame(tick);
-      };
-      rafId = requestAnimationFrame(tick);
-    }
-
-    function stopTicker() {
-      if (rafId !== null) cancelAnimationFrame(rafId);
-      rafId = null;
-      updateActive();
-    }
-
-    playBtn.addEventListener("click", () => {
-      if (audio.paused) {
-        if (audio.currentTime < playbackStart || audio.currentTime >= playbackEnd) {
-          audio.currentTime = playbackStart;
-        }
-        playAudio();
-      } else {
-        audio.pause();
-      }
-    });
-    audio.addEventListener("error", () => showPlaybackError(audio.error));
-
-    audio.addEventListener("play", () => {
-      playBtn.textContent = "⏸";
-      startTicker();
-    });
-    audio.addEventListener("pause", () => {
-      playBtn.textContent = "▶";
-      stopTicker();
-    });
-    audio.addEventListener("timeupdate", () => {
-      if (audio.paused) updateActive();
-    });
-    audio.addEventListener("loadedmetadata", () => {
-      if (audio.currentTime < playbackStart) {
-        audio.currentTime = playbackStart;
-      }
-      durationEl.textContent = fmt(playbackDuration || audio.duration || DATA.duration);
-      updateActive();
-    });
-
-    seek.addEventListener("input", () => {
-      audio.currentTime = playbackStart + (Number(seek.value) / 1000) * playbackDuration;
-      updateActive();
-    });
-
-    sync.addEventListener("input", () => {
-      syncMs = Number(sync.value || 0);
-      try {
-        localStorage.setItem(syncStorageKey, String(syncMs));
-      } catch (error) {
-      }
-      displaySync();
-      updateActive();
-    });
-
-    refreshDerived();
-    render();
-    selectEvent(0);
-    updateActive();
-  </script>
-</body>
-</html>
-"""
+STUDIO_ASSETS = Path(__file__).with_name("studio_assets")
+HTML_TEMPLATE = (
+    (STUDIO_ASSETS / "studio.html").read_text(encoding="utf-8")
+    .replace("__STUDIO_CSS__", "\n".join((STUDIO_ASSETS / name).read_text(encoding="utf-8") for name in ("studio.css", "workbench.css")))
+    .replace("__STUDIO_JS__", "\n".join((STUDIO_ASSETS / name).read_text(encoding="utf-8") for name in ("studio.js", "workbench.js")))
+)
 
 
 def write_html(path: Path, payload: dict[str, object]) -> None:
+    from urllib.parse import quote
+
     source = Path(str(payload.get("source", "")))
-    if source.exists():
+    if source.is_file():
         payload = dict(payload)
-        payload["audio_src"] = Path(os.path.relpath(source.resolve(), path.parent.resolve())).as_posix()
-    data = json.dumps(payload, ensure_ascii=False)
+        try:
+            relative_source = Path(os.path.relpath(source.resolve(), path.parent.resolve())).as_posix()
+            payload["audio_src"] = quote(relative_source, safe="/")
+        except ValueError:
+            # Windows paths on different drives cannot be made relative.
+            payload["audio_src"] = source.resolve().as_uri()
+    # Prevent a song title or imported label from ending the inline script.
+    data = json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     html_text = HTML_TEMPLATE.replace("__ANALYSIS_JSON__", data)
     path.write_text(html_text, encoding="utf-8")
 
@@ -5288,10 +3448,15 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     )
     parser.add_argument(
         "--analysis-model",
-        choices=["functional", "template"],
+        choices=["functional", "template", "acoustic"],
         default="functional",
-        help="Use a global functional harmony model or the older local template matcher.",
+        help="functional: restricted diatonic states; template: full --mode vocabulary; acoustic: experimental learned 24-chord model.",
     )
+    parser.add_argument("--acoustic-model", type=Path, help="Trusted local model from train_acoustic_chords.py (required for acoustic).")
+    parser.add_argument("--acoustic-transition-strength", type=float, default=None, help="Override learned model's validated continuity strength.")
+    parser.add_argument("--no-structure", action="store_true", help="Skip lightweight acoustic section and harmonic-loop analysis.")
+    parser.add_argument("--annotation-timebase", choices=["source", "clip"], default="source",
+                        help="Time coordinates of --beat-grid, --downbeats and --external-chords when using --offset.")
     parser.add_argument(
         "--tempo-mode",
         choices=["auto", "detected", "half", "double"],
@@ -5359,13 +3524,15 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--bpm",
         type=float,
         default=None,
-        help="Override the detected BPM.",
+        help="Use a fixed-BPM grid when no explicit --beat-grid/--downbeats is supplied.",
     )
     parser.add_argument(
         "--key",
         default=None,
         help="Override the detected key, for example F#, F#m, Bb, Am.",
     )
+    parser.add_argument("--all-key-candidates", action="store_true",
+                        help="Export all independent key/meter scores for experimental key fusion.")
     parser.add_argument(
         "--display",
         choices=["name", "roman"],
@@ -5464,6 +3631,23 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(sys.argv[1:] if argv is None else argv)
+    for name in ("offset", "duration", "bpm", "bass_weight", "transition_strength", "progression_strength", "external_weight",
+                 "no_chord_threshold", "confidence_threshold", "acoustic_transition_strength"):
+        value = getattr(args, name)
+        if value is not None and (not math.isfinite(value) or value < 0 or (name in {"duration", "bpm"} and value == 0)):
+            print(f"--{name.replace('_', '-')} must be finite and {'positive' if name in {'duration', 'bpm'} else 'nonnegative'}.", file=sys.stderr)
+            return 2
+    artifact = None
+    if args.analysis_model == "acoustic":
+        if args.acoustic_model is None or not args.acoustic_model.is_file():
+            print("--analysis-model acoustic requires an existing --acoustic-model.", file=sys.stderr)
+            return 2
+        import joblib
+        from acoustic_chord_model import FEATURE_SCHEMA
+        artifact = joblib.load(args.acoustic_model)
+        if artifact.get("feature_schema") != FEATURE_SCHEMA or artifact.get("feature_mode") != args.feature_mode:
+            print("Acoustic model/extractor mismatch; use the feature mode specified in the model report.", file=sys.stderr)
+            return 2
     audio_path = args.audio.resolve()
     if not audio_path.exists():
         print(f"Input file not found: {audio_path}", file=sys.stderr)
@@ -5492,6 +3676,10 @@ def main(argv: list[str] | None = None) -> int:
         print("--blank-intro-bars must be zero or greater.", file=sys.stderr)
         return 2
     args.key = normalize_key_label(args.key)
+    ignored_bpm = None
+    if args.bpm is not None and (args.beat_grid is not None or args.downbeats is not None):
+        ignored_bpm, args.bpm = args.bpm, None
+        print("Using supplied beat timestamps; --bpm will not replace them with a constant grid.")
     external_hints: list[ExternalChordHint] = []
     external_chords_paths: list[Path] = []
     if args.external_chords:
@@ -5525,6 +3713,7 @@ def main(argv: list[str] | None = None) -> int:
     output_base = (
         args.output.resolve() if args.output is not None else default_output_base(audio_path)
     )
+    output_base.parent.mkdir(parents=True, exist_ok=True)
 
     print(f"Decoding: {audio_path.name}")
     y = decode_audio(
@@ -5534,6 +3723,9 @@ def main(argv: list[str] | None = None) -> int:
         duration=args.duration,
     )
     duration = len(y) / SAMPLE_RATE
+    annotation_offset = args.offset if args.annotation_timebase == "source" else 0.0
+    external_hints = [replace(hint, start=max(0.0, hint.start - annotation_offset), end=min(duration, hint.end - annotation_offset))
+                      for hint in external_hints if hint.end > annotation_offset and hint.start < annotation_offset + duration]
     if duration > 20 * 60 and args.duration is None:
         print(
             "Notice: this audio is longer than 20 minutes. "
@@ -5548,7 +3740,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         try:
             meter = meter_from_downbeat_rows(
-                read_beat_grid_rows(beat_grid_path),
+                [(time - annotation_offset, beat) for time, beat in read_beat_grid_rows(beat_grid_path)],
                 duration,
                 requested_meter,
             )
@@ -5567,7 +3759,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         try:
             meter = meter_from_downbeat_rows(
-                read_downbeat_rows(downbeat_path),
+                [(time - annotation_offset, beat) for time, beat in read_downbeat_rows(downbeat_path)],
                 duration,
                 requested_meter,
             )
@@ -5579,7 +3771,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
     elif args.beat_source == "madmom":
         try:
-            meter = estimate_meter_madmom(audio_path, duration, args.meter, args.madmom_python.resolve())
+            meter = estimate_meter_madmom(audio_path, duration, args.meter, args.madmom_python.resolve(), args.offset)
         except (OSError, RuntimeError, ValueError, subprocess.TimeoutExpired) as exc:
             print(f"Could not run madmom downbeat tracking: {exc}", file=sys.stderr)
             return 2
@@ -5617,9 +3809,11 @@ def main(argv: list[str] | None = None) -> int:
         args.notation,
         tempo_mode="detected" if args.bpm is not None else args.tempo_mode,
         requested_key=args.key,
+        retain_all_key_candidates=args.all_key_candidates,
         transition_strength=args.transition_strength,
         external_hints=external_hints,
         external_weight=args.external_weight,
+        bass_weight=args.bass_weight,
     )
     meter = selection.meter
     key = selection.key
@@ -5628,7 +3822,21 @@ def main(argv: list[str] | None = None) -> int:
 
     print("Matching chords to beats and bars...")
     harmonic_unit = "mixed"
-    if args.analysis_model == "functional":
+    acoustic_candidates = []
+    if args.analysis_model == "acoustic":
+        from acoustic_chord_model import recognize_acoustic
+        harmonic_unit = artifact["harmonic_unit"] if args.harmonic_unit == "auto" else args.harmonic_unit
+        if harmonic_unit != artifact["harmonic_unit"]:
+            print("Acoustic model harmonic unit must match its training report.", file=sys.stderr)
+            return 2
+        spans, acoustic_candidates = recognize_acoustic(
+            y, chroma, bass_chroma, intervals, artifact=artifact, key=key, notation=args.notation,
+            harmonic_unit=harmonic_unit, beats_per_bar=meter.beats_per_bar,
+            transition_strength=(artifact["transition_strength"] if args.acoustic_transition_strength is None else args.acoustic_transition_strength),
+            no_chord_threshold=args.no_chord_threshold)
+        spans = blank_intro_spans(spans, args.blank_intro_bars)
+        beat_chords = beat_chords_from_spans(intervals, spans)
+    elif args.analysis_model == "functional":
         harmonic_unit = harmonic_unit_for_meter(meter, args.harmonic_unit)
         spans = recognize_functional_spans(
             y,
@@ -5646,6 +3854,7 @@ def main(argv: list[str] | None = None) -> int:
             phrase_refine=not args.no_phrase_refine,
             external_hints=external_hints,
             external_weight=args.external_weight,
+            bass_weight=args.bass_weight,
         )
         spans = cleanup_spans(spans, key, enabled=not args.strict_diminished)
         if args.key is None:
@@ -5670,6 +3879,7 @@ def main(argv: list[str] | None = None) -> int:
                     phrase_refine=not args.no_phrase_refine,
                     external_hints=external_hints,
                     external_weight=args.external_weight,
+                    bass_weight=args.bass_weight,
                 )
                 spans = cleanup_spans(spans, key, enabled=not args.strict_diminished)
         spans = blank_intro_spans(spans, args.blank_intro_bars)
@@ -5738,6 +3948,28 @@ def main(argv: list[str] | None = None) -> int:
         external_weight=args.external_weight if external_hints else 0.0,
         external_hint_count=len(external_hints),
     )
+    payload["feature_schema"] = "centered_chroma_bass_v1"
+    from audio_waveform import attach_waveform
+    attach_waveform(payload, samples=y, sample_rate=SAMPLE_RATE)
+    payload["feature_mode"] = args.feature_mode
+    payload["annotation_timebase"] = args.annotation_timebase
+    payload["beat_source"] = ("reference_grid" if args.beat_grid else "provided_downbeats" if args.downbeats
+                              else "fixed_bpm" if args.bpm is not None else args.beat_source)
+    payload["confidence_kind"] = "uncalibrated_evidence_score"
+    payload["key_source"] = "provided" if args.key else "functional_joint"
+    if ignored_bpm is not None:
+        payload["ignored_fixed_bpm"] = ignored_bpm
+    if artifact is not None:
+        payload["acoustic_candidates"] = acoustic_candidates
+        payload["acoustic_model"] = {"path": str(args.acoustic_model.resolve()), "schema": artifact["feature_schema"],
+                                     "training_songs": len(artifact["training_song_ids"]), "vocabulary": "24_major_minor"}
+    if args.analysis_model == "functional":
+        payload["analysis_warnings"] = ["Functional vocabulary is restricted to diatonic triads; --mode applies to template inference."]
+        print("Note: functional uses restricted diatonic triads; use template for --mode vocabulary or an external neural recognizer.")
+    if not args.no_structure:
+        print("Analyzing repeated sections and harmonic loops...")
+        from song_structure import analyze_song_structure
+        payload["structure"] = analyze_song_structure(payload, y=y, sr=SAMPLE_RATE)
 
     csv_path = output_base.with_name(output_base.name + "_bar_chords.csv")
     txt_path = output_base.with_name(output_base.name + "_bar_chords.txt")

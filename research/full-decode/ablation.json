@@ -1,0 +1,65 @@
+[
+ {
+  "stage": "cell argmax (120)",
+  "segments": 282,
+  "exact": 0.38345273457976586,
+  "family": 0.605801153241307,
+  "precision": 0.0711743772241993,
+  "recall": 0.3114754098360656,
+  "f1": 0.11587132184784267
+ },
+ {
+  "stage": "published retained10_stable",
+  "segments": 177,
+  "exact": 0.4012755547789621,
+  "family": 0.6372531888869474,
+  "precision": 0.20454545454545456,
+  "recall": 0.5901639344262295,
+  "f1": 0.3037974683544304
+ },
+ {
+  "stage": "published retained10_span",
+  "segments": 81,
+  "exact": 0.44356106936921197,
+  "family": 0.6895858815306657,
+  "precision": 0.7125,
+  "recall": 0.9344262295081968,
+  "f1": 0.8085106382978724
+ },
+ {
+  "stage": "head+tone, fixed bar spans",
+  "segments": 88,
+  "exact": 0.5643019395421981,
+  "family": 0.7219989515988118,
+  "precision": 0.6551724137931034,
+  "recall": 0.9344262295081968,
+  "f1": 0.7702702702702702
+ },
+ {
+  "stage": "+ half-bar split + gain prune",
+  "segments": 73,
+  "exact": 0.5496243229075659,
+  "family": 0.6703651930805522,
+  "precision": 0.6944444444444444,
+  "recall": 0.819672131147541,
+  "f1": 0.7518796992481204
+ },
+ {
+  "stage": "+ half-bar CRF",
+  "segments": 60,
+  "exact": 0.6051022191158484,
+  "family": 0.7621002970470033,
+  "precision": 0.8813559322033898,
+  "recall": 0.8524590163934426,
+  "f1": 0.8666666666666666
+ },
+ {
+  "stage": "+ semi-Markov duration prior (shipped)",
+  "segments": 63,
+  "exact": 0.6815481390878909,
+  "family": 0.7580814258256159,
+  "precision": 0.9032258064516129,
+  "recall": 0.9180327868852459,
+  "f1": 0.9105691056910569
+ }
+]

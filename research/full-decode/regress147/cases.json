@@ -1,0 +1,1031 @@
+{
+ "1007941": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1007941.mp3",
+  "reference": "Fm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "101069": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\101069.mp3",
+  "reference": "Em",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "1037507": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1037507.mp3",
+  "reference": "G",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electronica / Downtempo"
+ },
+ "1041574": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1041574.mp3",
+  "reference": "G#",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "1056896": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1056896.mp3",
+  "reference": "Am",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "1149778": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1149778.mp3",
+  "reference": "F#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1161234": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1161234.mp3",
+  "reference": "C",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1198688": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1198688.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1298595": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1298595.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "1353830": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1353830.mp3",
+  "reference": "Dm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "140603": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\140603.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Minimal / Deep Tech"
+ },
+ "1468437": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1468437.mp3",
+  "reference": "Bm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "1494159": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1494159.mp3",
+  "reference": "D#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "1549964": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1549964.mp3",
+  "reference": "C#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "1614715": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1614715.mp3",
+  "reference": "F#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "1681077": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1681077.mp3",
+  "reference": "C",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1690921": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1690921.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1763782": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1763782.mp3",
+  "reference": "F#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "1792506": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1792506.mp3",
+  "reference": "G",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1814469": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1814469.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1822502": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1822502.mp3",
+  "reference": "Dm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1837440": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1837440.mp3",
+  "reference": "Bm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1850984": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1850984.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "1864037": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1864037.mp3",
+  "reference": "C#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electronica / Downtempo"
+ },
+ "1904501": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1904501.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "191347": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\191347.mp3",
+  "reference": "D#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "1949099": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1949099.mp3",
+  "reference": "Em",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "1950170": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1950170.mp3",
+  "reference": "A#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "1964905": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1964905.mp3",
+  "reference": "A#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "1978917": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1978917.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "1984204": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1984204.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "1991458": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\1991458.mp3",
+  "reference": "Bm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Indie Dance / Nu Disco"
+ },
+ "2007977": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2007977.mp3",
+  "reference": "G#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "2025670": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2025670.mp3",
+  "reference": "Cm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "2046342": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2046342.mp3",
+  "reference": "A#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "2047796": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2047796.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Drum & Bass"
+ },
+ "205597": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\205597.mp3",
+  "reference": "Gm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "2059625": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2059625.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "2070773": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2070773.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "2075331": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2075331.mp3",
+  "reference": "Gm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "2435861": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2435861.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "2436276": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2436276.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "2440193": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2440193.mp3",
+  "reference": "Am",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "2666528": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2666528.mp3",
+  "reference": "C#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "2667501": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2667501.mp3",
+  "reference": "Bm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "2996293": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\2996293.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "3070298": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3070298.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Breaks"
+ },
+ "3137686": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3137686.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3165770": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3165770.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "3178155": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3178155.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3211603": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3211603.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "3211733": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3211733.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3250632": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3250632.mp3",
+  "reference": "Fm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "3270413": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3270413.mp3",
+  "reference": "G",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "3271514": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3271514.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "3274260": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3274260.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "3275147": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3275147.mp3",
+  "reference": "Fm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3288636": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3288636.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3298344": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3298344.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "3302451": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3302451.mp3",
+  "reference": "Bm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3339291": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3339291.mp3",
+  "reference": "G",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "3354212": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3354212.mp3",
+  "reference": "A#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3356535": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3356535.mp3",
+  "reference": "Am",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "3361547": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3361547.mp3",
+  "reference": "Gm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3363602": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3363602.mp3",
+  "reference": "Dm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3383171": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3383171.mp3",
+  "reference": "A",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3395666": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3395666.mp3",
+  "reference": "F#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3397932": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3397932.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Drum & Bass"
+ },
+ "3415063": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3415063.mp3",
+  "reference": "Gm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "3426285": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3426285.mp3",
+  "reference": "D#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3428673": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3428673.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3467773": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3467773.mp3",
+  "reference": "A#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3518921": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3518921.mp3",
+  "reference": "Bm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3519499": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3519499.mp3",
+  "reference": "G#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "3533956": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3533956.mp3",
+  "reference": "Gm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3545728": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3545728.mp3",
+  "reference": "Fm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "3571314": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3571314.mp3",
+  "reference": "C#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3596904": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3596904.mp3",
+  "reference": "G#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "3625299": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3625299.mp3",
+  "reference": "Gm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "3625787": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3625787.mp3",
+  "reference": "Gm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3625788": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3625788.mp3",
+  "reference": "Gm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3628628": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3628628.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "3641166": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3641166.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3648814": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3648814.mp3",
+  "reference": "Bm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "3661550": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3661550.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Minimal / Deep Tech"
+ },
+ "3667683": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3667683.mp3",
+  "reference": "Gm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3696226": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3696226.mp3",
+  "reference": "G#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3703893": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3703893.mp3",
+  "reference": "E",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "3773561": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3773561.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3789116": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3789116.mp3",
+  "reference": "Bm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3789117": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3789117.mp3",
+  "reference": "A#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3836490": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3836490.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3930672": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3930672.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3935095": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3935095.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "3958755": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3958755.mp3",
+  "reference": "D#",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "3963180": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3963180.mp3",
+  "reference": "F#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3967462": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3967462.mp3",
+  "reference": "Em",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "3969868": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3969868.mp3",
+  "reference": "Fm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electronica / Downtempo"
+ },
+ "3986537": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\3986537.mp3",
+  "reference": "A",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4060751": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4060751.mp3",
+  "reference": "D#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "4088665": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4088665.mp3",
+  "reference": "C",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "4093908": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4093908.mp3",
+  "reference": "Cm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "4125044": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4125044.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "4162405": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4162405.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "4173942": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4173942.mp3",
+  "reference": "C",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "4206954": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4206954.mp3",
+  "reference": "Dm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4234612": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4234612.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "4254573": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4254573.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "4293025": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4293025.mp3",
+  "reference": "Am",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4360488": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4360488.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Drum & Bass"
+ },
+ "4433083": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4433083.mp3",
+  "reference": "A#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "4440292": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4440292.mp3",
+  "reference": "G#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "4450726": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4450726.mp3",
+  "reference": "Em",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "4476610": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4476610.mp3",
+  "reference": "D#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Progressive House"
+ },
+ "4485436": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4485436.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4505122": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4505122.mp3",
+  "reference": "F#",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4596347": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4596347.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "4609349": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4609349.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "4693198": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4693198.mp3",
+  "reference": "G#",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "4786362": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4786362.mp3",
+  "reference": "Cm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "4846004": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4846004.mp3",
+  "reference": "Bm",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "4857650": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4857650.mp3",
+  "reference": "A#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Breaks"
+ },
+ "4877006": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4877006.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "4917941": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4917941.mp3",
+  "reference": "Fm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electronica / Downtempo"
+ },
+ "4927548": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4927548.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Trance"
+ },
+ "4934196": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4934196.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Minimal / Deep Tech"
+ },
+ "4953926": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4953926.mp3",
+  "reference": "Cm",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "4955428": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4955428.mp3",
+  "reference": "A#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Deep House"
+ },
+ "4981539": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4981539.mp3",
+  "reference": "F#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "4981541": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4981541.mp3",
+  "reference": "A#m",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "4995394": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4995394.mp3",
+  "reference": "F#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Breaks"
+ },
+ "4996389": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\4996389.mp3",
+  "reference": "Am",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Big Room"
+ },
+ "5030517": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5030517.mp3",
+  "reference": "F#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Drum & Bass"
+ },
+ "5036476": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5036476.mp3",
+  "reference": "D",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Electronica / Downtempo"
+ },
+ "5039015": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5039015.mp3",
+  "reference": "C#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "5039016": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5039016.mp3",
+  "reference": "Gm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "5049808": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5049808.mp3",
+  "reference": "G#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "5070608": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5070608.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "5264038": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5264038.mp3",
+  "reference": "Em",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Dubstep"
+ },
+ "5417860": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5417860.mp3",
+  "reference": "G#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "5450838": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\5450838.mp3",
+  "reference": "Em",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "631883": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\631883.mp3",
+  "reference": "Cm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "House"
+ },
+ "634032": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\634032.mp3",
+  "reference": "Em",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Electro House"
+ },
+ "796860": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\796860.mp3",
+  "reference": "C#m",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "822664": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\822664.mp3",
+  "reference": "A#m",
+  "split": "harmonic_calibration",
+  "dataset": "giantsteps_plus",
+  "genre": "Techno"
+ },
+ "853834": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\853834.mp3",
+  "reference": "Em",
+  "split": "harmonic_new_sealed",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ },
+ "883724": {
+  "audio": "D:\\ChordStudio\\_archive\\2026-10-30\\benchmarks\\external_key_data\\audio\\883724.mp3",
+  "reference": "Fm",
+  "split": "harmonic_dev",
+  "dataset": "giantsteps_plus",
+  "genre": "Tech House"
+ }
+}

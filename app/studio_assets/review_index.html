@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>Chord Studio · 整曲和声工作区</title><style>$css</style></head>
+<body><main>
+  <header class="header"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">♮</span><span>CHORD <b>STUDIO</b><small>和声工作区</small></span></a><nav aria-label="页面导航"><a href="#songs">歌曲</a><a href="#guide">使用说明</a><a href="#resources">资料</a></nav><span class="local">本地工作区 · $date</span></header>
+  <section class="hero"><div><span class="eyebrow">LISTEN. READ. REFINE.</span><h1>听见和声，<br>也看清每一段。</h1><p class="lead">跟随音乐阅读和弦，定位小节与段落。选一首歌，循环试听、比较拍格，并把判断写回标注。</p><div class="summary"><span><strong>$song_count</strong>首整曲分析</span><i class="divider"></i><span><strong>$total_duration</strong>音频总时长</span><i class="divider"></i><span><strong>$view_heading</strong>$view_detail</span></div></div>$preview</section>
+  <section id="songs" aria-labelledby="songsTitle"><div class="section-heading"><div><span class="eyebrow">SONG LIBRARY</span><h2 id="songsTitle">从一首歌开始</h2></div><p>$library_note</p></div><div class="songs">$song_cards</div></section>
+  <section class="guide $guide_class" id="guide" aria-label="分析视图的用法">$guide</section>
+  <section id="resources" aria-labelledby="resourcesTitle"><div class="section-heading"><div><span class="eyebrow">REFERENCE & NOTES</span><h2 id="resourcesTitle">参考与工作记录</h2></div></div><div class="resources">$resources</div></section>
+  <footer><span>音频与标注均在本地读取 · 不需要上传歌曲</span><span>Space 播放 · G 精确定位 · Ctrl Z 撤销 · A/B 区间循环</span></footer>
+</main></body></html>

@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-10-10T01:39:16.197016+08:00",
+  "fl_studio_version": "24.2.2.4597",
+  "source_commit": "202b7a28a4dc725350b68064d1be4e1eab852847",
+  "mode": "read-only verification; no keyboard or mouse automation",
+  "protocol_ok": true,
+  "live_read_ok": true,
+  "server": {
+    "name": "fl-studio-mcp",
+    "title": null,
+    "version": "2.14.7",
+    "websiteUrl": null,
+    "icons": null
+  },
+  "tool_count": 57,
+  "tool_names": [
+    "fl_connect",
+    "fl_connection_status",
+    "fl_play",
+    "fl_stop",
+    "fl_record",
+    "fl_get_transport_status",
+    "fl_set_song_position",
+    "fl_get_song_length",
+    "fl_set_loop_mode",
+    "fl_set_playback_speed",
+    "fl_get_mixer_track_count",
+    "fl_get_mixer_track_info",
+    "fl_get_all_mixer_tracks",
+    "fl_set_track_volume",
+    "fl_set_track_pan",
+    "fl_mute_track",
+    "fl_solo_track",
+    "fl_arm_track",
+    "fl_set_track_name",
+    "fl_set_track_color",
+    "fl_set_stereo_separation",
+    "fl_get_channel_count",
+    "fl_get_channel_info",
+    "fl_get_all_channels",
+    "fl_get_selected_channel",
+    "fl_select_channel",
+    "fl_select_one_channel",
+    "fl_trigger_note",
+    "fl_set_channel_volume",
+    "fl_set_channel_pan",
+    "fl_mute_channel",
+    "fl_solo_channel",
+    "fl_set_channel_name",
+    "fl_set_channel_color",
+    "fl_route_channel_to_mixer",
+    "fl_get_grid_bit",
+    "fl_set_grid_bit",
+    "fl_get_step_sequence",
+    "fl_set_step_sequence",
+    "fl_is_plugin_valid",
+    "fl_get_plugin_name",
+    "fl_get_plugin_param_count",
+    "fl_get_plugin_params",
+    "fl_get_plugin_param_value",
+    "fl_set_plugin_param_value",
+    "fl_get_preset_count",
+    "fl_next_preset",
+    "fl_prev_preset",
+    "fl_get_plugin_color",
+    "fl_send_notes",
+    "fl_send_chord",
+    "fl_delete_notes",
+    "fl_clear_piano_roll",
+    "fl_get_piano_roll_state",
+    "fl_clear_request_queue",
+    "fl_trigger_script",
+    "fl_get_piano_roll_info"
+  ],
+  "connection": {
+    "connected": true,
+    "port_name": "FLStudioMCP 1",
+    "available_ports": [
+      "Microsoft GS Wavetable Synth 0",
+      "FLStudioMCP 1"
+    ],
+    "error": null
+  },
+  "reads": {
+    "transport": {
+      "is_playing": false,
+      "is_recording": false,
+      "position": "1:01:00",
+      "loop_mode": "pattern"
+    },
+    "channel_count": 5,
+    "channels": [
+      {
+        "index": 0,
+        "name": "808 Kick",
+        "is_muted": false,
+        "is_selected": true,
+        "target_fx_track": 1
+      },
+      {
+        "index": 1,
+        "name": "808 Clap",
+        "is_muted": false,
+        "is_selected": false,
+        "target_fx_track": 2
+      },
+      {
+        "index": 2,
+        "name": "808 HiHat",
+        "is_muted": false,
+        "is_selected": false,
+        "target_fx_track": 3
+      },
+      {
+        "index": 3,
+        "name": "808 Snare",
+        "is_muted": false,
+        "is_selected": false,
+        "target_fx_track": 4
+      },
+      {
+        "index": 4,
+        "name": "FLEX Bass",
+        "is_muted": false,
+        "is_selected": false,
+        "target_fx_track": 5
+      }
+    ],
+    "mixer_track_count": 127,
+    "master": {
+      "index": 0,
+      "name": "主",
+      "volume": 0.7999999998137355,
+      "volume_db": 0.0,
+      "pan": 0.0,
+      "stereo_separation": 0.0,
+      "is_muted": false,
+      "is_solo": false,
+      "is_armed": false,
+      "color": "-0x9c938f"
+    }
+  }
+}

@@ -26,6 +26,7 @@ from chord_studio import (
     harmonic_intervals_from_beats,
     meter_from_downbeat_rows,
     note_name_for_pc,
+    normalize_external_chord_label,
     parse_chord_name,
     parse_meter,
     read_beat_grid_rows,
@@ -61,6 +62,22 @@ class AutoSplitCandidate:
 
 
 @dataclass(frozen=True)
+class PathProposal:
+    bar: int
+    unit: str
+    cells: list[object]
+    cell_scores: list[dict[str, float]]
+    bar_score: float
+    avg_top_score: float
+    avg_margin: float
+    strong_root_count: int
+    root_switches: int
+    distinct_roots: int
+    score: float
+    chosen: bool = False
+
+
+@dataclass(frozen=True)
 class EdgeFillCandidate:
     start: float
     end: float
@@ -70,6 +87,15 @@ class EdgeFillCandidate:
 
 def overlap(a_start: float, a_end: float, b_start: float, b_end: float) -> float:
     return max(0.0, min(a_end, b_end) - max(a_start, b_start))
+
+
+def source_label(label: str) -> str:
+    """Normalize explicit bass syntax without rewriting ordinary chord labels."""
+    if label.strip().upper() == "X":
+        return "X"
+    if "/" in label:
+        return normalize_external_chord_label(label, "sharps")
+    return label
 
 
 def hint_scores_for_cell(
@@ -83,7 +109,8 @@ def hint_scores_for_cell(
         amount = overlap(cell_start, cell_end, hint.start, hint.end)
         if amount <= 0:
             continue
-        scores[hint.chord] = scores.get(hint.chord, 0.0) + (amount / duration) * hint.confidence
+        label = source_label(hint.chord)
+        scores[label] = scores.get(label, 0.0) + (amount / duration) * hint.confidence
     if not scores:
         return {"N": 0.0}
     return scores
@@ -144,7 +171,7 @@ def base_scores_for_cell(
         return scores
     duration = max(cell_end - cell_start, 1e-9)
     for row in rows:
-        chord = str(row.get("chord") or "N")
+        chord = source_label(str(row.get("chord") or "N"))
         if chord == "N":
             continue
         amount = overlap(cell_start, cell_end, float(row["start"]), float(row["end"]))
@@ -187,7 +214,7 @@ def seventh_color_vote_for_cell(
     votes: dict[str, float] = {}
     duration = max(cell_end - cell_start, 1e-9)
     for row in rows:
-        chord = str(row.get("chord") or "N")
+        chord = source_label(str(row.get("chord") or "N"))
         root, suffix = parse_chord_name(chord)
         family = chord_quality_family(suffix)
         if root is None or suffix not in {"7", "m7"} or family not in {"m", "dom"}:
@@ -207,7 +234,8 @@ def merge_score_rows(*rows: dict[str, float]) -> dict[str, float]:
     merged: dict[str, float] = {}
     for row in rows:
         for chord, score in row.items():
-            merged[chord] = merged.get(chord, 0.0) + float(score)
+            label = source_label(chord)
+            merged[label] = merged.get(label, 0.0) + float(score)
     return merged
 
 
@@ -223,7 +251,7 @@ def second_score(scores: dict[str, float], top_label: str) -> float:
 
 
 def root_family(label: str) -> tuple[int | None, str]:
-    root, suffix = parse_chord_name(label)
+    root, suffix = parse_chord_name(source_label(label))
     return root, chord_quality_family(suffix)
 
 
@@ -300,7 +328,7 @@ def source_agreement(
             extra_index += 1
         primary = primary_hints[primary_index] if primary_hints[primary_index].start <= time < primary_hints[primary_index].end else None
         extra = extra_hints[extra_index] if extra_hints[extra_index].start <= time < extra_hints[extra_index].end else None
-        if primary is not None and extra is not None and primary.chord != "N" and extra.chord != "N":
+        if primary is not None and extra is not None and source_label(primary.chord) not in {"N", "X"} and source_label(extra.chord) not in {"N", "X"}:
             total += 1
             if compatible_candidate(primary.chord, extra.chord):
                 hits += 1
@@ -318,7 +346,13 @@ def edge_fill_candidates(
     min_duration: float,
     min_score: float,
     mode: str = "summary",
+    include_no_chord: bool = False,
 ) -> list[EdgeFillCandidate]:
+    """Retain observed edge segments; optional N never fills a source gap.
+
+    ``include_no_chord`` applies to segment preservation. Legacy summary mode
+    still produces only chord estimates, rather than inventing a summarized N.
+    """
     if not intervals or min_duration <= 0:
         return []
     ranges = []
@@ -333,13 +367,13 @@ def edge_fill_candidates(
         if mode == "segments":
             for hint in primary_hints:
                 amount = overlap(start, end, hint.start, hint.end)
-                if amount < min_duration or hint.chord == "N" or hint.confidence < min_score:
+                if amount < min_duration or (hint.chord == "N" and not include_no_chord) or hint.confidence < min_score:
                     continue
                 candidates.append(
                     EdgeFillCandidate(
                         max(start, hint.start),
                         min(end, hint.end),
-                        hint.chord,
+                        source_label(hint.chord),
                         hint.confidence,
                     )
                 )
@@ -388,7 +422,7 @@ def should_split_bar(
     bar_label, bar_score = top_score_label(bar_scores)
     bar_root, _ = root_family(bar_label)
     sub_tops = [top_score_label(scores) for scores in sub_scores]
-    sub_roots = [root_family(label)[0] for label, score in sub_tops if label != "N" and score >= min_sub_score]
+    sub_roots = [root_family(label)[0] for label, score in sub_tops if root_family(label)[0] is not None and score >= min_sub_score]
     if len(sub_roots) < 2:
         return False
     if len(set(sub_roots)) < 2:
@@ -416,7 +450,7 @@ def relaxed_split_candidate(
     confident = [
         root_family(label)[0]
         for label, score in sub_tops
-        if label != "N" and score >= min_sub_score
+        if root_family(label)[0] is not None and score >= min_sub_score
     ]
     if len(confident) < 2 or len(set(confident)) < 2:
         return False
@@ -434,6 +468,152 @@ def window_supported_split(index: int, candidates: list[AutoSplitCandidate], win
     return sum(1 for item in nearby if item.relaxed) >= required
 
 
+def path_unit_candidates(beats_per_bar: int) -> list[str]:
+    units = ["bar"]
+    if beats_per_bar == 6:
+        units.append("compound-half")
+    elif beats_per_bar == 4:
+        units.append("half-bar")
+    if beats_per_bar in {4, 6}:
+        units.append("beat")
+    return units
+
+
+def cells_for_unit(intervals: list[BeatInterval], unit: str, beats_per_bar: int) -> list[object]:
+    if unit == "bar":
+        return harmonic_intervals_from_beats(intervals, "bar", beats_per_bar)
+    if unit == "beat":
+        return harmonic_intervals_from_beats(intervals, "beat", beats_per_bar)
+    if unit in {"half-bar", "compound-half"}:
+        return harmonic_intervals_from_beats(intervals, unit, beats_per_bar)
+    return harmonic_intervals_from_beats(intervals, "bar", beats_per_bar)
+
+
+def external_harmonic_intervals(
+    intervals: list[BeatInterval], hints: list[ExternalChordHint], snap_tolerance: float = 0.0,
+) -> list[HarmonicInterval]:
+    """Preserve external chord changes, including offbeat/quality-only changes.
+
+    Bar lines remain display boundaries; they do not move acoustic boundaries.
+    A chord gap is retained as its own cell instead of stretching adjacent labels.
+    """
+    cells: list[HarmonicInterval] = []
+    boundaries = sorted({float(value) for hint in hints for value in (hint.start, hint.end)
+                         if np.isfinite(value)})
+    if snap_tolerance > 0 and intervals:
+        beat_times = np.asarray(sorted({value for beat in intervals for value in (beat.start, beat.end)}))
+        snapped = []
+        for time in boundaries:
+            index = int(np.argmin(np.abs(beat_times - time)))
+            snapped.append(float(beat_times[index]) if abs(float(beat_times[index]) - time) <= snap_tolerance else time)
+        boundaries = sorted(set(snapped))
+    for bar in sorted({beat.bar for beat in intervals}):
+        beats = sorted((beat for beat in intervals if beat.bar == bar), key=lambda beat: beat.start)
+        start, end = beats[0].start, beats[-1].end
+        inner = [time for time in boundaries if start + 1e-7 < time < end - 1e-7]
+        cuts = [start, *inner, end]
+        for left, right in zip(cuts, cuts[1:]):
+            if right - left <= 1e-7:
+                continue
+            covering = [beat for beat in beats if overlap(left, right, beat.start, beat.end) > 1e-7]
+            if covering:
+                cells.append(HarmonicInterval(bar, covering[0].beat, covering[-1].beat, left, right))
+    return cells
+
+
+def path_proposal_metrics(
+    cells: list[object],
+    hints: list[ExternalChordHint],
+    base_rows: list[dict[str, object]],
+    base_weight: float,
+    min_sub_score: float,
+) -> tuple[list[dict[str, float]], float, float, float, int, int, int, float]:
+    scores = [
+        merge_score_rows(
+            hint_scores_for_cell(cell.start, cell.end, hints),
+            base_scores_for_cell(cell.start, cell.end, base_rows, base_weight),
+        )
+        for cell in cells
+    ]
+    top_pairs = [top_score_label(row) for row in scores]
+    top_scores = [float(score) for _, score in top_pairs]
+    margins = [float(score - second_score(scores[index], label)) for index, (label, score) in enumerate(top_pairs)]
+    strong_roots = []
+    for label, score in top_pairs:
+        if label == "N" or score < min_sub_score:
+            continue
+        strong_roots.append(root_family(label)[0])
+    distinct_roots = len({root for root in strong_roots if root is not None})
+    root_switches = sum(
+        1 for left, right in zip(strong_roots, strong_roots[1:]) if left is not None and right is not None and left != right
+    )
+    avg_top_score = float(np.mean(top_scores)) if top_scores else 0.0
+    avg_margin = float(np.mean(margins)) if margins else 0.0
+    strong_root_count = len([root for root in strong_roots if root is not None])
+    coverage = strong_root_count / max(len(cells), 1)
+    path_score = (
+        avg_top_score
+        + 0.12 * root_switches
+        + 0.05 * distinct_roots
+        + 0.04 * avg_margin
+        - 0.03 * max(0, len(cells) - 1)
+        + 0.02 * coverage
+    )
+    bar_score = avg_top_score if cells else 0.0
+    return scores, bar_score, avg_top_score, avg_margin, strong_root_count, root_switches, distinct_roots, path_score
+
+
+def propose_segment_paths(
+    intervals: list[BeatInterval],
+    beats_per_bar: int,
+    hints: list[ExternalChordHint],
+    base_rows: list[dict[str, object]],
+    base_weight: float,
+    min_sub_score: float = 0.56,
+) -> tuple[list[object], list[PathProposal]]:
+    proposals: list[PathProposal] = []
+    selected_cells: list[object] = []
+    allowed_units = path_unit_candidates(beats_per_bar)
+    bars = sorted({item.bar for item in intervals})
+    for bar_number in bars:
+        bar_intervals = [item for item in intervals if item.bar == bar_number]
+        unit_candidates: list[tuple[str, list[object]]] = []
+        for unit in allowed_units:
+            cells = [cell for cell in cells_for_unit(bar_intervals, unit, beats_per_bar) if cell.bar == bar_number]
+            if cells:
+                unit_candidates.append((unit, cells))
+        if not unit_candidates:
+            continue
+        bar_choice: PathProposal | None = None
+        for unit, cells in unit_candidates:
+            scores, bar_score, avg_top_score, avg_margin, strong_root_count, root_switches, distinct_roots, path_score = path_proposal_metrics(
+                cells,
+                hints,
+                base_rows,
+                base_weight,
+                min_sub_score,
+            )
+            proposal = PathProposal(
+                bar=bar_number,
+                unit=unit,
+                cells=cells,
+                cell_scores=scores,
+                bar_score=bar_score,
+                avg_top_score=avg_top_score,
+                avg_margin=avg_margin,
+                strong_root_count=strong_root_count,
+                root_switches=root_switches,
+                distinct_roots=distinct_roots,
+                score=path_score,
+            )
+            if bar_choice is None or proposal.score > bar_choice.score:
+                bar_choice = proposal
+        assert bar_choice is not None
+        proposals.append(bar_choice)
+        selected_cells.extend(bar_choice.cells)
+    return selected_cells, proposals
+
+
 def auto_harmonic_intervals(
     intervals: list[BeatInterval],
     beats_per_bar: int,
@@ -444,50 +624,45 @@ def auto_harmonic_intervals(
     min_gain: float = 0.10,
     segment_window: int = 0,
     segment_required: int = 3,
-) -> list[object]:
-    bar_cells = harmonic_intervals_from_beats(intervals, "bar", beats_per_bar)
-    split_unit = "compound-half" if beats_per_bar == 6 else "half-bar"
+) -> tuple[list[object], list[PathProposal]]:
     if beats_per_bar not in {4, 6}:
-        return bar_cells
-    sub_cells = harmonic_intervals_from_beats(intervals, split_unit, beats_per_bar)
-    candidates: list[AutoSplitCandidate] = []
-    for bar_cell in bar_cells:
-        subs = [cell for cell in sub_cells if cell.bar == bar_cell.bar]
-        if len(subs) < 2:
-            candidates.append(AutoSplitCandidate(bar_cell, [], False, False))
-            continue
-        bar_scores = merge_score_rows(
-            hint_scores_for_cell(bar_cell.start, bar_cell.end, hints),
-            base_scores_for_cell(bar_cell.start, bar_cell.end, base_rows, base_weight),
-        )
-        sub_scores = [
-            merge_score_rows(
+        cells = harmonic_intervals_from_beats(intervals, "bar", beats_per_bar)
+        proposals = []
+        for cell in cells:
+            scores = merge_score_rows(
                 hint_scores_for_cell(cell.start, cell.end, hints),
                 base_scores_for_cell(cell.start, cell.end, base_rows, base_weight),
             )
-            for cell in subs
-        ]
-        candidates.append(
-            AutoSplitCandidate(
-                bar_cell,
-                subs,
-                strict=should_split_bar(
-                    bar_scores,
-                    sub_scores,
-                    min_sub_score=min_sub_score,
-                    min_gain=min_gain,
-                ),
-                relaxed=relaxed_split_candidate(bar_scores, sub_scores),
+            top_label, top_score = top_score_label(scores)
+            proposals.append(
+                PathProposal(
+                    bar=cell.bar,
+                    unit="bar",
+                    cells=[cell],
+                    cell_scores=[scores],
+                    bar_score=top_score,
+                    avg_top_score=top_score,
+                    avg_margin=top_score - second_score(scores, top_label),
+                    strong_root_count=1 if root_family(top_label)[0] is not None else 0,
+                    root_switches=0,
+                    distinct_roots=1 if root_family(top_label)[0] is not None else 0,
+                    score=top_score,
+                    chosen=True,
+                )
             )
-        )
-    selected: list[object] = []
-    for index, candidate in enumerate(candidates):
-        split = candidate.strict or (
-            candidate.relaxed
-            and window_supported_split(index, candidates, segment_window, segment_required)
-        )
-        selected.extend(candidate.sub_cells if split and candidate.sub_cells else [candidate.bar_cell])
-    return selected
+        return cells, proposals
+
+    path_cells, proposals = propose_segment_paths(
+        intervals,
+        beats_per_bar,
+        hints,
+        base_rows,
+        base_weight,
+        min_sub_score=min_sub_score,
+    )
+    if not path_cells:
+        return harmonic_intervals_from_beats(intervals, "bar", beats_per_bar), proposals
+    return path_cells, proposals
 
 
 def inherit_seventh_colors(
@@ -497,8 +672,10 @@ def inherit_seventh_colors(
 ) -> list[str]:
     refined = list(chords)
     for index, chord in enumerate(chords):
+        chord = source_label(chord)
         root, suffix = parse_chord_name(chord)
         voted_chord, score = seventh_votes[index]
+        voted_chord = source_label(voted_chord) if voted_chord else voted_chord
         voted_root, voted_suffix = parse_chord_name(voted_chord or "N")
         if root is None or voted_root is None or root != voted_root:
             continue
@@ -511,7 +688,10 @@ def inherit_seventh_colors(
         elif family != voted_family:
             continue
         if score >= threshold:
-            refined[index] = voted_chord or chord
+            # A quality vote may add a seventh, never replace the primary
+            # source's explicit inversion/pedal with a template bass choice.
+            voted_body = (voted_chord or chord).split("/", 1)[0]
+            refined[index] = voted_body + ("/" + chord.split("/", 1)[1] if "/" in chord else "")
     return refined
 
 
@@ -528,7 +708,35 @@ def roman_function_label(label: str) -> str:
     return text
 
 
+def roman_extended_label(label: str) -> str:
+    text = label.split("/", 1)[0]
+    if text == "N":
+        return "N"
+    degrees = ["bVII", "#VII", "VII", "bVI", "#VI", "VI", "#IV", "IV", "bIII", "#III", "III", "bII", "II", "V", "I"]
+    for degree in degrees:
+        if not text.startswith(degree):
+            continue
+        suffix = text[len(degree) :]
+        minor = "m" if suffix.startswith("m") else ""
+        extension_suffix = suffix[1:] if minor else suffix
+        extension = ""
+        for marker in ("maj7", "m7b5", "m7", "7", "dim", "aug", "sus4", "sus2", "add9", "9", "6"):
+            if marker in extension_suffix:
+                extension = marker
+                break
+        return f"{degree}{minor}{extension}"
+    return text
+
+
+def progression_prior_uses_extensions(progression_scores: dict[str, float] | None) -> bool:
+    if not progression_scores:
+        return False
+    markers = ("7", "add", "sus", "dim", "aug", "6", "9")
+    return any(any(marker in key for marker in markers) for key in progression_scores)
+
+
 def diatonic_shadow_chord(chord: str, key: str) -> str | None:
+    chord = source_label(chord)
     root, suffix = parse_chord_name(chord)
     if root is None:
         return None
@@ -542,7 +750,8 @@ def diatonic_shadow_chord(chord: str, key: str) -> str | None:
     if family not in {"", "m", "dom"}:
         return None
     seventh = "7" if "7" in suffix else ""
-    return f"{note_name_for_pc(root, key)}{expected_quality}{seventh}"
+    explicit_bass = "/" + chord.split("/", 1)[1] if "/" in chord else ""
+    return f"{note_name_for_pc(root, key)}{expected_quality}{seventh}{explicit_bass}"
 
 
 def add_diatonic_shadow_scores(
@@ -574,11 +783,22 @@ def smooth_chords(
     bass_root_bonus: float = 0.075,
     diatonic_shadow_weight: float = 0.0,
 ) -> list[str]:
-    cell_scores = add_diatonic_shadow_scores(cell_scores, key, shadow_weight=diatonic_shadow_weight)
+    if not cell_scores:
+        return []
+    cell_scores = add_diatonic_shadow_scores([merge_score_rows(row) for row in cell_scores], key, shadow_weight=diatonic_shadow_weight)
     labels = sorted({label for scores in cell_scores for label in scores} | {"N"})
     label_to_index = {label: index for index, label in enumerate(labels)}
-    roman = {
+    use_extended_prior = progression_prior_uses_extensions(progression_scores)
+    roman_common = {
         label: roman_function_label(chord_to_roman_display(label, key, "N", 0.0, 1.0))
+        for label in labels
+    }
+    roman_prior = {
+        label: (
+            roman_extended_label(chord_to_roman_display(label, key, "N", 0.0, 1.0))
+            if use_extended_prior
+            else roman_common[label]
+        )
         for label in labels
     }
     profile = diatonic_profile(key)
@@ -586,6 +806,19 @@ def smooth_chords(
     for time_index, row in enumerate(cell_scores):
         for label, score in row.items():
             scores[time_index, label_to_index[label]] = float(score)
+    if "X" in label_to_index:
+        unknown_index = label_to_index["X"]
+        for time_index, row in enumerate(cell_scores):
+            if "X" not in row:
+                # Unknown is a local source observation, not a harmonic state
+                # that the progression model can introduce into other cells.
+                scores[time_index, unknown_index] = -np.inf
+            elif not any(label != "X" and score > 0 for label, score in row.items()):
+                # Preserve explicit unknown-only evidence even with low source
+                # confidence; absence of a chord cannot establish silence N.
+                observed_score = scores[time_index, unknown_index]
+                scores[time_index, :] = -np.inf
+                scores[time_index, unknown_index] = observed_score
     for label, index in label_to_index.items():
         root, suffix = parse_chord_name(label)
         if root is not None and profile.get(root) == chord_quality_family(suffix):
@@ -606,17 +839,19 @@ def smooth_chords(
         for curr_index, curr_label in enumerate(labels):
             best_score = -1e9
             best_prev = 0
-            curr_roman = roman[curr_label]
+            curr_common = roman_common[curr_label]
+            curr_prior = roman_prior[curr_label]
             for prev_index, prev_label in enumerate(labels):
-                prev_roman = roman[prev_label]
+                prev_common = roman_common[prev_label]
+                prev_prior = roman_prior[prev_label]
                 transition = 0.0
-                if curr_label == prev_label:
+                if curr_label == prev_label and curr_label != "X":
                     transition += stay_bonus
-                if progression_scores:
-                    transition += progression_strength * progression_scores.get(f"{prev_roman}->{curr_roman}", 0.0)
-                if (prev_roman, curr_roman) in COMMON_TRANSITIONS:
+                if progression_scores and "X" not in {prev_label, curr_label}:
+                    transition += progression_strength * progression_scores.get(f"{prev_prior}->{curr_prior}", 0.0)
+                if (prev_common, curr_common) in COMMON_TRANSITIONS:
                     transition += common_bonus
-                if prev_label != "N" and curr_label != "N" and curr_label != prev_label:
+                if prev_label not in {"N", "X"} and curr_label not in {"N", "X"} and curr_label != prev_label:
                     transition -= uncommon_penalty
                 value = float(dp[time_index - 1, prev_index]) + transition
                 if value > best_score:
@@ -668,13 +903,15 @@ def repeat_consensus_refine(
             if len(indexes) < min_support + 1:
                 continue
             for index in indexes:
+                if refined[index] == "X":
+                    continue
                 support: dict[str, float] = {}
                 count: dict[str, int] = {}
                 for other in indexes:
                     if other == index:
                         continue
                     label = refined[other]
-                    if label == "N":
+                    if label in {"N", "X"}:
                         continue
                     confidence = max(cell_scores[other].values()) if cell_scores[other] else 0.0
                     support[label] = support.get(label, 0.0) + confidence
@@ -724,16 +961,21 @@ def make_payload(
     beat_period: float,
     harmonic_unit: str,
     edge_fills: list[EdgeFillCandidate] | None = None,
+    path_proposals: list[PathProposal] | None = None,
 ) -> dict[str, object]:
     cell_rows = []
     for cell, chord, scores, bass_vote in zip(cells, chords, cell_scores, bass_votes):
-        confidence = max(scores.values()) if scores else 0.0
+        chord = source_label(chord)
+        scores = merge_score_rows(scores)
+        # The selected path may differ from the emission winner. Reporting the
+        # winner's confidence for another chord makes incorrect overrides look certain.
+        confidence = float(np.clip(scores.get(chord, 0.0), 0.0, 1.0))
         bass_pc, bass_confidence = bass_vote
         bass_root = note_name_for_pc(bass_pc, key) if bass_pc is not None else "N"
         cell_rows.append(
             {
                 "bar": cell.bar,
-                "unit": span_unit(cell.beat_start, cell.beat_end, beats_per_bar),
+                "unit": "external" if harmonic_unit == "external" else span_unit(cell.beat_start, cell.beat_end, beats_per_bar),
                 "beat_start": cell.beat_start,
                 "beat_end": cell.beat_end,
                 "start": cell.start,
@@ -758,14 +1000,11 @@ def make_payload(
         local_bpm = local_display_bpm(local_pulse_bpm, meter_label)
         beats = []
         for beat in bar_intervals:
-            covering = next(
-                (
-                    cell
-                    for cell in bar_cells
-                    if cell["beat_start"] <= beat.beat <= cell["beat_end"]
-                ),
-                bar_cells[-1] if bar_cells else None,
-            )
+            covering = max(bar_cells,
+                           key=lambda cell: overlap(beat.start, beat.end, float(cell["start"]), float(cell["end"])),
+                           default=None)
+            if covering is not None and overlap(beat.start, beat.end, float(covering["start"]), float(covering["end"])) <= 0:
+                covering = None
             if covering is None:
                 chord = "N"
                 confidence = 0.0
@@ -807,26 +1046,59 @@ def make_payload(
 
     if edge_fills:
         last_bar = max([item.bar for item in intervals], default=0)
-        for index, fill in enumerate(edge_fills, start=1):
+        grid_start = min(item.start for item in intervals)
+        grid_end = max(item.end for item in intervals)
+        edge_groups: dict[int, list[dict[str, object]]] = {}
+        for fill in edge_fills:
+            chord = source_label(fill.chord)
             bass_root = "N"
             bass_confidence = 0.0
             is_leading_edge = bool(bars) and fill.end <= float(bars[0]["start"])
-            bar_number = 0 if is_leading_edge else last_bar + index
-            events.append(
-                {
+            bar_number = 0 if is_leading_edge else last_bar + 1
+            edge_event = {
                     "bar": bar_number,
                     "unit": "edge",
                     "beat_start": 0,
                     "beat_end": 0,
                     "start": fill.start,
                     "end": fill.end,
-                    "chord": fill.chord,
-                    "chord_display": chord_display_name(fill.chord, bass_root, bass_confidence, fill.confidence),
-                    "roman": chord_to_roman(fill.chord, key),
-                    "roman_display": chord_to_roman_display(fill.chord, key, bass_root, bass_confidence, fill.confidence),
+                    "chord": chord,
+                    "chord_display": chord_display_name(chord, bass_root, bass_confidence, fill.confidence),
+                    "roman": chord_to_roman(chord, key),
+                    "roman_display": chord_to_roman_display(chord, key, bass_root, bass_confidence, fill.confidence),
                     "bass_root": bass_root,
                     "bass_confidence": bass_confidence,
                     "confidence": fill.confidence,
+                    "grid_status": "uncovered",
+                    "source": "external_chord_edge",
+                }
+            events.append(edge_event)
+            edge_groups.setdefault(bar_number, []).append(edge_event)
+        # Edge audio is real evidence but has no observed pulse. Give it a
+        # matching unplaced display region without inventing beats or bars.
+        for bar_number, spans in edge_groups.items():
+            leading = bar_number == 0
+            bars.append({"bar": bar_number, "start": 0.0 if leading else grid_end,
+                         "end": grid_start if leading else float(base.get("duration") or max(fill.end for fill in edge_fills)),
+                         "beats": [], "spans": sorted(spans, key=lambda item: float(item["start"])),
+                         "grid_status": "uncovered", "grid_reason": "outside_constructed_beat_intervals",
+                         "beat_source": "uncovered", "local_bpm": 0.0, "local_pulse_bpm": 0.0})
+        bars.sort(key=lambda item: (float(item["start"]), int(item["bar"])))
+    proposal_rows = []
+    if path_proposals:
+        for proposal in path_proposals:
+            proposal_rows.append(
+                {
+                    "bar": proposal.bar,
+                    "unit": proposal.unit,
+                    "score": round(float(proposal.score), 6),
+                    "bar_score": round(float(proposal.bar_score), 6),
+                    "avg_top_score": round(float(proposal.avg_top_score), 6),
+                    "avg_margin": round(float(proposal.avg_margin), 6),
+                    "strong_root_count": int(proposal.strong_root_count),
+                    "root_switches": int(proposal.root_switches),
+                    "distinct_roots": int(proposal.distinct_roots),
+                    "chosen": bool(proposal.chosen),
                 }
             )
     events.sort(key=lambda item: (float(item["start"]), float(item["end"])))
@@ -840,19 +1112,54 @@ def make_payload(
         "key": key,
         "mode": estimate_mode_from_key(key),
         "meter": meter_label,
-        "meter_confidence": 0.95,
+        "meter_confidence": float(base.get("meter_confidence") or 0.0),
         "beat_period": beat_period,
         "beats_per_bar": beats_per_bar,
-        "beat_grid": "madmom_downbeat_external_fusion",
-        "beat_source": "madmom",
+        "beat_grid": "external_chord_fusion",
+        "beat_source": str(base.get("beat_source") or "external"),
         "analysis_model": "external-fusion",
-        "tempo_variant": "madmom-downbeat-external",
+        "confidence_kind": "weighted_temporal_support",
+        "confidence_note": "Weighted temporal support for the selected label; external LABs without scores use unit weight. Not a calibrated model correctness probability.",
+        "tempo_variant": "provided-grid-external-chords",
         "harmonic_unit": harmonic_unit,
         "display": base.get("display") or "roman",
         "tempo_segments": tempo_segments_from_bars(bars),
         "bars": bars,
         "events": events,
+        "path_proposals": proposal_rows,
     }
+
+
+def apply_bass_display_policy(payload: dict, infer: bool) -> dict:
+    """Preserve explicit source inversions; optionally suppress inferred bass display.
+
+    Bass evidence and canonical chord/time fields are retained for review. This
+    changes the display used by export/scoring, never the decoded chord path.
+    """
+    payload["bass_display_policy"] = "legacy_inferred_slash" if infer else "explicit_source_only"
+    if infer:
+        return payload
+
+    def update(item: dict) -> None:
+        chord = source_label(str(item.get("chord") or "N"))
+        old_display = str(item.get("chord_display") or chord)
+        if "/" not in chord and "/" in old_display:
+            item["inferred_bass_candidate"] = {
+                "chord_display": old_display, "roman_display": item.get("roman_display"),
+                "bass_root": item.get("bass_root"), "bass_confidence": item.get("bass_confidence"),
+                "source": "template_bass_display", "score_kind": "uncalibrated_evidence_score",
+            }
+        item["chord_display"] = chord
+        item["roman_display"] = chord_to_roman(chord, str(item.get("local_key") or payload.get("key") or "C"))
+        for span in item.get("spans", []):
+            update(span)
+
+    for event in payload.get("events", []):
+        update(event)
+    for bar in payload.get("bars", []):
+        for item in [*bar.get("spans", []), *bar.get("beats", [])]:
+            update(item)
+    return payload
 
 
 def tempo_segments_from_bars(bars: list[dict[str, object]], tolerance: float = 3.0) -> list[dict[str, object]]:
@@ -946,6 +1253,7 @@ def beat_rows_from_base_analysis(base: dict[str, object]) -> list[tuple[float, i
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Fast downbeat-aligned external chord fusion.")
+    parser.add_argument("--no-html", action="store_true", help="Skip workbench rendering for reproducible batch evaluation.")
     parser.add_argument("base_analysis", type=Path)
     parser.add_argument("downbeats", type=Path)
     parser.add_argument("external_chords", type=Path)
@@ -1000,6 +1308,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("-o", "--output", type=Path, required=True)
     parser.add_argument("--key", default=None)
     parser.add_argument("--meter", default="6/8")
+    parser.add_argument("--beat-provenance", choices=["external", "reference", "madmom", "librosa"], default="external",
+                        help="Origin of the supplied beat grid, recorded in output metadata.")
     parser.add_argument(
         "--beat-grid-from-base",
         action="store_true",
@@ -1007,7 +1317,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--harmonic-unit",
-        choices=["bar", "half-bar", "compound-half", "beat", "auto"],
+        choices=["bar", "half-bar", "compound-half", "beat", "auto", "external"],
         default="bar",
     )
     parser.add_argument(
@@ -1016,17 +1326,21 @@ def parse_args() -> argparse.Namespace:
         default=0.0,
         help="Weak weight for the local template chord evidence stored in base_analysis.",
     )
+    parser.add_argument("--boundary-snap-tolerance", type=float, default=0.0,
+                        help="For external cells only: snap source boundaries within this many seconds of a beat; retain offbeat changes.")
     parser.add_argument(
         "--bass-root-weight",
         type=float,
-        default=0.075,
+        default=0.0,
         help="Bonus for candidates whose root matches the local bass-root estimate.",
     )
+    parser.add_argument("--infer-slash-bass", action=argparse.BooleanOptionalAction, default=False,
+                        help="Opt into legacy uncalibrated template-bass inversions; default displays explicit source slash chords only.")
     parser.add_argument(
         "--dominant-seventh-threshold",
         type=float,
-        default=0.45,
-        help="Inherit same-root seventh color from the local template model above this score.",
+        default=1.01,
+        help="Experimental template seventh inheritance threshold. Default 1.01 disables it; legacy 0.45 over-added sevenths in held-out evaluation.",
     )
     parser.add_argument(
         "--progression-prior",
@@ -1077,25 +1391,30 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--edge-fill",
-        action="store_true",
-        help="Fill leading/trailing regions outside the beat grid when external chords are confident.",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Retain source chord segments outside the observed beat grid; --no-edge-fill reproduces legacy clipping.",
     )
     parser.add_argument(
         "--edge-fill-min-duration",
         type=float,
-        default=0.50,
+        default=0.001,
         help="Minimum leading/trailing uncovered duration to fill.",
+    )
+    parser.add_argument(
+        "--edge-fill-include-no-chord", action=argparse.BooleanOptionalAction, default=True,
+        help="Keep explicit source N segments in edge segment mode; disabling reproduces legacy missing-N coverage.",
     )
     parser.add_argument(
         "--edge-fill-min-score",
         type=float,
-        default=0.70,
+        default=0.0,
         help="Minimum external chord score for --edge-fill.",
     )
     parser.add_argument(
         "--edge-fill-mode",
         choices=["summary", "segments"],
-        default="summary",
+        default="segments",
         help="summary fills one averaged edge chord; segments keeps confident external edge segments.",
     )
     parser.add_argument(
@@ -1113,6 +1432,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    if not np.isfinite(args.dominant_seventh_threshold) or args.dominant_seventh_threshold < 0:
+        raise SystemExit("--dominant-seventh-threshold must be finite and nonnegative")
     base = json.loads(args.base_analysis.read_text(encoding="utf-8"))
     evidence_base = (
         json.loads(args.base_evidence_analysis.read_text(encoding="utf-8"))
@@ -1128,6 +1449,7 @@ def main() -> int:
             beat_rows = read_downbeat_rows(args.downbeats)
         except (json.JSONDecodeError, OSError, ValueError, TypeError):
             beat_rows = read_beat_grid_rows(args.downbeats)
+        base = {**base, "beat_source": args.beat_provenance, "meter_confidence": 0.0}
     meter = meter_from_downbeat_rows(beat_rows, duration, parse_meter(args.meter))
     if meter is None:
         raise SystemExit("Downbeat grid is not usable")
@@ -1149,8 +1471,11 @@ def main() -> int:
     extra_hints.sort(key=lambda item: (item.start, item.end, item.chord))
     base_rows = base_evidence_rows(evidence_base)
     intervals = [item for item in build_beat_intervals(meter, duration) if item.bar >= 1]
-    if args.harmonic_unit == "auto":
-        cells = auto_harmonic_intervals(
+    if args.harmonic_unit == "external":
+        cells = external_harmonic_intervals(intervals, primary_hints, args.boundary_snap_tolerance)
+        path_proposals = []
+    elif args.harmonic_unit == "auto":
+        cells, path_proposals = auto_harmonic_intervals(
             intervals,
             meter.beats_per_bar,
             hints,
@@ -1163,6 +1488,7 @@ def main() -> int:
         )
     else:
         cells = harmonic_intervals_from_beats(intervals, args.harmonic_unit, meter.beats_per_bar)
+        path_proposals = []
     cell_scores = [
         merge_score_rows(
             hint_scores_for_cell(cell.start, cell.end, primary_hints),
@@ -1217,6 +1543,7 @@ def main() -> int:
             args.edge_fill_min_duration,
             args.edge_fill_min_score,
             mode=args.edge_fill_mode,
+            include_no_chord=args.edge_fill_include_no_chord,
         )
         if args.edge_fill
         else []
@@ -1234,17 +1561,40 @@ def main() -> int:
         meter.beat_period,
         args.harmonic_unit,
         edge_fills=edge_fills,
+        path_proposals=path_proposals,
     )
     payload["bpm"] = display_bpm_for_meter(meter)
+    apply_bass_display_policy(payload, args.infer_slash_bass)
     payload["pulse_bpm"] = meter.bpm
+    payload["fusion_provenance"] = {
+        "beat_source": payload["beat_source"],
+        "key_source": "provided" if args.key else "base_analysis",
+        "primary_chords": str(args.external_chords),
+        "progression_prior": str(args.progression_prior) if args.progression_prior else None,
+        "boundary_snap_tolerance": args.boundary_snap_tolerance,
+        "dominant_seventh_threshold": args.dominant_seventh_threshold,
+        "template_seventh_inheritance_enabled": args.dominant_seventh_threshold <= 1.0,
+        "template_seventh_vote_method": "legacy_beat_and_span_sum_uncalibrated",
+        "bass_root_weight": args.bass_root_weight,
+        "infer_slash_bass": args.infer_slash_bass,
+        "base_weight": args.base_weight,
+        "progression_prior_strength": args.progression_prior_strength,
+        "edge_fill": args.edge_fill,
+        "edge_fill_mode": args.edge_fill_mode,
+        "edge_fill_include_no_chord": args.edge_fill_include_no_chord,
+        "edge_fill_min_duration": args.edge_fill_min_duration,
+        "edge_fill_min_score": args.edge_fill_min_score,
+    }
     json_path = args.output.with_name(args.output.name + "_analysis.json")
     html_path = args.output.with_name(args.output.name + "_studio.html")
     txt_path = args.output.with_name(args.output.name + "_bar_chords.txt")
     json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_html(html_path, payload)
+    if not args.no_html:
+        write_html(html_path, payload)
     write_txt(txt_path, payload)
     print(f"Wrote: {json_path}")
-    print(f"Wrote: {html_path}")
+    if not args.no_html:
+        print(f"Wrote: {html_path}")
     print(f"Wrote: {txt_path}")
     return 0
 

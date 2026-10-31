@@ -1,0 +1,11 @@
+.local-beat-review summary{cursor:pointer;font-size:13px;line-height:1.7}
+.local-beat-track .rhythm-tick{background:#bca4e4;border-color:#bca4e4;z-index:2}
+.local-beat-track[data-local-beat-track="original"] .rhythm-tick{background:#d5a766;border-color:#d5a766}
+.beat-seam{position:absolute;top:2px;min-height:0;height:29px;width:7px;padding:0;border:0;border-left:2px dashed #daae73;border-radius:0;background:transparent;z-index:1}
+.beat-seam:hover,.beat-seam:focus-visible{background:#d5a76655;outline:2px solid #f3d6a6}
+.local-window-group{margin-top:20px}
+.local-window-group h4{font-size:12px;color:#bdc5d5;font-weight:500;line-height:1.6}
+.local-beat-window strong{font-size:12px}
+.local-seam-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.local-seam-choice{font-size:11px;min-height:40px;color:#e6c18e;border-color:#665b47;background:#29271f}
+@media(max-width:640px){.local-beat-review .key-windows{grid-template-columns:1fr}.local-window-group{margin-top:16px}}

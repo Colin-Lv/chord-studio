@@ -1,0 +1,141 @@
+{
+  "created_utc": "2026-10-30T14:41:05.501760+00:00",
+  "bundle_version": "chord_retained11_v90",
+  "research_only": true,
+  "recipe": {
+    "quality": "deep10",
+    "mix": "router",
+    "N_head": "prior"
+  },
+  "seeds": [
+    2026105112,
+    2026105212,
+    2026105312,
+    2026105412
+  ],
+  "qualities": [
+    "maj",
+    "min",
+    "7",
+    "maj7",
+    "min7",
+    "9",
+    "maj9",
+    "min9",
+    "sus2",
+    "sus4"
+  ],
+  "tonic_names": [
+    "C",
+    "C#",
+    "D",
+    "D#",
+    "E",
+    "F",
+    "F#",
+    "G",
+    "G#",
+    "A",
+    "A#",
+    "B"
+  ],
+  "frozen_candidate_bundle_sha256": "35105a23471e92b94d5738b0931b6d9525a6fcd2901c54c7f9571447d6c075a8",
+  "frozen_candidate_utc": "2026-10-12T00:11:43.715850+00:00",
+  "components": {
+    "source": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\grammar_context_v1\\models\\full_short\\weights.npz",
+      "sha256": "590bfb131f7895550ca277b90ae60bacf57ea453145892308fba0d57a3a4140c"
+    },
+    "N_2026105112": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_n_gate_v48\\models\\full\\2026105112\\nnls_gate\\model.npz",
+      "sha256": "2e40f92ef37cbe50f00bd29be60a0565a0303691e9304c6ac50d9b4892875ffc"
+    },
+    "quality_2026105112": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_quality_residual_v49\\models\\full\\2026105112\\deep_chroma_residual\\model.npz",
+      "sha256": "4e29e1569560d6c621b3763b36942e59f38e68b596b2dc48794c599bfa5e8a2d"
+    },
+    "router_2026105112": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_domain_router_v57\\models\\full\\2026105112\\domain_router\\model.npz",
+      "sha256": "756ca92d9da935d081c4b1e0a2350555e7a6472b5fb5e9743520d45e3ed3ec1b"
+    },
+    "N_2026105212": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_n_gate_v48\\models\\full\\2026105212\\nnls_gate\\model.npz",
+      "sha256": "a96bc237ba58bc297364313d11e4f706def85df9b89e513fb859961c658a0416"
+    },
+    "quality_2026105212": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_quality_residual_v49\\models\\full\\2026105212\\deep_chroma_residual\\model.npz",
+      "sha256": "2ccf04b1a835151381cb1be562b3179cf20c6535c28e93e849d6754f7f1eee67"
+    },
+    "router_2026105212": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_domain_router_v57\\models\\full\\2026105212\\domain_router\\model.npz",
+      "sha256": "dbcc788e6ffa8ed49b56a8593af4c0daceb9a0e478afb3d99c6c657660941f45"
+    },
+    "N_2026105312": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_n_gate_v48\\models\\full\\2026105312\\nnls_gate\\model.npz",
+      "sha256": "6968593981f54c468a997a1362753689d35c537d36411c46a6e19fbee0e41d23"
+    },
+    "quality_2026105312": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_quality_residual_v49\\models\\full\\2026105312\\deep_chroma_residual\\model.npz",
+      "sha256": "2b7fb982913b6c4226c9174f0c4824eb58340e13eeb714809116465e2e1cf272"
+    },
+    "router_2026105312": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_domain_router_v57\\models\\full\\2026105312\\domain_router\\model.npz",
+      "sha256": "e0cf2bc24bf8c9f1b43dfd53be9b21366eb89c06cdc5304301b2d937c52d107b"
+    },
+    "N_2026105412": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_n_gate_v48\\models\\full\\2026105412\\nnls_gate\\model.npz",
+      "sha256": "eb1699381b075235539ce9769d124ba95aa0988f3bf6ba8c6102bd76ebeb4324"
+    },
+    "quality_2026105412": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_quality_residual_v49\\models\\full\\2026105412\\deep_chroma_residual\\model.npz",
+      "sha256": "5fdd2888127fca2a3619fd102af8c37f55e62703f550133c13543cb98c73dab7"
+    },
+    "router_2026105412": {
+      "original_path": "D:\\Codex_ChordStudio_20261009_Round3\\scaled_midi_v3_batched\\chord_domain_router_v57\\models\\full\\2026105412\\domain_router\\model.npz",
+      "sha256": "e3924ff8d32a936100c5a574351b8b7ceb5fb8ead7f7f305a181927daafb6fed"
+    }
+  },
+  "files_sha256": {
+    "chord_semantics_v2.py": "e8c917ab6ac35a17c33de78a2123971d05c8049d91c024c31b1b87f03158af87",
+    "decorator.py": "47c88707c658cb85d377454fa9254c38b441ee476e5308332a469e2ed2439983",
+    "feature_schema.json": "00e119658e417ebaae460a0eb96e8a67415bc77ce5b9667012d728fb1a3a5522",
+    "predict.py": "f06d806918e0239ed330dce868f30e95afab29719bcab08425d4f8d65b0d91ff",
+    "README.md": "19a4113ac928d5688b6f1d9ef6ad2b129322937471ca229e58ea74ded0329976",
+    "requirements.txt": "0a471fb192dbf787c1333377f9d4eb1bc2a2446add27f688c58ce31ab4056eb0",
+    "retained10.npz": "cf44143ee0b5747ba2962b8aac7349bd9ee4fd2489cc63872dc45f8273fd31bd",
+    "example/cells.json": "94d89292e801b497a3c07746ffbb5093db4dddaa075dc40b50f1b2b2fa165778",
+    "example/deep.npz": "41d859dd7012e3f3a3cf4a7b792317ece752d4bc96d65d5cbbe4f15d9abf1630",
+    "example/energy.npz": "485e2056598a0f3440a6c16ef52c25a565a9ee493576dfbe58e6a16343b99a3e",
+    "example/expected.lab": "151836f6a8a703c9d5169455ed3c07f8542b73457b8c831dc900c598cf2f32b5",
+    "example/features.npz": "72a5e5d4d6471eb00e91f0661179972f8ec630b35983701673db7195121b37b0"
+  },
+  "dependencies": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "mir_eval": "0.8.2",
+    "decorator": "5.3.1"
+  },
+  "example": {
+    "old_DEV_record": "g192_fifths_a0_kw",
+    "reference_labels_included": false,
+    "expected_LAB_source": "Previously frozen retained10 ensemble output, not an annotation"
+  },
+  "limitations": [
+    "Research-only frozen model, no product default changed.",
+    "Needs the established audio-only149/DeepChroma/energy frontend; this package is not a raw audio decoder.",
+    "Ten supported chord qualities plus N; no complete mode, local key, or unsupported quality claim.",
+    "Public-source/pretraining membership unknown; no arbitrary-recording accuracy claim.",
+    "Clip-level router may encode recording provenance; probabilities uncalibrated."
+  ],
+  "vendored_dependencies": {
+    "decorator": {
+      "version": "5.3.1",
+      "file": "decorator.py",
+      "original_sha256": "47c88707c658cb85d377454fa9254c38b441ee476e5308332a469e2ed2439983",
+      "license": "BSD-style license preserved verbatim in source header"
+    }
+  },
+  "supersedes": "chord_retained10_v80",
+  "quality_residual_from": "D:\\ChordStudio\\research\\training\\v90",
+  "router_override": "on"
+}

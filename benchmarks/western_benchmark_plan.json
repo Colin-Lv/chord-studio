@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "status": "active",
+  "paused": [
+    {
+      "dataset": "pop909",
+      "reason": "真实音频版本匹配不稳定，暂不作为训练主线；仅保留为观察性中文和声统计。"
+    }
+  ],
+  "priority": [
+    {
+      "dataset": "isophonics",
+      "role": "beat+downbeat+key+chord integrated benchmark",
+      "current_state": "Beatles 83 songs already active",
+      "next_action": "继续补齐 Isophonics Beatles 余下专辑，之后扩展 Queen / Carole King 等子集。"
+    },
+    {
+      "dataset": "billboard",
+      "role": "large chord/progression benchmark",
+      "current_state": "importer ready; annotations/audio matching still needed",
+      "next_action": "导入 McGill Billboard salami_chords 标注，建立 50 首小型合法音频匹配集。"
+    },
+    {
+      "dataset": "ballroom",
+      "role": "tempo/beat/meter stress test",
+      "current_state": "manifest/checklist exists",
+      "next_action": "取得 Ballroom 音频后评测 beat/downbeat 与拍号鲁棒性。"
+    },
+    {
+      "dataset": "rwc_pop",
+      "role": "high-quality pop generalization check",
+      "current_state": "metadata entry only",
+      "next_action": "有合法访问后再接入，不作为短期阻塞项。"
+    },
+    {
+      "dataset": "salami",
+      "role": "section and structural context",
+      "current_state": "metadata entry only",
+      "next_action": "等 chord/beat 基线稳定后再用于段落模型。"
+    }
+  ],
+  "default_prior_policy": {
+    "production": "benchmarks/reports/isophonics_beatles_progression_prior.json",
+    "experimental": "merge Isophonics + Billboard after Billboard is imported",
+    "excluded_by_default": [
+      "benchmarks/reports/pop909_progression_prior.json",
+      "benchmarks/reports/hybrid_progression_prior.json"
+    ]
+  },
+  "success_metrics": {
+    "chord": [
+      "Root accuracy",
+      "Triad accuracy",
+      "seventh/slash diagnostic rates"
+    ],
+    "beat": [
+      "Beat F1",
+      "Downbeat F1",
+      "bar-count sanity checks"
+    ],
+    "structure": [
+      "body-entry tolerance",
+      "modulation boundary checks",
+      "user regression failures"
+    ]
+  }
+}

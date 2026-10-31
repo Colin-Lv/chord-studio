@@ -1,0 +1,22 @@
+priority,artist,title,search_query,key,meter,gp5_score,manifest_id,notes
+1,Anohana / Zone,Secret Base,Secret Base 君がくれたもの original audio,A#/Bb,4/4,0.9435,gtp_gp5_rhythm_guitar_triads_bargrid___Secret_Base_Final_Secret_Base__243db01962,High parser score; very useful anime ballad/progression reference.
+2,Hirano Aya / Suzumiya Haruhi,God Knows,God Knows 涼宮ハルヒ original audio,C#m,4/4,0.9428,gtp_gp5_rhythm_guitar_triads_bargrid__God_Knows_Final_God_Knows__3208796866,High score; guitar-driven ACG rock; likely strong rhythm guitar evidence.
+3,K-ON / Houkago Tea Time,Watashi no Koi wa Hotchkiss,我的恋はホッチキス K-ON original audio,F,4/4,0.9423,gtp_gp5_rhythm_guitar_triads_bargrid_K-ON____Final__b1f8293ed5,Very high score; good K-ON pop-rock harmony sample.
+4,YUI,Rolling star,YUI Rolling star original audio,G,4/4,0.9172,gtp_gp5_rhythm_guitar_triads_bargrid_Yui_Rolling_star_Final_-_Rolling_star__a7cd0b518e,High score; anime J-rock; useful for guitar texture.
+5,Houkago Tea Time,Singing!,Houkago Tea Time Singing original audio,Em,4/4,0.9032,gtp_gp5_rhythm_guitar_triads_bargrid_Houkago_Tea_Time_Singing__Final_Singing__f29eb2caf3,High score; clean band arrangement.
+6,Yu-Gi-Oh GX,Judai Theme / GX theme,遊戯王GX 十代 テーマ original audio,Dm,4/4,0.8992,gtp_gp5_rhythm_guitar_triads_bargrid___GX__Final_GX__a2fa8b6cd2,High score; game/anime instrumental-style sample.
+7,K-ON / Houkago Tea Time,Fuwa Fuwa Time,Houkago Tea Time Fuwa Fuwa Time original audio,E,4/4,0.8909,gtp_gp5_rhythm_guitar_triads_bargrid_K-ON_Fuwa_Fuwa_Time_Final__8234f1ac4a,High score; classic ACG band song.
+8,Kessoku Band,Distortion!!,結束バンド Distortion original audio,B,4/4,0.8896,gtp_gp5_rhythm_guitar_triads_bargrid___Distortion__Distortion__ab5afe97ed,High score; Bocchi the Rock; prefer this B-key version first.
+9,MyGO!!!!!,Shiori / Shiori? / 詩超絆,MyGO 詩超絆 original audio,F,4/4,0.8839,gtp_gp5_rhythm_guitar_triads_bargrid_MyGO_____Final_c064087fe4,High score but title mojibake; use manifest_id to match GP5.
+10,Sakai Izumi / ZARD,DAN DAN Kokoro Hikareteku,DAN DAN 心魅かれてく original audio,E,4/4,0.8762,gtp_gp5_rhythm_guitar_triads_bargrid___DAN_DAN__Final__5fe754f03b,Good score; classic anime pop-rock.
+11,MyGO!!!!!,Mayoiuta / 迷星叫,MyGO 迷星叫 original audio,G#/Ab,4/4,0.8598,gtp_gp5_rhythm_guitar_triads_bargrid_MyGO____MyGO_Final_0e12cc3cf5,Good score; modern ACG band style.
+12,Houkago Tea Time,"NO, Thank You!","Houkago Tea Time NO, Thank You! original audio",Em,4/4,0.8577,gtp_gp5_rhythm_guitar_triads_bargrid_Houkago_Tea_Time_NO_Thank_You__Final_No_Thank_You_ac0abda685,Good score; strong rhythm guitars.
+13,K-ON / Houkago Tea Time,"Don't Say Lazy","Don't Say Lazy K-ON original audio",Em,4/4,0.8450,gtp_gp5_rhythm_guitar_triads_bargrid___Don_t_Say_Lazy__Final_K-ON_-_Don_t_say_lazy_c55c3ad837,Good score; useful ending theme sample.
+14,Roselia,LOUDER,Roselia LOUDER original audio,G,4/4,0.8438,gtp_gp5_rhythm_guitar_triads_bargrid_Roselia_LOUDER_Final_Roselia_-_Louder__0a6d4e1a2e,Good score; Bandori-style rock.
+15,Koji Wada,Butter-Fly,Butter-Fly 和田光司 original audio,E,4/4,0.8343,gtp_gp5_rhythm_guitar_triads_bargrid__Butter-Fly_Final_Butter-Fly_01161fb3df,Good score; iconic anime rock.
+16,MYGO!!!!!,Hitoshizuku / 壱雫空,MYGO 壱雫空 original audio,F#/Gb,4/4,0.8180,gtp_gp5_rhythm_guitar_triads_bargrid_MYGO____Final__690bea7cdd,Usable score; modern ACG band sample.
+17,Yorushika,Haru / 晴る,Yorushika 晴る original audio,Bm,4/4,0.8138,gtp_gp5_rhythm_guitar_triads_bargrid__Yorushika___Sunny___Final_30aafe08d1,Usable score; valuable because project already has Yorushika case.
+18,Roselia,Tori no Uta / 鳥の詩,Roselia 鳥の詩 original audio,Bm,4/4,0.7731,gtp_gp5_rhythm_guitar_triads_bargrid_Roselia____Final_c88a3d24d2,Medium score; only use after version check.
+19,Houkago Tea Time,Tenshi ni Fureta Yo!,Houkago Tea Time 天使にふれたよ original audio,A#/Bb,4/4,0.7376,gtp_gp5_rhythm_guitar_triads_bargrid_Ho-Kago_Tea_Time_Tenshi_ni_Fureta_Yo__Final__8b0f8530e8,Medium score; good ballad but check arrangement/version carefully.
+20,LiSA,Gurenge / 紅蓮華,LiSA 紅蓮華 original audio,G,4/4,0.6916,gtp_gp5_rhythm_guitar_triads_bargrid_Lisa___Final__f3169d7099,Lower parser score but musically valuable; use after higher-priority songs.
+21,WANDS,Sekai ga Owaru Made wa / 世界が終るまでは,WANDS 世界が終るまでは original audio,Dm,4/4,0.6893,gtp_gp5_rhythm_guitar_triads_bargrid_WANDS___Final__398ff076a5,Lower parser score; useful classic anime rock if version aligns.

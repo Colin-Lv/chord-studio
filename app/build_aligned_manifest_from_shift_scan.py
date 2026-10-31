@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Build accepted/rejected manifests using time-shift scan results."""
+"""Build manifests from time-shift scans with an explicit shift convention.
+
+The historical POP909 CSV shifts prediction times, requiring the opposite shift
+on reference labels. Generic version audits shift reference times directly.
+"""
 
 from __future__ import annotations
 
@@ -69,6 +73,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-rejected", type=Path, required=True)
     parser.add_argument("--aligned-dir", type=Path, required=True)
     parser.add_argument("--min-triad", type=float, default=0.50)
+    parser.add_argument("--scan-target", choices=["prediction", "reference"], default="prediction",
+                        help="What the scan shifted. Historical POP909 scans use prediction (default).")
     return parser.parse_args()
 
 
@@ -88,7 +94,8 @@ def main() -> int:
         for row in csv.DictReader(handle):
             scan_by_id[row.get("id", "")] = row
 
-    for field in ("alignment_shift", "alignment_best_triad", "alignment_status", "alignment_reason"):
+    for field in ("alignment_shift", "alignment_best_triad", "alignment_status", "alignment_reason",
+                  "alignment_method", "alignment_scan_target"):
         if field not in fieldnames:
             fieldnames.append(field)
 
@@ -100,9 +107,11 @@ def main() -> int:
         scan = scan_by_id.get(row_id, {})
         best_triad = float(scan.get("best_triad") or 0.0)
         best_shift = float(scan.get("best_time_shift") or 0.0)
-        reference_shift = -best_shift
+        reference_shift = -best_shift if args.scan_target == "prediction" else best_shift
         row["alignment_shift"] = f"{reference_shift:.6f}"
         row["alignment_best_triad"] = f"{best_triad:.6f}"
+        row["alignment_method"] = "prediction_optimized_time_shift"
+        row["alignment_scan_target"] = args.scan_target
 
         if best_triad < args.min_triad:
             row["alignment_status"] = "rejected"

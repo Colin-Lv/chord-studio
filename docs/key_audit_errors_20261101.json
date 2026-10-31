@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-01",
+  "scope": "主调识别；旧研究/安装版/上一轮实验原型",
+  "production_modified": false,
+  "evidence_root": "D:/ChordStudio/research/key-audit-20261031-r1",
+  "entries": [
+    {
+      "id": "KEY-001",
+      "priority": "P1",
+      "origin": "旧实现与报告",
+      "status": "结论已纠正；生产路径保留",
+      "title": "把未参与裁决的字段当成成功原因",
+      "evidence": "D:/ChordStudio/research/key-v3/LAYERS_REPORT.md; D:/ChordStudio/research/key-audit-20261031-r1/legacy_probes.json::bad_girl_causal_probe",
+      "observation": "坏女孩实际为 C#m 经 guard_456 改 E；修改 idiom/frame_bonus 不改变 decide 结果。",
+      "correction": "撤回“已不依赖456，是+1.20加成获胜”。",
+      "prevention": "成功归因必须提供调用链和单因素消融，区分展示字段与决策字段。"
+    },
+    {
+      "id": "KEY-002",
+      "priority": "P1",
+      "origin": "旧实现",
+      "status": "已定位；生产待修",
+      "title": "把高频和弦集合称为有序进行",
+      "evidence": "C:/Users/33573/AppData/Local/Programs/Chord Studio/backend/app/key_layers.py::score",
+      "observation": "top 与 template 都是集合；顺序和重复次数没有进入模板匹配。",
+      "correction": "仅可称和弦库存覆盖，不能证明4536或其他进行出现。",
+      "prevention": "加入同集合不同顺序的反例；匹配必须保留时间顺序及回归目标。"
+    },
+    {
+      "id": "KEY-003",
+      "priority": "P1",
+      "origin": "旧实现",
+      "status": "已复现；生产待修",
+      "title": "小调判定依赖标签字符串",
+      "evidence": "C:/Users/33573/AppData/Local/Programs/Chord Studio/backend/app/key_decision.py::_inventory; D:/ChordStudio/research/key-audit-20261031-r1/legacy_probes.json::aliases",
+      "observation": "F-G-Am 保持 Am，F-G-A:min 改 C；音乐内容相同。",
+      "correction": "使用解析后三音/五音等语义。",
+      "prevention": "Am/A:min/Amin 等别名、等音拼写应给相同证据与结果。"
+    },
+    {
+      "id": "KEY-004",
+      "priority": "P1",
+      "origin": "旧实现",
+      "status": "已复现；生产待修",
+      "title": "把跨空白与非属和弦计为终止",
+      "evidence": "C:/Users/33573/AppData/Local/Programs/Chord Studio/backend/app/key_layers.py::_cadences; D:/ChordStudio/research/key-audit-20261031-r1/legacy_probes.json",
+      "observation": "G-N-C 和 Gsus4-C 都记1次；目标调式也未核对。",
+      "correction": "核对时序连续和双方和弦品质，区分邻接、回归与句尾终止。",
+      "prevention": "空白、未知标签、错误三音、挂留和弦须有反例；不把没有计到终止写成歌曲没有终止。"
+    },
+    {
+      "id": "KEY-005",
+      "priority": "P1",
+      "origin": "旧实现",
+      "status": "已定位；生产待修",
+      "title": "force 绕开主约束且未充分证明替代候选",
+      "evidence": "C:/Users/33573/AppData/Local/Programs/Chord Studio/backend/app/key_decision.py::decide",
+      "observation": "use_chord=(coverage_ok and not veto) or force。",
+      "correction": "明确实际决策条件；候选受惩罚不等于另一候选正确。",
+      "prevention": "所有出口记录生效证据；先处理特征语义，再比较统一评分，避免增加嵌套门控。"
+    },
+    {
+      "id": "KEY-006",
+      "priority": "P1",
+      "origin": "旧实现与报告",
+      "status": "结论已纠正；参数仍待独立验证",
+      "title": "大调奖励损害总体后将门控当作当然解法",
+      "evidence": "D:/ChordStudio/research/key-v3/LAYERS_REPORT.md",
+      "observation": "POP909总体87.57%降至82.07%，大调子集提升不足以证明方法有效。",
+      "correction": "同时报告各类与总体，门控只是未验证提案。",
+      "prevention": "固定目标与权重后在作品隔离的新集评测；必须列出改对和改错。"
+    },
+    {
+      "id": "KEY-007",
+      "priority": "P1",
+      "origin": "旧报告",
+      "status": "结论已撤回；证据提取仍未完成",
+      "title": "由特征缺失断言歌曲没有明确主音",
+      "evidence": "D:/ChordStudio/research/key-v3/FAILURE_ANALYSIS.md; D:/ChordStudio/research/key-audit-20261031-r1/melody-probe/results.json",
+      "observation": "旧报告将低主和弦/无V-I扩展为人也无法判断；070在主和弦占比0时仍有偏向参考的旋律证据。",
+      "correction": "改为“本方法尚未取得足够证据”，不要推断人类能力上限。",
+      "prevention": "区分未提取、未检出、实际不存在；加入旋律、结构和低音检查。"
+    },
+    {
+      "id": "KEY-008",
+      "priority": "P1",
+      "origin": "旧报告",
+      "status": "结论已纠正",
+      "title": "用模型自己的调内指标判参考错误或宣告规则不会错",
+      "evidence": "D:/ChordStudio/research/key-v3/FAILURE_ANALYSIS.md; D:/ChordStudio/research/key-v3/REPORT.md",
+      "observation": "调内占比更低被解释成标签有问题；456退步被说成标签口径冲突而非规则错误。",
+      "correction": "只能列作核查假设，不能当作已证实归因。",
+      "prevention": "标签核验须独立听审/谱面/来源口径，不以待测模型作裁判。"
+    },
+    {
+      "id": "KEY-009",
+      "priority": "P2",
+      "origin": "旧报告",
+      "status": "已核对原始计数",
+      "title": "失败阈值、数量与归因范围错配",
+      "evidence": "D:/ChordStudio/research/key-v3/FAILURE_ANALYSIS.md; D:/ChordStudio/research/key-audit-20261031-r1/legacy_probes.json::failure_counts",
+      "observation": "95例中<10%为22例，<5%为9例；原文末尾把22例写成<5%。",
+      "correction": "更正计数；95例全体统计不能直接证明76个关系调错误大多数的原因。",
+      "prevention": "报告表格由逐例记录生成，保留分母、筛选条件和样本ID。"
+    },
+    {
+      "id": "KEY-010",
+      "priority": "P1",
+      "origin": "旧评测口径",
+      "status": "已审计；参考未改写",
+      "title": "把最长局部调片段标签当成全曲人工主调",
+      "evidence": "D:\\ChordStudio\\Dialogue\\app\\import_pop909.py::parse_key; D:/ChordStudio/research/key-audit-20261031-r1/legacy_probes.json::reference_scope",
+      "observation": "909中152有多个调；导入取单个最长片段；180/843与累计最多调还不一致。",
+      "correction": "报告为对导入参考的一致率；局部调和全曲主调分别评价。",
+      "prevention": "保存全部局部标签与生成方式；全曲主调需明确人工或自动参考口径。"
+    },
+    {
+      "id": "KEY-011",
+      "priority": "P1",
+      "origin": "历轮实验与解释",
+      "status": "本轮已明确暴露状态；新集仍缺失",
+      "title": "反复查看数据后继续按盲测或无过拟合解释",
+      "evidence": "D:\\ChordStudio\\Dialogue\\docs\\key_coherence_review_20261031.md; D:/ChordStudio/research/key-coherence-v4/replay_initial.json",
+      "observation": "权重在看到虚拟及147例后调整；无歌名特例不能证明没有选择偏差。",
+      "correction": "全部作为已暴露回归集；保留所有失败尝试。",
+      "prevention": "预先固定实验协议；按作品隔离新集；禁止将历史 sealed 名称当作未看过的证据。"
+    },
+    {
+      "id": "KEY-012",
+      "priority": "P2",
+      "origin": "结果解读风险",
+      "status": "本轮已校正范围",
+      "title": "重复作品、逻辑回放与模型泛化混为一谈",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/inputs.json; D:/ChordStudio/research/key-audit-20261031-r1/comparison.json",
+      "observation": "两个虚拟项目是同曲；110/147仅生产逻辑在历史 raw.lab 的回放；147以小调为主。",
+      "correction": "分别标注作品数/版本数、原始输入与全链路范围；有限域模型比较不推广成普遍结论。",
+      "prevention": "结果必须带数据域、版本、独立作品数和输入来源。"
+    },
+    {
+      "id": "KEY-013",
+      "priority": "P1",
+      "origin": "上一轮新原型",
+      "status": "已修复并通过反例测试",
+      "title": "持续副属和弦切碎导致总分改变",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/tests_before.txt; D:\\ChordStudio\\Dialogue\\tests\\test_key_coherence.py::test_secondary_dominant_subdivision_preserves_all_scores",
+      "observation": "E7两秒-Am两秒在C下-0.4315；E7拆两段后-1.8060。",
+      "correction": "计算上下文前合并相邻同构和弦，不跨空白，不修改输入。",
+      "prevention": "所有24候选总分须对纯切分不变；只测回归次数不够。"
+    },
+    {
+      "id": "KEY-014",
+      "priority": "P1",
+      "origin": "上一轮新原型",
+      "status": "已修复并通过反例测试",
+      "title": "普通副属判定遗漏五音和七音性质",
+      "evidence": "D:\\ChordStudio\\Dialogue\\tests\\test_key_coherence.py::test_major_seventh_is_not_a_secondary_dominant",
+      "observation": "Emaj7-Am 被判为普通副属解决。",
+      "correction": "限定常规属结构和大/小三和弦目标；复杂变音属保留未建模状态。",
+      "prevention": "与E7正确例配对测试，不把“根音下行五度”直接等同属解决。"
+    },
+    {
+      "id": "KEY-015",
+      "priority": "P1",
+      "origin": "上一轮新原型",
+      "status": "已修复并通过测试",
+      "title": "非法时间和残缺声学输入被静默接受",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/tests_before.txt; D:\\ChordStudio\\Dialogue\\app\\key_coherence.py",
+      "observation": "非有限时间、重叠、非正时长未拒绝；候选缺失补极小值、等音重复覆盖。",
+      "correction": "严格输入约定；音频通道为空或完整24类，拒绝NaN/Inf/负分/重复键。",
+      "prevention": "边界值、非法值与缺失值测试；数据失败应显式报错，不产生看似有效的调性。"
+    },
+    {
+      "id": "KEY-016",
+      "priority": "P2",
+      "origin": "上一轮新原型",
+      "status": "注释已纠正；建模能力待补",
+      "title": "诊断项被注释写成已生效的鲁棒处理",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/before/key_coherence.py; D:\\ChordStudio\\Dialogue\\app\\key_coherence.py",
+      "observation": "outside_pitch_share按音符加权，但排名的兼容性仍对整个和弦分类。",
+      "correction": "撤回扩展音不会使整和弦失效的注释含义。",
+      "prevention": "每项说明应对应实际分数路径；诊断、排序与显示分别标识。"
+    },
+    {
+      "id": "KEY-017",
+      "priority": "P1",
+      "origin": "历轮评分解释",
+      "status": "本轮明确限制；尚未校准",
+      "title": "手工分数和领先差被当作可靠信心",
+      "evidence": "D:/ChordStudio/research/key-v3/REPORT.md; D:\\ChordStudio\\Dialogue\\app\\key_coherence.py",
+      "observation": "旧报告用confident描述手调margin；当前声学分数取log后仍非校准概率。",
+      "correction": "分数只表示当前排序；不将归一化/对数变换冒称概率校准。",
+      "prevention": "独立校准及可靠性评估前禁止输出概率或自信标签；记录权重来源和调参暴露。"
+    },
+    {
+      "id": "KEY-018",
+      "priority": "P1",
+      "origin": "上一轮实验工具",
+      "status": "已修复入口与证据快照",
+      "title": "可变current_run、静默来源回退和覆盖输出损害复现",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/before/evaluate_key_coherence.py; D:\\ChordStudio\\Dialogue\\app\\audit_key_revision.py",
+      "observation": "原入口读取当前run并覆写固定replay.json，只哈希部分依赖，缺文件静默跳过。",
+      "correction": "新目录冻结输入及依赖，显式来源，记录排除，禁止覆盖比较结果。",
+      "prevention": "复现需输入哈希和代码哈希同时匹配；新快照不冒充同输入复现。"
+    },
+    {
+      "id": "KEY-019",
+      "priority": "P2",
+      "origin": "旧失败分类代码",
+      "status": "潜在缺陷已确认；当前95例分类未受影响",
+      "title": "关系调错误分类未核对调式和方向",
+      "evidence": "D:/ChordStudio/research/key-v3/failure_analysis.py::interval_class",
+      "observation": "仅按根音差3/9即称关系调，未验证大小调相反及正确方向；当前95例重新核对无误分类。",
+      "correction": "函数定义需核对完整关系大小调条件，不能据此虚报现有76例统计已经错误。",
+      "prevention": "同调式小三度关系、错误方向与真正关系大小调须分开测试。"
+    },
+    {
+      "id": "KEY-020",
+      "priority": "P2",
+      "origin": "下一步研究假设",
+      "status": "已实验否定直接接入；保留负结果",
+      "title": "把休止前音代理当作乐句终止与可靠主音证据",
+      "evidence": "D:/ChordStudio/research/key-audit-20261031-r1/melody-probe/protocol.json; D:/ChordStudio/research/key-audit-20261031-r1/melody-probe/results.json",
+      "observation": "休止前音代理在68旧失败中24偏参考、38偏旧预测、4平手、2缺失。",
+      "correction": "尚不能把它叫乐句终止识别，也不能说已修正24首。",
+      "prevention": "诊断候选对不冒称24类准确率；先验证句界与声部，再进行固定协议的增量实验。"
+    }
+  ],
+  "future_review_contract": [
+    "每项结论可追溯到输入、实际调用函数与代码版本。",
+    "成功原因必须经单因素反事实或消融验证。",
+    "语义单测与数据回放并行；高分不免除实现缺陷。",
+    "新增失败必须与新增成功一起报告。",
+    "不因模型不支持而断言音乐不可能；参考错误需独立证据。",
+    "数据集暴露状态、作品分组、局部/全局目标在调参前固定。"
+  ]
+}

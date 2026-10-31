@@ -1,0 +1,20 @@
+[
+ "nnls_bass_move",
+ "nnls_bass_root_changed",
+ "nnls_bass_flux",
+ "nnls_mid_move",
+ "nnls_high_move",
+ "nnls_mid_flux",
+ "nnls_tone_jaccard",
+ "nnls_low_ratio",
+ "nnls_total_ratio",
+ "level_bar",
+ "level_half",
+ "level_beat",
+ "level_eighth",
+ "nnls_bass_move_wide",
+ "nnls_mid_move_wide",
+ "nnls_bass_sustain_left",
+ "nnls_bass_sustain_right",
+ "nnls_tone_hamming"
+]

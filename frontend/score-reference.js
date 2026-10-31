@@ -1,0 +1,69 @@
+/* Local score references remain separate from audio annotations until explicit adoption. */
+(function(){
+  "use strict";
+  const $=id=>document.getElementById(id),clone=v=>JSON.parse(JSON.stringify(v));
+  const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+  let context=null,refs=[],active=null,dirty=false,token=0,saving=false;
+  const endpoint=()=>`/api/projects/${context.project.id}/score-references`;
+  async function api(url,options={}){const r=await fetch(url,{...options,headers:{"X-Harmony-Client":"studio",...options.headers}});if(!r.ok){let d;try{d=(await r.json()).detail;}catch(_){d=r.statusText;}const e=new Error(typeof d==="string"?d:JSON.stringify(d));e.status=r.status;throw e;}return r.json();}
+  const message=text=>{$("beScoreStatus").textContent=text;};
+  function dirtyMessage(){dirty=true;message("曲谱核对草稿尚未保存；保存后才能采纳。和弦、小节定位和实音转调均需人工确认。");stash();}
+  function draftKey(){return `harmony-score-review:${context.project.id}:${context.result.run_id}:${active?.id}`;}
+  function stash(){if(!active)return;try{localStorage.setItem(draftKey(),JSON.stringify(active));}catch(_){message("浏览器暂存失败；请先导出曲谱审核草稿。");}}
+  function exportRef(){if(!active)return;const url=URL.createObjectURL(new Blob([JSON.stringify(active,null,2)],{type:"application/json"})),a=el("a");a.href=url;a.download="score_review_draft.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  async function open(ctx){if(dirty&&active)stash();context=ctx;active=null;dirty=false;saving=false;const t=++token;const container=$("beScoreTools");container.replaceChildren();
+    const row=el("div","be-score-tools-row"),file=el("input");file.type="file";file.accept=".xml,.musicxml,.mxl,.mid,.midi,.gp,.gpif,.png,.jpg,.jpeg,.webp,.pdf,.json";file.setAttribute("aria-label","导入曲谱参考文件");const upload=el("button","secondary","导入本机曲谱"),select=el("select");select.id="srSelect";select.setAttribute("aria-label","已导入曲谱参考");row.append(file,upload,select);container.append(row);
+    upload.onclick=async()=>{if(!file.files[0])return message("请先选择项目中已有的曲谱文件。");upload.disabled=true;message("正在本机读取曲谱参考…");try{const form=new FormData();form.append("file",file.files[0]);const ref=await api(endpoint(),{method:"POST",body:form});if(t!==token)return;refs.push(ref);renderOptions(ref.id);await choose(ref.id);message("曲谱参考已导入。OCR 和弦是待核对候选；小节/拍位与实音调不会自动确认。");}catch(e){message("导入失败："+e.message);}finally{upload.disabled=false;}};
+    select.onchange=()=>choose(select.value);
+    try{const body=await api(endpoint());if(t!==token)return;refs=body.items||[];renderOptions();if(refs.length)await choose(refs[0].id);else{$("beScoreCandidates").replaceChildren();message("先导入 MusicXML/MXL、MIDI、印刷吉他谱图片或 PDF。MIDI 音符只作证据；图谱 OCR 需要逐项复核。");}}catch(e){if(t===token)message("曲谱参考读取失败："+e.message);}
+  }
+  function renderOptions(id){$("srSelect").replaceChildren(...refs.map(ref=>new Option(ref.filename||ref.id,ref.id)));if(id)$("srSelect").value=id;}
+  async function choose(id){if(saving)return message("曲谱核对正在保存，请稍后切换。");if(dirty&&active)stash();if(dirty&&active&&active.id!==id&&!confirm("切换会离开未保存的曲谱核对草稿（已暂存本浏览器）。继续？")){$("srSelect").value=active.id;return;}const ref=refs.find(r=>r.id===id);if(!ref)return;active=clone(ref);dirty=false;render();
+    try{const cached=JSON.parse(localStorage.getItem(draftKey())||"null");if(cached){const restore=el("button","secondary","恢复曲谱审核草稿");restore.onclick=()=>{active=cached;dirty=true;render();message("已恢复审核草稿。若服务器修订不同，保存会保留草稿并报告冲突。");};$("srActions").append(restore);message("发现此浏览器的曲谱审核草稿；可恢复、导出或继续服务器版本。");}}catch(_){}
+  }
+  function field(label,value,type,onchange){const wrapper=el("label","",label),input=el("input");input.type=type;if(type==="number")input.step="any";input.value=value??"";input.oninput=()=>onchange(input.value);wrapper.append(input);return wrapper;}
+  function render(){const host=$("beScoreCandidates");host.replaceChildren();if(!active)return;const ref=active,asset=endpoint()+`/${encodeURIComponent(ref.id)}/asset`,filename=ref.filename||"",isImage=/\.(png|jpe?g|webp)$/i.test(filename),isPdf=/\.pdf$/i.test(filename);
+    const description=el("p","muted",`参考 ${filename} · 修订 ${ref.revision} · 不作为独立准确率标签。写谱小节与音频小节可能因反复、弱起和不同编配而不一致。`);host.append(description);
+    const meta=ref.metadata||(ref.metadata={});const metadata=el("div","be-score-tools-row");
+    const set=(k,v)=>{meta[k]=v;dirtyMessage();};
+    metadata.append(field("变调夹（品）",meta.capo,"number",v=>set("capo",v===""?null:Number(v))),field("指法调",meta.fingering_key,"text",v=>set("fingering_key",v||null)),field("实音调",meta.sounding_key??meta.concert_key,"text",v=>set("sounding_key",v||null)),field("编配 / 版本",meta.arrangement_version,"text",v=>set("arrangement_version",v||null)),field("谱面和弦 → 音频实音转调（半音，0 也要明确）",meta.transposition_semitones,"number",v=>set("transposition_semitones",v===""?null:Number(v))));host.append(metadata);
+    host.append(el("p","muted","转调值需要自行核对谱面是指法和弦还是实音和弦。变调夹不会自动叠加到转调值；避免重复移调。"));
+    const contexts=meta.pitch_context_candidates||[];if(contexts.length)host.append(el("p","be-pitch-context",`谱面调性 / 变调夹待核对文字：${contexts.map(c=>`第 ${c.page??"?"} 页：${c.raw_text}`).join("；")}（只保留原文，不自动推断实音）`));
+    if(ref.score_context||ref.tracks?.length){const details=el("details","be-score-context"),summary=el("summary","","原谱编配与声部信息 · 待核对");details.append(summary);const names={title:"标题",artist:"歌手",subtitle:"副标题",album:"专辑",words:"词",music:"曲",copyright:"版权",tabber:"制谱"};for(const [key,value] of Object.entries(ref.score_context||{}))if(value)details.append(el("p","muted",`${names[key]||key}：${typeof value==="string"?value:JSON.stringify(value)}`));
+      for(const track of ref.tracks||[])details.append(el("p","muted",`声部 ${track.track_name||track.track_id||track.part_id||"未知"}；谱面记载移调 ${track.transpose_chromatic??"未知"} 半音（未采纳为音频移调）`));
+      const parts=new Map();for(const event of ref.events||[])if(event.part_id&&(event.capo!==undefined||event.tuning_midi_low_to_high!==undefined))parts.set(event.part_id,event);
+      for(const [id,event] of parts)details.append(el("p","muted",`${event.track_name||id} / staff ${event.staff_index??"?"}：变调夹 ${event.capo??"未知"} 品，局部变调夹 ${event.partial_capo??"未知"}；定弦 MIDI（低→高）${event.tuning_midi_low_to_high?.join(", ")||"未知"}。指法 / 实音关系待人工确认。`));
+      host.append(details);
+    }
+    const actions=el("div","be-score-tools-row");actions.id="srActions";const save=el("button","primary","保存曲谱核对"),download=el("button","secondary","导出审核草稿");save.onclick=saveReview;download.onclick=exportRef;actions.append(save,download);const link=el("a","text-link","打开本机原谱 ↗");link.href=asset;link.target="_blank";link.rel="noopener";actions.append(link);host.append(actions);
+    const split=el("div","be-score-split"),preview=el("div","be-score-original"),tablePane=el("div","be-score-candidate-pane");let locate=null;
+    if(isImage){const frame=el("div","be-score-image-frame"),wrap=el("div","be-score-image-wrap"),img=el("img","be-score-page"),box=el("div","be-score-box");box.hidden=true;img.src=asset;img.alt="本机原始曲谱，核对印刷和弦名和小节线";img.style.maxHeight="none";img.style.height="auto";wrap.append(img,box);frame.append(wrap);preview.append(frame,el("p","muted","点击候选的“定位原谱”可查看文字所在框；框可能覆盖整行，未推断小节线。"));
+      locate=event=>{const b=event.bbox;if(!Array.isArray(b)||b.length!==4)return message("该候选没有可显示的原谱框。");const units=event.bbox_units||(ref.format==="printed_ocr"?"normalized":null);const normalized=units?.includes("normalized")||units==="relative";
+        if(!normalized&&(!units?.includes("pixel")||!img.naturalWidth))return message("坐标单位未知或原图未加载；保留原坐标，请直接核对原谱。");
+        const scaleX=normalized?1:img.naturalWidth,scaleY=normalized?1:img.naturalHeight,coords=[b[0]/scaleX,b[1]/scaleY,b[2]/scaleX,b[3]/scaleY];if(coords.some(v=>!Number.isFinite(v)||v<0||v>1)||coords[2]<=coords[0]||coords[3]<=coords[1])return message("候选框越界；保留原坐标供核对。");box.hidden=false;box.style.left=coords[0]*100+"%";box.style.top=coords[1]*100+"%";box.style.width=(coords[2]-coords[0])*100+"%";box.style.height=(coords[3]-coords[1])*100+"%";frame.scrollTo({top:Math.max(0,coords[1]*wrap.clientHeight-frame.clientHeight/3),behavior:"instant"});message(`正在核对第 ${event.page??1} 页原文字 ${event.raw_chord||""}；框内可能包含多个候选。`);};
+    }
+    else if(isPdf){const iframe=el("iframe","be-score-pdf");iframe.src=asset;iframe.title="本机原谱 PDF";iframe.setAttribute("sandbox","allow-same-origin");preview.append(iframe,el("p","muted","若 PDF 预览不可用，请使用上方“打开本机原谱”。"));locate=event=>{iframe.src=asset+"#page="+Number(event.page||1);message(`原谱跳至第 ${event.page||1} 页；PDF框保留供人工核对。`);};}
+    else preview.append(el("p","muted","结构化乐谱中的印刷和弦符号可以解析；音符轨不等于已确认和弦。仍需检查反复与音频版本。"));
+    const table=el("table","be-score-table"),thead=el("thead"),head=el("tr");["谱面 / 位置","和弦候选","写谱小节 / 拍位","审核","采用"].forEach(t=>head.append(el("th","",t)));thead.append(head);table.append(thead);const tbody=el("tbody");
+    (ref.events||[]).forEach((event,index)=>{const tr=el("tr"),source=el("td"),labelCell=el("td"),location=el("td"),review=el("td"),adoption=el("td");
+      source.append(el("div","",`第 ${event.page??"?"} 页 · ${event.raw_chord||event.kind||"原符号未知"}`));const units=event.bbox_units||(ref.format==="printed_ocr"?"normalized_ltrb":"单位按来源");source.append(el("small","muted",event.bbox?`原谱框 ${units} `+JSON.stringify(event.bbox):"无原谱框 / 未定位"));if(locate){const button=el("button","secondary","定位原谱");button.onclick=()=>locate(event);source.append(button);}
+      const label=el("input");label.value=event.normalized_harte||"";label.placeholder=event.kind==="note_evidence"?"MIDI 音符证据":"例如 C:maj、G:7";label.disabled=event.kind==="note_evidence";label.setAttribute("aria-label",`候选 ${index+1} 和弦`);label.oninput=()=>{event.normalized_harte=label.value.trim()||null;event.review_status="unreviewed";dirtyMessage();};label.onchange=()=>render();labelCell.append(label);if(event.sounding_harte)labelCell.append(el("div","muted","实音候选："+event.sounding_harte));if(event.alternatives?.length)labelCell.append(el("small","muted","备选："+JSON.stringify(event.alternatives)));
+      location.append(field("小节",event.measure_id,"text",v=>{event.measure_id=v||null;dirtyMessage();}),field("拍位（四分音符单位）",event.offset_quarter,"number",v=>{event.offset_quarter=v===""?null:Number(v);dirtyMessage();}));
+      const reviewSelect=el("select");[["unreviewed","待核对"],["verified","已核对谱面"],["rejected","拒绝候选"]].filter(([v])=>event.kind!=="note_evidence"||v!=="verified").forEach(([v,t])=>reviewSelect.append(new Option(t,v)));reviewSelect.value=event.review_status||"unreviewed";reviewSelect.onchange=()=>{event.review_status=reviewSelect.value;dirtyMessage();};review.append(reviewSelect);
+      const adopt=el("button","secondary","绑定所选区间…");adopt.disabled=event.kind==="note_evidence"||event.review_status!=="verified"||!event.normalized_harte;adopt.onclick=()=>adoptEvent(event);adoption.append(adopt);tr.append(source,labelCell,location,review,adoption);tbody.append(tr);
+    });table.append(tbody);tablePane.append(table);if(!(ref.events||[]).length)tablePane.append(el("p","muted","没有可用和弦符号候选。可在原谱上人工核对；未凭音符或模糊图像补出和弦。"));split.append(preview,tablePane);host.append(split);
+    if(ref.warnings?.length)host.append(el("p","muted",ref.warnings.join("；")));
+  }
+  async function saveReview(){if(!active||saving)return;const ref=active,t=token;if(ref.metadata?.transposition_semitones!==null&&ref.metadata?.transposition_semitones!==undefined&&!Number.isInteger(ref.metadata.transposition_semitones))return message("转调半音必须为整数；未知可留空，但不能采纳到音频。");
+    saving=true;const controls=[...document.querySelectorAll("#beScoreCandidates input,#beScoreCandidates select,#beScoreCandidates button,#beScoreTools input,#beScoreTools select,#beScoreTools button")],disabled=controls.map(c=>c.disabled);controls.forEach(c=>c.disabled=true);
+    try{message("正在保存曲谱核对 · 输入暂时锁定以保护草稿…");const payload=clone({revision:ref.revision,events:ref.events,metadata:ref.metadata});const saved=await api(endpoint()+`/${encodeURIComponent(ref.id)}/review`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(active!==ref||t!==token)return;const i=refs.findIndex(r=>r.id===ref.id);refs[i]=saved;active=clone(saved);dirty=false;try{localStorage.removeItem(draftKey());}catch(_){}render();message(`曲谱核对已保存 · 修订 ${saved.revision}。逐项绑定音频区间后才写入编辑轨。`);}catch(e){if(t===token){stash();message((e.status===409?"曲谱审核保存冲突，当前草稿已保留；请导出后重新载入参考。":"保存失败，当前草稿已保留：")+e.message);}}
+    finally{if(t===token)saving=false;controls.forEach((c,i)=>{if(c.isConnected)c.disabled=disabled[i];});}
+  }
+  function adoptEvent(event){const s=window.BarEditor.getContext();if(!s||!active)return;if(dirty)return message("请先保存曲谱核对草稿，再采用候选。");if(!Number.isInteger(active.metadata?.transposition_semitones))return message("先确认谱面和弦到音频实音的转调半音数（0 也要明确），保存核对后再采用。");if(!event.sounding_harte)return message("尚无服务器确认的实音候选；请保存核对与转调信息。");
+    const start=Number($("beStart").value),end=Number($("beEnd").value);if(!Number.isFinite(start)||!Number.isFinite(end)||start<0||end<=start||end>s.doc.duration)return message("请在小节编辑器中先选择音频起止秒数。");
+    const conflicts=s.doc.events.filter(e=>e.origin!=="model"&&e.start<end&&e.end>start).length;
+    if(!confirm(`将曲谱 ${event.raw_chord||event.normalized_harte} 的实音候选 ${event.sounding_harte} 绑定到音频 ${start.toFixed(3)}–${end.toFixed(3)} 秒？\n写谱小节 ${event.measure_id??"尚未定位"}，第 ${event.page??"?"} 页。\n需人工确认版本、小节对应与听辨；将替换此范围内 ${conflicts} 个人工/曲谱采纳区间，操作可撤销。`))return;
+    const ref=active.id;if(window.BarEditor.adoptCandidate({start,end,label:event.sounding_harte,reference_id:ref,reference_event_id:event.id,alignment_confirmed:true}))message("已显式绑定曲谱候选到音频编辑轨；请循环听辨复核，人工修改仍未独立验证。");
+  }
+  window.BarEditor.onOpen=open;
+})();

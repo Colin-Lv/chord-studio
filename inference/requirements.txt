@@ -1,0 +1,4 @@
+numpy==2.4.4
+scipy==1.17.1
+psutil==7.2.2
+mir_eval==0.8.2

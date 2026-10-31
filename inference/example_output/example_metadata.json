@@ -1,0 +1,9 @@
+{
+  "existing_development_audio": true,
+  "audio_seconds": 12.906984126984128,
+  "accuracy_scored": false,
+  "model_version": "chord_retained10_v80",
+  "weights_sha256": "6a37737d5dffda292e981528d11779f05b079905452622e6b4ef779f682eceef",
+  "confidence_definition": "Uncalibrated model score, not measured accuracy. N: N-head probability. Chord: conditional root/quality posterior times (1-N probability). Segment score is the duration-weighted mean of its audio cells. Slash-bass confidence is not included.",
+  "no_audio_distributed": true
+}

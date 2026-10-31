@@ -1,0 +1,120 @@
+{
+  "dataset": "GuitarSet 1.1.0",
+  "official_record": "https://zenodo.org/records/3371780",
+  "official_repository": "https://github.com/marl/GuitarSet",
+  "dataset_license": "CC-BY-4.0",
+  "repository_code_license": "MIT",
+  "annotation_file_count": 360,
+  "audio_file_count": 360,
+  "comp_count": 180,
+  "eligible_comp_count": 178,
+  "audio_ready_comp_count": 178,
+  "solo_excluded_from_chord_diagnostics": true,
+  "performed_labels_are_independent_manual_truth": false,
+  "original_times_and_labels_preserved": true,
+  "default_training_corpus_modified": false,
+  "protocol_counts": {
+    "performer_train": 115,
+    "performer_validation": 28,
+    "performer_test": 25,
+    "progression_train": 56,
+    "progression_validation": 56,
+    "progression_test": 56
+  },
+  "split_protocols": {
+    "performer": {
+      "train": [
+        "00",
+        "01",
+        "02",
+        "03"
+      ],
+      "validation": [
+        "04"
+      ],
+      "test": [
+        "05"
+      ],
+      "limitation": "Lead sheets/progression families shared across splits"
+    },
+    "progression": {
+      "train": [
+        "1"
+      ],
+      "validation": [
+        "2"
+      ],
+      "test": [
+        "3"
+      ],
+      "families": {
+        "1": "12-bar blues",
+        "2": "Autumn Leaves",
+        "3": "Pachelbel Canon"
+      },
+      "limitation": "Performers shared across splits; only three progression families"
+    }
+  },
+  "diagnostic_selection": "Fixed 5 styles x performers 00/05, family=(style_index+performer_index)%3+1, first sorted lead; no predictions used; no fitting/tuning permitted",
+  "diagnostic_ids": [
+    "guitarset_00_BN1-129-Eb_comp",
+    "guitarset_05_BN2-131-B_comp",
+    "guitarset_00_Funk2-108-Eb_comp",
+    "guitarset_05_Funk3-112-C#_comp",
+    "guitarset_00_Jazz3-137-Eb_comp",
+    "guitarset_05_Jazz1-130-D_comp",
+    "guitarset_00_Rock1-130-A_comp",
+    "guitarset_05_Rock2-142-D_comp",
+    "guitarset_00_SS2-107-Ab_comp",
+    "guitarset_05_SS3-84-Bb_comp"
+  ],
+  "excluded": [
+    {
+      "id": "guitarset_04_BN3-154-E_comp",
+      "recording_id": "04_BN3-154-E_comp",
+      "audio": "raw\\guitarset_v1.1.0\\audio_mono-mic\\04_BN3-154-E_comp_mic.wav",
+      "chord_reference": "references\\guitarset_v1.1.0\\performed\\04_BN3-154-E_comp.lab",
+      "instructed_reference": "references\\guitarset_v1.1.0\\instructed\\04_BN3-154-E_comp.lab",
+      "beat_reference": "references\\guitarset_v1.1.0\\beats\\04_BN3-154-E_comp.beats",
+      "annotation_metadata": "references\\guitarset_v1.1.0\\metadata\\04_BN3-154-E_comp.json",
+      "reference_kind": "weak_performed_sheet_informed",
+      "performer": "04",
+      "composition_id": "BN3-154-E",
+      "progression_family": "3",
+      "style": "BN",
+      "audio_ready": true,
+      "reason": {
+        "reported_annotation_delay_seconds": 0.409,
+        "issue": "https://github.com/marl/GuitarSet/issues/5",
+        "scope": "reported note-alignment error; entire comp excerpt conservatively excluded",
+        "correction_applied": false
+      }
+    },
+    {
+      "id": "guitarset_04_Jazz1-200-B_comp",
+      "recording_id": "04_Jazz1-200-B_comp",
+      "audio": "raw\\guitarset_v1.1.0\\audio_mono-mic\\04_Jazz1-200-B_comp_mic.wav",
+      "chord_reference": "references\\guitarset_v1.1.0\\performed\\04_Jazz1-200-B_comp.lab",
+      "instructed_reference": "references\\guitarset_v1.1.0\\instructed\\04_Jazz1-200-B_comp.lab",
+      "beat_reference": "references\\guitarset_v1.1.0\\beats\\04_Jazz1-200-B_comp.beats",
+      "annotation_metadata": "references\\guitarset_v1.1.0\\metadata\\04_Jazz1-200-B_comp.json",
+      "reference_kind": "weak_performed_sheet_informed",
+      "performer": "04",
+      "composition_id": "Jazz1-200-B",
+      "progression_family": "1",
+      "style": "Jazz",
+      "audio_ready": true,
+      "reason": {
+        "reported_annotation_delay_seconds": 0.309,
+        "issue": "https://github.com/marl/GuitarSet/issues/5",
+        "scope": "reported note-alignment error; entire comp excerpt conservatively excluded",
+        "correction_applied": false
+      }
+    }
+  ],
+  "warnings": [],
+  "annotation_archive_sha256": "8daa02e6417ccca1685feb44b135e95928ad7037e5032ecb326b5791856fda99",
+  "diagnostic_reserved_count": 10,
+  "regular_split_pool_count": 168,
+  "diagnostic_excluded_from_all_regular_splits": true
+}

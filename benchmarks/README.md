@@ -16,17 +16,18 @@ Audio is not committed here. Many benchmark datasets contain copyrighted recordi
 
 ## Directory Layout
 
+> **2026-10-30 归档**：`audio/`、`raw/`、`external_key_data/`、`predictions/` 等语料目录已移出项目树，
+> 现在各目录里只剩 `README_ARCHIVED.md` 指路，实际数据在
+> `D:\ChordStudio\_archive\2026-10-30\benchmarks\`。需要跑数据集评测时按 README 里的命令移回即可。
+> `reports/` 与 `models/` 只保留被代码引用的部分，索引见同目录的 `README_INDEX.md`、`README_CURRENT.md`。
+
 ```text
 benchmarks/
-  manifest.csv
-  raw/
-    billboard/
-    isophonics/
-    ballroom/
-    salami/
-    rwc_pop/
-  predictions/
-  reports/
+  manifest*.csv           当前清单（保留在原处）
+  references/             评测参考标签（保留）
+  models/                 1 个被引用的模型 + _legacy_202608/（旧模型）
+  reports/                18 个实验目录 + _legacy_tables_202608/（旧散表）
+  audio/  raw/  predictions/  external_key_data/   → 已归档，目录内只有指路 README
 ```
 
 Use `manifest.example.csv` as the schema. Paths are relative to the manifest file unless absolute.

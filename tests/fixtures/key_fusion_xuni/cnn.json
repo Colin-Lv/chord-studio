@@ -1,0 +1,113 @@
+{
+  "candidates": [
+    {
+      "score": 0.6480129774902714,
+      "key": "G"
+    },
+    {
+      "score": 0.2884443445482417,
+      "key": "C"
+    },
+    {
+      "score": 0.015779273694068396,
+      "key": "Em"
+    },
+    {
+      "score": 0.015169450589096287,
+      "key": "Am"
+    },
+    {
+      "score": 0.0033542403508672563,
+      "key": "D"
+    },
+    {
+      "score": 0.002916822025415479,
+      "key": "F"
+    },
+    {
+      "score": 0.002872662667139466,
+      "key": "Cm"
+    },
+    {
+      "score": 0.002738876505170802,
+      "key": "Gm"
+    },
+    {
+      "score": 0.0023159593995628,
+      "key": "Dm"
+    },
+    {
+      "score": 0.0022638173804196125,
+      "key": "B"
+    },
+    {
+      "score": 0.0022537684165680203,
+      "key": "Eb"
+    },
+    {
+      "score": 0.0019754699101735837,
+      "key": "E"
+    },
+    {
+      "score": 0.0018684640968359616,
+      "key": "Ab"
+    },
+    {
+      "score": 0.0012593053966293215,
+      "key": "Fm"
+    },
+    {
+      "score": 0.0012334800672609836,
+      "key": "Bm"
+    },
+    {
+      "score": 0.0011194002834894186,
+      "key": "A"
+    },
+    {
+      "score": 0.0009742802496834473,
+      "key": "F#"
+    },
+    {
+      "score": 0.0008800902977345222,
+      "key": "Db"
+    },
+    {
+      "score": 0.0008655674730003429,
+      "key": "Bbm"
+    },
+    {
+      "score": 0.0008152272527414498,
+      "key": "Bb"
+    },
+    {
+      "score": 0.0007697383041919326,
+      "key": "F#m"
+    },
+    {
+      "score": 0.0007530515867419031,
+      "key": "G#m"
+    },
+    {
+      "score": 0.0006834097801228092,
+      "key": "C#m"
+    },
+    {
+      "score": 0.0006803222345732015,
+      "key": "D#m"
+    }
+  ],
+  "model_files": [
+    {
+      "name": "key_cnn.pkl",
+      "sha256": "c58ba553be1048877662a663a2670c0051b3c2c66d109b6042ba722ed0bfc7a6"
+    }
+  ],
+  "runtime_version": "0.16.1",
+  "key": "G",
+  "source": "madmom_cnn_key",
+  "score_kind": "uncalibrated_classifier_score",
+  "audio_offset": 0.0,
+  "duration": 238.1226530612245,
+  "limitation": "Global major/minor key; local modulation and pretraining overlap unresolved"
+}

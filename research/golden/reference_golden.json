@@ -1,0 +1,14 @@
+{
+ "status": "accepted_by_user_20261031",
+ "note": "beat-level re-timing accepted as the reference ('现在基本正确，请你以此为准')",
+ "events": 62,
+ "coverage": [
+  1.8,
+  230.72
+ ],
+ "sha256": "cea3a5d033ecbce49522c457cb234888610a0ca9f5563fb216400503c9b579b6",
+ "source_run": "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7",
+ "derived_from": "reference_projected.lab + chroma novelty re-timing (whole beats, gain>0.02)",
+ "accepted_at": "2026-10-30T22:05:33.995137+00:00",
+ "editor_doc": "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\editor\\retained10_stable.json"
+}

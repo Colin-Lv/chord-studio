@@ -1,0 +1,16 @@
+{
+ "cases": 147,
+ "cnn": 122,
+ "published": 105,
+ "force_off": 111,
+ "by_reason": {
+  "force": {
+   "fired": 12,
+   "ok": 2
+  },
+  "coverage": {
+   "fired": 14,
+   "ok": 0
+  }
+ }
+}

@@ -12,6 +12,7 @@ from pathlib import Path
 from evaluate_beats import evaluate as evaluate_beats
 from evaluate_beats import read_prediction as read_beat_prediction
 from evaluate_beats import read_reference as read_beat_reference
+from evaluate_beats import greedy_match
 from evaluate_chords import evaluate as evaluate_chords
 from evaluate_chords import read_prediction as read_chord_prediction
 from evaluate_chords import read_reference as read_chord_reference
@@ -26,8 +27,21 @@ FIELDNAMES = [
     "prediction",
     "chord_reference",
     "beat_reference",
+    "beat_source",
+    "key_source",
+    "reference_grid_exact_fraction",
+    "evaluation_context",
+    "alignment_method",
     "root_accuracy",
     "triad_accuracy",
+    "root_wcsr",
+    "triad_wcsr",
+    "tetrad_wcsr",
+    "prediction_coverage",
+    "non_no_chord_seconds",
+    "evaluated_seconds",
+    "unknown_reference_seconds",
+    "missing_prediction_seconds",
     "beat_f1",
     "downbeat_f1",
     "beat_median_abs_error_ms",
@@ -58,6 +72,20 @@ def evaluate_row(row: dict[str, str], base: Path, frame: float, tolerance: float
 
     messages: list[str] = []
     try:
+        payload = json.loads(prediction.read_text(encoding="utf-8-sig"))
+        result["beat_source"] = str(payload.get("beat_source", "unknown"))
+        result["key_source"] = str(payload.get("key_source", "unknown"))
+        result["alignment_method"] = row.get("alignment_method", "") or (
+            "legacy_prediction_alignment_unverified" if row.get("alignment_best_triad") else "")
+        context = []
+        if result["alignment_method"]:
+            context.append("prediction_optimized_reference_alignment")
+        declared = payload.get("evaluation_context", {})
+        if "reference" in result["beat_source"] or isinstance(declared, dict) and any(
+            declared.get(field) for field in ("reference_beat_grid", "reference_grid")):
+            context.append("reference_beat_grid")
+        if isinstance(declared, dict) and declared.get("reference_key"):
+            context.append("reference_key")
         chord_ref = resolve_path(base, row.get("chord_reference", ""))
         if chord_ref and chord_ref.exists():
             chord_metrics = evaluate_chords(
@@ -65,24 +93,33 @@ def evaluate_row(row: dict[str, str], base: Path, frame: float, tolerance: float
                 read_chord_prediction(prediction),
                 frame,
             )
-            result["root_accuracy"] = chord_metrics["root_accuracy"]
-            result["triad_accuracy"] = chord_metrics["triad_accuracy"]
+            for metric in chord_metrics:
+                if metric in result:
+                    result[metric] = chord_metrics[metric]
         elif chord_ref:
             messages.append(f"Chord reference not found: {chord_ref}")
 
         beat_ref = resolve_path(base, row.get("beat_reference", ""))
         if beat_ref and beat_ref.exists():
+            ref_beats = read_beat_reference(beat_ref)
+            pred_beats = read_beat_prediction(prediction)
             beat_metrics = evaluate_beats(
-                read_beat_reference(beat_ref),
-                read_beat_prediction(prediction),
+                ref_beats,
+                pred_beats,
                 tolerance,
             )
+            exact_hits, _ = greedy_match([b.time for b in ref_beats], [b.time for b in pred_beats], 1e-6)
+            exact_fraction = exact_hits / max(len(pred_beats), 1)
+            result["reference_grid_exact_fraction"] = exact_fraction
+            if len(pred_beats) >= 32 and exact_fraction >= .95 and "reference_beat_grid" not in context:
+                context.append("grid_matches_reference_verify_provenance")
             result["beat_f1"] = beat_metrics.get("beat_f1", "")
             result["downbeat_f1"] = beat_metrics.get("downbeat_f1", "")
             result["beat_median_abs_error_ms"] = beat_metrics.get("beat_median_abs_error_ms", "")
             result["downbeat_median_abs_error_ms"] = beat_metrics.get("downbeat_median_abs_error_ms", "")
         elif beat_ref:
             messages.append(f"Beat reference not found: {beat_ref}")
+        result["evaluation_context"] = ";".join(context) or "unspecified"
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
         result["status"] = "error"
         result["message"] = str(exc)
@@ -99,6 +136,10 @@ def summarize(rows: list[dict[str, object]]) -> dict[str, object]:
     for metric in (
         "root_accuracy",
         "triad_accuracy",
+        "root_wcsr",
+        "triad_wcsr",
+        "tetrad_wcsr",
+        "prediction_coverage",
         "beat_f1",
         "downbeat_f1",
         "beat_median_abs_error_ms",
@@ -115,6 +156,21 @@ def summarize(rows: list[dict[str, object]]) -> dict[str, object]:
         if values:
             summary[f"mean_{metric}"] = sum(values) / len(values)
             summary[f"count_{metric}"] = len(values)
+    for metric in ("root_accuracy", "triad_accuracy", "root_wcsr", "triad_wcsr", "tetrad_wcsr"):
+        weight_key = "non_no_chord_seconds" if metric.endswith("accuracy") else "evaluated_seconds"
+        weighted_rows = [row for row in ok_rows if row.get(metric) not in {"", None}
+                         and row.get(weight_key) not in {"", None}]
+        duration = sum(float(row[weight_key]) for row in weighted_rows)
+        if duration:
+            summary[f"duration_weighted_{metric}"] = sum(float(row[metric]) * float(row[weight_key])
+                                                         for row in weighted_rows) / duration
+    summary["evaluation_protocol"] = "full reference support, exact duration; X/gaps excluded; WCSR includes N"
+    summary["context_counts"] = {}
+    for row in ok_rows:
+        for context in str(row.get("evaluation_context") or "unspecified").split(";"):
+            summary["context_counts"][context] = summary["context_counts"].get(context, 0) + 1
+    if any(key != "unspecified" for key in summary["context_counts"]):
+        summary["provenance_note"] = "Controlled/reference-aligned rows must not be described as unassisted end-to-end accuracy. Exact grid matches require provenance review."
     return summary
 
 

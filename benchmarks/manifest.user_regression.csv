@@ -1,0 +1,10 @@
+﻿id,dataset,split,title,artist,audio,analysis,key
+doudou_ma,user_regression,user,马,DOUDOU,audio/user_tests/DOUDOU_马_BV1kW42197Gm_trimmed_browser.wav,,
+pingfan_zhilu,user_regression,user,平凡之路,朴树,audio/user_tests/pingfan_zhilu_trimmed_start.mp3,benchmarks/predictions/user_tests/pingfan_regularized0_6415_with_I49_64_analysis.json,A
+yorushika_dakara_boku,user_regression,user,だから僕は音楽を辞めた,ヨルシカ,audio/user_tests/【ヨルシカ】「だから僕は音楽を辞めた (所以我放弃了音乐)」MV【ナブナ⧸n-buna × suis】 [BV1Qb411g7bY].mp3,benchmarks/predictions/user_tests/yorushika_dakara_boku_key_timeline_analysis.json,E major -> F major
+yorushika_dakara_boku_bar97_chain,user_regression,user,だから僕は音楽を辞めた - bar 97 fine chain,ヨルシカ,audio/user_tests/【ヨルシカ】「だから僕は音楽を辞めた (所以我放弃了音乐)」MV【ナブナ⧸n-buna × suis】 [BV1Qb411g7bY].mp3,benchmarks/predictions/user_tests/yorushika_dakara_boku_bar97_chain_analysis.json,E major -> F major
+yorushika_dakara_boku_bar97_boundary_auto,user_regression,user,だから僕は音楽を辞めた - bar 97 automatic boundary split,ヨルシカ,audio/user_tests/【ヨルシカ】「だから僕は音楽を辞めた (所以我放弃了音乐)」MV【ナブナ⧸n-buna × suis】 [BV1Qb411g7bY].mp3,benchmarks/predictions/user_tests/yorushika_dakara_boku_boundary_refined_roots_analysis.json,E major -> F major
+qimeidi_corrected,user_regression,user,凄美地,郭顶,audio/user_tests/在百万豪装录音棚大声听郭顶《凄美地》【Hi-res】 [BV1Sx4y157RQ].mp3,benchmarks/predictions/user_tests/qimeidi_corrected_analysis.json,Ab
+starrail_heart_sorrow_key_tracking,user_regression,user,使一颗心免于哀伤,崩坏：星穹铁道,audio/user_tests/《崩坏：星穹铁道》EP：「使一颗心免于哀伤」 [BV15x4y1i7m9].mp3,benchmarks/predictions/user_tests/starrail_heart_sorrow_corrected_analysis.json,B major -> Ab major -> B major -> Ab major -> B major -> Ab major
+starrail_heart_sorrow,user_regression,user,使一颗心免于哀伤,崩坏：星穹铁道,audio/user_tests/《崩坏：星穹铁道》EP：「使一颗心免于哀伤」 [BV15x4y1i7m9].mp3,benchmarks/predictions/user_tests/starrail_heart_sorrow_corrected_analysis.json,B major -> Ab major -> B major -> Ab major -> B major -> Ab major
+laonanhai,user_regression,user,老男孩,筷子兄弟,audio/user_tests/筷子兄弟《老男孩》百万豪装录音棚大声听 [BV1Vb57ztE37].mp3,benchmarks/predictions/user_tests/laonanhai_user_corrected_final_analysis.json,C

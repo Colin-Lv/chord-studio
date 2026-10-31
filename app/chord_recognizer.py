@@ -25,6 +25,8 @@ from typing import Iterable
 
 import numpy as np
 
+from audio_features import centered_magnitude_spectrum
+
 
 SAMPLE_RATE = 22050
 NOTE_SHARPS = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
@@ -74,6 +76,12 @@ def decode_audio(
     duration: float | None = None,
 ) -> np.ndarray:
     """Decode audio to mono float32 samples using ffmpeg."""
+    if not math.isfinite(offset) or offset < 0:
+        raise ValueError("Audio offset must be finite and nonnegative")
+    if duration is not None and (not math.isfinite(duration) or duration <= 0):
+        raise ValueError("Audio duration must be finite and positive")
+    if not isinstance(sample_rate, (int, np.integer)) or sample_rate <= 0:
+        raise ValueError("Sample rate must be a positive integer")
     ffmpeg = find_ffmpeg()
     command = [
         ffmpeg,
@@ -81,9 +89,12 @@ def decode_audio(
         "-loglevel",
         "error",
     ]
+    command.extend(["-i", str(audio_path)])
+    # Output-side seeking decodes the codec's preceding frames and preserves
+    # resampler state. Input-side -ss produced up to ~40 ms of warm-up zeros in
+    # MP3 excerpts, so a clip did not match the same samples in a full decode.
     if offset > 0:
         command.extend(["-ss", f"{offset:.6f}"])
-    command.extend(["-i", str(audio_path)])
     if duration is not None:
         command.extend(["-t", f"{duration:.6f}"])
     command.extend(
@@ -209,19 +220,7 @@ def estimate_key(chroma: np.ndarray, notation: str = "sharps") -> str:
 def extract_chroma(y: np.ndarray, sr: int, hop_length: int, mode: str = "cqt") -> np.ndarray:
     if mode == "fast":
         n_fft = 4096
-        y_fast = np.asarray(y, dtype=np.float32)
-        peak = float(np.max(np.abs(y_fast))) if y_fast.size else 0.0
-        if peak > 0:
-            y_fast = y_fast / peak
-        if y_fast.size < n_fft:
-            y_fast = np.pad(y_fast, (0, n_fft - y_fast.size))
-        frame_count = 1 + max(0, (y_fast.size - n_fft) // hop_length)
-        starts = np.arange(frame_count) * hop_length
-        window = np.hanning(n_fft).astype(np.float32)
-        magnitude = np.empty((n_fft // 2 + 1, frame_count), dtype=np.float32)
-        for frame_index, start in enumerate(starts):
-            frame = y_fast[start : start + n_fft]
-            magnitude[:, frame_index] = np.abs(np.fft.rfft(frame * window))
+        magnitude = centered_magnitude_spectrum(y, n_fft, hop_length)
         freqs = np.fft.rfftfreq(n_fft, 1.0 / sr)
         mask = (freqs >= 65.0) & (freqs <= 2093.0)
         magnitude = magnitude[mask]

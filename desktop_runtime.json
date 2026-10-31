@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "web_python": "D:\\ChordStudio\\Dialogue\\.tmp\\harmony_web_env\\Scripts\\python.exe",
+  "model_python": "C:\\Users\\33573\\miniconda3\\python.exe",
+  "legacy_root": "D:\\ChordStudio\\Dialogue",
+  "model_version": "chord_retained11_v90",
+  "entry_version": "v88",
+  "inference_memory_budget_mib": 512,
+  "frozen_utc": "2026-10-30T22:45:00+08:00",
+  "weights_sha256": "cf44143ee0b5747ba2962b8aac7349bd9ee4fd2489cc63872dc45f8273fd31bd",
+  "supersedes": "chord_retained10_v80",
+  "notes": "quality residual from v49 folds + 118 rendered POP909 clips; router forced on"
+}

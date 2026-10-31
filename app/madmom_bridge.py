@@ -10,8 +10,11 @@ chord_studio.py with --external-chords.
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +26,39 @@ DEFAULT_MADMOM_PYTHON = (
     Path.home() / ".codex" / "acr_envs" / "madmom39" / "Scripts" / "python.exe"
 )
 WORKSPACE_TMP = Path(__file__).resolve().parent.parent / "tmp" / "madmom_bridge"
+
+
+def provenance_path(lab: Path) -> Path:
+    return lab.with_name(lab.name + ".provenance.json")
+
+
+def file_identity(path: Path) -> dict:
+    before = path.stat()
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    after = path.stat()
+    if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
+        raise OSError(f"File changed while hashing: {path}")
+    return {"path": str(path.resolve()), "bytes": after.st_size, "mtime_ns": after.st_mtime_ns, "sha256": digest.hexdigest()}
+
+
+def cache_matches_audio(lab: Path, audio: Path) -> tuple[bool, str]:
+    """Only auto-reuse a complete, full-source cache with matching contents."""
+    try:
+        record = json.loads(provenance_path(lab).read_text(encoding="utf-8"))
+        if record.get("schema") != "madmom_chord_cache_v1" or record.get("offset") != 0 or record.get("requested_duration") is not None:
+            return False, "cache is not a documented complete-source analysis"
+        if record.get("sample_rate") != 44100:
+            return False, "cache sample rate is incompatible"
+        if record.get("audio", {}).get("sha256") != file_identity(audio)["sha256"]:
+            return False, "audio content changed"
+        if record.get("lab", {}).get("sha256") != file_identity(lab)["sha256"]:
+            return False, "LAB content changed"
+        return True, "audio and LAB SHA256 match"
+    except (OSError, ValueError, TypeError, AttributeError):
+        return False, "cache provenance is absent or invalid"
 
 MADMOM_HELPER = r"""
 import sys
@@ -74,7 +110,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--sample-rate",
         type=int,
         default=44100,
-        help="Sample rate sent to madmom. Keep 44100 unless you know otherwise.",
+        help="Fixed at 44100: the pretrained frontend assumes this rate for ndarray input.",
     )
     parser.add_argument("--offset", type=float, default=0.0, help="Decode offset in seconds.")
     parser.add_argument("--duration", type=float, default=None, help="Decode duration in seconds.")
@@ -87,6 +123,9 @@ def default_output_path(audio_path: Path) -> Path:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(sys.argv[1:] if argv is None else argv)
+    if args.sample_rate != 44100:
+        print("--sample-rate must be 44100 for the pretrained madmom ndarray frontend.", file=sys.stderr)
+        return 2
     audio_path = args.audio.resolve()
     output_path = (
         args.output.resolve() if args.output is not None else default_output_path(audio_path).resolve()
@@ -99,11 +138,9 @@ def main(argv: list[str] | None = None) -> int:
     if not madmom_python.exists():
         print(f"madmom Python not found: {madmom_python}", file=sys.stderr)
         return 2
-    if args.sample_rate <= 0:
-        print("--sample-rate must be greater than 0.", file=sys.stderr)
-        return 2
 
     print(f"Decoding for madmom: {audio_path.name}")
+    source_identity = file_identity(audio_path)
     y = decode_audio(
         audio_path,
         sample_rate=args.sample_rate,
@@ -115,22 +152,43 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     WORKSPACE_TMP.mkdir(parents=True, exist_ok=True)
-    npy_path = WORKSPACE_TMP / f"{output_path.stem}_audio_44100.npy"
-    np.save(npy_path, y)
-    command = [str(madmom_python), "-c", MADMOM_HELPER, str(npy_path), str(output_path)]
-    result = subprocess.run(command, capture_output=True, text=True)
+    npy_path = pending_lab = pending_record = None
     try:
-        npy_path.unlink()
-    except OSError:
-        pass
-    if result.stdout:
-        print(result.stdout.strip())
-    if result.returncode != 0:
+        with tempfile.NamedTemporaryFile(suffix="_audio_44100.npy", dir=WORKSPACE_TMP, delete=False) as handle:
+            npy_path = Path(handle.name)
+            np.save(handle, y)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(suffix=".lab", prefix=".madmom_", dir=output_path.parent, delete=False) as handle:
+            pending_lab = Path(handle.name)
+        command = [str(madmom_python), "-c", MADMOM_HELPER, str(npy_path), str(pending_lab)]
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.stdout:
+            print(result.stdout.strip())
         if result.stderr:
             print(result.stderr.strip(), file=sys.stderr)
-        return result.returncode
-    if result.stderr:
-        print(result.stderr.strip(), file=sys.stderr)
+        if result.returncode != 0:
+            return result.returncode
+        if file_identity(audio_path) != source_identity:
+            print("Audio changed during decoding/inference; output was not published. Retry with a stable source.", file=sys.stderr)
+            return 2
+        lab_identity = file_identity(pending_lab)
+        pending_lab.replace(output_path)
+        lab_identity["path"] = str(output_path)
+        record = {"schema": "madmom_chord_cache_v1", "audio": source_identity,
+                  "lab": lab_identity, "sample_rate": args.sample_rate,
+                  "offset": args.offset, "requested_duration": args.duration, "duration": len(y) / args.sample_rate,
+                  "timestamp_origin": "decoded_window_start", "frontend": "madmom CNNChordFeatureProcessor + CRFChordRecognitionProcessor",
+                  "runtime_python": str(madmom_python)}
+        with tempfile.NamedTemporaryFile(suffix=".json", prefix=".madmom_", dir=output_path.parent,
+                                         mode="w", encoding="utf-8", delete=False) as handle:
+            pending_record = Path(handle.name)
+            json.dump(record, handle, ensure_ascii=False, indent=2)
+        pending_record.replace(provenance_path(output_path))
+        print(f"Wrote: {output_path}")
+    finally:
+        for temporary in (npy_path, pending_lab, pending_record):
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
     return 0
 
 

@@ -1,0 +1,1672 @@
+{
+  "title": "虚拟",
+  "status": "complete_score_expansion_review_draft_audio_timing_unverified",
+  "date": "2026-10-31",
+  "key": "C",
+  "meter": "4/4",
+  "source": "用户提供的三页革命吉他制谱截图，以及用户确认的反复起点与 G#add9",
+  "run_id": "bc928edd2c5c460784154d969e07d499",
+  "audio_duration_seconds": 238.1226530612245,
+  "user_confirmed_mapping": "界面第1–2小节对应谱面第1小节；每2个界面小节=1个谱面小节",
+  "boundary_source": "现有 beats.json 的 beat=1 时间；仅作导航，未逐点听校",
+  "score_bars": [
+    {
+      "score_bar": 1,
+      "page": 1,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          1,
+          2
+        ],
+        "start_seconds": 1.8,
+        "end_seconds": 5.52,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 2,
+      "page": 1,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          3,
+          4
+        ],
+        "start_seconds": 5.52,
+        "end_seconds": 9.2,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 3,
+      "page": 1,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          5,
+          6
+        ],
+        "start_seconds": 9.2,
+        "end_seconds": 12.9,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 4,
+      "page": 1,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          7,
+          8
+        ],
+        "start_seconds": 12.9,
+        "end_seconds": 16.58,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 5,
+      "page": 1,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          9,
+          10
+        ],
+        "start_seconds": 16.58,
+        "end_seconds": 20.28,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 6,
+      "page": 1,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          11,
+          12
+        ],
+        "start_seconds": 20.28,
+        "end_seconds": 23.96,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 7,
+      "page": 1,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          13,
+          14
+        ],
+        "start_seconds": 23.96,
+        "end_seconds": 27.66,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 8,
+      "page": 1,
+      "chord": "Am7",
+      "degree_in_C": "VIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          15,
+          16
+        ],
+        "start_seconds": 27.66,
+        "end_seconds": 31.34,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 9,
+      "page": 1,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          17,
+          18
+        ],
+        "start_seconds": 31.34,
+        "end_seconds": 35.03,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 10,
+      "page": 1,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          19,
+          20
+        ],
+        "start_seconds": 35.03,
+        "end_seconds": 38.73,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 11,
+      "page": 1,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          21,
+          22
+        ],
+        "start_seconds": 38.73,
+        "end_seconds": 42.41,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 12,
+      "page": 1,
+      "chord": "A7",
+      "degree_in_C": "VI7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          23,
+          24
+        ],
+        "start_seconds": 42.41,
+        "end_seconds": 46.11,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 13,
+      "page": 1,
+      "chord": "Fmaj7",
+      "degree_in_C": "IVmaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          25,
+          26
+        ],
+        "start_seconds": 46.11,
+        "end_seconds": 49.8,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 14,
+      "page": 2,
+      "chord": "G",
+      "degree_in_C": "V",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          27,
+          28
+        ],
+        "start_seconds": 49.8,
+        "end_seconds": 53.52,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 15,
+      "page": 2,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          29,
+          30
+        ],
+        "start_seconds": 53.52,
+        "end_seconds": 57.2,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 16,
+      "page": 2,
+      "chord": "Am7",
+      "degree_in_C": "VIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          31,
+          32
+        ],
+        "start_seconds": 57.2,
+        "end_seconds": 60.88,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 17,
+      "page": 2,
+      "chord": "Fmaj7",
+      "degree_in_C": "IVmaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          33,
+          34
+        ],
+        "start_seconds": 60.88,
+        "end_seconds": 64.57,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 18,
+      "page": 2,
+      "chord": "G",
+      "degree_in_C": "V",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          35,
+          36
+        ],
+        "start_seconds": 64.57,
+        "end_seconds": 68.25,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 19,
+      "page": 2,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          37,
+          38
+        ],
+        "start_seconds": 68.25,
+        "end_seconds": 71.97,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 20,
+      "page": 2,
+      "chord": "Am7",
+      "degree_in_C": "VIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          39,
+          40
+        ],
+        "start_seconds": 71.97,
+        "end_seconds": 75.66,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 21,
+      "page": 2,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": 1,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          41,
+          42
+        ],
+        "start_seconds": 75.66,
+        "end_seconds": 79.35,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 22,
+      "page": 2,
+      "chord": "Cadd9",
+      "degree_in_C": "Iadd9",
+      "beats": 4,
+      "volta": 1,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": {
+        "ui_bars": [
+          43,
+          44
+        ],
+        "start_seconds": 79.35,
+        "end_seconds": 82.35,
+        "status": "projected_from_user_2_to_1_mapping_and_existing_grid_not_audio_verified"
+      }
+    },
+    {
+      "score_bar": 23,
+      "page": 2,
+      "chord": "G#add9",
+      "degree_in_C": "#Vadd9 / bVIadd9",
+      "beats": 4,
+      "volta": 2,
+      "transcription_status": "explicitly_confirmed_by_user",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 24,
+      "page": 2,
+      "chord": "Cmaj7",
+      "degree_in_C": "Imaj7",
+      "beats": 4,
+      "volta": 2,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 25,
+      "page": 2,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 26,
+      "page": 2,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 27,
+      "page": 2,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 28,
+      "page": 2,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 29,
+      "page": 2,
+      "chord": "Bbmaj7",
+      "degree_in_C": "bVIImaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 30,
+      "page": 2,
+      "chord": "Fmaj7",
+      "degree_in_C": "IVmaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 31,
+      "page": 3,
+      "chord": "G#add9",
+      "degree_in_C": "#Vadd9 / bVIadd9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 32,
+      "page": 3,
+      "chord": "Cmaj7",
+      "degree_in_C": "Imaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 33,
+      "page": 3,
+      "chord": "Fmaj7",
+      "degree_in_C": "IVmaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 34,
+      "page": 3,
+      "chord": "G",
+      "degree_in_C": "V",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 35,
+      "page": 3,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 36,
+      "page": 3,
+      "chord": "Am7",
+      "degree_in_C": "VIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 37,
+      "page": 3,
+      "chord": "Fmaj7",
+      "degree_in_C": "IVmaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 38,
+      "page": 3,
+      "chord": "G",
+      "degree_in_C": "V",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 39,
+      "page": 3,
+      "chord": "Em7",
+      "degree_in_C": "IIIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 40,
+      "page": 3,
+      "chord": "Am7",
+      "degree_in_C": "VIm7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 41,
+      "page": 3,
+      "chord": "G#add9",
+      "degree_in_C": "#Vadd9 / bVIadd9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 42,
+      "page": 3,
+      "chord": "Cmaj7",
+      "degree_in_C": "Imaj7",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 43,
+      "page": 3,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 44,
+      "page": 3,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 45,
+      "page": 3,
+      "chord": "Dm9",
+      "degree_in_C": "IIm9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    },
+    {
+      "score_bar": 46,
+      "page": 3,
+      "chord": "Cmaj9",
+      "degree_in_C": "Imaj9",
+      "beats": 4,
+      "volta": null,
+      "transcription_status": "transcribed_from_user_score",
+      "first_pass_alignment": null
+    }
+  ],
+  "playback": {
+    "repeat_return_score_bar": 5,
+    "repeat_return_status": "explicitly_confirmed_by_user",
+    "first_ending": [
+      21,
+      22
+    ],
+    "second_ending": [
+      23,
+      24
+    ],
+    "expanded_score_bar_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "expanded_bar_count": 62,
+    "expanded_beat_count": 248,
+    "complete_score_sequence": [
+      {
+        "playback_bar": 1,
+        "score_bar": 1,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          1,
+          2
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 2,
+        "score_bar": 2,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          3,
+          4
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 3,
+        "score_bar": 3,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          5,
+          6
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 4,
+        "score_bar": 4,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          7,
+          8
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 5,
+        "score_bar": 5,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          9,
+          10
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 6,
+        "score_bar": 6,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          11,
+          12
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 7,
+        "score_bar": 7,
+        "page": 1,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          13,
+          14
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 8,
+        "score_bar": 8,
+        "page": 1,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          15,
+          16
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 9,
+        "score_bar": 9,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          17,
+          18
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 10,
+        "score_bar": 10,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          19,
+          20
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 11,
+        "score_bar": 11,
+        "page": 1,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          21,
+          22
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 12,
+        "score_bar": 12,
+        "page": 1,
+        "chord": "A7",
+        "degree_in_C": "VI7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          23,
+          24
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 13,
+        "score_bar": 13,
+        "page": 1,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          25,
+          26
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 14,
+        "score_bar": 14,
+        "page": 2,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          27,
+          28
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 15,
+        "score_bar": 15,
+        "page": 2,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          29,
+          30
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 16,
+        "score_bar": 16,
+        "page": 2,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          31,
+          32
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 17,
+        "score_bar": 17,
+        "page": 2,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          33,
+          34
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 18,
+        "score_bar": 18,
+        "page": 2,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          35,
+          36
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 19,
+        "score_bar": 19,
+        "page": 2,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          37,
+          38
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 20,
+        "score_bar": 20,
+        "page": 2,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          39,
+          40
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 21,
+        "score_bar": 21,
+        "page": 2,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          41,
+          42
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 22,
+        "score_bar": 22,
+        "page": 2,
+        "chord": "Cadd9",
+        "degree_in_C": "Iadd9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          43,
+          44
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 23,
+        "score_bar": 5,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          45,
+          46
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 24,
+        "score_bar": 6,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          47,
+          48
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 25,
+        "score_bar": 7,
+        "page": 1,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          49,
+          50
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 26,
+        "score_bar": 8,
+        "page": 1,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          51,
+          52
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 27,
+        "score_bar": 9,
+        "page": 1,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          53,
+          54
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 28,
+        "score_bar": 10,
+        "page": 1,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          55,
+          56
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 29,
+        "score_bar": 11,
+        "page": 1,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          57,
+          58
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 30,
+        "score_bar": 12,
+        "page": 1,
+        "chord": "A7",
+        "degree_in_C": "VI7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          59,
+          60
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 31,
+        "score_bar": 13,
+        "page": 1,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          61,
+          62
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 32,
+        "score_bar": 14,
+        "page": 2,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          63,
+          64
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 33,
+        "score_bar": 15,
+        "page": 2,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          65,
+          66
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 34,
+        "score_bar": 16,
+        "page": 2,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          67,
+          68
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 35,
+        "score_bar": 17,
+        "page": 2,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          69,
+          70
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 36,
+        "score_bar": 18,
+        "page": 2,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          71,
+          72
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 37,
+        "score_bar": 19,
+        "page": 2,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          73,
+          74
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 38,
+        "score_bar": 20,
+        "page": 2,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          75,
+          76
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 39,
+        "score_bar": 23,
+        "page": 2,
+        "chord": "G#add9",
+        "degree_in_C": "#Vadd9 / bVIadd9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          77,
+          78
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 40,
+        "score_bar": 24,
+        "page": 2,
+        "chord": "Cmaj7",
+        "degree_in_C": "Imaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          79,
+          80
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 41,
+        "score_bar": 25,
+        "page": 2,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          81,
+          82
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 42,
+        "score_bar": 26,
+        "page": 2,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          83,
+          84
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 43,
+        "score_bar": 27,
+        "page": 2,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          85,
+          86
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 44,
+        "score_bar": 28,
+        "page": 2,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          87,
+          88
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 45,
+        "score_bar": 29,
+        "page": 2,
+        "chord": "Bbmaj7",
+        "degree_in_C": "bVIImaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          89,
+          90
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 46,
+        "score_bar": 30,
+        "page": 2,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          91,
+          92
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 47,
+        "score_bar": 31,
+        "page": 3,
+        "chord": "G#add9",
+        "degree_in_C": "#Vadd9 / bVIadd9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          93,
+          94
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 48,
+        "score_bar": 32,
+        "page": 3,
+        "chord": "Cmaj7",
+        "degree_in_C": "Imaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          95,
+          96
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 49,
+        "score_bar": 33,
+        "page": 3,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          97,
+          98
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 50,
+        "score_bar": 34,
+        "page": 3,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          99,
+          100
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 51,
+        "score_bar": 35,
+        "page": 3,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          101,
+          102
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 52,
+        "score_bar": 36,
+        "page": 3,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          103,
+          104
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 53,
+        "score_bar": 37,
+        "page": 3,
+        "chord": "Fmaj7",
+        "degree_in_C": "IVmaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          105,
+          106
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 54,
+        "score_bar": 38,
+        "page": 3,
+        "chord": "G",
+        "degree_in_C": "V",
+        "beats": 4,
+        "nominal_ui_bars": [
+          107,
+          108
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 55,
+        "score_bar": 39,
+        "page": 3,
+        "chord": "Em7",
+        "degree_in_C": "IIIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          109,
+          110
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 56,
+        "score_bar": 40,
+        "page": 3,
+        "chord": "Am7",
+        "degree_in_C": "VIm7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          111,
+          112
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 57,
+        "score_bar": 41,
+        "page": 3,
+        "chord": "G#add9",
+        "degree_in_C": "#Vadd9 / bVIadd9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          113,
+          114
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 58,
+        "score_bar": 42,
+        "page": 3,
+        "chord": "Cmaj7",
+        "degree_in_C": "Imaj7",
+        "beats": 4,
+        "nominal_ui_bars": [
+          115,
+          116
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 59,
+        "score_bar": 43,
+        "page": 3,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          117,
+          118
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 60,
+        "score_bar": 44,
+        "page": 3,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          119,
+          120
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 61,
+        "score_bar": 45,
+        "page": 3,
+        "chord": "Dm9",
+        "degree_in_C": "IIm9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          121,
+          122
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      },
+      {
+        "playback_bar": 62,
+        "score_bar": 46,
+        "page": 3,
+        "chord": "Cmaj9",
+        "degree_in_C": "Imaj9",
+        "beats": 4,
+        "nominal_ui_bars": [
+          123,
+          124
+        ],
+        "ui_mapping_status": "nominal_2_to_1_only_not_verified_after_grid_drift",
+        "audio_start_seconds": null,
+        "audio_end_seconds": null
+      }
+    ],
+    "recording_alignment_status": "not_audio_verified"
+  },
+  "unresolved": [
+    "第三页新增转录及完整展开顺序待用户检查；已确认事项不再待确认",
+    "全曲逐小节录音边界尚未听校；当前网格有126个downbeat，不能把62小节的理论124格直接当成已经对齐",
+    "谱面第22小节的旧网格投影仅3.00秒，需优先复核此处及之后相位",
+    "0–1.80秒、末尾延音和余响尚未独立标注，不自动设为N"
+  ],
+  "sources": [
+    "C:/Users/33573/AppData/Local/Temp/codex-clipboard-b2001499-039c-4dfa-ae08-015b14af00d6.png",
+    "C:/Users/33573/AppData/Local/Temp/codex-clipboard-7e80f8bc-539b-48cf-97c6-5e6dab34869f.png",
+    "C:/Users/33573/AppData/Local/Temp/codex-clipboard-6b0fc57c-ad32-4674-a510-e666f541e660.png"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "project_id": "aa5a41797bb343e590abcf4d8b27ae54",
+  "run_id": "d5312b8f71364c56a01f0e6b8f67e0c7",
+  "source_id": "retained10_stable",
+  "revision": 1,
+  "original_files_unchanged": {
+    "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\analysis.json": "e7c01f365ab7507f2173db0e450e9fe1a1ccee231d9a279c6eec21ad8f66f8ae",
+    "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\retained10.lab": "7764ed114091ec4527748fd50db47ccc6c8eee22d3c3494a8811735c33e591ab",
+    "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\retained10_stable.lab": "8172b12d3e0a76668c6f0542e479a58b5d6df3c516224feaa3908dc7b1701df1",
+    "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\raw_madmom.lab": "0399bd2bb7bb6a7a19faa28654b3eaf032aebbc41ccf5a2296dfea83eedcef67"
+  },
+  "reference_events": 62,
+  "reference_bars": 62,
+  "grid_regions": 64,
+  "coverage": [
+    1.8,
+    230.72
+  ],
+  "unannotated": [
+    [
+      0,
+      1.8
+    ],
+    [
+      230.72,
+      238.1226530612245
+    ]
+  ],
+  "timing_status": "projected_unverified",
+  "backup_folder": "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\d5312b8f71364c56a01f0e6b8f67e0c7\\reference_imports\\xuni-20261030T210050Z"
+}

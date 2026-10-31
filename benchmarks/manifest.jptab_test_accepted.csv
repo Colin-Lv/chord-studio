@@ -1,0 +1,2 @@
+"id","dataset","split","artist","title","key","meter","audio","prediction","chord_reference","beat_reference","notes"
+"jptab_test_BEYOND___5ef8bbfb-2ca6-4fe2-9718-066699f7b004","jptab_test","symbolic","BEYOND","灰色轨迹","A","4/4","","","raw/jptab_test/jptab_test_BEYOND___5ef8bbfb-2ca6-4fe2-9718-066699f7b004/chords.lab","raw/jptab_test/jptab_test_BEYOND___5ef8bbfb-2ca6-4fe2-9718-066699f7b004/beats.beats","symbolic Guitar Pro import"

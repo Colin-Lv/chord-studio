@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Chord Studio · 和声工作台</title>
+  <style>__STUDIO_CSS__</style>
+</head>
+<body>
+  <a class="skip-link" href="#bars">跳到和弦谱</a>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-line">
+        <a class="brand" href="#" aria-label="Chord Studio 首页"><span class="brand-mark" aria-hidden="true">♮</span><span>CHORD <b>STUDIO</b><small>和声工作台</small></span></a>
+        <div class="title"><h1 id="songTitle">正在加载分析…</h1><p id="songPath"></p></div>
+        <div class="header-actions"><button class="icon-button" id="themeToggle" title="切换明暗主题" aria-label="切换明暗主题">◐</button><button class="tool-button" id="shortcutHelp" title="键盘快捷键">快捷键 <kbd>?</kbd></button><button class="tool-button primary" id="exportJson" type="button">导出标注 ↗</button></div>
+      </div>
+      <div class="transport-line">
+        <div class="transport">
+          <button class="icon-button" id="previousBar" aria-label="上一小节" title="上一小节">❮</button>
+          <button class="play" id="playBtn" aria-label="播放" title="播放 / 暂停（空格）">▶</button>
+          <button class="icon-button" id="nextBar" aria-label="下一小节" title="下一小节">❯</button>
+          <div class="time"><button id="currentTime" type="button" title="点击精确定位（G）" aria-label="打开精确时间定位">00:00</button><span class="time-divider">/</span><span id="duration">00:00</span></div>
+          <input class="seek" id="seek" type="range" min="0" max="10000" step="1" value="0" aria-label="播放进度">
+          <label class="speed-control"><span class="sr-only">播放速度</span><select id="playbackRate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1" selected>1×</option><option value="1.1">1.1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label>
+        </div>
+        <div class="now"><div><span class="eyebrow" id="currentPosition">当前和弦</span><span class="chord" id="currentChord">N</span><span class="now-secondary" id="currentSecondary"></span></div><div id="beatPulse" class="beat-pulse" aria-label="拍点"></div></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="print-heading"><p>CHORD STUDIO · 和声进行谱</p><h1 id="printTitle"></h1><div id="printMeta"></div></div>
+      <section class="session-strip" aria-label="歌曲信息">
+        <div class="stats"><div class="stat"><span>速度 BPM</span><strong id="bpm">—</strong></div><div class="stat"><span id="keyCaption">调性</span><div class="key-line"><strong id="key">—</strong><button class="key-evidence-button" id="keyCandidatesButton" type="button" hidden>候选</button></div></div><div class="stat"><span>拍号</span><strong id="meter">—</strong></div><div class="stat"><span>小节</span><strong id="barCount">—</strong></div></div>
+        <div class="session-status"><span class="status-dot"></span><span id="sessionStatus">本地工作区 · 修改自动保存</span><label class="file-link">选择音频<input id="localAudioFile" type="file" accept="audio/*" class="sr-only"></label></div>
+      </section>
+
+      <section id="keyFusionEvidence" class="overview-panel" hidden aria-live="polite"></section>
+      <section class="overview-panel" aria-label="歌曲结构与播放位置">
+        <div class="section-heading"><div><span class="eyebrow">SONG MAP</span><h2>歌曲总览 <span id="structureSummary" class="subtle"></span></h2></div><div class="overview-legend"><span><i class="legend-dot low"></i>待复核</span><span><i class="legend-dot edited"></i>已修改</span><span id="missingEvidenceLegend" hidden><i class="legend-dot unknown"></i>证据缺失</span><span class="subtle" id="overviewHint">点击定位 · 拖动选择循环</span></div></div>
+        <div id="sectionTimeline" class="section-timeline" aria-label="段落导航"></div>
+        <div class="overview-track" id="overviewTrack" role="slider" tabindex="0" aria-label="全曲时间轴" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <canvas id="overviewCanvas" aria-hidden="true"></canvas><div id="loopOverlay" class="loop-overlay" hidden></div><div id="overviewPlayhead" class="overview-playhead"><span></span></div>
+        </div>
+        <div id="timeRuler" class="time-ruler" aria-hidden="true"></div>
+        <div class="loop-controls"><button class="tool-button small" id="loopToggle" aria-pressed="false">↻ 循环关闭</button><button class="text-button" id="setLoopA" title="将播放位置设为 A（[）">A <span id="loopAValue">—</span></button><span class="subtle">→</span><button class="text-button" id="setLoopB" title="将播放位置设为 B（]）">B <span id="loopBValue">—</span></button><button class="text-button" id="loopSelection">循环选中片段</button><button class="text-button" id="clearLoop">清除</button><span class="loop-separator"></span><label class="sync-control"><span>画面校准</span><input id="sync" type="range" min="-2000" max="2000" step="10" value="0" aria-label="画面同步校准"><output id="syncValue">0ms</output></label></div>
+      </section>
+
+      <p id="gridReviewNotice" class="grid-review-notice" role="status" hidden></p>
+      <section class="workspace">
+        <nav class="structure-sidebar" aria-label="歌曲段落">
+          <div class="side-heading"><span class="eyebrow">STRUCTURE</span><h2>段落导航</h2></div><div id="sectionList" class="section-list"></div><div class="sidebar-divider"></div><div class="side-heading"><h3>和声循环</h3></div><div id="loopList" class="loop-list"></div><p class="sidebar-note" id="structureNote">段落标签表示重复关系。主歌、副歌等功能可在段落标注中确认。</p>
+        </nav>
+        <div class="score-workspace">
+          <div class="score-toolbar"><div><span class="eyebrow">HARMONY SCORE</span><h2>和弦谱 <span id="visibleBarCount" class="subtle"></span></h2></div><div class="score-tools"><div class="display-toggle" role="group" aria-label="和弦表示"><button type="button" data-display="name">和弦名</button><button type="button" data-display="roman">级数</button></div><button class="tool-button small" id="followPlayback" aria-pressed="true" title="随播放自动滚动；手动滚动后短暂暂停跟随">跟随播放</button></div></div>
+          <div class="score-subtoolbar"><label class="compact-label">定位<input id="jumpBar" type="number" min="1" step="1" placeholder="小节" aria-label="定位到小节"><button class="text-button" id="jumpBarButton">前往</button></label><label class="compact-label">视图<select id="densitySelect" aria-label="谱面密度"><option value="comfortable">舒适</option><option value="compact">紧凑</option><option value="large">放大</option></select></label><label class="check-row"><input type="checkbox" id="showBeats" checked><span>逐拍</span></label><label class="check-row"><input type="checkbox" id="reviewOnly"><span>仅待复核</span></label><span class="spacer"></span><button class="icon-button small" id="undoEdit" aria-label="撤销修改" title="撤销（Ctrl+Z）" disabled>↶</button><button class="icon-button small" id="redoEdit" aria-label="重做修改" title="重做（Ctrl+Shift+Z）" disabled>↷</button></div>
+          <div class="score-help">单击定位与选中 · 双击编辑 · 空格播放 · 方向键移动<span id="filterStatus"></span></div>
+          <div class="timeline-alert" id="timelineAlert" hidden role="alert"><strong>标注时间轴存在冲突</strong><p id="timelineAlertText"></p><div id="timelineConflictExamples"></div><button class="tool-button warning" id="rebuildEventTimeline">以小节谱格重建事件时间轴</button><small>此操作保留原始文件，可撤销。请先比较上方谱格与右侧事件列表中的标注。</small></div>
+          <div class="bars" id="bars" tabindex="-1" aria-label="按小节排列的和弦谱"></div>
+          <div id="emptyScore" class="empty-state" hidden>当前筛选范围内没有待复核片段。</div>
+        </div>
+        <aside class="inspector" aria-label="标注检查器">
+          <div class="mobile-inspector-heading"><strong>标注检查器</strong><button class="icon-button" id="dismissInspector" aria-label="关闭标注检查器">×</button></div>
+          <div class="inspector-tabs" role="tablist" aria-label="检查器"><button id="tabEdit" role="tab" data-panel="editPanel" aria-controls="editPanel" aria-selected="true">和弦</button><button id="tabStructure" role="tab" data-panel="structurePanel" aria-controls="structurePanel" aria-selected="false">段落</button><button id="tabTools" role="tab" data-panel="toolsPanel" aria-controls="toolsPanel" aria-selected="false">文件</button></div>
+          <div id="editPanel" role="tabpanel" aria-labelledby="tabEdit" class="inspector-page">
+            <div class="panel"><div class="panel-heading"><h2>校正和弦</h2><span id="selectionConfidence" class="confidence-chip">—</span></div><div class="edit-grid"><p class="hint-empty evidence-note" id="selectionEvidence"></p>
+              <div class="edit-field"><span>选中位置</span><strong id="editRange">—</strong></div>
+              <label class="edit-field"><span>和弦名称 / 级数</span><input id="chordInput" type="text" spellcheck="false" autocomplete="off" value="N" aria-describedby="chordHint"><small id="chordHint">支持 Am7、C/E、V7、6m 等写法</small></label>
+              <div class="button-row three"><button class="tool-button primary" id="saveChord">应用 ↵</button><button class="tool-button" id="clearChord">无和弦 N</button><button class="tool-button" id="resetChord">还原</button></div>
+              <div class="button-row"><button class="tool-button" id="auditionSelection">▶ 试听片段</button><button class="tool-button" id="editAtPlayhead">选中播放处</button></div>
+              <div class="boundary-editor"><div class="compact-row"><label class="edit-field"><span>开始 / 秒</span><input id="eventStart" type="number" step="0.01" min="0"></label><label class="edit-field"><span>结束 / 秒</span><input id="eventEnd" type="number" step="0.01" min="0"></label></div><div class="button-row"><button class="tool-button small" id="applyBoundary">调整边界</button><button class="tool-button small" id="splitAtPlayhead">在播放处切分</button></div><small>边界调整同步移动相邻片段，保持小节连续。</small></div>
+              <details><summary>切分与复制</summary><div class="details-content"><div class="button-row"><button class="tool-button" id="splitHalf">拆半</button><button class="tool-button" id="splitBeats">按拍拆分</button><button class="tool-button" id="split8">拆成 8 分</button><button class="tool-button" id="split16">拆成 16 分</button></div><button class="tool-button" id="mergeSame">合并相邻同和弦</button><div class="button-row"><button class="tool-button" id="copyCell">复制片段</button><button class="tool-button" id="pasteCell">粘贴片段</button><button class="tool-button" id="copyBar">复制小节</button><button class="tool-button" id="pasteBar">粘贴小节</button></div><div class="edit-status" id="copyStatus">未复制</div></div></details>
+              <div class="edit-status" id="editStatus" role="status">0 修改</div>
+            </div></div>
+            <details class="panel" open><summary>当前小节建议</summary><div class="hint-list details-content" id="suggestionList"></div></details>
+            <details class="panel"><summary>切分路径</summary><div class="hint-list details-content" id="pathProposalList"></div></details>
+            <details class="panel"><summary>和弦事件列表</summary><div class="event-list details-content" id="eventList"></div></details>
+          </div>
+          <div id="structurePanel" role="tabpanel" aria-labelledby="tabStructure" class="inspector-page" hidden>
+            <div class="panel"><h2>段落标注</h2><div class="edit-grid"><label class="edit-field"><span>段落</span><select id="sectionSelect"></select></label><label class="edit-field"><span>名称</span><input id="sectionName" placeholder="例如：主歌 1"></label><label class="edit-field"><span>歌曲功能</span><select id="sectionRole"><option value="unknown">未确认</option><option value="intro">前奏</option><option value="verse">主歌</option><option value="pre_chorus">预副歌</option><option value="chorus">副歌</option><option value="bridge">桥段</option><option value="instrumental">间奏 / 器乐</option><option value="outro">尾奏</option></select></label><div class="compact-row"><label class="edit-field"><span>开始小节</span><input id="sectionStartBar" type="number" min="1" step="1"></label><label class="edit-field"><span>结束小节</span><input id="sectionEndBar" type="number" min="1" step="1"></label></div><div class="button-row"><button class="tool-button primary" id="saveSection">保存段落</button><button class="tool-button" id="addSection" title="按当前小节范围划分新段落，保留原段落的左右剩余部分">划分新段落</button></div><div class="button-row"><button class="tool-button" id="loopSection">循环此段</button><button class="tool-button warning" id="deleteSection">删除段落</button></div><p class="hint-empty">调整范围会同步移动相邻边界；划分新段落保留左右剩余部分。段落始终连续覆盖全谱。</p><p class="hint-empty" id="sectionEvidence">自动分段提供重复与边界证据，歌曲功能由人工确认。</p></div></div>
+            <div class="panel"><h2>节拍网格质量</h2><div id="gridQuality" class="hint-empty"></div></div>
+          </div>
+          <div id="toolsPanel" role="tabpanel" aria-labelledby="tabTools" class="inspector-page" hidden>
+            <div class="panel"><h2>导入完整标注</h2><label class="file-drop">打开 corrected JSON<input id="importAnalysis" type="file" accept=".json,application/json"></label><p class="hint-empty">保留时间边界、调性与段落标注，可撤销导入。</p><div id="importStatus" class="edit-status" role="status"></div></div>
+            <details class="panel"><summary>从和弦文本铺谱</summary><div class="edit-grid details-content"><label class="edit-field"><span>文本 / LAB / CSV / JSON</span><input id="scoreFile" type="file" accept=".txt,.lab,.csv,.json,.chords"></label><label class="edit-field"><span>曲谱</span><textarea id="scoreText" spellcheck="false" placeholder="| D | Bm | G | A |&#10;| I | vi | IV | V |&#10;176451"></textarea></label><div class="compact-row"><label class="edit-field"><span>起始小节</span><input id="scoreStart" type="number" min="1" step="1" value="1"></label><label class="edit-field"><span>单位</span><select id="scoreGrid"><option value="auto">自动</option><option value="bar">小节</option><option value="half">半小节</option><option value="beat">拍</option><option value="sixteenth">16 分</option></select></label></div><label class="check-row"><input id="scoreRepeat" type="checkbox"><span>循环铺满剩余小节</span></label><div class="button-row"><button class="tool-button primary" id="applyScore">应用曲谱</button><button class="tool-button" id="clearScore">清空文本</button></div><div class="edit-status" id="scoreStatus">等待曲谱</div></div></details>
+            <div class="panel"><h2>导出与恢复</h2><div class="edit-grid"><button class="tool-button" id="exportLab">导出 LAB 和弦时间轴</button><button class="tool-button" id="exportSections">导出段落 CSV</button><button class="tool-button" id="printScore">打印 / 导出 PDF 曲谱</button><button class="tool-button warning" id="resetAll">恢复原始分析</button><p class="hint-empty">每次修改自动保存在此浏览器。导出 JSON 可保存到文件并继续标注。PDF 保留当前筛选与和弦显示方式。</p></div></div>
+          </div>
+        </aside>
+      </section>
+      <footer class="app-footer"><span>CHORD STUDIO <span class="subtle">/ 让每一段和声清晰可见</span></span><span id="footerStatus">所有处理均在本地完成</span></footer>
+    </main>
+  </div>
+  <div id="inspectorBackdrop" class="inspector-backdrop" hidden></div>
+  <div class="mobile-editor-dock"><div><span id="mobileSelection">选择一个和弦片段</span><small id="mobileSelectionTime"></small></div><button class="tool-button primary" id="showInspector" aria-expanded="false">编辑标注 ↗</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="shortcutDialog" aria-labelledby="shortcutDialogTitle"><div class="dialog-heading"><h2 id="shortcutDialogTitle">键盘快捷键</h2><button class="icon-button" id="closeShortcutHelp" aria-label="关闭">×</button></div><div class="shortcut-grid"><kbd>Space</kbd><span>播放 / 暂停</span><kbd>← →</kbd><span>上一个 / 下一个片段</span><kbd>↑ ↓</kbd><span>上一小节 / 下一小节</span><kbd>Enter</kbd><span>编辑选中和弦 / 应用修改</span><kbd>Ctrl Z</kbd><span>撤销</span><kbd>Ctrl Shift Z</kbd><span>重做</span><kbd>[ / ]</kbd><span>设置循环 A / B 点</span><kbd>L</kbd><span>开启 / 关闭循环</span><kbd>G</kbd><span>精确跳到指定时间</span><kbd>Ctrl C / V</kbd><span>复制 / 粘贴选中片段或小节</span><kbd>Esc</kbd><span>结束输入并返回谱面</span></div><p class="hint-empty">输入文字时保留系统编辑快捷键。</p></dialog>
+  <dialog id="seekDialog" aria-labelledby="seekDialogTitle"><div class="dialog-heading"><h2 id="seekDialogTitle">精确定位</h2><button class="icon-button" id="closeSeekDialog" aria-label="关闭精确定位">×</button></div><div class="edit-grid"><label class="edit-field"><span>播放时间 / 分:秒.毫秒 或秒数</span><input id="seekTimeInput" type="text" inputmode="decimal" autocomplete="off" placeholder="01:23.450"></label><p class="hint-empty" id="seekTimeHint"></p><div class="button-row"><button class="tool-button primary" id="applySeekTime">定位</button><button class="tool-button" id="auditionSeekTime">从此处播放</button></div></div></dialog>
+  <dialog id="keyCandidatesDialog" aria-labelledby="keyCandidatesDialogTitle"><div class="dialog-heading"><h2 id="keyCandidatesDialogTitle">全局调性候选</h2><button class="icon-button" id="closeKeyCandidates" aria-label="关闭调性候选">×</button></div><p class="hint-empty" id="keyCandidateContext"></p><ol id="keyCandidateList" class="key-candidate-list"></ol><p class="hint-empty">这里的证据分值未经正确率校准，仅用于比较候选。局部转调时间线与人工调性标注优先于全局估计。</p></dialog>
+  <audio id="audio" preload="metadata"></audio>
+  <script>__STUDIO_JS__</script>
+</body>
+</html>

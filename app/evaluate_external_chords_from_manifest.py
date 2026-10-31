@@ -13,7 +13,10 @@ from evaluate_chords import evaluate, read_reference
 from generate_madmom_chords_from_manifest import output_path_for_row
 
 
-FIELDS = ["id", "prediction", "chord_reference", "root_accuracy", "triad_accuracy", "status", "message"]
+CHORD_METRICS = ["root_accuracy", "triad_accuracy", "root_wcsr", "triad_wcsr", "tetrad_wcsr",
+                 "prediction_coverage", "evaluated_seconds", "non_no_chord_seconds",
+                 "unknown_reference_seconds", "missing_prediction_seconds"]
+FIELDS = ["id", "prediction", "chord_reference", *CHORD_METRICS, "status", "message"]
 
 
 def resolve_path(base: Path, value: str) -> Path | None:
@@ -27,11 +30,15 @@ def resolve_path(base: Path, value: str) -> Path | None:
 def summarize(rows: list[dict[str, object]]) -> dict[str, object]:
     ok = [row for row in rows if row["status"] == "ok"]
     summary: dict[str, object] = {"items": len(rows), "evaluated": len(ok)}
-    for metric in ("root_accuracy", "triad_accuracy"):
+    for metric in ("root_accuracy", "triad_accuracy", "root_wcsr", "triad_wcsr", "tetrad_wcsr", "prediction_coverage"):
         values = [float(row[metric]) for row in ok if row.get(metric) not in {"", None}]
         if values:
             summary[f"mean_{metric}"] = sum(values) / len(values)
             summary[f"count_{metric}"] = len(values)
+            weight = "non_no_chord_seconds" if metric.endswith("accuracy") else "evaluated_seconds"
+            total = sum(float(row[weight]) for row in ok)
+            summary[f"duration_weighted_{metric}"] = sum(float(row[metric]) * float(row[weight]) for row in ok) / total if total else 0
+    summary["evaluation_protocol"] = "full reference support, exact duration; X/gaps excluded; WCSR includes N"
     return summary
 
 
@@ -72,8 +79,8 @@ def main() -> int:
         else:
             try:
                 metrics = evaluate(read_reference(ref), read_reference(pred), args.frame)
-                out["root_accuracy"] = metrics["root_accuracy"]
-                out["triad_accuracy"] = metrics["triad_accuracy"]
+                for metric in CHORD_METRICS:
+                    out[metric] = metrics[metric]
                 out["status"] = "ok"
             except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
                 out["status"] = "error"

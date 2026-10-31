@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>调性听辨记录</title>
+  <link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/key-annotation.css">
+  <script defer src="/assets/key-listening-handoff.js"></script><script defer src="/assets/key-listening-history.js"></script><script defer src="/assets/key_annotation.js"></script>
+</head>
+<body>
+  <header class="app-header"><a href="/" class="brand">Harmony Studio</a><span class="muted">调性听辨记录</span></header>
+  <main class="annotation-shell"><section class="panel annotation-panel">
+    <div class="eyebrow">LISTEN · MARK · REVIEW</div><h1 id="title">调性听辨</h1>
+    <p class="muted">先确定听辨范围，再记录判断；可以保留不确定、歧义或多调。</p>
+    <p id="note" class="annotation-note"></p>
+    <p id="entryNote" class="annotation-note" hidden></p>
+    <section id="savedFragments" class="annotation-fragments" aria-label="已保存的片段听辨" hidden>
+      <div class="section-heading"><h3>已保存的片段</h3><span id="fragmentCount" class="muted"></span></div>
+      <p class="muted">每个精确范围显示最近一次锁定。载入只填入草稿，再次锁定会保留旧记录并新增修订。</p>
+      <div id="fragmentList"></div>
+    </section>
+    <form id="annotationForm">
+      <section class="annotation-listening" aria-label="精确片段听辨">
+        <audio id="listen" controls></audio>
+        <div class="annotation-grid annotation-times">
+          <label>开始（秒）<input id="start" type="number" min="0" step="any" value="0" required></label>
+          <label>结束（秒）<input id="end" type="number" min="0" step="any" required></label>
+        </div>
+        <div class="annotation-actions">
+          <button id="listenRange" class="secondary" type="button" disabled>试听此区间</button>
+          <button id="loopRange" class="secondary" type="button" aria-pressed="false" disabled>循环此区间</button>
+          <button id="stopRange" class="text-button" type="button">停止</button>
+          <button id="rangeStartHere" class="text-button" type="button" disabled>当前位置作起点</button>
+          <button id="rangeEndHere" class="text-button" type="button" disabled>当前位置作终点</button>
+        </div>
+        <p id="rangeMessage" class="status" role="status">试听和调整时间不会保存标注。</p>
+      </section>
+      <div class="annotation-grid">
+        <label>范围<select id="scope"><option value="full_recording">整曲</option><option value="excerpt">指定片段</option></select></label>
+        <label>判断状态<select id="status"><option value="unknown">尚不确定</option><option value="single_key">单一主调</option><option value="ambiguous">多个候选 / 歧义</option><option value="multi_key">多调</option></select></label>
+        <label>主音<select id="tonic"><option value="">未知</option></select></label>
+        <label>大小调族<select id="mode"><option value="">未知</option><option value="major">大调</option><option value="minor">小调</option></select></label>
+        <label class="annotation-wide">原始调式 / 多调说明<input id="originalMode" type="text" placeholder="例如：前段偏 C，后段偏 G；转调边界仍待确认"></label>
+        <label class="annotation-wide">听辨依据<textarea id="basis" required rows="4" placeholder="记录听到的稳定音、结束感、低音走向，以及仍有疑问的时间段。"></textarea></label>
+        <label class="annotation-wide">实际录音版本<input id="recording" type="text" required></label>
+        <label>标注者<input id="reviewer" type="text" required></label>
+        <label class="annotation-wide">此前是否看过这段录音的模型建议？<select id="priorExposure"><option value="unknown">不确定 / 未核实</option><option value="seen">看过</option><option value="not_seen">自述未看过（仍需独立审核）</option></select></label>
+      </div>
+      <div class="annotation-actions annotation-submit">
+        <button id="lock" class="primary" type="submit" disabled>锁定听辨记录</button>
+        <button id="reveal" class="secondary" type="button" disabled>查看模型建议</button>
+        <button id="freshLabel" class="text-button" type="button">清空判断，另记片段</button>
+      </div>
+    </form>
+    <p id="message" class="status" role="status"></p>
+    <details class="annotation-history"><summary>查看记录历史</summary><pre id="history" class="review-json"></pre></details>
+    <div id="prediction" hidden>
+      <h3>整曲模型建议 · 未验证</h3>
+      <p class="muted">这些是整曲分析结果，不代表所选片段的调性；局部变化与转调仍需听辨。</p>
+      <p id="predictionSummary"></p>
+      <details class="annotation-history"><summary>查看完整原始证据</summary><pre id="evidence" class="review-json"></pre></details>
+    </div>
+    <a id="export" class="text-link" download="key_annotation.json">导出听辨记录 JSON ↓</a>
+  </section></main>
+</body>
+</html>

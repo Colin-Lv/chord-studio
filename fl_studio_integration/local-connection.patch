@@ -1,0 +1,68 @@
+diff --git a/src/fl_studio_mcp/utils/midi_connection.py b/src/fl_studio_mcp/utils/midi_connection.py
+index bebdc94..a28f8ba 100644
+--- a/src/fl_studio_mcp/utils/midi_connection.py
++++ b/src/fl_studio_mcp/utils/midi_connection.py
+@@ -14,7 +14,9 @@ instead of keystrokes.
+ from __future__ import annotations
+ 
+ import json
++import os
+ import platform
++import re
+ import time
+ from pathlib import Path
+ from typing import Any
+@@ -96,29 +98,38 @@ class MIDIConnection:
+             )
+             return False
+ 
+-        # Look for IAC Driver (Mac) or other virtual MIDI ports
+-        target_port = None
+-        for port_name in output_ports:
+-            # Prefer IAC Driver on Mac
+-            if "IAC" in port_name:
+-                target_port = port_name
+-                break
+-            # Also accept loopMIDI on Windows or any port with "FL" in name
+-            if "loopMIDI" in port_name or "FL" in port_name.upper():
+-                target_port = port_name
+-                break
+-
+-        # If no specific port found, use the first available
+-        if target_port is None:
+-            target_port = output_ports[0]
++        # Never route bridge commands to an arbitrary synth or hardware output.
++        # WinMM appends a device index to the configured endpoint's display name.
++        requested = os.environ.get("FL_MIDI_PORT", "")
++        if requested:
++            candidates = [p for p in output_ports if p == requested
++                          or re.sub(r" \d+$", "", p) == requested]
++        else:
++            candidates = [p for p in output_ports
++                          if "IAC" in p or "loopMIDI" in p or "FLStudioMCP" in p]
++        if len(candidates) != 1:
++            self._error = (
++                f"Expected one FL Studio virtual MIDI port ({requested or 'auto'}), "
++                f"found {len(candidates)}. Available outputs: {output_ports}. "
++                "Start loopMIDI and configure its input in FL Studio."
++            )
++            return False
++        target_port = candidates[0]
+ 
+         try:
+             self._port = mido.open_output(target_port)
+             self._port_name = target_port
+             self._connected = True
+             self._error = None
++            # Opening a port is not proof that FL Studio is listening.
++            probe = self.send_command("transport.getStatus")
++            if not probe.get("success") or "is_playing" not in probe:
++                self.disconnect()
++                self._error = f"FL Studio handshake failed: {probe.get('error', probe)}"
++                return False
+             return True
+         except Exception as e:
++            self.disconnect()
+             self._error = f"Failed to open MIDI port '{target_port}': {e}"
+             return False
+ 

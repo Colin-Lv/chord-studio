@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>听辨实验室 · Harmony Studio</title><link rel="stylesheet" href="/assets/synthetic-review.css"><link rel="stylesheet" href="/assets/local-beat-review.css"><script defer src="/assets/synthetic-review.js"></script></head>
+<body>
+<header><a class="brand" href="/">♮ Harmony <b>Studio</b></a><span>听辨实验室 <i>本机 · 只读</i></span></header>
+<main>
+<section class="intro"><p class="eyebrow">LISTEN TO THE DIFFERENCE</p><h1>听见九音，也听见误判。</h1><p>把同一段音频与不同来源并排聆听。作曲规格是生成意图，尚未经过独立听辨确认。</p><p><a href="/assets/timbre-review.html">按误判类型寻找音色差异 →</a>　<a href="/assets/model-review.html">240 段旧 DEV · 模型提升与退步 →</a></p></section>
+<section class="card picker"><label>样例范围<select id="filter"><option value="all">全部样例</option><option value="train">辅助模型训练模板</option><option value="validation">合成验证模板</option><option value="test">合成留出模板</option><option value="sampled_piano_holdout">录音钢琴音源留出</option><option value="public_midi">公开 MIDI · 无和弦真值</option></select></label><label class="case-picker">聆听样例<select id="caseSelect" disabled></select></label><div id="badges" class="badges"></div></section>
+<p id="status" role="status">正在读取本地诊断集…</p>
+<p id="navigationStatus" class="scope-note" role="status" hidden></p>
+<section id="content" hidden>
+<div class="case-heading"><div><p class="eyebrow" id="caseDomain"></p><h2 id="caseTitle"></h2></div><span id="duration"></span></div>
+<p id="scopeNote" class="scope-note"></p>
+<div id="findings" class="findings"></div>
+<section class="card player"><audio id="audio" preload="none"></audio><div class="transport"><button id="play" class="primary" disabled>▶ 试听所选范围</button><button id="pause" disabled>暂停</button><label><input id="loop" type="checkbox">循环</label><label>速度<select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select></label><output id="clock">0.000 s</output></div>
+<canvas id="waveform" height="84" aria-label="音频波形"></canvas>
+<div class="range-fields"><label>起点（秒）<input id="start" type="number" min="0" step="0.001" value="0"></label><label>终点（秒）<input id="end" type="number" min="0" step="0.001" value="2"></label><label>前后上下文<select id="context"><option value="0">无</option><option value="0.5">各 0.5 秒</option><option value="1">各 1 秒</option><option value="2">各 2 秒</option></select></label><span id="playRange"></span><a id="rangeLink" hidden>此区间链接</a></div>
+<div id="timbreComparison" class="range-fields" hidden><label>同一作曲 · 不同音色<select id="pairedCase"></select></label><button id="compareTimbre" disabled>切换音色，保留范围</button><span id="pairStatus" role="status"></span></div></section>
+<section class="card comparison"><div class="comparison-heading"><h3>和声对照</h3><div class="view-tools"><button id="previous" aria-label="上一时间窗">←</button><span id="windowLabel"></span><button id="next" aria-label="下一时间窗">→</button><label>窗口<select id="windowSize"><option value="8">8 秒</option><option value="16" selected>16 秒</option><option value="32">32 秒</option><option value="all">全段</option></select></label></div></div><p class="hint">点击和弦或作曲小节，选中它的原始时间范围；每行百分比是全段完整和声规格匹配，包含九音、忽略低音。</p><div id="ruler" class="ruler"></div><div id="tracks"></div><div id="selected" class="selected" aria-live="polite">选择一段和弦，查看精确标签与时间。</div></section>
+<section class="card rhythm-review"><div class="comparison-heading"><h3>调性与节拍 · 冻结诊断</h3><span id="rhythmWindowLabel" class="badge">随上方时间窗同步</span></div><p id="rhythmStatus" class="hint">正在查找绑定此音频的记录…</p><div id="rhythmContent" hidden><p id="globalKeySummary"></p><div id="rhythmMetrics" class="rhythm-metrics"></div><div id="rhythmTracks"></div><p id="gridCoverage" class="hint"></p><h4>固定调性窗口</h4><p class="hint">每 4 秒截取最多 8 秒独立判断，跨调窗口保留多调规格。它们尚未组成局部调性时间轴；点击可听整窗。</p><div id="keyWindows" class="key-windows"></div></div></section>
+<details class="card local-beat-review"><summary>局部节拍试验 · 两种窗口起点，尚未采纳</summary><p id="localBeatStatus" class="hint">正在查找此音频的局部诊断…</p><div id="localBeatContent" hidden><p class="hint">固定 8 秒窗口、4 秒步长，两种起点全部保留。每窗模型拍数不是已确认拍号，虚线接缝也不是歌曲段落。此方法在钢琴留出上退化，保持正式默认不变。</p><p id="localBeatView" class="hint"></p><div id="localBeatTracks"></div><div id="localBeatWindows"></div><p class="hint">上方 F1 为全段作曲规格的重拍匹配，容差 70 毫秒。点击拍点听前后各 0.25 秒，点击接缝听前后各 0.5 秒，点击窗口听原解码范围。两种起点不取较高值。</p></div></details>
+<details class="card score-detail"><summary>作曲音符、局部调性与段落意图</summary><p id="scoreNote"></p><div id="keySections"></div><div id="noteList"></div></details>
+<details class="card provenance"><summary>音频身份与来源</summary><div id="identity"></div></details>
+</section>
+<footer>仅在本机读取已生成样例与模型预测。辅助模型未替换默认；这些少量模板上的结果不能代表真实歌曲准确率。</footer>
+</main></body></html>

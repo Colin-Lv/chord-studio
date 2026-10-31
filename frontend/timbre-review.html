@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>音色差距复核 · Harmony Studio</title><link rel="stylesheet" href="/assets/synthetic-review.css"><link rel="stylesheet" href="/assets/timbre-review.css"><script defer src="/assets/timbre-review.js"></script></head>
+<body><header><a class="brand" href="/">♮ Harmony <b>Studio</b></a><a href="/assets/synthetic-review.html">回到听辨实验室 ↗</a></header><main>
+<section class="intro"><p class="eyebrow">SAME NOTES, DIFFERENT EVIDENCE</p><h1>找到差异，再听它。</h1><p>同一作曲、同一范围，比较程序音色与录音钢琴。优先复核判断不同的片段。</p></section>
+<p class="scope-note">这里只有 2 个已观察过的模板族、4 组移调配对。百分比匹配作曲规格，不能代表真实歌曲准确率，也不等同人工确认。</p>
+<section class="card gap-controls"><label>和声来源<select id="engine"></select></label><label>作曲配对<select id="pair"><option value="all">全部四组</option></select></label><label>差异类型<select id="kind"><option value="piano_loses">程序符合规格 · 钢琴不符</option><option value="piano_wins">钢琴符合规格 · 程序不符</option><option value="both_mismatch">两者均不符规格</option><option value="all">全部待复核差异</option></select></label></section>
+<p id="status" role="status">读取已绑定的诊断记录…</p>
+<section id="content" hidden><section class="gap-metrics" id="metrics" aria-label="全四组的规格匹配率"></section><p class="hint">上方统计始终覆盖四组配对；筛选只改变下方待听片段。根音、三和弦、七音与完整和声分层计算。</p>
+<section class="card"><div class="comparison-heading"><h2>待听片段</h2><span id="count" class="badge"></span></div><p class="hint">先打开一个音色，播放器会保留精确起止并带前后各 0.5 秒；再用“切换音色，保留范围”比较。链接不自动播放，规格尚未作为你的确认写入。</p><div id="segments"></div><div class="gap-pagination"><button id="previous">上一页</button><span id="pageInfo"></span><button id="next">下一页</button></div></section>
+<details class="card"><summary>本轮发现与复核边界</summary><p>旧辅助头从程序音色到钢琴的新增损失约 70% 属于七音错误，约 88% 位于边界带之外。增强低音的固定对照改善了根音，却使完整和声退化；新增分音区特征的收益也不足以替换旧方案。所有负面结果保留，默认模型未变。</p><p id="sourceScope"></p><p class="hint">此页展示旧冻结来源的可听差异，没有混入本轮两个新特征模型，也不把模型之间的一致当作真值。</p></details>
+</section><footer>本机合成材料 · 只读导航 · 先听前后文，再判断根音、性质及七九音。</footer></main></body></html>

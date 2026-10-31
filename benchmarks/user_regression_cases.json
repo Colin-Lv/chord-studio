@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "doudou_ma",
+      "title": "马",
+      "artist": "DOUDOU",
+      "notes": "User-verified: 3/4, C major 6545 body, bar 96 transition F#7, bar 97 enters D major 6545.",
+      "audio": "benchmarks/audio/user_tests/DOUDOU_马_BV1kW42197Gm_trimmed_browser.wav",
+      "external_chords": "benchmarks/predictions/user_tests/doudou_ma_chordino.lab",
+      "command": {
+        "tool": "refine_song_structure",
+        "bpm": 99.38480980664728,
+        "meter": "auto",
+        "keys": "C,D",
+        "progressions": "6545,6415,1564",
+        "max_entry_time": 18.0,
+        "min_modulation_bar": 60,
+        "run_analysis": true,
+        "output": ".tmp/user_regression/doudou_ma"
+      },
+      "postprocess": [
+        {
+          "tool": "apply_bar_override",
+          "start_bar": 96,
+          "end_bar": 96,
+          "chord": "F#7",
+          "key": "D",
+          "roman": "V7/VIm",
+          "roman_display": "V7/VIm"
+        },
+        {
+          "tool": "apply_progression_sections",
+          "sections": [
+            "1:95:C:6545:bar",
+            "97::D:6545:bar"
+          ]
+        }
+      ],
+      "expected": {
+        "meter": "3/4",
+        "beats_per_bar": 3,
+        "min_bars": 120,
+        "body_entry": {
+          "time": 3.925,
+          "tolerance": 0.35
+        },
+        "sections": [
+          {
+            "start_bar": 1,
+            "end_bar": 95,
+            "key": "C",
+            "progression": "6545"
+          },
+          {
+            "start_bar": 97,
+            "key": "D",
+            "progression": "6545"
+          }
+        ],
+        "bar_labels": [
+          {
+            "bar": 1,
+            "roman": "VIm"
+          },
+          {
+            "bar": 2,
+            "roman": "V"
+          },
+          {
+            "bar": 3,
+            "roman": "IV"
+          },
+          {
+            "bar": 4,
+            "roman": "V"
+          },
+          {
+            "bar": 96,
+            "roman": "V7/VIm",
+            "chord": "F#7"
+          },
+          {
+            "bar": 97,
+            "roman": "VIm",
+            "local_key": "D"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pingfan_zhilu",
+      "title": "平凡之路",
+      "artist": "朴树",
+      "notes": "User-verified: A major, 6415 loop; bars 49-64 should be I.",
+      "analysis": "benchmarks/predictions/user_tests/pingfan_regularized0_6415_with_I49_64_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "A",
+        "min_bars": 90,
+        "bar_labels": [
+          {
+            "bar": 1,
+            "roman_sequence": [
+              "VIm",
+              "IV"
+            ]
+          },
+          {
+            "bar": 49,
+            "roman": "I"
+          },
+          {
+            "bar": 64,
+            "roman": "I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yorushika_dakara_boku",
+      "title": "だから僕は音楽を辞めた",
+      "artist": "ヨルシカ",
+      "notes": "User-verified: main song is E major, later modulates up to F major around bar 100.",
+      "analysis": "benchmarks/predictions/user_tests/yorushika_dakara_boku_key_timeline_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "E",
+        "min_bars": 120,
+        "sections": [
+          {
+            "start_bar": 2,
+            "end_bar": 99,
+            "key": "E"
+          },
+          {
+            "start_bar": 100,
+            "key": "F"
+          }
+        ],
+        "bar_labels": [
+          {
+            "bar": 2,
+            "roman_sequence": [
+              "IV",
+              "I"
+            ]
+          },
+          {
+            "bar": 100,
+            "roman_sequence": [
+              "IV",
+              "V"
+            ]
+          },
+          {
+            "bar": 98,
+            "roman": "III7",
+            "chord": "G#7"
+          },
+          {
+            "bar": 99,
+            "roman": "IV7",
+            "chord": "A7"
+          },
+          {
+            "bar": 103,
+            "roman_sequence": [
+              "I",
+              "VIm"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "yorushika_dakara_boku_bar97_chain",
+      "title": "だから僕は音楽を辞めた - bar 97 fine chain",
+      "artist": "ヨルシカ",
+      "notes": "User-corrected special case: bar 97 contains a non-downbeat 16th-grid transition chain 2-1-7-6-5-4 before resolving to bar 98.",
+      "analysis": "benchmarks/predictions/user_tests/yorushika_dakara_boku_bar97_chain_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "E",
+        "min_bars": 120,
+        "sections": [
+          {
+            "start_bar": 2,
+            "end_bar": 99,
+            "key": "E"
+          },
+          {
+            "start_bar": 100,
+            "key": "F"
+          }
+        ],
+        "bar_labels": [
+          {
+            "bar": 97,
+            "roman_sequence": [
+              "IIm",
+              "I",
+              "VIIdim",
+              "VIm",
+              "V",
+              "IV"
+            ]
+          },
+          {
+            "bar": 98,
+            "roman": "III7",
+            "chord": "G#7"
+          },
+          {
+            "bar": 99,
+            "roman": "IV7",
+            "chord": "A7"
+          },
+          {
+            "bar": 100,
+            "roman_sequence": [
+              "IV",
+              "V"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "yorushika_dakara_boku_bar97_boundary_auto",
+      "title": "だから僕は音楽を辞めた - bar 97 automatic boundary split",
+      "artist": "ヨルシカ",
+      "notes": "Boundary-aware prototype should recover the bar 97 offbeat chain from audio harmonic-change candidates.",
+      "analysis": "benchmarks/predictions/user_tests/yorushika_dakara_boku_boundary_refined_roots_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "E",
+        "min_bars": 120,
+        "sections": [
+          {
+            "start_bar": 2,
+            "end_bar": 99,
+            "key": "E"
+          },
+          {
+            "start_bar": 100,
+            "key": "F"
+          }
+        ],
+        "bar_labels": [
+          {
+            "bar": 97,
+            "roman_sequence": [
+              "IIm",
+              "I",
+              "VIIdim",
+              "VIm",
+              "V",
+              "IV"
+            ]
+          },
+          {
+            "bar": 98,
+            "roman": "III7",
+            "chord": "G#7"
+          },
+          {
+            "bar": 99,
+            "roman": "IV7",
+            "chord": "A7"
+          },
+          {
+            "bar": 100,
+            "roman_sequence": [
+              "IV",
+              "V"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "qimeidi_corrected",
+      "title": "凄美地",
+      "artist": "郭顶",
+      "notes": "User-corrected: Ab major, 4/4, many III7 dominant-color chords, and several within-bar changes such as bar 43/47/123/127 III7->V and bar 89/97 VIm->V.",
+      "analysis": "benchmarks/predictions/user_tests/qimeidi_corrected_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "Ab",
+        "min_bars": 120,
+        "bar_labels": [
+          {
+            "bar": 1,
+            "roman": "I"
+          },
+          {
+            "bar": 2,
+            "roman": "VIm"
+          },
+          {
+            "bar": 4,
+            "roman": "IV"
+          },
+          {
+            "bar": 8,
+            "roman": "III7",
+            "chord": "C7"
+          },
+          {
+            "bar": 43,
+            "roman_sequence": [
+              "III7",
+              "V"
+            ]
+          },
+          {
+            "bar": 89,
+            "roman_sequence": [
+              "VIm",
+              "V"
+            ]
+          },
+          {
+            "bar": 97,
+            "roman_sequence": [
+              "VIm",
+              "V"
+            ]
+          },
+          {
+            "bar": 123,
+            "roman_sequence": [
+              "III7",
+              "V"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "starrail_heart_sorrow_key_tracking",
+      "title": "使一颗心免于哀伤",
+      "artist": "崩坏：星穹铁道",
+      "notes": "User-corrected key layout: B/Ab alternating sections. IIm/IIIm in ascending-root passages are root-locked labels with uncertain chord color, so they should train root/function more strongly than exact chord color.",
+      "analysis": "benchmarks/predictions/user_tests/starrail_heart_sorrow_corrected_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "B",
+        "min_bars": 60,
+        "sections": [
+          {
+            "start_bar": 1,
+            "end_bar": 15,
+            "key": "B"
+          },
+          {
+            "start_bar": 16,
+            "end_bar": 23,
+            "key": "Ab"
+          },
+          {
+            "start_bar": 24,
+            "end_bar": 37,
+            "key": "B"
+          },
+          {
+            "start_bar": 38,
+            "end_bar": 47,
+            "key": "Ab"
+          },
+          {
+            "start_bar": 48,
+            "end_bar": 49,
+            "key": "B"
+          },
+          {
+            "start_bar": 50,
+            "key": "Ab"
+          }
+        ],
+        "bar_labels": [
+          {
+            "bar": 1,
+            "roman": "I",
+            "local_key": "B"
+          },
+          {
+            "bar": 2,
+            "roman": "IIm",
+            "local_key": "B"
+          },
+          {
+            "bar": 3,
+            "roman": "IIIm",
+            "local_key": "B"
+          },
+          {
+            "bar": 16,
+            "local_key": "Ab"
+          },
+          {
+            "bar": 17,
+            "roman_sequence": [
+              "IV",
+              "V"
+            ]
+          },
+          {
+            "bar": 24,
+            "local_key": "B"
+          },
+          {
+            "bar": 48,
+            "local_key": "B"
+          },
+          {
+            "bar": 50,
+            "local_key": "Ab"
+          },
+          {
+            "bar": 63,
+            "roman_sequence": [
+              "IIIm"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "laonanhai",
+      "title": "老男孩",
+      "artist": "筷子兄弟",
+      "notes": "User-verified final correction. Difficult case: many automatic errors, dense split spans around bars 60-66, borrowed iv minor, V9sus4, IIIm, VI7, and phrase-level deviations from common progressions.",
+      "audio": "benchmarks/audio/user_tests/筷子兄弟《老男孩》百万豪装录音棚大声听 [BV1Vb57ztE37].mp3",
+      "expected": {
+        "key_contains": "C",
+        "meter": "4/4",
+        "min_bars": 92,
+        "bar_labels": [
+          {
+            "bar": 2,
+            "roman_sequence": [
+              "I",
+              "IVm"
+            ]
+          },
+          {
+            "bar": 11,
+            "roman_sequence": [
+              "IIm",
+              "V9sus4"
+            ]
+          },
+          {
+            "bar": 47,
+            "roman_sequence": [
+              "I",
+              "VI7"
+            ]
+          },
+          {
+            "bar": 60,
+            "roman_sequence": [
+              "IIm7",
+              "V9sus4",
+              "I"
+            ]
+          },
+          {
+            "bar": 62,
+            "roman_sequence": [
+              "IV",
+              "V",
+              "I",
+              "I",
+              "N",
+              "IIIm",
+              "N"
+            ]
+          },
+          {
+            "bar": 64,
+            "roman_sequence": [
+              "IV",
+              "V",
+              "I"
+            ]
+          },
+          {
+            "bar": 66,
+            "roman_sequence": [
+              "V",
+              "IV"
+            ]
+          }
+        ]
+      },
+      "analysis": "benchmarks/predictions/user_tests/laonanhai_user_corrected_final_analysis.json"
+    },
+    {
+      "id": "gurenge_corrected",
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "notes": "User-corrected madmom-grid version. Protects 4/4 downbeat grid, G major roman labels, IV-V-vi-iii opening, and bVI half-diminished color point.",
+      "audio": "benchmarks/audio/user_tests/LiSA《紅蓮華》百万豪装录音棚大声听 [BV1UTKBz9Eog].mp3",
+      "analysis": "benchmarks/predictions/user_tests/gurenge_corrected_analysis.json",
+      "expected": {
+        "meter": "4/4",
+        "beats_per_bar": 4,
+        "key_contains": "G",
+        "min_bars": 130,
+        "bar_labels": [
+          {
+            "bar": 1,
+            "roman": "IV"
+          },
+          {
+            "bar": 2,
+            "roman": "V"
+          },
+          {
+            "bar": 3,
+            "roman": "VIm"
+          },
+          {
+            "bar": 4,
+            "roman": "IIIm"
+          },
+          {
+            "bar": 29,
+            "roman": "VIm"
+          },
+          {
+            "bar": 30,
+            "roman": "IIIm"
+          },
+          {
+            "bar": 40,
+            "roman": "bVIm7b5",
+            "chord": "D#m7b5"
+          }
+        ]
+      }
+    }
+  ]
+}

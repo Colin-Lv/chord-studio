@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>根音纠错复核 · Harmony Studio</title><link rel="stylesheet" href="/assets/root-gate-review.css"><script defer src="/assets/root-gate-review.js"></script></head>
+<body><header><a class="brand" href="/assets/synthetic-review.html"><span aria-hidden="true">♮</span> Harmony <b>Studio</b></a><span class="pill">实验复核 · 只读</span></header>
+<main><section class="intro"><p class="eyebrow">ROOT CORRECTION / ROUND 03</p><h1>适配有收益，也有代价。</h1><p class="lede">听一次根音修正，看看它何时帮忙、何时误改。两个门控都只学习自 TRAIN；默认模型保持不变。</p></section>
+<section class="metrics" aria-label="完整数据集结果，不受案例筛选影响"><article><span>新作品 · 未见音源</span><strong>88.97 <i>→</i> 91.12<span>%</span></strong><small>仅和弦时段 · 完整和声</small></article><article class="negative"><span>旧压力集 · FM</span><strong>55.56 <i>→</i> 54.33<span>%</span></strong><small>全时段 · 完整和声</small></article><article><span>归一化本身的收益</span><strong class="verdict">未证实</strong><small>匹配对照的固定成功条件未通过</small></article></section>
+<p class="scope">上方是全量评测结果；下方是挑选的合成诊断片段。作曲规格代表生成意图，<b>不等于人工听辨确认</b>。两种门控均未部署。</p>
+<section class="filters" aria-label="筛选听辨样例"><label>评测范围<select id="cohort"><option value="all">全部范围</option><option value="dev_family_unseen">新作品 · 未见音源</option><option value="dev_family_seen">新作品 · 已见音源</option><option value="dev_source_only">同作品 · 音源留出</option><option value="old_dev_kw">旧压力集 · KW</option><option value="old_dev_fm_unseen">旧压力集 · FM</option></select></label><label>修正结果<select id="reason"><option value="all">改善与误改</option><option value="harmed">误改 · 原预测符合规格</option><option value="helped">改善 · 纠错后符合规格</option></select></label><p id="count" aria-live="polite"></p></section>
+<p id="status" role="status">正在载入已绑定的实验结果…</p><p id="error" role="alert" hidden></p>
+<section class="workspace"><nav id="cases" aria-label="听辨样例"></nav><article class="detail" id="detail" hidden>
+<div class="detail-head"><div><p id="caseMeta" class="eyebrow"></p><h2 id="caseTitle"></h2><p id="sourceRange" class="muted"></p></div><span id="outcome" class="outcome"></span></div>
+<div class="chord-comparison"><div><small>作曲规格</small><strong id="reference"></strong></div><div><small>冻结预测</small><strong id="baseline"></strong></div><div><small>归一化纠错</small><strong id="prediction"></strong></div></div>
+<div class="waveform"><canvas id="wave" height="100" aria-label="本片段真实音频波形"></canvas><span id="playhead"></span></div>
+<div class="ruler" id="ruler"></div><div id="tracks" class="tracks" aria-label="四条和弦时间轴"></div>
+<div class="transport"><button id="play" disabled>播放选区及前后文</button><button id="pause" disabled>暂停</button><label>前后文<select id="context"><option value="0">无</option><option value="0.5">各 0.5 秒</option><option value="2" selected>各 2 秒</option></select></label><span id="range"></span></div>
+<audio id="audio" preload="metadata"></audio><p class="hint">点击任一和弦区间可改变试听范围。选择样例不会自动播放，也不会产生复核计数或确认记录。</p>
+<details><summary>样例与模型身份</summary><dl id="identity"></dl><p>这里的音频是原合成材料的节选，不作为新增训练或评测样本。完整分母和两臂全部结果保留在实验报告中。</p></details>
+</article></section>
+<section class="footnote"><b>为什么保留失败案例？</b><p>归一化门控在新作品未见音源上修正约 24.84 秒、误改约 5.07 秒；旧 FM 上只修正约 0.50 秒、却误改约 6.17 秒。修正策略仍依赖数据分布，不能把新语料的改善当作普遍提升。</p></section>
+<footer>本机音频 · 不上传 · 不写入标注 · 先听上下文，再判断根音与和弦性质。</footer></main></body></html>

@@ -1,0 +1,21 @@
+{
+  "audio_sha256": "d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f",
+  "source_run": "projects\\web\\087d8b0c86414fe6b675cc622f505128\\runs\\971c479a56844032ae1e231d08f90073",
+  "reference": "C",
+  "reference_origin": "user-confirmed; evaluation only",
+  "policy": {
+    "window_bars": 8,
+    "step_bars": 2,
+    "min_segment_bars": 8,
+    "local_margin": 0.12,
+    "min_harmonic_relative_margin": 0.05,
+    "min_bar_share": 0.6666666666666666,
+    "min_pitched_coverage": 0.5,
+    "min_events": 4,
+    "min_roots": 3,
+    "cnn_candidate_rank_limit": 2
+  },
+  "policy_frozen_before_regression": true,
+  "role": "known regression, not calibration or blind test",
+  "audio_included": false
+}

@@ -1,0 +1,44 @@
+{
+ "run": "73c950506dd2440b9bcde32e038bc448",
+ "analysis": "D:\\ChordStudio\\data\\projects\\aa5a41797bb343e590abcf4d8b27ae54\\runs\\73c950506dd2440b9bcde32e038bc448\\analysis.json",
+ "default": "retained10_span",
+ "sources": [
+  [
+   "retained10",
+   279
+  ],
+  [
+   "retained10_stable",
+   177
+  ],
+  [
+   "retained10_span",
+   81
+  ],
+  [
+   "retained10_full",
+   64
+  ],
+  [
+   "raw_madmom",
+   78
+  ]
+ ],
+ "full_decode": {
+  "applied": true,
+  "segments": 64,
+  "module": "app/web/full_decode.py",
+  "derived_from": "posterior.npz + cells.json + deep.npz + notes.npz + beats.json",
+  "second_tier": true,
+  "default": false,
+  "params": {
+   "lambda_switch": 18.0,
+   "beta_boundary": 8.0,
+   "lambda_bass": 1.5,
+   "mu": 0.6,
+   "tau": 0.28,
+   "dur_center_beats": 8.0,
+   "dur_sigma": 0.3
+  }
+ }
+}

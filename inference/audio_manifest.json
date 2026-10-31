@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-12T10:28:43.032731+08:00",
+  "bundle_version": "chord_audio_entry_v82",
+  "source_model_manifest_sha256": "927fd4dcfd5a9e79749c49d1150abd87ad3730920398ca2a9a35f574994bd7ac",
+  "weights_sha256": "6a37737d5dffda292e981528d11779f05b079905452622e6b4ef779f682eceef",
+  "frontend_functions_sha256": {
+    "app/evaluate_chords.py::TimedChord": "5b9ee93ad174db85f1811da25e67e85a43ffed0987d53711e323eb210350165a",
+    "app/harmonic_note_features.py::NoteEvidence": "7b1c881d518b8e031621694146a1bc4e76515fcf5cf97675a2691d85320dc5f9",
+    "app/harmonic_note_features.py::_validate_evidence": "9a73fd1f580b2d3870d8dfc8dcdb4f5e2e5f85b2084e95b77ea7d66e8f5d8245",
+    "app/harmonic_note_features.py::_read_csv": "8b0ccd3bbec2b3b8b8224d30a5269ef4b0ae7be04223288e287b60b5bcba5330",
+    "app/harmonic_note_features.py::_longest_support": "fbf72502e870101a3b9e2e1806b9c934697304fc2279ad3dbd6a864fcaddf4af",
+    "app/harmonic_note_features.py::features_for_intervals": "ba05e67465580ecbee5a546876702a19d8835bd178c39996e815c225da4ab7bf",
+    "research/synthetic_extension_probe.py::make_cells": "ec57b2a9b8fa0d81d385278bbbbaab007bcc9f35698864ef93a9fbdb52f646e5",
+    "research/scaled_midi_register_features.py::register_means": "b0a503ac4d410c299a54aadb6b513bc0e4099466482371eedadb68b23aa69965",
+    "research/scaled_midi_anchor_features.py::root_basic": "7783ae9d7395e0bde49802fc3d9721df545adb87c574d931160dce56e56d29ca",
+    "research/scaled_midi_anchor_features.py::build_absolute_features": "ac5b8aada34501dfc1272d28a9d91c04a65e936c85b82d5a9b2c8e39582bae02",
+    "research/chord_n_energy_v51.py::energy_features": "5b6a44a5c23eb6194de2c0badd32c0174bc4f87510b600d0356b36779c7f28aa"
+  },
+  "files_sha256": {
+    "audio_predict.py": "78550919854dd4869c7b17001b41132031d4e255e00177fe5af77d8df588c028",
+    "chord_extension_model.py": "58370f5d0e9b55abdc6be14f79e4838a79b67c84feeeea1c48e8bc2e36b6cb69",
+    "frontend_math.py": "a7275a025141b702ca9a47aedaa0dd17468ccb992ed4b0853a7ca73aad835d05",
+    "madmom_helper.py": "f4e7529eca49a091c2d88a02e92bc8814cdd1c37c4f28d050444f58f6205b044",
+    "README.md": "f8e672b03e39bb841722a821cf1b514e9882ca8883e2b3cfe0127d4fdaebb583",
+    "requirements.txt": "28dff34a8da19a090df9abbda70a08b4b88ce006cb1f72202e4604431f08a6a1",
+    "runtime.local.json": "cc226a3362b3f158f570341b95d51011b326f59ed117b320ed6bb45bd6181779"
+  },
+  "new_fits": 0,
+  "new_updates": 0,
+  "default_changed": false,
+  "resigned_utc": "2026-10-30T13:09:58.199739+00:00",
+  "resign_reason": "desktop-app fix: memory precheck, stage timeouts, timeline stabilization"
+}

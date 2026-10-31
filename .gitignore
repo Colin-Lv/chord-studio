@@ -58,3 +58,27 @@ projects/
 *_bar_chords.txt
 *_analysis.json
 *_studio.html
+
+# Research datasets, caches and generated artifacts
+research/**/data/
+research/**/runs/
+research/**/cases/
+research/**/audio/
+research/**/audio_fixed/
+research/**/midi_fixed/
+research/**/nnls_cache/
+research/**/*.npz
+research/**/*.joblib
+research/**/*.pt
+research/**/*.png
+research/**/sweep_*.json
+research/**/candidate*.json
+
+# Benchmark corpora, model binaries and imported references are data, not source
+benchmarks/models/
+benchmarks/references/
+benchmarks/imported/
+benchmarks/complex_harmony_challenge/
+benchmarks/**/*.pkl
+benchmarks/**/*.jsonl
+benchmarks/**/*.joblib

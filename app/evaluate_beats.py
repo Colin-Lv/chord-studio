@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
+import mir_eval
 
 
 @dataclass(frozen=True)
@@ -64,25 +65,21 @@ def read_prediction(path: Path) -> list[BeatMark]:
 
 
 def greedy_match(reference: list[float], prediction: list[float], tolerance: float) -> tuple[int, list[float]]:
+    """Maximum one-to-one matching (legacy public name kept for callers).
+
+    Nearest-first greedy matching can consume the only match available to the
+    next reference beat and undercount correct predictions.
+    """
+    if not math.isfinite(tolerance) or tolerance < 0:
+        raise ValueError("Tolerance must be finite and nonnegative.")
     ref = np.asarray(reference, dtype=np.float64)
     pred = np.asarray(prediction, dtype=np.float64)
+    if not np.all(np.isfinite(ref)) or not np.all(np.isfinite(pred)) or np.any(ref < 0) or np.any(pred < 0):
+        raise ValueError("Beat times must be finite and nonnegative.")
     if ref.size == 0 or pred.size == 0:
         return 0, []
-    used = np.zeros(pred.size, dtype=bool)
-    errors: list[float] = []
-    hits = 0
-    for ref_time in ref:
-        distances = np.abs(pred - ref_time)
-        order = np.argsort(distances)
-        for index in order:
-            if used[index]:
-                continue
-            if distances[index] <= tolerance:
-                used[index] = True
-                hits += 1
-                errors.append(float(pred[index] - ref_time))
-            break
-    return hits, errors
+    matching = mir_eval.util.match_events(ref, pred, tolerance)
+    return len(matching), [float(pred[right] - ref[left]) for left, right in matching]
 
 
 def f_measure(reference: list[float], prediction: list[float], tolerance: float) -> dict[str, float]:
@@ -109,7 +106,7 @@ def evaluate(reference: list[BeatMark], prediction: list[BeatMark], tolerance: f
 
     ref_downbeats = [item.time for item in reference if item.beat == 1]
     pred_downbeats = [item.time for item in prediction if item.beat == 1]
-    if ref_downbeats and pred_downbeats:
+    if ref_downbeats:
         metrics.update(
             {
                 f"downbeat_{key}": value
@@ -129,6 +126,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(sys.argv[1:] if argv is None else argv)
+    if not math.isfinite(args.tolerance) or args.tolerance < 0:
+        print("--tolerance must be finite and nonnegative.", file=sys.stderr)
+        return 2
     reference = read_reference(args.reference)
     prediction = read_prediction(args.prediction)
     if not reference or not prediction:

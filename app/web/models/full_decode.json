@@ -1,0 +1,52 @@
+{
+  "schema": "chord_studio_full_decode_v1",
+  "module": "app/web/full_decode.py",
+  "model": "models/boundary_nnls.joblib",
+  "model_sha256": "computed-at-runtime",
+  "training_data": "research/boundary-dataset (1200 synthetic renders, POP909 progressions)",
+  "training_target": "is this candidate a true chord boundary (within 60 ms)",
+  "features": [
+    "nnls_bass_move",
+    "nnls_bass_root_changed",
+    "nnls_bass_flux",
+    "nnls_mid_move",
+    "nnls_high_move",
+    "nnls_mid_flux",
+    "nnls_tone_jaccard",
+    "nnls_low_ratio",
+    "nnls_total_ratio",
+    "level_bar",
+    "level_half",
+    "level_beat",
+    "level_eighth",
+    "nnls_bass_move_wide",
+    "nnls_mid_move_wide",
+    "nnls_bass_sustain_left",
+    "nnls_bass_sustain_right",
+    "nnls_tone_hamming"
+  ],
+  "feature_source": "official NNLS-Chroma semitone spectrum (84 notes) already cached per audio",
+  "params": {
+    "lambda_switch": 18.0,
+    "beta_boundary": 8.0,
+    "lambda_bass": 1.5,
+    "mu": 0.7,
+    "tau": 0.28,
+    "dur_center_beats": 8.0,
+    "dur_sigma": 0.3
+  },
+  "origin": "synthetic-only training; the 虚拟 golden annotation was used to choose the seven decoder scalars, never to train the classifier",
+  "reference_metric": {
+    "song": "虚拟",
+    "golden": "research/key-v3/chord_seg/reference_golden.lab",
+    "exact": 0.682,
+    "family": 0.774,
+    "boundary_precision": 0.903,
+    "boundary_recall": 0.918,
+    "boundary_f1": 0.902,
+    "segments": 62,
+    "reference_segments": 62,
+    "tone_recall": 0.922
+  },
+  "default_since": "2026-11-01"
+}
