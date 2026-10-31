@@ -64,3 +64,6 @@
 .ruler .chord { bottom: auto; top: 1px; font-size: 10px; line-height: 12px; color: var(--mint); white-space: nowrap; transform: translateX(-1px); }
 .ruler .chord::before { content: ''; }
 
+
+.track-buttons .track-download { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 5px; border: 1px solid #3d4f53; background: #1b2629; color: var(--muted); font-size: 12px; text-decoration: none; }
+.track-buttons .track-download:hover { color: var(--mint); border-color: var(--mint); }

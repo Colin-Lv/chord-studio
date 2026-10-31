@@ -342,6 +342,13 @@ function buildHeads() {
 
     const buttons = document.createElement("span");
     buttons.className = "track-buttons";
+    const download = document.createElement("a");
+    download.className = "track-download";
+    download.textContent = "↓";
+    download.title = `下载 ${track.name} WAV`;
+    download.href = state.manifest.wav_urls?.[track.id] || state.drumParts?.wav_urls?.[track.id]
+      || `/api/projects/${PROJECT}/stems/${track.wav}`;
+    download.download = `${track.id}.wav`;
     const mute = document.createElement("button");
     mute.textContent = "M";
     mute.title = "静音";
@@ -353,7 +360,7 @@ function buildHeads() {
     solo.title = "独奏";
     solo.setAttribute("aria-pressed", "false");
     solo.onclick = event => { event.stopPropagation(); toggleSolo(track.id); };
-    buttons.append(mute, solo);
+    buttons.append(download, mute, solo);
 
     row.append(chip, name, buttons);
     container.appendChild(row);
