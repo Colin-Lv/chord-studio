@@ -158,6 +158,19 @@ demucs 的四轨里 drums+bass+other 相加作为伴奏，RoFormer 直接输出�
 复现：`musdb_bench.py`（解包 → demucs + RoFormer → harness 打分）、
 `score_ft_musdb.py`（ft 打分）、`aggregate_musdb.py`（汇总）。
 
+### 6.0.1 选型复核：换了另一个 RoFormer 反而更差
+
+audio-separator 里有 81 个 RoFormer 类 checkpoint。抽一个流行的人声专用模型
+`mel_band_roformer_kim_ft2_unwa.ckpt`（Mel-Band，显存 2.0 GB，148 s/首）在 song0 上对比：
+
+| 模型 | 人声 | 伴奏 |
+|---|---:|---:|
+| **model_bs_roformer_ep_317（当前用的）** | **8.96** | **16.46** |
+| mel_band_roformer_kim_ft2_unwa | 8.12 | 15.72 |
+
+差 0.8 dB。说明「人声优先」这一档的选型不是随手挑的；也说明**换模型必须逐首测**，
+不能按名字或星级选。
+
 ## 6.1 下游影响：分离之后，和弦还一样吗？
 
 把「人声/鼓去掉、只留贝斯+其他」的和声轨重新跑一遍冻结模型，与整首混音的结果逐帧对比
