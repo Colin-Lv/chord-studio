@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import math
 import os
+import shutil
 import re
 import subprocess
 import sys
@@ -28,10 +29,15 @@ STEMS_6 = STEMS + (
     dict(id="guitar", name="吉他", short="GTR", instrument="吉他", color="#d98bd9"),
     dict(id="piano", name="钢琴", short="KEY", instrument="钢琴", color="#9fe08a"),
 )
+STEMS_2 = (
+    dict(id="vocals", name="人声", short="VOX", instrument="主唱 / 和声", color="#b6e7ce"),
+    dict(id="instrumental", name="伴奏", short="INST", instrument="除人声以外的全部", color="#e6a06f"),
+)
 MODELS = {
     "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
     "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，GPU 约 45 秒，质量更好"),
     "htdemucs_6s": dict(id="htdemucs_6s", label="六轨", note="额外分出吉他/钢琴，整体质量弱于四轨模型", stems=6),
+    "bs_roformer": dict(id="bs_roformer", label="人声优先", note="BS-RoFormer 两轨，GPU 约 3 分钟，人声更强", stems=2),
 }
 GPU_PYTHON = Path(r"D:\ChordStudio\runtime\gpu\Scripts\python.exe")
 MODEL_NAME = "htdemucs"
@@ -49,7 +55,12 @@ def stems_dir(sha: str, model: str = MODEL_NAME) -> Path:
 
 
 def stems_for(model: str):
-    return STEMS_6 if MODELS.get(model, {}).get("stems") == 6 else STEMS
+    count = MODELS.get(model, {}).get("stems", 4)
+    if count == 6:
+        return STEMS_6
+    if count == 2:
+        return STEMS_2
+    return STEMS
 
 
 def available_models(sha: str) -> list[dict]:
@@ -246,6 +257,24 @@ def _annotate(path: Path, entry: dict, bars: list[float], duration: float):
         entry["dominant_pitch_class"] = _bass_pc(mono, sr)
 
 
+def _balance_complementary(vocals_path: Path, bed_path: Path, mix_path: Path):
+    """Rescale the accompaniment so vocals + accompaniment matches the mix."""
+    import soundfile as sf
+    vocals, rate = sf.read(str(vocals_path), always_2d=True, dtype="float32")
+    bed, _ = sf.read(str(bed_path), always_2d=True, dtype="float32")
+    mix, _ = sf.read(str(mix_path), always_2d=True, dtype="float32")
+    length = min(len(vocals), len(bed), len(mix))
+    remain = (mix[:length] - vocals[:length]).mean(axis=1)
+    bed_mono = bed[:length].mean(axis=1)
+    denominator = float((bed_mono.astype("float64") ** 2).sum())
+    if denominator <= 0:
+        return
+    gain = float((bed_mono.astype("float64") * remain.astype("float64")).sum() / denominator)
+    gain = max(0.5, min(2.0, gain))
+    if abs(gain - 1.0) > 0.005:
+        sf.write(str(bed_path), bed * gain, rate, subtype="FLOAT")
+
+
 def _reconstruction(mix_path: Path, wav_dir: Path, tracks) -> dict:
     """Residual = mix - sum(stems). Low residual means the stems explain the mix."""
     if not mix_path.is_file():
@@ -368,12 +397,31 @@ def execute(store, job_id):
         python, device = _runtime()
         job["device"] = device
         publish()
-        command = [python, "-m", "demucs.separate", "-n", model, "-o", str(work),
-                   "--filename", "{stem}.{ext}", "--device", device, "-j", "1", str(source_wav)]
         env = os.environ.copy()
         env["PYTHONUTF8"] = "1"
         env.setdefault("TORCH_HOME", str(Path.home() / ".cache" / "torch"))
         env["OMP_NUM_THREADS"] = env.get("STEMS_THREADS", "8")
+        if model == "bs_roformer":
+            outdir = work / "roformer"
+            result = subprocess.run([python, "-B", str(ROOT / "app/web/bsroformer_runner.py"),
+                                     "--input", str(source_wav), "--outdir", str(outdir)],
+                                    cwd=str(ROOT), env=env, capture_output=True, text=True,
+                                    timeout=3600,
+                                    creationflags=subprocess.CREATE_NO_WINDOW
+                                    if os.name == "nt" else 0)
+            if result.returncode:
+                raise RuntimeError("BS-RoFormer 分离失败：" + (result.stderr or result.stdout or "")[-1500:])
+            for produced in outdir.glob("*.wav"):
+                name = produced.name.lower()
+                if "vocal" in name:
+                    shutil.copyfile(produced, work / "vocals.wav")
+                elif "instrument" in name or "inst" in name:
+                    shutil.copyfile(produced, work / "instrumental.wav")
+            _balance_complementary(work / "vocals.wav", work / "instrumental.wav", source_wav)
+            publish(stage_label="正在标注音轨信息")
+            return
+        command = [python, "-m", "demucs.separate", "-n", model, "-o", str(work),
+                   "--filename", "{stem}.{ext}", "--device", device, "-j", "1", str(source_wav)]
         process = subprocess.Popen([str(part) for part in command], cwd=str(ROOT), env=env,
                                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                    creationflags=subprocess.CREATE_NO_WINDOW
@@ -469,7 +517,8 @@ def execute(store, job_id):
         for index, start in enumerate(bars):
             end = bars[index + 1] if index + 1 < len(bars) else length
             bar_rows.append(dict(index=index + 1, start=round(start, 3), end=round(end, 3)))
-        reconstruction = _reconstruction(work / "input.wav", target / "wav", tracks)
+        reconstruction = ({} if len(tracks) == 2
+                          else _reconstruction(work / "input.wav", target / "wav", tracks))
         return dict(duration=round(length, 3), sample_rate=sr, bpm=round(float(grid["bpm"]), 2),
                     bpm_source=grid["bpm_source"], bars=bar_rows,
                     beats=[round(b, 3) for b in grid["beats"][:4000]], tracks=tracks,
@@ -481,7 +530,7 @@ def execute(store, job_id):
         schema="chord_studio_stems_v1",
         project_id=project["id"], audio_sha256=sha,
         created_at=now(), cached=False,
-        model=dict(name=model, label=MODELS[model]["label"], package="demucs 4.1.0",
+        model=dict(name=model, label=MODELS[model]["label"], package=("audio-separator 0.48" if model == "bs_roformer" else "demucs 4.1.0"),
                    device=job.get("device", "cpu"), seconds=round(time.perf_counter() - started, 1)),
         source_audio=project["audio"],
         **analysis,
