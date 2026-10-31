@@ -133,23 +133,29 @@ toms 与 kick 有时分不干净。另外这首《虚拟》的鼓轨 95% 能量�
 demucs 的四轨里 drums+bass+other 相加作为伴奏，RoFormer 直接输出两轨。
 指标是 harness 的 SI-SDR（有真值模式）。
 
-| 歌曲 | demucs 人声 | RoFormer 人声 | demucs 伴奏 | RoFormer 伴奏 | demucs 均值 | RoFormer 均值 |
+| 歌曲 | demucs 人声 | ft 人声 | RoFormer 人声 | demucs 伴奏 | ft 伴奏 | RoFormer 伴奏 |
 |---|---:|---:|---:|---:|---:|---:|
-| Ben Carrigan – We'll Talk About It All Tonight | 4.56 | **8.96** | 12.72 | **16.46** | 8.64 | **12.71** |
-| Angels In Amplifiers – I'm Alright | 10.75 | **14.38** | 13.87 | **17.49** | 12.31 | **15.93** |
-| Arise – Run Run Run | 11.34 | **18.84** | 19.85 | **27.43** | 15.59 | **23.13** |
-| **三首平均** | **8.88** | **14.06** | **15.48** | **20.46** | **12.18** | **17.26** |
+| Ben Carrigan – We'll Talk About It All Tonight | 4.56 | 4.92 | **8.96** | 12.72 | 12.64 | **16.46** |
+| Angels In Amplifiers – I'm Alright | 10.75 | 10.91 | **14.38** | 13.87 | 13.51 | **17.49** |
+| Arise – Run Run Run | 11.34 | 11.90 | **18.84** | 19.85 | 15.73 | **27.43** |
+| **三首平均** | **8.88** | **9.24** | **14.06** | **15.48** | **13.96** | **20.46** |
 
-**BS-RoFormer 稳定领先约 5 dB**（人声 +5.2 dB，伴奏 +5.0 dB），三首歌方向一致。
-这解释了为什么「人声优先」应该用 RoFormer，而不是把 demucs 的六轨模型硬拆。
+三个结论：
+
+1. **BS-RoFormer 稳定领先约 5 dB**（人声 +5.2、伴奏 +5.0），三首歌方向一致。
+2. **htdemucs_ft 在这三首上没有赢过标准版**：人声 +0.36 dB，伴奏反而 −1.5 dB
+   （第三首掉了 4 dB）。四模型集成带来的方差收益在这么小的样本上看不出来，
+   所以「精细」只能算「另一种选择」，不能算「更好」。
+3. 这就是为什么「人声优先」应该用 RoFormer，而不是把 demucs 的六轨模型硬拆，
+   也不是简单地把 ft 当升级。
 
 限制要说清楚：
 - 只有 3 首，不是 MUSDB 全部 50 首；
-- demucs 用的是标准 htdemucs，不是 ft（ft 会更接近，但仍是 4 轨折算）；
-- 折算成两轨后，demucs 的「伴奏」包含了它自己的串音，评分对它是公平的两轨口径；
-- SI-SDR 是波形指标，不反映听感上的 artifact。
+- 折算成两轨后，demucs 的「伴奏」是它自己三轨相加，评分对它是公平的两轨口径；
+- SI-SDR 是波形指标，不反映听感上的 artifact；ft 的差异也可能被这个指标低估。
 
-复现：`musdb_bench.py`（下载分片 → 解包 → 两个模型 → harness 打分）。
+复现：`musdb_bench.py`（解包 → demucs + RoFormer → harness 打分）与
+`score_ft_musdb.py`（ft 打分）。
 
 ## 7. 数据：zenodo 直连不可行，HF 镜像可行
 
