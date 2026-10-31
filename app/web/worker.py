@@ -236,7 +236,12 @@ def main():
     args = parser.parse_args()
     store = Store(args.store)
     try:
-        execute(store, args.job)
+        job = read_json(store.job_path(args.job))
+        if job.get("profile") == "stems":
+            from .stems_worker import execute as execute_stems
+            execute_stems(store, args.job)
+        else:
+            execute(store, args.job)
     except Exception as exc:
         job = read_json(store.job_path(args.job))
         job["error"] = f"{type(exc).__name__}: {exc}"

@@ -106,6 +106,29 @@ async function beginAnalysis(){if(state.busy)return;const navigation=state.navig
   else{if(state.file){$("inputStatus").textContent="正在上传音频…";const form=new FormData();form.append("file",state.file);state.project=await api("/api/upload",{method:"POST",body:form});state.file=null;}if(!state.project)throw new Error("请先选择音乐");job=await post(`/api/projects/${state.project.id}/analyze`,{profile:$("model").value,key_mode:$("keyMode").value});}
   if(navigation!==state.navigation)return;$("inputStatus").textContent="任务已提交，可以在下方查看进度。";watchJob(job.id,navigation);await refreshProjects();
   }catch(error){$("inputStatus").textContent=error.message;toast(error.message);}finally{setBusy(false);}}
+async function beginSeparation(){
+  if(state.busy)return;setBusy(true);
+  try{
+    if(!state.project){
+      if(!state.file)throw new Error("请先选择音乐，或打开一个已有项目");
+      $("inputStatus").textContent="正在上传音频…";
+      const form=new FormData();form.append("file",state.file);
+      state.project=await api("/api/upload",{method:"POST",body:form});state.file=null;
+    }
+    const id=state.project.id;
+    const job=await post(`/api/projects/${id}/separate`,{force:false});
+    $("inputStatus").textContent="分轨任务已提交（人声 / 鼓 / 贝斯 / 其他），完成后会自动打开分轨页…";
+    toast("分轨通常需要 1–2 分钟，可以继续浏览其他页面");
+    for(let i=0;i<300;i++){
+      await new Promise(resolve=>setTimeout(resolve,2000));
+      let row;try{row=await api(`/api/jobs/${job.id}`);}catch(_){continue;}
+      if(row.stage_label)$("inputStatus").textContent="分轨：" + row.stage_label;
+      if(row.status==="completed"){location.href=`/stems?project=${id}`;return;}
+      if(row.status==="failed"||row.status==="interrupted")throw new Error(row.error||"分轨失败，请重试");
+    }
+    throw new Error("分轨耗时过长，请稍后在分轨页查看");
+  }finally{setBusy(false);}
+}
 async function watchJob(id,navigation){clearTimeout(state.poll);state.job=id;$("jobPanel").hidden=false;try{const job=await api("/api/jobs/"+id);if(navigation!==state.navigation||state.job!==id)return;$("jobTitle").textContent=job.stage_label;$("jobState").textContent=statusNames[job.status]||job.status;$("jobLog").href=`/api/jobs/${id}/log`;$("jobActivity").className="activity "+(["running","queued"].includes(job.status)?"running":"done");$("stageList").replaceChildren(...job.stages.map(stage=>element("li",stage.status==="failed"?"failed":"",stage.label+" · "+stage.seconds.toFixed(1)+"s")));$("jobError").hidden=!job.error;$("jobError").textContent=job.error||"";$("retry").hidden=!["failed","interrupted"].includes(job.status);
   if(job.status==="completed"){state.project=await api("/api/projects/"+job.project_id);if(navigation!==state.navigation)return;await loadResult(job.project_id,navigation);await refreshProjects();return;}
   if(["failed","interrupted"].includes(job.status)){await refreshProjects();return;}
@@ -118,7 +141,7 @@ async function loadResult(projectId,navigation){const result=await api(`/api/pro
     state.drafts.set(source.id,draft);const preferences=correction;
     if(preferences.key!==undefined&&(!displayPreferences||(preferences.updated_at||preferences.saved_at||"")>(displayPreferences.updated_at||displayPreferences.saved_at||"")))displayPreferences=preferences;
   });
-  $("model").value="retained10";$("resultModel").textContent=modelDisplayText(result);$("keyMode").value=result.key_mode||"madmom";state.key=displayPreferences?.key??result.key_fusion?.key??result.key_analysis?.key??"";state.keyOrigin=displayPreferences?.key_origin||(state.key?"automatic":"unknown");if(review.revision>0){state.key=review.effective_key||"";state.keyOrigin=review.manual?"manual":(state.key?"automatic":"unknown");}state.mode=displayPreferences?.display||"roman";notation.setKey(state.key);$("analysisDownload").href=`/api/projects/${projectId}/result`;$("resultPanel").hidden=false;$("emptyState").hidden=true;$("loop").disabled=false;
+  $("model").value="retained10";$("resultModel").textContent=modelDisplayText(result);const stemsLink=$("stemsLink");if(stemsLink){stemsLink.hidden=!state.project?.stems;stemsLink.href=`/stems?project=${result.project_id}`;}if(result.key_mode)$("keyMode").value=result.key_mode;state.key=displayPreferences?.key??result.key_fusion?.key??result.key_analysis?.key??"";state.keyOrigin=displayPreferences?.key_origin||(state.key?"automatic":"unknown");if(review.revision>0){state.key=review.effective_key||"";state.keyOrigin=review.manual?"manual":(state.key?"automatic":"unknown");}state.mode=displayPreferences?.display||"roman";notation.setKey(state.key);$("analysisDownload").href=`/api/projects/${projectId}/result`;$("resultPanel").hidden=false;$("emptyState").hidden=true;$("loop").disabled=false;
   $("warnings").textContent=(result.profile==="v2"?"实验 v2 与冻结 v1 的训练歌曲数不同；当前结果不代表准确率更高。\n":"")+result.warnings.join("\n");
   if(!audio.src.endsWith(result.audio.url))setAudio(result.audio.url,result.title);$("seek").max=result.duration;renderKey();renderSources();switchSource(state.source);renderStructure();tick();}
 function renderKeyEvidence(){
@@ -228,7 +251,7 @@ function frame(){if(audio.paused){state.frame=null;return;}if(state.result){cons
 
 $("tabFile").addEventListener("click",()=>showTab("file"));$("tabLink").addEventListener("click",()=>showTab("link"));$("bilibiliUrl").addEventListener("input",()=>setBusy(state.busy));$("audioFile").addEventListener("change",event=>selectFile(event.target.files[0]));
 for(const name of ["dragenter","dragover"]){$("dropZone").addEventListener(name,event=>{event.preventDefault();$("dropZone").classList.add("dragover");});}for(const name of ["dragleave","drop"]){$("dropZone").addEventListener(name,event=>{event.preventDefault();$("dropZone").classList.remove("dragover");});}$("dropZone").addEventListener("drop",event=>selectFile(event.dataTransfer.files[0]));
-$("analyze").addEventListener("click",beginAnalysis);$("retry").addEventListener("click",()=>{showTab("file");beginAnalysis();});$("refreshProjects").addEventListener("click",()=>refreshProjects().catch(error=>toast(error.message)));
+$("analyze").addEventListener("click",beginAnalysis);$("separate").addEventListener("click",()=>beginSeparation().catch(error=>{toast(error.message);$("inputStatus").textContent=error.message;}));$("retry").addEventListener("click",()=>{showTab("file");beginAnalysis();});$("refreshProjects").addEventListener("click",()=>refreshProjects().catch(error=>toast(error.message)));
 $("newProject").addEventListener("click",()=>{state.navigation++;stopPolling();audio.pause();audio.removeAttribute("src");audio.load();if(state.objectUrl)URL.revokeObjectURL(state.objectUrl);state.objectUrl=null;state.project=null;state.file=null;clearResult();$("audioFile").value="";$("fileTitle").textContent="将音乐拖到这里，或点击选择";$("fileMeta").textContent="MP3 / WAV / FLAC / M4A 等 · 最大 512 MB";$("inputStatus").textContent="选择音频后可以立即试听。";$("playerPanel").hidden=true;$("jobPanel").hidden=true;$("emptyState").hidden=false;showTab("file");refreshProjects().catch(error=>toast(error.message));});
 $("play").addEventListener("click",()=>audio.paused?playback():audio.pause());audio.addEventListener("play",()=>{$("play").textContent="Ⅱ";$("play").setAttribute("aria-label","暂停");if(!state.frame)state.frame=requestAnimationFrame(frame);});audio.addEventListener("pause",()=>{$("play").textContent="▶";$("play").setAttribute("aria-label","播放");tick();});audio.addEventListener("timeupdate",tick);audio.addEventListener("loadedmetadata",()=>{$("seek").max=duration();$("playStatus").textContent="音频已连接 · 点击时间轴或和弦区间定位";tick();});audio.addEventListener("error",()=>{if(audio.getAttribute("src"))$("playStatus").textContent="音频暂时无法播放，请检查格式或重新打开项目。";});audio.addEventListener("ended",()=>{if(state.loop&&state.result){seek(state.source.rows[state.selected].start);playback();}});
 $("seek").addEventListener("input",()=>{state.auditionEnd=null;seek(Number($("seek").value));});$("speed").addEventListener("change",()=>audio.playbackRate=Number($("speed").value));$("loop").addEventListener("click",()=>{if(window.BarEditor?.getContext()){window.BarEditor.toggleLoop();return;}state.loop=!state.loop;state.auditionEnd=null;$("loop").setAttribute("aria-pressed",String(state.loop));if(state.loop){seek(state.source.rows[state.selected].start);playback();}});$("audition").addEventListener("click",()=>{window.BarEditor?.stopLoop();state.loop=false;$("loop").setAttribute("aria-pressed","false");const row=state.source.rows[state.selected];seek(row.start);state.auditionEnd=row.end;playback();});

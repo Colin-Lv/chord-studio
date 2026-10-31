@@ -14,7 +14,14 @@ document.addEventListener("click", event => {
 });
 function desktopModelMode(){
   const model=document.getElementById("model"),key=document.getElementById("keyMode");
-  if(model.value==="retained10"){key.value="madmom";key.disabled=true;}else key.disabled=false;
+  const retained=model.value==="retained10";
+  key.disabled=false;
+  for(const option of key.options){
+    const allowed=option.value==="continuous"?retained:option.value==="fused"?!retained:true;
+    option.hidden=!allowed;option.disabled=!allowed;
+  }
+  const current=key.options[key.selectedIndex];
+  if(!current||current.disabled)key.value=retained?"continuous":"madmom";
 }
 document.getElementById("model").addEventListener("change",desktopModelMode);
 document.getElementById("newProject").addEventListener("click",()=>{document.getElementById("model").value="retained10";desktopModelMode();});

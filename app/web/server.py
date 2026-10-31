@@ -27,6 +27,11 @@ class AnalyzeRequest(BaseModel):
     key_mode: Literal["madmom", "fused", "continuous"] = "madmom"
 
 
+class SeparateRequest(BaseModel):
+    force: bool = False
+    model: str = "htdemucs"
+
+
 class LinkRequest(AnalyzeRequest):
     url: str = Field(max_length=2000)
 
@@ -187,6 +192,49 @@ def create_app(store_root=None, manager_factory=Jobs):
         project = store.project(project_id)
         return application.state.jobs.submit(project_id, body.profile, download=not project.get("audio") and project.get("input_type") == "bilibili", key_mode=body.key_mode)
 
+    @application.post("/api/projects/{project_id}/separate", status_code=202)
+    def separate(project_id: str, body: SeparateRequest | None = None):
+        body = body or SeparateRequest()
+        project = store.project(project_id)
+        return application.state.jobs.submit(
+            project_id, "stems",
+            download=not project.get("audio") and project.get("input_type") == "bilibili",
+            force=body.force, model=body.model)
+
+    @application.get("/api/projects/{project_id}/stems")
+    def stems(project_id: str):
+        from .stems_worker import stems_dir
+        project = store.project(project_id)
+        if not project.get("audio"):
+            raise HTTPException(404, "项目还没有音频")
+        audio = store.project_dir(project_id) / project["audio"]
+        if not audio.is_file():
+            raise HTTPException(404, "音频文件不存在，请重新导入")
+        path = stems_dir(signature(audio)["sha256"]) / "manifest.json"
+        if not path.is_file():
+            raise HTTPException(404, "尚未生成分轨")
+        manifest = read_json(path)
+        manifest["audio_url"] = f"/api/projects/{project_id}/audio"
+        manifest["urls"] = {track["id"]: f"/api/projects/{project_id}/stems/{track['file']}"
+                            for track in manifest.get("tracks", [])}
+        manifest["wav_urls"] = {track["id"]: f"/api/projects/{project_id}/stems/{track['wav']}"
+                                for track in manifest.get("tracks", [])}
+        return manifest
+
+    @application.get("/api/projects/{project_id}/stems/{name:path}")
+    def stem_audio(project_id: str, name: str):
+        from .stems_worker import stems_dir
+        if not re.fullmatch(r"(wav/)?[a-z_]+\.(mp3|wav)", name):
+            raise HTTPException(404, "未知文件")
+        project = store.project(project_id)
+        audio = store.project_dir(project_id) / project["audio"]
+        path = stems_dir(signature(audio)["sha256"]) / name
+        if not path.is_file():
+            raise HTTPException(404, "文件不存在")
+        disposition = "attachment" if name.endswith(".wav") else "inline"
+        return FileResponse(path, media_type="audio/mpeg" if name.endswith(".mp3") else "audio/wav",
+                            content_disposition_type=disposition)
+
     @application.get("/api/jobs/{job_id}")
     def job(job_id: str):
         return read_json(store.job_path(job_id))
@@ -339,6 +387,10 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.get("/")
     def index():
         return FileResponse(ROOT / "frontend/index.html", headers={"Cache-Control": "no-cache"})
+
+    @application.get("/stems")
+    def stems_page():
+        return FileResponse(ROOT / "frontend/stems.html", headers={"Cache-Control": "no-cache"})
 
     return application
 

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分轨 · Chord Studio</title>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/stems.css">
+</head>
+<body class="stems-page">
+  <header class="app-header"><a href="/" class="brand"><span class="brand-icon">♮</span><span>Chord <b>Studio</b></span></a><span class="text-link">分轨视图</span><a class="text-link" id="backToWorkbench" href="/">← 返回工作台</a></header>
+
+  <main class="stems-main">
+    <section class="stems-title">
+      <div><div class="eyebrow">STEMS</div><h1 id="songTitle">分轨</h1><p class="muted" id="songMeta">读取项目…</p></div>
+      <div class="stems-actions">
+        <button id="reSeparate" class="secondary" hidden>重新分离</button>
+        <a id="downloadMix" class="text-link" href="#" hidden>下载原曲 ↓</a>
+      </div>
+    </section>
+
+    <section id="pending" class="panel stems-pending" hidden>
+      <h2 id="pendingTitle">还没有分轨</h2>
+      <p id="pendingNote" class="muted">把这首歌拆成人声 / 鼓 / 贝斯 / 其他四轨，分离后可以逐轨试听、静音和独奏。</p>
+      <button id="startSeparate" class="primary">开始分离 <span>→</span></button>
+      <p id="separateStatus" class="status" role="status"></p>
+    </section>
+
+    <section id="workspace" hidden>
+      <div class="panel transport">
+        <button id="play" class="play" aria-label="播放">▶</button>
+        <div class="transport-clock"><strong id="clock">00:00</strong><span id="clockTotal" class="muted">/ 00:00</span></div>
+        <div class="transport-meta">
+          <span><b id="bpm">—</b> BPM</span>
+          <span><b id="keyLabel">—</b></span>
+          <span><b id="barLabel">—</b> 小节</span>
+          <span class="muted" id="gridSource"></span>
+        </div>
+        <div class="transport-right">
+          <label class="follow-label"><input id="follow" type="checkbox" checked>跟随播放</label>
+          <label class="follow-label">音量<input id="master" type="range" min="0" max="1" step="0.01" value="1"></label>
+        </div>
+      </div>
+
+      <div class="panel stems-grid-panel">
+        <div class="grid-body">
+          <div class="track-heads" id="trackHeads"></div>
+          <div class="grid-scroll" id="gridScroll">
+            <div class="ruler" id="ruler"></div>
+            <div class="grid-canvas-wrap" id="canvasWrap">
+              <canvas id="gridCanvas"></canvas>
+              <canvas id="overlayCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <p class="timeline-note">每列一个小节，列内是十六分音符的能量；点击任意位置从那里播放。M 静音，S 独奏。</p>
+      </div>
+
+      <div class="stems-bottom">
+        <section class="panel stems-info"><div class="section-heading"><h3>音轨信息</h3><span class="muted" id="modelInfo"></span></div><div id="trackInfo" class="track-info"></div></section>
+        <section class="panel stems-info"><div class="section-heading"><h3>怎么听</h3></div><ul class="listen-tips">
+          <li>点 <b>M</b> 静音一轨，点 <b>S</b> 只留这一轨；再次点击恢复。</li>
+          <li>空格播放/暂停，← → 前后 5 秒；点小节网格即从该处播放。</li>
+          <li>人声轨安静的地方说明是纯音乐段；贝斯轨的音高标注只作参考。</li>
+        </ul></section>
+      </div>
+    </section>
+
+    <p id="error" class="error" hidden></p>
+  </main>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script defer src="/assets/stems.js"></script>
+</body>
+</html>

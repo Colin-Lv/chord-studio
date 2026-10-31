@@ -43,20 +43,22 @@ class Jobs:
                 project.update(active_job=None, status="interrupted")
                 store.save_project(project)
 
-    def submit(self, project_id, profile, download=False, key_mode="madmom"):
-        if key_mode not in {"madmom", "fused", "continuous"}:
+    def submit(self, project_id, profile, download=False, key_mode="madmom",
+               force=False, model=None):
+        if profile != "stems" and key_mode not in {"madmom", "fused", "continuous"}:
             raise ValueError("未知主调分析模式")
         if profile == "retained10" and key_mode == "fused":
             raise ValueError("retained10 的主调支持 CNN 或连续评分（实验）；分歧裁决仅适用于旧模型。")
-        if profile != "retained10" and key_mode == "continuous":
+        if profile != "retained10" and profile != "stems" and key_mode == "continuous":
             raise ValueError("连续评分主调（实验）仅适用于当前冻结模型。")
-        if profile not in PROFILES:
+        if profile not in PROFILES and profile != "stems":
             raise ValueError("未知模型选项")
         with self.lock:
             project = self.store.project(project_id)
             if project.get("active_job"):
                 return read_json(self.store.job_path(project["active_job"]))
             job = dict(id=uuid4().hex, project_id=project_id, profile=profile, download=download, key_mode=key_mode,
+                       force=bool(force), model=model,
                        status="queued", stage="queued", stage_label="等待前一项任务完成", stages=[],
                        created_at=now(), error=None)
             atomic_json(self.store.job_path(job["id"]), job)
@@ -87,10 +89,18 @@ class Jobs:
                 subprocess.run(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=7200, creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
             with self.lock:
                 project = self.store.project(project_id)
-                project.update(current_run=job_id, active_job=None, status="completed")
-                self.store.save_project(project)
                 job = read_json(path)
-                job.update(status="completed", stage="complete", stage_label="分析完成", finished_at=now())
+                project.update(active_job=None, status="completed")
+                if job.get("profile") == "stems":
+                    # Separation produces a side asset: it must never replace the analysis run.
+                    project.update(stems=dict(job_id=job_id, updated_at=now()))
+                    job.update(status="completed", stage="complete", stage_label="分轨完成",
+                               finished_at=now())
+                else:
+                    project.update(current_run=job_id)
+                    job.update(status="completed", stage="complete", stage_label="分析完成",
+                               finished_at=now())
+                self.store.save_project(project)
                 atomic_json(path, job)
         except Exception as exc:
             with self.lock:
