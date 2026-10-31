@@ -36,8 +36,10 @@ STEMS_2 = (
 MODELS = {
     "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
     "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，GPU 约 45 秒，质量更好"),
-    "htdemucs_6s": dict(id="htdemucs_6s", label="六轨", note="额外分出吉他/钢琴，整体质量弱于四轨模型", stems=6),
     "bs_roformer": dict(id="bs_roformer", label="人声优先", note="BS-RoFormer 两轨，GPU 约 3 分钟，人声更强", stems=2),
+    "bs_roformer_sw": dict(id="bs_roformer_sw", label="六轨精细",
+                           note="BS-Roformer-SW 六轨，GPU 约 1 分钟；吉他/钢琴为部分估计",
+                           stems=6, runner="registry", model_file="BS-Roformer-SW.ckpt"),
 }
 GPU_PYTHON = Path(r"D:\ChordStudio\runtime\gpu\Scripts\python.exe")
 MODEL_NAME = "htdemucs"
@@ -401,6 +403,26 @@ def execute(store, job_id):
         env["PYTHONUTF8"] = "1"
         env.setdefault("TORCH_HOME", str(Path.home() / ".cache" / "torch"))
         env["OMP_NUM_THREADS"] = env.get("STEMS_THREADS", "8")
+        spec = MODELS[model]
+        if spec.get("runner") == "registry":
+            outdir = work / "registry"
+            result = subprocess.run([python, "-B", str(ROOT / "app/web/separator_runner.py"),
+                                     "--input", str(source_wav), "--outdir", str(outdir),
+                                     "--model", spec["model_file"]],
+                                    cwd=str(ROOT), env=env, capture_output=True, text=True,
+                                    timeout=3600,
+                                    creationflags=subprocess.CREATE_NO_WINDOW
+                                    if os.name == "nt" else 0)
+            if result.returncode:
+                raise RuntimeError("分离失败：" + (result.stderr or result.stdout or "")[-1500:])
+            wanted = {stem["id"] for stem in stems_for(model)}
+            for produced in outdir.glob("*.wav"):
+                name = produced.name.lower()
+                for stem_id in wanted:
+                    if f"({stem_id})" in name:
+                        shutil.copyfile(produced, work / f"{stem_id}.wav")
+            publish(stage_label="正在标注音轨信息")
+            return
         if model == "bs_roformer":
             outdir = work / "roformer"
             result = subprocess.run([python, "-B", str(ROOT / "app/web/bsroformer_runner.py"),
@@ -530,7 +552,7 @@ def execute(store, job_id):
         schema="chord_studio_stems_v1",
         project_id=project["id"], audio_sha256=sha,
         created_at=now(), cached=False,
-        model=dict(name=model, label=MODELS[model]["label"], package=("audio-separator 0.48" if model == "bs_roformer" else "demucs 4.1.0"),
+        model=dict(name=model, label=MODELS[model]["label"], package=("audio-separator 0.48" if model.startswith("bs_roformer") else "demucs 4.1.0"),
                    device=job.get("device", "cpu"), seconds=round(time.perf_counter() - started, 1)),
         source_audio=project["audio"],
         **analysis,

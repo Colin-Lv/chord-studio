@@ -164,6 +164,23 @@ demucs 的四轨里 drums+bass+other 相加作为伴奏，RoFormer 直接输出�
 复现：`musdb_bench.py`（解包 → demucs + RoFormer → harness 打分）、
 `score_ft_musdb.py`（ft 打分）、`aggregate_musdb.py`（汇总）。
 
+### 6.0.2 六轨的另一条路：BS-Roformer-SW
+
+再试 `BS-Roformer-SW.ckpt`：它一次输出**六轨**（人声/鼓/贝斯/其他/吉他/钢琴），
+显存 1.59 GB，整首 40–70 秒（比 317 快 4 倍）。在同样 5 首上：
+
+| 模型 | 人声 | 伴奏 | 六轨 | 速度 |
+|---|---:|---:|---|---:|
+| bs_roformer_ep_317（两轨） | **13.96** | **20.45** | ❌ | 165 s |
+| BS-Roformer-SW（六轨） | 13.59 | 19.89 | ✅ | **40–70 s** |
+
+人声只差 0.37 dB、伴奏差 0.56 dB，但**快 4 倍、多两轨**。所以产品里用 SW 取代了
+htdemucs_6s（后者人声差、速度慢、同样是六轨）。
+
+**但吉他/钢琴的归属问题依旧**：《虚拟》上 SW 的「吉他」是 −17.6 dB（96% 有声）、
+「钢琴」−34.9 dB——和 htdemucs_6s 一模一样的错误。两个模型犯同样的错，
+说明这不是某个 checkpoint 的毛病，而是「钢琴主导的流行歌」这一类数据的普遍困难。
+
 ### 6.0.1 选型复核：换了另一个 RoFormer 反而更差
 
 audio-separator 里有 81 个 RoFormer 类 checkpoint。抽一个流行的人声专用模型
