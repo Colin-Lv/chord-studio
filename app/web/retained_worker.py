@@ -208,7 +208,7 @@ def execute(store, job_id):
         write_full_lab(full_path,rows)
         full.update(applied=True,segments=len(rows),params=dict(PARAMS))
         return rows
-    stage('full','生成完整段解码时间轴（派生，第二档）',full_decode_stage,optional=True)
+    stage('full','生成完整段解码时间轴（派生）',full_decode_stage,optional=True)
     runtime_config=read_json(ROOT/'desktop_runtime.json')
     model_label=str(runtime_config.get('model_version') or 'retained10')
     frozen_date=str(runtime_config.get('frozen_utc') or '')[:10]
@@ -269,7 +269,7 @@ def execute(store, job_id):
         if not key or not key.get('candidates'):
             raise ValueError('缺少声学候选分布，跳过连续评分主调')
         return evaluate_experimental_key(key_rows,key['candidates'],published_key=key.get('key'))
-    experimental=stage('key_experimental','连续评分主调（实验，第二档）',experimental_key,optional=True)
+    experimental=stage('key_experimental','连续评分主调（实验）',experimental_key,optional=True)
     if key is not None and experimental:
         key=dict(key,experimental=experimental)
     if key_mode=='continuous':
