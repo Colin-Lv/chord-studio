@@ -9,7 +9,7 @@ ROOT = Path(r"D:\ChordStudio\datasets")
 
 def main():
     rows = []
-    for index in range(10):
+    for index in range(15):
         song = ROOT / f"musdb_song{index}"
         if not (song / "scores.json").is_file() or not (song / "scores_ft.json").is_file():
             continue
@@ -41,3 +41,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
