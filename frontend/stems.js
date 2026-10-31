@@ -11,6 +11,7 @@ const state = {
   audios: {}, mix: null, tracks: [], bars: [], stepsPerCell: 16,
   playing: false, solo: null, muted: {}, master: 1,
   referenceOn: false, loopBar: false, loopIndex: -1,
+  drumParts: null, expandDrums: false,
   cellW: 20, rowH: 74, hoverBar: -1, raf: null,
 };
 
@@ -180,6 +181,7 @@ async function start(manifest) {
   const sourceText = manifest.bpm_source === "beats.json" ? "小节来自拍点分析"
     : manifest.bpm_source === "librosa estimate" ? "BPM 与小节为估计值" : "BPM 与小节为默认值";
   $("songMeta").textContent = `${fmt(manifest.duration)} · ${state.tracks.length} 轨 · ${sourceText}`;
+  state.metaSuffix = sourceText;
   $("bpm").textContent = Number(manifest.bpm).toFixed(1);
   $("gridSource").textContent = manifest.bpm_source === "beats.json" ? "小节来自拍点分析" : "小节为估计值";
   $("barLabel").textContent = state.bars.length;
@@ -195,6 +197,9 @@ async function start(manifest) {
   const key = result?.key_analysis?.key;
   $("keyLabel").textContent = key ? key.replace(/m$/, "") + (key.endsWith("m") ? " 小调" : " 大调") : "—";
   state.chords = chordTimeline(result);
+  state.drumParts = await api(`/api/projects/${PROJECT}/stems/drums-parts?model=${encodeURIComponent(manifest.model_key || "htdemucs")}`).catch(() => null);
+  state.tracks = composedTracks();
+  renderDrumButton();
 
   buildAudio();
   buildHeads();
@@ -216,7 +221,8 @@ function buildAudio() {
     const audio = document.createElement("audio");
     audio.className = "stem-audio";
     audio.preload = "auto";
-    audio.src = state.manifest.urls?.[track.id] || `/api/projects/${PROJECT}/stems/${track.file}`;
+    audio.src = state.manifest.urls?.[track.id] || state.drumParts?.urls?.[track.id]
+      || `/api/projects/${PROJECT}/stems/${track.file}`;
     audio.dataset.track = track.id;
     audio.addEventListener("ended", () => { if (audio === master()) stop(); });
     document.body.appendChild(audio);
@@ -229,6 +235,84 @@ function buildAudio() {
   mix.dataset.track = "mix";
   document.body.appendChild(mix);
   state.mix = mix;
+}
+
+function composedTracks() {
+  const base = state.manifest?.tracks || [];
+  if (!state.expandDrums || !state.drumParts?.tracks?.length) return base;
+  const out = [];
+  for (const track of base) {
+    if (track.id === "drums") {
+      for (const part of state.drumParts.tracks) out.push({ ...part, group: "drums" });
+    } else {
+      out.push(track);
+    }
+  }
+  return out;
+}
+
+function renderDrumButton() {
+  const button = $("drumPartsBtn");
+  if (!button) return;
+  const hasDrums = (state.manifest?.tracks || []).some(track => track.id === "drums");
+  button.hidden = !hasDrums;
+  if (!hasDrums) return;
+  button.textContent = state.drumParts
+    ? (state.expandDrums ? "收起鼓组" : "展开鼓组")
+    : "细分鼓组";
+  button.onclick = () => (state.drumParts ? toggleDrums() : runDrumParts());
+}
+
+function rebuildTracks() {
+  const time = currentTime();
+  stop();
+  state.tracks = composedTracks();
+  state.audios = {};
+  $("trackHeads").replaceChildren();
+  buildAudio();
+  buildHeads();
+  layout();
+  buildRuler();
+  drawGrid();
+  updateInfo();
+  seek(time);
+  $("songMeta").textContent = `${fmt(state.manifest.duration)} · ${state.tracks.length} 轨 · ${state.metaSuffix || ""}`;
+  renderDrumButton();
+}
+
+function toggleDrums() {
+  state.expandDrums = !state.expandDrums;
+  rebuildTracks();
+}
+
+async function runDrumParts() {
+  const button = $("drumPartsBtn");
+  button.disabled = true;
+  button.textContent = "正在细分…";
+  try {
+    const job = await api(`/api/projects/${PROJECT}/drums-parts`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ force: false, model: state.manifest.model_key || "htdemucs" }),
+    });
+    if (job.profile !== "drums_parts") throw new Error("当前有任务在跑，等它结束再细分鼓组");
+    for (;;) {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      const row = await api(`/api/jobs/${job.id}`);
+      button.textContent = row.stage_label || "正在细分…";
+      if (row.status === "completed") break;
+      if (row.status === "failed" || row.status === "interrupted") {
+        throw new Error(row.error || "鼓组细分失败");
+      }
+    }
+    state.drumParts = await api(`/api/projects/${PROJECT}/stems/drums-parts?model=${encodeURIComponent(state.manifest.model_key || "htdemucs")}`);
+    state.expandDrums = true;
+    rebuildTracks();
+  } catch (error) {
+    toast(error.message);
+    renderDrumButton();
+  } finally {
+    button.disabled = false;
+  }
 }
 
 function buildHeads() {
@@ -398,6 +482,8 @@ function drawGrid() {
     ctx.fillStyle = row % 2 ? "#141d20" : "#151f22";
     ctx.fillRect(0, y, width, state.rowH);
     ctx.globalAlpha = audible ? 1 : 0.32;
+    const loudest = Math.max(...state.tracks.map(item => item.rms_db ?? -100));
+    const levelScale = Math.max(0.18, Math.min(1, Math.pow(10, ((track.rms_db ?? -100) - loudest) / 30)));
     const inner = 7;
     state.bars.forEach((bar, b) => {
       const x = b * state.cellW;
@@ -410,7 +496,7 @@ function drawGrid() {
       values.forEach((value, k) => {
         if (value <= 0.02) return;
         const h = Math.max(2, value * maxH);
-        ctx.fillStyle = hexToRgba(track.color, 0.22 + 0.72 * value);
+        ctx.fillStyle = hexToRgba(track.color, (0.22 + 0.72 * value) * levelScale);
         ctx.fillRect(x + 1 + k * stepW, y + inner + (maxH - h) + 4, Math.max(1, stepW - 0.6), h);
       });
     });

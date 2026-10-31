@@ -51,7 +51,7 @@ class Jobs:
             raise ValueError("retained10 的主调支持 CNN 或连续评分（实验）；分歧裁决仅适用于旧模型。")
         if profile != "retained10" and profile != "stems" and key_mode == "continuous":
             raise ValueError("连续评分主调（实验）仅适用于当前冻结模型。")
-        if profile not in PROFILES and profile != "stems":
+        if profile not in PROFILES and profile not in {"stems", "drums_parts"}:
             raise ValueError("未知模型选项")
         with self.lock:
             project = self.store.project(project_id)
@@ -82,7 +82,8 @@ class Jobs:
         atomic_json(path, job)
         with self.lock:
             project = self.store.project(project_id)
-            project["status"] = "stems" if job.get("profile") == "stems" else "running"
+            project["status"] = ("stems" if job.get("profile") in {"stems", "drums_parts"}
+                                 else "running")
             self.store.save_project(project)
         try:
             with log_path.open("w", encoding="utf-8") as log:
@@ -91,10 +92,14 @@ class Jobs:
                 project = self.store.project(project_id)
                 job = read_json(path)
                 project.update(active_job=None, status="completed")
-                if job.get("profile") == "stems":
+                if job.get("profile") in {"stems", "drums_parts"}:
                     # Separation produces a side asset: it must never replace the analysis run.
-                    project.update(stems=dict(job_id=job_id, updated_at=now()))
-                    job.update(status="completed", stage="complete", stage_label="分轨完成",
+                    if job.get("profile") == "drums_parts":
+                        project.update(drum_parts=dict(job_id=job_id, updated_at=now()))
+                    else:
+                        project.update(stems=dict(job_id=job_id, updated_at=now()))
+                    job.update(status="completed", stage="complete",
+                               stage_label="分轨完成" if job.get("profile") == "stems" else "鼓组细分完成",
                                finished_at=now())
                 else:
                     project.update(current_run=job_id)

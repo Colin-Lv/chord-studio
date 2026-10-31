@@ -240,6 +240,9 @@ def main():
         if job.get("profile") == "stems":
             from .stems_worker import execute as execute_stems
             execute_stems(store, args.job)
+        elif job.get("profile") == "drums_parts":
+            from .drums_worker import execute as execute_drums
+            execute_drums(store, args.job)
         else:
             execute(store, args.job)
     except Exception as exc:

@@ -204,6 +204,30 @@ def create_app(store_root=None, manager_factory=Jobs):
             download=not project.get("audio") and project.get("input_type") == "bilibili",
             force=body.force, model=body.model)
 
+    @application.post("/api/projects/{project_id}/drums-parts", status_code=202)
+    def drums_parts(project_id: str, body: SeparateRequest | None = None):
+        from .stems_worker import MODELS
+        body = body or SeparateRequest()
+        model = body.model if body.model in MODELS else "htdemucs"
+        return application.state.jobs.submit(project_id, "drums_parts", key_mode="madmom",
+                                             force=body.force, model=model)
+
+    @application.get("/api/projects/{project_id}/stems/drums-parts")
+    def drums_parts_manifest(project_id: str, model: str | None = None):
+        from .drums_worker import parts_manifest
+        from .stems_worker import available_models
+        project = store.project(project_id)
+        sha = _stems_sha(project_id, project)
+        ready = [item["id"] for item in available_models(sha) if item["ready"]]
+        model = model or ("htdemucs" if "htdemucs" in ready else (ready[0] if ready else "htdemucs"))
+        path = parts_manifest(sha, model)
+        if not path.is_file():
+            raise HTTPException(404, "尚未细分鼓组")
+        manifest = read_json(path)
+        manifest["urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['file']}"
+                            for track in manifest.get("tracks", [])}
+        return manifest
+
     def _stems_sha(project_id: str, project: dict) -> str:
         audio = store.project_dir(project_id) / project["audio"]
         if not audio.is_file():
@@ -240,7 +264,7 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.get("/api/projects/{project_id}/stems/{name:path}")
     def stem_audio(project_id: str, name: str, model: str | None = None):
         from .stems_worker import MODEL_NAME, available_models, stems_dir
-        if not re.fullmatch(r"(wav/)?[a-z_]+\.(mp3|wav)", name):
+        if not re.fullmatch(r"(drums_parts/)?(wav/)?[a-z_]+\.(mp3|wav)", name):
             raise HTTPException(404, "未知文件")
         project = store.project(project_id)
         sha = _stems_sha(project_id, project)
@@ -248,6 +272,8 @@ def create_app(store_root=None, manager_factory=Jobs):
             ready = [item["id"] for item in available_models(sha) if item["ready"]]
             model = "htdemucs" if "htdemucs" in ready else (ready[0] if ready else MODEL_NAME)
         path = stems_dir(sha, model) / name
+        if name.startswith("drums_parts/"):
+            path = stems_dir(sha, model) / name
         if not path.is_file():
             raise HTTPException(404, "文件不存在")
         disposition = "attachment" if name.endswith(".wav") else "inline"
