@@ -34,9 +34,9 @@ STEMS_2 = (
     dict(id="instrumental", name="伴奏", short="INST", instrument="除人声以外的全部", color="#e6a06f"),
 )
 MODELS = {
-    "htdemucs": dict(id="htdemucs", label="标准", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
-    "htdemucs_ft": dict(id="htdemucs_ft", label="精细", note="4 个微调模型集成，GPU 约 45 秒，质量更好"),
-    "bs_roformer": dict(id="bs_roformer", label="人声优先", note="BS-RoFormer 两轨，GPU 约 3 分钟，人声更强", stems=2),
+    "htdemucs": dict(id="htdemucs", label="标准（快）", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
+    "htdemucs_ft": dict(id="htdemucs_ft", label="精细（四模型）", note="4 个微调模型集成，GPU 约 45 秒；MUSDB 十首上并未优于标准版"),
+    "bs_roformer": dict(id="bs_roformer", label="人声优先", note="BS-RoFormer 两轨，GPU 约 3 分钟；MUSDB 十首人声 SI-SDR 高 4.7 dB", stems=2),
     "bs_roformer_sw": dict(id="bs_roformer_sw", label="六轨精细",
                            note="BS-Roformer-SW 六轨，GPU 约 1 分钟；吉他/钢琴为部分估计",
                            stems=6, runner="registry", model_file="BS-Roformer-SW.ckpt"),
