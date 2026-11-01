@@ -1,0 +1,47 @@
+{
+  "job": "4ebd3daeba3f47b5b14d58fdc124ae14",
+  "run": "4ebd3daeba3f47b5b14d58fdc124ae14",
+  "default_source": "retained10_bass_9fb52926693e",
+  "source_name": "当前模型 · 和弦与指定低音（v90 + bass-voice-v2）",
+  "request": {
+    "profile": "retained10",
+    "key_mode": "continuous"
+  },
+  "automatic": true,
+  "passage": [
+    {
+      "time": 20.82,
+      "label": "B:maj/C#"
+    },
+    {
+      "time": 23.84,
+      "label": "B:maj/D#"
+    },
+    {
+      "time": 26.83,
+      "label": "E:maj"
+    },
+    {
+      "time": 35.83,
+      "label": "B:maj/D#"
+    }
+  ],
+  "source_rows": 82,
+  "editor_document_valid": true,
+  "export_hash_verified": true,
+  "previous_analysis_unchanged": true,
+  "stage_seconds": {
+    "retained10": 2.1524895999755245,
+    "waveform": 0.20172240000101738,
+    "key": 5.083949199994095,
+    "beats": 23.65071730001364,
+    "stabilize": 0.07510770001681522,
+    "span": 0.005701899994164705,
+    "full": 2.5293023999838624,
+    "key_chords": 0.005391399987274781,
+    "key_experimental": 0.024866100022336468,
+    "structure": 1.6462035999866202,
+    "harmonic_key_v3": 1.3413006000046153,
+    "joint_harmony": 3.13487539999187
+  }
+}

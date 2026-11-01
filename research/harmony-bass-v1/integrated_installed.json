@@ -1,0 +1,42 @@
+{
+  "backup": "D:\\ChordStudio\\data\\backups\\joint-harmony_20261102_000527",
+  "files": [
+    {
+      "path": "app/web/joint_harmony.py",
+      "sha256": "99d6a7a860e447be978d3caa0979c4a2b5db0226a2510c0b5b61a9d082f8ca5c"
+    },
+    {
+      "path": "app/web/retained_worker.py",
+      "sha256": "3b0b161e0012000e4792f415e09d6ec32ae1a0ebb138300bde8b51a4dda85b55"
+    },
+    {
+      "path": "app/web/pipeline_worker.py",
+      "sha256": "270047211154b1d3c5889090395619a2844dc70bf322e59c3a6864a898317972"
+    },
+    {
+      "path": "app/web/stems_worker.py",
+      "sha256": "a4ce086be34bbfd1599bde4bb99c03f01c004580bf9e1cd6958618e7dd43c603"
+    },
+    {
+      "path": "app/web/stem_bass_harmony.py",
+      "sha256": "8405fe46c0fe9853a76e9914cddbf225d83d27799a0e51acb35f42b58b583a26"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "cc32adf5834d98a89819a3b057ce4125495abdb0b8782bed5747ab833598ce55"
+    },
+    {
+      "path": "frontend/app.js",
+      "sha256": "8251962f266c83c3a9cdbb12b66a4e483283771a57f21ce49a7bdcabb8017d66"
+    },
+    {
+      "path": "frontend/pipeline.js",
+      "sha256": "a27af804997fb5e8ef12719ee77f204c3de59f515d7839225186dbf2b8b4a70e"
+    }
+  ],
+  "bass_weights": {
+    "path": "app/web/models/bass_voice_v2.joblib",
+    "sha256": "7cdedcd01770c2073dbfa7054cc1a967203a60fc9cca9745ec3d5b9861ae3fe0",
+    "candidate_v3_promoted": false
+  }
+}

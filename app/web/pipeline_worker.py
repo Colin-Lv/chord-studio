@@ -13,6 +13,7 @@ from .storage import atomic_json, now, read_json
 STAGE_LABELS = {
     "analysis": "和声分析",
     "stems": "音轨分离",
+    "joint_harmony": "和弦与指定低音（默认）",
     "vocal_parts": "人声细分",
     "guitar_parts": "吉他细分",
     "drums_parts": "鼓组细分",
@@ -21,6 +22,9 @@ STAGE_LABELS = {
 
 
 def _worker(profile: str):
+    if profile == 'joint_harmony':
+        from .joint_harmony import execute
+        return execute
     if profile == "retained10":
         from .retained_worker import execute
         return execute
@@ -50,6 +54,7 @@ def execute(store, job_id):
     model = spec.get("model") or "bs_roformer_sw"
     steps = [("retained10", "analysis")]
     steps.append(("stems", "stems"))
+    steps.append(("joint_harmony", "joint_harmony"))
     if spec.get("vocal_parts"):
         steps.append(("vocal_parts", "vocal_parts"))
     if spec.get("guitar_parts"):
@@ -80,12 +85,17 @@ def execute(store, job_id):
             job["make_default"] = bool(spec.get("harmony_default", False))
         atomic_json(job_path, job)
         started = time.perf_counter()
-        _worker(profile)(store, job_id)
+        if key == 'joint_harmony':
+            _worker(profile)(store, job_id, store.run_dir(project_id,job_id))
+        else:
+            _worker(profile)(store, job_id)
         job = read_json(job_path)
         records.append(dict(id=key, label=label, status="completed",
                             seconds=round(time.perf_counter() - started, 1)))
         job["stages"] = records
-        if key == "analysis":
+        # Do not expose the intermediate, bass-free analysis as current. A
+        # separation/bass failure must leave the previous complete run active.
+        if key == "joint_harmony":
             project = store.project(project_id)
             project["current_run"] = job_id
             store.save_project(project)

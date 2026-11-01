@@ -1,0 +1,11 @@
+{
+  "completed_utc": "2026-11-01T14:34:49.684513+00:00",
+  "exit_code": 0,
+  "abort": null,
+  "seconds": 80.86579250000068,
+  "peak_process_tree_bytes": 446697472,
+  "minimum_system_available_bytes": 3649576960,
+  "budget_MiB": 512,
+  "successful": true,
+  "only_owned_children_terminated": false
+}

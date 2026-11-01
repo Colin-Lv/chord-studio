@@ -1,0 +1,38 @@
+{
+  "audio": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\views\\accompaniment.wav",
+  "mono": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\frozen-cache\\85039fe3dbb42ab0f9db12ae7b693613972fa7ee439785a789ea40a9232980b1.pending-0e066ebf7edc42c3a0fbdb004311f4cb\\mono.npy",
+  "folder": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\frozen-cache\\85039fe3dbb42ab0f9db12ae7b693613972fa7ee439785a789ea40a9232980b1.pending-0e066ebf7edc42c3a0fbdb004311f4cb",
+  "runtime": {
+    "ffmpeg": {
+      "path": "C:\\Users\\33573\\AppData\\Roaming\\Python\\Python313\\Scripts\\ffmpeg.exe",
+      "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+    },
+    "sonic_annotator": {
+      "path": "D:\\ChordStudio\\Dialogue\\tools\\sonic-annotator-1.7-win64\\sonic-annotator-win64\\sonic-annotator.exe",
+      "sha256": "be457f578a069ff432d61d73ae93b3eb519b9daf3b4341520aca6df632b18227"
+    },
+    "nnls_plugin": {
+      "path": "C:\\Program Files\\Vamp Plugins\\nnls-chroma.dll",
+      "sha256": "9e6e8b0b9fdcec20807ed050d6a0a99d77c091fefe15058ad0466fbfd2e4ae71"
+    },
+    "madmom_python": {
+      "path": "D:\\ChordStudio\\runtime\\madmom39\\Scripts\\python.exe",
+      "sha256": "3515e307cf21fe8f37112b3a6e79c3c3b50aa202cc000df4bbf3343f083a2f70"
+    },
+    "madmom_models": {
+      "CNN": {
+        "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chords\\2016\\chords_cnnfeat.pkl",
+        "sha256": "59ac731a514880d7ec22ed9ee33935fc1683d2a03d8a7b4b81d26a3da944ce7d"
+      },
+      "CRF": {
+        "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chords\\2016\\chords_cnncrf.pkl",
+        "sha256": "4b8a63b4bb5bea076cf1babc76d5cb0a3618e6125d9a3a998f441d61308676af"
+      },
+      "DeepChroma": {
+        "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chroma\\2016\\chroma_dnn.pkl",
+        "sha256": "d91aff59113ec6b85de9c9b1aafb065ed0c756072284cebc61564237e901ca94"
+      }
+    },
+    "madmom_version": "0.16.1"
+  }
+}

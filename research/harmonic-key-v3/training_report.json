@@ -1,0 +1,765 @@
+{
+  "candidate_selection": [
+    {
+      "C": 0.1,
+      "validation_hits": 39,
+      "total": 40
+    },
+    {
+      "C": 1.0,
+      "validation_hits": 40,
+      "total": 40
+    },
+    {
+      "C": 10.0,
+      "validation_hits": 40,
+      "total": 40
+    }
+  ],
+  "cost_selection": [
+    {
+      "cost": 3.0,
+      "correct": 8,
+      "total": 26,
+      "paired_correct": 5,
+      "stationary_correct": 3
+    },
+    {
+      "cost": 5.0,
+      "correct": 9,
+      "total": 26,
+      "paired_correct": 5,
+      "stationary_correct": 4
+    },
+    {
+      "cost": 8.0,
+      "correct": 9,
+      "total": 26,
+      "paired_correct": 5,
+      "stationary_correct": 4
+    },
+    {
+      "cost": 12.0,
+      "correct": 14,
+      "total": 26,
+      "paired_correct": 8,
+      "stationary_correct": 6
+    },
+    {
+      "cost": 18.0,
+      "correct": 17,
+      "total": 26,
+      "paired_correct": 10,
+      "stationary_correct": 7
+    },
+    {
+      "cost": 24.0,
+      "correct": 18,
+      "total": 26,
+      "paired_correct": 10,
+      "stationary_correct": 8
+    },
+    {
+      "cost": 32.0,
+      "correct": 21,
+      "total": 26,
+      "paired_correct": 10,
+      "stationary_correct": 11
+    },
+    {
+      "cost": 48.0,
+      "correct": 21,
+      "total": 26,
+      "paired_correct": 10,
+      "stationary_correct": 11
+    }
+  ],
+  "model": {
+    "schema": "harmonic-key-ranker-v3",
+    "features": [
+      "native",
+      "borrowed",
+      "secondary",
+      "unexplained",
+      "outside",
+      "tonic",
+      "opposite_tonic",
+      "dominant",
+      "authentic_arrival",
+      "plagal_arrival",
+      "predominant_to_dominant",
+      "tonic_departure",
+      "entry_tonic",
+      "ending_tonic"
+    ],
+    "weights": [
+      6.313222983317773,
+      0.6520257317097897,
+      -4.438122869424151,
+      -2.669889360843781,
+      -2.121693286660534,
+      9.213204786238125,
+      -0.6119985950315584,
+      1.2090801979912038,
+      5.748238723198682,
+      1.5124401139056083,
+      4.293394561682965,
+      0.3546411523867492,
+      1.390940618401358,
+      0.9872183268492101
+    ],
+    "C": 1.0,
+    "training": "synthetic symbolic controls; no user-song fitting",
+    "change_cost": 32.0,
+    "short_cost": 2.0
+  },
+  "tests": [
+    {
+      "truth": "Bm",
+      "predicted": "Bm"
+    },
+    {
+      "truth": "G",
+      "predicted": "G"
+    },
+    {
+      "truth": "F#m",
+      "predicted": "F#m"
+    },
+    {
+      "truth": "C#m",
+      "predicted": "C#m"
+    },
+    {
+      "truth": "F",
+      "predicted": "F"
+    },
+    {
+      "truth": "A#",
+      "predicted": "A#"
+    },
+    {
+      "truth": "G",
+      "predicted": "G"
+    },
+    {
+      "truth": "Cm",
+      "predicted": "Cm"
+    },
+    {
+      "truth": "A",
+      "predicted": "A"
+    },
+    {
+      "truth": "C",
+      "predicted": "C"
+    },
+    {
+      "truth": "Gm",
+      "predicted": "Gm"
+    },
+    {
+      "truth": "G#m",
+      "predicted": "G#m"
+    },
+    {
+      "truth": "C",
+      "predicted": "C"
+    },
+    {
+      "truth": "Bm",
+      "predicted": "Bm"
+    },
+    {
+      "truth": "A#m",
+      "predicted": "A#m"
+    },
+    {
+      "truth": "Gm",
+      "predicted": "Gm"
+    },
+    {
+      "truth": "G#m",
+      "predicted": "G#m"
+    },
+    {
+      "truth": "E",
+      "predicted": "E"
+    },
+    {
+      "truth": "Em",
+      "predicted": "Em"
+    },
+    {
+      "truth": "A#m",
+      "predicted": "A#m"
+    },
+    {
+      "truth": "F#m",
+      "predicted": "F#m"
+    },
+    {
+      "truth": "A#m",
+      "predicted": "A#m"
+    },
+    {
+      "truth": "E",
+      "predicted": "E"
+    },
+    {
+      "truth": "C#m",
+      "predicted": "C#m"
+    },
+    {
+      "truth": "Fm",
+      "predicted": "Fm"
+    },
+    {
+      "truth": "G#",
+      "predicted": "G#"
+    },
+    {
+      "truth": "A",
+      "predicted": "A"
+    },
+    {
+      "truth": "D#m",
+      "predicted": "D#m"
+    },
+    {
+      "truth": "G#",
+      "predicted": "G#"
+    },
+    {
+      "truth": "A#",
+      "predicted": "A#"
+    },
+    {
+      "truth": "Em",
+      "predicted": "Em"
+    },
+    {
+      "truth": "E",
+      "predicted": "E"
+    },
+    {
+      "truth": "Bm",
+      "predicted": "Bm"
+    },
+    {
+      "truth": "C",
+      "predicted": "C"
+    },
+    {
+      "truth": "D#m",
+      "predicted": "D#m"
+    },
+    {
+      "truth": "G#m",
+      "predicted": "G#m"
+    },
+    {
+      "truth": "F",
+      "predicted": "F"
+    },
+    {
+      "truth": "D#",
+      "predicted": "D#"
+    },
+    {
+      "truth": "F",
+      "predicted": "F"
+    },
+    {
+      "truth": "Dm",
+      "predicted": "Dm"
+    }
+  ],
+  "stationary_test": [
+    {
+      "truth": [
+        "Bm"
+      ],
+      "predicted": [
+        "D",
+        "Bm"
+      ]
+    },
+    {
+      "truth": [
+        "G"
+      ],
+      "predicted": [
+        "G"
+      ]
+    },
+    {
+      "truth": [
+        "F#m"
+      ],
+      "predicted": [
+        "F#m"
+      ]
+    },
+    {
+      "truth": [
+        "C#m"
+      ],
+      "predicted": [
+        "C#m"
+      ]
+    },
+    {
+      "truth": [
+        "F"
+      ],
+      "predicted": [
+        "F"
+      ]
+    },
+    {
+      "truth": [
+        "A#"
+      ],
+      "predicted": [
+        "A#"
+      ]
+    },
+    {
+      "truth": [
+        "G"
+      ],
+      "predicted": [
+        "G"
+      ]
+    },
+    {
+      "truth": [
+        "Cm"
+      ],
+      "predicted": [
+        "Cm",
+        "D#"
+      ]
+    },
+    {
+      "truth": [
+        "A"
+      ],
+      "predicted": [
+        "A"
+      ]
+    },
+    {
+      "truth": [
+        "C"
+      ],
+      "predicted": [
+        "C"
+      ]
+    },
+    {
+      "truth": [
+        "Gm"
+      ],
+      "predicted": [
+        "Gm"
+      ]
+    },
+    {
+      "truth": [
+        "G#m"
+      ],
+      "predicted": [
+        "G#m"
+      ]
+    },
+    {
+      "truth": [
+        "C"
+      ],
+      "predicted": [
+        "C"
+      ]
+    },
+    {
+      "truth": [
+        "Bm"
+      ],
+      "predicted": [
+        "Bm",
+        "D"
+      ]
+    },
+    {
+      "truth": [
+        "A#m"
+      ],
+      "predicted": [
+        "A#m"
+      ]
+    },
+    {
+      "truth": [
+        "Gm"
+      ],
+      "predicted": [
+        "A#",
+        "Gm"
+      ]
+    },
+    {
+      "truth": [
+        "G#m"
+      ],
+      "predicted": [
+        "G#m"
+      ]
+    },
+    {
+      "truth": [
+        "E"
+      ],
+      "predicted": [
+        "E"
+      ]
+    },
+    {
+      "truth": [
+        "Em"
+      ],
+      "predicted": [
+        "Em"
+      ]
+    },
+    {
+      "truth": [
+        "A#m"
+      ],
+      "predicted": [
+        "A#m"
+      ]
+    },
+    {
+      "truth": [
+        "F#m"
+      ],
+      "predicted": [
+        "F#m"
+      ]
+    },
+    {
+      "truth": [
+        "A#m"
+      ],
+      "predicted": [
+        "A#m",
+        "C#",
+        "A#m"
+      ]
+    },
+    {
+      "truth": [
+        "E"
+      ],
+      "predicted": [
+        "E"
+      ]
+    },
+    {
+      "truth": [
+        "C#m"
+      ],
+      "predicted": [
+        "C#m"
+      ]
+    },
+    {
+      "truth": [
+        "Fm"
+      ],
+      "predicted": [
+        "Fm"
+      ]
+    },
+    {
+      "truth": [
+        "G#"
+      ],
+      "predicted": [
+        "G#"
+      ]
+    },
+    {
+      "truth": [
+        "A"
+      ],
+      "predicted": [
+        "A"
+      ]
+    },
+    {
+      "truth": [
+        "D#m"
+      ],
+      "predicted": [
+        "F#",
+        "D#m"
+      ]
+    },
+    {
+      "truth": [
+        "G#"
+      ],
+      "predicted": [
+        "G#"
+      ]
+    },
+    {
+      "truth": [
+        "A#"
+      ],
+      "predicted": [
+        "A#"
+      ]
+    },
+    {
+      "truth": [
+        "Em"
+      ],
+      "predicted": [
+        "Em"
+      ]
+    },
+    {
+      "truth": [
+        "E"
+      ],
+      "predicted": [
+        "E"
+      ]
+    },
+    {
+      "truth": [
+        "Bm"
+      ],
+      "predicted": [
+        "Bm"
+      ]
+    },
+    {
+      "truth": [
+        "C"
+      ],
+      "predicted": [
+        "C"
+      ]
+    },
+    {
+      "truth": [
+        "D#m"
+      ],
+      "predicted": [
+        "D#m"
+      ]
+    },
+    {
+      "truth": [
+        "G#m"
+      ],
+      "predicted": [
+        "G#m"
+      ]
+    },
+    {
+      "truth": [
+        "F"
+      ],
+      "predicted": [
+        "F"
+      ]
+    },
+    {
+      "truth": [
+        "D#"
+      ],
+      "predicted": [
+        "D#"
+      ]
+    },
+    {
+      "truth": [
+        "F"
+      ],
+      "predicted": [
+        "F"
+      ]
+    },
+    {
+      "truth": [
+        "Dm"
+      ],
+      "predicted": [
+        "Dm"
+      ]
+    }
+  ],
+  "paired_test": [
+    {
+      "kind": "temporary",
+      "truth": [
+        "C#"
+      ],
+      "predicted": [
+        "C#"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "C#",
+        "G#"
+      ],
+      "predicted": [
+        "C#",
+        "G#"
+      ],
+      "boundaries": [
+        24.0
+      ],
+      "expected_boundary": 24.0
+    },
+    {
+      "kind": "temporary",
+      "truth": [
+        "D#"
+      ],
+      "predicted": [
+        "D#"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "D#",
+        "Cm"
+      ],
+      "predicted": [
+        "D#",
+        "Cm"
+      ],
+      "boundaries": [
+        24.0
+      ],
+      "expected_boundary": 24.0
+    },
+    {
+      "kind": "temporary",
+      "truth": [
+        "C"
+      ],
+      "predicted": [
+        "C"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "C",
+        "Cm"
+      ],
+      "predicted": [
+        "C",
+        "Cm"
+      ],
+      "boundaries": [
+        24.0
+      ],
+      "expected_boundary": 24.0
+    },
+    {
+      "kind": "temporary",
+      "truth": [
+        "D"
+      ],
+      "predicted": [
+        "D"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "D",
+        "A"
+      ],
+      "predicted": [
+        "D",
+        "A"
+      ],
+      "boundaries": [
+        24.0
+      ],
+      "expected_boundary": 24.0
+    },
+    {
+      "kind": "temporary",
+      "truth": [
+        "G"
+      ],
+      "predicted": [
+        "G"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "G",
+        "Em"
+      ],
+      "predicted": [
+        "G",
+        "Em"
+      ],
+      "boundaries": [
+        12.0
+      ],
+      "expected_boundary": 12.0
+    },
+    {
+      "kind": "temporary",
+      "truth": [
+        "D#"
+      ],
+      "predicted": [
+        "D#"
+      ],
+      "boundaries": [],
+      "expected_boundary": null
+    },
+    {
+      "kind": "modulation",
+      "truth": [
+        "D#",
+        "D#m"
+      ],
+      "predicted": [
+        "D#",
+        "D#m"
+      ],
+      "boundaries": [
+        12.0
+      ],
+      "expected_boundary": 12.0
+    }
+  ]
+}

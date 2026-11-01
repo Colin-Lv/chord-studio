@@ -1,0 +1,33 @@
+{
+  "selection": [
+    {
+      "leaf": 2,
+      "validation_accuracy": 0.8333333333333334
+    },
+    {
+      "leaf": 8,
+      "validation_accuracy": 0.8333333333333334
+    }
+  ],
+  "leaf": 2,
+  "metrics": {
+    "validation": {
+      "n": 144,
+      "pitched_accuracy": 1.0,
+      "coverage": 0.8055555555555556,
+      "accepted_accuracy": 1.0,
+      "no_low_voice_false_positive": 0
+    },
+    "test": {
+      "n": 144,
+      "pitched_accuracy": 0.9166666666666666,
+      "coverage": 0.6666666666666666,
+      "accepted_accuracy": 1.0,
+      "no_low_voice_false_positive": 0
+    }
+  },
+  "thresholds": {
+    "score": 0.8,
+    "margin": 0.2
+  }
+}

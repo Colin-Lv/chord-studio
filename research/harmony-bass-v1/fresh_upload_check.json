@@ -1,0 +1,160 @@
+{
+  "job_id": "57a46ab2703d4962a9b1a49ea70c2d89",
+  "project_id": "296e10cccb3b4fa4b227b27c319f819c",
+  "store": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\fresh-upload-store",
+  "had_prior_analysis": false,
+  "had_prior_stem_preference": false,
+  "default_source": "retained10_bass_d8414a6bbfda",
+  "rows": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 0.39,
+      "start_text": "0.000000",
+      "end_text": "0.390000",
+      "label": "N",
+      "candidates": []
+    },
+    {
+      "id": 1,
+      "start": 0.39,
+      "end": 3.4,
+      "start_text": "0.390000",
+      "end_text": "3.400000",
+      "label": "F:maj",
+      "candidates": []
+    },
+    {
+      "id": 2,
+      "start": 3.4,
+      "end": 6.4,
+      "start_text": "3.400000",
+      "end_text": "6.400000",
+      "label": "F:maj/A",
+      "candidates": []
+    },
+    {
+      "id": 3,
+      "start": 6.4,
+      "end": 9.174966,
+      "start_text": "6.400000",
+      "end_text": "9.174966",
+      "label": "A#:maj9",
+      "candidates": []
+    }
+  ],
+  "editor_valid": true,
+  "stages": [
+    {
+      "id": "retained10",
+      "label": "检查冻结模型并提取音频特征",
+      "started_at": "2026-11-01T16:01:30.697383+00:00",
+      "status": "completed",
+      "seconds": 6.729863600019598
+    },
+    {
+      "id": "waveform",
+      "label": "生成播放波形",
+      "started_at": "2026-11-01T16:01:37.567918+00:00",
+      "status": "completed",
+      "seconds": 0.04282260002219118
+    },
+    {
+      "id": "key",
+      "label": "独立估计全曲主调",
+      "started_at": "2026-11-01T16:01:37.622134+00:00",
+      "status": "completed",
+      "seconds": 2.2205358000064734
+    },
+    {
+      "id": "beats",
+      "label": "定位拍点与小节",
+      "started_at": "2026-11-01T16:01:39.860209+00:00",
+      "status": "completed",
+      "seconds": 2.1354837999970187
+    },
+    {
+      "id": "stabilize",
+      "label": "生成稳定时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.014958+00:00",
+      "status": "completed",
+      "seconds": 0.022426700015785173
+    },
+    {
+      "id": "span",
+      "label": "生成小节池化时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.048935+00:00",
+      "status": "completed",
+      "seconds": 0.006830099999206141
+    },
+    {
+      "id": "full",
+      "label": "生成完整段解码时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.065797+00:00",
+      "status": "completed",
+      "seconds": 1.6275252000195906
+    },
+    {
+      "id": "key_chords",
+      "label": "用和弦进行交叉验证主调",
+      "started_at": "2026-11-01T16:01:43.857678+00:00",
+      "status": "failed",
+      "error": "和弦太少，无法用和声证据推断主调",
+      "seconds": 0.0014762000064365566
+    },
+    {
+      "id": "key_experimental",
+      "label": "连续评分主调（实验）",
+      "started_at": "2026-11-01T16:01:43.872742+00:00",
+      "status": "failed",
+      "error": "可解析和弦太少（2），无法做连续评分",
+      "seconds": 0.009961500007193536
+    },
+    {
+      "id": "structure",
+      "label": "分析段落相似性与和声循环",
+      "started_at": "2026-11-01T16:01:43.892914+00:00",
+      "status": "completed",
+      "seconds": 1.7466734999907203
+    },
+    {
+      "id": "harmonic_key_v3",
+      "label": "根据和弦进行识别局部调性与转调段落",
+      "started_at": "2026-11-01T16:01:45.667729+00:00",
+      "status": "completed",
+      "seconds": 0.004587499977787957
+    },
+    {
+      "id": "joint_harmony",
+      "label": "识别和弦与指定低音（默认）",
+      "started_at": "2026-11-01T16:01:45.709123+00:00",
+      "status": "completed",
+      "seconds": 23.939679199975217
+    }
+  ],
+  "model_identity": {
+    "retained10": {
+      "version": "chord_retained11_v90",
+      "entry": "v88",
+      "frozen_utc": "2026-10-30T22:45:00+08:00",
+      "weights_sha256": "cf44143ee0b5747ba2962b8aac7349bd9ee4fd2489cc63872dc45f8273fd31bd",
+      "supported_qualities": [
+        "maj",
+        "min",
+        "7",
+        "maj7",
+        "min7",
+        "9",
+        "maj9",
+        "min9",
+        "sus2",
+        "sus4"
+      ]
+    },
+    "bass_voice": {
+      "version": "bass-voice-v2",
+      "weights_sha256": "7cdedcd01770c2073dbfa7054cc1a967203a60fc9cca9745ec3d5b9861ae3fe0",
+      "combined_with": "retained10"
+    }
+  }
+}

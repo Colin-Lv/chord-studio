@@ -1,0 +1,463 @@
+{
+  "backup": "D:\\ChordStudio\\data\\backups\\harmonic-key-v3_20261101_232255",
+  "files": [
+    {
+      "path": "app/harmonic_key_v3.py",
+      "sha256": "7b47a8548d40c3c8c7bf402949baaeaaebc657a678c6887a9ed5f02345b57137"
+    },
+    {
+      "path": "app/web/harmonic_key.py",
+      "sha256": "d7239ba28c225dff414dd0e494d78e9fa5195cb134c153805cfefbe47cb0cae1"
+    },
+    {
+      "path": "app/web/models/harmonic_key_v3.json",
+      "sha256": "602d924222dffe5eae97d3a293e0ecdee017c0ab5eebbfbdd6567d206baa71b7"
+    },
+    {
+      "path": "app/chord_semantics_v3.py",
+      "sha256": "8bb100ef747f41b7c493611c90c71eebcb7dcf10ca6b69ad685b251f5b1dc8b0"
+    },
+    {
+      "path": "app/web/retained_worker.py",
+      "sha256": "d7109c9321346ba79cc29da910436d37c7e4e3dad82b69b8be33cc917b6ba824"
+    },
+    {
+      "path": "app/web/worker.py",
+      "sha256": "87dba6a381ece2affb089e190777c3eb8fd0ea0d87a77bcbe9b71bc696effa25"
+    },
+    {
+      "path": "app/web/stem_harmony.py",
+      "sha256": "9c153a98150764136cc134d3cc14031916c94b1f48fa244f26da3052f4ab12db"
+    },
+    {
+      "path": "app/web/stem_bass_harmony.py",
+      "sha256": "e166f660b8a2dc4cffaa2e6980f26bbd49748b314c639544b4104b6a45e0fd38"
+    },
+    {
+      "path": "frontend/harmonic-key.js",
+      "sha256": "6f22c04878ff71edb495f18d7e5f75448d5437c12d9a1dddb7d40fe1f7286edc"
+    },
+    {
+      "path": "frontend/app.js",
+      "sha256": "65f737c3267b64f3a434afbf524ce8cec3eec9039b638498051ab4e322d04108"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "f7b4385fa82eddad052be44a98a75b82d25c87c31d8ab1c8245ab5290c0368d3"
+    },
+    {
+      "path": "frontend/style.css",
+      "sha256": "e1bc677003246beb8b56ddf9f7e8ca4db91d397772e12649150b211d3f7e26dd"
+    }
+  ],
+  "projects": [
+    {
+      "project": "c1ebfe4bb5924849b320be11b0aa1f9e",
+      "run": "cc04fcb7633e4232936b512112cc7c5d",
+      "default_source": "retained10_full",
+      "main_key": "G#",
+      "sources": {
+        "retained10": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.75,
+              "end": 51.15,
+              "key": "B",
+              "status": "ambiguous",
+              "margin": 0.7907
+            },
+            {
+              "start": 51.15,
+              "end": 74.9,
+              "key": "G#",
+              "status": "ambiguous",
+              "margin": 0.1754
+            },
+            {
+              "start": 74.9,
+              "end": 116.9,
+              "key": "B",
+              "status": "supported",
+              "margin": 3.7708
+            },
+            {
+              "start": 116.9,
+              "end": 194.55,
+              "key": "G#",
+              "status": "supported",
+              "margin": 1.8589
+            },
+            {
+              "start": 194.55,
+              "end": 206.015986,
+              "key": "C#",
+              "status": "supported",
+              "margin": 8.1297
+            }
+          ]
+        },
+        "retained10_stable": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.8,
+              "end": 51.15,
+              "key": "B",
+              "status": "supported",
+              "margin": 1.7947
+            },
+            {
+              "start": 51.15,
+              "end": 74.82,
+              "key": "Fm",
+              "status": "ambiguous",
+              "margin": 0.3051
+            },
+            {
+              "start": 74.82,
+              "end": 116.83,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.2083
+            },
+            {
+              "start": 116.83,
+              "end": 195.05,
+              "key": "G#",
+              "status": "supported",
+              "margin": 2.1555
+            },
+            {
+              "start": 195.05,
+              "end": 206.015986,
+              "key": "C#",
+              "status": "supported",
+              "margin": 8.6099
+            }
+          ]
+        },
+        "retained10_span": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.8,
+              "end": 47.81,
+              "key": "B",
+              "status": "supported",
+              "margin": 2.0255
+            },
+            {
+              "start": 47.81,
+              "end": 71.83,
+              "key": "Fm",
+              "status": "supported",
+              "margin": 3.6302
+            },
+            {
+              "start": 71.83,
+              "end": 113.82,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.7112
+            },
+            {
+              "start": 113.82,
+              "end": 197.95,
+              "key": "G#",
+              "status": "supported",
+              "margin": 1.7244
+            }
+          ]
+        },
+        "retained10_full": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.8,
+              "end": 47.81,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.1921
+            },
+            {
+              "start": 47.81,
+              "end": 74.82,
+              "key": "G#",
+              "status": "ambiguous",
+              "margin": 0.7786
+            },
+            {
+              "start": 74.82,
+              "end": 113.82,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.6722
+            },
+            {
+              "start": 113.82,
+              "end": 197.95,
+              "key": "G#",
+              "status": "supported",
+              "margin": 1.4487
+            }
+          ]
+        },
+        "raw_madmom": {
+          "status": "unavailable",
+          "segments": []
+        },
+        "stem_bass_harmony_v1_28bcb487a136": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.8,
+              "end": 47.81,
+              "key": "B",
+              "status": "supported",
+              "margin": 1.8421
+            },
+            {
+              "start": 47.81,
+              "end": 74.82,
+              "key": "G#",
+              "status": "ambiguous",
+              "margin": 0.7786
+            },
+            {
+              "start": 74.82,
+              "end": 113.82,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.7259
+            },
+            {
+              "start": 113.82,
+              "end": 188.8,
+              "key": "G#",
+              "status": "supported",
+              "margin": 1.9745
+            },
+            {
+              "start": 188.8,
+              "end": 206.016,
+              "key": "C#",
+              "status": "supported",
+              "margin": 8.6914
+            }
+          ]
+        },
+        "stem_bass_harmony_v2_bbe0b6d35ab7": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 5.8,
+              "end": 47.81,
+              "key": "B",
+              "status": "supported",
+              "margin": 1.7844
+            },
+            {
+              "start": 47.81,
+              "end": 74.82,
+              "key": "Fm",
+              "status": "supported",
+              "margin": 1.8506
+            },
+            {
+              "start": 74.82,
+              "end": 113.82,
+              "key": "B",
+              "status": "supported",
+              "margin": 4.7259
+            },
+            {
+              "start": 113.82,
+              "end": 191.8,
+              "key": "G#",
+              "status": "supported",
+              "margin": 1.7299
+            },
+            {
+              "start": 191.8,
+              "end": 206.016,
+              "key": "C#",
+              "status": "supported",
+              "margin": 10.3206
+            }
+          ]
+        }
+      },
+      "other_json_records_preserved": 10
+    },
+    {
+      "project": "aa5a41797bb343e590abcf4d8b27ae54",
+      "run": "c3f0de32d764479882e3e7e8a208dde4",
+      "default_source": "retained10_full",
+      "main_key": "C",
+      "sources": {
+        "retained10": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.75,
+              "end": 23.5,
+              "key": "C",
+              "status": "supported",
+              "margin": 6.1269
+            },
+            {
+              "start": 23.5,
+              "end": 142.25,
+              "key": "Am",
+              "status": "supported",
+              "margin": 1.7136
+            },
+            {
+              "start": 142.25,
+              "end": 236.4,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.4319
+            }
+          ]
+        },
+        "retained10_stable": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.8,
+              "end": 23.5,
+              "key": "C",
+              "status": "supported",
+              "margin": 6.4601
+            },
+            {
+              "start": 23.5,
+              "end": 142.25,
+              "key": "Am",
+              "status": "supported",
+              "margin": 1.6808
+            },
+            {
+              "start": 142.25,
+              "end": 236.4,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.4034
+            }
+          ]
+        },
+        "retained10_span": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.8,
+              "end": 57.2,
+              "key": "C",
+              "status": "supported",
+              "margin": 2.9111
+            },
+            {
+              "start": 57.2,
+              "end": 142.12,
+              "key": "Am",
+              "status": "supported",
+              "margin": 1.6436
+            },
+            {
+              "start": 142.12,
+              "end": 232.62,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.3545
+            }
+          ]
+        },
+        "retained10_full": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.8,
+              "end": 57.2,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.5495
+            },
+            {
+              "start": 57.2,
+              "end": 142.12,
+              "key": "Am",
+              "status": "supported",
+              "margin": 3.666
+            },
+            {
+              "start": 142.12,
+              "end": 232.62,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.4413
+            }
+          ]
+        },
+        "raw_madmom": {
+          "status": "unavailable",
+          "segments": []
+        },
+        "stem_fusion": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.8,
+              "end": 57.2,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.5969
+            },
+            {
+              "start": 57.2,
+              "end": 142.12,
+              "key": "Am",
+              "status": "supported",
+              "margin": 2.8106
+            },
+            {
+              "start": 142.12,
+              "end": 232.62,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.2258
+            }
+          ]
+        },
+        "stem_evidence_v2_80953cab7181": {
+          "status": "computed",
+          "segments": [
+            {
+              "start": 1.8,
+              "end": 57.2,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.5495
+            },
+            {
+              "start": 57.2,
+              "end": 142.12,
+              "key": "Am",
+              "status": "supported",
+              "margin": 3.666
+            },
+            {
+              "start": 142.12,
+              "end": 238.123,
+              "key": "C",
+              "status": "supported",
+              "margin": 3.7919
+            }
+          ]
+        }
+      },
+      "other_json_records_preserved": 11
+    }
+  ]
+}

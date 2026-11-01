@@ -226,6 +226,8 @@ def execute(store, job_id):
     if key_fusion is not None:
         from key_fusion import attach_key_metadata
         attach_key_metadata(result, key_fusion, key_analysis)
+    from .harmonic_key import refresh as refresh_harmonic_keys
+    stage('harmonic_key_v3','根据和弦进行识别局部调性与转调段落',lambda record:refresh_harmonic_keys(result))
     atomic_json(output / "analysis.json", result)
 
 

@@ -1,0 +1,3483 @@
+{
+  "meta": {
+    "version": "stem-bass-harmony-v1",
+    "created_at": "2026-11-01T14:33:46.336615+00:00",
+    "model": {
+      "name": "bs_roformer_sw",
+      "label": "六轨精细",
+      "package": "audio-separator 0.48",
+      "device": "cuda",
+      "seconds": 67.5
+    },
+    "segments": 75,
+    "seconds": 6.14,
+    "source_audio_sha256": "6d1cda8c0749235fcac50e3d616a2a1397799dab9ea573d333dc31890bffe10e",
+    "input_stems": {
+      "other": "c47357ee44eba414426b6ce386e5f6a78905dc1e756b2d909b5cb6192a366b1d",
+      "guitar": "8dd2fd5019e7de8b1f0829163fa9f08fe81b016ed2e531e381dfd9f81455f39e",
+      "piano": "febbc3fd7088654308d0ffdb222818cbd8d3d1e0493476db8ea652a17d16b7dd",
+      "bass": "f33980f3f2fe5bdf7685bc8b9f1b3aedba6e1aedee2244ef4a8a20b8f521e961"
+    },
+    "groups": {
+      "accompaniment": [
+        "other",
+        "guitar",
+        "piano"
+      ],
+      "bass": [
+        "bass"
+      ]
+    },
+    "bass_model": {
+      "sha256": "97df978ff95515bb5c37c2e640d73a962a1f05f668ea3ddb5e5446f7c1ff0c73",
+      "bytes": 14369593
+    },
+    "implementation_sha256": {
+      "stem_bass_harmony.py": "53f8f5110b8e7b2e970d05366be719803d27a59160ab584d9dcd4b38ef291b81",
+      "bass_voice.py": "3633cd356b87f92fdddf4de7db1db8066ac0e95509a3610bc0a47c90cdbd64ab",
+      "full_decode.py": "b96034cced67b24af756be7a279d2478b4e20d2dc265c63245f63a55b8eb7bd7"
+    },
+    "posterior_sha256": "57c671c406e850ddeee5e38ff944a334be66ba63bada93063376eabfd2c3d751",
+    "baseline_sha256": "af247855a4dbde0105f28e520df152957671e8f93c227d310515323f90c23b1d",
+    "key_used": false,
+    "reference_inputs": false,
+    "fitting": false,
+    "limitations": [
+      "Bass scores are uncalibrated; uncertain bass is omitted",
+      "Bass range E1–B3; not a complete polyphonic transcription",
+      "Chord roots still use frozen v90 evidence; 10 qualities only",
+      "Real-song regression is development evidence, not a blind benchmark"
+    ]
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.8,
+      "original": "B:maj",
+      "label": "N",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 0.0,
+            "end": 5.8,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9613261316220901,
+            "margin": 0.4909848464420349,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 5.8,
+      "end": 8.8,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": "B",
+        "coverage": 0.7499999999999998,
+        "beats": [
+          {
+            "start": 5.8,
+            "end": 6.55,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9903702957479906,
+            "margin": 0.8736127840075176,
+            "reason": "accepted"
+          },
+          {
+            "start": 6.55,
+            "end": 7.3,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.991647763181654,
+            "margin": 0.9156520627143051,
+            "reason": "accepted"
+          },
+          {
+            "start": 7.3,
+            "end": 8.05,
+            "note": null,
+            "candidate": "B",
+            "score": 0.6163532073594541,
+            "margin": 0.40495077321362627,
+            "reason": "uncertain"
+          },
+          {
+            "start": 8.05,
+            "end": 8.8,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.8672646951432501,
+            "margin": 0.4720752778739877,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 8.8,
+      "end": 11.81,
+      "original": "C#:min9",
+      "label": "C#:min9",
+      "bass": {
+        "note": null,
+        "coverage": 0.49833887043189373,
+        "beats": [
+          {
+            "start": 8.8,
+            "end": 9.55,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9882447083701156,
+            "margin": 0.789637108119114,
+            "reason": "accepted"
+          },
+          {
+            "start": 9.55,
+            "end": 10.3,
+            "note": null,
+            "candidate": "B",
+            "score": 0.29058262277730024,
+            "margin": 0.04501171698200834,
+            "reason": "uncertain"
+          },
+          {
+            "start": 10.3,
+            "end": 11.05,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.8550925766695717,
+            "margin": 0.6389987626666249,
+            "reason": "accepted"
+          },
+          {
+            "start": 11.05,
+            "end": 11.81,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.6508979477979105,
+            "margin": 0.293704342321413,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 11.81,
+      "end": 14.81,
+      "original": "D#:min",
+      "label": "B:7/D#",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0000000000000007,
+        "beats": [
+          {
+            "start": 11.81,
+            "end": 12.55,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9621374590581034,
+            "margin": 0.8144471531266438,
+            "reason": "accepted"
+          },
+          {
+            "start": 12.55,
+            "end": 13.3,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9268959873717164,
+            "margin": 0.8184772770224058,
+            "reason": "accepted"
+          },
+          {
+            "start": 13.3,
+            "end": 14.06,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9895666003273471,
+            "margin": 0.8857689986329286,
+            "reason": "accepted"
+          },
+          {
+            "start": 14.06,
+            "end": 14.81,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9707470311078761,
+            "margin": 0.43231484133489917,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 14.81,
+      "end": 17.81,
+      "original": "E:maj",
+      "label": "E:maj",
+      "bass": {
+        "note": "E",
+        "coverage": 0.7466666666666678,
+        "beats": [
+          {
+            "start": 14.81,
+            "end": 15.57,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9805197578183412,
+            "margin": 0.40156372463083556,
+            "reason": "accepted"
+          },
+          {
+            "start": 15.57,
+            "end": 16.34,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.981577127805421,
+            "margin": 0.4595602941745598,
+            "reason": "accepted"
+          },
+          {
+            "start": 16.34,
+            "end": 17.05,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9820944986872314,
+            "margin": 0.5051450091558756,
+            "reason": "accepted"
+          },
+          {
+            "start": 17.05,
+            "end": 17.81,
+            "note": null,
+            "candidate": "E",
+            "score": 0.9466412101445926,
+            "margin": 0.11064997488812667,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 17.81,
+      "end": 20.81,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 17.81,
+            "end": 18.56,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9996743007542951,
+            "margin": 0.96192704438461,
+            "reason": "accepted"
+          },
+          {
+            "start": 18.56,
+            "end": 19.31,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9906247662388628,
+            "margin": 0.9381651500896561,
+            "reason": "accepted"
+          },
+          {
+            "start": 19.31,
+            "end": 20.11,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9682398056155326,
+            "margin": 0.8020491367473039,
+            "reason": "accepted"
+          },
+          {
+            "start": 20.11,
+            "end": 20.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9362318098151207,
+            "margin": 0.7307293593177342,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 20.81,
+      "end": 23.83,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.245033112582781,
+        "beats": [
+          {
+            "start": 20.81,
+            "end": 21.57,
+            "note": null,
+            "candidate": "B",
+            "score": 0.5476289282134187,
+            "margin": 0.4037506879355893,
+            "reason": "uncertain"
+          },
+          {
+            "start": 21.57,
+            "end": 22.35,
+            "note": null,
+            "candidate": "B",
+            "score": 0.6703693979090566,
+            "margin": 0.40703432280529145,
+            "reason": "uncertain"
+          },
+          {
+            "start": 22.35,
+            "end": 23.09,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9674844944439152,
+            "margin": 0.8249400843047243,
+            "reason": "accepted"
+          },
+          {
+            "start": 23.09,
+            "end": 23.83,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.6631375805711825,
+            "margin": 0.05687136377508528,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 23.83,
+      "end": 26.82,
+      "original": "B:maj",
+      "label": "B:maj/D#",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.5083612040133775,
+        "beats": [
+          {
+            "start": 23.83,
+            "end": 24.63,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.955296803856016,
+            "margin": 0.4942286805927449,
+            "reason": "accepted"
+          },
+          {
+            "start": 24.63,
+            "end": 25.37,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.757961215758128,
+            "margin": 0.45606745148795813,
+            "reason": "uncertain"
+          },
+          {
+            "start": 25.37,
+            "end": 26.09,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.8509466876545289,
+            "margin": 0.4235937341536681,
+            "reason": "accepted"
+          },
+          {
+            "start": 26.09,
+            "end": 26.82,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.907832309908543,
+            "margin": 0.38518872484089417,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 26.82,
+      "end": 29.81,
+      "original": "B:sus4",
+      "label": "E:maj",
+      "bass": {
+        "note": "E",
+        "coverage": 0.7625418060200677,
+        "beats": [
+          {
+            "start": 26.82,
+            "end": 27.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9999834980444404,
+            "margin": 0.860752163019644,
+            "reason": "accepted"
+          },
+          {
+            "start": 27.56,
+            "end": 28.33,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.998228074361922,
+            "margin": 0.6773108083199137,
+            "reason": "accepted"
+          },
+          {
+            "start": 28.33,
+            "end": 29.1,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9911779385393503,
+            "margin": 0.8494166467688836,
+            "reason": "accepted"
+          },
+          {
+            "start": 29.1,
+            "end": 29.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9895131423874658,
+            "margin": 0.4809685428785213,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 29.81,
+      "end": 32.83,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.2483443708609272,
+        "beats": [
+          {
+            "start": 29.81,
+            "end": 30.56,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9833582451933012,
+            "margin": 0.3368088015561893,
+            "reason": "accepted"
+          },
+          {
+            "start": 30.56,
+            "end": 31.31,
+            "note": null,
+            "candidate": "B",
+            "score": 0.9005689671543367,
+            "margin": 0.1094239415303363,
+            "reason": "uncertain"
+          },
+          {
+            "start": 31.31,
+            "end": 32.08,
+            "note": null,
+            "candidate": "B",
+            "score": 0.9503125486935244,
+            "margin": 0.1644902352539891,
+            "reason": "uncertain"
+          },
+          {
+            "start": 32.08,
+            "end": 32.83,
+            "note": null,
+            "candidate": "F#",
+            "score": 0.893858472595427,
+            "margin": 0.12439849371905654,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 32.83,
+      "end": 35.82,
+      "original": "C#:min7",
+      "label": "C#:min7",
+      "bass": {
+        "note": null,
+        "coverage": 0.2508361204013376,
+        "beats": [
+          {
+            "start": 32.83,
+            "end": 33.59,
+            "note": null,
+            "candidate": "B",
+            "score": 0.8892082560782272,
+            "margin": 0.07288922390354835,
+            "reason": "uncertain"
+          },
+          {
+            "start": 33.59,
+            "end": 34.34,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.8334470214952614,
+            "margin": 0.09299380230187615,
+            "reason": "uncertain"
+          },
+          {
+            "start": 34.34,
+            "end": 35.09,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9672303090957934,
+            "margin": 0.47235143722929823,
+            "reason": "accepted"
+          },
+          {
+            "start": 35.09,
+            "end": 35.82,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.8499989424528717,
+            "margin": 0.18237237347923674,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 35.82,
+      "end": 38.81,
+      "original": "B:maj",
+      "label": "B:maj/D#",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 35.82,
+            "end": 36.56,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9791076848955769,
+            "margin": 0.3871776041546984,
+            "reason": "accepted"
+          },
+          {
+            "start": 36.56,
+            "end": 37.31,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9551783551392145,
+            "margin": 0.40278878731770373,
+            "reason": "accepted"
+          },
+          {
+            "start": 37.31,
+            "end": 38.05,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9167169775106859,
+            "margin": 0.3162200428715658,
+            "reason": "accepted"
+          },
+          {
+            "start": 38.05,
+            "end": 38.81,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.8561311679968953,
+            "margin": 0.20950583151517987,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 38.81,
+      "end": 41.81,
+      "original": "E:maj",
+      "label": "E:maj",
+      "bass": {
+        "note": "E",
+        "coverage": 0.5100000000000003,
+        "beats": [
+          {
+            "start": 38.81,
+            "end": 39.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.947838865723811,
+            "margin": 0.2462480782801577,
+            "reason": "accepted"
+          },
+          {
+            "start": 39.56,
+            "end": 40.31,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9907148289307587,
+            "margin": 0.26202507591678237,
+            "reason": "accepted"
+          },
+          {
+            "start": 40.31,
+            "end": 41.09,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.8432621047953855,
+            "margin": 0.23842283369374695,
+            "reason": "accepted"
+          },
+          {
+            "start": 41.09,
+            "end": 41.81,
+            "note": null,
+            "candidate": "E",
+            "score": 0.7432163733312342,
+            "margin": 0.2838216183844083,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 41.81,
+      "end": 44.89,
+      "original": "C#:min7",
+      "label": "C#:min7",
+      "bass": {
+        "note": null,
+        "coverage": 0.2532467532467538,
+        "beats": [
+          {
+            "start": 41.81,
+            "end": 42.59,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9852426985482556,
+            "margin": 0.7915240127161648,
+            "reason": "accepted"
+          },
+          {
+            "start": 42.59,
+            "end": 43.37,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9891215713893368,
+            "margin": 0.02061605761811769,
+            "reason": "uncertain"
+          },
+          {
+            "start": 43.37,
+            "end": 44.09,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9653162592278254,
+            "margin": 0.13617762057505456,
+            "reason": "uncertain"
+          },
+          {
+            "start": 44.09,
+            "end": 44.89,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9755916047990135,
+            "margin": 0.024531256777825416,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 44.89,
+      "end": 47.81,
+      "original": "B:maj7",
+      "label": "B:maj7",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 44.89,
+            "end": 45.62,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9528453687463501,
+            "margin": 0.2201948977457726,
+            "reason": "accepted"
+          },
+          {
+            "start": 45.62,
+            "end": 46.33,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9999912263517126,
+            "margin": 0.9344629091716661,
+            "reason": "accepted"
+          },
+          {
+            "start": 46.33,
+            "end": 47.07,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9905315174675494,
+            "margin": 0.7898015173789903,
+            "reason": "accepted"
+          },
+          {
+            "start": 47.07,
+            "end": 47.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9999912263517126,
+            "margin": 0.7401901129494544,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 47.81,
+      "end": 50.82,
+      "original": "A:maj9",
+      "label": "A:maj9",
+      "bass": {
+        "note": null,
+        "coverage": 0.25913621262458525,
+        "beats": [
+          {
+            "start": 47.81,
+            "end": 48.57,
+            "note": null,
+            "candidate": "A",
+            "score": 0.9703430127374159,
+            "margin": 0.17973278751889832,
+            "reason": "uncertain"
+          },
+          {
+            "start": 48.57,
+            "end": 49.35,
+            "note": "A",
+            "candidate": "A",
+            "score": 0.9561932164025547,
+            "margin": 0.4812646149246949,
+            "reason": "accepted"
+          },
+          {
+            "start": 49.35,
+            "end": 50.08,
+            "note": null,
+            "candidate": "B",
+            "score": 0.843307591757343,
+            "margin": 0.08910381265362566,
+            "reason": "uncertain"
+          },
+          {
+            "start": 50.08,
+            "end": 50.82,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9887919801678218,
+            "margin": 0.3268813378154145,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 50.82,
+      "end": 53.8,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.7516778523489923,
+        "beats": [
+          {
+            "start": 50.82,
+            "end": 51.58,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.887523974027344,
+            "margin": 0.32808194639997657,
+            "reason": "accepted"
+          },
+          {
+            "start": 51.58,
+            "end": 52.32,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9731084891847596,
+            "margin": 0.14334304186477165,
+            "reason": "uncertain"
+          },
+          {
+            "start": 52.32,
+            "end": 53.07,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9916628326443537,
+            "margin": 0.5452572160232358,
+            "reason": "accepted"
+          },
+          {
+            "start": 53.07,
+            "end": 53.8,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9912568813634387,
+            "margin": 0.2828533280982065,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 53.8,
+      "end": 56.825,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": null,
+        "coverage": 0.25785123966942136,
+        "beats": [
+          {
+            "start": 53.8,
+            "end": 54.58,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.8722958312647585,
+            "margin": 0.6413512928001146,
+            "reason": "accepted"
+          },
+          {
+            "start": 54.58,
+            "end": 55.31,
+            "note": null,
+            "candidate": "F",
+            "score": 0.12788358088348944,
+            "margin": 0.03245133387082036,
+            "reason": "uncertain"
+          },
+          {
+            "start": 55.31,
+            "end": 56.11,
+            "note": null,
+            "candidate": "F",
+            "score": 0.11624169552231921,
+            "margin": 0.03926902986536315,
+            "reason": "uncertain"
+          },
+          {
+            "start": 56.11,
+            "end": 56.825,
+            "note": null,
+            "candidate": "C",
+            "score": 0.3858720588977862,
+            "margin": 0.12540677021854674,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 56.825,
+      "end": 56.83,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 56.83,
+      "end": 59.81,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 56.83,
+            "end": 57.63,
+            "note": null,
+            "candidate": "C",
+            "score": 0.30945575365110944,
+            "margin": 0.09356264742596593,
+            "reason": "uncertain"
+          },
+          {
+            "start": 57.63,
+            "end": 58.34,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.3318570400989541,
+            "margin": 0.0668914388286651,
+            "reason": "uncertain"
+          },
+          {
+            "start": 58.34,
+            "end": 59.06,
+            "note": null,
+            "candidate": "B",
+            "score": 0.21605702195018095,
+            "margin": 0.015977281918896996,
+            "reason": "uncertain"
+          },
+          {
+            "start": 59.06,
+            "end": 59.81,
+            "note": null,
+            "candidate": "F#",
+            "score": 0.13924100016204416,
+            "margin": 0.010624763667941961,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 59.81,
+      "end": 59.815,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 59.815,
+      "end": 61.29,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 59.815,
+            "end": 60.57,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.09764864818347885,
+            "margin": 0.001444470000329906,
+            "reason": "uncertain"
+          },
+          {
+            "start": 60.57,
+            "end": 61.29,
+            "note": null,
+            "candidate": "B",
+            "score": 0.13749337633035813,
+            "margin": 0.005716482794324185,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 61.29,
+      "end": 62.78,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 61.29,
+            "end": 62.05,
+            "note": null,
+            "candidate": "A",
+            "score": 0.10809187805151689,
+            "margin": 0.028699722589561577,
+            "reason": "uncertain"
+          },
+          {
+            "start": 62.05,
+            "end": 62.78,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.14495494454752658,
+            "margin": 0.0185399047207912,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 62.78,
+      "end": 65.82,
+      "original": "F:min",
+      "label": "F:min",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 62.78,
+            "end": 63.55,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.10966664650789225,
+            "margin": 0.0035524221993097627,
+            "reason": "uncertain"
+          },
+          {
+            "start": 63.55,
+            "end": 64.31,
+            "note": null,
+            "candidate": "E",
+            "score": 0.2856580234161349,
+            "margin": 0.08129846525353501,
+            "reason": "uncertain"
+          },
+          {
+            "start": 64.31,
+            "end": 65.06,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.21227049595767558,
+            "margin": 0.014989074142876258,
+            "reason": "uncertain"
+          },
+          {
+            "start": 65.06,
+            "end": 65.82,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.7533332852241063,
+            "margin": 0.6096728963304534,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 65.82,
+      "end": 67.32,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 65.82,
+            "end": 66.57,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9986579824332791,
+            "margin": 0.10031130417834733,
+            "reason": "uncertain"
+          },
+          {
+            "start": 66.57,
+            "end": 67.31,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9831408936502312,
+            "margin": 0.05066110620603448,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 67.32,
+      "end": 68.82,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 67.32,
+            "end": 68.07,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9902735779759085,
+            "margin": 0.6995485014219087,
+            "reason": "accepted"
+          },
+          {
+            "start": 68.07,
+            "end": 68.82,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9943852247293596,
+            "margin": 0.5654728130947146,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 68.82,
+      "end": 71.83,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 68.82,
+            "end": 69.57,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8758793327515951,
+            "margin": 0.6164644710458465,
+            "reason": "accepted"
+          },
+          {
+            "start": 69.57,
+            "end": 70.3,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8853693116893584,
+            "margin": 0.5333872109038124,
+            "reason": "accepted"
+          },
+          {
+            "start": 70.3,
+            "end": 71.06,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9364099909076242,
+            "margin": 0.5287259526841761,
+            "reason": "accepted"
+          },
+          {
+            "start": 71.06,
+            "end": 71.83,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8419175198442336,
+            "margin": 0.28594720832735043,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 71.83,
+      "end": 73.325,
+      "original": "C#:maj7",
+      "label": "C#:maj7",
+      "bass": {
+        "note": null,
+        "coverage": 0.4949832775919683,
+        "beats": [
+          {
+            "start": 71.83,
+            "end": 72.57,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9969680593703587,
+            "margin": 0.20298082353734437,
+            "reason": "accepted"
+          },
+          {
+            "start": 72.57,
+            "end": 73.32,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.7371812064935711,
+            "margin": 0.011212883914753835,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 73.325,
+      "end": 74.82,
+      "original": "D#:sus4",
+      "label": "D#:sus4",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 73.325,
+            "end": 74.05,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9999672224179093,
+            "margin": 0.5347646447489112,
+            "reason": "accepted"
+          },
+          {
+            "start": 74.05,
+            "end": 74.82,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.8975605079499241,
+            "margin": 0.30296642900199067,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 74.82,
+      "end": 76.315,
+      "original": "G#:min",
+      "label": "E:maj7/B",
+      "bass": {
+        "note": "B",
+        "coverage": 0.5050167224080222,
+        "beats": [
+          {
+            "start": 74.82,
+            "end": 75.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9824504229252863,
+            "margin": 0.3047947111353284,
+            "reason": "accepted"
+          },
+          {
+            "start": 75.56,
+            "end": 76.315,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9994231652576492,
+            "margin": 0.6017134011286235,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 76.315,
+      "end": 77.81,
+      "original": "B:maj7",
+      "label": "B:maj7",
+      "bass": {
+        "note": "B",
+        "coverage": 0.9966555183946518,
+        "beats": [
+          {
+            "start": 76.32,
+            "end": 77.06,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9996753981829591,
+            "margin": 0.4201801807270412,
+            "reason": "accepted"
+          },
+          {
+            "start": 77.06,
+            "end": 77.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9895157757874756,
+            "margin": 0.6909039572320526,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 77.81,
+      "end": 79.33,
+      "original": "E:maj7",
+      "label": "E:maj7",
+      "bass": {
+        "note": "E",
+        "coverage": 0.9934210526315755,
+        "beats": [
+          {
+            "start": 77.81,
+            "end": 78.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9720793183360402,
+            "margin": 0.5301013674555111,
+            "reason": "accepted"
+          },
+          {
+            "start": 78.56,
+            "end": 79.32,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9986896288242827,
+            "margin": 0.3304175248179475,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 79.33,
+      "end": 80.85,
+      "original": "F#:sus4",
+      "label": "F#:sus4",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 79.33,
+            "end": 80.15,
+            "note": null,
+            "candidate": "B",
+            "score": 0.9694474370348567,
+            "margin": 0.135448410961983,
+            "reason": "uncertain"
+          },
+          {
+            "start": 80.15,
+            "end": 80.85,
+            "note": null,
+            "candidate": "F#",
+            "score": 0.8942706122999013,
+            "margin": 0.04189137537545218,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 80.85,
+      "end": 83.81,
+      "original": "F#:sus4",
+      "label": "B:maj/F#",
+      "bass": {
+        "note": "F#",
+        "coverage": 0.7601351351351331,
+        "beats": [
+          {
+            "start": 80.85,
+            "end": 81.59,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.934994259088443,
+            "margin": 0.5022223515445734,
+            "reason": "accepted"
+          },
+          {
+            "start": 81.59,
+            "end": 82.33,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.9844451902420565,
+            "margin": 0.5027593487345439,
+            "reason": "accepted"
+          },
+          {
+            "start": 82.33,
+            "end": 83.1,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.968776444111876,
+            "margin": 0.42233880160118575,
+            "reason": "accepted"
+          },
+          {
+            "start": 83.1,
+            "end": 83.81,
+            "note": null,
+            "candidate": "F#",
+            "score": 0.8928645222332374,
+            "margin": 0.1074145809287439,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 83.81,
+      "end": 86.81,
+      "original": "B:maj7",
+      "label": "B:maj7",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 83.81,
+            "end": 84.57,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9908768037684579,
+            "margin": 0.8861207219605014,
+            "reason": "accepted"
+          },
+          {
+            "start": 84.57,
+            "end": 85.31,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9999961659776871,
+            "margin": 0.9454097414888898,
+            "reason": "accepted"
+          },
+          {
+            "start": 85.31,
+            "end": 86.06,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9999912263517126,
+            "margin": 0.7362022176403222,
+            "reason": "accepted"
+          },
+          {
+            "start": 86.06,
+            "end": 86.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9903721972791842,
+            "margin": 0.5528478209283378,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 86.81,
+      "end": 89.81,
+      "original": "F#:7",
+      "label": "F#:7/C#",
+      "bass": {
+        "note": "C#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 86.81,
+            "end": 87.55,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9893036514630812,
+            "margin": 0.7620045729718288,
+            "reason": "accepted"
+          },
+          {
+            "start": 87.55,
+            "end": 88.3,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9999912263517126,
+            "margin": 0.9287779144822069,
+            "reason": "accepted"
+          },
+          {
+            "start": 88.3,
+            "end": 89.06,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9999912263517126,
+            "margin": 0.9310512867488159,
+            "reason": "accepted"
+          },
+          {
+            "start": 89.06,
+            "end": 89.81,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9998932473908976,
+            "margin": 0.9195827349786578,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 89.81,
+      "end": 92.81,
+      "original": "B:maj",
+      "label": "D#:min",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.7566666666666654,
+        "beats": [
+          {
+            "start": 89.81,
+            "end": 90.56,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.95845349418808,
+            "margin": 0.41382940035858184,
+            "reason": "accepted"
+          },
+          {
+            "start": 90.56,
+            "end": 91.3,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9964722648238967,
+            "margin": 0.8298383334798465,
+            "reason": "accepted"
+          },
+          {
+            "start": 91.3,
+            "end": 92.08,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.998757025334682,
+            "margin": 0.9024463788579529,
+            "reason": "accepted"
+          },
+          {
+            "start": 92.08,
+            "end": 92.81,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9544061036599587,
+            "margin": 0.08830913769469528,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 92.81,
+      "end": 95.81,
+      "original": "E:min",
+      "label": "E:min",
+      "bass": {
+        "note": "E",
+        "coverage": 0.7533333333333303,
+        "beats": [
+          {
+            "start": 92.81,
+            "end": 93.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9977056619203567,
+            "margin": 0.4620057098605106,
+            "reason": "accepted"
+          },
+          {
+            "start": 93.56,
+            "end": 94.3,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.998767043381673,
+            "margin": 0.41775608392683816,
+            "reason": "accepted"
+          },
+          {
+            "start": 94.3,
+            "end": 95.07,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9890670668295705,
+            "margin": 0.45626594263971576,
+            "reason": "accepted"
+          },
+          {
+            "start": 95.07,
+            "end": 95.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9507608597650671,
+            "margin": 0.21507718001616072,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 95.81,
+      "end": 98.81,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 95.81,
+            "end": 96.57,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9995869945790983,
+            "margin": 0.8861978188470662,
+            "reason": "accepted"
+          },
+          {
+            "start": 96.57,
+            "end": 97.31,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.999792839927675,
+            "margin": 0.2192214867247787,
+            "reason": "accepted"
+          },
+          {
+            "start": 97.31,
+            "end": 98.1,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9998883077649231,
+            "margin": 0.8017164846774867,
+            "reason": "accepted"
+          },
+          {
+            "start": 98.1,
+            "end": 98.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9999912263517126,
+            "margin": 0.781753905405818,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 98.81,
+      "end": 101.81,
+      "original": "C#:min9",
+      "label": "C#:min9",
+      "bass": {
+        "note": "C#",
+        "coverage": 0.5,
+        "beats": [
+          {
+            "start": 98.81,
+            "end": 99.56,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.806873563693401,
+            "margin": 0.0528524414749898,
+            "reason": "uncertain"
+          },
+          {
+            "start": 99.56,
+            "end": 100.31,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9699756679251514,
+            "margin": 0.16008830905169458,
+            "reason": "uncertain"
+          },
+          {
+            "start": 100.31,
+            "end": 101.08,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9999802004125283,
+            "margin": 0.2813144000252076,
+            "reason": "accepted"
+          },
+          {
+            "start": 101.08,
+            "end": 101.81,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9992624528894376,
+            "margin": 0.2456063884572225,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 101.81,
+      "end": 104.82,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.4983388704318952,
+        "beats": [
+          {
+            "start": 101.81,
+            "end": 102.56,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9808396263950449,
+            "margin": 0.8979824058552143,
+            "reason": "accepted"
+          },
+          {
+            "start": 102.56,
+            "end": 103.31,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9999223303332856,
+            "margin": 0.7985375661327059,
+            "reason": "accepted"
+          },
+          {
+            "start": 103.31,
+            "end": 104.06,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9886273901290374,
+            "margin": 0.06922958534640788,
+            "reason": "uncertain"
+          },
+          {
+            "start": 104.06,
+            "end": 104.82,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.9501459297927989,
+            "margin": 0.22807585923640217,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 104.82,
+      "end": 107.82,
+      "original": "E:min",
+      "label": "E:min",
+      "bass": {
+        "note": "E",
+        "coverage": 0.7533333333333351,
+        "beats": [
+          {
+            "start": 104.82,
+            "end": 105.56,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9993885286513866,
+            "margin": 0.4668734616960616,
+            "reason": "accepted"
+          },
+          {
+            "start": 105.56,
+            "end": 106.31,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9722145309070466,
+            "margin": 0.25247320879967283,
+            "reason": "accepted"
+          },
+          {
+            "start": 106.31,
+            "end": 107.05,
+            "note": null,
+            "candidate": "E",
+            "score": 0.8946247915686162,
+            "margin": 0.07611359118346561,
+            "reason": "uncertain"
+          },
+          {
+            "start": 107.05,
+            "end": 107.82,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9968612609765397,
+            "margin": 0.3149887614230681,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 107.82,
+      "end": 110.81,
+      "original": "C#:min7",
+      "label": "C#:min7",
+      "bass": {
+        "note": null,
+        "coverage": 0.23745819397993506,
+        "beats": [
+          {
+            "start": 107.82,
+            "end": 108.58,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.7487823183656375,
+            "margin": 0.1367924098815726,
+            "reason": "uncertain"
+          },
+          {
+            "start": 108.58,
+            "end": 109.33,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.6157162843186659,
+            "margin": 0.15297975175171552,
+            "reason": "uncertain"
+          },
+          {
+            "start": 109.33,
+            "end": 110.1,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9055467272231277,
+            "margin": 0.07983624167463998,
+            "reason": "uncertain"
+          },
+          {
+            "start": 110.1,
+            "end": 110.81,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.84612916104537,
+            "margin": 0.28282098194220984,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 110.81,
+      "end": 113.82,
+      "original": "B:maj7",
+      "label": "B:maj7",
+      "bass": {
+        "note": "B",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 110.81,
+            "end": 111.57,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9819618732129023,
+            "margin": 0.4907766329648377,
+            "reason": "accepted"
+          },
+          {
+            "start": 111.57,
+            "end": 112.29,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9754325129898547,
+            "margin": 0.8652085013064337,
+            "reason": "accepted"
+          },
+          {
+            "start": 112.29,
+            "end": 113.08,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.9910551953180532,
+            "margin": 0.709277905416416,
+            "reason": "accepted"
+          },
+          {
+            "start": 113.08,
+            "end": 113.82,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.8931801846871447,
+            "margin": 0.6664080704278914,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 113.82,
+      "end": 116.83,
+      "original": "A:maj7",
+      "label": "A:maj7",
+      "bass": {
+        "note": null,
+        "coverage": 0.25249169435216073,
+        "beats": [
+          {
+            "start": 113.82,
+            "end": 114.58,
+            "note": "A",
+            "candidate": "A",
+            "score": 0.9569457836894493,
+            "margin": 0.5122704514697921,
+            "reason": "accepted"
+          },
+          {
+            "start": 114.58,
+            "end": 115.36,
+            "note": null,
+            "candidate": "A",
+            "score": 0.9392741932748983,
+            "margin": 0.09614741991628262,
+            "reason": "uncertain"
+          },
+          {
+            "start": 115.36,
+            "end": 116.07,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9724177029538876,
+            "margin": 0.21705154860999876,
+            "reason": "accepted"
+          },
+          {
+            "start": 116.07,
+            "end": 116.83,
+            "note": null,
+            "candidate": "A",
+            "score": 0.9831111037983086,
+            "margin": 0.13856498115203053,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 116.83,
+      "end": 119.84,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": null,
+        "coverage": 0.25581395348837505,
+        "beats": [
+          {
+            "start": 116.83,
+            "end": 117.56,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8340328033069271,
+            "margin": 0.14055836476321026,
+            "reason": "uncertain"
+          },
+          {
+            "start": 117.56,
+            "end": 118.32,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8040293758216067,
+            "margin": 0.04285231089977515,
+            "reason": "uncertain"
+          },
+          {
+            "start": 118.32,
+            "end": 119.07,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9785853034535342,
+            "margin": 0.13892577263295558,
+            "reason": "uncertain"
+          },
+          {
+            "start": 119.07,
+            "end": 119.84,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.9529902971420305,
+            "margin": 0.21920755425553062,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 119.84,
+      "end": 122.89,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": null,
+        "coverage": 0.24918032786885436,
+        "beats": [
+          {
+            "start": 119.84,
+            "end": 120.6,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.9845452763639186,
+            "margin": 0.22736393120111908,
+            "reason": "accepted"
+          },
+          {
+            "start": 120.6,
+            "end": 121.33,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8516565289447795,
+            "margin": 0.09320878350650463,
+            "reason": "uncertain"
+          },
+          {
+            "start": 121.33,
+            "end": 122.13,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9477655957190283,
+            "margin": 0.18183284000704447,
+            "reason": "uncertain"
+          },
+          {
+            "start": 122.13,
+            "end": 122.89,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.951457874318311,
+            "margin": 0.29000691073110174,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 122.89,
+      "end": 125.81,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 122.89,
+            "end": 123.61,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.9400665409501456,
+            "margin": 0.13168403264138107,
+            "reason": "uncertain"
+          },
+          {
+            "start": 123.61,
+            "end": 124.34,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.498153457601931,
+            "margin": 0.12201978173233158,
+            "reason": "uncertain"
+          },
+          {
+            "start": 124.34,
+            "end": 125.1,
+            "note": null,
+            "candidate": "F#",
+            "score": 0.20592542082657064,
+            "margin": 0.0032338415618962946,
+            "reason": "uncertain"
+          },
+          {
+            "start": 125.1,
+            "end": 125.81,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.5096104804130016,
+            "margin": 0.22420214361602048,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 125.81,
+      "end": 125.825,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 125.825,
+      "end": 127.31,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 125.825,
+            "end": 126.57,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9703487111285763,
+            "margin": 0.1512218790947163,
+            "reason": "uncertain"
+          },
+          {
+            "start": 126.57,
+            "end": 127.31,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.8373963752117777,
+            "margin": 0.04106326913808611,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 127.31,
+      "end": 128.81,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.5066666666666606,
+        "beats": [
+          {
+            "start": 127.31,
+            "end": 128.07,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9728264542267835,
+            "margin": 0.4143510490236164,
+            "reason": "accepted"
+          },
+          {
+            "start": 128.07,
+            "end": 128.81,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.7473181955750525,
+            "margin": 0.21470078128755576,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 128.81,
+      "end": 131.06,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 0.6666666666666666,
+        "beats": [
+          {
+            "start": 128.81,
+            "end": 129.57,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9501283147568242,
+            "margin": 0.45663440735633437,
+            "reason": "accepted"
+          },
+          {
+            "start": 129.57,
+            "end": 130.31,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8419894884743093,
+            "margin": 0.3764316035087114,
+            "reason": "accepted"
+          },
+          {
+            "start": 130.31,
+            "end": 131.05,
+            "note": null,
+            "candidate": "F",
+            "score": 0.765266843172952,
+            "margin": 0.3571076700635603,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 131.06,
+      "end": 131.8,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 131.06,
+            "end": 131.8,
+            "note": null,
+            "candidate": "G",
+            "score": 0.42796890632437873,
+            "margin": 0.01916007733338798,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 131.8,
+      "end": 133.31,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.4966887417218573,
+        "beats": [
+          {
+            "start": 131.8,
+            "end": 132.56,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9646775434584497,
+            "margin": 0.06526796031439752,
+            "reason": "uncertain"
+          },
+          {
+            "start": 132.56,
+            "end": 133.31,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.8626508276341361,
+            "margin": 0.20661923315120478,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 133.31,
+      "end": 134.81,
+      "original": "D#:maj",
+      "label": "G#:maj/D#",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 133.31,
+            "end": 134.05,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9573030828782904,
+            "margin": 0.3598230044393306,
+            "reason": "accepted"
+          },
+          {
+            "start": 134.05,
+            "end": 134.81,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.8240846354977053,
+            "margin": 0.4024602868900808,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 134.81,
+      "end": 137.06,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 0.6666666666666666,
+        "beats": [
+          {
+            "start": 134.81,
+            "end": 135.55,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9570517155187598,
+            "margin": 0.4562812440049534,
+            "reason": "accepted"
+          },
+          {
+            "start": 135.55,
+            "end": 136.31,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9244024592083837,
+            "margin": 0.4107076221577354,
+            "reason": "accepted"
+          },
+          {
+            "start": 136.31,
+            "end": 137.05,
+            "note": "C",
+            "candidate": "C",
+            "score": 0.8732163109604859,
+            "margin": 0.23813051433020394,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 137.06,
+      "end": 137.81,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 137.06,
+            "end": 137.81,
+            "note": null,
+            "candidate": "C",
+            "score": 0.5073602479809063,
+            "margin": 0.022062922821757147,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 137.81,
+      "end": 139.31,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 137.81,
+            "end": 138.57,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9722248806624504,
+            "margin": 0.0343591674673166,
+            "reason": "uncertain"
+          },
+          {
+            "start": 138.57,
+            "end": 139.31,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.8698601623504018,
+            "margin": 0.09158204374419188,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 139.31,
+      "end": 140.81,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 139.31,
+            "end": 140.06,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9354739121785886,
+            "margin": 0.5105721385514603,
+            "reason": "accepted"
+          },
+          {
+            "start": 140.06,
+            "end": 140.81,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.887398855058015,
+            "margin": 0.4522210565431212,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 140.81,
+      "end": 143.055,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 0.9977728285077971,
+        "beats": [
+          {
+            "start": 140.81,
+            "end": 141.57,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9016850088996337,
+            "margin": 0.2046323763547806,
+            "reason": "accepted"
+          },
+          {
+            "start": 141.57,
+            "end": 142.31,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8342912751593771,
+            "margin": 0.42869723303038515,
+            "reason": "accepted"
+          },
+          {
+            "start": 142.31,
+            "end": 143.05,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8761667220575301,
+            "margin": 0.39510041966203535,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 143.055,
+      "end": 143.81,
+      "original": "C#:maj9",
+      "label": "C#:maj9",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 143.055,
+            "end": 143.81,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.7440029765767374,
+            "margin": 0.28556104070568417,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 143.81,
+      "end": 145.3,
+      "original": "C#:maj9",
+      "label": "C#:maj9",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 143.81,
+            "end": 144.55,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.9875708347908102,
+            "margin": 0.14798722329954117,
+            "reason": "uncertain"
+          },
+          {
+            "start": 144.55,
+            "end": 145.3,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.6779122325079506,
+            "margin": 0.2106778812866057,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 145.3,
+      "end": 146.805,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.47508305647840904,
+        "beats": [
+          {
+            "start": 145.3,
+            "end": 146.09,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8873581214765051,
+            "margin": 0.032506603622490804,
+            "reason": "uncertain"
+          },
+          {
+            "start": 146.09,
+            "end": 146.805,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9798914042367748,
+            "margin": 0.39067259586303593,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 146.805,
+      "end": 146.84,
+      "original": "E:maj",
+      "label": "E:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 146.84,
+      "end": 148.31,
+      "original": "E:maj",
+      "label": "E:maj",
+      "bass": {
+        "note": "E",
+        "coverage": 0.5034013605442242,
+        "beats": [
+          {
+            "start": 146.84,
+            "end": 147.57,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.9933367625600781,
+            "margin": 0.2649526339579974,
+            "reason": "accepted"
+          },
+          {
+            "start": 147.57,
+            "end": 148.31,
+            "note": "E",
+            "candidate": "E",
+            "score": 0.9976427436312957,
+            "margin": 0.3042378101425809,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 148.31,
+      "end": 149.8,
+      "original": "G#:min7",
+      "label": "G#:min7",
+      "bass": {
+        "note": null,
+        "coverage": 0.4832214765100634,
+        "beats": [
+          {
+            "start": 148.31,
+            "end": 149.08,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.9544536570303986,
+            "margin": 0.061425065410900426,
+            "reason": "uncertain"
+          },
+          {
+            "start": 149.08,
+            "end": 149.8,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9392715797152856,
+            "margin": 0.33673087838262006,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 149.8,
+      "end": 149.805,
+      "original": "G#:min7",
+      "label": "G#:min7",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 149.805,
+      "end": 151.3,
+      "original": "B:maj",
+      "label": "B:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.4983277591973259,
+        "beats": [
+          {
+            "start": 149.805,
+            "end": 150.55,
+            "note": "B",
+            "candidate": "B",
+            "score": 0.966884228461476,
+            "margin": 0.2889562603269451,
+            "reason": "accepted"
+          },
+          {
+            "start": 150.55,
+            "end": 151.3,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.7477832849911495,
+            "margin": 0.36031136415677906,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 151.3,
+      "end": 152.805,
+      "original": "F#:maj9",
+      "label": "F#:maj9",
+      "bass": {
+        "note": "F#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 151.3,
+            "end": 152.04,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.9606580484712076,
+            "margin": 0.3928556091982539,
+            "reason": "accepted"
+          },
+          {
+            "start": 152.04,
+            "end": 152.805,
+            "note": "F#",
+            "candidate": "F#",
+            "score": 0.9714228433070908,
+            "margin": 0.22950366915150777,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 152.805,
+      "end": 152.81,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": []
+      }
+    },
+    {
+      "start": 152.81,
+      "end": 154.31,
+      "original": "C#:maj",
+      "label": "F#:maj9/A#",
+      "bass": {
+        "note": "A#",
+        "coverage": 0.5,
+        "beats": [
+          {
+            "start": 152.81,
+            "end": 153.56,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.8641583922771628,
+            "margin": 0.38101697629475034,
+            "reason": "accepted"
+          },
+          {
+            "start": 153.56,
+            "end": 154.31,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9307149055099626,
+            "margin": 0.031244154802796298,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 154.31,
+      "end": 155.81,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": "G#",
+        "coverage": 0.5200000000000008,
+        "beats": [
+          {
+            "start": 154.31,
+            "end": 155.09,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9733257938678416,
+            "margin": 0.6941126590201656,
+            "reason": "accepted"
+          },
+          {
+            "start": 155.09,
+            "end": 155.81,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.8475769947432481,
+            "margin": 0.37638157818120926,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 155.81,
+      "end": 157.29,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.49324324324323976,
+        "beats": [
+          {
+            "start": 155.81,
+            "end": 156.56,
+            "note": null,
+            "candidate": "F",
+            "score": 0.6942082317732399,
+            "margin": 0.20094654645671245,
+            "reason": "uncertain"
+          },
+          {
+            "start": 156.56,
+            "end": 157.29,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9993726329901418,
+            "margin": 0.2579991909199879,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 157.29,
+      "end": 158.82,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.5032679738561969,
+        "beats": [
+          {
+            "start": 157.29,
+            "end": 158.05,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9996899131658878,
+            "margin": 0.19199287865228276,
+            "reason": "uncertain"
+          },
+          {
+            "start": 158.05,
+            "end": 158.82,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9999950603740255,
+            "margin": 0.3090076310632345,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 158.82,
+      "end": 160.32,
+      "original": "D#:7",
+      "label": "D#:7",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 158.82,
+            "end": 159.59,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9986386785801873,
+            "margin": 0.3638510946334189,
+            "reason": "accepted"
+          },
+          {
+            "start": 159.59,
+            "end": 160.32,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9775899901697862,
+            "margin": 0.3313449508384908,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 160.32,
+      "end": 161.81,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.5100671140939695,
+        "beats": [
+          {
+            "start": 160.32,
+            "end": 161.08,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9837098639099321,
+            "margin": 0.403948868611285,
+            "reason": "accepted"
+          },
+          {
+            "start": 161.08,
+            "end": 161.81,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.8516236550423091,
+            "margin": 0.19666117784256942,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 161.81,
+      "end": 164.81,
+      "original": "C:min",
+      "label": "C:min",
+      "bass": {
+        "note": null,
+        "coverage": 0.2600000000000004,
+        "beats": [
+          {
+            "start": 161.81,
+            "end": 162.59,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9999912263517126,
+            "margin": 0.7558255354386891,
+            "reason": "accepted"
+          },
+          {
+            "start": 162.59,
+            "end": 163.32,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.8310782872151917,
+            "margin": 0.1559988755106292,
+            "reason": "uncertain"
+          },
+          {
+            "start": 163.32,
+            "end": 164.06,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.985529271277241,
+            "margin": 0.604291313014029,
+            "reason": "accepted"
+          },
+          {
+            "start": 164.06,
+            "end": 164.81,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9059397690970677,
+            "margin": 0.26778538889329473,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 164.81,
+      "end": 167.82,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 0.5049833887043239,
+        "beats": [
+          {
+            "start": 164.81,
+            "end": 165.57,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9630340742805755,
+            "margin": 0.37145677149561884,
+            "reason": "accepted"
+          },
+          {
+            "start": 165.57,
+            "end": 166.33,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.980936049581923,
+            "margin": 0.418814781734386,
+            "reason": "accepted"
+          },
+          {
+            "start": 166.33,
+            "end": 167.06,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9630591070515168,
+            "margin": 0.15544345191085485,
+            "reason": "uncertain"
+          },
+          {
+            "start": 167.06,
+            "end": 167.82,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9999223303332856,
+            "margin": 0.757246528655663,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 167.82,
+      "end": 169.315,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.4949832775919778,
+        "beats": [
+          {
+            "start": 167.82,
+            "end": 168.57,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9897835124408234,
+            "margin": 0.18974515753526666,
+            "reason": "uncertain"
+          },
+          {
+            "start": 168.57,
+            "end": 169.31,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.99701306046521,
+            "margin": 0.5174702360896304,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 169.315,
+      "end": 170.81,
+      "original": "G#:maj7",
+      "label": "G#:maj7/G",
+      "bass": {
+        "note": "G",
+        "coverage": 0.501672240802674,
+        "beats": [
+          {
+            "start": 169.315,
+            "end": 170.06,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9554944343579702,
+            "margin": 0.2964175909664791,
+            "reason": "accepted"
+          },
+          {
+            "start": 170.06,
+            "end": 170.81,
+            "note": "G",
+            "candidate": "G",
+            "score": 0.981533993465608,
+            "margin": 0.2812135156262694,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 170.81,
+      "end": 173.065,
+      "original": "F:min7",
+      "label": "F:min7",
+      "bass": {
+        "note": "F",
+        "coverage": 0.6607538802660807,
+        "beats": [
+          {
+            "start": 170.81,
+            "end": 171.56,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9378705027023925,
+            "margin": 0.40521482996551594,
+            "reason": "accepted"
+          },
+          {
+            "start": 171.56,
+            "end": 172.3,
+            "note": "F",
+            "candidate": "F",
+            "score": 0.9025751951024498,
+            "margin": 0.24632111191665096,
+            "reason": "accepted"
+          },
+          {
+            "start": 172.3,
+            "end": 173.05,
+            "note": "C",
+            "candidate": "C",
+            "score": 0.8733714437897667,
+            "margin": 0.3251258372022685,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 173.065,
+      "end": 173.8,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.0,
+        "beats": [
+          {
+            "start": 173.065,
+            "end": 173.8,
+            "note": null,
+            "candidate": "C",
+            "score": 0.5255654667875189,
+            "margin": 0.11608133705269419,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 173.8,
+      "end": 175.32,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": "C#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 173.8,
+            "end": 174.56,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9529303486272215,
+            "margin": 0.22693113998049252,
+            "reason": "accepted"
+          },
+          {
+            "start": 174.56,
+            "end": 175.32,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9391918077076254,
+            "margin": 0.37374715141965553,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 175.32,
+      "end": 176.81,
+      "original": "D#:maj",
+      "label": "D#:maj",
+      "bass": {
+        "note": "D#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 175.32,
+            "end": 176.07,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9657837562586197,
+            "margin": 0.3052858276335618,
+            "reason": "accepted"
+          },
+          {
+            "start": 176.07,
+            "end": 176.81,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9221532757571326,
+            "margin": 0.4263677935224191,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 176.81,
+      "end": 179.81,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.4966666666666697,
+        "beats": [
+          {
+            "start": 176.81,
+            "end": 177.57,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9798726372044579,
+            "margin": 0.2688039481305272,
+            "reason": "accepted"
+          },
+          {
+            "start": 177.57,
+            "end": 178.3,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9431840258342615,
+            "margin": 0.3114880140661873,
+            "reason": "accepted"
+          },
+          {
+            "start": 178.3,
+            "end": 179.06,
+            "note": "G",
+            "candidate": "G",
+            "score": 0.8989392701663079,
+            "margin": 0.3532486147920316,
+            "reason": "accepted"
+          },
+          {
+            "start": 179.06,
+            "end": 179.81,
+            "note": null,
+            "candidate": "C",
+            "score": 0.8047722379162328,
+            "margin": 0.15518059939697515,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 179.81,
+      "end": 182.8,
+      "original": "C#:maj9",
+      "label": "G#:maj/D#",
+      "bass": {
+        "note": "D#",
+        "coverage": 0.501672240802674,
+        "beats": [
+          {
+            "start": 179.81,
+            "end": 180.55,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.9292237182573756,
+            "margin": 0.014021559220978141,
+            "reason": "uncertain"
+          },
+          {
+            "start": 180.55,
+            "end": 181.3,
+            "note": null,
+            "candidate": "C#",
+            "score": 0.7261895511619354,
+            "margin": 0.2813978475474474,
+            "reason": "uncertain"
+          },
+          {
+            "start": 181.3,
+            "end": 182.05,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9025920174293846,
+            "margin": 0.44727525443412547,
+            "reason": "accepted"
+          },
+          {
+            "start": 182.05,
+            "end": 182.8,
+            "note": "D#",
+            "candidate": "D#",
+            "score": 0.9990740272630365,
+            "margin": 0.3353471807568963,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 182.8,
+      "end": 185.81,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": null,
+        "coverage": 0.245847176079738,
+        "beats": [
+          {
+            "start": 182.8,
+            "end": 183.58,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8737578618379286,
+            "margin": 0.126198191819058,
+            "reason": "uncertain"
+          },
+          {
+            "start": 183.58,
+            "end": 184.32,
+            "note": null,
+            "candidate": "D#",
+            "score": 0.9469347900876105,
+            "margin": 0.042460249058382304,
+            "reason": "uncertain"
+          },
+          {
+            "start": 184.32,
+            "end": 185.07,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8268785251157251,
+            "margin": 0.028343172424404317,
+            "reason": "uncertain"
+          },
+          {
+            "start": 185.07,
+            "end": 185.81,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9960453010479358,
+            "margin": 0.5488467133834433,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 185.81,
+      "end": 188.8,
+      "original": "G#:maj",
+      "label": "G#:maj",
+      "bass": {
+        "note": "G#",
+        "coverage": 0.7458193979933053,
+        "beats": [
+          {
+            "start": 185.81,
+            "end": 186.53,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9722760089605809,
+            "margin": 0.34594517850296813,
+            "reason": "accepted"
+          },
+          {
+            "start": 186.53,
+            "end": 187.29,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.9467370768334548,
+            "margin": 0.5541710000372568,
+            "reason": "accepted"
+          },
+          {
+            "start": 187.29,
+            "end": 188.04,
+            "note": "G#",
+            "candidate": "G#",
+            "score": 0.8869866827934364,
+            "margin": 0.6625493852633229,
+            "reason": "accepted"
+          },
+          {
+            "start": 188.04,
+            "end": 188.8,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.7911206924752279,
+            "margin": 0.46554048928434283,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 188.8,
+      "end": 191.8,
+      "original": "G#:maj",
+      "label": "A#:min7",
+      "bass": {
+        "note": "A#",
+        "coverage": 0.7633333333333306,
+        "beats": [
+          {
+            "start": 188.8,
+            "end": 189.55,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.9999816509947584,
+            "margin": 0.826570180673449,
+            "reason": "accepted"
+          },
+          {
+            "start": 189.55,
+            "end": 190.3,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.999403709379917,
+            "margin": 0.943037398320407,
+            "reason": "accepted"
+          },
+          {
+            "start": 190.3,
+            "end": 191.09,
+            "note": "A#",
+            "candidate": "A#",
+            "score": 0.9729527999138985,
+            "margin": 0.874393343714741,
+            "reason": "accepted"
+          },
+          {
+            "start": 191.09,
+            "end": 191.8,
+            "note": null,
+            "candidate": "A#",
+            "score": 0.8589099232976598,
+            "margin": 0.08716801674329333,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 191.8,
+      "end": 194.8,
+      "original": "F:min",
+      "label": "G#:maj/C",
+      "bass": {
+        "note": "C",
+        "coverage": 0.75,
+        "beats": [
+          {
+            "start": 191.8,
+            "end": 192.55,
+            "note": "C",
+            "candidate": "C",
+            "score": 0.9895519207189012,
+            "margin": 0.7421806270132727,
+            "reason": "accepted"
+          },
+          {
+            "start": 192.55,
+            "end": 193.3,
+            "note": "C",
+            "candidate": "C",
+            "score": 0.9475339449923632,
+            "margin": 0.789485684362495,
+            "reason": "accepted"
+          },
+          {
+            "start": 193.3,
+            "end": 194.05,
+            "note": "C",
+            "candidate": "C",
+            "score": 0.8161949151636156,
+            "margin": 0.5572779781436848,
+            "reason": "accepted"
+          },
+          {
+            "start": 194.05,
+            "end": 194.8,
+            "note": null,
+            "candidate": "C",
+            "score": 0.3910704180679785,
+            "margin": 0.16976798078695146,
+            "reason": "uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "start": 194.8,
+      "end": 197.95,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": "C#",
+        "coverage": 0.7523809523809503,
+        "beats": [
+          {
+            "start": 194.8,
+            "end": 195.55,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9895785188671756,
+            "margin": 0.7292156911275682,
+            "reason": "accepted"
+          },
+          {
+            "start": 195.55,
+            "end": 196.33,
+            "note": null,
+            "candidate": "G#",
+            "score": 0.36580472217787546,
+            "margin": 0.05466739532028414,
+            "reason": "uncertain"
+          },
+          {
+            "start": 196.33,
+            "end": 197.14,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9904087896935283,
+            "margin": 0.7761647548047187,
+            "reason": "accepted"
+          },
+          {
+            "start": 197.14,
+            "end": 197.95,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9915959623786138,
+            "margin": 0.6067580250202635,
+            "reason": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "start": 197.95,
+      "end": 206.0159863945578,
+      "original": "C#:maj",
+      "label": "C#:maj",
+      "bass": {
+        "note": "C#",
+        "coverage": 1.0,
+        "beats": [
+          {
+            "start": 197.95,
+            "end": 198.72,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9987421230268616,
+            "margin": 0.6055043171509789,
+            "reason": "accepted"
+          },
+          {
+            "start": 198.72,
+            "end": 206.0159863945578,
+            "note": "C#",
+            "candidate": "C#",
+            "score": 0.9465659301910077,
+            "margin": 0.8370234843881822,
+            "reason": "accepted"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -561,6 +561,13 @@ def create_app(store_root=None, manager_factory=Jobs):
     def stems_page():
         return FileResponse(ROOT / "frontend/stems.html", headers={"Cache-Control": "no-cache"})
 
+    @application.get("/{page}")
+    def named_page(page: str):
+        path = ROOT / "frontend" / f"{page}.html"
+        if not path.is_file():
+            raise HTTPException(404, "没有这个页面")
+        return FileResponse(path, headers={"Cache-Control": "no-cache"})
+
     return application
 
 

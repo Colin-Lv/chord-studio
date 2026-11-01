@@ -1,0 +1,2393 @@
+{
+  "c1ebfe4bb5924849b320be11b0aa1f9e": {
+    "1.5": {
+      "rows": [
+        {
+          "id": 0,
+          "start": 5.8,
+          "end": 8.8,
+          "start_text": "5.800000",
+          "end_text": "8.800000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 1,
+          "start": 8.8,
+          "end": 11.81,
+          "start_text": "8.800000",
+          "end_text": "11.810000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 2,
+          "start": 11.81,
+          "end": 14.81,
+          "start_text": "11.810000",
+          "end_text": "14.810000",
+          "label": "B:7",
+          "candidates": []
+        },
+        {
+          "id": 3,
+          "start": 14.81,
+          "end": 17.81,
+          "start_text": "14.810000",
+          "end_text": "17.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 4,
+          "start": 17.81,
+          "end": 26.82,
+          "start_text": "17.810000",
+          "end_text": "26.820000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 5,
+          "start": 26.82,
+          "end": 29.81,
+          "start_text": "26.820000",
+          "end_text": "29.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 6,
+          "start": 29.81,
+          "end": 32.83,
+          "start_text": "29.810000",
+          "end_text": "32.830000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 7,
+          "start": 32.83,
+          "end": 35.82,
+          "start_text": "32.830000",
+          "end_text": "35.820000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 8,
+          "start": 35.82,
+          "end": 38.81,
+          "start_text": "35.820000",
+          "end_text": "38.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 9,
+          "start": 38.81,
+          "end": 41.81,
+          "start_text": "38.810000",
+          "end_text": "41.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 10,
+          "start": 41.81,
+          "end": 44.89,
+          "start_text": "41.810000",
+          "end_text": "44.890000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 11,
+          "start": 44.89,
+          "end": 47.81,
+          "start_text": "44.890000",
+          "end_text": "47.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 12,
+          "start": 47.81,
+          "end": 50.82,
+          "start_text": "47.810000",
+          "end_text": "50.820000",
+          "label": "A:maj9",
+          "candidates": []
+        },
+        {
+          "id": 13,
+          "start": 50.82,
+          "end": 56.825,
+          "start_text": "50.820000",
+          "end_text": "56.825000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 14,
+          "start": 56.825,
+          "end": 59.815,
+          "start_text": "56.825000",
+          "end_text": "59.815000",
+          "label": "F:min",
+          "candidates": []
+        },
+        {
+          "id": 15,
+          "start": 59.815,
+          "end": 61.29,
+          "start_text": "59.815000",
+          "end_text": "61.290000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 16,
+          "start": 61.29,
+          "end": 62.78,
+          "start_text": "61.290000",
+          "end_text": "62.780000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 17,
+          "start": 62.78,
+          "end": 65.82,
+          "start_text": "62.780000",
+          "end_text": "65.820000",
+          "label": "F:min",
+          "candidates": []
+        },
+        {
+          "id": 18,
+          "start": 65.82,
+          "end": 67.32,
+          "start_text": "65.820000",
+          "end_text": "67.320000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 19,
+          "start": 67.32,
+          "end": 68.82,
+          "start_text": "67.320000",
+          "end_text": "68.820000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 20,
+          "start": 68.82,
+          "end": 71.83,
+          "start_text": "68.820000",
+          "end_text": "71.830000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 21,
+          "start": 71.83,
+          "end": 73.325,
+          "start_text": "71.830000",
+          "end_text": "73.325000",
+          "label": "C#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 22,
+          "start": 73.325,
+          "end": 74.82,
+          "start_text": "73.325000",
+          "end_text": "74.820000",
+          "label": "D#:sus4",
+          "candidates": []
+        },
+        {
+          "id": 23,
+          "start": 74.82,
+          "end": 76.315,
+          "start_text": "74.820000",
+          "end_text": "76.315000",
+          "label": "E:maj7",
+          "candidates": []
+        },
+        {
+          "id": 24,
+          "start": 76.315,
+          "end": 77.81,
+          "start_text": "76.315000",
+          "end_text": "77.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 25,
+          "start": 77.81,
+          "end": 79.33,
+          "start_text": "77.810000",
+          "end_text": "79.330000",
+          "label": "E:maj7",
+          "candidates": []
+        },
+        {
+          "id": 26,
+          "start": 79.33,
+          "end": 83.81,
+          "start_text": "79.330000",
+          "end_text": "83.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 27,
+          "start": 83.81,
+          "end": 86.81,
+          "start_text": "83.810000",
+          "end_text": "86.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 28,
+          "start": 86.81,
+          "end": 89.81,
+          "start_text": "86.810000",
+          "end_text": "89.810000",
+          "label": "F#:7",
+          "candidates": []
+        },
+        {
+          "id": 29,
+          "start": 89.81,
+          "end": 92.81,
+          "start_text": "89.810000",
+          "end_text": "92.810000",
+          "label": "D#:min",
+          "candidates": []
+        },
+        {
+          "id": 30,
+          "start": 92.81,
+          "end": 95.81,
+          "start_text": "92.810000",
+          "end_text": "95.810000",
+          "label": "E:min",
+          "candidates": []
+        },
+        {
+          "id": 31,
+          "start": 95.81,
+          "end": 98.81,
+          "start_text": "95.810000",
+          "end_text": "98.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 32,
+          "start": 98.81,
+          "end": 101.81,
+          "start_text": "98.810000",
+          "end_text": "101.810000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 33,
+          "start": 101.81,
+          "end": 104.82,
+          "start_text": "101.810000",
+          "end_text": "104.820000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 34,
+          "start": 104.82,
+          "end": 107.82,
+          "start_text": "104.820000",
+          "end_text": "107.820000",
+          "label": "E:min",
+          "candidates": []
+        },
+        {
+          "id": 35,
+          "start": 107.82,
+          "end": 110.81,
+          "start_text": "107.820000",
+          "end_text": "110.810000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 36,
+          "start": 110.81,
+          "end": 113.82,
+          "start_text": "110.810000",
+          "end_text": "113.820000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 37,
+          "start": 113.82,
+          "end": 116.83,
+          "start_text": "113.820000",
+          "end_text": "116.830000",
+          "label": "A:maj7",
+          "candidates": []
+        },
+        {
+          "id": 38,
+          "start": 116.83,
+          "end": 125.825,
+          "start_text": "116.830000",
+          "end_text": "125.825000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 39,
+          "start": 125.825,
+          "end": 127.31,
+          "start_text": "125.825000",
+          "end_text": "127.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 40,
+          "start": 127.31,
+          "end": 128.81,
+          "start_text": "127.310000",
+          "end_text": "128.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 41,
+          "start": 128.81,
+          "end": 131.06,
+          "start_text": "128.810000",
+          "end_text": "131.060000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 42,
+          "start": 131.06,
+          "end": 133.31,
+          "start_text": "131.060000",
+          "end_text": "133.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 43,
+          "start": 133.31,
+          "end": 134.81,
+          "start_text": "133.310000",
+          "end_text": "134.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 44,
+          "start": 134.81,
+          "end": 137.06,
+          "start_text": "134.810000",
+          "end_text": "137.060000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 45,
+          "start": 137.06,
+          "end": 139.31,
+          "start_text": "137.060000",
+          "end_text": "139.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 46,
+          "start": 139.31,
+          "end": 140.81,
+          "start_text": "139.310000",
+          "end_text": "140.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 47,
+          "start": 140.81,
+          "end": 143.055,
+          "start_text": "140.810000",
+          "end_text": "143.055000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 48,
+          "start": 143.055,
+          "end": 145.3,
+          "start_text": "143.055000",
+          "end_text": "145.300000",
+          "label": "C#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 49,
+          "start": 145.3,
+          "end": 146.805,
+          "start_text": "145.300000",
+          "end_text": "146.805000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 50,
+          "start": 146.805,
+          "end": 149.805,
+          "start_text": "146.805000",
+          "end_text": "149.805000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 51,
+          "start": 149.805,
+          "end": 151.3,
+          "start_text": "149.805000",
+          "end_text": "151.300000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 52,
+          "start": 151.3,
+          "end": 152.805,
+          "start_text": "151.300000",
+          "end_text": "152.805000",
+          "label": "F#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 53,
+          "start": 152.805,
+          "end": 154.31,
+          "start_text": "152.805000",
+          "end_text": "154.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 54,
+          "start": 154.31,
+          "end": 157.29,
+          "start_text": "154.310000",
+          "end_text": "157.290000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 55,
+          "start": 157.29,
+          "end": 160.32,
+          "start_text": "157.290000",
+          "end_text": "160.320000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 56,
+          "start": 160.32,
+          "end": 161.81,
+          "start_text": "160.320000",
+          "end_text": "161.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 57,
+          "start": 161.81,
+          "end": 164.81,
+          "start_text": "161.810000",
+          "end_text": "164.810000",
+          "label": "C:min",
+          "candidates": []
+        },
+        {
+          "id": 58,
+          "start": 164.81,
+          "end": 167.82,
+          "start_text": "164.810000",
+          "end_text": "167.820000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 59,
+          "start": 167.82,
+          "end": 170.81,
+          "start_text": "167.820000",
+          "end_text": "170.810000",
+          "label": "G#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 60,
+          "start": 170.81,
+          "end": 173.065,
+          "start_text": "170.810000",
+          "end_text": "173.065000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 61,
+          "start": 173.065,
+          "end": 175.32,
+          "start_text": "173.065000",
+          "end_text": "175.320000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 62,
+          "start": 175.32,
+          "end": 176.81,
+          "start_text": "175.320000",
+          "end_text": "176.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 63,
+          "start": 176.81,
+          "end": 179.81,
+          "start_text": "176.810000",
+          "end_text": "179.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 64,
+          "start": 179.81,
+          "end": 182.8,
+          "start_text": "179.810000",
+          "end_text": "182.800000",
+          "label": "C#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 65,
+          "start": 182.8,
+          "end": 194.8,
+          "start_text": "182.800000",
+          "end_text": "194.800000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 66,
+          "start": 194.8,
+          "end": 197.95,
+          "start_text": "194.800000",
+          "end_text": "197.950000",
+          "label": "C#:maj",
+          "candidates": []
+        }
+      ]
+    },
+    "0": {
+      "rows": [
+        {
+          "id": 0,
+          "start": 5.8,
+          "end": 8.8,
+          "start_text": "5.800000",
+          "end_text": "8.800000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 1,
+          "start": 8.8,
+          "end": 11.81,
+          "start_text": "8.800000",
+          "end_text": "11.810000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 2,
+          "start": 11.81,
+          "end": 14.81,
+          "start_text": "11.810000",
+          "end_text": "14.810000",
+          "label": "B:7",
+          "candidates": []
+        },
+        {
+          "id": 3,
+          "start": 14.81,
+          "end": 17.81,
+          "start_text": "14.810000",
+          "end_text": "17.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 4,
+          "start": 17.81,
+          "end": 26.82,
+          "start_text": "17.810000",
+          "end_text": "26.820000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 5,
+          "start": 26.82,
+          "end": 29.81,
+          "start_text": "26.820000",
+          "end_text": "29.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 6,
+          "start": 29.81,
+          "end": 32.83,
+          "start_text": "29.810000",
+          "end_text": "32.830000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 7,
+          "start": 32.83,
+          "end": 35.82,
+          "start_text": "32.830000",
+          "end_text": "35.820000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 8,
+          "start": 35.82,
+          "end": 38.81,
+          "start_text": "35.820000",
+          "end_text": "38.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 9,
+          "start": 38.81,
+          "end": 41.81,
+          "start_text": "38.810000",
+          "end_text": "41.810000",
+          "label": "E:maj",
+          "candidates": []
+        },
+        {
+          "id": 10,
+          "start": 41.81,
+          "end": 44.89,
+          "start_text": "41.810000",
+          "end_text": "44.890000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 11,
+          "start": 44.89,
+          "end": 47.81,
+          "start_text": "44.890000",
+          "end_text": "47.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 12,
+          "start": 47.81,
+          "end": 50.82,
+          "start_text": "47.810000",
+          "end_text": "50.820000",
+          "label": "A:maj9",
+          "candidates": []
+        },
+        {
+          "id": 13,
+          "start": 50.82,
+          "end": 56.825,
+          "start_text": "50.820000",
+          "end_text": "56.825000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 14,
+          "start": 56.825,
+          "end": 59.815,
+          "start_text": "56.825000",
+          "end_text": "59.815000",
+          "label": "F:min",
+          "candidates": []
+        },
+        {
+          "id": 15,
+          "start": 59.815,
+          "end": 61.29,
+          "start_text": "59.815000",
+          "end_text": "61.290000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 16,
+          "start": 61.29,
+          "end": 62.78,
+          "start_text": "61.290000",
+          "end_text": "62.780000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 17,
+          "start": 62.78,
+          "end": 65.82,
+          "start_text": "62.780000",
+          "end_text": "65.820000",
+          "label": "F:min",
+          "candidates": []
+        },
+        {
+          "id": 18,
+          "start": 65.82,
+          "end": 67.32,
+          "start_text": "65.820000",
+          "end_text": "67.320000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 19,
+          "start": 67.32,
+          "end": 68.82,
+          "start_text": "67.320000",
+          "end_text": "68.820000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 20,
+          "start": 68.82,
+          "end": 71.83,
+          "start_text": "68.820000",
+          "end_text": "71.830000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 21,
+          "start": 71.83,
+          "end": 73.325,
+          "start_text": "71.830000",
+          "end_text": "73.325000",
+          "label": "C#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 22,
+          "start": 73.325,
+          "end": 74.82,
+          "start_text": "73.325000",
+          "end_text": "74.820000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 23,
+          "start": 74.82,
+          "end": 76.315,
+          "start_text": "74.820000",
+          "end_text": "76.315000",
+          "label": "E:maj7",
+          "candidates": []
+        },
+        {
+          "id": 24,
+          "start": 76.315,
+          "end": 77.81,
+          "start_text": "76.315000",
+          "end_text": "77.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 25,
+          "start": 77.81,
+          "end": 79.33,
+          "start_text": "77.810000",
+          "end_text": "79.330000",
+          "label": "E:maj7",
+          "candidates": []
+        },
+        {
+          "id": 26,
+          "start": 79.33,
+          "end": 83.81,
+          "start_text": "79.330000",
+          "end_text": "83.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 27,
+          "start": 83.81,
+          "end": 86.81,
+          "start_text": "83.810000",
+          "end_text": "86.810000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 28,
+          "start": 86.81,
+          "end": 89.81,
+          "start_text": "86.810000",
+          "end_text": "89.810000",
+          "label": "F#:7",
+          "candidates": []
+        },
+        {
+          "id": 29,
+          "start": 89.81,
+          "end": 92.81,
+          "start_text": "89.810000",
+          "end_text": "92.810000",
+          "label": "D#:min",
+          "candidates": []
+        },
+        {
+          "id": 30,
+          "start": 92.81,
+          "end": 95.81,
+          "start_text": "92.810000",
+          "end_text": "95.810000",
+          "label": "E:min",
+          "candidates": []
+        },
+        {
+          "id": 31,
+          "start": 95.81,
+          "end": 98.81,
+          "start_text": "95.810000",
+          "end_text": "98.810000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 32,
+          "start": 98.81,
+          "end": 101.81,
+          "start_text": "98.810000",
+          "end_text": "101.810000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 33,
+          "start": 101.81,
+          "end": 104.82,
+          "start_text": "101.810000",
+          "end_text": "104.820000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 34,
+          "start": 104.82,
+          "end": 107.82,
+          "start_text": "104.820000",
+          "end_text": "107.820000",
+          "label": "E:min",
+          "candidates": []
+        },
+        {
+          "id": 35,
+          "start": 107.82,
+          "end": 110.81,
+          "start_text": "107.820000",
+          "end_text": "110.810000",
+          "label": "C#:min7",
+          "candidates": []
+        },
+        {
+          "id": 36,
+          "start": 110.81,
+          "end": 113.82,
+          "start_text": "110.810000",
+          "end_text": "113.820000",
+          "label": "B:maj7",
+          "candidates": []
+        },
+        {
+          "id": 37,
+          "start": 113.82,
+          "end": 116.83,
+          "start_text": "113.820000",
+          "end_text": "116.830000",
+          "label": "A:maj7",
+          "candidates": []
+        },
+        {
+          "id": 38,
+          "start": 116.83,
+          "end": 125.825,
+          "start_text": "116.830000",
+          "end_text": "125.825000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 39,
+          "start": 125.825,
+          "end": 127.31,
+          "start_text": "125.825000",
+          "end_text": "127.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 40,
+          "start": 127.31,
+          "end": 128.81,
+          "start_text": "127.310000",
+          "end_text": "128.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 41,
+          "start": 128.81,
+          "end": 131.06,
+          "start_text": "128.810000",
+          "end_text": "131.060000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 42,
+          "start": 131.06,
+          "end": 133.31,
+          "start_text": "131.060000",
+          "end_text": "133.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 43,
+          "start": 133.31,
+          "end": 134.81,
+          "start_text": "133.310000",
+          "end_text": "134.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 44,
+          "start": 134.81,
+          "end": 139.31,
+          "start_text": "134.810000",
+          "end_text": "139.310000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 45,
+          "start": 139.31,
+          "end": 140.81,
+          "start_text": "139.310000",
+          "end_text": "140.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 46,
+          "start": 140.81,
+          "end": 143.055,
+          "start_text": "140.810000",
+          "end_text": "143.055000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 47,
+          "start": 143.055,
+          "end": 145.3,
+          "start_text": "143.055000",
+          "end_text": "145.300000",
+          "label": "C#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 48,
+          "start": 145.3,
+          "end": 146.805,
+          "start_text": "145.300000",
+          "end_text": "146.805000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 49,
+          "start": 146.805,
+          "end": 149.805,
+          "start_text": "146.805000",
+          "end_text": "149.805000",
+          "label": "C#:min9",
+          "candidates": []
+        },
+        {
+          "id": 50,
+          "start": 149.805,
+          "end": 151.3,
+          "start_text": "149.805000",
+          "end_text": "151.300000",
+          "label": "B:maj",
+          "candidates": []
+        },
+        {
+          "id": 51,
+          "start": 151.3,
+          "end": 152.805,
+          "start_text": "151.300000",
+          "end_text": "152.805000",
+          "label": "F#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 52,
+          "start": 152.805,
+          "end": 154.31,
+          "start_text": "152.805000",
+          "end_text": "154.310000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 53,
+          "start": 154.31,
+          "end": 157.29,
+          "start_text": "154.310000",
+          "end_text": "157.290000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 54,
+          "start": 157.29,
+          "end": 160.32,
+          "start_text": "157.290000",
+          "end_text": "160.320000",
+          "label": "D#:7",
+          "candidates": []
+        },
+        {
+          "id": 55,
+          "start": 160.32,
+          "end": 161.81,
+          "start_text": "160.320000",
+          "end_text": "161.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 56,
+          "start": 161.81,
+          "end": 164.81,
+          "start_text": "161.810000",
+          "end_text": "164.810000",
+          "label": "C:min",
+          "candidates": []
+        },
+        {
+          "id": 57,
+          "start": 164.81,
+          "end": 167.82,
+          "start_text": "164.810000",
+          "end_text": "167.820000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 58,
+          "start": 167.82,
+          "end": 170.81,
+          "start_text": "167.820000",
+          "end_text": "170.810000",
+          "label": "G#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 59,
+          "start": 170.81,
+          "end": 173.065,
+          "start_text": "170.810000",
+          "end_text": "173.065000",
+          "label": "F:min7",
+          "candidates": []
+        },
+        {
+          "id": 60,
+          "start": 173.065,
+          "end": 175.32,
+          "start_text": "173.065000",
+          "end_text": "175.320000",
+          "label": "C#:maj",
+          "candidates": []
+        },
+        {
+          "id": 61,
+          "start": 175.32,
+          "end": 176.81,
+          "start_text": "175.320000",
+          "end_text": "176.810000",
+          "label": "D#:maj",
+          "candidates": []
+        },
+        {
+          "id": 62,
+          "start": 176.81,
+          "end": 179.81,
+          "start_text": "176.810000",
+          "end_text": "179.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 63,
+          "start": 179.81,
+          "end": 182.8,
+          "start_text": "179.810000",
+          "end_text": "182.800000",
+          "label": "C#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 64,
+          "start": 182.8,
+          "end": 194.8,
+          "start_text": "182.800000",
+          "end_text": "194.800000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 65,
+          "start": 194.8,
+          "end": 197.95,
+          "start_text": "194.800000",
+          "end_text": "197.950000",
+          "label": "C#:maj",
+          "candidates": []
+        }
+      ]
+    }
+  },
+  "aa5a41797bb343e590abcf4d8b27ae54": {
+    "1.5": {
+      "rows": [
+        {
+          "id": 0,
+          "start": 1.8,
+          "end": 5.52,
+          "start_text": "1.800000",
+          "end_text": "5.520000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 1,
+          "start": 5.52,
+          "end": 9.2,
+          "start_text": "5.520000",
+          "end_text": "9.200000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 2,
+          "start": 9.2,
+          "end": 12.9,
+          "start_text": "9.200000",
+          "end_text": "12.900000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 3,
+          "start": 12.9,
+          "end": 16.58,
+          "start_text": "12.900000",
+          "end_text": "16.580000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 4,
+          "start": 16.58,
+          "end": 20.28,
+          "start_text": "16.580000",
+          "end_text": "20.280000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 5,
+          "start": 20.28,
+          "end": 23.96,
+          "start_text": "20.280000",
+          "end_text": "23.960000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 6,
+          "start": 23.96,
+          "end": 27.66,
+          "start_text": "23.960000",
+          "end_text": "27.660000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 7,
+          "start": 27.66,
+          "end": 31.34,
+          "start_text": "27.660000",
+          "end_text": "31.340000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 8,
+          "start": 31.34,
+          "end": 36.88,
+          "start_text": "31.340000",
+          "end_text": "36.880000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 9,
+          "start": 36.88,
+          "end": 38.73,
+          "start_text": "36.880000",
+          "end_text": "38.730000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 10,
+          "start": 38.73,
+          "end": 42.41,
+          "start_text": "38.730000",
+          "end_text": "42.410000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 11,
+          "start": 42.41,
+          "end": 46.11,
+          "start_text": "42.410000",
+          "end_text": "46.110000",
+          "label": "A:7",
+          "candidates": []
+        },
+        {
+          "id": 12,
+          "start": 46.11,
+          "end": 49.8,
+          "start_text": "46.110000",
+          "end_text": "49.800000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 13,
+          "start": 49.8,
+          "end": 53.52,
+          "start_text": "49.800000",
+          "end_text": "53.520000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 14,
+          "start": 53.52,
+          "end": 57.2,
+          "start_text": "53.520000",
+          "end_text": "57.200000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 15,
+          "start": 57.2,
+          "end": 60.88,
+          "start_text": "57.200000",
+          "end_text": "60.880000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 16,
+          "start": 60.88,
+          "end": 64.57,
+          "start_text": "60.880000",
+          "end_text": "64.570000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 17,
+          "start": 64.57,
+          "end": 68.25,
+          "start_text": "64.570000",
+          "end_text": "68.250000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 18,
+          "start": 68.25,
+          "end": 71.97,
+          "start_text": "68.250000",
+          "end_text": "71.970000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 19,
+          "start": 71.97,
+          "end": 75.66,
+          "start_text": "71.970000",
+          "end_text": "75.660000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 20,
+          "start": 75.66,
+          "end": 79.35,
+          "start_text": "75.660000",
+          "end_text": "79.350000",
+          "label": "A:min",
+          "candidates": []
+        },
+        {
+          "id": 21,
+          "start": 79.35,
+          "end": 80.96,
+          "start_text": "79.350000",
+          "end_text": "80.960000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 22,
+          "start": 80.96,
+          "end": 83.05,
+          "start_text": "80.960000",
+          "end_text": "83.050000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 23,
+          "start": 83.05,
+          "end": 85.82,
+          "start_text": "83.050000",
+          "end_text": "85.820000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 24,
+          "start": 85.82,
+          "end": 90.42,
+          "start_text": "85.820000",
+          "end_text": "90.420000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 25,
+          "start": 90.42,
+          "end": 94.12,
+          "start_text": "90.420000",
+          "end_text": "94.120000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 26,
+          "start": 94.12,
+          "end": 97.81,
+          "start_text": "94.120000",
+          "end_text": "97.810000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 27,
+          "start": 97.81,
+          "end": 99.67,
+          "start_text": "97.810000",
+          "end_text": "99.670000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 28,
+          "start": 99.67,
+          "end": 101.51,
+          "start_text": "99.670000",
+          "end_text": "101.510000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 29,
+          "start": 101.51,
+          "end": 105.19,
+          "start_text": "101.510000",
+          "end_text": "105.190000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 30,
+          "start": 105.19,
+          "end": 108.88,
+          "start_text": "105.190000",
+          "end_text": "108.880000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 31,
+          "start": 108.88,
+          "end": 112.58,
+          "start_text": "108.880000",
+          "end_text": "112.580000",
+          "label": "A:7",
+          "candidates": []
+        },
+        {
+          "id": 32,
+          "start": 112.58,
+          "end": 116.26,
+          "start_text": "112.580000",
+          "end_text": "116.260000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 33,
+          "start": 116.26,
+          "end": 119.97,
+          "start_text": "116.260000",
+          "end_text": "119.970000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 34,
+          "start": 119.97,
+          "end": 123.65,
+          "start_text": "119.970000",
+          "end_text": "123.650000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 35,
+          "start": 123.65,
+          "end": 127.36,
+          "start_text": "123.650000",
+          "end_text": "127.360000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 36,
+          "start": 127.36,
+          "end": 131.04,
+          "start_text": "127.360000",
+          "end_text": "131.040000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 37,
+          "start": 131.04,
+          "end": 134.73,
+          "start_text": "131.040000",
+          "end_text": "134.730000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 38,
+          "start": 134.73,
+          "end": 138.44,
+          "start_text": "134.730000",
+          "end_text": "138.440000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 39,
+          "start": 138.44,
+          "end": 142.12,
+          "start_text": "138.440000",
+          "end_text": "142.120000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 40,
+          "start": 142.12,
+          "end": 145.81,
+          "start_text": "142.120000",
+          "end_text": "145.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 41,
+          "start": 145.81,
+          "end": 149.49,
+          "start_text": "145.810000",
+          "end_text": "149.490000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 42,
+          "start": 149.49,
+          "end": 153.2,
+          "start_text": "149.490000",
+          "end_text": "153.200000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 43,
+          "start": 153.2,
+          "end": 156.88,
+          "start_text": "153.200000",
+          "end_text": "156.880000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 44,
+          "start": 156.88,
+          "end": 160.58,
+          "start_text": "156.880000",
+          "end_text": "160.580000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 45,
+          "start": 160.58,
+          "end": 164.27,
+          "start_text": "160.580000",
+          "end_text": "164.270000",
+          "label": "C:7",
+          "candidates": []
+        },
+        {
+          "id": 46,
+          "start": 164.27,
+          "end": 167.97,
+          "start_text": "164.270000",
+          "end_text": "167.970000",
+          "label": "A#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 47,
+          "start": 167.97,
+          "end": 171.65,
+          "start_text": "167.970000",
+          "end_text": "171.650000",
+          "label": "F:maj",
+          "candidates": []
+        },
+        {
+          "id": 48,
+          "start": 171.65,
+          "end": 175.35,
+          "start_text": "171.650000",
+          "end_text": "175.350000",
+          "label": "G#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 49,
+          "start": 175.35,
+          "end": 179.04,
+          "start_text": "175.350000",
+          "end_text": "179.040000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 50,
+          "start": 179.04,
+          "end": 182.73,
+          "start_text": "179.040000",
+          "end_text": "182.730000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 51,
+          "start": 182.73,
+          "end": 186.43,
+          "start_text": "182.730000",
+          "end_text": "186.430000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 52,
+          "start": 186.43,
+          "end": 190.12,
+          "start_text": "186.430000",
+          "end_text": "190.120000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 53,
+          "start": 190.12,
+          "end": 193.81,
+          "start_text": "190.120000",
+          "end_text": "193.810000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 54,
+          "start": 193.81,
+          "end": 197.51,
+          "start_text": "193.810000",
+          "end_text": "197.510000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 55,
+          "start": 197.51,
+          "end": 201.2,
+          "start_text": "197.510000",
+          "end_text": "201.200000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 56,
+          "start": 201.2,
+          "end": 204.89,
+          "start_text": "201.200000",
+          "end_text": "204.890000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 57,
+          "start": 204.89,
+          "end": 208.59,
+          "start_text": "204.890000",
+          "end_text": "208.590000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 58,
+          "start": 208.59,
+          "end": 212.27,
+          "start_text": "208.590000",
+          "end_text": "212.270000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 59,
+          "start": 212.27,
+          "end": 215.97,
+          "start_text": "212.270000",
+          "end_text": "215.970000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 60,
+          "start": 215.97,
+          "end": 219.65,
+          "start_text": "215.970000",
+          "end_text": "219.650000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 61,
+          "start": 219.65,
+          "end": 223.37,
+          "start_text": "219.650000",
+          "end_text": "223.370000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 62,
+          "start": 223.37,
+          "end": 227.06,
+          "start_text": "223.370000",
+          "end_text": "227.060000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 63,
+          "start": 227.06,
+          "end": 232.62,
+          "start_text": "227.060000",
+          "end_text": "232.620000",
+          "label": "C:maj9",
+          "candidates": []
+        }
+      ],
+      "metrics": {
+        "exact": 0.6250218416914208,
+        "root": 0.825746985846584,
+        "coverage": 1.0000000000000002,
+        "seconds": 228.92,
+        "segments": 64,
+        "boundary_precision": 0.873015873015873,
+        "boundary_recall": 0.9016393442622951,
+        "boundary_f1": 0.8870967741935485,
+        "tolerance_seconds": 0.5
+      }
+    },
+    "0": {
+      "rows": [
+        {
+          "id": 0,
+          "start": 1.8,
+          "end": 5.52,
+          "start_text": "1.800000",
+          "end_text": "5.520000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 1,
+          "start": 5.52,
+          "end": 9.2,
+          "start_text": "5.520000",
+          "end_text": "9.200000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 2,
+          "start": 9.2,
+          "end": 12.9,
+          "start_text": "9.200000",
+          "end_text": "12.900000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 3,
+          "start": 12.9,
+          "end": 16.58,
+          "start_text": "12.900000",
+          "end_text": "16.580000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 4,
+          "start": 16.58,
+          "end": 20.28,
+          "start_text": "16.580000",
+          "end_text": "20.280000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 5,
+          "start": 20.28,
+          "end": 23.96,
+          "start_text": "20.280000",
+          "end_text": "23.960000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 6,
+          "start": 23.96,
+          "end": 27.66,
+          "start_text": "23.960000",
+          "end_text": "27.660000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 7,
+          "start": 27.66,
+          "end": 31.34,
+          "start_text": "27.660000",
+          "end_text": "31.340000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 8,
+          "start": 31.34,
+          "end": 36.88,
+          "start_text": "31.340000",
+          "end_text": "36.880000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 9,
+          "start": 36.88,
+          "end": 38.73,
+          "start_text": "36.880000",
+          "end_text": "38.730000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 10,
+          "start": 38.73,
+          "end": 42.41,
+          "start_text": "38.730000",
+          "end_text": "42.410000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 11,
+          "start": 42.41,
+          "end": 46.11,
+          "start_text": "42.410000",
+          "end_text": "46.110000",
+          "label": "A:7",
+          "candidates": []
+        },
+        {
+          "id": 12,
+          "start": 46.11,
+          "end": 49.8,
+          "start_text": "46.110000",
+          "end_text": "49.800000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 13,
+          "start": 49.8,
+          "end": 53.52,
+          "start_text": "49.800000",
+          "end_text": "53.520000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 14,
+          "start": 53.52,
+          "end": 57.2,
+          "start_text": "53.520000",
+          "end_text": "57.200000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 15,
+          "start": 57.2,
+          "end": 60.88,
+          "start_text": "57.200000",
+          "end_text": "60.880000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 16,
+          "start": 60.88,
+          "end": 64.57,
+          "start_text": "60.880000",
+          "end_text": "64.570000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 17,
+          "start": 64.57,
+          "end": 68.25,
+          "start_text": "64.570000",
+          "end_text": "68.250000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 18,
+          "start": 68.25,
+          "end": 71.97,
+          "start_text": "68.250000",
+          "end_text": "71.970000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 19,
+          "start": 71.97,
+          "end": 75.66,
+          "start_text": "71.970000",
+          "end_text": "75.660000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 20,
+          "start": 75.66,
+          "end": 79.35,
+          "start_text": "75.660000",
+          "end_text": "79.350000",
+          "label": "A:min",
+          "candidates": []
+        },
+        {
+          "id": 21,
+          "start": 79.35,
+          "end": 80.96,
+          "start_text": "79.350000",
+          "end_text": "80.960000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 22,
+          "start": 80.96,
+          "end": 83.05,
+          "start_text": "80.960000",
+          "end_text": "83.050000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 23,
+          "start": 83.05,
+          "end": 85.82,
+          "start_text": "83.050000",
+          "end_text": "85.820000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 24,
+          "start": 85.82,
+          "end": 90.42,
+          "start_text": "85.820000",
+          "end_text": "90.420000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 25,
+          "start": 90.42,
+          "end": 94.12,
+          "start_text": "90.420000",
+          "end_text": "94.120000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 26,
+          "start": 94.12,
+          "end": 97.81,
+          "start_text": "94.120000",
+          "end_text": "97.810000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 27,
+          "start": 97.81,
+          "end": 99.67,
+          "start_text": "97.810000",
+          "end_text": "99.670000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 28,
+          "start": 99.67,
+          "end": 101.51,
+          "start_text": "99.670000",
+          "end_text": "101.510000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 29,
+          "start": 101.51,
+          "end": 105.19,
+          "start_text": "101.510000",
+          "end_text": "105.190000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 30,
+          "start": 105.19,
+          "end": 108.88,
+          "start_text": "105.190000",
+          "end_text": "108.880000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 31,
+          "start": 108.88,
+          "end": 112.58,
+          "start_text": "108.880000",
+          "end_text": "112.580000",
+          "label": "A:7",
+          "candidates": []
+        },
+        {
+          "id": 32,
+          "start": 112.58,
+          "end": 116.26,
+          "start_text": "112.580000",
+          "end_text": "116.260000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 33,
+          "start": 116.26,
+          "end": 119.97,
+          "start_text": "116.260000",
+          "end_text": "119.970000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 34,
+          "start": 119.97,
+          "end": 123.65,
+          "start_text": "119.970000",
+          "end_text": "123.650000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 35,
+          "start": 123.65,
+          "end": 127.36,
+          "start_text": "123.650000",
+          "end_text": "127.360000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 36,
+          "start": 127.36,
+          "end": 131.04,
+          "start_text": "127.360000",
+          "end_text": "131.040000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 37,
+          "start": 131.04,
+          "end": 134.73,
+          "start_text": "131.040000",
+          "end_text": "134.730000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 38,
+          "start": 134.73,
+          "end": 138.44,
+          "start_text": "134.730000",
+          "end_text": "138.440000",
+          "label": "E:7",
+          "candidates": []
+        },
+        {
+          "id": 39,
+          "start": 138.44,
+          "end": 142.12,
+          "start_text": "138.440000",
+          "end_text": "142.120000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 40,
+          "start": 142.12,
+          "end": 145.81,
+          "start_text": "142.120000",
+          "end_text": "145.810000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 41,
+          "start": 145.81,
+          "end": 149.49,
+          "start_text": "145.810000",
+          "end_text": "149.490000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 42,
+          "start": 149.49,
+          "end": 153.2,
+          "start_text": "149.490000",
+          "end_text": "153.200000",
+          "label": "D:min7",
+          "candidates": []
+        },
+        {
+          "id": 43,
+          "start": 153.2,
+          "end": 156.88,
+          "start_text": "153.200000",
+          "end_text": "156.880000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 44,
+          "start": 156.88,
+          "end": 160.58,
+          "start_text": "156.880000",
+          "end_text": "160.580000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 45,
+          "start": 160.58,
+          "end": 164.27,
+          "start_text": "160.580000",
+          "end_text": "164.270000",
+          "label": "C:7",
+          "candidates": []
+        },
+        {
+          "id": 46,
+          "start": 164.27,
+          "end": 167.97,
+          "start_text": "164.270000",
+          "end_text": "167.970000",
+          "label": "A#:maj7",
+          "candidates": []
+        },
+        {
+          "id": 47,
+          "start": 167.97,
+          "end": 171.65,
+          "start_text": "167.970000",
+          "end_text": "171.650000",
+          "label": "F:maj",
+          "candidates": []
+        },
+        {
+          "id": 48,
+          "start": 171.65,
+          "end": 175.35,
+          "start_text": "171.650000",
+          "end_text": "175.350000",
+          "label": "G#:maj9",
+          "candidates": []
+        },
+        {
+          "id": 49,
+          "start": 175.35,
+          "end": 179.04,
+          "start_text": "175.350000",
+          "end_text": "179.040000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 50,
+          "start": 179.04,
+          "end": 182.73,
+          "start_text": "179.040000",
+          "end_text": "182.730000",
+          "label": "F:maj7",
+          "candidates": []
+        },
+        {
+          "id": 51,
+          "start": 182.73,
+          "end": 186.43,
+          "start_text": "182.730000",
+          "end_text": "186.430000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 52,
+          "start": 186.43,
+          "end": 190.12,
+          "start_text": "186.430000",
+          "end_text": "190.120000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 53,
+          "start": 190.12,
+          "end": 193.81,
+          "start_text": "190.120000",
+          "end_text": "193.810000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 54,
+          "start": 193.81,
+          "end": 197.51,
+          "start_text": "193.810000",
+          "end_text": "197.510000",
+          "label": "F:maj9",
+          "candidates": []
+        },
+        {
+          "id": 55,
+          "start": 197.51,
+          "end": 201.2,
+          "start_text": "197.510000",
+          "end_text": "201.200000",
+          "label": "G:maj",
+          "candidates": []
+        },
+        {
+          "id": 56,
+          "start": 201.2,
+          "end": 204.89,
+          "start_text": "201.200000",
+          "end_text": "204.890000",
+          "label": "E:min7",
+          "candidates": []
+        },
+        {
+          "id": 57,
+          "start": 204.89,
+          "end": 208.59,
+          "start_text": "204.890000",
+          "end_text": "208.590000",
+          "label": "A:min7",
+          "candidates": []
+        },
+        {
+          "id": 58,
+          "start": 208.59,
+          "end": 212.27,
+          "start_text": "208.590000",
+          "end_text": "212.270000",
+          "label": "G#:maj",
+          "candidates": []
+        },
+        {
+          "id": 59,
+          "start": 212.27,
+          "end": 215.97,
+          "start_text": "212.270000",
+          "end_text": "215.970000",
+          "label": "C:maj7",
+          "candidates": []
+        },
+        {
+          "id": 60,
+          "start": 215.97,
+          "end": 219.65,
+          "start_text": "215.970000",
+          "end_text": "219.650000",
+          "label": "D:min9",
+          "candidates": []
+        },
+        {
+          "id": 61,
+          "start": 219.65,
+          "end": 223.37,
+          "start_text": "219.650000",
+          "end_text": "223.370000",
+          "label": "C:maj9",
+          "candidates": []
+        },
+        {
+          "id": 62,
+          "start": 223.37,
+          "end": 227.06,
+          "start_text": "223.370000",
+          "end_text": "227.060000",
+          "label": "C:maj",
+          "candidates": []
+        },
+        {
+          "id": 63,
+          "start": 227.06,
+          "end": 232.62,
+          "start_text": "227.060000",
+          "end_text": "232.620000",
+          "label": "C:maj9",
+          "candidates": []
+        }
+      ],
+      "metrics": {
+        "exact": 0.608858990040189,
+        "root": 0.809584134195352,
+        "coverage": 1.0000000000000002,
+        "seconds": 228.92,
+        "segments": 64,
+        "boundary_precision": 0.873015873015873,
+        "boundary_recall": 0.9016393442622951,
+        "boundary_f1": 0.8870967741935485,
+        "tolerance_seconds": 0.5
+      }
+    }
+  }
+}

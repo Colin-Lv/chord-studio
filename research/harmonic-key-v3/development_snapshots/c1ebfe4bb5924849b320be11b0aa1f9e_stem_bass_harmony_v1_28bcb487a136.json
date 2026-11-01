@@ -1,0 +1,2413 @@
+{
+  "method": "harmonic-key-reasoner-v3",
+  "status": "computed",
+  "segments": [
+    {
+      "start": 5.8,
+      "end": 47.81,
+      "key": "B",
+      "status": "supported",
+      "margin": 1.3032,
+      "evidence": [
+        {
+          "start": 5.8,
+          "end": 8.8,
+          "chord": "B:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 8.8,
+          "end": 11.81,
+          "chord": "C#:min9",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 11.81,
+          "end": 14.81,
+          "chord": "B:7/D#",
+          "degree_semitones": 0,
+          "role": "已解决的次属和弦",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 14.81,
+          "end": 17.81,
+          "chord": "E:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 17.81,
+          "end": 23.83,
+          "chord": "B:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 23.83,
+          "end": 26.82,
+          "chord": "B:maj/D#",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 26.82,
+          "end": 29.81,
+          "chord": "E:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 29.81,
+          "end": 32.83,
+          "chord": "B:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 32.83,
+          "end": 35.82,
+          "chord": "C#:min7",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 35.82,
+          "end": 38.81,
+          "chord": "B:maj/D#",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 38.81,
+          "end": 41.81,
+          "chord": "E:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 41.81,
+          "end": 44.89,
+          "chord": "C#:min7",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 44.89,
+          "end": 47.81,
+          "chord": "B:maj7",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        }
+      ],
+      "candidates": [
+        {
+          "key": "B",
+          "score": 6.56719,
+          "explanations": [
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:7/D#",
+              "role": "已解决的次属和弦"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "score": 5.26401,
+          "explanations": [
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:7/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "含需解释的变化音"
+            }
+          ]
+        },
+        {
+          "key": "C#m",
+          "score": 4.10037,
+          "explanations": [
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:7/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "含需解释的变化音"
+            }
+          ]
+        }
+      ],
+      "keep_neighbour_key": [
+        {
+          "key": "G#",
+          "local_fit_loss": 108.4201,
+          "explanations": [
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:7/D#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "E:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj/D#",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "平行调借用"
+            }
+          ]
+        }
+      ],
+      "start_bar": 1,
+      "end_bar": 14
+    },
+    {
+      "start": 47.81,
+      "end": 68.82,
+      "key": "G#",
+      "status": "supported",
+      "margin": 1.3734,
+      "evidence": [
+        {
+          "start": 47.81,
+          "end": 50.82,
+          "chord": "A:maj9",
+          "degree_semitones": 1,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 50.82,
+          "end": 56.825,
+          "chord": "D#:7",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 56.825,
+          "end": 59.815,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": true
+        },
+        {
+          "start": 59.815,
+          "end": 61.29,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 61.29,
+          "end": 62.78,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 62.78,
+          "end": 65.82,
+          "chord": "F:min",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 65.82,
+          "end": 67.32,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 67.32,
+          "end": 68.82,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        }
+      ],
+      "candidates": [
+        {
+          "key": "G#",
+          "score": 4.53191,
+          "explanations": [
+            {
+              "chord": "A:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "Fm",
+          "score": 3.15854,
+          "explanations": [
+            {
+              "chord": "A:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "D#",
+          "score": 2.3552,
+          "explanations": [
+            {
+              "chord": "A:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "已解决的次属和弦"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            }
+          ]
+        }
+      ],
+      "keep_neighbour_key": [
+        {
+          "key": "B",
+          "local_fit_loss": 46.8565,
+          "explanations": [
+            {
+              "chord": "A:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            }
+          ]
+        }
+      ],
+      "start_bar": 15,
+      "end_bar": 21
+    },
+    {
+      "start": 68.82,
+      "end": 113.82,
+      "key": "B",
+      "status": "supported",
+      "margin": 2.3144,
+      "evidence": [
+        {
+          "start": 68.82,
+          "end": 71.83,
+          "chord": "F:min7",
+          "degree_semitones": 6,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 71.83,
+          "end": 73.325,
+          "chord": "C#:maj7",
+          "degree_semitones": 2,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 73.325,
+          "end": 74.82,
+          "chord": "D#:sus4",
+          "degree_semitones": 4,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 74.82,
+          "end": 76.315,
+          "chord": "E:maj7/B",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 76.315,
+          "end": 77.81,
+          "chord": "B:maj7",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 77.81,
+          "end": 79.33,
+          "chord": "E:maj7",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 79.33,
+          "end": 80.85,
+          "chord": "F#:sus4",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 80.85,
+          "end": 83.81,
+          "chord": "B:maj/F#",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 83.81,
+          "end": 86.81,
+          "chord": "B:maj7",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 86.81,
+          "end": 89.81,
+          "chord": "F#:7/C#",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 89.81,
+          "end": 92.81,
+          "chord": "D#:min",
+          "degree_semitones": 4,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 92.81,
+          "end": 95.81,
+          "chord": "E:min",
+          "degree_semitones": 5,
+          "role": "平行调借用",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 95.81,
+          "end": 98.81,
+          "chord": "B:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 98.81,
+          "end": 101.81,
+          "chord": "C#:min9",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 101.81,
+          "end": 104.82,
+          "chord": "B:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 104.82,
+          "end": 107.82,
+          "chord": "E:min",
+          "degree_semitones": 5,
+          "role": "平行调借用",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 107.82,
+          "end": 110.81,
+          "chord": "C#:min7",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 110.81,
+          "end": 113.82,
+          "chord": "B:maj7",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        }
+      ],
+      "candidates": [
+        {
+          "key": "B",
+          "score": 4.3706,
+          "explanations": [
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj7/B",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/F#",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:7/C#",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:min",
+              "role": "调内"
+            },
+            {
+              "chord": "E:min",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "E:min",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "G#m",
+          "score": 2.05619,
+          "explanations": [
+            {
+              "chord": "F:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "D#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj7/B",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/F#",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:7/C#",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:min",
+              "role": "调内"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "C#m",
+          "score": 1.1636,
+          "explanations": [
+            {
+              "chord": "F:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "D#:sus4",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:maj7/B",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "E:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj/F#",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F#:7/C#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:min",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "含需解释的变化音"
+            }
+          ]
+        }
+      ],
+      "keep_neighbour_key": [
+        {
+          "key": "G#",
+          "local_fit_loss": 74.9322,
+          "explanations": [
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj7",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:sus4",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj7/B",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "F#:sus4",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj/F#",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "F#:7/C#",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "D#:min",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "C#:min9",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "E:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj7",
+              "role": "平行调借用"
+            }
+          ]
+        }
+      ],
+      "start_bar": 22,
+      "end_bar": 36
+    },
+    {
+      "start": 113.82,
+      "end": 206.016,
+      "key": "G#",
+      "status": "supported",
+      "margin": 1.4584,
+      "evidence": [
+        {
+          "start": 113.82,
+          "end": 116.83,
+          "chord": "A:maj7",
+          "degree_semitones": 1,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 116.83,
+          "end": 125.825,
+          "chord": "D#:7",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 125.825,
+          "end": 127.31,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 127.31,
+          "end": 128.81,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 128.81,
+          "end": 131.06,
+          "chord": "F:min7",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 131.06,
+          "end": 133.31,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 133.31,
+          "end": 134.81,
+          "chord": "G#:maj/D#",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 134.81,
+          "end": 137.06,
+          "chord": "F:min7",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 137.06,
+          "end": 139.31,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 139.31,
+          "end": 140.81,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 140.81,
+          "end": 143.055,
+          "chord": "F:min7",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 143.055,
+          "end": 145.3,
+          "chord": "C#:maj9",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 145.3,
+          "end": 146.805,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 146.805,
+          "end": 148.31,
+          "chord": "E:maj",
+          "degree_semitones": 8,
+          "role": "平行调借用",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 148.31,
+          "end": 149.805,
+          "chord": "G#:min7",
+          "degree_semitones": 0,
+          "role": "平行调借用",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 149.805,
+          "end": 151.3,
+          "chord": "B:maj",
+          "degree_semitones": 3,
+          "role": "平行调借用",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 151.3,
+          "end": 152.805,
+          "chord": "F#:maj9",
+          "degree_semitones": 10,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 152.805,
+          "end": 152.81,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 152.81,
+          "end": 154.31,
+          "chord": "F#:maj9/A#",
+          "degree_semitones": 10,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 154.31,
+          "end": 157.29,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 157.29,
+          "end": 160.32,
+          "chord": "D#:7",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 160.32,
+          "end": 161.81,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 161.81,
+          "end": 164.81,
+          "chord": "C:min",
+          "degree_semitones": 4,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 164.81,
+          "end": 167.82,
+          "chord": "F:min7",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 167.82,
+          "end": 169.315,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 169.315,
+          "end": 170.81,
+          "chord": "G#:maj7/G",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 170.81,
+          "end": 173.065,
+          "chord": "F:min7",
+          "degree_semitones": 9,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 173.065,
+          "end": 175.32,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 175.32,
+          "end": 176.81,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 176.81,
+          "end": 179.81,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": true
+        },
+        {
+          "start": 179.81,
+          "end": 182.8,
+          "chord": "G#:maj/D#",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 182.8,
+          "end": 188.8,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 188.8,
+          "end": 191.8,
+          "chord": "A#:min7",
+          "degree_semitones": 2,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 191.8,
+          "end": 194.8,
+          "chord": "G#:maj/C",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": false
+        },
+        {
+          "start": 194.8,
+          "end": 206.016,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        }
+      ],
+      "candidates": [
+        {
+          "key": "G#",
+          "score": 4.86706,
+          "explanations": [
+            {
+              "chord": "A:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj9",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "G#:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "F#:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:maj9/A#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C:min",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj7/G",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "A#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/C",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "Fm",
+          "score": 3.40868,
+          "explanations": [
+            {
+              "chord": "A:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj9",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "E:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "B:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F#:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:maj9/A#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:7",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "C:min",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj7/G",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "A#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/C",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            }
+          ]
+        },
+        {
+          "key": "C#",
+          "score": 3.07258,
+          "explanations": [
+            {
+              "chord": "A:maj7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "D#:7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj9",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "E:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "G#:min7",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "B:maj",
+              "role": "平行调借用"
+            },
+            {
+              "chord": "F#:maj9",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:maj9/A#",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj7/G",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "已解决的次属和弦"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "A#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:maj/C",
+              "role": "调内"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "调内"
+            }
+          ]
+        }
+      ],
+      "keep_neighbour_key": [
+        {
+          "key": "B",
+          "local_fit_loss": 206.3309,
+          "explanations": [
+            {
+              "chord": "A:maj7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "E:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "G#:min7",
+              "role": "调内"
+            },
+            {
+              "chord": "B:maj",
+              "role": "调内"
+            },
+            {
+              "chord": "F#:maj9",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F#:maj9/A#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C:min",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj7/G",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "F:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "D#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj/D#",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "A#:min7",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "G#:maj/C",
+              "role": "含需解释的变化音"
+            },
+            {
+              "chord": "C#:maj",
+              "role": "含需解释的变化音"
+            }
+          ]
+        }
+      ],
+      "start_bar": 37,
+      "end_bar": 65
+    }
+  ],
+  "changes": [
+    {
+      "time": 47.81,
+      "from_key": "B",
+      "to_key": "G#",
+      "status": "supported",
+      "boundary_interval": [
+        44.89,
+        50.82
+      ],
+      "evidence": [
+        {
+          "start": 47.81,
+          "end": 50.82,
+          "chord": "A:maj9",
+          "degree_semitones": 1,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 50.82,
+          "end": 56.825,
+          "chord": "D#:7",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 56.825,
+          "end": 59.815,
+          "chord": "G#:maj",
+          "degree_semitones": 0,
+          "role": "调内",
+          "tonic": true,
+          "arrival": true
+        },
+        {
+          "start": 59.815,
+          "end": 61.29,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        }
+      ],
+      "interpretation": "转调候选"
+    },
+    {
+      "time": 68.82,
+      "from_key": "G#",
+      "to_key": "B",
+      "status": "supported",
+      "boundary_interval": [
+        67.32,
+        71.83
+      ],
+      "evidence": [
+        {
+          "start": 68.82,
+          "end": 71.83,
+          "chord": "F:min7",
+          "degree_semitones": 6,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 71.83,
+          "end": 73.325,
+          "chord": "C#:maj7",
+          "degree_semitones": 2,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 73.325,
+          "end": 74.82,
+          "chord": "D#:sus4",
+          "degree_semitones": 4,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 74.82,
+          "end": 76.315,
+          "chord": "E:maj7/B",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        }
+      ],
+      "interpretation": "转调候选"
+    },
+    {
+      "time": 113.82,
+      "from_key": "B",
+      "to_key": "G#",
+      "status": "supported",
+      "boundary_interval": [
+        110.81,
+        116.83
+      ],
+      "evidence": [
+        {
+          "start": 113.82,
+          "end": 116.83,
+          "chord": "A:maj7",
+          "degree_semitones": 1,
+          "role": "含需解释的变化音",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 116.83,
+          "end": 125.825,
+          "chord": "D#:7",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 125.825,
+          "end": 127.31,
+          "chord": "C#:maj",
+          "degree_semitones": 5,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        },
+        {
+          "start": 127.31,
+          "end": 128.81,
+          "chord": "D#:maj",
+          "degree_semitones": 7,
+          "role": "调内",
+          "tonic": false,
+          "arrival": false
+        }
+      ],
+      "interpretation": "转调候选"
+    }
+  ],
+  "start_key": "B",
+  "end_key": "G#",
+  "main_key": "G#",
+  "key_seconds": {
+    "B": 87.00999999999999,
+    "G#": 113.20599999999999
+  },
+  "summary_method": "duration of decoded tonal regions",
+  "tonicizations": [
+    {
+      "start": 11.81,
+      "end": 17.81,
+      "target": "E",
+      "context": "B",
+      "chords": [
+        "B:7/D#",
+        "E:maj"
+      ]
+    },
+    {
+      "start": 23.83,
+      "end": 29.81,
+      "target": "E",
+      "context": "B",
+      "chords": [
+        "B:maj/D#",
+        "E:maj"
+      ]
+    },
+    {
+      "start": 35.82,
+      "end": 41.81,
+      "target": "E",
+      "context": "B",
+      "chords": [
+        "B:maj/D#",
+        "E:maj"
+      ]
+    },
+    {
+      "start": 56.825,
+      "end": 61.29,
+      "target": "C#",
+      "context": "G#",
+      "chords": [
+        "G#:maj",
+        "C#:maj"
+      ]
+    },
+    {
+      "start": 101.81,
+      "end": 107.82,
+      "target": "Em",
+      "context": "B",
+      "chords": [
+        "B:maj",
+        "E:min"
+      ]
+    },
+    {
+      "start": 152.805,
+      "end": 154.31,
+      "target": "F#",
+      "context": "G#",
+      "chords": [
+        "C#:maj",
+        "F#:maj9/A#"
+      ]
+    },
+    {
+      "start": 191.8,
+      "end": 206.016,
+      "target": "C#",
+      "context": "G#",
+      "chords": [
+        "G#:maj/C",
+        "C#:maj"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "段落 A",
+      "start": 5.8,
+      "end": 17.81,
+      "keys": [
+        {
+          "key": "B",
+          "start": 5.8,
+          "end": 17.81
+        }
+      ]
+    },
+    {
+      "label": "段落 B",
+      "start": 17.81,
+      "end": 53.8,
+      "keys": [
+        {
+          "key": "B",
+          "start": 17.81,
+          "end": 47.81
+        },
+        {
+          "key": "G#",
+          "start": 47.81,
+          "end": 53.8
+        }
+      ]
+    },
+    {
+      "label": "段落 C",
+      "start": 53.8,
+      "end": 65.82,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 53.8,
+          "end": 65.82
+        }
+      ]
+    },
+    {
+      "label": "段落 D",
+      "start": 65.82,
+      "end": 74.82,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 65.82,
+          "end": 68.82
+        },
+        {
+          "key": "B",
+          "start": 68.82,
+          "end": 74.82
+        }
+      ]
+    },
+    {
+      "label": "段落 E",
+      "start": 74.82,
+      "end": 125.81,
+      "keys": [
+        {
+          "key": "B",
+          "start": 74.82,
+          "end": 113.82
+        },
+        {
+          "key": "G#",
+          "start": 113.82,
+          "end": 125.81
+        }
+      ]
+    },
+    {
+      "label": "段落 F",
+      "start": 125.81,
+      "end": 146.84,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 125.81,
+          "end": 146.84
+        }
+      ]
+    },
+    {
+      "label": "段落 G",
+      "start": 146.84,
+      "end": 161.81,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 146.84,
+          "end": 161.81
+        }
+      ]
+    },
+    {
+      "label": "段落 H",
+      "start": 161.81,
+      "end": 170.81,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 161.81,
+          "end": 170.81
+        }
+      ]
+    },
+    {
+      "label": "段落 I",
+      "start": 170.81,
+      "end": 185.81,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 170.81,
+          "end": 185.81
+        }
+      ]
+    },
+    {
+      "label": "段落 J",
+      "start": 185.81,
+      "end": 194.8,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 185.81,
+          "end": 194.8
+        }
+      ]
+    },
+    {
+      "label": "段落 K",
+      "start": 194.8,
+      "end": 206.0159863945578,
+      "keys": [
+        {
+          "key": "G#",
+          "start": 194.8,
+          "end": 206.0159863945578
+        }
+      ]
+    }
+  ],
+  "parse": {
+    "tokens": 75,
+    "unparsed": 0,
+    "N": 1,
+    "X": 0,
+    "missing": 0,
+    "errors": []
+  },
+  "coverage": 0.9718469110283033,
+  "analyzed_range": [
+    5.8,
+    206.016
+  ],
+  "acoustic_reference": null,
+  "acoustic_used_for_decoding": false,
+  "score_kind": "uncalibrated candidate rank; not probability",
+  "model_sha256": "608941d143441cdb7effa16f2f37968d4e432bacc33747c24ba68acd44d87d14",
+  "limitations": [
+    "和弦错误会传播到调性判断",
+    "主音化与转调可能有多种合理解释",
+    "尚未使用独立旋律转录消歧",
+    "主要调性按局部段落时长汇总；不是唯一全曲调性"
+  ]
+}

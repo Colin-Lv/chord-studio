@@ -325,7 +325,7 @@ def _latest_beats_run(folder: Path) -> Path | None:
     return candidates[-1].parent if candidates else None
 
 
-def execute(store, job_id):
+def execute(store, job_id, model_override=None, force_override=None):
     job_path = store.job_path(job_id)
     job = read_json(job_path)
     if not job.get("stages"):
@@ -366,7 +366,7 @@ def execute(store, job_id):
     if not audio.is_file():
         raise ValueError("音频文件不存在，请重新导入。")
     sha = signature(audio)["sha256"]
-    model = job.get("model") or MODEL_NAME
+    model = model_override or job.get("model") or MODEL_NAME
     if model not in MODELS:
         raise ValueError("未知的分轨模型")
     job["audio_sha256"] = sha
@@ -374,7 +374,8 @@ def execute(store, job_id):
 
     target = stems_dir(sha, model)
     manifest_path = target / "manifest.json"
-    if manifest_path.is_file() and not job.get("force"):
+    force = bool(job.get("force")) if force_override is None else bool(force_override)
+    if manifest_path.is_file() and not force:
         manifest = read_json(manifest_path)
         manifest["cached"] = True
         stems = dict(project.get("stems") or {})

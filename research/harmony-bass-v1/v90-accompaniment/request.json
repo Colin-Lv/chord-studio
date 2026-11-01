@@ -1,0 +1,7 @@
+{
+  "audio": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\views\\accompaniment.wav",
+  "output_dir": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\v90-accompaniment",
+  "cache_dir": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\frozen-cache",
+  "runtime": "D:\\ChordStudio\\Dialogue\\inference\\runtime.local.json",
+  "max_seconds": 600.0
+}

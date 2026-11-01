@@ -33,3 +33,5 @@
 .pipe-check input { accent-color: #b6e7ce; }
 .pipeline-foot { display: flex; align-items: center; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
 .pipeline-foot .muted { font-size: 11px; }
+
+.tonal-strip{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tonal-region{flex-basis:190px;white-space:normal;text-align:left;line-height:1.6}.tonal-detail{margin:10px 0;padding:10px 0;border-top:1px solid #385347}.tonal-detail summary{cursor:pointer}.harmonic-key-timeline{overflow-x:auto}.harmonic-key-timeline h3{margin-top:0}

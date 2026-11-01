@@ -1,0 +1,2 @@
+D:\ChordStudio\runtime\madmom39\lib\site-packages\madmom\io\audio.py:493: WavFileWarning: Chunk (non-data) not understood, skipping it.
+  file_sample_rate, signal = wavfile.read(filename, mmap=True)

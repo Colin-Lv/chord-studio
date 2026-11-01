@@ -1,0 +1,330 @@
+[
+  {
+    "start": 17.81,
+    "end": 20.81,
+    "estimate": {
+      "note": "B",
+      "candidate": "B",
+      "score": 0.9996376839302308,
+      "margin": 0.971127815446418,
+      "reason": "accepted"
+    },
+    "beats": [
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9996743007542951,
+        "margin": 0.96192704438461,
+        "reason": "accepted"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9906247662388628,
+        "margin": 0.9381651500896561,
+        "reason": "accepted"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9674548823432984,
+        "margin": 0.7769992411268972,
+        "reason": "accepted"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9434264373652764,
+        "margin": 0.7224205146456678,
+        "reason": "accepted"
+      }
+    ]
+  },
+  {
+    "start": 20.81,
+    "end": 23.83,
+    "estimate": {
+      "note": null,
+      "candidate": "B",
+      "score": 0.5607981027865996,
+      "margin": 0.3586791064817544,
+      "reason": "uncertain"
+    },
+    "beats": [
+      {
+        "note": null,
+        "candidate": "B",
+        "score": 0.5476289282134187,
+        "margin": 0.4037506879355893,
+        "reason": "uncertain"
+      },
+      {
+        "note": null,
+        "candidate": "B",
+        "score": 0.6868327385257113,
+        "margin": 0.40799419119972385,
+        "reason": "uncertain"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9591511611105817,
+        "margin": 0.8168100770214031,
+        "reason": "accepted"
+      },
+      {
+        "note": null,
+        "candidate": "D#",
+        "score": 0.6637191777934048,
+        "margin": 0.05027936259657917,
+        "reason": "uncertain"
+      }
+    ]
+  },
+  {
+    "start": 23.83,
+    "end": 26.82,
+    "estimate": {
+      "note": "D#",
+      "candidate": "D#",
+      "score": 0.8859782240507954,
+      "margin": 0.5543998148692477,
+      "reason": "accepted"
+    },
+    "beats": [
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.9574094796888416,
+        "margin": 0.47884278603906144,
+        "reason": "accepted"
+      },
+      {
+        "note": null,
+        "candidate": "D#",
+        "score": 0.7808275107758753,
+        "margin": 0.3581919225155418,
+        "reason": "uncertain"
+      },
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.8106761799678287,
+        "margin": 0.3772148353748713,
+        "reason": "accepted"
+      },
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.907832309908543,
+        "margin": 0.3929404609520052,
+        "reason": "accepted"
+      }
+    ]
+  },
+  {
+    "start": 26.82,
+    "end": 29.81,
+    "estimate": {
+      "note": "B",
+      "candidate": "B",
+      "score": 0.9464129630160603,
+      "margin": 0.3741570653259434,
+      "reason": "accepted"
+    },
+    "beats": [
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.9999834980444404,
+        "margin": 0.860752163019644,
+        "reason": "accepted"
+      },
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.998228074361922,
+        "margin": 0.6937160928429245,
+        "reason": "accepted"
+      },
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.9911779385393503,
+        "margin": 0.8344188866395966,
+        "reason": "accepted"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9895131423874658,
+        "margin": 0.47372251886034544,
+        "reason": "accepted"
+      }
+    ]
+  },
+  {
+    "start": 29.81,
+    "end": 32.83,
+    "estimate": {
+      "note": null,
+      "candidate": "B",
+      "score": 0.9028263444547324,
+      "margin": 0.09056899848956801,
+      "reason": "uncertain"
+    },
+    "beats": [
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9833582451933012,
+        "margin": 0.3368088015561893,
+        "reason": "accepted"
+      },
+      {
+        "note": null,
+        "candidate": "B",
+        "score": 0.9005689671543367,
+        "margin": 0.1094239415303363,
+        "reason": "uncertain"
+      },
+      {
+        "note": null,
+        "candidate": "B",
+        "score": 0.9503125486935244,
+        "margin": 0.15673849914287807,
+        "reason": "uncertain"
+      },
+      {
+        "note": null,
+        "candidate": "F#",
+        "score": 0.893858472595427,
+        "margin": 0.12439849371905654,
+        "reason": "uncertain"
+      }
+    ]
+  },
+  {
+    "start": 32.83,
+    "end": 35.82,
+    "estimate": {
+      "note": null,
+      "candidate": "C#",
+      "score": 0.8415197807749871,
+      "margin": 0.073059607526346,
+      "reason": "uncertain"
+    },
+    "beats": [
+      {
+        "note": null,
+        "candidate": "B",
+        "score": 0.8816099503967211,
+        "margin": 0.06529091822204225,
+        "reason": "uncertain"
+      },
+      {
+        "note": null,
+        "candidate": "C#",
+        "score": 0.8175663509579273,
+        "margin": 0.06956579456054135,
+        "reason": "uncertain"
+      },
+      {
+        "note": "C#",
+        "candidate": "C#",
+        "score": 0.9681797904841746,
+        "margin": 0.4803436165858432,
+        "reason": "accepted"
+      },
+      {
+        "note": null,
+        "candidate": "C#",
+        "score": 0.8505805396750937,
+        "margin": 0.18265265751563398,
+        "reason": "uncertain"
+      }
+    ]
+  },
+  {
+    "start": 35.82,
+    "end": 38.81,
+    "estimate": {
+      "note": null,
+      "candidate": "D#",
+      "score": 0.9303379023198597,
+      "margin": 0.15770804067030975,
+      "reason": "uncertain"
+    },
+    "beats": [
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.9791076848955769,
+        "margin": 0.3871776041546984,
+        "reason": "accepted"
+      },
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.9551783551392145,
+        "margin": 0.39394974189143506,
+        "reason": "accepted"
+      },
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.9167169775106859,
+        "margin": 0.3097191013346605,
+        "reason": "accepted"
+      },
+      {
+        "note": "D#",
+        "candidate": "D#",
+        "score": 0.8561311679968953,
+        "margin": 0.20933392101800652,
+        "reason": "accepted"
+      }
+    ]
+  },
+  {
+    "start": 38.81,
+    "end": 41.81,
+    "estimate": {
+      "note": "E",
+      "candidate": "E",
+      "score": 0.9827179726646013,
+      "margin": 0.2256078121719587,
+      "reason": "accepted"
+    },
+    "beats": [
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.947838865723811,
+        "margin": 0.2462480782801577,
+        "reason": "accepted"
+      },
+      {
+        "note": "B",
+        "candidate": "B",
+        "score": 0.9907148289307587,
+        "margin": 0.26202507591678237,
+        "reason": "accepted"
+      },
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.8439634971870432,
+        "margin": 0.2258165166379893,
+        "reason": "accepted"
+      },
+      {
+        "note": "E",
+        "candidate": "E",
+        "score": 0.8437825029408356,
+        "margin": 0.42123854557689794,
+        "reason": "accepted"
+      }
+    ]
+  }
+]

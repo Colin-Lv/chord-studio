@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "0-root_motion",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "8c8e3666b4254c65b93dec20d6ee30b7f8a55aee3d28f553bff4f0c0e59549f5",
+    "audio_sha256": "89bde3fbf97f2ddaac928bf4452f4fa39589ca791372b05c409d32c35f3a8ddc"
+  },
+  {
+    "id": "0-fixed_upper",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "G",
+        "bass_midi": 43
+      }
+    ],
+    "midi_sha256": "fa11b6971fd0d3c427e3c46589b450bc86162cf71c111be6ec43e82c1117852c",
+    "audio_sha256": "fbb5baa078a6d9b1083c2123c316cdc34a75d8d58806b4bbfb1e42b4771b57d9"
+  },
+  {
+    "id": "0-inversions",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "3a64373535233ab7fb0d46e959c15cc281333c054070c8e12861b4732119912b",
+    "audio_sha256": "63058aff5c5d1f62605434bb899010289b52cd3ce9af253d43d5a461055ca4ae"
+  },
+  {
+    "id": "0-high_piano",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 64
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "E:maj",
+        "truth": "F#",
+        "bass_midi": 66
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "E:maj",
+        "truth": "G#",
+        "bass_midi": 68
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "E:maj",
+        "truth": "A",
+        "bass_midi": 69
+      }
+    ],
+    "midi_sha256": "90241bc1bb682890e27a71b94939fd770ac7bcc6156a4fa800dee5e09b9d1217",
+    "audio_sha256": "dcecb2f2c585854a68dac35121256920747dd19ef1c77c24235ba114aed17d3e"
+  },
+  {
+    "id": "0-passing_tone",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "aa4bc952aad2c7558be1fdc02b7b114a96aaf76e81c90ba9ef128b2aa4be9c54",
+    "audio_sha256": "b9d76d9c5cd097cd99677ac63dfc6da7684ffe9e1d8702d271ccac00c7ea4842"
+  },
+  {
+    "id": "0-weak_bass",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "0dd1790b15791398f738c23e5dd3c359990940cb0e6fa860cdd39e13c4c29814",
+    "audio_sha256": "5491cdab03f51eb54f5a5f74c85b664eb0e4c366e4fc41c0c884f90060bd27cd"
+  },
+  {
+    "id": "0-arpeggio",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "a5d72c4388839e61cf8c06dc17ce6bf520336ecc3ff102c856a6d24a517c4d3e",
+    "audio_sha256": "c31cc54ef5728e707afcadb09a8d0f84c867845b083002f11adb94c22a7f170e"
+  },
+  {
+    "id": "0-silence",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "f62338f65653413a90f7b09d79644f1c5e4d2e278674b335c2b220e8bd4aa53e",
+    "audio_sha256": "ca2da26d01c86114a2d2ec58623cbfa04ef41917edff569ee598ea77183dbab3"
+  },
+  {
+    "id": "1-root_motion",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      }
+    ],
+    "midi_sha256": "c4c3edbd02b5bef7edbe15f4cd95c8f66f187af9d4aefbe325b06a88e342760b",
+    "audio_sha256": "07bb2ecb55a9416ba6e9bd28f0ecfbeabcc34b067420cdf61d655ba13a2a79cc"
+  },
+  {
+    "id": "1-fixed_upper",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "6581708b59552d9b5dde5f5cdf8689bc1ae515ad823b864da8321885563c472c",
+    "audio_sha256": "1c681453125cd982d16d4519c4d93c533ffcf7eec0bef14234237e106733a10b"
+  },
+  {
+    "id": "1-inversions",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "60beade0abcd748ff0e60f1832f76044634a98468943cafaa00b0be0302fb9c5",
+    "audio_sha256": "5cd9a83505f4a7d552368376b72c9245018f3aa12959f3bd649ea3934b9943ac"
+  },
+  {
+    "id": "1-high_piano",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 70
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "C",
+        "bass_midi": 60
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "D",
+        "bass_midi": 62
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "D#",
+        "bass_midi": 63
+      }
+    ],
+    "midi_sha256": "edba370c03c1aebfedb9de9d88b9b27da79bd35a4b46693365d8feff0145a9bf",
+    "audio_sha256": "56d78ea7c115b4750bcf223b221498ab07ac7d8d829a6cc3109ed7e49260bd5b"
+  },
+  {
+    "id": "1-passing_tone",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "b2bc142ada0791a62f9c3fdbcaf7f20de30269cf03f84b181e0de5cd121734ce",
+    "audio_sha256": "24f4f32e51fc1c0ecd1d6d3927c6d7af6bb7487a7771cf8a994274fcc82c411f"
+  },
+  {
+    "id": "1-weak_bass",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "92eef15ce03eb037a697a3a6b0f7028a544e73093708a3008b23baec6110c08d",
+    "audio_sha256": "e2d3043f1bb557ea95597225527301a2e732a3a6793eade78e7152187bad2dc4"
+  },
+  {
+    "id": "1-arpeggio",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "f47efa64776e67765a1135010a05b9c569fb98bc78f6c3248d6c2e189e105005",
+    "audio_sha256": "704010817bda5ef5edee3b3f5fc84c125f56edd3d97d6cc82770c0092b2ddc81"
+  },
+  {
+    "id": "1-silence",
+    "program": 3,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "20f08328cae65001f38d2f8d144f1c7106fbbaa1d86135f92ed32ad2d9d58e46",
+    "audio_sha256": "493d79b2568256a357916d2bfa334c8b4157304e950dd779ceffdf6bca2126d2"
+  },
+  {
+    "id": "2-root_motion",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      }
+    ],
+    "midi_sha256": "8a060d5144f290921bebc142512b5626c8bf8e805ec7a5f4630a388bf756eabd",
+    "audio_sha256": "fd25ae87dde0e62fbcf9bcfb9d955c3b61e36e585fe02375445679e07ac9a7ba"
+  },
+  {
+    "id": "2-fixed_upper",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "E",
+        "bass_midi": 40
+      }
+    ],
+    "midi_sha256": "34e06eda4a51d02792a47a4a6f1f1d70910e2c69ea9a059504e469ce4a1e0d8c",
+    "audio_sha256": "8d57bd7d052b512138e8c1d1060cfbe869805b7b7ac45cb6a3b1f7ee3c3e642b"
+  },
+  {
+    "id": "2-inversions",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "65a7b3518cb0811664027f24583d6ff7217ee7c44795a21037f106bf4ca6bba3",
+    "audio_sha256": "1a6d461127df090148ccba4e09e37e5e82f2c205af7b2b5804583745f70aea9a"
+  },
+  {
+    "id": "2-high_piano",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 82
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "C",
+        "bass_midi": 72
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "D",
+        "bass_midi": 74
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      }
+    ],
+    "midi_sha256": "82f999f99e2befc3f9fa79774b890a271e34a56ee0e6c70094ecc9d0bb7d145a",
+    "audio_sha256": "ef648b1b809e8f51efee163094bc8c06ae6cd4a15ab486b61f7b93d34cbf0179"
+  },
+  {
+    "id": "2-passing_tone",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "fa7e86507dd67fb6bad4e34a4e86729638d2bdaa616515fe449a0388d15e8d05",
+    "audio_sha256": "968e6860c0a10728e9efd8f4e98a16fcd4db33e1c2699e37dea88dba86755846"
+  },
+  {
+    "id": "2-weak_bass",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "c04fa2e8b8f28b65bea0bc220f6926907ed30b4e6de9fe40772bcf6fb9688ee1",
+    "audio_sha256": "251afd253cd7287fe7bb76f9d4c1731bab3da045ab88318a93989686e9b62849"
+  },
+  {
+    "id": "2-arpeggio",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "c923b9ae398c61804ca85f4f9e945a16163549c88edc1547fceb31ebe14b615a",
+    "audio_sha256": "b8655bc3ecadbb052f98f45168ade67ba6b4edf2384582f353193e597b1cd87a"
+  },
+  {
+    "id": "2-silence",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "36a7ed27842e83c8fd502129a67ed92086c629d946256b3ced508ae7e914001e",
+    "audio_sha256": "7bd03add3bdbecf0a3848f1a59c48c4378e023cf87684269657d0373d005bbfa"
+  },
+  {
+    "id": "3-root_motion",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "b5008563f6bf356c1a2e7826c14270f6f733be5dab6f9ce49ea0712116cf7be0",
+    "audio_sha256": "3c31d4d4ed6a4560285a646c973fd25d1282ae900e1d040f394f1dd4a6349191"
+  },
+  {
+    "id": "3-fixed_upper",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      }
+    ],
+    "midi_sha256": "bd79ed0fda5d0ca8f12f822cf3110a66b97c98d174d6af12b63907dbbea435dd",
+    "audio_sha256": "9f722492f07cf861157422ce73339f2bb6f1a403fb7d350b9cb4215bf113c6ac"
+  },
+  {
+    "id": "3-inversions",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "213729b624fd021600cb24df12bcbc7f57617820458ba73c4f2291b02ce73eef",
+    "audio_sha256": "b01c17568913133a5a9796fd93cde2a12152ca6e7026cea6cdc5917d740df379"
+  },
+  {
+    "id": "3-high_piano",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 77
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 80
+      }
+    ],
+    "midi_sha256": "ea55b7f88d583d4ac92bceae082603c7af396e7b3163f6436151a463c020a507",
+    "audio_sha256": "5ca950a45cbf1998bb7cba426a4fa3fa406211cdaaa9434b076cf53124356215"
+  },
+  {
+    "id": "3-passing_tone",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "d3308b3e34792eb4786ae173abaa6da6386149b36e35dcfb679183861c3b1cef",
+    "audio_sha256": "f834fd004f4241421ca7a6d302f042208c371bc6e67bce30d0b7fc18412512b6"
+  },
+  {
+    "id": "3-weak_bass",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "a40f560f693b5bd870b169fa7e4864a3c657fcc7eb91a9ca5a8195224523fcc9",
+    "audio_sha256": "aac6f2ed16d5bc988c9ac4f28a0d733e8889348fe07e387e36ff169096174676"
+  },
+  {
+    "id": "3-arpeggio",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "e04fa4de7d4e6adc715e3a8ce63a216102a35e36186b39a7972d5ae3fea1262e",
+    "audio_sha256": "3aee074d317e5d97ab1e7761ab7086e23aee5196883781203f82a8f78f17219e"
+  },
+  {
+    "id": "3-silence",
+    "program": 5,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "4617b02352149c9848bd73c8aafaeff1acf5877962bad0371fb3ecc0393ea67c",
+    "audio_sha256": "b289529c41c379aaf7a0c8456d824fcccfa5be3d70de501a5ad154b7879692f6"
+  },
+  {
+    "id": "4-root_motion",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "09f78c142171a047dffecce379ded017a8b63687757b6a534f863ae0e417e680",
+    "audio_sha256": "0083ddba676859b41a4f8a69af98d537b2b8656d1d83dfeec2aef0ac674f6ccd"
+  },
+  {
+    "id": "4-fixed_upper",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "456d6f0f7949765f39a88dbde9ae467f3a581a90fb8baa469496955170bfe9b7",
+    "audio_sha256": "2babfa202065ba59abd8188d71f98bc62c0719efdf965f1d9cea41138f0f8308"
+  },
+  {
+    "id": "4-inversions",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "023b8ff8146e40e7994ddae6b31aadbbb69bcb72358a5e8b8ac847bdb94cb122",
+    "audio_sha256": "2d4fab414ff10cb6a692327ee2bea44788145b89bfa18ee0269c1b13a21393a7"
+  },
+  {
+    "id": "4-high_piano",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 77
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 80
+      }
+    ],
+    "midi_sha256": "6d04d767134a0b12a0beece9093a90ee9ab17045f05ad2d3280659f5de6a77a5",
+    "audio_sha256": "06f788b0945919f39c3d662f3ef8ae92d9507b2e220f039dbd286e48cf6cda34"
+  },
+  {
+    "id": "4-passing_tone",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "84d1bfed751bae66c80f03cf297efadbcae06c3e83572041b9598397bb06d90a",
+    "audio_sha256": "6c725f97bf17f42a8f3a5b412f9d1da0eebc3b91ec45940cdac097b920ae31f1"
+  },
+  {
+    "id": "4-weak_bass",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "92392fa36ff1a6e06ff2f068d005e396a75d9f6ddb2e20418d42963ce3ce21fc",
+    "audio_sha256": "203ff0f63294e919ddd9f7299d498b917bec25185691037646553cdfa13a42a0"
+  },
+  {
+    "id": "4-arpeggio",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "a024313a3a5ade8b87c3b26663d215687b1fd8d59dceeb7c8e04e7f2e357fea4",
+    "audio_sha256": "e461a9b2a0086968fd33321b2623f3f5d428234d90e6c0d86048360f61b6ab99"
+  },
+  {
+    "id": "4-silence",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "9809c8728cf0d3257fe59e553adb29916dd1d5e8d07c34dd70f353ead4e7daba",
+    "audio_sha256": "40cbd2c36548bdd6895d4e0aa77e29f40e92f3232552331fac14a1ecefe80872"
+  },
+  {
+    "id": "5-root_motion",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "4f2a3a32cf9f899e1bb8803119195c07df0b9272aba31ad827583b398341c65d",
+    "audio_sha256": "950b455615a1a0fc9f59336f5fc6df1cfdc0e956ab0690a6d94e468a02731fcd"
+  },
+  {
+    "id": "5-fixed_upper",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "39ddd20d27c4cf8faf7da7ec69b0e274f8e25803965b9365cbb0237eccee820d",
+    "audio_sha256": "f4ce50eeacf848ade3e7bbc920367a7124007b5ecd91ce66fd4e799676c87a70"
+  },
+  {
+    "id": "5-inversions",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      }
+    ],
+    "midi_sha256": "d867006bf154b07d7cc62ed7db72b7f109ed4abec03f7eb79f4f3e2b3b6a00e6",
+    "audio_sha256": "6cdb01a2171c3d1a7089178989489ba2230d32c2c926755e5cfdb5d4daa91d01"
+  },
+  {
+    "id": "5-high_piano",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 81
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 72
+      }
+    ],
+    "midi_sha256": "b017e071149575411a28b862377135851ae1e4aeb6be69db2ccc392a34fdff3e",
+    "audio_sha256": "c490230b2f4e5a0d1531f94f5f4fc0a1c98b85c4466d3350edc07d28a2cdc2a8"
+  },
+  {
+    "id": "5-passing_tone",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "71b2a1b07d625237024c1f8222dd699707ca37fbb3b9769fd8a9545b702324d2",
+    "audio_sha256": "dd2a9112ad49472f15121b194cb01832db003737a930a1a490d50a9f6e443be1"
+  },
+  {
+    "id": "5-weak_bass",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      }
+    ],
+    "midi_sha256": "1bf2327bdb1f1ce48d45883cd72b98ca9bf890394cdddeffa7ed6b3ae90a59c3",
+    "audio_sha256": "33465f0cf62e16ee7c1ad7a89b83a7955141a75b398cf3bcda48723273f84bed"
+  },
+  {
+    "id": "5-arpeggio",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "1d7f4678c43e7dbcc5ca0518024f4e5e9e2a0b363c917d9daa432dc9e7fe3c48",
+    "audio_sha256": "d43de9f05d632f4fa344696fc7d2981e84e452be77e24f69d6eed7c1e6646fed"
+  },
+  {
+    "id": "5-silence",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "17b0843f90c8910c37627591a75b5d04506409bf547ff4574066cfef7eb28f4e",
+    "audio_sha256": "840eadcbee00e4df893985773caf8cc769e24b2ed9273d12fba282e4ff13d8ad"
+  },
+  {
+    "id": "6-root_motion",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      }
+    ],
+    "midi_sha256": "1d2b728ad8ff661ec496c01e689f635bd31e74f3115ef771331527682d00f1fa",
+    "audio_sha256": "4edab013737ae3d7c5f29e226871832860a28201708508a77a76a7e10d865332"
+  },
+  {
+    "id": "6-fixed_upper",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "255ef6875812c3eb2ce2948e9ae7c3cf68ab891c1b31513fed8d1baf032516e6",
+    "audio_sha256": "0f2a8d7f96e6966779367a2008599f8ba0e5c2ce4de91a75dd95ec507bcc9fbf"
+  },
+  {
+    "id": "6-inversions",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "b4f9186f3c3ea6441269c4faf8c737258a215eb7f3c28c624c12e4c1b69c2df9",
+    "audio_sha256": "f260208ccc291d676245cfc01b3638129369385336a626e8a485de4e8b3499fa"
+  },
+  {
+    "id": "6-high_piano",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "C#",
+        "bass_midi": 73
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "E",
+        "bass_midi": 76
+      }
+    ],
+    "midi_sha256": "f00b18973c539f5fd9bd75b289c5d906316a213b29b97ed53bba0cc73db96fb9",
+    "audio_sha256": "0bbeeff3e72ce200eadbfb6db74eddf62d83b76fe8c7b073f1a48196b306802b"
+  },
+  {
+    "id": "6-passing_tone",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "6c3bf52b5bdd2333ccdbff7c07af04142b1467f05a1eb94d54eac5f2f9f71e57",
+    "audio_sha256": "1cec3739a606fab7757102bae0a2d9f48e75e743adbd9ce0ac91226def52b9b6"
+  },
+  {
+    "id": "6-weak_bass",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      }
+    ],
+    "midi_sha256": "1a507e9a100c8efe18c14e2b2fc03d0b92cd7b89327c943d947063354efbd103",
+    "audio_sha256": "17cbc124a9529bac3e1084bda9c122278dbad9a2f15afb55bdc307482162712a"
+  },
+  {
+    "id": "6-arpeggio",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      }
+    ],
+    "midi_sha256": "4cc204de21c115270e6647226d1b2d22a795928121642b94380bf5bc81d86e8c",
+    "audio_sha256": "d86de0afca2b0d6d50cfaea9d0e3e95e4e78c28debbb0d0dcf43286790b80d10"
+  },
+  {
+    "id": "6-silence",
+    "program": 28,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "acbe2b4094da4099d6607752d58cf8af5573cee7c61ab93b788a73f7970984b7",
+    "audio_sha256": "e056cdec5908ff0e06faf6f6a5ef50afe0dbc0dbba78f6ccb43c09f0759b0e1a"
+  },
+  {
+    "id": "7-root_motion",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "4b35fea5cf23e9c9c13421fcb409d05572c077fbf837f80275908cec37ab2225",
+    "audio_sha256": "a1ff4438118d9cbf2276f9c2254e47baf0b8f7a36264a56a1a7b632b8bf4fb77"
+  },
+  {
+    "id": "7-fixed_upper",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "be2beabe6d5174b9412d33f97666bafa93b69d664ff7326bf7ad5cdb54e8f60e",
+    "audio_sha256": "e0a50d6e31e6ce3105460b578778d00e9b8dd4fc8f3375eddc8e812eb61b7da7"
+  },
+  {
+    "id": "7-inversions",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "06e8731a2aee6100a814bea42dbfb833bb3537357539b8b418d46e11d88e573d",
+    "audio_sha256": "dad5ef879343facbec0dbc7c98d3527f3020c134e1600018b95c0f0349fe3d65"
+  },
+  {
+    "id": "7-high_piano",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "C#",
+        "bass_midi": 73
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "E",
+        "bass_midi": 76
+      }
+    ],
+    "midi_sha256": "62a00a2db2e8d0b7d9b20886c5168baa00a8c0fbb0207c9cacb7ea2e13ab1f97",
+    "audio_sha256": "782ace31144b8cd95d259f094976504a98d7d310c969bee68da66d8aa2471c90"
+  },
+  {
+    "id": "7-passing_tone",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "6d87d5fcd34c5796e412f8b7b012cd7252002be0f0aaaa85c61195a6833a71cd",
+    "audio_sha256": "f60d10b9ea3da5e87443e56f4872803f279d36dc6c2248a42e01b9175f08b475"
+  },
+  {
+    "id": "7-weak_bass",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "271ddd55c9c51a508c53602fc182251deffd99219d9249bd621192ad92b43c8b",
+    "audio_sha256": "67aa21f61b123baf8bdc7d63eab0413906e7cc955763b219384e8cdab27d8a18"
+  },
+  {
+    "id": "7-arpeggio",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "D",
+        "bass_midi": 38
+      }
+    ],
+    "midi_sha256": "c2eb29e056226929fd7a38ce3777f8bdb8914f85e2ead0efbe8718dd56dc50a8",
+    "audio_sha256": "5ce884c9092d0c82f8c1162ca2b954213318583ba6369853880fa8159437fee5"
+  },
+  {
+    "id": "7-silence",
+    "program": 29,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "8a585adb4d81f8026126ef2566267d6efd22ef303db52c68b7d97636747c1eae",
+    "audio_sha256": "e5913f0abd5929ec099804ad9445dfe7bb4f27ae66f7e309b6a66ede34ccf3b6"
+  },
+  {
+    "id": "8-root_motion",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "0339f96b301b9fbb2905930ef19c8c98488b741f12c3c9e19902cd4602cf26f4",
+    "audio_sha256": "1ae5c7444af69d33115396996563761d16d4d453f5fdba673d52886c1eafebdd"
+  },
+  {
+    "id": "8-fixed_upper",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      }
+    ],
+    "midi_sha256": "7cf2934928229105cc31614fd0d826659578dc00e37745265409c1d42b7b6dfa",
+    "audio_sha256": "fbbc90394aac69778c3ccd33cc46c9a37a1c920401edf678e238a7729bc7ffe8"
+  },
+  {
+    "id": "8-inversions",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "41b3d130db259f2c9e10213ce47583bba5ffc45e85c43f4095671cda9e8d8a14",
+    "audio_sha256": "ad92dee0c414fed4bef55d503bc02e20da4443fac6acb8fba75a331fd9948d41"
+  },
+  {
+    "id": "8-high_piano",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 81
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 72
+      }
+    ],
+    "midi_sha256": "b1bd9f54f09bbb04a78f78718338f804f9baee6e9b3d6e442d48dd2175b56abf",
+    "audio_sha256": "90838c9c75bb3f7ae53d46d8dac20a775da7e305d0256faed300771de6574fdd"
+  },
+  {
+    "id": "8-passing_tone",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "275cc94a57332a300b120498f66150efa24d12989f3c5cdef343cb102c11f3b2",
+    "audio_sha256": "22b7f2f9c10eb017d2cd9d424705701245b0ebda75a90c9f483ff613d11a4bc6"
+  },
+  {
+    "id": "8-weak_bass",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "c206118524846ee76ca482dddce66318c6594ff01fe502a9a734e6d187229d80",
+    "audio_sha256": "7991535c5b1d913d60a7b806ebb0648de67ead5c59b1dab4ca9243d3b425c551"
+  },
+  {
+    "id": "8-arpeggio",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "E:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "E:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "E:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "46f88becb15bfee13ee1d1fda077738d3db7a98a77cc8d928678a15397c1b8cb",
+    "audio_sha256": "6c305b2f913a5a84f55d253fd352ba05de1bfacdd6f6737f37195bc02102340c"
+  },
+  {
+    "id": "8-silence",
+    "program": 32,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "574598c0488ffdda99354873d5899aaf5a9ff2b7c82599de374d77a94dd13b24",
+    "audio_sha256": "81c275e08ae350c636496bc708199bfcc1fd09ff4da24f3e7b00ad2513334267"
+  },
+  {
+    "id": "9-root_motion",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "17200a9883284198e76f170113ac39df178828351f40fab9fb28fc24632835d1",
+    "audio_sha256": "16e1098f446d61edfdb5f5b0e13b99f9b485b1c8d78812cb6dc96db83d47dcf7"
+  },
+  {
+    "id": "9-fixed_upper",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "be5cfa40eb3589eb4a885ded5606a1ec74acee5063999718401148d2170f6bad",
+    "audio_sha256": "419b82de191e4fb5de2f1c1b114fb41a61f41207e21b24f348cd6425894b06fd"
+  },
+  {
+    "id": "9-inversions",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 43
+      }
+    ],
+    "midi_sha256": "b4299dee25a00aee459b34653f2c146af41ea7be0cd2627cf0080847c7c117e7",
+    "audio_sha256": "da01ffacb0e883f0ea790558a61b6a4d7278dd68baf47d8616a55b9b5c15a85e"
+  },
+  {
+    "id": "9-high_piano",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 81
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "C#",
+        "bass_midi": 73
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "D",
+        "bass_midi": 74
+      }
+    ],
+    "midi_sha256": "09202c7091680c406bf94c6f01a27562a555888196278f9f8873ae8e3dbc907c",
+    "audio_sha256": "645cfb9899414e9078c197771b18687466f56762d6a567da20ee340738957ccf"
+  },
+  {
+    "id": "9-passing_tone",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      }
+    ],
+    "midi_sha256": "589b0d5451bed768ee77e5cdc4ee734e0c1847ff523ea332cb30864334cc6768",
+    "audio_sha256": "2da48706b0012eedb14f913010a1f645a164da6efc8891ccb62070877acac2c9"
+  },
+  {
+    "id": "9-weak_bass",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F#:maj",
+        "truth": "F#",
+        "bass_midi": 42
+      }
+    ],
+    "midi_sha256": "be7065641a859e42dd75c9db5c8f3d12237674343ca60551dc652e987bc4dc43",
+    "audio_sha256": "618ddc2b37960ffdd97d8d60ccd47f820eaf1eb67de43d91a33fb95c38888235"
+  },
+  {
+    "id": "9-arpeggio",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "e6e6033884f8a732ee6f1672173790765b5e70c56b0c2a0280e03a18a4c3a8e4",
+    "audio_sha256": "ce1cbd1ec5d4ea104598762355ff27c657c8320ae896e2d2865284f3a3850eb0"
+  },
+  {
+    "id": "9-silence",
+    "program": 33,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "1cb9bc094acd0a1de07e5c9272a9ac738a85316645181b50cab2a33602705222",
+    "audio_sha256": "0aa6eb4c62e839e1aa3402a479487b55305a89cafff162f987af60ae6de6b894"
+  },
+  {
+    "id": "10-root_motion",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "E:maj",
+        "truth": "E",
+        "bass_midi": 40
+      }
+    ],
+    "midi_sha256": "d27eaab42a87f828b3a0e598da4c8f20008bae40cd958331b98cb1b78c04723d",
+    "audio_sha256": "f0bc322f7004465f107e779e5f443b64c3f1ed2c47a7c9cf6b63961bd43ba0c6"
+  },
+  {
+    "id": "10-fixed_upper",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      }
+    ],
+    "midi_sha256": "1f8d077d5811dd2a2584984b4861ebba55b84907df65e73dbcb2704a284406c1",
+    "audio_sha256": "014e367721c2224bf9bd69938667016e93ae212f7e94e6aedaba77b6c6e69d15"
+  },
+  {
+    "id": "10-inversions",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G#:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G#:maj",
+        "truth": "D#",
+        "bass_midi": 39
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G#:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "b638ced1871a57af03d2f8f550df777a86100e1c74b18d946395c8f829a935f3",
+    "audio_sha256": "c14826b25333761c117920d5c786fd71d7c9ae6e65127465b2a9fae842255458"
+  },
+  {
+    "id": "10-high_piano",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "D#:maj",
+        "truth": "D#",
+        "bass_midi": 75
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "D#:maj",
+        "truth": "F",
+        "bass_midi": 77
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "D#:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "D#:maj",
+        "truth": "G#",
+        "bass_midi": 80
+      }
+    ],
+    "midi_sha256": "63c6b56eb701936186f9e58b0d565f76d17f075fdfc165c7af8ec476215ea907",
+    "audio_sha256": "43c0db25ccb3c99383a92dff01749faa86dff5ec1a971ebebc2fa6f4a5ee98a8"
+  },
+  {
+    "id": "10-passing_tone",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      }
+    ],
+    "midi_sha256": "7702ff959cc3fda4f68222f001ee53f2a46a8059457e62fad91efa573916a3ad",
+    "audio_sha256": "95934e679852081f80a978f17ce65af92a7ccc5f4bdc67a58c24df0a3a226910"
+  },
+  {
+    "id": "10-weak_bass",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "B:maj",
+        "truth": "B",
+        "bass_midi": 47
+      }
+    ],
+    "midi_sha256": "cbf53572df582c4392b9a11d1f4fad2b1268836d7b2369137a88a8acd6149c22",
+    "audio_sha256": "f6ad8ca0dd1c1b3813441a015f2073f5e1fe1ee5dc451cc3c2d7b73beaf82271"
+  },
+  {
+    "id": "10-arpeggio",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "0cca839d3c5a707f043c1da8c4a4d4ca0070a646e0db1528a77d659ed32ef5cb",
+    "audio_sha256": "a96d0643dd9415b19e26c35b19ac7243bcd56e9a3632ee50fa89cc3a93ae9ffc"
+  },
+  {
+    "id": "10-silence",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "bdd8931340701667cd7f1e94dba6d7b9788f9a43ed03d536bf22095a432d237d",
+    "audio_sha256": "8b79df52ff91a1f04dd319c59ba877a8c7d11c8cce8628a46a089dcb995cdbd2"
+  },
+  {
+    "id": "11-root_motion",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G#:maj",
+        "truth": "G#",
+        "bass_midi": 44
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A#:maj",
+        "truth": "A#",
+        "bass_midi": 46
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      }
+    ],
+    "midi_sha256": "ef49825b5d7288950f7a11f39d8b3424f586126d5709f5f22b73179cff02db6c",
+    "audio_sha256": "99bfb2845081c156fb03e3a8f05529adc8d0358492fc88a949d64e1f619ee5e3"
+  },
+  {
+    "id": "11-fixed_upper",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 43
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 47
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 36
+      }
+    ],
+    "midi_sha256": "7efa6181d7bbb21ee0868c6be30b900ce1d31f2550cb12451d3c4680f50dcbcb",
+    "audio_sha256": "fff8db57b5de60c673f55723a81f9a3eb4234fa1545bfda7c39b13ba61dae163"
+  },
+  {
+    "id": "11-inversions",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "A:maj",
+        "truth": "A",
+        "bass_midi": 45
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "A:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "A:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "A:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      }
+    ],
+    "midi_sha256": "1e2feac0275ef646f52002d147ee460de4451a6b86a59cef18a7258c5c9d78f9",
+    "audio_sha256": "6ab994a9c7b3eaa6e623e8fd000abb6f3ba11b630733a8c244b0cfe1e851dc86"
+  },
+  {
+    "id": "11-high_piano",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "G:maj",
+        "truth": "G",
+        "bass_midi": 79
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "G:maj",
+        "truth": "A",
+        "bass_midi": 81
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "G:maj",
+        "truth": "B",
+        "bass_midi": 83
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "G:maj",
+        "truth": "C",
+        "bass_midi": 72
+      }
+    ],
+    "midi_sha256": "1a04532c090cb1022896298ae35b6817fd953e0143d140c4955395127b90d6fb",
+    "audio_sha256": "1d74c4b46d2927fcff8f6846a921b85d00d64aa32ba94e2b7c5a20fa2887cdc7"
+  },
+  {
+    "id": "11-passing_tone",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "F:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "be9657a058cbf44793901d628a87a33a75fc5f386179acbf3d84a7effe96fb68",
+    "audio_sha256": "666a8da62c9a20832083615be10db0e3545f440d10d590bfdb10c335ba9746a6"
+  },
+  {
+    "id": "11-weak_bass",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C#:maj",
+        "truth": "C#",
+        "bass_midi": 37
+      }
+    ],
+    "midi_sha256": "5bd60f30e3af4779b02a23c7578507bdeaf57f4b0a4a77757286d2c0ffb80eee",
+    "audio_sha256": "532457c18aefc1b098d8e66d596e4563cdc60767c4d473cea41189e92bb6edc8"
+  },
+  {
+    "id": "11-arpeggio",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "C:maj",
+        "truth": "C",
+        "bass_midi": 36
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "C:maj",
+        "truth": "D",
+        "bass_midi": 38
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "C:maj",
+        "truth": "E",
+        "bass_midi": 40
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "C:maj",
+        "truth": "F",
+        "bass_midi": 41
+      }
+    ],
+    "midi_sha256": "a5187858c09c5d7fafb4ecca7883fea224558f3c2445526319341560b731e497",
+    "audio_sha256": "ddfa992afd9631d9f747652ccfac1a0349e851e3e7de64686deb54a582fa8156"
+  },
+  {
+    "id": "11-silence",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "label": "N",
+        "truth": null,
+        "bass_midi": null
+      }
+    ],
+    "midi_sha256": "fbfbb47757139ff6028492a0e80b4a010d6a7b1551b5316770701ee1a10ac2a4",
+    "audio_sha256": "9b2cafd262e75b02642ab1c021476244228995340a299130f446af3f515e677e"
+  }
+]

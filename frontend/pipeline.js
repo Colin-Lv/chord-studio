@@ -69,9 +69,9 @@
       toast("完整流程开始，约 3–6 分钟；可以继续浏览其他页面");
       if (!await waitForCompletion(job.id, state.navigation)) return;
       $("inputStatus").textContent = body.harmony
-        ? (body.harmony_default ? "完成。默认时间轴已切到「分轨构成音和弦 · V2」。"
-            : "完成。请在和弦来源中选择「分轨构成音和弦 · V2」与原结果比较。")
-        : "完成。分轨结果已更新。";
+        ? (body.harmony_default ? "完成。默认时间轴已切到「分轨和弦与低音 · V3.1（实验）」。"
+            : "完成。请在和弦来源中选择「分轨和弦与低音 · V3.1（实验）」与原结果比较。")
+        : "完成。和弦与指定低音已作为默认结果，分轨也已更新。";
     } catch (error) {
       $("inputStatus").textContent = error.message;
       toast(error.message);
@@ -109,7 +109,7 @@
       if (job.profile !== "fusion") throw new Error("当前项目有任务在运行，请完成后再识别分轨和弦。");
       $("inputStatus").textContent = "正在识别分轨和弦；将复用已有分析和分轨。";
       if (!await waitForCompletion(job.id, state.navigation)) return;
-      $("inputStatus").textContent = "完成。请在和弦来源中选择「分轨构成音和弦 · V2」试听比较。";
+      $("inputStatus").textContent = "完成。请在和弦来源中选择「分轨和弦与低音 · V3.1（实验）」试听比较。";
     } catch (error) { toast(error.message);$("inputStatus").textContent = error.message; }
     finally { running = false;button.disabled = false;startBtn.disabled = false; }
   });

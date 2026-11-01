@@ -1,0 +1,8192 @@
+[
+  {
+    "group": "train-000",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "8737099574203dc03306fbe16fec167757d715d51dbc0994b18b19681d79cb83",
+    "audio_sha256": "eb80d0730f2e3b7660314a141b34bed0de112f1201253c674e952ef487c13074"
+  },
+  {
+    "group": "train-001",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 9,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 9,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 0,
+        "root": 7,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "3fab66926e4e16bb14c5bb6a0f68686df4014e7840dc899410513dc450a12b75",
+    "audio_sha256": "ab97aeb3ab3846ad4fc8e9dd01b00d727b9aecf896f7565c954aac1a3af03940"
+  },
+  {
+    "group": "train-002",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 5,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 5,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "6b8a58c55c082449c916cfafc4810f10a54b8eb941c597f12c07aba68f454a3b",
+    "audio_sha256": "303c6f914155ca0072ed8259a3255406f0fb71f1b9f767268ea0afa039b6edd2"
+  },
+  {
+    "group": "train-003",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "90eb01330a6f3e3056ce66dfbe7db40564334b17073b08a421ca7bab8dcce4eb",
+    "audio_sha256": "36f17c71ad641049b735d2eb99acdb986571841e2714eddd5dabde22b22a87fe"
+  },
+  {
+    "group": "train-004",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "f362aa309e2dac235b6b0b982b4037746dfafca18180521dec33bfe82e2ec585",
+    "audio_sha256": "7f4b5816438297ab7852bbc3d9243680d8a21ed936f04f10d564816887277f80"
+  },
+  {
+    "group": "train-005",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "ca4c48fe821c83c7e2600f6245193f290f70a83a7b4c5a7a8286ff17d0f0f14c",
+    "audio_sha256": "85dd7e9039c2840b9fd60b58e4f3a7d3b313338dcd5374d9f8ea01f4224b1f03"
+  },
+  {
+    "group": "train-006",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "fda69600700a3e815e4d006b8788e8e6c05c2e77fd3e6c2893d0981de0783521",
+    "audio_sha256": "55482818942f7bb84a370e8a9b549810c8e59e3b545b7429983cb2c2a100d7b1"
+  },
+  {
+    "group": "train-007",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 0,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 10,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 0,
+        "root": 8,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 1,
+        "root": 8,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "1f5057e309991e105a67c16b446215ae96f0c8f3f45f25900ef122e33ea22c34",
+    "audio_sha256": "e01eee5918d22904191e1e8cbbfb714c150fd0dbc11212169fb954e11e67b557"
+  },
+  {
+    "group": "train-008",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 9,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 9,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "9cf67d201650cf1ca8e68720cf6a140a13b1b6bc55ddb192f1ad7e6824dc3620",
+    "audio_sha256": "fd144c532879bfe7dd8ffa260594278527df52fb06e689928f742eb5fed56365"
+  },
+  {
+    "group": "train-009",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "901a407cac597f8cccaf78f1fb3888073653ed05869cc38b6d7fdd4df06cba4e",
+    "audio_sha256": "c8c0d7b83438b9848a57be3c651f8cb41954bca78fca84e104df57df6cd155f7"
+  },
+  {
+    "group": "train-010",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "d640fdbbb91718bd6b3ccb86b5c34dbb852531ad8192beace265efe2bb8ff7e5",
+    "audio_sha256": "4f7d4f254bcda470510b4d01abd64efe0c6ceb75c219cae025d9056c0ab36b25"
+  },
+  {
+    "group": "train-011",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 9,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "966939ccd8569dfb3f53901be408a3cd1d1ffcba2ec1844b4e815749adc460c6",
+    "audio_sha256": "d452d0807c741c6c8b4e18dfffa7f63b57846b05641793f46ee1813f0fd52928"
+  },
+  {
+    "group": "train-012",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "20278832609646094f70bba41d368c16e2cc9c91b0862b786c7112b53f53280d",
+    "audio_sha256": "1953fa0dee230c1470132d974d5d2aec0004de9f74dba4f502cb17d4315472c8"
+  },
+  {
+    "group": "train-013",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "e8035d906e1aff2986cbe50f6a4779b5916b3aa20a553beef2b7079e93429122",
+    "audio_sha256": "ab1d854942e768600ce107ffa8ce4231897fbe95ca606b094dea429845cef199"
+  },
+  {
+    "group": "train-014",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "5f758d5b35988cfcc711830bd5bdcd80897b0ce014203be6a804041099d0bf8d",
+    "audio_sha256": "2e663fc078069aa48789fd32c7fed3fcbb24c7ad47b1470fc3f9bccc91591b5b"
+  },
+  {
+    "group": "train-015",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "94717d964bad65e78e6a2689948d38f2184df412038eb9917d2ba9c7a3834104",
+    "audio_sha256": "c6e6852af0683d6d8bca3b32e1292caf07765b4e77433bf5655fbc55a3b72bdd"
+  },
+  {
+    "group": "train-016",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "59f4406986d706bfb5d5548eb2271373c35a5783f66849ff8ba14eb9bdf71916",
+    "audio_sha256": "099e563e97927263f4595beb45447dfb55f8843a23cd6608dd268e56589ee971"
+  },
+  {
+    "group": "train-017",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": -1,
+        "root": 3,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "75eb012b2c62ba959f2ac3da2da6212df96bdd8bf77edc67d852e531ef11aebf",
+    "audio_sha256": "79e3a1f4014636e080c5821adb63c0f9151f924aca1470da193e4bcb0a7c83c5"
+  },
+  {
+    "group": "train-018",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "faed87755ed8218850a0daaaa234bda8fc51f9e9b4a82679cf099d5ca10b110e",
+    "audio_sha256": "92bb15bb569071597a327a598b5fa202cd2c27bbb90d8f71390e09a6e58154de"
+  },
+  {
+    "group": "train-019",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "f3baf1d6ee1521abedc5a37ef84bcc03f03a3b2555b36206a7908dee7f74f024",
+    "audio_sha256": "06599b710b6771bb83860523ca2cde45314bb26063f4686d51d68711eb026ec9"
+  },
+  {
+    "group": "train-020",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "9ee5a2b3a747a3316bcf2625a5ba9bae19662a91c395927f14149f19576588eb",
+    "audio_sha256": "ac11743984cc6df9799f662b5b26dc52ef69ac225072e792e73bf3c810688e90"
+  },
+  {
+    "group": "train-021",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "53531fefaba8f04a46d9367ff6b3df8d9d84e6e5a7b09f8d734ac1ece3079c3a",
+    "audio_sha256": "1de70b74ff86ed298ba70715d726ce3abeec4f363c3663313b8d40a26eac9486"
+  },
+  {
+    "group": "train-022",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "1c6b03e32c99babf95651fef0b66a0048ddf12dafd5abcaabeb8a96831ebb0ac",
+    "audio_sha256": "54e958e39131e3d65cdfba0bb35be72a585c3109efb84b55f332a5ac47716e8d"
+  },
+  {
+    "group": "train-023",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": -1,
+        "root": 10,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "9e7be768aa70216734677ebea1b32b5203097c1d469547e519b35159d6d84f4e",
+    "audio_sha256": "f999139ef78608bfad2d63f94c27146b74b70110598e69ad873ae4589ea47dd4"
+  },
+  {
+    "group": "train-024",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "a303d033f69b28f0353719488b5da8e932d109447233d4f140494fb9a972b1e8",
+    "audio_sha256": "abdad03f5bc4d8336d0994928e32713ba7ea0788a70baa91fa95470daa970a09"
+  },
+  {
+    "group": "train-025",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "d33b173856d4ff9f38c141477316c1636a1ec79d83aefb19dac64c0209439a45",
+    "audio_sha256": "1e82c721b39cf8547ba5d19c3d7885f9d3c559acfcfb9e06e8f2d6fa6a4f89f2"
+  },
+  {
+    "group": "train-026",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "d6627ca17993e16eda68706cc9cd2623210996a99236299e016d6301469757f0",
+    "audio_sha256": "94c85fd07d94a1f5ec6772f35394ec175076a251a5f76104b63ae5c30e8ed56b"
+  },
+  {
+    "group": "train-027",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "d8d8ff628a11380d9b1bf2b1322ceb1b601132ecfa1f4e1f68ac281e8dc0c7ff",
+    "audio_sha256": "bf9ae2456ccc33e33259d4479c63432dab2ca9e6750981c70355f24184a220bc"
+  },
+  {
+    "group": "train-028",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "94cf986fd3519be562eedddb25f66f7935dc7fc245c615950af197330e970dfa",
+    "audio_sha256": "f33a0bda23ca8e8651887074b98f6c841b0e95e95a7ce0fa6023f9940bdc8580"
+  },
+  {
+    "group": "train-029",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 11,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "7cbff284ae3d225c5e2afcfb07aacded3acae84afee0cf8395b9f2f7e31141ed",
+    "audio_sha256": "062c11a5d3c782c5a7eb38ffdc1c2d7acc5edee941a6be8b644ff83aa9883150"
+  },
+  {
+    "group": "train-030",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "6fe67a449461b15214ee0bfa98d83a9dc43f760b945b492d0cc8a5b7e4336970",
+    "audio_sha256": "2596799579eff1232d2de46979f42d3e1f9817042eec214dddd75523f9d93d8d"
+  },
+  {
+    "group": "train-031",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 7,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 7,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 10,
+        "root": 5,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "540ff249f2a5a71b9d677abc8876b0e76f92f9e1c3a2438d79f2c74bb0b84a6f",
+    "audio_sha256": "8631736767d2fc9165b76269011cfd311db7ee06483da58b4e9e7374c7d38d1e"
+  },
+  {
+    "group": "train-032",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 0,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 0,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "b448d66f3ec1f9655beceacf8b28eb8ec9918a87a1f68517a5d0f91fa83182af",
+    "audio_sha256": "2bb88d3daba83097b5d0219389f3d0118f66d2281c67f19f5319ad01c3ab00a7"
+  },
+  {
+    "group": "train-033",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "0f4537ae368ba461a4bb06d5daa5101b91d2a8e3745ce84d5a6139e35b2454b0",
+    "audio_sha256": "586558cfd4364633deefb4fa10389d3175bfe65cab6060494f72be5c59b00876"
+  },
+  {
+    "group": "train-034",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "4cabca78ddf6c8d94b26ef2def4d08f05df1ac5cd90a223961d596dfd90749c9",
+    "audio_sha256": "b6fe34f2d9deb14838ffd74a48d0512c2799a849900cda2eeeae4db33ce7eb54"
+  },
+  {
+    "group": "train-035",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "bf6cd27b8f87bab7804dee6630c1978fb0c8748b5cbc3561103d27f483e5ed87",
+    "audio_sha256": "ec908c986cdf9c635b419174babb180e71d781e6c5809b4634236f921d9bfaa5"
+  },
+  {
+    "group": "train-036",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "addd1dea9f662ea2663df69a81e2971bc591eedc7f1254215b9b0edfe7fdc270",
+    "audio_sha256": "3e28ee2b383e7f315b0014fcbe3a423629b1e71b6f0f3724f284f226237116f4"
+  },
+  {
+    "group": "train-037",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 10,
+        "root": 6,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "9cef5d21e59642546cccb5c4935b1471f9d916fa734feb5e205be5cd36d56cec",
+    "audio_sha256": "16b085199db4b5d9aac5621e42b07648b24fc1f6f93b7a4049b222b212ffebb1"
+  },
+  {
+    "group": "train-038",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 2,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 2,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "d50dabcf3061106b35addbc84cf83e035cbbf40b676bf0a96bd20d04b35f9d5e",
+    "audio_sha256": "61361ff86b4bd24906a7786bc42d9fe743d3913dbff092612b67b3046f37579a"
+  },
+  {
+    "group": "train-039",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "d78002abe6c91fdf778e04ff5858c2263300bf54db0c6d91d3e34ee35a8dfd39",
+    "audio_sha256": "49506c3550a0d9b50668133e835618ba387dc19bb4b32ba5ab206c1b8e0ec5ce"
+  },
+  {
+    "group": "train-040",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 5,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 8,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 5,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 8,
+        "root": 3,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "5fb016ef007e216ce18750a72cbf5ca509a00587a1a1137a331aa13079be68b0",
+    "audio_sha256": "c3f215fec9b82decd2c570d72e4a5a1ac40ae60710fad42a31c013c928e8fcb1"
+  },
+  {
+    "group": "train-041",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 6,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "04110c282d8a9575d3f825e81f3e15801f0cc229de88da7d18789bdcc2f50504",
+    "audio_sha256": "bee4d32309a9a40aa6b685a2c4300bee80a06b08f782d9fc5e32ae60f140224c"
+  },
+  {
+    "group": "train-042",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "286814b37b0fc58e145a4c41a4cbf18a02b416d3a53289eb69fa70a58e8530fb",
+    "audio_sha256": "31af1b1467a5a2df053c0194826f929b444562445bfabf40aaf57dd83f65010f"
+  },
+  {
+    "group": "train-043",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 4,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 7,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 4,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 7,
+        "root": 2,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "608d4ba8ba4ad2bd62cf91ee4bb666622990934fb8489bc3989a7cbc338e00bb",
+    "audio_sha256": "8cecda361d3eabfab5b56bb1d1a760ed18a4717254db4095c0cd73f272509141"
+  },
+  {
+    "group": "train-044",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "b0f9eac80b2369f06cc41259f7684349540f0d8400b4a85db895b95a662a97a3",
+    "audio_sha256": "a258759b9669c5ef4b83ae20856ff166dc734af5d823bb63df3d64310cb78adf"
+  },
+  {
+    "group": "train-045",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "7bdb3a9e0401220064adc98607d4876bd1ffbd440103279e3c4166a8aabec075",
+    "audio_sha256": "fe4e7aabd3c4a8b88666948bf9edfd442fe09c9a3cacc131899744122c73d39c"
+  },
+  {
+    "group": "train-046",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "765c69b6f2118881be1435c2565b549894f23777cfb3d03c3951ef2b281e530e",
+    "audio_sha256": "d45790a411a612643bd45edc9f7aa486b0455d37b8ebb3657ba5be753fb3f350"
+  },
+  {
+    "group": "train-047",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "c53814353dc4cc5b003fe4be27a2c901b5ca95f71db099456806f45b00919666",
+    "audio_sha256": "895ec4ed51537fea2bcf41603f80095dc980b208df491e707e33f7507d72da75"
+  },
+  {
+    "group": "train-048",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "0cb27ca4f745a61f7767ebe1814f3975fc57ba0beda84e03e5b917217b740a6f",
+    "audio_sha256": "8997ce656a5642bf6287a51ce4be105a215398614247c1f3260b62c1db0afae1"
+  },
+  {
+    "group": "train-049",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "99fd9aaa68b2c8b7f7b22aad863afee2208c300d1a7eef3c9d3d53511c133fbd",
+    "audio_sha256": "f6ea21cdb6742bba04eeb463188f99f5372157fb835ad26c94a947878f9c70d3"
+  },
+  {
+    "group": "train-050",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "b34d2d3ddd1b0d8b280631d2439f94663d1e48886d98a71c7f20f1457d7c12d3",
+    "audio_sha256": "51a71a1a4f6ff03315e4d64663d1ef0b89de4e7656a86720c8c1d82596848216"
+  },
+  {
+    "group": "train-051",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "89dfb5a86d14f7675bb8d52e5e85a935140a73ad594346d5d94e6271af18f0f1",
+    "audio_sha256": "cb56eb4eb3b83378752b3a7886dd07b4c0499f6b2c15d91330bd66e08bcd2c7f"
+  },
+  {
+    "group": "train-052",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "deeb4e059d243e27c1d1cb504e2afbebf4188ed32550c8a096bf243afc1390a2",
+    "audio_sha256": "d5a43ca75ce5ecc5f00d593db6b231a1ceaaf596bf52081b33700ca2db0f985c"
+  },
+  {
+    "group": "train-053",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "f4bc454fb73d9dc44dd18babd198106570bed9c58d80edceb51b83e6800b1daf",
+    "audio_sha256": "985ac457e94b99828ef5b4bb309367f692182a73023962707e9e2550ba23263e"
+  },
+  {
+    "group": "train-054",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "db0abf458962330679638f2eabe7e8be99aae6ff369c72f88708b51f0486987b",
+    "audio_sha256": "0b164fe9dc7c2e8a0d64f66026c296f13bc2013e4a205cd4cee608f1c1e00fdf"
+  },
+  {
+    "group": "train-055",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "a6474b55964bf68ad46d66c8f0eb1b5301d41462699283fe46452eea8f303bd2",
+    "audio_sha256": "6427067b9b4f710b94e468bfc16224dd5679851bf1e6e55e6ceb6a1631cac37d"
+  },
+  {
+    "group": "train-056",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "98ff71a8285c46e3be4c34ecc1c45522b96b254e9de398ae90364b8ba341905d",
+    "audio_sha256": "c3e5f4a46241b4485e3aba7c5fd4f56e4fe3e277830c1121142ed98070543511"
+  },
+  {
+    "group": "train-057",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "15f76d396653b735ec6e100d5b14e0dfeec10e09bb3f1243844c3009e0985839",
+    "audio_sha256": "4b2710a80d11d3fc8f574a9b0896ddb6ce72991e649dbd00460e154fbbd3e89e"
+  },
+  {
+    "group": "train-058",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 5,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 8,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 5,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 8,
+        "root": 3,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "a3a870a24d5f3d9594023f87dd8c2bb2121b4dede76c5e73a2436427f94e427c",
+    "audio_sha256": "c3187ffccacbd4f23f0a4afeb9cd69df4c8f3438c4457ad09e31afd4ae5fc5d8"
+  },
+  {
+    "group": "train-059",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "1e159316f50e57ed7612d88d0f50d9c6533de3b7978eeb18efbcda8fb1e6ddde",
+    "audio_sha256": "9cb17fdea891ff970306095e2d1379b137f8ca4f5b0beb632aa6962dcbede69c"
+  },
+  {
+    "group": "train-060",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "187a9c5b77af5d910511c8d0693f10ce646311b8151784172d5929b26d5d1b9a",
+    "audio_sha256": "a3f0154d22e0ac0e5cef26780aaa1d149065ef6fde85cfdd01d03d13e0960533"
+  },
+  {
+    "group": "train-061",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "2f722b0a4c06d68aa3be3467620ce9305658bbe0882ffe7d7e266f4e30891727",
+    "audio_sha256": "4efcea41d359d23f5791b8c66ddd7b8d014c951a2cfcb50411aec44eb2870807"
+  },
+  {
+    "group": "train-062",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "f7d150644f7b29866e30cb1dabba42f9654df3978d118e083dc4bb1c174557a9",
+    "audio_sha256": "b4986379ad0baa28a55b9b1f8806b4d67ab77ae29fe68edc2c91f74c6fe2a985"
+  },
+  {
+    "group": "train-063",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "b1b4a82986cead9a85d0432df3fc50998952c74b9503aa84e704d146e4425c4d",
+    "audio_sha256": "ab194736ad7365a2bd5d8410efb594b8adb8b4e3e9832018abe07ff495ec66d5"
+  },
+  {
+    "group": "train-064",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "800bdee7b4847ae3bbfabcf24b0eb259e77e25aa54940cd6d9796f46582dc365",
+    "audio_sha256": "d3b01900c28def4bf64adffeee0987eda28c38d799fff44b1d2fabce7a2894c0"
+  },
+  {
+    "group": "train-065",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 4,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "08a9f9ce47bf5e959ed9d3c77bbc8af9e8c18b8a7c26619da11143b651854765",
+    "audio_sha256": "1028c0e09c35dc23de0e46c8ae4e2363273c06ebafabc6e3a16a1ec8d430cd41"
+  },
+  {
+    "group": "train-066",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "e8264b8a07a33f83b0316061a86d3f5ef10df6bb731243dce2522484c114ccb1",
+    "audio_sha256": "393e8c95ada970ae401af6f9d5b175762f33b1d21b19ec65e953e22fdf0b3905"
+  },
+  {
+    "group": "train-067",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 4,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 7,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 4,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 7,
+        "root": 2,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "e27dc53251e46dafd9bcd08189259da058fdb6e783a52e1637baf1e7f731cb17",
+    "audio_sha256": "ecf859b3e38d13812140648162dfd2242046c18c0b2e354b233a46e956c48d46"
+  },
+  {
+    "group": "train-068",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "8dc3e0815ea8a1ccfd75e68b09f6103bac4ba2c215ba5e583da2971218aa1d98",
+    "audio_sha256": "515301c65a9528d5c76323b10124e505f8070ed544510d7066cfe70ada8ff1d1"
+  },
+  {
+    "group": "train-069",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "06c3deb89806c89fb72f8e428f907fa83354c982e2801d76df41e1f94aae440c",
+    "audio_sha256": "f7b94b968c017cb15b97d7ebb05c5f054309cbbbbd2dd1af0e7b360e70ea504a"
+  },
+  {
+    "group": "train-070",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 8,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 10,
+        "root": 6,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 11,
+        "root": 6,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "b99c356770a55bc483d1fcd62d197bacb9dfa7aaeddd86d0bef9dd6145396cd5",
+    "audio_sha256": "d9b5f96f544df1cc67d35e740daf0f2ec2609a32f1bca80e23858ae6ae70d599"
+  },
+  {
+    "group": "train-071",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "9fbd369b432616802490a45e93a24d0b42a7ad981255e882dab56b72b3f3181d",
+    "audio_sha256": "6164d2b98513fb879d460f2a9532bf6d1c2b95fb0e5b5dc5dc84bc67ef829561"
+  },
+  {
+    "group": "train-072",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "c620a166324756bdf0434dfd3d3b3e682777fe1d847e9e07614613b68635ec74",
+    "audio_sha256": "e73a1f9deb7aaa9bf67899f916ddebd619fcfc1e73bbfcaada6db2e64a7bf1e8"
+  },
+  {
+    "group": "train-073",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "f766719ebbb18d11309b26c9337dfe5a4c3f83096acf5fbcfcb2d98b64ebb3cf",
+    "audio_sha256": "56b2ff100590dd05b0fa6e9afedae07b1b6e522735d81559ec5b087cda23b012"
+  },
+  {
+    "group": "train-074",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 5,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 5,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "c50ff4268cdddd9355d44011522074542d694d32b2fcd0d11fb87b38c137f4ca",
+    "audio_sha256": "677c2affc8c72bd52b332200802d51dbf86f5f379a121193f9a2822b0942c9f9"
+  },
+  {
+    "group": "train-075",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "538502432a0fb86c663db5d26a75f7d6df4945339725a75c816c7b64fd856139",
+    "audio_sha256": "4e55f3283ec9ca2657704f006ead9aacf6c09e85e3a2c2ff658560be5787fae0"
+  },
+  {
+    "group": "train-076",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "d4ed60d4ea7a677c8b9950ca92b2592592034e072f64692004212152ad9a7933",
+    "audio_sha256": "a5957cd0a6c0f3435394d0127b441ee687d0dcde701d3733f545d447af0f7ae4"
+  },
+  {
+    "group": "train-077",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "989b40461d5f0a4af70d52440afc157df1bf1a015906c5775e58891e88e8c577",
+    "audio_sha256": "222f4bdcc515f47c541f42a4238c1814e3e4854d610a4a257ae2436ccfc2ffe1"
+  },
+  {
+    "group": "train-078",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "7a530f609b1df1c4470604d11722e454156e1bbd0fc4495ffda1f8a3a162d7db",
+    "audio_sha256": "1245bf23b6c34f895a52305c9874a5f216aede186e163d41d5df33aba37ad434"
+  },
+  {
+    "group": "train-079",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "6d81e37c70083b5c54deb4839c76d77cc1aac70ffc43a3cac4ba87b19e3b2ff4",
+    "audio_sha256": "7e4727aa47709fe6bfb3c3b015a1467c075b7bda4fff18ffe7e27437df29e146"
+  },
+  {
+    "group": "train-080",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 2,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 2,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 11,
+        "root": 7,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "b8dc5d31c199b813461a1a08c2e02565ab3ac7ca2c37fd8ab8ed94be7fbd7ffe",
+    "audio_sha256": "33464c6ff70969f5eea056deb361bfe20243b37126552ee1270d8481897a59b8"
+  },
+  {
+    "group": "train-081",
+    "split": "train",
+    "program": 24,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "da8a42f0e4fc5b27a046197237a04ed330e5690665877b3c4e9aba0f765faac9",
+    "audio_sha256": "f7155856474ea1ebdb0fd0d6f4e5b6e7374bf181eb62c1a420e52360e063e237"
+  },
+  {
+    "group": "train-082",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "7ca6b814c195d50969843adc990d8f1faee8baa135cd74101e0d58488889b9af",
+    "audio_sha256": "258c3ee8f93687b2642da8b22bcadb963c0b88ac1964a0e38996f069a7951ceb"
+  },
+  {
+    "group": "train-083",
+    "split": "train",
+    "program": 4,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "a6c76af99a4cf3e2a8e26664345981eea65b120cb40cfa8489ec620ea0be483d",
+    "audio_sha256": "3d82ddcd4f12c81419209932152eb0dc3313cafff6099bb4410b042d5789afff"
+  },
+  {
+    "group": "train-084",
+    "split": "train",
+    "program": 25,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "2635ce81c17387a8ce8c4cdc10bd4acfe4439bba2fd85edb7072b07056b168ec",
+    "audio_sha256": "32ab779eb12ed77b5129996a60e57cdd8dcff29089d6d360174a33871dbe4bc2"
+  },
+  {
+    "group": "train-085",
+    "split": "train",
+    "program": 80,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "6879d887ea751619412bf6b090514349af7afe77689fc6a45e64d44bdc8144d8",
+    "audio_sha256": "2bef6ddd2b11a482c12b82e86ad3df57aeec3a6c25d4225b7a03ab01291fe618"
+  },
+  {
+    "group": "train-086",
+    "split": "train",
+    "program": 48,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 4,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "15252b548f0bb4ec3a0addce575672133d4eac5114a49f3eef8aa895fba7bb78",
+    "audio_sha256": "2dbca584bf98d22482723971fdbde0d98d0dc9c84cad942ba247a7d9b71f7ad0"
+  },
+  {
+    "group": "train-087",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "a074c0fae21c58756aa87ff4490adb54a8665fa960e3718b9e0a980ebf7383d5",
+    "audio_sha256": "191eb18fc1517e6b2a7ca4b17cb7478771b3105759e33ca2c0da983490442b40"
+  },
+  {
+    "group": "train-088",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 7,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 7,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 4
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 10,
+        "root": 5,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "1490c6ce3ed72cdb984cf0267f681f6333129275386b348ea9dbe503d37dac67",
+    "audio_sha256": "665645567b592836ee8ccb1393782348307314e16ef1c4aa4d1d28f963fff815"
+  },
+  {
+    "group": "train-089",
+    "split": "train",
+    "program": 0,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": -1,
+        "root": 2,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "b246b514e217802b618d1b4bf43b982d5d644742c37549f9c324228fccf51f96",
+    "audio_sha256": "3ec4fe24d30e4efcb864bad627284f4944c3b00a7676fadfb5223195c00f8e71"
+  },
+  {
+    "group": "validation-000",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "096461f1fe72fedacde89c420eccb9b8892b6a02591237ce1f9a3b83f891c756",
+    "audio_sha256": "94cf0850f0ae67a691d8e0d7580caf9383f0ccc9703b8ec8a65ebfc2908b9e86"
+  },
+  {
+    "group": "validation-001",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 3,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 5,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 6,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 3,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 5,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 6,
+        "root": 1,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "66999c1a2d15b54111436adfe932d229346ce69c57314dc5d271a0ebc453b2ed",
+    "audio_sha256": "7a17d2c2b87e812a9d636d8cf233ecaedecfcb2cd8b36dca0ecdfc04bc923345"
+  },
+  {
+    "group": "validation-002",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 9,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 9,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 2
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 6,
+        "root": 2,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "58c97a6e14e39dc7fc0ed94bca9247e3dd4f0a78532d10ae995e6b2379aedfca",
+    "audio_sha256": "f0692889e98fa0d780d61f6555a07a56d8cd1a384964db0812d49f3766436f98"
+  },
+  {
+    "group": "validation-003",
+    "split": "validation",
+    "program": 26,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "7d4e9ea9cf92b1d5b5048786daf90f1e69c5eb87e87850018896e356cbd5ee27",
+    "audio_sha256": "c2fdafd84eecf545137b704246389bc2744c4e91ea656ef0356b575ac399c964"
+  },
+  {
+    "group": "validation-004",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "4b118b9075b06700c463644042d5869bfc5a40fe88734a0b2e95420b8301d58b",
+    "audio_sha256": "065b2400b3472b90b82514622e2fcff16339972866fe7bd991bcdc4b641db6d9"
+  },
+  {
+    "group": "validation-005",
+    "split": "validation",
+    "program": 26,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "032b6f06094cb6dfdfe2694196d80f2e9a2c43cc937914d3cf37390829adce4a",
+    "audio_sha256": "b41787085d06a643c01fdae47df06a90e471fa011769f2b6b7b30a3b2c35f592"
+  },
+  {
+    "group": "validation-006",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 2,
+        "root": 2,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 7,
+        "root": 7,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "73696bd46f6c2e4c0bca5370fda9162b3703e3a35d12e0fded46f769dd6edc5a",
+    "audio_sha256": "f916fedcdbbb997b711ec3fee60437bcd2a1bd04e3874a4ce18a1ea1c7a18e3e"
+  },
+  {
+    "group": "validation-007",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 11,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 1,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 3,
+        "root": 11,
+        "kind": 1
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 4,
+        "root": 11,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "adea37c60366e365ddc7054a4ba1f8b3dd6a8f17a400dcb1347b6655fe52b218",
+    "audio_sha256": "fb937a76559e644da589b01bc8a687ac6c0f3d1f0ee5ef47721d04daf200858e"
+  },
+  {
+    "group": "validation-008",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 3,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 0,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 3,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 2
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 0,
+        "root": 8,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "cb54cff225935352738261b9fe64977834d97d89c06ce691ba3b2cef75cb815d",
+    "audio_sha256": "579f0eca41398e23ee4981eba9142cf747f7bb033a1ae8433e5cba98cc3ced2a"
+  },
+  {
+    "group": "validation-009",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "c7140fb4b54c4018c399013d7484569c229ee3661c538099e5b33ed9065982b1",
+    "audio_sha256": "69ccddf9c1533d2ed0503643de3a51d6a3c84e3e0c3ea2e72388fa40abbecb1f"
+  },
+  {
+    "group": "validation-010",
+    "split": "validation",
+    "program": 26,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 4
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "c02c4a5f3c02f2440383326c58996ff1bce633d4658ed11687d8d1156f7b52b0",
+    "audio_sha256": "a3a6f960ae084e15cc418eed5310dd6f47c1f4b935cc666491a74974d2404631"
+  },
+  {
+    "group": "validation-011",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 5,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "4c44c3a20d040cda3abb190f85455ddd2e5be487ce446f845e0da26227e24c7a",
+    "audio_sha256": "e49a9addfe0e2b98dfb766cc4cf75d63343e854a46a09a3785c7c6a5c63cc0a9"
+  },
+  {
+    "group": "validation-012",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 5,
+        "root": 5,
+        "kind": 0
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "739f0d457bad3101a53d191eca7cdd2c6df51625b076620a36edd5f00baa7a6a",
+    "audio_sha256": "64f5917057b31722487bc1863f4c5e9f145600f4b4d2f8f4f29469e2e39ce236"
+  },
+  {
+    "group": "validation-013",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 2,
+        "root": 10,
+        "kind": 1
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "504136e64459238da250e3431fd318140d5de6992c22ffe933898acfcd22c169",
+    "audio_sha256": "a5316857ee22d68b19854cea25f8aab6d4664230ff92f5f61cd8a04ccd42237f"
+  },
+  {
+    "group": "validation-014",
+    "split": "validation",
+    "program": 2,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 3,
+        "root": 3,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 7,
+        "root": 3,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "d1f2e37f5f8f637d0404b63ac7fc1d8d565eaba42cfe786f770cc84abd74430e",
+    "audio_sha256": "1f369f849d6d6d9fa8c0f82bac62566adb1f26d45f369fbf775477fd45d7886a"
+  },
+  {
+    "group": "validation-015",
+    "split": "validation",
+    "program": 26,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 11,
+        "root": 11,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "88ed19af085fd19040f1cee8395e5b4a0d2c89e452c4f091fe0742afab53e305",
+    "audio_sha256": "f378eea520f0a0e071064d248a2eb3e44cbd57aceab7aede2238391e5d7d717c"
+  },
+  {
+    "group": "validation-016",
+    "split": "validation",
+    "program": 50,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 9,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 11,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 0,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 7,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 9,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 11,
+        "root": 7,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 0,
+        "root": 7,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "d52f12f9ad4fbffbfe7e22d0587f1409dd5b1a2581a4ddf4750027bbba51721c",
+    "audio_sha256": "ab305eedacdef62c1aa0ce0e28f56de8f18ce8d4faae3f4db3263cbc685b4ddd"
+  },
+  {
+    "group": "validation-017",
+    "split": "validation",
+    "program": 26,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 0,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "3554613c57e9e4c26d5301a7e971ae2d5c2384367ddb278962334fab9dcdc380",
+    "audio_sha256": "bd191156304e320994980c2e8d126e6cedc297c506819cb13a4247d22b82b48c"
+  },
+  {
+    "group": "test-000",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "17df9a27d49945bc4f4dd58402671ab4d81166ec9a17d129d56e46758de5dcc5",
+    "audio_sha256": "7d4fdfe5cb5d3acd4a56ccc98840219cbbd950eda3345fb50f6ae440a9adf569"
+  },
+  {
+    "group": "test-001",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 11,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 1,
+        "root": 9,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 2,
+        "root": 9,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "b80a6e89b7d9f5f6ca3185306025a1f31249171d35ab56f99deddf2ce54e0d4a",
+    "audio_sha256": "20fdbb1bce312e0c50821cec467c8e92e616688d07b15e07d976d8e03a6d71d8"
+  },
+  {
+    "group": "test-002",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 5,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 5,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 8,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 2
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 5,
+        "root": 1,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "fc03a4450e185d0073a1b62eb03d04d909774a19cc596ef190fc0a3e9e965403",
+    "audio_sha256": "5e055fdcd5ffb21cab53e0999717ceedd827dfd498d2476838bae9571d376a80"
+  },
+  {
+    "group": "test-003",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "c37ed6c6afbb7388b52cd2f506bc7e9aff84eab6561dc685a5a35ff22d675e4c",
+    "audio_sha256": "19ce8d9264ccdf4f706170b7ad85a3eb7b6f1727ecf391492863c6008886005b"
+  },
+  {
+    "group": "test-004",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "afedf1cc777c1dfa6356044cec9e38b37fd89538c48ea1216a48f3eb42df9887",
+    "audio_sha256": "6f86ffef961320132301985f72afb982e326e9e0d819d0bdbdf7074a3251069c"
+  },
+  {
+    "group": "test-005",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "63515b3ab9f86e3bcb356cb274b077c1aaa5c9bcf05b446c730172de5dccaf1a",
+    "audio_sha256": "3caab3240e413a5ff9648ea483855d1f8c87a3b34d30fe308483d4ed70c91bd7"
+  },
+  {
+    "group": "test-006",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 0
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 6,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 9,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "f38c32f1847e83a4f5cc0193e5b0097c061eb92807f82a9bc808ce8b377b494e",
+    "audio_sha256": "506443c34f4b397d3f3bb23b65aeecf109d29ae5cea01f2c8b333c13e340907a"
+  },
+  {
+    "group": "test-007",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 3,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 5,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 3,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 5,
+        "root": 1,
+        "kind": 1
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 6,
+        "root": 1,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "9bc36d0ae131dd2bfe33c4185411f876a6d076aee212c221dc1740a2faafb9cc",
+    "audio_sha256": "464824c09cd96b9ab6dc6b263008ead39a107bb7fb9b1d989b58a0d5ed8fb294"
+  },
+  {
+    "group": "test-008",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 4,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 7,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 4,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 7,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 0,
+        "root": 0,
+        "kind": 2
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 4,
+        "root": 0,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "37e04d4c188e930e1c481dd72ea01dab4fc357d12b259a3ee8387b9daa760ba8",
+    "audio_sha256": "2a188a040fbb7000d10f2d55e28211dade4de7c0aa663a0d0ca2232ec99c1ec0"
+  },
+  {
+    "group": "test-009",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "f2461e82d592ee725405a71366c4ca981519a82b86bf11ea0dad2c04b2d7967d",
+    "audio_sha256": "803490ca9589f9f91c7ff736a3b5ee9bbfd946bddbd6bf00b1a246c44e77575c"
+  },
+  {
+    "group": "test-010",
+    "split": "test",
+    "program": 1,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 4
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "43ca89456ad2f57cada47d45afcff862a80e60fbb6c89e66d42aa890f81cfb7e",
+    "audio_sha256": "7e72cdc2294c07c9d01747a46ba8f8141430c677aea70fe7bd4ff607efd2d515"
+  },
+  {
+    "group": "test-011",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": -1,
+        "root": 8,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "2b6130fc9872cbe3a0e02ded5cf7c8a6b3f94c00a0f0e8210ac76ab757d45bdc",
+    "audio_sha256": "583a1c0890710309fee9ba35cec6697b941f1e50992f6e18cc80ac16a84c9849"
+  },
+  {
+    "group": "test-012",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 8,
+        "root": 8,
+        "kind": 0
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 0
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 0,
+        "root": 0,
+        "kind": 0
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 1,
+        "root": 1,
+        "kind": 0
+      }
+    ],
+    "midi_sha256": "842809fd5375794b6ec253f85366bebc64941d180ba8c1a75787c5c60e69dbf1",
+    "audio_sha256": "2b4bf086e011ef2fab113eaef22b4cf63c4baae2feed342c32ebf488ba3545e3"
+  },
+  {
+    "group": "test-013",
+    "split": "test",
+    "program": 1,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 4,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 6,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 8,
+        "root": 4,
+        "kind": 1
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 4,
+        "kind": 1
+      }
+    ],
+    "midi_sha256": "00e91d46998b21e2c970398e47aa5c0d5c21aeaa954dfb023f32e72c16017806",
+    "audio_sha256": "df201903021a99c7841dfb54bcaabf5eaa07f460ce5a3db4a4b307d732c37ace"
+  },
+  {
+    "group": "test-014",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": 0,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": 5,
+        "root": 5,
+        "kind": 2
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": 9,
+        "root": 5,
+        "kind": 2
+      }
+    ],
+    "midi_sha256": "e28e1957510d5487b384a2729be7491a506c9727ee9bc57c9ec07c796af1d907",
+    "audio_sha256": "413b6455752915b3a01cacff1e524245ae4c36362fbbaf757625f41f1687b4cf"
+  },
+  {
+    "group": "test-015",
+    "split": "test",
+    "program": 27,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 1.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 1.9,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 3.4,
+        "end": 4.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 4.9,
+        "end": 6.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 6.4,
+        "end": 7.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 7.9,
+        "end": 9.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 9.4,
+        "end": 10.9,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      },
+      {
+        "start": 10.9,
+        "end": 12.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 3
+      }
+    ],
+    "midi_sha256": "bf18158ac9166be39fa3b6a865fb4f414806b5b60d7f62886c9212bf2e2032f1",
+    "audio_sha256": "be4a5f3637296e8ba8bb75994d46e1df9698f889ff90778b2dbac8f04ab7d887"
+  },
+  {
+    "group": "test-016",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 3.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 3.4,
+        "end": 6.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 6.4,
+        "end": 9.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 9.4,
+        "end": 12.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 12.4,
+        "end": 15.4,
+        "bass": 10,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 15.4,
+        "end": 18.4,
+        "bass": 0,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 18.4,
+        "end": 21.4,
+        "bass": 2,
+        "root": 10,
+        "kind": 4
+      },
+      {
+        "start": 21.4,
+        "end": 24.4,
+        "bass": 3,
+        "root": 10,
+        "kind": 4
+      }
+    ],
+    "midi_sha256": "f78388b0ef1acc8b7e970cf32a3100400b246db3b412f45a1cef2a749966c0cf",
+    "audio_sha256": "850e0e2c2e5f13de06465903875ed19860960ee52037df13123974ddf5651f69"
+  },
+  {
+    "group": "test-017",
+    "split": "test",
+    "program": 49,
+    "events": [
+      {
+        "start": 0.4,
+        "end": 2.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 2.4,
+        "end": 4.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 4.4,
+        "end": 6.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 6.4,
+        "end": 8.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 8.4,
+        "end": 10.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 10.4,
+        "end": 12.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 12.4,
+        "end": 14.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      },
+      {
+        "start": 14.4,
+        "end": 16.4,
+        "bass": -1,
+        "root": 7,
+        "kind": 5
+      }
+    ],
+    "midi_sha256": "ee0c51a6fc1b95665d48e94da04cf88111c8028fad193d6f2f58086508328205",
+    "audio_sha256": "f26664ebdcb56dc3f5bc9b788bf00db34044c025169ec194c40e7c8a2fd5e258"
+  }
+]

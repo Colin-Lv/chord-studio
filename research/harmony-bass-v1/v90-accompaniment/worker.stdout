@@ -1,0 +1,6 @@
+{"utc": "2026-11-01T14:33:30.555076+00:00", "phase": "decoded", "seconds": 206.0159863945578, "samples": 9085305}
+{"utc": "2026-11-01T14:33:30.634744+00:00", "phase": "extracting_anchors"}
+{"utc": "2026-11-01T14:34:45.292032+00:00", "phase": "extracting_deep"}
+{"utc": "2026-11-01T14:34:46.489190+00:00", "phase": "extracting_nnls"}
+{"utc": "2026-11-01T14:34:49.335222+00:00", "phase": "features_complete", "cells": 857, "cache_key": "85039fe3dbb42ab0f9db12ae7b693613972fa7ee439785a789ea40a9232980b1"}
+{"utc": "2026-11-01T14:34:49.411254+00:00", "phase": "prediction_complete", "output": "D:\\ChordStudio\\Dialogue\\research\\harmony-bass-v1\\v90-accompaniment\\prediction.json", "cache_reused": false, "segments": 228}

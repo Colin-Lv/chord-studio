@@ -52,7 +52,7 @@ FEATURES = ["nnls_bass_move", "nnls_bass_root_changed", "nnls_bass_flux",
             "nnls_bass_sustain_left", "nnls_bass_sustain_right", "nnls_tone_hamming"]
 TONE_THRESHOLD = 0.02
 PARAMS = dict(lambda_switch=18.0, beta_boundary=8.0, lambda_bass=1.5, mu=0.7, tau=0.28,
-              dur_center_beats=8.0, dur_sigma=0.30)
+              dur_center_beats=8.0, dur_sigma=0.30, bass_mode='root')
 
 
 def read_lab(path):
@@ -172,11 +172,32 @@ def tone_log_score(quality, support, root, tau):
                      for iv in INTERVALS[quality]))
 
 
-def pooled_label(prob, bass_cells, support, cells, lam=1.5, mu=0.6, tau=0.28):
+def bass_log_scores(bass):
+    """Bass supports chord members, including inversions; it does not define root.
+
+    A floor bounds influence from unreliable mixed-audio low registers. No key,
+    song identity or expected progression enters this likelihood.
+    """
+    bass = np.asarray(bass, dtype=float)
+    out = np.zeros((12, 10))
+    for root in range(12):
+        for q, quality in enumerate(QUALITIES):
+            pcs = [(root + iv) % 12 for iv in INTERVALS[quality]]
+            support = .5 * bass[root] + .5 * bass[pcs].sum()
+            out[root, q] = np.log(.15 + .85 * support)
+    return out
+
+
+def pooled_label(prob, bass_cells, support, cells, lam=1.5, mu=0.6, tau=0.28,
+                 bass_mode='root'):
     p = np.maximum(prob[cells], 1e-9).mean(axis=0)
     b = bass_cells[cells].mean(axis=0)
-    roots = p.reshape(12, 10).sum(axis=1)
-    root = int(np.argmax(np.log(roots) + lam * np.log(b + 1e-3)))
+    if bass_mode == 'compatible':
+        adjusted = p.reshape(12, 10) * np.exp(lam * bass_log_scores(b))
+        root = int(adjusted.sum(axis=1).argmax())
+    else:
+        roots = p.reshape(12, 10).sum(axis=1)
+        root = int(np.argmax(np.log(roots) + lam * np.log(b + 1e-3)))
     scores = np.log(p.reshape(12, 10)[root] + 1e-9)
     if mu:
         scores = scores + mu * np.array([tone_log_score(q, support, root, tau)
@@ -264,7 +285,9 @@ def decode(posterior, starts, ends, chroma, act, note_times, beats, beat_pos,
             continue
         emission[i] = logp[cells].sum(axis=0)
         bass = bass_cells[cells].mean(axis=0)
-        emission[i] += p["lambda_bass"] * len(cells) * np.repeat(np.log(bass + 1e-3), 10)
+        bass_score = (bass_log_scores(bass).reshape(-1) if p['bass_mode'] == 'compatible'
+                      else np.repeat(np.log(bass + 1e-3), 10))
+        emission[i] += p["lambda_bass"] * len(cells) * bass_score
         tone = np.zeros((12, 10), dtype=np.float64)
         support_i = span_tone(support, note_times, a, b)
         for r in range(12):
@@ -314,7 +337,7 @@ def decode(posterior, starts, ends, chroma, act, note_times, beats, beat_pos,
             continue
         support_seg = span_tone(support, note_times, a, b)
         label = pooled_label(posterior, bass_cells, support_seg, cells,
-                             p["lambda_bass"], p["mu"], p["tau"])
+                             p["lambda_bass"], p["mu"], p["tau"], p['bass_mode'])
         if rows and rows[-1][2] == label and abs(rows[-1][1] - a) < 1e-6:
             rows[-1] = (rows[-1][0], float(b), label)
         else:

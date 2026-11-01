@@ -34,7 +34,7 @@ def execute(store, job_id):
     started = time.perf_counter()
     runtime_label = str(read_json(ROOT/'desktop_runtime.json').get('model_version') or 'retained10')
     warnings = [f'{runtime_label} 支持 maj/min/7/maj7/min7/9/maj9/min9/sus2/sus4 及 N；后验未校准，不能作为准确率。',
-                f'主调与拍点由独立 madmom 模型估计，不属于 {runtime_label}；结构分段为相似性线索。']
+                f'主调与转调段落由和弦推理 v3 估计；madmom 调性结果保留作对照，拍点由独立模型估计；结构分段为相似性线索。']
 
     def publish():
         if read_json(job_path)['status'] == 'interrupted':
@@ -309,4 +309,16 @@ def execute(store, job_id):
             full_decode=dict(applied=full['applied'],segments=full['segments'],
                 module='app/web/full_decode.py',derived_from='posterior.npz + cells.json + deep.npz + notes.npz + beats.json',
                 second_tier=True,default=False,params=full.get('params'))))
+    from .harmonic_key import refresh as refresh_harmonic_keys
+    stage('harmonic_key_v3','根据和弦进行识别局部调性与转调段落',lambda:refresh_harmonic_keys(result))
     atomic_json(output/'analysis.json',result)
+    # The pipeline calls the same mandatory stage after its separation step.
+    # Ordinary first-time analysis also gets bass; no previous opt-in is needed.
+    if job.get('pipeline_step')!='analysis':
+        from .joint_harmony import execute as joint_harmony
+        stage('joint_harmony','识别和弦与指定低音（默认）',lambda:joint_harmony(store,job_id,output))
+        updated=read_json(output/'analysis.json')
+        updated['warnings']=warnings
+        updated['provenance']['stages']=job['stages']
+        updated['provenance']['elapsed_seconds']=time.perf_counter()-started
+        atomic_json(output/'analysis.json',updated)

@@ -1,0 +1,28 @@
+{
+  "run": "5fdd2f7051634d85acae5144f4921544",
+  "default_source": "stem_bass_harmony_v2_bbe0b6d35ab7",
+  "editor_revision": 0,
+  "passage": [
+    {
+      "time": 20.82,
+      "label": "B:maj/C#"
+    },
+    {
+      "time": 23.84,
+      "label": "B:maj/D#"
+    },
+    {
+      "time": 26.83,
+      "label": "E:maj"
+    },
+    {
+      "time": 35.83,
+      "label": "B:maj/D#"
+    }
+  ],
+  "installed_files": [
+    "app/web/retained_worker.py",
+    "app/web/stem_bass_harmony.py"
+  ],
+  "backup": "D:\\ChordStudio\\data\\backups\\bass-source-continuity_20261101_234154"
+}

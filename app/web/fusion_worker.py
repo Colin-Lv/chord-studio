@@ -48,7 +48,17 @@ def execute(store, job_id):
             raise ValueError('分析期间原音频发生变化，未发布结果')
         if store.project(project['id']).get('current_run') != project['current_run']:
             raise ValueError('分析版本已改变，未发布结果，请重试')
-        meta['source_id'] = publish_result(run_dir, segments, meta, bool(job.get('make_default', False)))
+        # Keep V2 available for comparison. The bass-aware revision is a separate
+        # immutable source, so saved corrections and earlier results remain valid.
+        meta['source_id'] = publish_result(run_dir, segments, meta, False)
+        from .stem_bass_harmony import (recognize as recognize_bass,
+                                        publish_result as publish_bass, VERSION as BASS_VERSION)
+        segments, meta = recognize_bass(run_dir, base, run_dir / BASS_VERSION / model,
+                                       lambda message: publish(stage='fusion', stage_label=message))
+        if (signature(audio)['sha256'] != meta['source_audio_sha256']
+                or store.project(project['id']).get('current_run') != project['current_run']):
+            raise ValueError('分析版本或音频已改变，未发布低音和弦结果')
+        meta['source_id'] = publish_bass(run_dir, segments, meta, bool(job.get('make_default', False)))
         project = store.project(project['id'])
     project["stem_fusion"] = dict(model=model, run_id=project.get("current_run"),
                                   updated_at=now(), segments=meta["segments"],

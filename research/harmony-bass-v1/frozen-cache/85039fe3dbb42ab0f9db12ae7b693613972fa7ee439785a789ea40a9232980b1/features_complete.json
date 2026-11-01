@@ -1,0 +1,68 @@
+{
+  "completed_utc": "2026-11-01T14:34:49.301478+00:00",
+  "identity": {
+    "schema": "retained10_audio_frontend_v82",
+    "audio_sha256": "699137051fed0c11e029f6868adeb2e48e6cdb4be4515c13c2bb6d0a5be29a3b",
+    "frontend_sha256": {
+      "audio_predict.py": "78550919854dd4869c7b17001b41132031d4e255e00177fe5af77d8df588c028",
+      "chord_extension_model.py": "58370f5d0e9b55abdc6be14f79e4838a79b67c84feeeea1c48e8bc2e36b6cb69",
+      "frontend_math.py": "a7275a025141b702ca9a47aedaa0dd17468ccb992ed4b0853a7ca73aad835d05",
+      "madmom_helper.py": "f4e7529eca49a091c2d88a02e92bc8814cdd1c37c4f28d050444f58f6205b044"
+    },
+    "runtime": {
+      "ffmpeg": {
+        "path": "C:\\Users\\33573\\AppData\\Roaming\\Python\\Python313\\Scripts\\ffmpeg.exe",
+        "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+      },
+      "sonic_annotator": {
+        "path": "D:\\ChordStudio\\Dialogue\\tools\\sonic-annotator-1.7-win64\\sonic-annotator-win64\\sonic-annotator.exe",
+        "sha256": "be457f578a069ff432d61d73ae93b3eb519b9daf3b4341520aca6df632b18227"
+      },
+      "nnls_plugin": {
+        "path": "C:\\Program Files\\Vamp Plugins\\nnls-chroma.dll",
+        "sha256": "9e6e8b0b9fdcec20807ed050d6a0a99d77c091fefe15058ad0466fbfd2e4ae71"
+      },
+      "madmom_python": {
+        "path": "D:\\ChordStudio\\runtime\\madmom39\\Scripts\\python.exe",
+        "sha256": "3515e307cf21fe8f37112b3a6e79c3c3b50aa202cc000df4bbf3343f083a2f70"
+      },
+      "madmom_models": {
+        "CNN": {
+          "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chords\\2016\\chords_cnnfeat.pkl",
+          "sha256": "59ac731a514880d7ec22ed9ee33935fc1683d2a03d8a7b4b81d26a3da944ce7d"
+        },
+        "CRF": {
+          "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chords\\2016\\chords_cnncrf.pkl",
+          "sha256": "4b8a63b4bb5bea076cf1babc76d5cb0a3618e6125d9a3a998f441d61308676af"
+        },
+        "DeepChroma": {
+          "path": "C:\\Users\\33573\\.codex\\acr_envs\\madmom39\\Lib\\site-packages\\madmom\\models\\chroma\\2016\\chroma_dnn.pkl",
+          "sha256": "d91aff59113ec6b85de9c9b1aafb065ed0c756072284cebc61564237e901ca94"
+        }
+      },
+      "madmom_version": "0.16.1"
+    }
+  },
+  "audio_seconds": 206.0159863945578,
+  "samples": 9085305,
+  "sample_rate": 44100,
+  "native_audio": {
+    "sample_rate": 44100,
+    "samples": 9085305,
+    "channels": 2
+  },
+  "cells": 857,
+  "files_sha256": {
+    "features.npz": "8503784dd1065276e4d22970de76298e50f200dd0645063022d5f2747e3ecd0b",
+    "cells.json": "18b451cf9231ce6ad98b834ae2fff5f549857f96ba695ba9a6630561a9cfe505",
+    "deep.npz": "c7bdbdb111a3295f121d3d93da73845b89003559cae01c793f38fba63217acb5",
+    "energy.npz": "b063c3bee9bb3e88116de3dd6f9b7d159b4f8ad9f36701917ed419fe7a19db7c",
+    "madmom.lab": "e3c1a30343d7283a8726bb8d6f888d07e5448b20add29e69920d11ca97b2557c",
+    "notes.npz": "eb1434c36860f18c540a9b52fa262daaeccd6b6bf40a2848254d9c0d391848a3"
+  },
+  "scratch_bytes_removed": 183658276,
+  "new_recordings": 0,
+  "new_fits": 0,
+  "new_updates": 0,
+  "reference_inputs": false
+}

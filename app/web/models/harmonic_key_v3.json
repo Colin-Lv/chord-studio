@@ -1,0 +1,39 @@
+{
+  "schema": "harmonic-key-ranker-v3",
+  "features": [
+    "native",
+    "borrowed",
+    "secondary",
+    "unexplained",
+    "outside",
+    "tonic",
+    "opposite_tonic",
+    "dominant",
+    "authentic_arrival",
+    "plagal_arrival",
+    "predominant_to_dominant",
+    "tonic_departure",
+    "entry_tonic",
+    "ending_tonic"
+  ],
+  "weights": [
+    6.313222983317773,
+    0.6520257317097897,
+    -4.438122869424151,
+    -2.669889360843781,
+    -2.121693286660534,
+    9.213204786238125,
+    -0.6119985950315584,
+    1.2090801979912038,
+    5.748238723198682,
+    1.5124401139056083,
+    4.293394561682965,
+    0.3546411523867492,
+    1.390940618401358,
+    0.9872183268492101
+  ],
+  "C": 1.0,
+  "training": "synthetic symbolic controls; no user-song fitting",
+  "change_cost": 32.0,
+  "short_cost": 2.0
+}

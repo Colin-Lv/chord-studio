@@ -1,0 +1,46 @@
+{
+  "selection": [
+    {
+      "leaf": 2,
+      "validation_accuracy": 0.8333333333333334
+    },
+    {
+      "leaf": 8,
+      "validation_accuracy": 0.8333333333333334
+    }
+  ],
+  "leaf": 2,
+  "metrics": {
+    "validation": {
+      "n": 144,
+      "pitched_accuracy": 1.0,
+      "coverage": 0.8055555555555556,
+      "accepted_accuracy": 1.0,
+      "no_low_voice_false_positive": 0
+    },
+    "test": {
+      "n": 144,
+      "pitched_accuracy": 0.9166666666666666,
+      "coverage": 0.6666666666666666,
+      "accepted_accuracy": 1.0,
+      "no_low_voice_false_positive": 0
+    }
+  },
+  "thresholds": {
+    "score": 0.8,
+    "margin": 0.2
+  },
+  "schema": "bass-voice-v1",
+  "sha256": "97df978ff95515bb5c37c2e640d73a962a1f05f668ea3ddb5e5446f7c1ff0c73",
+  "features": 13,
+  "notes": [
+    28,
+    59
+  ],
+  "training": "research/harmony-bass-v1/train_bass.py",
+  "training_groups": 90,
+  "validation_groups": 18,
+  "test_groups": 18,
+  "key_used": false,
+  "real_song_training": false
+}

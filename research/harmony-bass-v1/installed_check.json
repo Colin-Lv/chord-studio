@@ -1,0 +1,104 @@
+{
+  "source_id": "stem_bass_harmony_v2_bbe0b6d35ab7",
+  "run_id": "cc04fcb7633e4232936b512112cc7c5d",
+  "installed_implementation": true,
+  "api_readback": true,
+  "original_sources_unchanged": true,
+  "key_unchanged": true,
+  "default_unchanged": true,
+  "export_verified": true,
+  "queue_not_modified": true,
+  "pending_job": "8accfa35d290408c84d72d48c2b690a8",
+  "passage": [
+    {
+      "id": 4,
+      "start": 14.81,
+      "end": 17.81,
+      "start_text": "14.810000",
+      "end_text": "17.810000",
+      "label": "E:maj",
+      "candidates": []
+    },
+    {
+      "id": 5,
+      "start": 17.81,
+      "end": 20.81,
+      "start_text": "17.810000",
+      "end_text": "20.810000",
+      "label": "B:maj",
+      "candidates": []
+    },
+    {
+      "id": 6,
+      "start": 20.81,
+      "end": 23.83,
+      "start_text": "20.810000",
+      "end_text": "23.830000",
+      "label": "B:maj/C#",
+      "candidates": []
+    },
+    {
+      "id": 7,
+      "start": 23.83,
+      "end": 26.82,
+      "start_text": "23.830000",
+      "end_text": "26.820000",
+      "label": "B:maj/D#",
+      "candidates": []
+    },
+    {
+      "id": 8,
+      "start": 26.82,
+      "end": 29.81,
+      "start_text": "26.820000",
+      "end_text": "29.810000",
+      "label": "E:maj",
+      "candidates": []
+    },
+    {
+      "id": 9,
+      "start": 29.81,
+      "end": 32.83,
+      "start_text": "29.810000",
+      "end_text": "32.830000",
+      "label": "B:maj",
+      "candidates": []
+    },
+    {
+      "id": 10,
+      "start": 32.83,
+      "end": 35.82,
+      "start_text": "32.830000",
+      "end_text": "35.820000",
+      "label": "C#:min7",
+      "candidates": []
+    },
+    {
+      "id": 11,
+      "start": 35.82,
+      "end": 38.81,
+      "start_text": "35.820000",
+      "end_text": "38.810000",
+      "label": "B:maj/D#",
+      "candidates": []
+    },
+    {
+      "id": 12,
+      "start": 38.81,
+      "end": 41.81,
+      "start_text": "38.810000",
+      "end_text": "41.810000",
+      "label": "E:maj",
+      "candidates": []
+    },
+    {
+      "id": 13,
+      "start": 41.81,
+      "end": 44.89,
+      "start_text": "41.810000",
+      "end_text": "44.890000",
+      "label": "C#:min7",
+      "candidates": []
+    }
+  ]
+}

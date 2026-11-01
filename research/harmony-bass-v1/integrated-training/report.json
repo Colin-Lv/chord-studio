@@ -1,0 +1,2841 @@
+{
+  "training": "old train split + new rendered MIDI beat features; no real-song fitting",
+  "selection": [
+    {
+      "leaf": 2,
+      "threshold": 0.4,
+      "margin": 0.05,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.4,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.4,
+      "margin": 0.2,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.5,
+      "margin": 0.05,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.5,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.5,
+      "margin": 0.2,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.6,
+      "margin": 0.05,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.6,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.6,
+      "margin": 0.2,
+      "accepted": 253,
+      "correct": 251,
+      "precision": 0.9920948616600791
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.7,
+      "margin": 0.05,
+      "accepted": 251,
+      "correct": 249,
+      "precision": 0.9920318725099602
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.7,
+      "margin": 0.1,
+      "accepted": 251,
+      "correct": 249,
+      "precision": 0.9920318725099602
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.7,
+      "margin": 0.2,
+      "accepted": 251,
+      "correct": 249,
+      "precision": 0.9920318725099602
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.8,
+      "margin": 0.05,
+      "accepted": 247,
+      "correct": 245,
+      "precision": 0.9919028340080972
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.8,
+      "margin": 0.1,
+      "accepted": 247,
+      "correct": 245,
+      "precision": 0.9919028340080972
+    },
+    {
+      "leaf": 2,
+      "threshold": 0.8,
+      "margin": 0.2,
+      "accepted": 247,
+      "correct": 245,
+      "precision": 0.9919028340080972
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.4,
+      "margin": 0.05,
+      "accepted": 256,
+      "correct": 250,
+      "precision": 0.9765625
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.4,
+      "margin": 0.1,
+      "accepted": 254,
+      "correct": 249,
+      "precision": 0.9803149606299213
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.4,
+      "margin": 0.2,
+      "accepted": 244,
+      "correct": 242,
+      "precision": 0.9918032786885246
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.5,
+      "margin": 0.05,
+      "accepted": 255,
+      "correct": 250,
+      "precision": 0.9803921568627451
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.5,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 249,
+      "precision": 0.9841897233201581
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.5,
+      "margin": 0.2,
+      "accepted": 243,
+      "correct": 242,
+      "precision": 0.9958847736625515
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.6,
+      "margin": 0.05,
+      "accepted": 255,
+      "correct": 250,
+      "precision": 0.9803921568627451
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.6,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 249,
+      "precision": 0.9841897233201581
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.6,
+      "margin": 0.2,
+      "accepted": 243,
+      "correct": 242,
+      "precision": 0.9958847736625515
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.7,
+      "margin": 0.05,
+      "accepted": 255,
+      "correct": 250,
+      "precision": 0.9803921568627451
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.7,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 249,
+      "precision": 0.9841897233201581
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.7,
+      "margin": 0.2,
+      "accepted": 243,
+      "correct": 242,
+      "precision": 0.9958847736625515
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.8,
+      "margin": 0.05,
+      "accepted": 255,
+      "correct": 250,
+      "precision": 0.9803921568627451
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.8,
+      "margin": 0.1,
+      "accepted": 253,
+      "correct": 249,
+      "precision": 0.9841897233201581
+    },
+    {
+      "leaf": 8,
+      "threshold": 0.8,
+      "margin": 0.2,
+      "accepted": 243,
+      "correct": 242,
+      "precision": 0.9958847736625515
+    }
+  ],
+  "model": {
+    "sha256": "eaac7d40c69a4be07b913f8b9504962c2398d847ffa29eadbf2c3383e783bfe4",
+    "bytes": 22940224
+  },
+  "threshold": 0.4,
+  "margin": 0.05,
+  "reports": {
+    "validation": {
+      "n": 128,
+      "correct": 126,
+      "accepted": 110,
+      "accepted_correct": 110,
+      "abstained": 2,
+      "silence_false_positive": 0,
+      "high_register": {
+        "n": 16,
+        "correct": 14
+      },
+      "rows": [
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C#:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 66,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F#:maj",
+          "truth": "G#",
+          "bass_midi": 68,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F#:maj",
+          "truth": "A#",
+          "bass_midi": 70,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "B",
+          "bass_midi": 71,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G#:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G#:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 66,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F#:maj",
+          "truth": "G#",
+          "bass_midi": 68,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F#:maj",
+          "truth": "A#",
+          "bass_midi": 70,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "B",
+          "bass_midi": 71,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "E:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "E:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "E:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "E:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 77,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "G",
+          "bass_midi": 79,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "A",
+          "bass_midi": 81,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F:maj",
+          "truth": "A#",
+          "bass_midi": 82,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C#:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 79,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "A",
+          "bass_midi": 81,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 83,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G:maj",
+          "truth": "C",
+          "bass_midi": 72,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        }
+      ]
+    },
+    "test": {
+      "n": 128,
+      "correct": 124,
+      "accepted": 110,
+      "accepted_correct": 108,
+      "abstained": 2,
+      "silence_false_positive": 0,
+      "high_register": {
+        "n": 16,
+        "correct": 12
+      },
+      "rows": [
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C#:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 62,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D:maj",
+          "truth": "E",
+          "bass_midi": 64,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "F#",
+          "bass_midi": 66,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "0-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "G",
+          "bass_midi": 67,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "0-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "0-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "0-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C#:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "1-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 70,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "C",
+          "bass_midi": 60,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "D",
+          "bass_midi": 62,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "1-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "D#",
+          "bass_midi": 63,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "1-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "1-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C#:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "2-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "B:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "B:maj",
+          "truth": "D#",
+          "bass_midi": 39,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "2-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "B:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "2-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A:maj",
+          "truth": "C#",
+          "bass_midi": 37,
+          "predicted_bass": "C#"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 75,
+          "predicted_bass": "D#"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "F",
+          "bass_midi": 77,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "G",
+          "bass_midi": 79,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "2-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "G#",
+          "bass_midi": 80,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G#:maj",
+          "truth": "G#",
+          "bass_midi": 44,
+          "predicted_bass": "G#"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "2-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "F#:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "2-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "2-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "F:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A:maj",
+          "truth": "A",
+          "bass_midi": 45,
+          "predicted_bass": "A"
+        },
+        {
+          "group": "3-root_motion",
+          "kind": "root_motion",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D:maj",
+          "truth": "F#",
+          "bass_midi": 42,
+          "predicted_bass": "F#"
+        },
+        {
+          "group": "3-fixed_upper",
+          "kind": "fixed_upper",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "G:maj",
+          "truth": "G",
+          "bass_midi": 43,
+          "predicted_bass": "G"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "G:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "3-inversions",
+          "kind": "inversions",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "G:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "D#:maj",
+          "truth": "D#",
+          "bass_midi": 75,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "D#:maj",
+          "truth": "F",
+          "bass_midi": 77,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "D#:maj",
+          "truth": "G",
+          "bass_midi": 79,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-high_piano",
+          "kind": "high_piano",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "D#:maj",
+          "truth": "G#",
+          "bass_midi": 80,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-passing_tone",
+          "kind": "passing_tone",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "B:maj",
+          "truth": "B",
+          "bass_midi": 47,
+          "predicted_bass": "B"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-weak_bass",
+          "kind": "weak_bass",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "A#:maj",
+          "truth": "A#",
+          "bass_midi": 46,
+          "predicted_bass": "A#"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "C:maj",
+          "truth": "C",
+          "bass_midi": 36,
+          "predicted_bass": "C"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "C:maj",
+          "truth": "D",
+          "bass_midi": 38,
+          "predicted_bass": "D"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "C:maj",
+          "truth": "E",
+          "bass_midi": 40,
+          "predicted_bass": "E"
+        },
+        {
+          "group": "3-arpeggio",
+          "kind": "arpeggio",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "C:maj",
+          "truth": "F",
+          "bass_midi": 41,
+          "predicted_bass": "F"
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 0.4,
+          "end": 2.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 2.4,
+          "end": 4.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 4.4,
+          "end": 6.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        },
+        {
+          "group": "3-silence",
+          "kind": "silence",
+          "start": 6.4,
+          "end": 8.4,
+          "label": "N",
+          "truth": null,
+          "bass_midi": null,
+          "predicted_bass": null
+        }
+      ]
+    }
+  }
+}

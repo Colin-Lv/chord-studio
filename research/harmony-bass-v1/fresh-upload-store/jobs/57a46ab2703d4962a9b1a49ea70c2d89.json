@@ -1,0 +1,98 @@
+{
+  "id": "57a46ab2703d4962a9b1a49ea70c2d89",
+  "project_id": "296e10cccb3b4fa4b227b27c319f819c",
+  "profile": "retained10",
+  "status": "running",
+  "stages": [
+    {
+      "id": "retained10",
+      "label": "检查冻结模型并提取音频特征",
+      "started_at": "2026-11-01T16:01:30.697383+00:00",
+      "status": "completed",
+      "seconds": 6.729863600019598
+    },
+    {
+      "id": "waveform",
+      "label": "生成播放波形",
+      "started_at": "2026-11-01T16:01:37.567918+00:00",
+      "status": "completed",
+      "seconds": 0.04282260002219118
+    },
+    {
+      "id": "key",
+      "label": "独立估计全曲主调",
+      "started_at": "2026-11-01T16:01:37.622134+00:00",
+      "status": "completed",
+      "seconds": 2.2205358000064734
+    },
+    {
+      "id": "beats",
+      "label": "定位拍点与小节",
+      "started_at": "2026-11-01T16:01:39.860209+00:00",
+      "status": "completed",
+      "seconds": 2.1354837999970187
+    },
+    {
+      "id": "stabilize",
+      "label": "生成稳定时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.014958+00:00",
+      "status": "completed",
+      "seconds": 0.022426700015785173
+    },
+    {
+      "id": "span",
+      "label": "生成小节池化时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.048935+00:00",
+      "status": "completed",
+      "seconds": 0.006830099999206141
+    },
+    {
+      "id": "full",
+      "label": "生成完整段解码时间轴（派生）",
+      "started_at": "2026-11-01T16:01:42.065797+00:00",
+      "status": "completed",
+      "seconds": 1.6275252000195906
+    },
+    {
+      "id": "key_chords",
+      "label": "用和弦进行交叉验证主调",
+      "started_at": "2026-11-01T16:01:43.857678+00:00",
+      "status": "failed",
+      "error": "和弦太少，无法用和声证据推断主调",
+      "seconds": 0.0014762000064365566
+    },
+    {
+      "id": "key_experimental",
+      "label": "连续评分主调（实验）",
+      "started_at": "2026-11-01T16:01:43.872742+00:00",
+      "status": "failed",
+      "error": "可解析和弦太少（2），无法做连续评分",
+      "seconds": 0.009961500007193536
+    },
+    {
+      "id": "structure",
+      "label": "分析段落相似性与和声循环",
+      "started_at": "2026-11-01T16:01:43.892914+00:00",
+      "status": "completed",
+      "seconds": 1.7466734999907203
+    },
+    {
+      "id": "harmonic_key_v3",
+      "label": "根据和弦进行识别局部调性与转调段落",
+      "started_at": "2026-11-01T16:01:45.667729+00:00",
+      "status": "completed",
+      "seconds": 0.004587499977787957
+    },
+    {
+      "id": "joint_harmony",
+      "label": "识别和弦与指定低音（默认）",
+      "started_at": "2026-11-01T16:01:45.709123+00:00",
+      "status": "completed",
+      "seconds": 23.939679199975217
+    }
+  ],
+  "download": false,
+  "key_mode": "continuous",
+  "stage": "joint_harmony",
+  "stage_label": "识别和弦与指定低音（默认）"
+}

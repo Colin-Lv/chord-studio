@@ -1,0 +1,22 @@
+{
+  "id": "296e10cccb3b4fa4b227b27c319f819c",
+  "title": "Synthetic slash-bass cold-start check",
+  "created_at": "2026-11-01T16:01:30.517231+00:00",
+  "status": "ready",
+  "current_run": "57a46ab2703d4962a9b1a49ea70c2d89",
+  "active_job": null,
+  "audio": "audio.wav",
+  "audio_identity": {
+    "sha256": "31581182efc2a6128d7076bca8f8f36c9404a2cb522c17fe9ac0d8ddf2c8d2ff",
+    "bytes": 809312
+  },
+  "stems": {
+    "bs_roformer_sw": {
+      "sha256": "31581182efc2a6128d7076bca8f8f36c9404a2cb522c17fe9ac0d8ddf2c8d2ff",
+      "manifest": "D:\\ChordStudio\\data\\stems\\31581182efc2a6128d7076bca8f8f36c9404a2cb522c17fe9ac0d8ddf2c8d2ff\\bs_roformer_sw\\manifest.json",
+      "updated_at": "2026-11-01T16:02:09.397272+00:00",
+      "model": "bs_roformer_sw",
+      "bpm": 120.0
+    }
+  }
+}

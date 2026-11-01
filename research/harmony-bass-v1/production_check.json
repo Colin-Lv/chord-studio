@@ -1,0 +1,113 @@
+{
+  "c1ebfe4bb5924849b320be11b0aa1f9e": {
+    "version": "stem-bass-harmony-v1",
+    "created_at": "2026-11-01T14:33:46.336615+00:00",
+    "model": {
+      "name": "bs_roformer_sw",
+      "label": "六轨精细",
+      "package": "audio-separator 0.48",
+      "device": "cuda",
+      "seconds": 67.5
+    },
+    "segments": 75,
+    "seconds": 6.14,
+    "source_audio_sha256": "6d1cda8c0749235fcac50e3d616a2a1397799dab9ea573d333dc31890bffe10e",
+    "input_stems": {
+      "other": "c47357ee44eba414426b6ce386e5f6a78905dc1e756b2d909b5cb6192a366b1d",
+      "guitar": "8dd2fd5019e7de8b1f0829163fa9f08fe81b016ed2e531e381dfd9f81455f39e",
+      "piano": "febbc3fd7088654308d0ffdb222818cbd8d3d1e0493476db8ea652a17d16b7dd",
+      "bass": "f33980f3f2fe5bdf7685bc8b9f1b3aedba6e1aedee2244ef4a8a20b8f521e961"
+    },
+    "groups": {
+      "accompaniment": [
+        "other",
+        "guitar",
+        "piano"
+      ],
+      "bass": [
+        "bass"
+      ]
+    },
+    "bass_model": {
+      "sha256": "97df978ff95515bb5c37c2e640d73a962a1f05f668ea3ddb5e5446f7c1ff0c73",
+      "bytes": 14369593
+    },
+    "implementation_sha256": {
+      "stem_bass_harmony.py": "53f8f5110b8e7b2e970d05366be719803d27a59160ab584d9dcd4b38ef291b81",
+      "bass_voice.py": "3633cd356b87f92fdddf4de7db1db8066ac0e95509a3610bc0a47c90cdbd64ab",
+      "full_decode.py": "b96034cced67b24af756be7a279d2478b4e20d2dc265c63245f63a55b8eb7bd7"
+    },
+    "posterior_sha256": "57c671c406e850ddeee5e38ff944a334be66ba63bada93063376eabfd2c3d751",
+    "baseline_sha256": "af247855a4dbde0105f28e520df152957671e8f93c227d310515323f90c23b1d",
+    "key_used": false,
+    "reference_inputs": false,
+    "fitting": false,
+    "limitations": [
+      "Bass scores are uncalibrated; uncertain bass is omitted",
+      "Bass range E1–B3; not a complete polyphonic transcription",
+      "Chord roots still use frozen v90 evidence; 10 qualities only",
+      "Real-song regression is development evidence, not a blind benchmark"
+    ]
+  },
+  "aa5a41797bb343e590abcf4d8b27ae54": {
+    "version": "stem-bass-harmony-v1",
+    "created_at": "2026-11-01T14:33:55.686888+00:00",
+    "model": {
+      "name": "bs_roformer_sw",
+      "label": "六轨精细",
+      "package": "demucs 4.1.0",
+      "device": "cuda",
+      "seconds": 70.9
+    },
+    "segments": 71,
+    "seconds": 9.33,
+    "source_audio_sha256": "d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f",
+    "input_stems": {
+      "other": "d93e9d8e82fd3bb0c54e1713c424127277146eb8e3dceb94bb891b11bb2db8ef",
+      "guitar": "aad77f64a0ff998d4466728cf2c6ee8c2fc443bf6dfdebd831cd723e5e6f26c2",
+      "piano": "3442250872998b69df1d417a587d9e2aa259e3032094724fe5f3ec9bd2bab9e4",
+      "bass": "b94750650e01cf25a29ad4e4e0c78f8194c5c8712ea5a81f9f100408d4f3d382"
+    },
+    "groups": {
+      "accompaniment": [
+        "other",
+        "guitar",
+        "piano"
+      ],
+      "bass": [
+        "bass"
+      ]
+    },
+    "bass_model": {
+      "sha256": "97df978ff95515bb5c37c2e640d73a962a1f05f668ea3ddb5e5446f7c1ff0c73",
+      "bytes": 14369593
+    },
+    "implementation_sha256": {
+      "stem_bass_harmony.py": "53f8f5110b8e7b2e970d05366be719803d27a59160ab584d9dcd4b38ef291b81",
+      "bass_voice.py": "3633cd356b87f92fdddf4de7db1db8066ac0e95509a3610bc0a47c90cdbd64ab",
+      "full_decode.py": "b96034cced67b24af756be7a279d2478b4e20d2dc265c63245f63a55b8eb7bd7"
+    },
+    "posterior_sha256": "5c3f800fcca0fa4c2875233551adf1fbfaf614e0bd78b3a9a1ecd209ced3dfe8",
+    "baseline_sha256": "ef1bc21ce63297238f0a277d57323169f436c09a5d26c08b9ae130ffe514a8a2",
+    "key_used": false,
+    "reference_inputs": false,
+    "fitting": false,
+    "limitations": [
+      "Bass scores are uncalibrated; uncertain bass is omitted",
+      "Bass range E1–B3; not a complete polyphonic transcription",
+      "Chord roots still use frozen v90 evidence; 10 qualities only",
+      "Real-song regression is development evidence, not a blind benchmark"
+    ],
+    "core_metrics": {
+      "exact": 0.7357592171937797,
+      "root": 0.9465315394024114,
+      "coverage": 1.0,
+      "seconds": 228.92,
+      "segments": 71,
+      "boundary_precision": 0.8382352941176471,
+      "boundary_recall": 0.9344262295081968,
+      "boundary_f1": 0.8837209302325582,
+      "tolerance_seconds": 0.5
+    }
+  }
+}

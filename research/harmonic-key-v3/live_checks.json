@@ -1,0 +1,325 @@
+{
+  "loaded_module": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\harmonic_key_v3.py",
+  "assets": {
+    "/": {
+      "status": 200,
+      "sha256": "f7b4385fa82eddad052be44a98a75b82d25c87c31d8ab1c8245ab5290c0368d3"
+    },
+    "/assets/harmonic-key.js": {
+      "status": 200,
+      "sha256": "6f22c04878ff71edb495f18d7e5f75448d5437c12d9a1dddb7d40fe1f7286edc"
+    },
+    "/assets/app.js": {
+      "status": 200,
+      "sha256": "65f737c3267b64f3a434afbf524ce8cec3eec9039b638498051ab4e322d04108"
+    }
+  },
+  "projects": [
+    {
+      "project": "c1ebfe4bb5924849b320be11b0aa1f9e",
+      "main": "G#",
+      "path": [
+        [
+          5.8,
+          47.81,
+          "B"
+        ],
+        [
+          47.81,
+          74.82,
+          "G#"
+        ],
+        [
+          74.82,
+          113.82,
+          "B"
+        ],
+        [
+          113.82,
+          197.95,
+          "G#"
+        ]
+      ],
+      "changes": [
+        {
+          "time": 47.81,
+          "from_key": "B",
+          "to_key": "G#",
+          "status": "ambiguous",
+          "first_distinctive_chord": 50.82,
+          "first_authentic_arrival": 56.825,
+          "boundary_interval": [
+            44.89,
+            50.82
+          ],
+          "evidence": [
+            {
+              "start": 47.81,
+              "end": 50.82,
+              "chord": "A:maj9",
+              "degree_semitones": 1,
+              "role": "含需解释的变化音",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 50.82,
+              "end": 56.825,
+              "chord": "D#:7",
+              "degree_semitones": 7,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 56.825,
+              "end": 59.815,
+              "chord": "G#:maj",
+              "degree_semitones": 0,
+              "role": "调内",
+              "tonic": true,
+              "arrival": true
+            },
+            {
+              "start": 59.815,
+              "end": 61.29,
+              "chord": "C#:maj",
+              "degree_semitones": 5,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            }
+          ],
+          "interpretation": "转调候选"
+        },
+        {
+          "time": 74.82,
+          "from_key": "G#",
+          "to_key": "B",
+          "status": "supported",
+          "first_distinctive_chord": 74.82,
+          "first_authentic_arrival": 89.81,
+          "boundary_interval": [
+            73.325,
+            76.315
+          ],
+          "evidence": [
+            {
+              "start": 74.82,
+              "end": 76.315,
+              "chord": "G#:min",
+              "degree_semitones": 9,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 76.315,
+              "end": 77.81,
+              "chord": "B:maj7",
+              "degree_semitones": 0,
+              "role": "调内",
+              "tonic": true,
+              "arrival": false
+            },
+            {
+              "start": 77.81,
+              "end": 79.33,
+              "chord": "E:maj7",
+              "degree_semitones": 5,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 79.33,
+              "end": 83.81,
+              "chord": "F#:sus4",
+              "degree_semitones": 7,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            }
+          ],
+          "interpretation": "转调候选"
+        },
+        {
+          "time": 113.82,
+          "from_key": "B",
+          "to_key": "G#",
+          "status": "supported",
+          "first_distinctive_chord": 116.83,
+          "first_authentic_arrival": 176.81,
+          "boundary_interval": [
+            110.81,
+            116.83
+          ],
+          "evidence": [
+            {
+              "start": 113.82,
+              "end": 116.83,
+              "chord": "A:maj7",
+              "degree_semitones": 1,
+              "role": "含需解释的变化音",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 116.83,
+              "end": 125.825,
+              "chord": "D#:7",
+              "degree_semitones": 7,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 125.825,
+              "end": 127.31,
+              "chord": "C#:maj",
+              "degree_semitones": 5,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 127.31,
+              "end": 128.81,
+              "chord": "D#:maj",
+              "degree_semitones": 7,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            }
+          ],
+          "interpretation": "转调候选"
+        }
+      ]
+    },
+    {
+      "project": "aa5a41797bb343e590abcf4d8b27ae54",
+      "main": "C",
+      "path": [
+        [
+          1.8,
+          57.2,
+          "C"
+        ],
+        [
+          57.2,
+          142.12,
+          "Am"
+        ],
+        [
+          142.12,
+          232.62,
+          "C"
+        ]
+      ],
+      "changes": [
+        {
+          "time": 57.2,
+          "from_key": "C",
+          "to_key": "Am",
+          "status": "supported",
+          "first_distinctive_chord": 85.82,
+          "first_authentic_arrival": 138.44,
+          "boundary_interval": [
+            53.52,
+            60.88
+          ],
+          "evidence": [
+            {
+              "start": 57.2,
+              "end": 60.88,
+              "chord": "A:min7",
+              "degree_semitones": 0,
+              "role": "调内",
+              "tonic": true,
+              "arrival": false
+            },
+            {
+              "start": 60.88,
+              "end": 64.57,
+              "chord": "F:maj9",
+              "degree_semitones": 8,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 64.57,
+              "end": 68.25,
+              "chord": "G:maj",
+              "degree_semitones": 10,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 68.25,
+              "end": 71.97,
+              "chord": "E:min7",
+              "degree_semitones": 7,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            }
+          ],
+          "interpretation": "转调候选"
+        },
+        {
+          "time": 142.12,
+          "from_key": "Am",
+          "to_key": "C",
+          "status": "supported",
+          "first_distinctive_chord": null,
+          "first_authentic_arrival": null,
+          "boundary_interval": [
+            138.44,
+            145.81
+          ],
+          "evidence": [
+            {
+              "start": 142.12,
+              "end": 145.81,
+              "chord": "G#:maj",
+              "degree_semitones": 8,
+              "role": "平行调借用",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 145.81,
+              "end": 149.49,
+              "chord": "C:maj7",
+              "degree_semitones": 0,
+              "role": "调内",
+              "tonic": true,
+              "arrival": false
+            },
+            {
+              "start": 149.49,
+              "end": 153.2,
+              "chord": "D:min7",
+              "degree_semitones": 2,
+              "role": "调内",
+              "tonic": false,
+              "arrival": false
+            },
+            {
+              "start": 153.2,
+              "end": 156.88,
+              "chord": "C:maj9",
+              "degree_semitones": 0,
+              "role": "调内",
+              "tonic": true,
+              "arrival": false
+            }
+          ],
+          "interpretation": "转调候选"
+        }
+      ]
+    }
+  ]
+}

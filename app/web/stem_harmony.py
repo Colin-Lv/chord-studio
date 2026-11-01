@@ -271,5 +271,7 @@ def publish_result(run_dir, segments, meta, make_default=False):
     result.update(sources=sources, stem_harmony_v2=dict(meta, source_id=source_id))
     if make_default:
         result['default_source'] = source_id
+    from .harmonic_key import refresh
+    refresh(result,[source_id])
     atomic_json(path, result)
     return source_id
