@@ -1,0 +1,131 @@
+{
+  "created": "2024-07-28T11:17:11.158664+00:00",
+  "modified": "2024-07-28T11:17:11.388141+00:00",
+  "id": 12802440,
+  "conceptrecid": "12802439",
+  "doi": "10.5281/zenodo.12802440",
+  "conceptdoi": "10.5281/zenodo.12802439",
+  "doi_url": "https://doi.org/10.5281/zenodo.12802440",
+  "metadata": {
+    "title": "GuitarDuets",
+    "doi": "10.5281/zenodo.12802440",
+    "publication_date": "2024-07-23",
+    "description": "<h1>GuitarDuets Dataset</h1>\n<div>\n<div>\n<div>\n<div>\n<p>We present GuitarDuets, a dataset that provides high-quality classical guitar duet recordings alongside midi annotations. The dataset includes approximately three hours of real and synthesized classical guitar duet recordings, with note-level midi annotations for the synthesized duets. During the recording process, four different classical guitars were used to ensure timbral diversity. Some tracks were replayed using different guitars to further enhance timbral diversity and avoid overfitting. The recordings took place in a quiet, acoustically treated room using high-quality condenser microphones (Presonus PM-2), one for each guitar. To address the issue of cross-microphone sound bleeding, a specialized test set of 7 tracks free from such leakage was recorded. Each guitar track was exported as a 44,100 Hz, 16-bit WAV file in stereo format. The dataset is designed for developing and evaluating monotimbral music source separation algorithms.</p>\n<p>&nbsp;</p>\n<p>For Academic Purposes, please cite the following publication:</p>\n<p>M. Glytsos, C. Garoufis, and A. Zlatintsi and P. Maragos, \"Classical Guitar Duet Separation using GuitarDuets - A Dataset of Real and Synthesized Guitar Recordings\", in Proc. of the 25th Int. Society for Music Information Retrieval Conf., San Francisco, United States, 2024.</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n<div>\n<div>\n<div>&nbsp;</div>\n</div>\n</div>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Glytsos, Marios",
+        "affiliation": "National Technical University of Athens",
+        "orcid": "0009-0005-8402-0088"
+      },
+      {
+        "name": "Garoufis, Christos",
+        "affiliation": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
+        "orcid": "0000-0002-1714-3943"
+      },
+      {
+        "name": "Zlatintsi, Athanasia",
+        "affiliation": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
+        "orcid": "0000-0002-1922-9310"
+      },
+      {
+        "name": "Maragos, Petros",
+        "affiliation": "National Technical University of Athens",
+        "orcid": "0000-0003-0534-2707"
+      }
+    ],
+    "version": "version-1.0",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "meeting": {
+      "title": "25th International Society of Music Information Retrieval Conference",
+      "acronym": "ISMIR",
+      "dates": "10-14 November 2024",
+      "place": "San Fransisco, CA, USA",
+      "url": "https://ismir2024.ismir.net/"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "12802439"
+          }
+        }
+      ]
+    }
+  },
+  "title": "GuitarDuets",
+  "links": {
+    "self": "https://zenodo.org/api/records/12802440",
+    "self_html": "https://zenodo.org/records/12802440",
+    "preview_html": "https://zenodo.org/records/12802440?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.12802440",
+    "self_doi": "https://doi.org/10.5281/zenodo.12802440",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.12802440",
+    "reserve_doi": "https://zenodo.org/api/records/12802440/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/12802439",
+    "parent_html": "https://zenodo.org/records/12802439",
+    "parent_doi": "https://doi.org/10.5281/zenodo.12802439",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.12802439",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:12802440/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:12802440/sequence/default",
+    "files": "https://zenodo.org/api/records/12802440/files",
+    "media_files": "https://zenodo.org/api/records/12802440/media-files",
+    "latest": "https://zenodo.org/api/records/12802440/versions/latest",
+    "latest_html": "https://zenodo.org/records/12802440/latest",
+    "versions": "https://zenodo.org/api/records/12802440/versions",
+    "draft": "https://zenodo.org/api/records/12802440/draft",
+    "access_links": "https://zenodo.org/api/records/12802440/access/links",
+    "access_grants": "https://zenodo.org/api/records/12802440/access/grants",
+    "access_users": "https://zenodo.org/api/records/12802440/access/users",
+    "access_request": "https://zenodo.org/api/records/12802440/access/request",
+    "access": "https://zenodo.org/api/records/12802440/access",
+    "communities": "https://zenodo.org/api/records/12802440/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/12802440/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/12802440/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/12802440/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/12802440/quota-increase",
+    "requests": "https://zenodo.org/api/records/12802440/requests"
+  },
+  "updated": "2024-07-28T11:17:11.388141+00:00",
+  "recid": "12802440",
+  "revision": 4,
+  "files": [
+    {
+      "id": "b73618e7-eded-4de8-913d-0293038ec505",
+      "key": "GuitarDuets.zip",
+      "size": 3534777196,
+      "checksum": "md5:b4f03550a01f1dd35b9b3c258702b982",
+      "links": {
+        "self": "https://zenodo.org/api/records/12802440/files/GuitarDuets.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1097676"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 532,
+    "unique_downloads": 176,
+    "views": 779,
+    "unique_views": 743,
+    "version_downloads": 532,
+    "version_unique_downloads": 176,
+    "version_unique_views": 743,
+    "version_views": 779
+  },
+  "state": "done",
+  "submitted": true
+}

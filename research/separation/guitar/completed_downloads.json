@@ -1,0 +1,387 @@
+[
+  {
+    "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_acoustic-guitar_mvsep.ckpt?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\bs_mega_53stem_acoustic-guitar_mvsep.ckpt",
+    "size": 77624038,
+    "sha256": "fa386b2e7b1ea4f12b9b5c557444c0dc78648ef4ee299de2759d86457e182b3e",
+    "md5": "7600614595398b34a396123b67aa63ad"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_acoustic-guitar_mvsep_config.yaml?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\bs_mega_53stem_acoustic-guitar_mvsep_config.yaml",
+    "size": 1584,
+    "sha256": "040148363929b68fd4a4e323358a245938568692ca201fc2f703b6449dc8b569",
+    "md5": "a476add44997927a1422ca4fc9ef47a1"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_electric-guitar_mvsep.ckpt?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\bs_mega_53stem_electric-guitar_mvsep.ckpt",
+    "size": 77624038,
+    "sha256": "cd506bfce9474f91a31001967f2c4935ce4e67f643da3df20d04058da927c553",
+    "md5": "6278b32c138dea0bbc94b60bbae6d9e3"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_electric-guitar_mvsep_config.yaml?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\bs_mega_53stem_electric-guitar_mvsep_config.yaml",
+    "size": 1584,
+    "sha256": "e89d0646a99f08e99e56d71de22b5accee2628fd11a91928ad556fc7b8617ecb",
+    "md5": "d961eead6782a0df8f6b602ae3ad6a0b"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/main/htdemucs/demucs4_lead_rhythm_guitar_drypaint.ckpt?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\demucs4_lead_rhythm_guitar_drypaint.ckpt",
+    "size": 109822623,
+    "sha256": "946ffd50d7f2fd87e447d880525283e88bd9061e1b428d4f1d380e764d54d618",
+    "md5": "1c63e0abe3f00a7e20617c12ea4895ae"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/main/htdemucs/demucs4_lead_rhythm_guitar_drypaint_config.yaml?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\demucs4_lead_rhythm_guitar_drypaint_config.yaml",
+    "size": 3356,
+    "sha256": "fe1e4e740ccf4783bc4cdfbb8a32aacc2731544e61aa21f96cd6fb19ee2b5f2c",
+    "md5": "196629f979b7ec30489d3747cbc667ea"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/main/mel_band_roformer/mbr_lead_rhythm_guitar_listra92.ckpt?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\mbr_lead_rhythm_guitar_listra92.ckpt",
+    "size": 337073664,
+    "sha256": "b3c47bca33609ca1ba0bb2d2076410bfd1eb941b051b72afc1f3e24d12b17eef",
+    "md5": "9ad7c9cc64e9d8983f2ff876310e7755"
+  },
+  {
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/main/mel_band_roformer/mbr_lead_rhythm_guitar_listra92_config.yaml?download=true",
+    "path": "D:\\ChordStudio\\data\\models\\guitar\\mbr_lead_rhythm_guitar_listra92_config.yaml",
+    "size": 1800,
+    "sha256": "a26685bc9ab10aab4dc153b74ec3559f1b4bd2251d129a13b6b22fe3a27d382d",
+    "md5": "47ae265d082463438f8239edcba571c4"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/README.md",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\README.md",
+    "size": 2441,
+    "sha256": "7d7c070cc589fc9811c190b9043964364f05a850a968dd66ae9ca5f76afcf802",
+    "md5": "36a4817352dd04af99d0f3bcf9dd776a"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/BS-Locoformer_query/config.yaml",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\BS-Locoformer_query\\config.yaml",
+    "size": 6279,
+    "sha256": "4111d2150cdca2e5c35e169c0a15c0b50e3dc7382d4c4ce6cc2e25045f51752f",
+    "md5": "db77a03bcdae770c5d0d6c3dd5ec9764"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/BS-Locoformer_query/model.pth",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\BS-Locoformer_query\\model.pth",
+    "size": 470401878,
+    "sha256": "465c2aaf8c84a971d8eac80578de01db06ad36ab8f528f059ca90e62feb90e33",
+    "md5": "068bed00c7f0821b4f96eeb3f07a21cd"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/BS-Locoformer_query/states.json",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\BS-Locoformer_query\\states.json",
+    "size": 134,
+    "sha256": "e334ec6c222770e8cb5518a285fb61eba1402aeb3734056a571ddd6603efb10a",
+    "md5": "492241e4b46b7ad8ba89f1e21622c400"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/classifiers/multilabel_classifier.pkl",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\classifiers\\multilabel_classifier.pkl",
+    "size": 21502,
+    "sha256": "61ff6b179d5db3b1d2390c6050187a57ee09e44dd3876df0a4b9c750264f232f",
+    "md5": "49b9b962529a013481e5bdb7721ae8ff"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/classifiers/pca_params_train.pkl",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\classifiers\\pca_params_train.pkl",
+    "size": 396509,
+    "sha256": "d101fc988d22e9bf2454b3380a8359e3e1525f390026f30131e04f53906fb979",
+    "md5": "e17934efa167665c3babca7fa76a8c2e"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/classifiers/stem_classifier_pcatrain.pkl",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\classifiers\\stem_classifier_pcatrain.pkl",
+    "size": 21299,
+    "sha256": "b6ca1da4cb2aaea828497ac0475232d179a6bfe64b941cffe7c182a0c4320723",
+    "md5": "e6656ba16e7be0794b77a3545f97e300"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/SEG_mixemb/config.yaml",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\SEG_mixemb\\config.yaml",
+    "size": 7025,
+    "sha256": "fcb8d83b44e8b897c7c102a217dbf397c82841bb15699a298434117240c512d0",
+    "md5": "80c851ae53f72609987f9d5351d34ec6"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/SEG_mixemb/model.pth",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\SEG_mixemb\\model.pth",
+    "size": 150237319,
+    "sha256": "309a4b366e4883dcc943f931da09fb2237520198bff38800d0ec1756e4fa9143",
+    "md5": "89cebbd1cec510eb56109e9dc4af2967"
+  },
+  {
+    "url": "https://huggingface.co/remus-aalto/MuS3D/resolve/main/SEG_mixemb/states.json",
+    "path": "D:\\ChordStudio\\data\\models\\mus3d\\SEG_mixemb\\states.json",
+    "size": 103,
+    "sha256": "2c066a31397f5f7130c80c9531c11939a9bfc5174028a3192ca46df8c5511ad1",
+    "md5": "b5c856224766c412b0e3c8ba939ede3a"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/01.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.gp",
+    "size": 14513,
+    "sha256": "c2ba49408ed5a55d5f2d26bfbb73d95e732100acf6da1affe00409d6230d1780",
+    "md5": "811dde6c5ffd1754dcbd468100a869af"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/01.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.jams",
+    "size": 52172,
+    "sha256": "a8d8741567cf5247b878800dc78ad9a6f5add784d01f2c1a7328e59d650f5ee1",
+    "md5": "083c7dae8e6556c20b9a2d762e2c977f"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/01.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.wav",
+    "size": 8640044,
+    "sha256": "f7d5bd85dfaf4e5262599cc5b07ff40ced6516690698021f16e1ce23a80d791d",
+    "md5": "2eb739c5fb73e6327bb47267afe3eddf"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/02.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\02.gp",
+    "size": 14835,
+    "sha256": "36bf7e4a157a1ab2ac6759d9a13711f879d8223c351adad42820b3f7e8735d86",
+    "md5": "dca6ce7f304ab28b7c3fdfbf8780a2ff"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/02.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\02.jams",
+    "size": 120087,
+    "sha256": "a50fb3a0c43b689da17c665c2c88639693357136dabc4c305274f0c214898bbd",
+    "md5": "848f984b17b261a65585e25fba977a33"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/02.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\02.wav",
+    "size": 8886896,
+    "sha256": "1f58d1b81669f559aeb1d6d53a3f83ebfd93627f4c1cc525884827d789ff428a",
+    "md5": "69b8701ea9a81428a6346e0d3d4b9b85"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/03.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\03.gp",
+    "size": 14398,
+    "sha256": "8f73870b4b7e897d72889771e80486d1c54e65dbce4d13ac0ea58c6acf4b8112",
+    "md5": "820a2337cc43c1b1b606151cfae4e6bb"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/03.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\03.jams",
+    "size": 45984,
+    "sha256": "d880a33c0ca549516396008e8e0743a17f71d8c6815c4ed3fe1f81bcca6407e3",
+    "md5": "721ec50f570892f9cfa88fb1e22a6113"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/03.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\03.wav",
+    "size": 10368044,
+    "sha256": "5853a7816cdb2780e674b51a9b61f5e70bd4d3b748037e712da9eaafb520ed97",
+    "md5": "28141f17e46399553c52f5ed27bc10e2"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/04.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\04.gp",
+    "size": 15221,
+    "sha256": "e1cb255bd728c4ea6aa3f7bbada1ea6b6211e0c5bac0d5cc878630981184e6bd",
+    "md5": "53aa7e4d86996aaeedeeef2e47dfacf3"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/04.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\04.jams",
+    "size": 86938,
+    "sha256": "68d5c24779002f9e9c30cde71d88f1cd772031382f9ae3ce75f99f6e5470dd8d",
+    "md5": "87426719ac4353d73e1af09970c31eb1"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/04.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\04.wav",
+    "size": 8797130,
+    "sha256": "a5985aea3379e4a0fbe8cb7126c96e0f88517367823e3f6eaed84a7db438af2b",
+    "md5": "6fe2f6f915953e8ae28b8a84a7677d0f"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/05.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\05.gp",
+    "size": 15069,
+    "sha256": "77ab8dc14e165fbc4f7d9708f6cb09f72faac27ffd85fda38c22bab0baad5896",
+    "md5": "21a5166d9d16e8ac90c6ce16256a4ce8"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/05.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\05.jams",
+    "size": 56724,
+    "sha256": "bd9437c0ce51175aeb75c5671ffba31f5778999689c02872e80de3f966ac9f3c",
+    "md5": "c5c2fd376031177e87a3eb4ad12d220c"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/05.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\05.wav",
+    "size": 9600044,
+    "sha256": "8b53f0648c1a71d5f63031d56d6c792f3be3accadbf50300463982dae453dae6",
+    "md5": "3435348c2b6702524dade471be70e4eb"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/06.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\06.gp",
+    "size": 13771,
+    "sha256": "90c6940579fbbfb50b46e1535850f12b9c1e61a311be7ddf746191528e1755b9",
+    "md5": "dad00cbe2d7a28399106f0ec7221a8f0"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/06.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\06.jams",
+    "size": 186045,
+    "sha256": "ac52f065eac573fc6557c47cfd57d75d1e3ed4e8f04fdb6d23b11e44a9c330cc",
+    "md5": "5ababdcf7741400dc93768334f6c899d"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/06.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\06.wav",
+    "size": 8723924,
+    "sha256": "b892b6d70bb631b16cb33023bbdf3fe15174b76ecf373eb53ec7d3b664f8da4d",
+    "md5": "9f7ead382f373259b466ccd1884ed173"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/07.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\07.gp",
+    "size": 14243,
+    "sha256": "b655232bb66db3ea82ece746e46f16d0690623c47b8879005aeac4fcb7065e34",
+    "md5": "ff4998113e7524e3063c27a7229f0c72"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/07.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\07.jams",
+    "size": 38330,
+    "sha256": "8790d6e6fa8054a195bedf8797d86093be425a0790d68d337ce99069d9fdc40c",
+    "md5": "e693844f4b46fd3831c7c4ee0a2c3aa8"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/07.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\07.wav",
+    "size": 8755244,
+    "sha256": "db1585f1b4d6c2328d86df3d846bb9cbce01f8717cfd3a8cda17ff10ee84f884",
+    "md5": "77f752ab3e7a5c606a21ac7b0df4fa1c"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/08.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\08.gp",
+    "size": 15050,
+    "sha256": "9a5c08ac8ac247f8c1114fb7bd953d1141cf8634c5fc2f9331e5dbd82c2b8d96",
+    "md5": "25a607d5bc6f7df2a6864bf09d770542"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/08.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\08.jams",
+    "size": 48855,
+    "sha256": "2fcbee4456d8aa97f27c7633ab60029e37a9365efa91d00296c2e4c152a2b0a5",
+    "md5": "513e00c522d53adac0ed9966a5b4c8cd"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/08.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\08.wav",
+    "size": 9169016,
+    "sha256": "dcfb753349cb0a2bd6bba1baad0b4753b2b3ce81977633494b6186ccf8144020",
+    "md5": "a59f373c00b8a327b37ce28f6601404c"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/09.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\09.gp",
+    "size": 14756,
+    "sha256": "83c3ffafc154a308e970c93ad974e092ce68d320652be12b5cf25b16c277a449",
+    "md5": "e4e6e78962d560037cd0fc9cd60c0959"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/09.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\09.jams",
+    "size": 49728,
+    "sha256": "3cd5b0e35999bfcffee396e717c8ddc0057700aaa63c4db93ab04dbad455f24a",
+    "md5": "9f08cae003c6c3d9dc745c2e319496d4"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/09.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\09.wav",
+    "size": 8730980,
+    "sha256": "2ec581885346b8180b9f58898fc923a45f742072b96eb0a14b7faaa8bd752309",
+    "md5": "593aec1394a905a0c8b255a847f54139"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/10.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\10.gp",
+    "size": 13857,
+    "sha256": "6e0fe1640fd150df124ec54f0e20d09f95de4a119bf152f201b3355fb81a5c71",
+    "md5": "3583cd15d0e1ae170ea2f2d77e99ef07"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/10.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\10.jams",
+    "size": 42653,
+    "sha256": "2ea2e1fe0ff0613d257e6c422903ac86497265d8486ca0afb90f3f2668d84dff",
+    "md5": "8cbf70e1b086f4a8fe5cac79572635ae"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/10.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\10.wav",
+    "size": 8730980,
+    "sha256": "d862abfa41f94a8875de82eea3fc7b65194fdc3c87e99b15975a796de2310c0f",
+    "md5": "123818ef1020102252192d9e7a231e07"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/11.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\11.gp",
+    "size": 15356,
+    "sha256": "d47c860249682921f045a4de560ec9ff83e8c2bde8ca46a1fa7ee02e79001345",
+    "md5": "9d7b278dd3fda47cf7a717b0a6cdec86"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/11.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\11.jams",
+    "size": 57003,
+    "sha256": "330f44c21c1c60a8bf2e395f0b0182cff05d9ef204d3caf2e9f9344779e57df5",
+    "md5": "f392b5bba5f3b99866bba91cb4d35a9a"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/11.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\11.wav",
+    "size": 9032774,
+    "sha256": "a8f2f28bc077ce15974827150286f76738ecc9dfd982e26abe34e1bb20381acb",
+    "md5": "4bbaecaaa3e58bef6bb15a6cd0979fe2"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/12.gp/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\12.gp",
+    "size": 15194,
+    "sha256": "74c1699ec9066c75fd38e9deaec9c4db9ffab52a596ac7f2401e4591e9a4121c",
+    "md5": "a21a8f645d41186eb1194571110f5686"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/12.jams/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\12.jams",
+    "size": 47846,
+    "sha256": "8d6aeffdd11ea957908ca486e6b3e9472b68adccae63ab676a550a7decec90fb",
+    "md5": "21217bda094eb8f29edfd1ed2f23ba45"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11406378/files/12.wav/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\egset12\\12.wav",
+    "size": 6702584,
+    "sha256": "ab5e061e449ba1ec2ab04c9e1bff0ab0f14aa7623ccef45b035553ac33976d3c",
+    "md5": "e1ee73508f37d5c28c69877a588665d2"
+  },
+  {
+    "url": "https://zenodo.org/api/records/3371780/files/annotation.zip/content",
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\annotation.zip",
+    "size": 39132574,
+    "sha256": "8daa02e6417ccca1685feb44b135e95928ad7037e5032ecb326b5791856fda99",
+    "md5": "b39b78e63d3446f2e54ddb7a54df9b10"
+  }
+]

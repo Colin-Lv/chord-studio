@@ -1,0 +1,692 @@
+[
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/guitar2.wav",
+    "size": 10584736,
+    "compressed_size": 4156518,
+    "offset": 238,
+    "crc": 2196456557,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+    "sha256": "e94623009d8e2fb45c3c82dfc274656407ff63aa8ed33801a9c02bab59daeb62",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/mix.wav",
+    "size": 10584736,
+    "compressed_size": 4646480,
+    "offset": 4156860,
+    "crc": 4264248779,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\mix.wav",
+    "sha256": "e6b62c446f3ff523ea953cf48f536e6a1f35b34a688c97f96a18650d52c51d53",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/guitar1.wav",
+    "size": 10584736,
+    "compressed_size": 4112927,
+    "offset": 8803440,
+    "crc": 3025474732,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar1.wav",
+    "sha256": "74edf2f74072822cf80831cdc1da7a2a8fb527c3e37dd3ae1d53c31716ede4cc",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/guitar2.wav",
+    "size": 15082936,
+    "compressed_size": 7862197,
+    "offset": 12916564,
+    "crc": 430356438,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1\\guitar2.wav",
+    "sha256": "7084f8dfdfe2ebb977b44920306f836a377686c432ec2702b573f28fcf6c8105",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/mix.wav",
+    "size": 15082936,
+    "compressed_size": 8454276,
+    "offset": 20778865,
+    "crc": 4023824756,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1\\mix.wav",
+    "sha256": "509b48bc2e1f9cf121e6b5fa049e4d2fc0870402917ff7781315a313899346db",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/guitar1.wav",
+    "size": 15082936,
+    "compressed_size": 7734328,
+    "offset": 29233241,
+    "crc": 825612901,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1\\guitar1.wav",
+    "sha256": "51538f308799a98086aa22f881be2959cf07ff0455ee58a2777827ef2ed8d603",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/guitar2.wav",
+    "size": 8644336,
+    "compressed_size": 4012330,
+    "offset": 36967766,
+    "crc": 838472589,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 8\\guitar2.wav",
+    "sha256": "36f62b2211b531ec2a081b61d47b3aee2f0cd332a9afb132af235501d8ef3988",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/mix.wav",
+    "size": 8644336,
+    "compressed_size": 4382335,
+    "offset": 40980200,
+    "crc": 3099236214,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 8\\mix.wav",
+    "sha256": "d11e171f945e9c1bd96a31d547b049c6b8730988e0ef5053b77ef87056f23213",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/guitar1.wav",
+    "size": 8644336,
+    "compressed_size": 3974906,
+    "offset": 45362635,
+    "crc": 925516838,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 8\\guitar1.wav",
+    "sha256": "c500a9c845926f4908f35e78465a1ff2b2fc99d4074ef9c870bd71c61bbe257d",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/guitar2.wav",
+    "size": 16141336,
+    "compressed_size": 6209539,
+    "offset": 49337739,
+    "crc": 4089201184,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 10\\guitar2.wav",
+    "sha256": "73de4a54647f614e70eef52ad9ddfe02b5a81cc1debb6bae892bcb355d316132",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/mix.wav",
+    "size": 16141336,
+    "compressed_size": 6954620,
+    "offset": 55547383,
+    "crc": 2994446051,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 10\\mix.wav",
+    "sha256": "3f80a1542341dee7f6d219edde019a0bc1030bfc2221f02afa5ca88af4c68029",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/guitar1.wav",
+    "size": 16141336,
+    "compressed_size": 5904745,
+    "offset": 62502104,
+    "crc": 2154700876,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 10\\guitar1.wav",
+    "sha256": "7138f1468d1f5061fb128c1202ff5b6775f1b04c492a5826dda2a627e4ad86ea",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/guitar2.wav",
+    "size": 16053136,
+    "compressed_size": 7080665,
+    "offset": 68407047,
+    "crc": 2096042497,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 9\\guitar2.wav",
+    "sha256": "1b7b5bfd5a63673e29efdf28e82f3ee8745a70f44c59c7753736bf7cd8ccb5e7",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/mix.wav",
+    "size": 16053136,
+    "compressed_size": 7998273,
+    "offset": 75487816,
+    "crc": 3926106536,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 9\\mix.wav",
+    "sha256": "66d4e6d917ce23bf12ba396cf85acf18a07750aa9876023f812502a8493af093",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/guitar1.wav",
+    "size": 16053136,
+    "compressed_size": 7423255,
+    "offset": 83486189,
+    "crc": 3472321503,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 9\\guitar1.wav",
+    "sha256": "be48e90dff3f05c6c17ed9ec23c8d7eef11be9de6083f78674b80ccdbd505317",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/guitar2.wav",
+    "size": 7321336,
+    "compressed_size": 3925524,
+    "offset": 90909714,
+    "crc": 3810715232,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo5\\guitar2.wav",
+    "sha256": "42dbf9e75b35867c16fdd33afe8e58e517e5f4fbea93a0f026d41a3143a422a6",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/mix.wav",
+    "size": 7321336,
+    "compressed_size": 4611801,
+    "offset": 94835335,
+    "crc": 2183234845,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo5\\mix.wav",
+    "sha256": "9c8143c50213bb960f68808fcbde004a050d2778e6070f6c9140eb62341d3efc",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/guitar1.wav",
+    "size": 7321336,
+    "compressed_size": 4355655,
+    "offset": 99447229,
+    "crc": 3234677760,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo5\\guitar1.wav",
+    "sha256": "035e607a5b711f731be77edaa6a00775ca924a69f180972341c2a6c4ffb48bc7",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/guitar2.wav",
+    "size": 11643136,
+    "compressed_size": 6196605,
+    "offset": 103803067,
+    "crc": 2473802582,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo2\\guitar2.wav",
+    "sha256": "9e5894fedb9e7de31418e7d8b5ab57222929222ced5050b8dcd2b44cb018d471",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/mix.wav",
+    "size": 11643136,
+    "compressed_size": 6903901,
+    "offset": 109999769,
+    "crc": 62409661,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo2\\mix.wav",
+    "sha256": "4ae979a62c24121c594ee1be2b03c11f8b38fc44920f4cdde5a2c6bfc4bcfb87",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/guitar1.wav",
+    "size": 11643136,
+    "compressed_size": 6331227,
+    "offset": 116903763,
+    "crc": 295372578,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo2\\guitar1.wav",
+    "sha256": "9fc55796181ce65e56e8aabab9410b5069e6f83cf3585ff56c5c1cb32e41487c",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/guitar2.wav",
+    "size": 8732536,
+    "compressed_size": 4443648,
+    "offset": 123235173,
+    "crc": 2499387474,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo3\\guitar2.wav",
+    "sha256": "7fc944e74b709d66ec573f3fb2747a9605c65e8f0537c1b8ac29565c381dd6ec",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/mix.wav",
+    "size": 8732536,
+    "compressed_size": 5259342,
+    "offset": 127678918,
+    "crc": 3026055061,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo3\\mix.wav",
+    "sha256": "2cce322032a8d779e30f6e6e6098ef3ca7d5a33e9919c47021e3e64786b8b752",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/guitar1.wav",
+    "size": 8732536,
+    "compressed_size": 5028191,
+    "offset": 132938353,
+    "crc": 2328984658,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo3\\guitar1.wav",
+    "sha256": "3e4600b7a5a21a2eb59460175390e9c2947b8513a2b39e1ba1c8c1538d84f3c0",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/guitar2.wav",
+    "size": 4763536,
+    "compressed_size": 2460181,
+    "offset": 137966727,
+    "crc": 3565201466,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo4\\guitar2.wav",
+    "sha256": "febd701261df1a9a31f4a58c78d03f2ee2c8c92df76119306199f24e1108b51f",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/mix.wav",
+    "size": 4763536,
+    "compressed_size": 2881781,
+    "offset": 140427005,
+    "crc": 2820756297,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo4\\mix.wav",
+    "sha256": "cbc49e88ff8ea46c8e89146d02b39e50b7c840ee220261811ed89a7d979134d6",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/guitar1.wav",
+    "size": 4763536,
+    "compressed_size": 2692204,
+    "offset": 143308879,
+    "crc": 774591408,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo4\\guitar1.wav",
+    "sha256": "44d228f9a503469306358c886762d546eb3a7ee68a92c8ae9dddeb66cc0deb17",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/guitar2.wav",
+    "size": 8379736,
+    "compressed_size": 4277180,
+    "offset": 146001266,
+    "crc": 1263329373,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo8\\guitar2.wav",
+    "sha256": "cde699100a15c336eefbb09682d43c1daeb1d64383ef43aa0cc9a4fb506ab8f4",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/mix.wav",
+    "size": 8379736,
+    "compressed_size": 4921303,
+    "offset": 150278543,
+    "crc": 3866227844,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo8\\mix.wav",
+    "sha256": "da2f4b152cc562f79f00e0a887d7c30697d48288c888560c0cc44a401ece427d",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/guitar1.wav",
+    "size": 8379736,
+    "compressed_size": 4528792,
+    "offset": 155199939,
+    "crc": 2520338311,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo8\\guitar1.wav",
+    "sha256": "2ac5bacf4095c9c7a23ce3f4797c1cb4ee1c03253ff186d2de3797a8227bcb6c",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/guitar2.wav",
+    "size": 6086536,
+    "compressed_size": 3249784,
+    "offset": 159728914,
+    "crc": 3896004496,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo1\\guitar2.wav",
+    "sha256": "8d272bdf51784bfbd68eaaf810d3acd1d36de0dae6608f4517273f84e13e085a",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/mix.wav",
+    "size": 6086536,
+    "compressed_size": 3842901,
+    "offset": 162978795,
+    "crc": 1255266253,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo1\\mix.wav",
+    "sha256": "435e0d17510b07a075603d82ee27b43886c6694c63daa974ee047b2379e36c53",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/guitar1.wav",
+    "size": 6086536,
+    "compressed_size": 3683665,
+    "offset": 166821789,
+    "crc": 422140477,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo1\\guitar1.wav",
+    "sha256": "fed11dd527b18c20141981303682b4896385aa0f6492217269a01bac8e16eadc",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/guitar2.wav",
+    "size": 3969736,
+    "compressed_size": 2312818,
+    "offset": 170505637,
+    "crc": 694970125,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo6\\guitar2.wav",
+    "sha256": "98928b07b54e7c953fee877b79ccc2e7b9fa626651718c17cf4918178f8b7bbf",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/mix.wav",
+    "size": 3969736,
+    "compressed_size": 2549832,
+    "offset": 172818552,
+    "crc": 1739193523,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo6\\mix.wav",
+    "sha256": "e6ab13649b59b2ea49c6e4fce81884547a063b72c3b5228132cb00c65c17f92e",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/guitar1.wav",
+    "size": 3969736,
+    "compressed_size": 2246953,
+    "offset": 175368477,
+    "crc": 2005569712,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo6\\guitar1.wav",
+    "sha256": "4b45bd02e4a64cc8083ea438a2762f10f1f977c8280ef26bee6713eb343ae723",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/guitar2.wav",
+    "size": 4763536,
+    "compressed_size": 2395415,
+    "offset": 177615613,
+    "crc": 3628915791,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo7\\guitar2.wav",
+    "sha256": "a650702d08eff661432901f414df70e9fa181568be72436c3b1630107a730942",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/mix.wav",
+    "size": 4763536,
+    "compressed_size": 3089968,
+    "offset": 180011125,
+    "crc": 3733119249,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo7\\mix.wav",
+    "sha256": "a08dd625004b2f42f9a38c83069c0bedc5821725f3444465d9e7f55d6855f468",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/guitar1.wav",
+    "size": 4763536,
+    "compressed_size": 2943587,
+    "offset": 183101186,
+    "crc": 3514927155,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo7\\guitar1.wav",
+    "sha256": "216ae2feba1157b8c55639f738151ac03d6b71e72d02804045a5aea1ea8fd126",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/guitar2.wav",
+    "size": 15347536,
+    "compressed_size": 5907457,
+    "offset": 186044963,
+    "crc": 1847497780,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 7\\guitar2.wav",
+    "sha256": "d6c624e3940afa6c96b22e2f7f7cc3bdd4e78f21f62366415a496fe4c50bd316",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/mix.wav",
+    "size": 15347536,
+    "compressed_size": 6648115,
+    "offset": 191952524,
+    "crc": 3064980614,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 7\\mix.wav",
+    "sha256": "a2e16190766e85baaadb1846d2c7b3ea255d322ab7b0e1bd4c67606c0ed9c251",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/guitar1.wav",
+    "size": 15347536,
+    "compressed_size": 5856764,
+    "offset": 198600739,
+    "crc": 1646274381,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 7\\guitar1.wav",
+    "sha256": "9a6d0030454c2b6de05ebca093cd121dbc8b2113b0d2aada884bf19ddb4028a8",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/guitar2.wav",
+    "size": 8732536,
+    "compressed_size": 3517113,
+    "offset": 287769878,
+    "crc": 3285131916,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 3rd\\guitar2.wav",
+    "sha256": "e153d522edda7176619111994fd51c0a5143a6285d32dfbb7b3802bf641ef211",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/mix.wav",
+    "size": 8732536,
+    "compressed_size": 4010960,
+    "offset": 291287099,
+    "crc": 274584563,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 3rd\\mix.wav",
+    "sha256": "ac669d707cf7e6c644c4f6862d76ec5b23c7a2f699dda639de476794d389d3c6",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/guitar1.wav",
+    "size": 8732536,
+    "compressed_size": 3581737,
+    "offset": 295298163,
+    "crc": 3404107015,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 3rd\\guitar1.wav",
+    "sha256": "3f9fa6374f8c7b79d6fb044e61527d69ca88c3325645de4803c64b1d85e1c00c",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/guitar2.wav",
+    "size": 16229536,
+    "compressed_size": 6720549,
+    "offset": 337618066,
+    "crc": 1647688750,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2\\guitar2.wav",
+    "sha256": "1888f4c4c41a29ec84fc688929de416bdbc3c7e171092db56a217a8d7266fa13",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/mix.wav",
+    "size": 16229536,
+    "compressed_size": 7321476,
+    "offset": 344338719,
+    "crc": 1302333907,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2\\mix.wav",
+    "sha256": "ecc3dd09710772611b32ede2c34edc2468c82323727ceb46e61d60d06e9850f1",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/guitar1.wav",
+    "size": 16229536,
+    "compressed_size": 6128704,
+    "offset": 351660295,
+    "crc": 151147670,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2\\guitar1.wav",
+    "sha256": "3ec16a753bbe9aa218f5b9a9fa1ab8dee6e083910a9416027380c14af348eeed",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/guitar2.wav",
+    "size": 8203336,
+    "compressed_size": 3720481,
+    "offset": 357789196,
+    "crc": 1906627509,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5\\guitar2.wav",
+    "sha256": "faf7dc967e15ad1740e23fb5f5dedb7f412e63270810d0d94cdfd92fdafcaab5",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/mix.wav",
+    "size": 8203336,
+    "compressed_size": 4142254,
+    "offset": 361509781,
+    "crc": 1198129109,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5\\mix.wav",
+    "sha256": "082030c23f24024bd728400845cb4b9dfdd9dcd7f5d12fa63c7ba3377e863df7",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/guitar1.wav",
+    "size": 8203336,
+    "compressed_size": 3820441,
+    "offset": 365652135,
+    "crc": 4072305027,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5\\guitar1.wav",
+    "sha256": "59cb0f8ee9f30efd9412e8142b540c3cd78d8ed18da830d84f6aaa78c019e47e",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/guitar2.wav",
+    "size": 20463136,
+    "compressed_size": 8243243,
+    "offset": 369472773,
+    "crc": 2121183509,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 4\\guitar2.wav",
+    "sha256": "5c076e49f1e4649f4904d8287fcd93bc36654851cb098a1792e88be7c751ed44",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/mix.wav",
+    "size": 20463136,
+    "compressed_size": 9110356,
+    "offset": 377716120,
+    "crc": 382075610,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 4\\mix.wav",
+    "sha256": "5f8807def47e8ee7af3804a9948ed0666e9eb1e1c59ee7b5e12a50174401f6ff",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/guitar1.wav",
+    "size": 20463136,
+    "compressed_size": 8136670,
+    "offset": 386826576,
+    "crc": 3791891424,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 4\\guitar1.wav",
+    "sha256": "2651924008f9483c9960b843297b406e57081c99c4fc476cc624aa15b84aef5f",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/guitar2.wav",
+    "size": 15612136,
+    "compressed_size": 6826780,
+    "offset": 394963443,
+    "crc": 3274383555,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3\\guitar2.wav",
+    "sha256": "b706e92b5635d6bc7e8a0e4d1d711a45487ebf0d3aa85c1f8f840900714a4ee3",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/mix.wav",
+    "size": 15612136,
+    "compressed_size": 7457645,
+    "offset": 401790327,
+    "crc": 1888000512,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3\\mix.wav",
+    "sha256": "17f00061a2564972bf44f056f5df83a3ae155219d06c337e961a1db641a8b0ea",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/guitar1.wav",
+    "size": 15612136,
+    "compressed_size": 6619155,
+    "offset": 409248072,
+    "crc": 3360143067,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3\\guitar1.wav",
+    "sha256": "2c9363847a2e04a412cfb438dc51d49416672f7079fda5127258564926ef9a07",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/guitar2.wav",
+    "size": 17199736,
+    "compressed_size": 8064579,
+    "offset": 562035102,
+    "crc": 2561736579,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1 2nd\\guitar2.wav",
+    "sha256": "9143d2699416234be12dc3ab58789f10ce1e2b327fbf8bd8d578325ded859b38",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/mix.wav",
+    "size": 17199736,
+    "compressed_size": 8823837,
+    "offset": 570099789,
+    "crc": 3340114063,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1 2nd\\mix.wav",
+    "sha256": "18bd2255b840c1df97b697ac3beae36064960b23b4d4d2a4da999400c8fe1f8c",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/guitar1.wav",
+    "size": 17199736,
+    "compressed_size": 8138479,
+    "offset": 578923730,
+    "crc": 2578957316,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 1 2nd\\guitar1.wav",
+    "sha256": "ac6c76139f0808c08b4f44cc3b00f7be7807e672f52a341091eca92bf448ede2",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/guitar2.wav",
+    "size": 4410736,
+    "compressed_size": 1912944,
+    "offset": 706856677,
+    "crc": 3256597160,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 2nd\\guitar2.wav",
+    "sha256": "bbed102cd1e03feccadbd3d7df420b476a13aedd1c662b9ad618483c4a073d75",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/mix.wav",
+    "size": 4410736,
+    "compressed_size": 2064376,
+    "offset": 708769729,
+    "crc": 610690612,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 2nd\\mix.wav",
+    "sha256": "fbc89ba81df9560513e647a45cdc16c47bbd35fdf510e413ca894792c09e015a",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/guitar1.wav",
+    "size": 4410736,
+    "compressed_size": 1820519,
+    "offset": 710834209,
+    "crc": 1903188622,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 2 2nd\\guitar1.wav",
+    "sha256": "631bb1f760efe1badd0146fd1a4bb01f00b81f6b8eb7b657dd5f072e2f79b76f",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/guitar2.wav",
+    "size": 15259336,
+    "compressed_size": 6654332,
+    "offset": 712654933,
+    "crc": 3795101507,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3 2nd\\guitar2.wav",
+    "sha256": "4a455d0d7899cbdc9ab7cd99e3a5659dda27c503449b7a4a9a045099951acc07",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/mix.wav",
+    "size": 15259336,
+    "compressed_size": 7265500,
+    "offset": 719309373,
+    "crc": 2418899381,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3 2nd\\mix.wav",
+    "sha256": "dccc654867a562148af6117d514c975c16e12624f05728e08c366cc863f676a1",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/guitar1.wav",
+    "size": 15259336,
+    "compressed_size": 6459954,
+    "offset": 726574977,
+    "crc": 2083254271,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 3 2nd\\guitar1.wav",
+    "sha256": "7eb3ca9d57f20700247b329d7bea897c49e368d70866cdee78b593fa1bd11cd6",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/guitar2.wav",
+    "size": 8115136,
+    "compressed_size": 3807295,
+    "offset": 843549286,
+    "crc": 323189594,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5 2nd\\guitar2.wav",
+    "sha256": "ecd6d5bdcff5479d33b08f50cb45b0e0d8d44722f502d6a39a7c75d72870451c",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/mix.wav",
+    "size": 8115136,
+    "compressed_size": 4116522,
+    "offset": 847356689,
+    "crc": 942628358,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5 2nd\\mix.wav",
+    "sha256": "8c82d00f003cf8bd40f3b713c5d9d0a924ddc35f692ed9efc817de97e8b5b52e",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/guitar1.wav",
+    "size": 8115136,
+    "compressed_size": 3807295,
+    "offset": 851473315,
+    "crc": 3269856753,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 5 2nd\\guitar1.wav",
+    "sha256": "fcaee7fa2f30b53a21a47f2cc2ec57fb40fafba2001fae8e97560fc60502c4b2",
+    "url": "https://zenodo.org/records/12802440/files/GuitarDuets.zip?download=1"
+  }
+]

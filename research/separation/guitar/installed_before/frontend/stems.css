@@ -1,0 +1,76 @@
+/* Stems view: transport, FL-style step grid, track headers. Reuses the workbench palette. */
+.stems-page { padding-bottom: 48px; }
+.stems-main { max-width: 1500px; margin: 0 auto; padding: 28px 34px 10px; }
+
+.stems-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+.stems-title h1 { margin: 6px 0 4px; font-size: 24px; font-weight: 550; }
+.stems-title .muted { font-size: 12px; }
+.stems-actions { display: flex; align-items: center; gap: 14px; padding-top: 8px; }
+.model-select { background: #16201f; color: var(--text); border: 1px solid #3d4f53; border-radius: 7px; padding: 7px 10px; font-size: 12px; }
+.stems-actions { flex-wrap: wrap; justify-content: flex-end; }
+.vocal-results { padding: 16px 20px; margin-bottom: 14px; }
+.vocal-results p { font-size: 12px; line-height: 1.7; margin: 8px 0; }
+.vocal-results .section-heading { flex-wrap: wrap; gap: 8px; }
+.vocal-results #vocalJobStatus { color: var(--gold); }
+.vocal-saved-results { display: flex; flex-wrap: wrap; gap: 8px; }
+.vocal-saved-results button { font-size: 12px; padding: 7px 12px; }
+
+.stems-pending { padding: 26px 28px; display: grid; gap: 8px; justify-items: start; }
+.stems-pending h2 { font-size: 19px; margin: 0; }
+.stems-pending .primary { margin-top: 10px; }
+
+.transport { display: flex; align-items: center; gap: 18px; padding: 14px 20px; margin-bottom: 14px; }
+.transport .play { width: 42px; height: 42px; flex-shrink: 0; border: 0; border-radius: 50%; font-size: 15px; background: var(--mint); color: #1b3427; }
+.transport-clock { display: flex; align-items: baseline; gap: 6px; font: 14px ui-monospace, Consolas, monospace; min-width: 116px; }
+.transport-clock strong { font-size: 20px; color: var(--mint); }
+.transport-meta { display: flex; align-items: center; gap: 18px; font-size: 12px; color: var(--muted); flex: 1; flex-wrap: wrap; }
+.transport-meta b { color: var(--text); font-weight: 500; font-size: 13px; }
+.transport-right { display: flex; align-items: center; gap: 16px; }
+.transport-right input[type=range] { width: 92px; accent-color: var(--mint); }
+
+.stems-grid-panel { padding: 14px 16px 10px; }
+.grid-body { display: grid; grid-template-columns: 196px minmax(0, 1fr); align-items: start; }
+.track-heads { display: flex; flex-direction: column; }
+.ruler-spacer { height: 40px; flex-shrink: 0; }
+.grid-scroll { overflow-x: auto; overflow-y: hidden; scrollbar-color: #3d4f53 transparent; }
+.ruler { position: relative; height: 40px; }
+.ruler span { position: absolute; bottom: 2px; font: 10px ui-monospace, Consolas, monospace; color: var(--muted); transform: translateX(-50%); }
+.ruler span.bar-start { color: var(--text); }
+.grid-canvas-wrap { position: relative; }
+#gridCanvas, #overlayCanvas { display: block; }
+#overlayCanvas { position: absolute; inset: 0; pointer-events: none; }
+
+.track-head { display: flex; align-items: center; gap: 8px; padding: 10px 10px 10px 4px; border-bottom: 1px solid #ffffff08; }
+.track-head.muted { opacity: .45; }
+.track-chip { width: 8px; align-self: stretch; border-radius: 3px; flex-shrink: 0; }
+.track-name { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.track-name strong { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.track-name small { font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.track-buttons { display: flex; gap: 4px; flex-shrink: 0; }
+.track-buttons button { width: 24px; height: 24px; padding: 0; border-radius: 5px; border: 1px solid #3d4f53; background: #1b2629; color: var(--muted); font-size: 11px; }
+.track-buttons button[aria-pressed=true] { background: #365a46; border-color: var(--mint); color: var(--mint); }
+.track-buttons button.solo[aria-pressed=true] { background: #4a3f20; border-color: var(--gold); color: var(--gold); }
+
+.stems-bottom { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 14px; margin-top: 14px; }
+.stems-info { padding: 16px 18px; }
+.track-info { display: grid; gap: 6px; margin-top: 10px; }
+.track-info-row { display: grid; grid-template-columns: 8px 92px 1fr; gap: 10px; align-items: center; font-size: 12px; }
+.track-info-row .bar { height: 6px; border-radius: 3px; background: #ffffff10; overflow: hidden; }
+.track-info-row .bar i { display: block; height: 100%; }
+.track-info-detail { color: var(--muted); font-size: 11px; line-height: 1.5; margin-bottom: 2px; }
+.listen-tips { margin: 8px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+.listen-tips b { color: var(--text); font-weight: 500; }
+
+@media (max-width: 900px) {
+  .stems-main { padding: 20px 16px 8px; }
+  .stems-bottom { grid-template-columns: 1fr; }
+  .transport { flex-wrap: wrap; }
+  .grid-body { grid-template-columns: 150px minmax(0, 1fr); }
+}
+
+.ruler .chord { bottom: auto; top: 1px; font-size: 10px; line-height: 12px; color: var(--mint); white-space: nowrap; transform: translateX(-1px); }
+.ruler .chord::before { content: ''; }
+
+
+.track-buttons .track-download { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 5px; border: 1px solid #3d4f53; background: #1b2629; color: var(--muted); font-size: 12px; text-decoration: none; }
+.track-buttons .track-download:hover { color: var(--mint); border-color: var(--mint); }

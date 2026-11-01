@@ -1,0 +1,82 @@
+[
+  {
+    "name": "05_Jazz3-150-C_comp_mic.wav",
+    "size": 2257964,
+    "compressed_size": 1510779,
+    "offset": 5215534,
+    "crc": 3363681165,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_comp_mic.wav",
+    "sha256": "665e9a0968ec0d81e8cab504d39a4ffbf4249099cf87700c122607be000f508c",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Rock3-117-Bb_comp_mic.wav",
+    "size": 2894450,
+    "compressed_size": 2407098,
+    "offset": 14272579,
+    "crc": 872378369,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_comp_mic.wav",
+    "sha256": "83c65847d6cc0a8b2a2a291ace59a2c97b7c91bc51d1295ba6acf51240de087d",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_BN1-129-Eb_solo_mic.wav",
+    "size": 1969056,
+    "compressed_size": 1165956,
+    "offset": 207997217,
+    "crc": 295139929,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_BN1-129-Eb_solo_mic.wav",
+    "sha256": "ccf801f3a6e7b1ab38dd9bf1ae917d13c51ef93c977af41cdabcb0548f55a261",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Funk1-97-C_comp_mic.wav",
+    "size": 2618560,
+    "compressed_size": 1551051,
+    "offset": 209163257,
+    "crc": 2251323065,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Funk1-97-C_comp_mic.wav",
+    "sha256": "ccdfe2d39d72c08b7213455631abb7d4783de9eca386b6ad230d0152b02c0660",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Jazz3-150-C_solo_mic.wav",
+    "size": 2257964,
+    "compressed_size": 1610809,
+    "offset": 441184369,
+    "crc": 2471778474,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_solo_mic.wav",
+    "sha256": "15f4560bd2d28f70950561880ae944d86ce290c5e647c37cbd7b824c3e291913",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Rock3-117-Bb_solo_mic.wav",
+    "size": 2894450,
+    "compressed_size": 2109970,
+    "offset": 452123965,
+    "crc": 2948546060,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_solo_mic.wav",
+    "sha256": "ea17f0ee41d4b2fd8a78f5d925bb5f734f8a8250d41ad4b1dcf70008c8faad87",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_BN1-129-Eb_comp_mic.wav",
+    "size": 1969056,
+    "compressed_size": 1256298,
+    "offset": 589440433,
+    "crc": 3207202930,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_BN1-129-Eb_comp_mic.wav",
+    "sha256": "a55c99690ece8135baa9b05ffc42ee13ee408bcd3c2b0ef01fe373f69e844c3a",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Funk1-97-C_solo_mic.wav",
+    "size": 2618560,
+    "compressed_size": 1612356,
+    "offset": 590696815,
+    "crc": 2171450771,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Funk1-97-C_solo_mic.wav",
+    "sha256": "8bb79cdf439a8d9188fe5607e41c0924bc2e0431c74f1ec8e3159796fad27df6",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  }
+]

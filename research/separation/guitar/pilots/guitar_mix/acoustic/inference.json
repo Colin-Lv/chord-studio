@@ -1,0 +1,11 @@
+{
+  "source": "research\\separation\\refinement\\controls\\guitar_mix.wav",
+  "model": "acoustic",
+  "seconds": 5.951932099997066,
+  "chunk": 441000,
+  "device": "cuda",
+  "peak_vram_mb": 777.443359375,
+  "input_sha256": "0872c4d826661ae2b04a9d036366fecc7ce72f72a5a051b157bf6ab03bb282e3",
+  "strict_load": true,
+  "relative_energy_db": -3.3463807106018066
+}

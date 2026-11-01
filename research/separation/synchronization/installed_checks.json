@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "rendered_mute_solo_seek_pause_loop_switch",
+      "peak_difference": 0,
+      "active_samples": 88,
+      "offset_samples": 0
+    },
+    {
+      "name": "native_loop_without_ui_timer",
+      "peak_difference": 0,
+      "active_samples": 152,
+      "offset_samples": 0,
+      "loop_period_samples": 12000
+    },
+    {
+      "name": "shared_end_and_completion",
+      "ended": 1
+    },
+    {
+      "tracks": 10,
+      "bytes": 914392320,
+      "name": "actual_song_decoded",
+      "load_seconds": 3.397
+    },
+    {
+      "name": "48_mute_solo_actions_and_reference_keep_same_sources"
+    },
+    {
+      "name": "seek_pause_resume_preserve_common_position"
+    },
+    {
+      "name": "bar_loop_and_blocked_ui_use_audio_clock"
+    },
+    {
+      "name": "cancel_change_tracks_failure_retry_before_playback"
+    }
+  ],
+  "page_errors": [],
+  "installed": true
+}

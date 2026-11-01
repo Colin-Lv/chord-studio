@@ -1,0 +1,181 @@
+{
+  "created": "2019-08-20T06:41:31.295334+00:00",
+  "modified": "2025-04-24T08:03:58.885021+00:00",
+  "id": 3371780,
+  "conceptrecid": "1302059",
+  "doi": "10.5281/zenodo.3371780",
+  "conceptdoi": "10.5281/zenodo.1302059",
+  "doi_url": "https://doi.org/10.5281/zenodo.3371780",
+  "metadata": {
+    "title": "GuitarSet",
+    "doi": "10.5281/zenodo.3371780",
+    "publication_date": "2019-08-20",
+    "description": "<p>Accompanying <a href=\"http://guitarset.weebly.com\">website</a>&nbsp;and <a href=\"http://github.com/marl/guitarset\">repository</a>&nbsp;are here.</p>\n\n<p>If you make use of GuitarSet for academic purposes, please cite the following publication:</p>\n\n<blockquote>\n<p>Q. Xi, R. Bittner,&nbsp;J. Pauwels, X. Ye, and&nbsp;J. P. Bello,<em>&nbsp;&quot;<a href=\"http://tomxi.weebly.com/uploads/1/2/1/6/121620128/xi_ismir_2018.pdf\">Guitarset: A Dataset for Guitar Transcription</a>&quot;</em>, in 19th International Society for Music Information Retrieval Conference, Paris, France, Sept. 2018.</p>\n</blockquote>\n\n<p>This project was lead by Qingyang Xi at NYU&#39;s Music and Audio Research Lab, along with Rachel Bittner, Xuzhou Ye and Juan Pablo Bello from the same lab, as well as Johan Pauwels at the Center for Digital Music at Queen Mary University.</p>\n\n<p>We present GuitarSet, a dataset that provides high-quality guitar recordings alongside rich annotations and metadata.<br>\nIn particular, by recording guitars using a hexaphonic pickup, we are able to not only provide recordings of the individual strings but also to largely automate the expensive annotation process, therefore providing rich annotation.<br>\nThe dataset contains recordings of a variety of musical excerpts played on an acoustic guitar, along with time-aligned annotations of pitch contours, string and fret positions, chords, beats, downbeats, and playing style.</p>\n\n<p><strong>N.B. Known Errors:</strong></p>\n\n<ul>\n\t<li><a href=\"https://github.com/marl/GuitarSet/issues/5\">Incorrect timings in two annotations</a>&nbsp;Thanks to @<strong><a href=\"https://github.com/xavriley\">xavriley</a></strong></li>\n\t<li>\n\t<p><a href=\"https://github.com/marl/GuitarSet/issues/4\">Duplicated note in one&nbsp;MIDI annotation</a>&nbsp;Thanks to @<strong><a href=\"https://github.com/maxpv\">maxpv</a></strong></p>\n\t</li>\n</ul>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Qingyang Xi",
+        "affiliation": "New York University, MARL"
+      },
+      {
+        "name": "Rachel M. Bittner",
+        "affiliation": "New York University, MARL"
+      },
+      {
+        "name": "Johan Pauwels",
+        "affiliation": "Queen Mary University of London, C4DM"
+      },
+      {
+        "name": "Xuzhou Ye",
+        "affiliation": "New York University, MARL"
+      },
+      {
+        "name": "Juan P. Bello",
+        "affiliation": "New York University, MARL"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Juan P. Bello",
+        "affiliation": null,
+        "type": "Supervisor"
+      }
+    ],
+    "version": "1.1.0",
+    "language": "eng",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "meeting": {
+      "title": "19th International Society for Music Information Retrieval Conference",
+      "acronym": "ISMIR",
+      "dates": "23-27 September 2018",
+      "place": "Paris, France",
+      "url": "http://ismir2018.ircam.fr/",
+      "session": "D",
+      "session_part": "7"
+    },
+    "thesis": {
+      "university": "New York University"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 2,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "1302059"
+          }
+        }
+      ]
+    },
+    "notes": "N.B. See Known Errors.\nChanges from version 1.0.1:\n- Added Key Annotation in each jams file\n- Removed impossible notes (negative frets)\n- Updated Pitch Contour annotations to have the correct `'index'` field in `obs.value`.\n- Cleaned up .zip files"
+  },
+  "title": "GuitarSet",
+  "links": {
+    "self": "https://zenodo.org/api/records/3371780",
+    "self_html": "https://zenodo.org/records/3371780",
+    "preview_html": "https://zenodo.org/records/3371780?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.3371780",
+    "self_doi": "https://doi.org/10.5281/zenodo.3371780",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.3371780",
+    "reserve_doi": "https://zenodo.org/api/records/3371780/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/1302059",
+    "parent_html": "https://zenodo.org/records/1302059",
+    "parent_doi": "https://doi.org/10.5281/zenodo.1302059",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1302059",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:3371780/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:3371780/sequence/default",
+    "files": "https://zenodo.org/api/records/3371780/files",
+    "media_files": "https://zenodo.org/api/records/3371780/media-files",
+    "latest": "https://zenodo.org/api/records/3371780/versions/latest",
+    "latest_html": "https://zenodo.org/records/3371780/latest",
+    "versions": "https://zenodo.org/api/records/3371780/versions",
+    "draft": "https://zenodo.org/api/records/3371780/draft",
+    "access_links": "https://zenodo.org/api/records/3371780/access/links",
+    "access_grants": "https://zenodo.org/api/records/3371780/access/grants",
+    "access_users": "https://zenodo.org/api/records/3371780/access/users",
+    "access_request": "https://zenodo.org/api/records/3371780/access/request",
+    "access": "https://zenodo.org/api/records/3371780/access",
+    "communities": "https://zenodo.org/api/records/3371780/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/3371780/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/3371780/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/3371780/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/3371780/quota-increase",
+    "requests": "https://zenodo.org/api/records/3371780/requests"
+  },
+  "updated": "2025-04-24T08:03:58.885021+00:00",
+  "recid": "3371780",
+  "revision": 11,
+  "files": [
+    {
+      "id": "c3657b17-7d6d-47b7-a72a-f27f33a58e93",
+      "key": "annotation.zip",
+      "size": 39132574,
+      "checksum": "md5:b39b78e63d3446f2e54ddb7a54df9b10",
+      "links": {
+        "self": "https://zenodo.org/api/records/3371780/files/annotation.zip/content"
+      }
+    },
+    {
+      "id": "c6da5502-1cd7-4955-b07b-85727056823c",
+      "key": "audio_mono-pickup_mix.zip",
+      "size": 683145360,
+      "checksum": "md5:aecce79f425a44e2055e46f680e10f6a",
+      "links": {
+        "self": "https://zenodo.org/api/records/3371780/files/audio_mono-pickup_mix.zip/content"
+      }
+    },
+    {
+      "id": "1549e502-89a8-4a76-b1f2-dc0a671e1bba",
+      "key": "audio_mono-mic.zip",
+      "size": 656927981,
+      "checksum": "md5:275966d6610ac34999b58426beb119c3",
+      "links": {
+        "self": "https://zenodo.org/api/records/3371780/files/audio_mono-mic.zip/content"
+      }
+    },
+    {
+      "id": "804900dd-5997-41e5-b28f-de36b0a47797",
+      "key": "audio_hex-pickup_original.zip",
+      "size": 3210735945,
+      "checksum": "md5:f9911bf217cb40e9e68edf3726ef86cc",
+      "links": {
+        "self": "https://zenodo.org/api/records/3371780/files/audio_hex-pickup_original.zip/content"
+      }
+    },
+    {
+      "id": "5ed199c9-f5b2-4b10-8177-f7998a539fa8",
+      "key": "audio_hex-pickup_debleeded.zip",
+      "size": 3607349578,
+      "checksum": "md5:c31d97279464c9a67e640cb9061fb0c6",
+      "links": {
+        "self": "https://zenodo.org/api/records/3371780/files/audio_hex-pickup_debleeded.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "48680"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 59878,
+    "unique_downloads": 27742,
+    "views": 31811,
+    "unique_views": 27781,
+    "version_downloads": 56262,
+    "version_unique_downloads": 25331,
+    "version_unique_views": 23051,
+    "version_views": 26718
+  },
+  "state": "done",
+  "submitted": true
+}

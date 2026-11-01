@@ -1,0 +1,17 @@
+{
+  "model": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+  "input_sha256": "d7a5654b9b6a1a67cdedb5d474488a4f4c40beb326c2edbce99078f705a7b472",
+  "weights_sha256": "1de20d459332fe8869aeb01327a31df0032262706e1365114e852dc271779813",
+  "config_sha256": "b35077d94861f068097cce1a5e54633c055e7dcc2613eade4e4dc7c7c9c3f48b",
+  "runner_sha256": "e3a369f3935e238d6de6a93769e62da90a1f362bfad97dbb9758de3fbfb8ec3f",
+  "audio_separator": "0.48.0",
+  "torch": "2.14.1+cu126",
+  "device": "cuda",
+  "seconds": 18.781917500004056,
+  "samples": 1323000,
+  "sample_rate": 44100,
+  "channels": 2,
+  "peak_vram_mb": 1754.55419921875,
+  "residual_kind": "parent_minus_lead; includes backing, reverberation, leakage and error",
+  "sum_max_abs_error": 7.450580596923828e-09
+}

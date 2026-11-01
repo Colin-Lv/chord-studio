@@ -1,0 +1,2249 @@
+[
+  {
+    "name": "GuitarDuets/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 0,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 70,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 145,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/guitar2.wav",
+    "size": 10584736,
+    "compressed_size": 4156518,
+    "offset": 238,
+    "crc": 2196456557
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/mix.wav",
+    "size": 10584736,
+    "compressed_size": 4646480,
+    "offset": 4156860,
+    "crc": 4264248779
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 6/guitar1.wav",
+    "size": 10584736,
+    "compressed_size": 4112927,
+    "offset": 8803440,
+    "crc": 3025474732
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 12916471,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/guitar2.wav",
+    "size": 15082936,
+    "compressed_size": 7862197,
+    "offset": 12916564,
+    "crc": 430356438
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/mix.wav",
+    "size": 15082936,
+    "compressed_size": 8454276,
+    "offset": 20778865,
+    "crc": 4023824756
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1/guitar1.wav",
+    "size": 15082936,
+    "compressed_size": 7734328,
+    "offset": 29233241,
+    "crc": 825612901
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 36967673,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/guitar2.wav",
+    "size": 8644336,
+    "compressed_size": 4012330,
+    "offset": 36967766,
+    "crc": 838472589
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/mix.wav",
+    "size": 8644336,
+    "compressed_size": 4382335,
+    "offset": 40980200,
+    "crc": 3099236214
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 8/guitar1.wav",
+    "size": 8644336,
+    "compressed_size": 3974906,
+    "offset": 45362635,
+    "crc": 925516838
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 49337645,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/guitar2.wav",
+    "size": 16141336,
+    "compressed_size": 6209539,
+    "offset": 49337739,
+    "crc": 4089201184
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/mix.wav",
+    "size": 16141336,
+    "compressed_size": 6954620,
+    "offset": 55547383,
+    "crc": 2994446051
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 10/guitar1.wav",
+    "size": 16141336,
+    "compressed_size": 5904745,
+    "offset": 62502104,
+    "crc": 2154700876
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 68406954,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/guitar2.wav",
+    "size": 16053136,
+    "compressed_size": 7080665,
+    "offset": 68407047,
+    "crc": 2096042497
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/mix.wav",
+    "size": 16053136,
+    "compressed_size": 7998273,
+    "offset": 75487816,
+    "crc": 3926106536
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 9/guitar1.wav",
+    "size": 16053136,
+    "compressed_size": 7423255,
+    "offset": 83486189,
+    "crc": 3472321503
+  },
+  {
+    "name": "GuitarDuets/Real/test/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 90909548,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 90909628,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/guitar2.wav",
+    "size": 7321336,
+    "compressed_size": 3925524,
+    "offset": 90909714,
+    "crc": 3810715232
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/mix.wav",
+    "size": 7321336,
+    "compressed_size": 4611801,
+    "offset": 94835335,
+    "crc": 2183234845
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo5/guitar1.wav",
+    "size": 7321336,
+    "compressed_size": 4355655,
+    "offset": 99447229,
+    "crc": 3234677760
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 103802981,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/guitar2.wav",
+    "size": 11643136,
+    "compressed_size": 6196605,
+    "offset": 103803067,
+    "crc": 2473802582
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/mix.wav",
+    "size": 11643136,
+    "compressed_size": 6903901,
+    "offset": 109999769,
+    "crc": 62409661
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo2/guitar1.wav",
+    "size": 11643136,
+    "compressed_size": 6331227,
+    "offset": 116903763,
+    "crc": 295372578
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 123235087,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/guitar2.wav",
+    "size": 8732536,
+    "compressed_size": 4443648,
+    "offset": 123235173,
+    "crc": 2499387474
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/mix.wav",
+    "size": 8732536,
+    "compressed_size": 5259342,
+    "offset": 127678918,
+    "crc": 3026055061
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo3/guitar1.wav",
+    "size": 8732536,
+    "compressed_size": 5028191,
+    "offset": 132938353,
+    "crc": 2328984658
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 137966641,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/guitar2.wav",
+    "size": 4763536,
+    "compressed_size": 2460181,
+    "offset": 137966727,
+    "crc": 3565201466
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/mix.wav",
+    "size": 4763536,
+    "compressed_size": 2881781,
+    "offset": 140427005,
+    "crc": 2820756297
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo4/guitar1.wav",
+    "size": 4763536,
+    "compressed_size": 2692204,
+    "offset": 143308879,
+    "crc": 774591408
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 146001180,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/guitar2.wav",
+    "size": 8379736,
+    "compressed_size": 4277180,
+    "offset": 146001266,
+    "crc": 1263329373
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/mix.wav",
+    "size": 8379736,
+    "compressed_size": 4921303,
+    "offset": 150278543,
+    "crc": 3866227844
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo8/guitar1.wav",
+    "size": 8379736,
+    "compressed_size": 4528792,
+    "offset": 155199939,
+    "crc": 2520338311
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 159728828,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/guitar2.wav",
+    "size": 6086536,
+    "compressed_size": 3249784,
+    "offset": 159728914,
+    "crc": 3896004496
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/mix.wav",
+    "size": 6086536,
+    "compressed_size": 3842901,
+    "offset": 162978795,
+    "crc": 1255266253
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo1/guitar1.wav",
+    "size": 6086536,
+    "compressed_size": 3683665,
+    "offset": 166821789,
+    "crc": 422140477
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 170505551,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/guitar2.wav",
+    "size": 3969736,
+    "compressed_size": 2312818,
+    "offset": 170505637,
+    "crc": 694970125
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/mix.wav",
+    "size": 3969736,
+    "compressed_size": 2549832,
+    "offset": 172818552,
+    "crc": 1739193523
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo6/guitar1.wav",
+    "size": 3969736,
+    "compressed_size": 2246953,
+    "offset": 175368477,
+    "crc": 2005569712
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 177615527,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/guitar2.wav",
+    "size": 4763536,
+    "compressed_size": 2395415,
+    "offset": 177615613,
+    "crc": 3628915791
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/mix.wav",
+    "size": 4763536,
+    "compressed_size": 3089968,
+    "offset": 180011125,
+    "crc": 3733119249
+  },
+  {
+    "name": "GuitarDuets/Real/test/demo7/guitar1.wav",
+    "size": 4763536,
+    "compressed_size": 2943587,
+    "offset": 183101186,
+    "crc": 3514927155
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 186044870,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/guitar2.wav",
+    "size": 15347536,
+    "compressed_size": 5907457,
+    "offset": 186044963,
+    "crc": 1847497780
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/mix.wav",
+    "size": 15347536,
+    "compressed_size": 6648115,
+    "offset": 191952524,
+    "crc": 3064980614
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 7/guitar1.wav",
+    "size": 15347536,
+    "compressed_size": 5856764,
+    "offset": 198600739,
+    "crc": 1646274381
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 204457607,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1/guitar2.wav",
+    "size": 59623936,
+    "compressed_size": 26397177,
+    "offset": 204457690,
+    "crc": 3988412440
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1/mix.wav",
+    "size": 59623936,
+    "compressed_size": 29742045,
+    "offset": 230854961,
+    "crc": 2784326071
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1/guitar1.wav",
+    "size": 59623936,
+    "compressed_size": 27172591,
+    "offset": 260597096,
+    "crc": 4077298396
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 287769781,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/guitar2.wav",
+    "size": 8732536,
+    "compressed_size": 3517113,
+    "offset": 287769878,
+    "crc": 3285131916
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/mix.wav",
+    "size": 8732536,
+    "compressed_size": 4010960,
+    "offset": 291287099,
+    "crc": 274584563
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 3rd/guitar1.wav",
+    "size": 8732536,
+    "compressed_size": 3581737,
+    "offset": 295298163,
+    "crc": 3404107015
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 298880008,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1/guitar2.wav",
+    "size": 14493804,
+    "compressed_size": 6548860,
+    "offset": 298880099,
+    "crc": 3826962837
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1/mix.wav",
+    "size": 14493804,
+    "compressed_size": 7236539,
+    "offset": 305429061,
+    "crc": 1144112957
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1/guitar1.wav",
+    "size": 14493804,
+    "compressed_size": 6681580,
+    "offset": 312665698,
+    "crc": 33290059
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1 3rd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 319347380,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1 3rd/guitar2.wav",
+    "size": 12903104,
+    "compressed_size": 5891485,
+    "offset": 319347475,
+    "crc": 341058862
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1 3rd/mix.wav",
+    "size": 12903104,
+    "compressed_size": 6440416,
+    "offset": 325239066,
+    "crc": 2022194382
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 1 3rd/guitar1.wav",
+    "size": 12903104,
+    "compressed_size": 5938283,
+    "offset": 331679584,
+    "crc": 945760218
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 337617973,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/guitar2.wav",
+    "size": 16229536,
+    "compressed_size": 6720549,
+    "offset": 337618066,
+    "crc": 1647688750
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/mix.wav",
+    "size": 16229536,
+    "compressed_size": 7321476,
+    "offset": 344338719,
+    "crc": 1302333907
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2/guitar1.wav",
+    "size": 16229536,
+    "compressed_size": 6128704,
+    "offset": 351660295,
+    "crc": 151147670
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 357789103,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/guitar2.wav",
+    "size": 8203336,
+    "compressed_size": 3720481,
+    "offset": 357789196,
+    "crc": 1906627509
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/mix.wav",
+    "size": 8203336,
+    "compressed_size": 4142254,
+    "offset": 361509781,
+    "crc": 1198129109
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5/guitar1.wav",
+    "size": 8203336,
+    "compressed_size": 3820441,
+    "offset": 365652135,
+    "crc": 4072305027
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 369472680,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/guitar2.wav",
+    "size": 20463136,
+    "compressed_size": 8243243,
+    "offset": 369472773,
+    "crc": 2121183509
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/mix.wav",
+    "size": 20463136,
+    "compressed_size": 9110356,
+    "offset": 377716120,
+    "crc": 382075610
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 4/guitar1.wav",
+    "size": 20463136,
+    "compressed_size": 8136670,
+    "offset": 386826576,
+    "crc": 3791891424
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 394963350,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/guitar2.wav",
+    "size": 15612136,
+    "compressed_size": 6826780,
+    "offset": 394963443,
+    "crc": 3274383555
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/mix.wav",
+    "size": 15612136,
+    "compressed_size": 7457645,
+    "offset": 401790327,
+    "crc": 1888000512
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3/guitar1.wav",
+    "size": 15612136,
+    "compressed_size": 6619155,
+    "offset": 409248072,
+    "crc": 3360143067
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 2/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 415867331,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 2/guitar2.wav",
+    "size": 52479736,
+    "compressed_size": 20666464,
+    "offset": 415867414,
+    "crc": 2479434235
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 2/mix.wav",
+    "size": 52479736,
+    "compressed_size": 23181750,
+    "offset": 436533972,
+    "crc": 1298518671
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 2/guitar1.wav",
+    "size": 52479736,
+    "compressed_size": 20689783,
+    "offset": 459715812,
+    "crc": 1309993252
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 480405689,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1 2nd/guitar2.wav",
+    "size": 58389136,
+    "compressed_size": 25808248,
+    "offset": 480405776,
+    "crc": 2417948775
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1 2nd/mix.wav",
+    "size": 58389136,
+    "compressed_size": 29136763,
+    "offset": 506214122,
+    "crc": 3243365107
+  },
+  {
+    "name": "GuitarDuets/Real/Tango 1 2nd/guitar1.wav",
+    "size": 58389136,
+    "compressed_size": 26683928,
+    "offset": 535350979,
+    "crc": 1504752329
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 562035005,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/guitar2.wav",
+    "size": 17199736,
+    "compressed_size": 8064579,
+    "offset": 562035102,
+    "crc": 2561736579
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/mix.wav",
+    "size": 17199736,
+    "compressed_size": 8823837,
+    "offset": 570099789,
+    "crc": 3340114063
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 1 2nd/guitar1.wav",
+    "size": 17199736,
+    "compressed_size": 8138479,
+    "offset": 578923730,
+    "crc": 2578957316
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 587062317,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3/guitar2.wav",
+    "size": 30870736,
+    "compressed_size": 11991697,
+    "offset": 587062408,
+    "crc": 2567238559
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3/mix.wav",
+    "size": 30870736,
+    "compressed_size": 13333656,
+    "offset": 599054207,
+    "crc": 435598054
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3/guitar1.wav",
+    "size": 30870736,
+    "compressed_size": 11511989,
+    "offset": 612387961,
+    "crc": 3201657346
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 4/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 623900052,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 4/guitar2.wav",
+    "size": 30870736,
+    "compressed_size": 14597148,
+    "offset": 623900143,
+    "crc": 3250256932
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 4/mix.wav",
+    "size": 30870736,
+    "compressed_size": 15327952,
+    "offset": 638497393,
+    "crc": 1092387951
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 4/guitar1.wav",
+    "size": 30870736,
+    "compressed_size": 13779027,
+    "offset": 653825443,
+    "crc": 2885411808
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 667604572,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2/guitar2.wav",
+    "size": 27572900,
+    "compressed_size": 13227596,
+    "offset": 667604663,
+    "crc": 31484601
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2/mix.wav",
+    "size": 27572900,
+    "compressed_size": 13809913,
+    "offset": 680832361,
+    "crc": 1077267300
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2/guitar1.wav",
+    "size": 27572900,
+    "compressed_size": 12214106,
+    "offset": 694642372,
+    "crc": 1474323096
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 706856580,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/guitar2.wav",
+    "size": 4410736,
+    "compressed_size": 1912944,
+    "offset": 706856677,
+    "crc": 3256597160
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/mix.wav",
+    "size": 4410736,
+    "compressed_size": 2064376,
+    "offset": 708769729,
+    "crc": 610690612
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 2 2nd/guitar1.wav",
+    "size": 4410736,
+    "compressed_size": 1820519,
+    "offset": 710834209,
+    "crc": 1903188622
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 712654836,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/guitar2.wav",
+    "size": 15259336,
+    "compressed_size": 6654332,
+    "offset": 712654933,
+    "crc": 3795101507
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/mix.wav",
+    "size": 15259336,
+    "compressed_size": 7265500,
+    "offset": 719309373,
+    "crc": 2418899381
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 3 2nd/guitar1.wav",
+    "size": 15259336,
+    "compressed_size": 6459954,
+    "offset": 726574977,
+    "crc": 2083254271
+  },
+  {
+    "name": "GuitarDuets/Real/Tango Mavroudis/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 733035039,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Tango Mavroudis/guitar2.wav",
+    "size": 27166336,
+    "compressed_size": 12709129,
+    "offset": 733035130,
+    "crc": 309431946
+  },
+  {
+    "name": "GuitarDuets/Real/Tango Mavroudis/mix.wav",
+    "size": 27166336,
+    "compressed_size": 13780843,
+    "offset": 745744361,
+    "crc": 2162642223
+  },
+  {
+    "name": "GuitarDuets/Real/Tango Mavroudis/guitar1.wav",
+    "size": 27166336,
+    "compressed_size": 12830236,
+    "offset": 759525302,
+    "crc": 4228110413
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 772355640,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3 2nd/guitar2.wav",
+    "size": 29635936,
+    "compressed_size": 11389063,
+    "offset": 772355735,
+    "crc": 4179018961
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3 2nd/mix.wav",
+    "size": 29635936,
+    "compressed_size": 12756351,
+    "offset": 783744904,
+    "crc": 4289857016
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 3 2nd/guitar1.wav",
+    "size": 29635936,
+    "compressed_size": 10979672,
+    "offset": 796501357,
+    "crc": 4240869881
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 807481135,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2 2nd/guitar2.wav",
+    "size": 25098476,
+    "compressed_size": 12028092,
+    "offset": 807481230,
+    "crc": 2485351383
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2 2nd/mix.wav",
+    "size": 25098476,
+    "compressed_size": 12694508,
+    "offset": 819509428,
+    "crc": 2839960820
+  },
+  {
+    "name": "GuitarDuets/Real/Summer Garden 2 2nd/guitar1.wav",
+    "size": 25098476,
+    "compressed_size": 11345045,
+    "offset": 832204038,
+    "crc": 2157143456
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 843549189,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/guitar2.wav",
+    "size": 8115136,
+    "compressed_size": 3807295,
+    "offset": 843549286,
+    "crc": 323189594
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/mix.wav",
+    "size": 8115136,
+    "compressed_size": 4116522,
+    "offset": 847356689,
+    "crc": 942628358
+  },
+  {
+    "name": "GuitarDuets/Real/Valses Poeticos 5 2nd/guitar1.wav",
+    "size": 8115136,
+    "compressed_size": 3807295,
+    "offset": 851473315,
+    "crc": 3269856753
+  },
+  {
+    "name": "GuitarDuets/Synth/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 855280718,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track-Name.txt",
+    "size": 1679,
+    "compressed_size": 760,
+    "offset": 855280794,
+    "crc": 2763747050
+  },
+  {
+    "name": "GuitarDuets/Synth/Track30/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 855281644,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track30/guitar2.wav",
+    "size": 10218386,
+    "compressed_size": 8402675,
+    "offset": 855281728,
+    "crc": 3805429789
+  },
+  {
+    "name": "GuitarDuets/Synth/Track30/mix.wav",
+    "size": 10218386,
+    "compressed_size": 8692260,
+    "offset": 863684498,
+    "crc": 3621508170
+  },
+  {
+    "name": "GuitarDuets/Synth/Track30/guitar1.wav",
+    "size": 10218386,
+    "compressed_size": 6391046,
+    "offset": 872376849,
+    "crc": 2518306752
+  },
+  {
+    "name": "GuitarDuets/Synth/Track30/notes.mid",
+    "size": 3869,
+    "compressed_size": 535,
+    "offset": 878767990,
+    "crc": 4022227416
+  },
+  {
+    "name": "GuitarDuets/Synth/Track36/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 878768618,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track36/guitar2.wav",
+    "size": 106814066,
+    "compressed_size": 51108552,
+    "offset": 878768702,
+    "crc": 4065518337
+  },
+  {
+    "name": "GuitarDuets/Synth/Track36/mix.wav",
+    "size": 106814066,
+    "compressed_size": 95934148,
+    "offset": 929877349,
+    "crc": 3199036370
+  },
+  {
+    "name": "GuitarDuets/Synth/Track36/guitar1.wav",
+    "size": 106814066,
+    "compressed_size": 91890716,
+    "offset": 1025811588,
+    "crc": 1037109503
+  },
+  {
+    "name": "GuitarDuets/Synth/Track36/notes.mid",
+    "size": 30788,
+    "compressed_size": 3014,
+    "offset": 1117702399,
+    "crc": 2768165493
+  },
+  {
+    "name": "GuitarDuets/Synth/Track31/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1117705506,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track31/guitar2.wav",
+    "size": 26791496,
+    "compressed_size": 13490559,
+    "offset": 1117705590,
+    "crc": 1435478681
+  },
+  {
+    "name": "GuitarDuets/Synth/Track31/mix.wav",
+    "size": 26791496,
+    "compressed_size": 22767921,
+    "offset": 1131196244,
+    "crc": 789076794
+  },
+  {
+    "name": "GuitarDuets/Synth/Track31/guitar1.wav",
+    "size": 26791496,
+    "compressed_size": 20549948,
+    "offset": 1153964256,
+    "crc": 2337293271
+  },
+  {
+    "name": "GuitarDuets/Synth/Track31/notes.mid",
+    "size": 7046,
+    "compressed_size": 1309,
+    "offset": 1174514299,
+    "crc": 3535880254
+  },
+  {
+    "name": "GuitarDuets/Synth/Track22/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1174515701,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track22/guitar2.wav",
+    "size": 11262342,
+    "compressed_size": 9319561,
+    "offset": 1174515785,
+    "crc": 2159569337
+  },
+  {
+    "name": "GuitarDuets/Synth/Track22/mix.wav",
+    "size": 11262342,
+    "compressed_size": 9650656,
+    "offset": 1183835441,
+    "crc": 1769250937
+  },
+  {
+    "name": "GuitarDuets/Synth/Track22/guitar1.wav",
+    "size": 11262342,
+    "compressed_size": 9058230,
+    "offset": 1193486188,
+    "crc": 1303040599
+  },
+  {
+    "name": "GuitarDuets/Synth/Track22/notes.mid",
+    "size": 4172,
+    "compressed_size": 561,
+    "offset": 1202544513,
+    "crc": 157242791
+  },
+  {
+    "name": "GuitarDuets/Synth/Track25/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1202545167,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track25/guitar2.wav",
+    "size": 16758744,
+    "compressed_size": 14069271,
+    "offset": 1202545251,
+    "crc": 1754243316
+  },
+  {
+    "name": "GuitarDuets/Synth/Track25/mix.wav",
+    "size": 16758744,
+    "compressed_size": 14695885,
+    "offset": 1216614617,
+    "crc": 2319760741
+  },
+  {
+    "name": "GuitarDuets/Synth/Track25/guitar1.wav",
+    "size": 16758744,
+    "compressed_size": 13860238,
+    "offset": 1231310593,
+    "crc": 939130097
+  },
+  {
+    "name": "GuitarDuets/Synth/Track25/notes.mid",
+    "size": 8901,
+    "compressed_size": 1174,
+    "offset": 1245170926,
+    "crc": 1527250336
+  },
+  {
+    "name": "GuitarDuets/Synth/Track13/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1245172193,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track13/guitar2.wav",
+    "size": 37972312,
+    "compressed_size": 32338486,
+    "offset": 1245172277,
+    "crc": 3905965648
+  },
+  {
+    "name": "GuitarDuets/Synth/Track13/mix.wav",
+    "size": 37972312,
+    "compressed_size": 33023428,
+    "offset": 1277510858,
+    "crc": 171839515
+  },
+  {
+    "name": "GuitarDuets/Synth/Track13/guitar1.wav",
+    "size": 37972312,
+    "compressed_size": 24674986,
+    "offset": 1310534377,
+    "crc": 935759922
+  },
+  {
+    "name": "GuitarDuets/Synth/Track13/notes.mid",
+    "size": 11842,
+    "compressed_size": 1005,
+    "offset": 1335209458,
+    "crc": 2583776084
+  },
+  {
+    "name": "GuitarDuets/Synth/Track14/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1335210556,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track14/guitar2.wav",
+    "size": 53135730,
+    "compressed_size": 36633586,
+    "offset": 1335210640,
+    "crc": 1184183070
+  },
+  {
+    "name": "GuitarDuets/Synth/Track14/mix.wav",
+    "size": 53135730,
+    "compressed_size": 43341630,
+    "offset": 1371844321,
+    "crc": 3926702313
+  },
+  {
+    "name": "GuitarDuets/Synth/Track14/guitar1.wav",
+    "size": 53135730,
+    "compressed_size": 40306459,
+    "offset": 1415186042,
+    "crc": 3921869464
+  },
+  {
+    "name": "GuitarDuets/Synth/Track14/notes.mid",
+    "size": 9185,
+    "compressed_size": 1449,
+    "offset": 1455492596,
+    "crc": 3498313158
+  },
+  {
+    "name": "GuitarDuets/Synth/Track15/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1455494138,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track15/guitar2.wav",
+    "size": 102144944,
+    "compressed_size": 46418424,
+    "offset": 1455494222,
+    "crc": 3876052845
+  },
+  {
+    "name": "GuitarDuets/Synth/Track15/mix.wav",
+    "size": 102144944,
+    "compressed_size": 85509297,
+    "offset": 1501912741,
+    "crc": 4281058710
+  },
+  {
+    "name": "GuitarDuets/Synth/Track15/guitar1.wav",
+    "size": 102144944,
+    "compressed_size": 79224959,
+    "offset": 1587422129,
+    "crc": 2503873413
+  },
+  {
+    "name": "GuitarDuets/Synth/Track15/notes.mid",
+    "size": 32149,
+    "compressed_size": 3535,
+    "offset": 1666647183,
+    "crc": 3341640815
+  },
+  {
+    "name": "GuitarDuets/Synth/Track12/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1666650811,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track12/guitar2.wav",
+    "size": 33935694,
+    "compressed_size": 15159918,
+    "offset": 1666650895,
+    "crc": 3412592819
+  },
+  {
+    "name": "GuitarDuets/Synth/Track12/mix.wav",
+    "size": 33935694,
+    "compressed_size": 29110639,
+    "offset": 1681810908,
+    "crc": 3442951255
+  },
+  {
+    "name": "GuitarDuets/Synth/Track12/guitar1.wav",
+    "size": 33935694,
+    "compressed_size": 28113084,
+    "offset": 1710921638,
+    "crc": 110398903
+  },
+  {
+    "name": "GuitarDuets/Synth/Track12/notes.mid",
+    "size": 7689,
+    "compressed_size": 960,
+    "offset": 1739034817,
+    "crc": 3505118930
+  },
+  {
+    "name": "GuitarDuets/Synth/Track24/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1739035870,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track24/guitar2.wav",
+    "size": 14694800,
+    "compressed_size": 4778355,
+    "offset": 1739035954,
+    "crc": 1747732696
+  },
+  {
+    "name": "GuitarDuets/Synth/Track24/mix.wav",
+    "size": 14694800,
+    "compressed_size": 12738877,
+    "offset": 1743814404,
+    "crc": 2553036003
+  },
+  {
+    "name": "GuitarDuets/Synth/Track24/guitar1.wav",
+    "size": 14694800,
+    "compressed_size": 12630335,
+    "offset": 1756553372,
+    "crc": 987254945
+  },
+  {
+    "name": "GuitarDuets/Synth/Track24/notes.mid",
+    "size": 9273,
+    "compressed_size": 896,
+    "offset": 1769183802,
+    "crc": 2875895352
+  },
+  {
+    "name": "GuitarDuets/Synth/Track23/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1769184791,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track23/guitar2.wav",
+    "size": 18623582,
+    "compressed_size": 15785568,
+    "offset": 1769184875,
+    "crc": 3324831571
+  },
+  {
+    "name": "GuitarDuets/Synth/Track23/mix.wav",
+    "size": 18623582,
+    "compressed_size": 16588781,
+    "offset": 1784970538,
+    "crc": 3458087881
+  },
+  {
+    "name": "GuitarDuets/Synth/Track23/guitar1.wav",
+    "size": 18623582,
+    "compressed_size": 15991391,
+    "offset": 1801559410,
+    "crc": 3090635656
+  },
+  {
+    "name": "GuitarDuets/Synth/Track23/notes.mid",
+    "size": 7927,
+    "compressed_size": 1459,
+    "offset": 1817550896,
+    "crc": 787995038
+  },
+  {
+    "name": "GuitarDuets/Synth/Track8/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1817552448,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track8/guitar2.wav",
+    "size": 10181230,
+    "compressed_size": 8223000,
+    "offset": 1817552531,
+    "crc": 3388015699
+  },
+  {
+    "name": "GuitarDuets/Synth/Track8/mix.wav",
+    "size": 10181230,
+    "compressed_size": 8549023,
+    "offset": 1825775625,
+    "crc": 3917643653
+  },
+  {
+    "name": "GuitarDuets/Synth/Track8/guitar1.wav",
+    "size": 10181230,
+    "compressed_size": 3931389,
+    "offset": 1834324738,
+    "crc": 682290754
+  },
+  {
+    "name": "GuitarDuets/Synth/Track8/notes.mid",
+    "size": 2638,
+    "compressed_size": 690,
+    "offset": 1838256221,
+    "crc": 2309585755
+  },
+  {
+    "name": "GuitarDuets/Synth/Track1/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1838257003,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track1/guitar2.wav",
+    "size": 21210088,
+    "compressed_size": 16738574,
+    "offset": 1838257086,
+    "crc": 145083553
+  },
+  {
+    "name": "GuitarDuets/Synth/Track1/mix.wav",
+    "size": 21210088,
+    "compressed_size": 18246203,
+    "offset": 1854995754,
+    "crc": 2356550556
+  },
+  {
+    "name": "GuitarDuets/Synth/Track1/guitar1.wav",
+    "size": 21210088,
+    "compressed_size": 17610670,
+    "offset": 1873242047,
+    "crc": 3542391928
+  },
+  {
+    "name": "GuitarDuets/Synth/Track1/notes.mid",
+    "size": 3556,
+    "compressed_size": 496,
+    "offset": 1890852811,
+    "crc": 3721232104
+  },
+  {
+    "name": "GuitarDuets/Synth/Track6/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1890853399,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track6/guitar2.wav",
+    "size": 6818034,
+    "compressed_size": 4866138,
+    "offset": 1890853482,
+    "crc": 965780918
+  },
+  {
+    "name": "GuitarDuets/Synth/Track6/mix.wav",
+    "size": 6818034,
+    "compressed_size": 5371271,
+    "offset": 1895719714,
+    "crc": 2222997080
+  },
+  {
+    "name": "GuitarDuets/Synth/Track6/guitar1.wav",
+    "size": 6818034,
+    "compressed_size": 2858559,
+    "offset": 1901091075,
+    "crc": 377491528
+  },
+  {
+    "name": "GuitarDuets/Synth/Track6/notes.mid",
+    "size": 1852,
+    "compressed_size": 353,
+    "offset": 1903949728,
+    "crc": 3307264067
+  },
+  {
+    "name": "GuitarDuets/Synth/Track7/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1903950173,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track7/guitar2.wav",
+    "size": 19354272,
+    "compressed_size": 16429808,
+    "offset": 1903950256,
+    "crc": 999881000
+  },
+  {
+    "name": "GuitarDuets/Synth/Track7/mix.wav",
+    "size": 19354272,
+    "compressed_size": 17203264,
+    "offset": 1920380158,
+    "crc": 2166614911
+  },
+  {
+    "name": "GuitarDuets/Synth/Track7/guitar1.wav",
+    "size": 19354272,
+    "compressed_size": 16342134,
+    "offset": 1937583512,
+    "crc": 116123492
+  },
+  {
+    "name": "GuitarDuets/Synth/Track7/notes.mid",
+    "size": 12380,
+    "compressed_size": 2765,
+    "offset": 1953925740,
+    "crc": 977375399
+  },
+  {
+    "name": "GuitarDuets/Synth/Track9/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1953928597,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track9/guitar2.wav",
+    "size": 16456270,
+    "compressed_size": 12425970,
+    "offset": 1953928680,
+    "crc": 1274237194
+  },
+  {
+    "name": "GuitarDuets/Synth/Track9/mix.wav",
+    "size": 16456270,
+    "compressed_size": 13631805,
+    "offset": 1966354744,
+    "crc": 1207819274
+  },
+  {
+    "name": "GuitarDuets/Synth/Track9/guitar1.wav",
+    "size": 16456270,
+    "compressed_size": 13202547,
+    "offset": 1979986639,
+    "crc": 3963652396
+  },
+  {
+    "name": "GuitarDuets/Synth/Track9/notes.mid",
+    "size": 3549,
+    "compressed_size": 994,
+    "offset": 1993189280,
+    "crc": 1295983561
+  },
+  {
+    "name": "GuitarDuets/Synth/Track34/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 1993190366,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track34/guitar2.wav",
+    "size": 46275678,
+    "compressed_size": 37159229,
+    "offset": 1993190450,
+    "crc": 1700136545
+  },
+  {
+    "name": "GuitarDuets/Synth/Track34/mix.wav",
+    "size": 46275678,
+    "compressed_size": 39001366,
+    "offset": 2030349774,
+    "crc": 3710065840
+  },
+  {
+    "name": "GuitarDuets/Synth/Track34/guitar1.wav",
+    "size": 46275678,
+    "compressed_size": 34989138,
+    "offset": 2069351231,
+    "crc": 3385725141
+  },
+  {
+    "name": "GuitarDuets/Synth/Track34/notes.mid",
+    "size": 12493,
+    "compressed_size": 3758,
+    "offset": 2104340464,
+    "crc": 2373948150
+  },
+  {
+    "name": "GuitarDuets/Synth/Track33/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2104344315,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track33/guitar2.wav",
+    "size": 36763608,
+    "compressed_size": 29022591,
+    "offset": 2104344399,
+    "crc": 2480291988
+  },
+  {
+    "name": "GuitarDuets/Synth/Track33/mix.wav",
+    "size": 36763608,
+    "compressed_size": 31069390,
+    "offset": 2133367085,
+    "crc": 1490349969
+  },
+  {
+    "name": "GuitarDuets/Synth/Track33/guitar1.wav",
+    "size": 36763608,
+    "compressed_size": 28561632,
+    "offset": 2164436566,
+    "crc": 2260886243
+  },
+  {
+    "name": "GuitarDuets/Synth/Track33/notes.mid",
+    "size": 13544,
+    "compressed_size": 2549,
+    "offset": 2192998293,
+    "crc": 2478399518
+  },
+  {
+    "name": "GuitarDuets/Synth/Track32/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2193000935,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track32/guitar2.wav",
+    "size": 21661352,
+    "compressed_size": 16154317,
+    "offset": 2193001019,
+    "crc": 2362513550
+  },
+  {
+    "name": "GuitarDuets/Synth/Track32/mix.wav",
+    "size": 21661352,
+    "compressed_size": 16973085,
+    "offset": 2209155431,
+    "crc": 2554740814
+  },
+  {
+    "name": "GuitarDuets/Synth/Track32/guitar1.wav",
+    "size": 21661352,
+    "compressed_size": 15619899,
+    "offset": 2226128607,
+    "crc": 3375224891
+  },
+  {
+    "name": "GuitarDuets/Synth/Track32/notes.mid",
+    "size": 5117,
+    "compressed_size": 695,
+    "offset": 2241748601,
+    "crc": 4174861005
+  },
+  {
+    "name": "GuitarDuets/Synth/Track35/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2241749389,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track35/guitar2.wav",
+    "size": 128526378,
+    "compressed_size": 105032170,
+    "offset": 2241749473,
+    "crc": 2843491449
+  },
+  {
+    "name": "GuitarDuets/Synth/Track35/mix.wav",
+    "size": 128526378,
+    "compressed_size": 112051751,
+    "offset": 2346781738,
+    "crc": 1973980435
+  },
+  {
+    "name": "GuitarDuets/Synth/Track35/guitar1.wav",
+    "size": 128526378,
+    "compressed_size": 105412908,
+    "offset": 2458833580,
+    "crc": 3206784750
+  },
+  {
+    "name": "GuitarDuets/Synth/Track35/notes.mid",
+    "size": 47407,
+    "compressed_size": 8349,
+    "offset": 2564246583,
+    "crc": 613069451
+  },
+  {
+    "name": "GuitarDuets/Synth/Track26/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2564255025,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track26/guitar2.wav",
+    "size": 42419432,
+    "compressed_size": 35588989,
+    "offset": 2564255109,
+    "crc": 483240666
+  },
+  {
+    "name": "GuitarDuets/Synth/Track26/mix.wav",
+    "size": 42419432,
+    "compressed_size": 37467739,
+    "offset": 2599844193,
+    "crc": 328956179
+  },
+  {
+    "name": "GuitarDuets/Synth/Track26/guitar1.wav",
+    "size": 42419432,
+    "compressed_size": 36327705,
+    "offset": 2637312023,
+    "crc": 4041133243
+  },
+  {
+    "name": "GuitarDuets/Synth/Track26/notes.mid",
+    "size": 30500,
+    "compressed_size": 2321,
+    "offset": 2673639823,
+    "crc": 2580535819
+  },
+  {
+    "name": "GuitarDuets/Synth/Track19/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2673642237,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track19/guitar2.wav",
+    "size": 18853494,
+    "compressed_size": 8910077,
+    "offset": 2673642321,
+    "crc": 3014462126
+  },
+  {
+    "name": "GuitarDuets/Synth/Track19/mix.wav",
+    "size": 18853494,
+    "compressed_size": 15724492,
+    "offset": 2682552493,
+    "crc": 2161870573
+  },
+  {
+    "name": "GuitarDuets/Synth/Track19/guitar1.wav",
+    "size": 18853494,
+    "compressed_size": 14649877,
+    "offset": 2698277076,
+    "crc": 1182404692
+  },
+  {
+    "name": "GuitarDuets/Synth/Track19/notes.mid",
+    "size": 3063,
+    "compressed_size": 683,
+    "offset": 2712927048,
+    "crc": 953568074
+  },
+  {
+    "name": "GuitarDuets/Synth/Track21/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2712927824,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track21/guitar2.wav",
+    "size": 27375596,
+    "compressed_size": 23502782,
+    "offset": 2712927908,
+    "crc": 3867968470
+  },
+  {
+    "name": "GuitarDuets/Synth/Track21/mix.wav",
+    "size": 27375596,
+    "compressed_size": 24297645,
+    "offset": 2736430785,
+    "crc": 1748074361
+  },
+  {
+    "name": "GuitarDuets/Synth/Track21/guitar1.wav",
+    "size": 27375596,
+    "compressed_size": 19088060,
+    "offset": 2760728521,
+    "crc": 748227942
+  },
+  {
+    "name": "GuitarDuets/Synth/Track21/notes.mid",
+    "size": 9335,
+    "compressed_size": 2249,
+    "offset": 2779816676,
+    "crc": 1955028680
+  },
+  {
+    "name": "GuitarDuets/Synth/Track17/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2779819018,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track17/guitar2.wav",
+    "size": 9906908,
+    "compressed_size": 8355944,
+    "offset": 2779819102,
+    "crc": 1492177437
+  },
+  {
+    "name": "GuitarDuets/Synth/Track17/mix.wav",
+    "size": 9906908,
+    "compressed_size": 8843207,
+    "offset": 2788175141,
+    "crc": 2684243040
+  },
+  {
+    "name": "GuitarDuets/Synth/Track17/guitar1.wav",
+    "size": 9906908,
+    "compressed_size": 8444325,
+    "offset": 2797018439,
+    "crc": 2472752102
+  },
+  {
+    "name": "GuitarDuets/Synth/Track17/notes.mid",
+    "size": 2975,
+    "compressed_size": 550,
+    "offset": 2805462859,
+    "crc": 2222261702
+  },
+  {
+    "name": "GuitarDuets/Synth/Track28/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2805463502,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track28/guitar2.wav",
+    "size": 22948562,
+    "compressed_size": 11936975,
+    "offset": 2805463586,
+    "crc": 1070767919
+  },
+  {
+    "name": "GuitarDuets/Synth/Track28/mix.wav",
+    "size": 22948562,
+    "compressed_size": 19781781,
+    "offset": 2817400656,
+    "crc": 324565578
+  },
+  {
+    "name": "GuitarDuets/Synth/Track28/guitar1.wav",
+    "size": 22948562,
+    "compressed_size": 18484699,
+    "offset": 2837182528,
+    "crc": 2201269883
+  },
+  {
+    "name": "GuitarDuets/Synth/Track28/notes.mid",
+    "size": 9089,
+    "compressed_size": 1601,
+    "offset": 2855667322,
+    "crc": 4185939670
+  },
+  {
+    "name": "GuitarDuets/Synth/Track10/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2855669016,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track10/guitar2.wav",
+    "size": 52537652,
+    "compressed_size": 40284513,
+    "offset": 2855669100,
+    "crc": 2526421896
+  },
+  {
+    "name": "GuitarDuets/Synth/Track10/mix.wav",
+    "size": 52537652,
+    "compressed_size": 44732799,
+    "offset": 2895953708,
+    "crc": 2301710472
+  },
+  {
+    "name": "GuitarDuets/Synth/Track10/guitar1.wav",
+    "size": 52537652,
+    "compressed_size": 41063536,
+    "offset": 2940686598,
+    "crc": 1574696230
+  },
+  {
+    "name": "GuitarDuets/Synth/Track10/notes.mid",
+    "size": 18970,
+    "compressed_size": 2857,
+    "offset": 2981750229,
+    "crc": 1966666795
+  },
+  {
+    "name": "GuitarDuets/Synth/Track11/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 2981753179,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track11/guitar2.wav",
+    "size": 66173898,
+    "compressed_size": 29629724,
+    "offset": 2981753263,
+    "crc": 2574463818
+  },
+  {
+    "name": "GuitarDuets/Synth/Track11/mix.wav",
+    "size": 66173898,
+    "compressed_size": 57000035,
+    "offset": 3011383082,
+    "crc": 2974291737
+  },
+  {
+    "name": "GuitarDuets/Synth/Track11/guitar1.wav",
+    "size": 66173898,
+    "compressed_size": 53750523,
+    "offset": 3068383208,
+    "crc": 8157629
+  },
+  {
+    "name": "GuitarDuets/Synth/Track11/notes.mid",
+    "size": 24304,
+    "compressed_size": 3972,
+    "offset": 3122133826,
+    "crc": 4237497312
+  },
+  {
+    "name": "GuitarDuets/Synth/Track16/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3122137891,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track16/guitar2.wav",
+    "size": 88533688,
+    "compressed_size": 39204942,
+    "offset": 3122137975,
+    "crc": 3031584794
+  },
+  {
+    "name": "GuitarDuets/Synth/Track16/mix.wav",
+    "size": 88533688,
+    "compressed_size": 72928173,
+    "offset": 3161343012,
+    "crc": 3999362323
+  },
+  {
+    "name": "GuitarDuets/Synth/Track16/guitar1.wav",
+    "size": 88533688,
+    "compressed_size": 68425947,
+    "offset": 3234271276,
+    "crc": 3953527487
+  },
+  {
+    "name": "GuitarDuets/Synth/Track16/notes.mid",
+    "size": 32763,
+    "compressed_size": 4632,
+    "offset": 3302697318,
+    "crc": 2295560162
+  },
+  {
+    "name": "GuitarDuets/Synth/Track29/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3302702043,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track29/guitar2.wav",
+    "size": 11147262,
+    "compressed_size": 9297807,
+    "offset": 3302702127,
+    "crc": 1971903078
+  },
+  {
+    "name": "GuitarDuets/Synth/Track29/mix.wav",
+    "size": 11147262,
+    "compressed_size": 9653963,
+    "offset": 3312000029,
+    "crc": 830421815
+  },
+  {
+    "name": "GuitarDuets/Synth/Track29/guitar1.wav",
+    "size": 11147262,
+    "compressed_size": 9180044,
+    "offset": 3321654083,
+    "crc": 3422425307
+  },
+  {
+    "name": "GuitarDuets/Synth/Track29/notes.mid",
+    "size": 5170,
+    "compressed_size": 836,
+    "offset": 3330834222,
+    "crc": 3687630461
+  },
+  {
+    "name": "GuitarDuets/Synth/Track20/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3330835151,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track20/guitar2.wav",
+    "size": 15784444,
+    "compressed_size": 6469416,
+    "offset": 3330835235,
+    "crc": 3083350898
+  },
+  {
+    "name": "GuitarDuets/Synth/Track20/mix.wav",
+    "size": 15784444,
+    "compressed_size": 13355790,
+    "offset": 3337304746,
+    "crc": 1947465792
+  },
+  {
+    "name": "GuitarDuets/Synth/Track20/guitar1.wav",
+    "size": 15784444,
+    "compressed_size": 13114392,
+    "offset": 3350660627,
+    "crc": 1653412034
+  },
+  {
+    "name": "GuitarDuets/Synth/Track20/notes.mid",
+    "size": 2890,
+    "compressed_size": 616,
+    "offset": 3363775114,
+    "crc": 2157690922
+  },
+  {
+    "name": "GuitarDuets/Synth/Track27/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3363775823,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track27/guitar2.wav",
+    "size": 25034728,
+    "compressed_size": 7202709,
+    "offset": 3363775907,
+    "crc": 815334922
+  },
+  {
+    "name": "GuitarDuets/Synth/Track27/mix.wav",
+    "size": 25034728,
+    "compressed_size": 19792069,
+    "offset": 3370978711,
+    "crc": 3426062712
+  },
+  {
+    "name": "GuitarDuets/Synth/Track27/guitar1.wav",
+    "size": 25034728,
+    "compressed_size": 19477687,
+    "offset": 3390770871,
+    "crc": 1226251170
+  },
+  {
+    "name": "GuitarDuets/Synth/Track27/notes.mid",
+    "size": 6436,
+    "compressed_size": 890,
+    "offset": 3410248653,
+    "crc": 2656638485
+  },
+  {
+    "name": "GuitarDuets/Synth/Track18/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3410249636,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track18/guitar2.wav",
+    "size": 16412738,
+    "compressed_size": 6564949,
+    "offset": 3410249720,
+    "crc": 2940055560
+  },
+  {
+    "name": "GuitarDuets/Synth/Track18/mix.wav",
+    "size": 16412738,
+    "compressed_size": 13713120,
+    "offset": 3416814764,
+    "crc": 745255183
+  },
+  {
+    "name": "GuitarDuets/Synth/Track18/guitar1.wav",
+    "size": 16412738,
+    "compressed_size": 13515620,
+    "offset": 3430527975,
+    "crc": 1886833438
+  },
+  {
+    "name": "GuitarDuets/Synth/Track18/notes.mid",
+    "size": 3291,
+    "compressed_size": 589,
+    "offset": 3444043690,
+    "crc": 952788871
+  },
+  {
+    "name": "GuitarDuets/Synth/Track5/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3444044372,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track5/guitar2.wav",
+    "size": 6363548,
+    "compressed_size": 4532706,
+    "offset": 3444044455,
+    "crc": 1695299243
+  },
+  {
+    "name": "GuitarDuets/Synth/Track5/mix.wav",
+    "size": 6363548,
+    "compressed_size": 5506694,
+    "offset": 3448577255,
+    "crc": 4182334713
+  },
+  {
+    "name": "GuitarDuets/Synth/Track5/guitar1.wav",
+    "size": 6363548,
+    "compressed_size": 5413815,
+    "offset": 3454084039,
+    "crc": 3981250580
+  },
+  {
+    "name": "GuitarDuets/Synth/Track5/notes.mid",
+    "size": 1994,
+    "compressed_size": 509,
+    "offset": 3459497948,
+    "crc": 3116368907
+  },
+  {
+    "name": "GuitarDuets/Synth/Track2/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3459498549,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track2/guitar2.wav",
+    "size": 21210088,
+    "compressed_size": 9258757,
+    "offset": 3459498632,
+    "crc": 418268113
+  },
+  {
+    "name": "GuitarDuets/Synth/Track2/mix.wav",
+    "size": 21210088,
+    "compressed_size": 18203514,
+    "offset": 3468757483,
+    "crc": 1791043371
+  },
+  {
+    "name": "GuitarDuets/Synth/Track2/guitar1.wav",
+    "size": 21210088,
+    "compressed_size": 17724908,
+    "offset": 3486961087,
+    "crc": 683460147
+  },
+  {
+    "name": "GuitarDuets/Synth/Track2/notes.mid",
+    "size": 7422,
+    "compressed_size": 923,
+    "offset": 3504686089,
+    "crc": 3794055327
+  },
+  {
+    "name": "GuitarDuets/Synth/Track3/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3504687104,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track3/guitar2.wav",
+    "size": 8098858,
+    "compressed_size": 5049988,
+    "offset": 3504687187,
+    "crc": 3250827807
+  },
+  {
+    "name": "GuitarDuets/Synth/Track3/mix.wav",
+    "size": 8098858,
+    "compressed_size": 7019579,
+    "offset": 3509737269,
+    "crc": 2268425464
+  },
+  {
+    "name": "GuitarDuets/Synth/Track3/guitar1.wav",
+    "size": 8098858,
+    "compressed_size": 6896677,
+    "offset": 3516756938,
+    "crc": 3902747510
+  },
+  {
+    "name": "GuitarDuets/Synth/Track3/notes.mid",
+    "size": 2542,
+    "compressed_size": 467,
+    "offset": 3523653709,
+    "crc": 1236013303
+  },
+  {
+    "name": "GuitarDuets/Synth/Track4/",
+    "size": 0,
+    "compressed_size": 0,
+    "offset": 3523654268,
+    "crc": 0
+  },
+  {
+    "name": "GuitarDuets/Synth/Track4/guitar2.wav",
+    "size": 5656570,
+    "compressed_size": 1859131,
+    "offset": 3523654351,
+    "crc": 3341653620
+  },
+  {
+    "name": "GuitarDuets/Synth/Track4/mix.wav",
+    "size": 5656570,
+    "compressed_size": 4667054,
+    "offset": 3525513576,
+    "crc": 1297970875
+  },
+  {
+    "name": "GuitarDuets/Synth/Track4/guitar1.wav",
+    "size": 5656570,
+    "compressed_size": 4561665,
+    "offset": 3530180720,
+    "crc": 2021562227
+  },
+  {
+    "name": "GuitarDuets/Synth/Track4/notes.mid",
+    "size": 1858,
+    "compressed_size": 543,
+    "offset": 3534742479,
+    "crc": 3831220698
+  }
+]

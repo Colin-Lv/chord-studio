@@ -82,3 +82,14 @@ benchmarks/complex_harmony_challenge/
 benchmarks/**/*.pkl
 benchmarks/**/*.jsonl
 benchmarks/**/*.joblib
+
+# Separation research keeps audio, checkpoints and third-party clones out of git
+research/**/*.wav
+research/**/*.bin
+research/**/*.ckpt
+research/**/*.safetensors
+research/**/__pycache__/
+research/separation/guitar/Mus3D/
+research/separation/guitar/sound-razor/
+research/separation/guitar/guitarduets/
+research/separation/refinement/query-bandit/

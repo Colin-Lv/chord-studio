@@ -1,0 +1,23 @@
+{
+  "checks": [
+    "saved_timbre_auto_expands_and_replaces_parent",
+    "saved_results_accessible_across_parent_versions",
+    "background_job_survives_mode_switch_and_reload",
+    "duet_source_urls_download_and_solo",
+    "collapse_persists_no_orphan_audio",
+    "failed_recompute_keeps_previous_result"
+  ],
+  "errors": [],
+  "submissions": [
+    {
+      "model": "bs_roformer_sw",
+      "mode": "duet",
+      "force": false
+    },
+    {
+      "model": "bs_roformer_sw",
+      "mode": "duet",
+      "force": true
+    }
+  ]
+}

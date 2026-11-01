@@ -1,0 +1,5793 @@
+{
+  "trace": [
+    {
+      "t": 1161,
+      "spread": 4.69999999999993e-05,
+      "times": {
+        "lead_vocals": 0.006864,
+        "backing_vocals": 0.006867,
+        "drums": 0.006864,
+        "bass": 0.006865,
+        "other": 0.006866,
+        "acoustic_guitar": 0.006866,
+        "electric_guitar": 0.006868,
+        "guitar_residual": 0.006878,
+        "piano": 0.006911
+      }
+    },
+    {
+      "t": 1180.7000000029802,
+      "spread": 0.0005600000000000015,
+      "times": {
+        "lead_vocals": 0.020964,
+        "backing_vocals": 0.02094,
+        "drums": 0.020849,
+        "bass": 0.020823,
+        "other": 0.020816,
+        "acoustic_guitar": 0.020404,
+        "electric_guitar": 0.02081,
+        "guitar_residual": 0.020802,
+        "piano": 0.020797
+      }
+    },
+    {
+      "t": 1200.5999999940395,
+      "spread": 0.016058000000000003,
+      "times": {
+        "lead_vocals": 0.039897,
+        "backing_vocals": 0.039889,
+        "drums": 0.039885,
+        "bass": 0.039883,
+        "other": 0.039881,
+        "acoustic_guitar": 0.023839,
+        "electric_guitar": 0.039879,
+        "guitar_residual": 0.039876,
+        "piano": 0.039873
+      }
+    },
+    {
+      "t": 1220.5999999940395,
+      "spread": 0.024826999999999995,
+      "times": {
+        "lead_vocals": 0.060236,
+        "backing_vocals": 0.060226,
+        "drums": 0.060221,
+        "bass": 0.060193,
+        "other": 0.060175,
+        "acoustic_guitar": 0.035409,
+        "electric_guitar": 0.060159,
+        "guitar_residual": 0.060156,
+        "piano": 0.060145
+      }
+    },
+    {
+      "t": 1241.0999999940395,
+      "spread": 0.021815,
+      "times": {
+        "lead_vocals": 0.080984,
+        "backing_vocals": 0.080973,
+        "drums": 0.08097,
+        "bass": 0.080969,
+        "other": 0.08096,
+        "acoustic_guitar": 0.059169,
+        "electric_guitar": 0.080959,
+        "guitar_residual": 0.080958,
+        "piano": 0.080951
+      }
+    },
+    {
+      "t": 1260.7999999970198,
+      "spread": 0.017508999999999997,
+      "times": {
+        "lead_vocals": 0.099645,
+        "backing_vocals": 0.099639,
+        "drums": 0.099636,
+        "bass": 0.099634,
+        "other": 0.099613,
+        "acoustic_guitar": 0.082136,
+        "electric_guitar": 0.099612,
+        "guitar_residual": 0.099609,
+        "piano": 0.099602
+      }
+    },
+    {
+      "t": 1281.5999999940395,
+      "spread": 0.014744000000000007,
+      "times": {
+        "lead_vocals": 0.120838,
+        "backing_vocals": 0.120836,
+        "drums": 0.120833,
+        "bass": 0.120834,
+        "other": 0.120833,
+        "acoustic_guitar": 0.106094,
+        "electric_guitar": 0.120835,
+        "guitar_residual": 0.120834,
+        "piano": 0.120822
+      }
+    },
+    {
+      "t": 1301.5,
+      "spread": 0.023137000000000005,
+      "times": {
+        "lead_vocals": 0.140623,
+        "backing_vocals": 0.140617,
+        "drums": 0.14061,
+        "bass": 0.140607,
+        "other": 0.140584,
+        "acoustic_guitar": 0.117486,
+        "electric_guitar": 0.14058,
+        "guitar_residual": 0.140571,
+        "piano": 0.140558
+      }
+    },
+    {
+      "t": 1320.5,
+      "spread": 0.020207999999999976,
+      "times": {
+        "lead_vocals": 0.159986,
+        "backing_vocals": 0.159983,
+        "drums": 0.159981,
+        "bass": 0.15998,
+        "other": 0.159971,
+        "acoustic_guitar": 0.139778,
+        "electric_guitar": 0.159971,
+        "guitar_residual": 0.159969,
+        "piano": 0.159961
+      }
+    },
+    {
+      "t": 1343.2999999970198,
+      "spread": 0.00506100000000001,
+      "times": {
+        "lead_vocals": 0.183231,
+        "backing_vocals": 0.18323,
+        "drums": 0.183229,
+        "bass": 0.183229,
+        "other": 0.183229,
+        "acoustic_guitar": 0.17817,
+        "electric_guitar": 0.18323,
+        "guitar_residual": 0.183229,
+        "piano": 0.183229
+      }
+    },
+    {
+      "t": 1360.8999999910593,
+      "spread": 0.009039999999999992,
+      "times": {
+        "lead_vocals": 0.204089,
+        "backing_vocals": 0.204089,
+        "drums": 0.204087,
+        "bass": 0.204087,
+        "other": 0.204088,
+        "acoustic_guitar": 0.195052,
+        "electric_guitar": 0.204091,
+        "guitar_residual": 0.204091,
+        "piano": 0.204092
+      }
+    },
+    {
+      "t": 1381.7999999970198,
+      "spread": 0.00048499999999998544,
+      "times": {
+        "lead_vocals": 0.216572,
+        "backing_vocals": 0.216574,
+        "drums": 0.216573,
+        "bass": 0.216573,
+        "other": 0.216573,
+        "acoustic_guitar": 0.21609,
+        "electric_guitar": 0.216575,
+        "guitar_residual": 0.216575,
+        "piano": 0.216575
+      }
+    },
+    {
+      "t": 1401.7999999970198,
+      "spread": 0.003900999999999988,
+      "times": {
+        "lead_vocals": 0.239673,
+        "backing_vocals": 0.239667,
+        "drums": 0.239667,
+        "bass": 0.239668,
+        "other": 0.239669,
+        "acoustic_guitar": 0.235772,
+        "electric_guitar": 0.239672,
+        "guitar_residual": 0.239671,
+        "piano": 0.239672
+      }
+    },
+    {
+      "t": 1420.3999999910593,
+      "spread": 0.00754100000000002,
+      "times": {
+        "lead_vocals": 0.261545,
+        "backing_vocals": 0.261536,
+        "drums": 0.261532,
+        "bass": 0.261529,
+        "other": 0.261527,
+        "acoustic_guitar": 0.254004,
+        "electric_guitar": 0.261525,
+        "guitar_residual": 0.261522,
+        "piano": 0.261518
+      }
+    },
+    {
+      "t": 1441,
+      "spread": 0.0002530000000000032,
+      "times": {
+        "lead_vocals": 0.274988,
+        "backing_vocals": 0.274984,
+        "drums": 0.274982,
+        "bass": 0.27498,
+        "other": 0.274979,
+        "acoustic_guitar": 0.275224,
+        "electric_guitar": 0.274977,
+        "guitar_residual": 0.274975,
+        "piano": 0.274971
+      }
+    },
+    {
+      "t": 1461.5,
+      "spread": 0.0021619999999999973,
+      "times": {
+        "lead_vocals": 0.297404,
+        "backing_vocals": 0.297406,
+        "drums": 0.297406,
+        "bass": 0.297406,
+        "other": 0.297406,
+        "acoustic_guitar": 0.295247,
+        "electric_guitar": 0.297408,
+        "guitar_residual": 0.297408,
+        "piano": 0.297409
+      }
+    },
+    {
+      "t": 1481.3999999910593,
+      "spread": 0.004711999999999994,
+      "times": {
+        "lead_vocals": 0.320766,
+        "backing_vocals": 0.320768,
+        "drums": 0.320769,
+        "bass": 0.320769,
+        "other": 0.32077,
+        "acoustic_guitar": 0.316059,
+        "electric_guitar": 0.32077,
+        "guitar_residual": 0.32077,
+        "piano": 0.320771
+      }
+    },
+    {
+      "t": 1500.5999999940395,
+      "spread": 0.02212499999999995,
+      "times": {
+        "lead_vocals": 0.357129,
+        "backing_vocals": 0.357125,
+        "drums": 0.343163,
+        "bass": 0.357123,
+        "other": 0.357095,
+        "acoustic_guitar": 0.335004,
+        "electric_guitar": 0.357068,
+        "guitar_residual": 0.35703,
+        "piano": 0.357019
+      }
+    },
+    {
+      "t": 1522.0999999940395,
+      "spread": 0.021638999999999964,
+      "times": {
+        "lead_vocals": 0.377681,
+        "backing_vocals": 0.377674,
+        "drums": 0.356042,
+        "bass": 0.37767,
+        "other": 0.377666,
+        "acoustic_guitar": 0.356721,
+        "electric_guitar": 0.377648,
+        "guitar_residual": 0.377644,
+        "piano": 0.37764
+      }
+    },
+    {
+      "t": 1540.7999999970198,
+      "spread": 0.020959000000000005,
+      "times": {
+        "lead_vocals": 0.395995,
+        "backing_vocals": 0.395975,
+        "drums": 0.378061,
+        "bass": 0.395969,
+        "other": 0.395962,
+        "acoustic_guitar": 0.375036,
+        "electric_guitar": 0.395954,
+        "guitar_residual": 0.395947,
+        "piano": 0.39594
+      }
+    },
+    {
+      "t": 1560.3999999910593,
+      "spread": 0.02101900000000001,
+      "times": {
+        "lead_vocals": 0.416091,
+        "backing_vocals": 0.416086,
+        "drums": 0.401013,
+        "bass": 0.416085,
+        "other": 0.416084,
+        "acoustic_guitar": 0.395072,
+        "electric_guitar": 0.416072,
+        "guitar_residual": 0.41607,
+        "piano": 0.416068
+      }
+    },
+    {
+      "t": 1581.0999999940395,
+      "spread": 0.02345200000000003,
+      "times": {
+        "lead_vocals": 0.436802,
+        "backing_vocals": 0.436794,
+        "drums": 0.41335,
+        "bass": 0.436792,
+        "other": 0.436787,
+        "acoustic_guitar": 0.415794,
+        "electric_guitar": 0.436767,
+        "guitar_residual": 0.436762,
+        "piano": 0.436758
+      }
+    },
+    {
+      "t": 1602,
+      "spread": 0.021508000000000027,
+      "times": {
+        "lead_vocals": 0.457575,
+        "backing_vocals": 0.45756,
+        "drums": 0.437457,
+        "bass": 0.457552,
+        "other": 0.457543,
+        "acoustic_guitar": 0.436067,
+        "electric_guitar": 0.457517,
+        "guitar_residual": 0.457506,
+        "piano": 0.457497
+      }
+    },
+    {
+      "t": 1621.7000000029802,
+      "spread": 0.021253999999999995,
+      "times": {
+        "lead_vocals": 0.477229,
+        "backing_vocals": 0.477223,
+        "drums": 0.460299,
+        "bass": 0.477222,
+        "other": 0.47722,
+        "acoustic_guitar": 0.455975,
+        "electric_guitar": 0.477219,
+        "guitar_residual": 0.477217,
+        "piano": 0.477216
+      }
+    },
+    {
+      "t": 1640.5999999940395,
+      "spread": 0.021006999999999998,
+      "times": {
+        "lead_vocals": 0.496137,
+        "backing_vocals": 0.496125,
+        "drums": 0.482572,
+        "bass": 0.496124,
+        "other": 0.496122,
+        "acoustic_guitar": 0.47513,
+        "electric_guitar": 0.496113,
+        "guitar_residual": 0.496111,
+        "piano": 0.496109
+      }
+    },
+    {
+      "t": 1661.3999999910593,
+      "spread": 0.01915100000000003,
+      "times": {
+        "lead_vocals": 0.505997,
+        "backing_vocals": 0.505986,
+        "drums": 0.515206,
+        "bass": 0.505983,
+        "other": 0.505981,
+        "acoustic_guitar": 0.496055,
+        "electric_guitar": 0.505971,
+        "guitar_residual": 0.505969,
+        "piano": 0.505967
+      }
+    },
+    {
+      "t": 1681.3999999910593,
+      "spread": 0.018811000000000022,
+      "times": {
+        "lead_vocals": 0.527086,
+        "backing_vocals": 0.527083,
+        "drums": 0.534443,
+        "bass": 0.527084,
+        "other": 0.527085,
+        "acoustic_guitar": 0.515632,
+        "electric_guitar": 0.527087,
+        "guitar_residual": 0.527087,
+        "piano": 0.527087
+      }
+    },
+    {
+      "t": 1700.8999999910593,
+      "spread": 0.01944199999999996,
+      "times": {
+        "lead_vocals": 0.549879,
+        "backing_vocals": 0.549867,
+        "drums": 0.554487,
+        "bass": 0.549868,
+        "other": 0.549867,
+        "acoustic_guitar": 0.535045,
+        "electric_guitar": 0.549868,
+        "guitar_residual": 0.549867,
+        "piano": 0.549865
+      }
+    },
+    {
+      "t": 1721,
+      "spread": 0.017954999999999943,
+      "times": {
+        "lead_vocals": 0.573112,
+        "backing_vocals": 0.573108,
+        "drums": 0.573645,
+        "bass": 0.573106,
+        "other": 0.573103,
+        "acoustic_guitar": 0.55569,
+        "electric_guitar": 0.573102,
+        "guitar_residual": 0.5731,
+        "piano": 0.573098
+      }
+    },
+    {
+      "t": 1741.5999999940395,
+      "spread": 0.019225999999999965,
+      "times": {
+        "lead_vocals": 0.58659,
+        "backing_vocals": 0.586589,
+        "drums": 0.595046,
+        "bass": 0.586589,
+        "other": 0.586586,
+        "acoustic_guitar": 0.57582,
+        "electric_guitar": 0.586586,
+        "guitar_residual": 0.586584,
+        "piano": 0.586583
+      }
+    },
+    {
+      "t": 1761.0999999940395,
+      "spread": 0.019392999999999994,
+      "times": {
+        "lead_vocals": 0.608,
+        "backing_vocals": 0.608001,
+        "drums": 0.614472,
+        "bass": 0.608004,
+        "other": 0.608004,
+        "acoustic_guitar": 0.595079,
+        "electric_guitar": 0.608006,
+        "guitar_residual": 0.608006,
+        "piano": 0.608006
+      }
+    },
+    {
+      "t": 1780.8999999910593,
+      "spread": 0.019140999999999964,
+      "times": {
+        "lead_vocals": 0.631092,
+        "backing_vocals": 0.63109,
+        "drums": 0.634247,
+        "bass": 0.631077,
+        "other": 0.631062,
+        "acoustic_guitar": 0.615106,
+        "electric_guitar": 0.631062,
+        "guitar_residual": 0.63106,
+        "piano": 0.631058
+      }
+    },
+    {
+      "t": 1808.2000000029802,
+      "spread": 0.03651899999999997,
+      "times": {
+        "lead_vocals": 0.679315,
+        "backing_vocals": 0.679219,
+        "drums": 0.661421,
+        "bass": 0.650086,
+        "other": 0.679216,
+        "acoustic_guitar": 0.642796,
+        "electric_guitar": 0.679175,
+        "guitar_residual": 0.679147,
+        "piano": 0.679139
+      }
+    },
+    {
+      "t": 1820.5,
+      "spread": 0.03705700000000001,
+      "times": {
+        "lead_vocals": 0.691534,
+        "backing_vocals": 0.691442,
+        "drums": 0.673645,
+        "bass": 0.665529,
+        "other": 0.691444,
+        "acoustic_guitar": 0.654477,
+        "electric_guitar": 0.691405,
+        "guitar_residual": 0.691377,
+        "piano": 0.69137
+      }
+    },
+    {
+      "t": 1841.3999999910593,
+      "spread": 0.03548999999999991,
+      "times": {
+        "lead_vocals": 0.71159,
+        "backing_vocals": 0.711581,
+        "drums": 0.695044,
+        "bass": 0.689717,
+        "other": 0.711582,
+        "acoustic_guitar": 0.6761,
+        "electric_guitar": 0.711581,
+        "guitar_residual": 0.711565,
+        "piano": 0.711562
+      }
+    },
+    {
+      "t": 1862.7999999970198,
+      "spread": 0.03518200000000005,
+      "times": {
+        "lead_vocals": 0.732302,
+        "backing_vocals": 0.732297,
+        "drums": 0.716181,
+        "bass": 0.714299,
+        "other": 0.732294,
+        "acoustic_guitar": 0.69712,
+        "electric_guitar": 0.732291,
+        "guitar_residual": 0.732286,
+        "piano": 0.732282
+      }
+    },
+    {
+      "t": 1880.7999999970198,
+      "spread": 0.03652500000000003,
+      "times": {
+        "lead_vocals": 0.751557,
+        "backing_vocals": 0.75155,
+        "drums": 0.733215,
+        "bass": 0.723883,
+        "other": 0.75155,
+        "acoustic_guitar": 0.715032,
+        "electric_guitar": 0.751549,
+        "guitar_residual": 0.751535,
+        "piano": 0.751533
+      }
+    },
+    {
+      "t": 1902.2999999970198,
+      "spread": 0.03559499999999993,
+      "times": {
+        "lead_vocals": 0.772187,
+        "backing_vocals": 0.772183,
+        "drums": 0.755013,
+        "bass": 0.748632,
+        "other": 0.772186,
+        "acoustic_guitar": 0.736592,
+        "electric_guitar": 0.772185,
+        "guitar_residual": 0.772171,
+        "piano": 0.772169
+      }
+    },
+    {
+      "t": 1921.7999999970198,
+      "spread": 0.035494000000000026,
+      "times": {
+        "lead_vocals": 0.791607,
+        "backing_vocals": 0.791609,
+        "drums": 0.774472,
+        "bass": 0.771438,
+        "other": 0.791611,
+        "acoustic_guitar": 0.756118,
+        "electric_guitar": 0.791612,
+        "guitar_residual": 0.791599,
+        "piano": 0.791597
+      }
+    },
+    {
+      "t": 1940.7999999970198,
+      "spread": 0.035494000000000026,
+      "times": {
+        "lead_vocals": 0.810434,
+        "backing_vocals": 0.810423,
+        "drums": 0.793032,
+        "bass": 0.781932,
+        "other": 0.810421,
+        "acoustic_guitar": 0.77494,
+        "electric_guitar": 0.810418,
+        "guitar_residual": 0.810397,
+        "piano": 0.810394
+      }
+    },
+    {
+      "t": 1969.8999999910593,
+      "spread": 0.03931499999999999,
+      "times": {
+        "lead_vocals": 0.840303,
+        "backing_vocals": 0.840298,
+        "drums": 0.8236,
+        "bass": 0.843537,
+        "other": 0.840298,
+        "acoustic_guitar": 0.804222,
+        "electric_guitar": 0.840296,
+        "guitar_residual": 0.840294,
+        "piano": 0.840291
+      }
+    },
+    {
+      "t": 1981.7999999970198,
+      "spread": 0.03906699999999996,
+      "times": {
+        "lead_vocals": 0.840303,
+        "backing_vocals": 0.840298,
+        "drums": 0.835434,
+        "bass": 0.855089,
+        "other": 0.840298,
+        "acoustic_guitar": 0.816022,
+        "electric_guitar": 0.840296,
+        "guitar_residual": 0.840294,
+        "piano": 0.840291
+      }
+    },
+    {
+      "t": 2001,
+      "spread": 0.039065999999999934,
+      "times": {
+        "lead_vocals": 0.849297,
+        "backing_vocals": 0.849296,
+        "drums": 0.853639,
+        "bass": 0.874293,
+        "other": 0.849297,
+        "acoustic_guitar": 0.835227,
+        "electric_guitar": 0.849298,
+        "guitar_residual": 0.849297,
+        "piano": 0.849295
+      }
+    },
+    {
+      "t": 2020.3999999910593,
+      "spread": 0.03775200000000001,
+      "times": {
+        "lead_vocals": 0.860274,
+        "backing_vocals": 0.860273,
+        "drums": 0.873046,
+        "bass": 0.892748,
+        "other": 0.860275,
+        "acoustic_guitar": 0.854996,
+        "electric_guitar": 0.860276,
+        "guitar_residual": 0.860274,
+        "piano": 0.860274
+      }
+    },
+    {
+      "t": 2040.2999999970198,
+      "spread": 0.03874299999999997,
+      "times": {
+        "lead_vocals": 0.883312,
+        "backing_vocals": 0.883308,
+        "drums": 0.893498,
+        "bass": 0.912965,
+        "other": 0.883309,
+        "acoustic_guitar": 0.874222,
+        "electric_guitar": 0.883309,
+        "guitar_residual": 0.883308,
+        "piano": 0.883307
+      }
+    },
+    {
+      "t": 2062,
+      "spread": 0.03806399999999999,
+      "times": {
+        "lead_vocals": 0.908206,
+        "backing_vocals": 0.908206,
+        "drums": 0.915106,
+        "bass": 0.934119,
+        "other": 0.908205,
+        "acoustic_guitar": 0.896055,
+        "electric_guitar": 0.908206,
+        "guitar_residual": 0.908205,
+        "piano": 0.908205
+      }
+    },
+    {
+      "t": 2081.5999999940395,
+      "spread": 0.03808100000000003,
+      "times": {
+        "lead_vocals": 0.931179,
+        "backing_vocals": 0.931176,
+        "drums": 0.934147,
+        "bass": 0.954086,
+        "other": 0.931178,
+        "acoustic_guitar": 0.916005,
+        "electric_guitar": 0.931178,
+        "guitar_residual": 0.931177,
+        "piano": 0.931176
+      }
+    },
+    {
+      "t": 2100.5,
+      "spread": 0.038308999999999926,
+      "times": {
+        "lead_vocals": 0.941615,
+        "backing_vocals": 0.941612,
+        "drums": 0.953649,
+        "bass": 0.973027,
+        "other": 0.941614,
+        "acoustic_guitar": 0.934718,
+        "electric_guitar": 0.941614,
+        "guitar_residual": 0.941614,
+        "piano": 0.941614
+      }
+    },
+    {
+      "t": 2120.2999999970198,
+      "spread": 0.038111999999999924,
+      "times": {
+        "lead_vocals": 0.964624,
+        "backing_vocals": 0.979115,
+        "drums": 0.973361,
+        "bass": 0.993126,
+        "other": 0.979102,
+        "acoustic_guitar": 0.955014,
+        "electric_guitar": 0.979078,
+        "guitar_residual": 0.97907,
+        "piano": 0.979057
+      }
+    },
+    {
+      "t": 2140.7999999970198,
+      "spread": 0.03852100000000014,
+      "times": {
+        "lead_vocals": 0.988374,
+        "backing_vocals": 0.997995,
+        "drums": 0.994138,
+        "bass": 1.013567,
+        "other": 0.997984,
+        "acoustic_guitar": 0.975046,
+        "electric_guitar": 0.997982,
+        "guitar_residual": 0.997976,
+        "piano": 0.997969
+      }
+    },
+    {
+      "t": 2160.5999999940395,
+      "spread": 0.03808100000000003,
+      "times": {
+        "lead_vocals": 0.999893,
+        "backing_vocals": 1.018182,
+        "drums": 1.013244,
+        "bass": 1.032961,
+        "other": 1.018169,
+        "acoustic_guitar": 0.99488,
+        "electric_guitar": 1.018164,
+        "guitar_residual": 1.018159,
+        "piano": 1.018144
+      }
+    },
+    {
+      "t": 2180.3999999910593,
+      "spread": 0.038076,
+      "times": {
+        "lead_vocals": 1.022698,
+        "backing_vocals": 1.037795,
+        "drums": 1.033373,
+        "bass": 1.053106,
+        "other": 1.037785,
+        "acoustic_guitar": 1.01503,
+        "electric_guitar": 1.037774,
+        "guitar_residual": 1.037762,
+        "piano": 1.037721
+      }
+    },
+    {
+      "t": 2201.2000000029802,
+      "spread": 0.03846600000000011,
+      "times": {
+        "lead_vocals": 1.046728,
+        "backing_vocals": 1.05837,
+        "drums": 1.054426,
+        "bass": 1.073828,
+        "other": 1.058363,
+        "acoustic_guitar": 1.035362,
+        "electric_guitar": 1.058361,
+        "guitar_residual": 1.058359,
+        "piano": 1.058346
+      }
+    },
+    {
+      "t": 2220.7999999970198,
+      "spread": 0.03906900000000002,
+      "times": {
+        "lead_vocals": 1.069562,
+        "backing_vocals": 1.078457,
+        "drums": 1.073959,
+        "bass": 1.094072,
+        "other": 1.078454,
+        "acoustic_guitar": 1.055003,
+        "electric_guitar": 1.078453,
+        "guitar_residual": 1.078451,
+        "piano": 1.078448
+      }
+    },
+    {
+      "t": 2241.7000000029802,
+      "spread": 0.03904899999999989,
+      "times": {
+        "lead_vocals": 1.082154,
+        "backing_vocals": 1.099242,
+        "drums": 1.094361,
+        "bass": 1.114968,
+        "other": 1.099223,
+        "acoustic_guitar": 1.075919,
+        "electric_guitar": 1.099216,
+        "guitar_residual": 1.099214,
+        "piano": 1.099189
+      }
+    },
+    {
+      "t": 2260.2000000029802,
+      "spread": 0.03820400000000013,
+      "times": {
+        "lead_vocals": 1.103821,
+        "backing_vocals": 1.118816,
+        "drums": 1.112814,
+        "bass": 1.132557,
+        "other": 1.118815,
+        "acoustic_guitar": 1.094353,
+        "electric_guitar": 1.11881,
+        "guitar_residual": 1.118807,
+        "piano": 1.118798
+      }
+    },
+    {
+      "t": 2281.8999999910593,
+      "spread": 0.039112000000000036,
+      "times": {
+        "lead_vocals": 1.152292,
+        "backing_vocals": 1.130041,
+        "drums": 1.135496,
+        "bass": 1.155084,
+        "other": 1.13004,
+        "acoustic_guitar": 1.115972,
+        "electric_guitar": 1.130035,
+        "guitar_residual": 1.130033,
+        "piano": 1.130024
+      }
+    },
+    {
+      "t": 2300.8999999910593,
+      "spread": 0.03903800000000013,
+      "times": {
+        "lead_vocals": 1.169982,
+        "backing_vocals": 1.148527,
+        "drums": 1.153493,
+        "bass": 1.174114,
+        "other": 1.148526,
+        "acoustic_guitar": 1.135076,
+        "electric_guitar": 1.148527,
+        "guitar_residual": 1.148527,
+        "piano": 1.148526
+      }
+    },
+    {
+      "t": 2320.7000000029802,
+      "spread": 0.0390569999999999,
+      "times": {
+        "lead_vocals": 1.189728,
+        "backing_vocals": 1.171478,
+        "drums": 1.174271,
+        "bass": 1.194184,
+        "other": 1.171477,
+        "acoustic_guitar": 1.155127,
+        "electric_guitar": 1.171478,
+        "guitar_residual": 1.171478,
+        "piano": 1.171472
+      }
+    },
+    {
+      "t": 2340.2999999970198,
+      "spread": 0.039670000000000094,
+      "times": {
+        "lead_vocals": 1.2089,
+        "backing_vocals": 1.194283,
+        "drums": 1.192477,
+        "bass": 1.213681,
+        "other": 1.194283,
+        "acoustic_guitar": 1.174011,
+        "electric_guitar": 1.194283,
+        "guitar_residual": 1.194283,
+        "piano": 1.194282
+      }
+    },
+    {
+      "t": 2360.3999999910593,
+      "spread": 0.03777800000000009,
+      "times": {
+        "lead_vocals": 1.230484,
+        "backing_vocals": 1.205946,
+        "drums": 1.213946,
+        "bass": 1.232213,
+        "other": 1.205945,
+        "acoustic_guitar": 1.194435,
+        "electric_guitar": 1.205946,
+        "guitar_residual": 1.205946,
+        "piano": 1.205946
+      }
+    },
+    {
+      "t": 2381.2000000029802,
+      "spread": 0.03850500000000001,
+      "times": {
+        "lead_vocals": 1.249843,
+        "backing_vocals": 1.230064,
+        "drums": 1.233403,
+        "bass": 1.253862,
+        "other": 1.230063,
+        "acoustic_guitar": 1.215357,
+        "electric_guitar": 1.230063,
+        "guitar_residual": 1.230062,
+        "piano": 1.230062
+      }
+    },
+    {
+      "t": 2401.5999999940395,
+      "spread": 0.038051999999999975,
+      "times": {
+        "lead_vocals": 1.270662,
+        "backing_vocals": 1.253726,
+        "drums": 1.255193,
+        "bass": 1.274066,
+        "other": 1.253725,
+        "acoustic_guitar": 1.236014,
+        "electric_guitar": 1.253725,
+        "guitar_residual": 1.253725,
+        "piano": 1.253725
+      }
+    },
+    {
+      "t": 2420.2000000029802,
+      "spread": 0.03902199999999989,
+      "times": {
+        "lead_vocals": 1.288548,
+        "backing_vocals": 1.275378,
+        "drums": 1.273081,
+        "bass": 1.292598,
+        "other": 1.275374,
+        "acoustic_guitar": 1.253576,
+        "electric_guitar": 1.275373,
+        "guitar_residual": 1.275371,
+        "piano": 1.27537
+      }
+    },
+    {
+      "t": 2440.7000000029802,
+      "spread": 0.05093900000000007,
+      "times": {
+        "lead_vocals": 1.309995,
+        "backing_vocals": 1.313205,
+        "drums": 1.29358,
+        "bass": 1.314168,
+        "other": 1.313211,
+        "acoustic_guitar": 1.263229,
+        "electric_guitar": 1.313168,
+        "guitar_residual": 1.313139,
+        "piano": 1.313134
+      }
+    },
+    {
+      "t": 2460.7000000029802,
+      "spread": 0.047784999999999966,
+      "times": {
+        "lead_vocals": 1.329964,
+        "backing_vocals": 1.331471,
+        "drums": 1.312516,
+        "bass": 1.334144,
+        "other": 1.331467,
+        "acoustic_guitar": 1.286359,
+        "electric_guitar": 1.331466,
+        "guitar_residual": 1.331463,
+        "piano": 1.331452
+      }
+    },
+    {
+      "t": 2480.2999999970198,
+      "spread": 0.04289300000000007,
+      "times": {
+        "lead_vocals": 1.34998,
+        "backing_vocals": 1.351549,
+        "drums": 1.333546,
+        "bass": 1.352246,
+        "other": 1.351543,
+        "acoustic_guitar": 1.309353,
+        "electric_guitar": 1.351543,
+        "guitar_residual": 1.351541,
+        "piano": 1.351539
+      }
+    },
+    {
+      "t": 2500.2999999970198,
+      "spread": 0.03967999999999994,
+      "times": {
+        "lead_vocals": 1.369868,
+        "backing_vocals": 1.371459,
+        "drums": 1.353487,
+        "bass": 1.372153,
+        "other": 1.371461,
+        "acoustic_guitar": 1.332473,
+        "electric_guitar": 1.371462,
+        "guitar_residual": 1.371423,
+        "piano": 1.371422
+      }
+    },
+    {
+      "t": 2521.2999999970198,
+      "spread": 0.0481459999999998,
+      "times": {
+        "lead_vocals": 1.39141,
+        "backing_vocals": 1.392378,
+        "drums": 1.374463,
+        "bass": 1.393077,
+        "other": 1.392371,
+        "acoustic_guitar": 1.344931,
+        "electric_guitar": 1.392367,
+        "guitar_residual": 1.392341,
+        "piano": 1.392339
+      }
+    },
+    {
+      "t": 2540.7000000029802,
+      "spread": 0.04649900000000007,
+      "times": {
+        "lead_vocals": 1.409677,
+        "backing_vocals": 1.411766,
+        "drums": 1.393256,
+        "bass": 1.414139,
+        "other": 1.411763,
+        "acoustic_guitar": 1.36764,
+        "electric_guitar": 1.411755,
+        "guitar_residual": 1.411737,
+        "piano": 1.41174
+      }
+    },
+    {
+      "t": 2561.0999999940395,
+      "spread": 0.04324900000000009,
+      "times": {
+        "lead_vocals": 1.430859,
+        "backing_vocals": 1.431905,
+        "drums": 1.414325,
+        "bass": 1.43456,
+        "other": 1.431895,
+        "acoustic_guitar": 1.391311,
+        "electric_guitar": 1.431892,
+        "guitar_residual": 1.431891,
+        "piano": 1.431881
+      }
+    },
+    {
+      "t": 2580.2999999970198,
+      "spread": 0.05115000000000003,
+      "times": {
+        "lead_vocals": 1.44995,
+        "backing_vocals": 1.452476,
+        "drums": 1.433452,
+        "bass": 1.453163,
+        "other": 1.452477,
+        "acoustic_guitar": 1.402013,
+        "electric_guitar": 1.452475,
+        "guitar_residual": 1.452472,
+        "piano": 1.45247
+      }
+    },
+    {
+      "t": 2601,
+      "spread": 0.04676999999999998,
+      "times": {
+        "lead_vocals": 1.470688,
+        "backing_vocals": 1.472131,
+        "drums": 1.454158,
+        "bass": 1.472833,
+        "other": 1.472127,
+        "acoustic_guitar": 1.426063,
+        "electric_guitar": 1.472123,
+        "guitar_residual": 1.472105,
+        "piano": 1.4721
+      }
+    },
+    {
+      "t": 2621.3999999910593,
+      "spread": 0.04478099999999996,
+      "times": {
+        "lead_vocals": 1.491022,
+        "backing_vocals": 1.493627,
+        "drums": 1.473705,
+        "bass": 1.494315,
+        "other": 1.493625,
+        "acoustic_guitar": 1.449534,
+        "electric_guitar": 1.493622,
+        "guitar_residual": 1.49361,
+        "piano": 1.493606
+      }
+    },
+    {
+      "t": 2641.8999999910593,
+      "spread": 0.04066500000000017,
+      "times": {
+        "lead_vocals": 1.511793,
+        "backing_vocals": 1.514238,
+        "drums": 1.495324,
+        "bass": 1.514065,
+        "other": 1.514242,
+        "acoustic_guitar": 1.473577,
+        "electric_guitar": 1.51424,
+        "guitar_residual": 1.514228,
+        "piano": 1.514225
+      }
+    },
+    {
+      "t": 2660.5,
+      "spread": 0.04848299999999983,
+      "times": {
+        "lead_vocals": 1.530364,
+        "backing_vocals": 1.531851,
+        "drums": 1.513943,
+        "bass": 1.532541,
+        "other": 1.53185,
+        "acoustic_guitar": 1.484058,
+        "electric_guitar": 1.53185,
+        "guitar_residual": 1.531847,
+        "piano": 1.531845
+      }
+    },
+    {
+      "t": 2680.3999999910593,
+      "spread": 0.045306999999999986,
+      "times": {
+        "lead_vocals": 1.550452,
+        "backing_vocals": 1.55142,
+        "drums": 1.533433,
+        "bass": 1.552123,
+        "other": 1.551421,
+        "acoustic_guitar": 1.506816,
+        "electric_guitar": 1.55142,
+        "guitar_residual": 1.551409,
+        "piano": 1.551408
+      }
+    },
+    {
+      "t": 2701.5,
+      "spread": 0.043134000000000006,
+      "times": {
+        "lead_vocals": 1.571452,
+        "backing_vocals": 1.573384,
+        "drums": 1.55452,
+        "bass": 1.574072,
+        "other": 1.573382,
+        "acoustic_guitar": 1.530938,
+        "electric_guitar": 1.573382,
+        "guitar_residual": 1.572481,
+        "piano": 1.572478
+      }
+    },
+    {
+      "t": 2721.3999999910593,
+      "spread": 0.051475999999999855,
+      "times": {
+        "lead_vocals": 1.59129,
+        "backing_vocals": 1.593264,
+        "drums": 1.574466,
+        "bass": 1.593951,
+        "other": 1.593261,
+        "acoustic_guitar": 1.542475,
+        "electric_guitar": 1.59326,
+        "guitar_residual": 1.593251,
+        "piano": 1.593248
+      }
+    },
+    {
+      "t": 2740.3999999910593,
+      "spread": 0.047353999999999896,
+      "times": {
+        "lead_vocals": 1.610315,
+        "backing_vocals": 1.611385,
+        "drums": 1.593449,
+        "bass": 1.61208,
+        "other": 1.611383,
+        "acoustic_guitar": 1.564726,
+        "electric_guitar": 1.611378,
+        "guitar_residual": 1.611373,
+        "piano": 1.61137
+      }
+    },
+    {
+      "t": 2761.5999999940395,
+      "spread": 0.029027000000000136,
+      "times": {
+        "lead_vocals": 1.631564,
+        "backing_vocals": 1.633603,
+        "drums": 1.614963,
+        "bass": 1.635037,
+        "other": 1.633603,
+        "acoustic_guitar": 1.60601,
+        "electric_guitar": 1.633603,
+        "guitar_residual": 1.633581,
+        "piano": 1.633574
+      }
+    },
+    {
+      "t": 2780.3999999910593,
+      "spread": 0.029224999999999834,
+      "times": {
+        "lead_vocals": 1.648959,
+        "backing_vocals": 1.651221,
+        "drums": 1.636954,
+        "bass": 1.653854,
+        "other": 1.65122,
+        "acoustic_guitar": 1.624629,
+        "electric_guitar": 1.65122,
+        "guitar_residual": 1.651218,
+        "piano": 1.651209
+      }
+    },
+    {
+      "t": 2800.7999999970198,
+      "spread": 0.028197999999999945,
+      "times": {
+        "lead_vocals": 1.670725,
+        "backing_vocals": 1.671739,
+        "drums": 1.650639,
+        "bass": 1.672429,
+        "other": 1.671739,
+        "acoustic_guitar": 1.644231,
+        "electric_guitar": 1.671739,
+        "guitar_residual": 1.671727,
+        "piano": 1.671724
+      }
+    },
+    {
+      "t": 2821,
+      "spread": 0.02950200000000014,
+      "times": {
+        "lead_vocals": 1.69089,
+        "backing_vocals": 1.693413,
+        "drums": 1.672538,
+        "bass": 1.694101,
+        "other": 1.693413,
+        "acoustic_guitar": 1.664599,
+        "electric_guitar": 1.693411,
+        "guitar_residual": 1.693409,
+        "piano": 1.693407
+      }
+    },
+    {
+      "t": 2840.7000000029802,
+      "spread": 0.028507999999999978,
+      "times": {
+        "lead_vocals": 1.710538,
+        "backing_vocals": 1.712049,
+        "drums": 1.695401,
+        "bass": 1.712741,
+        "other": 1.712049,
+        "acoustic_guitar": 1.684233,
+        "electric_guitar": 1.712047,
+        "guitar_residual": 1.712037,
+        "piano": 1.712035
+      }
+    },
+    {
+      "t": 2861,
+      "spread": 0.028423000000000087,
+      "times": {
+        "lead_vocals": 1.730674,
+        "backing_vocals": 1.732647,
+        "drums": 1.718853,
+        "bass": 1.733335,
+        "other": 1.732648,
+        "acoustic_guitar": 1.704912,
+        "electric_guitar": 1.732648,
+        "guitar_residual": 1.732638,
+        "piano": 1.732638
+      }
+    },
+    {
+      "t": 2881,
+      "spread": 0.02852100000000002,
+      "times": {
+        "lead_vocals": 1.750937,
+        "backing_vocals": 1.752437,
+        "drums": 1.731169,
+        "bass": 1.753129,
+        "other": 1.752439,
+        "acoustic_guitar": 1.724608,
+        "electric_guitar": 1.752441,
+        "guitar_residual": 1.75243,
+        "piano": 1.752428
+      }
+    },
+    {
+      "t": 2900.8999999910593,
+      "spread": 0.028496999999999995,
+      "times": {
+        "lead_vocals": 1.770817,
+        "backing_vocals": 1.772323,
+        "drums": 1.753541,
+        "bass": 1.773012,
+        "other": 1.772323,
+        "acoustic_guitar": 1.744515,
+        "electric_guitar": 1.772321,
+        "guitar_residual": 1.772311,
+        "piano": 1.772308
+      }
+    },
+    {
+      "t": 2920.5,
+      "spread": 0.0283739999999999,
+      "times": {
+        "lead_vocals": 1.790392,
+        "backing_vocals": 1.791792,
+        "drums": 1.776503,
+        "bass": 1.792482,
+        "other": 1.79179,
+        "acoustic_guitar": 1.764108,
+        "electric_guitar": 1.791787,
+        "guitar_residual": 1.791784,
+        "piano": 1.79178
+      }
+    },
+    {
+      "t": 2941.7000000029802,
+      "spread": 0.028619999999999868,
+      "times": {
+        "lead_vocals": 1.811619,
+        "backing_vocals": 1.813065,
+        "drums": 1.790311,
+        "bass": 1.813764,
+        "other": 1.813065,
+        "acoustic_guitar": 1.785144,
+        "electric_guitar": 1.813063,
+        "guitar_residual": 1.813053,
+        "piano": 1.813051
+      }
+    },
+    {
+      "t": 2964.2000000029802,
+      "spread": 0.03308999999999984,
+      "times": {
+        "lead_vocals": 1.833934,
+        "backing_vocals": 1.835764,
+        "drums": 1.814986,
+        "bass": 1.836453,
+        "other": 1.835758,
+        "acoustic_guitar": 1.803363,
+        "electric_guitar": 1.835727,
+        "guitar_residual": 1.835723,
+        "piano": 1.835715
+      }
+    },
+    {
+      "t": 2981,
+      "spread": 0.02269499999999991,
+      "times": {
+        "lead_vocals": 1.840421,
+        "backing_vocals": 1.842259,
+        "drums": 1.834992,
+        "bass": 1.842952,
+        "other": 1.842257,
+        "acoustic_guitar": 1.820257,
+        "electric_guitar": 1.842229,
+        "guitar_residual": 1.842225,
+        "piano": 1.842219
+      }
+    },
+    {
+      "t": 3005.7999999970198,
+      "spread": 0.02010999999999985,
+      "times": {
+        "lead_vocals": 1.868636,
+        "backing_vocals": 1.868661,
+        "drums": 1.863105,
+        "bass": 1.869425,
+        "other": 1.868658,
+        "acoustic_guitar": 1.849315,
+        "electric_guitar": 1.868654,
+        "guitar_residual": 1.86865,
+        "piano": 1.868646
+      }
+    },
+    {
+      "t": 3021.7000000029802,
+      "spread": 0.0333429999999999,
+      "times": {
+        "lead_vocals": 1.888941,
+        "backing_vocals": 1.893384,
+        "drums": 1.870444,
+        "bass": 1.894073,
+        "other": 1.893383,
+        "acoustic_guitar": 1.86073,
+        "electric_guitar": 1.888975,
+        "guitar_residual": 1.888974,
+        "piano": 1.888971
+      }
+    },
+    {
+      "t": 3042.0999999940395,
+      "spread": 0.03303699999999998,
+      "times": {
+        "lead_vocals": 1.901733,
+        "backing_vocals": 1.913711,
+        "drums": 1.894175,
+        "bass": 1.914399,
+        "other": 1.913707,
+        "acoustic_guitar": 1.881362,
+        "electric_guitar": 1.913686,
+        "guitar_residual": 1.913681,
+        "piano": 1.913677
+      }
+    },
+    {
+      "t": 3069.2000000029802,
+      "spread": 0.03237099999999993,
+      "times": {
+        "lead_vocals": 1.934694,
+        "backing_vocals": 1.934724,
+        "drums": 1.943006,
+        "bass": 1.930713,
+        "other": 1.934717,
+        "acoustic_guitar": 1.910635,
+        "electric_guitar": 1.934712,
+        "guitar_residual": 1.934707,
+        "piano": 1.934704
+      }
+    },
+    {
+      "t": 3083.3999999910593,
+      "spread": 0.03473400000000004,
+      "times": {
+        "lead_vocals": 1.948943,
+        "backing_vocals": 1.948975,
+        "drums": 1.957258,
+        "bass": 1.933708,
+        "other": 1.948971,
+        "acoustic_guitar": 1.922524,
+        "electric_guitar": 1.948967,
+        "guitar_residual": 1.948964,
+        "piano": 1.948961
+      }
+    },
+    {
+      "t": 3101.0999999940395,
+      "spread": 0.039298000000000055,
+      "times": {
+        "lead_vocals": 1.970707,
+        "backing_vocals": 1.970771,
+        "drums": 1.974726,
+        "bass": 1.951834,
+        "other": 1.970766,
+        "acoustic_guitar": 1.935428,
+        "electric_guitar": 1.970739,
+        "guitar_residual": 1.970732,
+        "piano": 1.970728
+      }
+    },
+    {
+      "t": 3123,
+      "spread": 0.03432400000000002,
+      "times": {
+        "lead_vocals": 1.984176,
+        "backing_vocals": 1.984251,
+        "drums": 1.996537,
+        "bass": 1.976968,
+        "other": 1.984253,
+        "acoustic_guitar": 1.962213,
+        "electric_guitar": 1.984228,
+        "guitar_residual": 1.984224,
+        "piano": 1.984221
+      }
+    },
+    {
+      "t": 3140.7999999970198,
+      "spread": 0.01940300000000006,
+      "times": {
+        "lead_vocals": 2.003439,
+        "backing_vocals": 2.003492,
+        "drums": 2.003511,
+        "bass": 1.998005,
+        "other": 2.003488,
+        "acoustic_guitar": 1.984108,
+        "electric_guitar": 2.003482,
+        "guitar_residual": 2.003457,
+        "piano": 2.003452
+      }
+    },
+    {
+      "t": 3161.2999999970198,
+      "spread": 0.0327989999999998,
+      "times": {
+        "lead_vocals": 2.028785,
+        "backing_vocals": 2.033395,
+        "drums": 2.033409,
+        "bass": 2.01016,
+        "other": 2.033393,
+        "acoustic_guitar": 2.00061,
+        "electric_guitar": 2.03339,
+        "guitar_residual": 2.028849,
+        "piano": 2.028844
+      }
+    },
+    {
+      "t": 3184.2000000029802,
+      "spread": 0.033049000000000106,
+      "times": {
+        "lead_vocals": 2.042612,
+        "backing_vocals": 2.056325,
+        "drums": 2.056334,
+        "bass": 2.03614,
+        "other": 2.056318,
+        "acoustic_guitar": 2.023285,
+        "electric_guitar": 2.056315,
+        "guitar_residual": 2.056297,
+        "piano": 2.056293
+      }
+    },
+    {
+      "t": 3202.5,
+      "spread": 0.019382999999999928,
+      "times": {
+        "lead_vocals": 2.063257,
+        "backing_vocals": 2.0633,
+        "drums": 2.063313,
+        "bass": 2.057795,
+        "other": 2.063297,
+        "acoustic_guitar": 2.04393,
+        "electric_guitar": 2.063294,
+        "guitar_residual": 2.063274,
+        "piano": 2.06327
+      }
+    },
+    {
+      "t": 3222.0999999940395,
+      "spread": 0.02692799999999984,
+      "times": {
+        "lead_vocals": 2.087924,
+        "backing_vocals": 2.087987,
+        "drums": 2.087998,
+        "bass": 2.08064,
+        "other": 2.087983,
+        "acoustic_guitar": 2.06107,
+        "electric_guitar": 2.087959,
+        "guitar_residual": 2.087952,
+        "piano": 2.087948
+      }
+    },
+    {
+      "t": 3240.2000000029802,
+      "spread": 0.030784000000000145,
+      "times": {
+        "lead_vocals": 2.110204,
+        "backing_vocals": 2.110258,
+        "drums": 2.110263,
+        "bass": 2.090333,
+        "other": 2.110254,
+        "acoustic_guitar": 2.079479,
+        "electric_guitar": 2.110237,
+        "guitar_residual": 2.11023,
+        "piano": 2.110226
+      }
+    },
+    {
+      "t": 3263.2000000029802,
+      "spread": 0.022804999999999964,
+      "times": {
+        "lead_vocals": 2.124829,
+        "backing_vocals": 2.124897,
+        "drums": 2.124907,
+        "bass": 2.116473,
+        "other": 2.124904,
+        "acoustic_guitar": 2.102102,
+        "electric_guitar": 2.12489,
+        "guitar_residual": 2.124885,
+        "piano": 2.124884
+      }
+    },
+    {
+      "t": 3281.7999999970198,
+      "spread": 0.019401000000000224,
+      "times": {
+        "lead_vocals": 2.144682,
+        "backing_vocals": 2.144742,
+        "drums": 2.144756,
+        "bass": 2.138317,
+        "other": 2.144741,
+        "acoustic_guitar": 2.125355,
+        "electric_guitar": 2.144739,
+        "guitar_residual": 2.144706,
+        "piano": 2.1447
+      }
+    },
+    {
+      "t": 3302.0999999940395,
+      "spread": 0.031633000000000244,
+      "times": {
+        "lead_vocals": 2.168811,
+        "backing_vocals": 2.173482,
+        "drums": 2.173487,
+        "bass": 2.161872,
+        "other": 2.173464,
+        "acoustic_guitar": 2.141854,
+        "electric_guitar": 2.173461,
+        "guitar_residual": 2.173457,
+        "piano": 2.173445
+      }
+    },
+    {
+      "t": 3322.5,
+      "spread": 0.03228600000000004,
+      "times": {
+        "lead_vocals": 2.180935,
+        "backing_vocals": 2.193895,
+        "drums": 2.1939,
+        "bass": 2.173863,
+        "other": 2.193878,
+        "acoustic_guitar": 2.161614,
+        "electric_guitar": 2.193875,
+        "guitar_residual": 2.19387,
+        "piano": 2.193859
+      }
+    },
+    {
+      "t": 3344.5,
+      "spread": 0.019359999999999822,
+      "times": {
+        "lead_vocals": 2.205817,
+        "backing_vocals": 2.205847,
+        "drums": 2.20586,
+        "bass": 2.199127,
+        "other": 2.205844,
+        "acoustic_guitar": 2.1865,
+        "electric_guitar": 2.205843,
+        "guitar_residual": 2.205838,
+        "piano": 2.205833
+      }
+    },
+    {
+      "t": 3362.7000000029802,
+      "spread": 0.03764400000000023,
+      "times": {
+        "lead_vocals": 2.22922,
+        "backing_vocals": 2.233505,
+        "drums": 2.233512,
+        "bass": 2.220551,
+        "other": 2.233503,
+        "acoustic_guitar": 2.195868,
+        "electric_guitar": 2.233475,
+        "guitar_residual": 2.233456,
+        "piano": 2.233451
+      }
+    },
+    {
+      "t": 3381.2000000029802,
+      "spread": 0.031627000000000294,
+      "times": {
+        "lead_vocals": 2.251343,
+        "backing_vocals": 2.251903,
+        "drums": 2.251911,
+        "bass": 2.230547,
+        "other": 2.251902,
+        "acoustic_guitar": 2.220284,
+        "electric_guitar": 2.251877,
+        "guitar_residual": 2.251858,
+        "piano": 2.251853
+      }
+    },
+    {
+      "t": 3400.2000000029802,
+      "spread": 0.01940099999999978,
+      "times": {
+        "lead_vocals": 2.259867,
+        "backing_vocals": 2.259927,
+        "drums": 2.259941,
+        "bass": 2.252855,
+        "other": 2.259925,
+        "acoustic_guitar": 2.24054,
+        "electric_guitar": 2.259912,
+        "guitar_residual": 2.259888,
+        "piano": 2.259883
+      }
+    },
+    {
+      "t": 3425.2999999970198,
+      "spread": 0.037941,
+      "times": {
+        "lead_vocals": 2.272982,
+        "backing_vocals": 2.293594,
+        "drums": 2.293608,
+        "bass": 2.30251,
+        "other": 2.293616,
+        "acoustic_guitar": 2.264569,
+        "electric_guitar": 2.293589,
+        "guitar_residual": 2.293583,
+        "piano": 2.293578
+      }
+    },
+    {
+      "t": 3445.0999999940395,
+      "spread": 0.043696999999999875,
+      "times": {
+        "lead_vocals": 2.295215,
+        "backing_vocals": 2.313444,
+        "drums": 2.317922,
+        "bass": 2.322358,
+        "other": 2.313439,
+        "acoustic_guitar": 2.278661,
+        "electric_guitar": 2.313411,
+        "guitar_residual": 2.313405,
+        "piano": 2.313399
+      }
+    },
+    {
+      "t": 3463.0999999940395,
+      "spread": 0.03351799999999994,
+      "times": {
+        "lead_vocals": 2.304843,
+        "backing_vocals": 2.321794,
+        "drums": 2.335933,
+        "bass": 2.330751,
+        "other": 2.321792,
+        "acoustic_guitar": 2.302415,
+        "electric_guitar": 2.32179,
+        "guitar_residual": 2.321785,
+        "piano": 2.321782
+      }
+    },
+    {
+      "t": 3484.5,
+      "spread": 0.02830300000000019,
+      "times": {
+        "lead_vocals": 2.329498,
+        "backing_vocals": 2.347179,
+        "drums": 2.347192,
+        "bass": 2.356033,
+        "other": 2.347173,
+        "acoustic_guitar": 2.32773,
+        "electric_guitar": 2.347147,
+        "guitar_residual": 2.347116,
+        "piano": 2.347075
+      }
+    },
+    {
+      "t": 3500.7000000029802,
+      "spread": 0.03357800000000033,
+      "times": {
+        "lead_vocals": 2.348868,
+        "backing_vocals": 2.368487,
+        "drums": 2.368496,
+        "bass": 2.377413,
+        "other": 2.368484,
+        "acoustic_guitar": 2.343835,
+        "electric_guitar": 2.368479,
+        "guitar_residual": 2.368453,
+        "piano": 2.368448
+      }
+    },
+    {
+      "t": 3523.7000000029802,
+      "spread": 0.03331699999999982,
+      "times": {
+        "lead_vocals": 2.363461,
+        "backing_vocals": 2.396146,
+        "drums": 2.396308,
+        "bass": 2.391296,
+        "other": 2.396145,
+        "acoustic_guitar": 2.362991,
+        "electric_guitar": 2.396142,
+        "guitar_residual": 2.382334,
+        "piano": 2.382328
+      }
+    },
+    {
+      "t": 3543.5999999940395,
+      "spread": 0.028312000000000115,
+      "times": {
+        "lead_vocals": 2.386597,
+        "backing_vocals": 2.404188,
+        "drums": 2.404199,
+        "bass": 2.413131,
+        "other": 2.404185,
+        "acoustic_guitar": 2.384819,
+        "electric_guitar": 2.404181,
+        "guitar_residual": 2.404163,
+        "piano": 2.404159
+      }
+    },
+    {
+      "t": 3562,
+      "spread": 0.03464199999999984,
+      "times": {
+        "lead_vocals": 2.408221,
+        "backing_vocals": 2.426813,
+        "drums": 2.426821,
+        "bass": 2.435714,
+        "other": 2.42681,
+        "acoustic_guitar": 2.401072,
+        "electric_guitar": 2.426787,
+        "guitar_residual": 2.426772,
+        "piano": 2.426767
+      }
+    },
+    {
+      "t": 3580.5999999940395,
+      "spread": 0.040529999999999955,
+      "times": {
+        "lead_vocals": 2.430138,
+        "backing_vocals": 2.450035,
+        "drums": 2.454394,
+        "bass": 2.458975,
+        "other": 2.450031,
+        "acoustic_guitar": 2.418445,
+        "electric_guitar": 2.450027,
+        "guitar_residual": 2.450009,
+        "piano": 2.450003
+      }
+    },
+    {
+      "t": 3605.0999999940395,
+      "spread": 0.034722000000000364,
+      "times": {
+        "lead_vocals": 2.446113,
+        "backing_vocals": 2.463546,
+        "drums": 2.478867,
+        "bass": 2.473306,
+        "other": 2.463539,
+        "acoustic_guitar": 2.444145,
+        "electric_guitar": 2.463534,
+        "guitar_residual": 2.463527,
+        "piano": 2.463521
+      }
+    },
+    {
+      "t": 3622.2000000029802,
+      "spread": 0.028310999999999975,
+      "times": {
+        "lead_vocals": 2.466458,
+        "backing_vocals": 2.484579,
+        "drums": 2.48459,
+        "bass": 2.493508,
+        "other": 2.484578,
+        "acoustic_guitar": 2.465197,
+        "electric_guitar": 2.484575,
+        "guitar_residual": 2.484542,
+        "piano": 2.484537
+      }
+    },
+    {
+      "t": 3641.2000000029802,
+      "spread": 0.03735899999999992,
+      "times": {
+        "lead_vocals": 2.488483,
+        "backing_vocals": 2.508362,
+        "drums": 2.508403,
+        "bass": 2.51729,
+        "other": 2.508357,
+        "acoustic_guitar": 2.479931,
+        "electric_guitar": 2.508351,
+        "guitar_residual": 2.508325,
+        "piano": 2.508319
+      }
+    },
+    {
+      "t": 3661.3999999910593,
+      "spread": 0.043387000000000064,
+      "times": {
+        "lead_vocals": 2.512098,
+        "backing_vocals": 2.533071,
+        "drums": 2.533082,
+        "bass": 2.542009,
+        "other": 2.533071,
+        "acoustic_guitar": 2.498622,
+        "electric_guitar": 2.533069,
+        "guitar_residual": 2.533046,
+        "piano": 2.533044
+      }
+    },
+    {
+      "t": 3688.2000000029802,
+      "spread": 0.03312899999999974,
+      "times": {
+        "lead_vocals": 2.530501,
+        "backing_vocals": 2.554119,
+        "drums": 2.554126,
+        "bass": 2.563043,
+        "other": 2.554117,
+        "acoustic_guitar": 2.529914,
+        "electric_guitar": 2.554096,
+        "guitar_residual": 2.55409,
+        "piano": 2.554083
+      }
+    },
+    {
+      "t": 3703,
+      "spread": 0.04017699999999991,
+      "times": {
+        "lead_vocals": 2.548584,
+        "backing_vocals": 2.573694,
+        "drums": 2.573703,
+        "bass": 2.582523,
+        "other": 2.57369,
+        "acoustic_guitar": 2.542346,
+        "electric_guitar": 2.573584,
+        "guitar_residual": 2.573578,
+        "piano": 2.57357
+      }
+    },
+    {
+      "t": 3723.5,
+      "spread": 0.04011699999999996,
+      "times": {
+        "lead_vocals": 2.572308,
+        "backing_vocals": 2.594166,
+        "drums": 2.594175,
+        "bass": 2.602996,
+        "other": 2.594163,
+        "acoustic_guitar": 2.562879,
+        "electric_guitar": 2.594058,
+        "guitar_residual": 2.594052,
+        "piano": 2.594045
+      }
+    },
+    {
+      "t": 3740.2999999970198,
+      "spread": 0.028303999999999885,
+      "times": {
+        "lead_vocals": 2.580557,
+        "backing_vocals": 2.599607,
+        "drums": 2.599615,
+        "bass": 2.608561,
+        "other": 2.599605,
+        "acoustic_guitar": 2.580257,
+        "electric_guitar": 2.599603,
+        "guitar_residual": 2.599591,
+        "piano": 2.599589
+      }
+    },
+    {
+      "t": 3760.8999999910593,
+      "spread": 0.05287100000000011,
+      "times": {
+        "lead_vocals": 2.630008,
+        "backing_vocals": 2.633324,
+        "drums": 2.633328,
+        "bass": 2.64228,
+        "other": 2.633319,
+        "acoustic_guitar": 2.589409,
+        "electric_guitar": 2.633317,
+        "guitar_residual": 2.633315,
+        "piano": 2.633312
+      }
+    },
+    {
+      "t": 3782,
+      "spread": 0.0502710000000004,
+      "times": {
+        "lead_vocals": 2.650763,
+        "backing_vocals": 2.654115,
+        "drums": 2.655187,
+        "bass": 2.66306,
+        "other": 2.654109,
+        "acoustic_guitar": 2.612789,
+        "electric_guitar": 2.654105,
+        "guitar_residual": 2.654102,
+        "piano": 2.65409
+      }
+    },
+    {
+      "t": 3810.7000000029802,
+      "spread": 0.047211000000000336,
+      "times": {
+        "lead_vocals": 2.679467,
+        "backing_vocals": 2.681344,
+        "drums": 2.682421,
+        "bass": 2.691765,
+        "other": 2.681348,
+        "acoustic_guitar": 2.644554,
+        "electric_guitar": 2.681348,
+        "guitar_residual": 2.682824,
+        "piano": 2.682811
+      }
+    },
+    {
+      "t": 3821.7000000029802,
+      "spread": 0.03446399999999983,
+      "times": {
+        "lead_vocals": 2.681075,
+        "backing_vocals": 2.684453,
+        "drums": 2.684461,
+        "bass": 2.693377,
+        "other": 2.684448,
+        "acoustic_guitar": 2.658913,
+        "electric_guitar": 2.684442,
+        "guitar_residual": 2.684415,
+        "piano": 2.684409
+      }
+    },
+    {
+      "t": 3841.7999999970198,
+      "spread": 0.05204299999999984,
+      "times": {
+        "lead_vocals": 2.710295,
+        "backing_vocals": 2.713667,
+        "drums": 2.713671,
+        "bass": 2.722594,
+        "other": 2.713667,
+        "acoustic_guitar": 2.670551,
+        "electric_guitar": 2.713641,
+        "guitar_residual": 2.713638,
+        "piano": 2.713635
+      }
+    },
+    {
+      "t": 3865.5,
+      "spread": 0.048674000000000106,
+      "times": {
+        "lead_vocals": 2.733838,
+        "backing_vocals": 2.73721,
+        "drums": 2.737214,
+        "bass": 2.746137,
+        "other": 2.73721,
+        "acoustic_guitar": 2.697463,
+        "electric_guitar": 2.737183,
+        "guitar_residual": 2.73718,
+        "piano": 2.737177
+      }
+    },
+    {
+      "t": 3882.0999999940395,
+      "spread": 0.034340999999999955,
+      "times": {
+        "lead_vocals": 2.739412,
+        "backing_vocals": 2.742759,
+        "drums": 2.742769,
+        "bass": 2.751712,
+        "other": 2.742758,
+        "acoustic_guitar": 2.717371,
+        "electric_guitar": 2.742756,
+        "guitar_residual": 2.742745,
+        "piano": 2.742742
+      }
+    },
+    {
+      "t": 3904.5,
+      "spread": 0.04048699999999972,
+      "times": {
+        "lead_vocals": 2.771123,
+        "backing_vocals": 2.774489,
+        "drums": 2.774495,
+        "bass": 2.783422,
+        "other": 2.774488,
+        "acoustic_guitar": 2.742935,
+        "electric_guitar": 2.774477,
+        "guitar_residual": 2.774467,
+        "piano": 2.774464
+      }
+    },
+    {
+      "t": 3922.5,
+      "spread": 0.013898999999999884,
+      "times": {
+        "lead_vocals": 2.789121,
+        "backing_vocals": 2.792486,
+        "drums": 2.792492,
+        "bass": 2.801419,
+        "other": 2.792484,
+        "acoustic_guitar": 2.78752,
+        "electric_guitar": 2.792472,
+        "guitar_residual": 2.792462,
+        "piano": 2.792458
+      }
+    },
+    {
+      "t": 3943.8999999910593,
+      "spread": 0.016560999999999826,
+      "times": {
+        "lead_vocals": 2.79224,
+        "backing_vocals": 2.795662,
+        "drums": 2.795669,
+        "bass": 2.804596,
+        "other": 2.795661,
+        "acoustic_guitar": 2.808801,
+        "electric_guitar": 2.795648,
+        "guitar_residual": 2.795638,
+        "piano": 2.795634
+      }
+    },
+    {
+      "t": 3960.8999999910593,
+      "spread": 0.018205000000000027,
+      "times": {
+        "lead_vocals": 2.807562,
+        "backing_vocals": 2.810872,
+        "drums": 2.810871,
+        "bass": 2.819848,
+        "other": 2.810866,
+        "acoustic_guitar": 2.825767,
+        "electric_guitar": 2.810864,
+        "guitar_residual": 2.810861,
+        "piano": 2.81086
+      }
+    },
+    {
+      "t": 3981.2999999970198,
+      "spread": 0.01485000000000003,
+      "times": {
+        "lead_vocals": 2.831284,
+        "backing_vocals": 2.834586,
+        "drums": 2.834584,
+        "bass": 2.843561,
+        "other": 2.834581,
+        "acoustic_guitar": 2.846134,
+        "electric_guitar": 2.834581,
+        "guitar_residual": 2.83458,
+        "piano": 2.834579
+      }
+    },
+    {
+      "t": 4002.0999999940395,
+      "spread": 0.021481000000000083,
+      "times": {
+        "lead_vocals": 2.843775,
+        "backing_vocals": 2.847086,
+        "drums": 2.847087,
+        "bass": 2.856066,
+        "other": 2.847087,
+        "acoustic_guitar": 2.865256,
+        "electric_guitar": 2.847088,
+        "guitar_residual": 2.847088,
+        "piano": 2.847089
+      }
+    },
+    {
+      "t": 4021,
+      "spread": 0.02009900000000009,
+      "times": {
+        "lead_vocals": 2.8658,
+        "backing_vocals": 2.869108,
+        "drums": 2.869102,
+        "bass": 2.878075,
+        "other": 2.869095,
+        "acoustic_guitar": 2.885899,
+        "electric_guitar": 2.869095,
+        "guitar_residual": 2.869095,
+        "piano": 2.869094
+      }
+    },
+    {
+      "t": 4043.7000000029802,
+      "spread": 0.01685200000000009,
+      "times": {
+        "lead_vocals": 2.891902,
+        "backing_vocals": 2.895207,
+        "drums": 2.895205,
+        "bass": 2.904183,
+        "other": 2.895191,
+        "acoustic_guitar": 2.908754,
+        "electric_guitar": 2.895191,
+        "guitar_residual": 2.89519,
+        "piano": 2.895189
+      }
+    },
+    {
+      "t": 4062.2999999970198,
+      "spread": 0.025110000000000188,
+      "times": {
+        "lead_vocals": 2.902052,
+        "backing_vocals": 2.905364,
+        "drums": 2.905364,
+        "bass": 2.914343,
+        "other": 2.905363,
+        "acoustic_guitar": 2.927162,
+        "electric_guitar": 2.905364,
+        "guitar_residual": 2.905364,
+        "piano": 2.905363
+      }
+    },
+    {
+      "t": 4080.2999999970198,
+      "spread": 0.022087999999999663,
+      "times": {
+        "lead_vocals": 2.92315,
+        "backing_vocals": 2.926459,
+        "drums": 2.926459,
+        "bass": 2.935438,
+        "other": 2.926458,
+        "acoustic_guitar": 2.945238,
+        "electric_guitar": 2.926459,
+        "guitar_residual": 2.926458,
+        "piano": 2.926457
+      }
+    },
+    {
+      "t": 4105,
+      "spread": 0.03190299999999979,
+      "times": {
+        "lead_vocals": 2.973998,
+        "backing_vocals": 2.977301,
+        "drums": 2.954371,
+        "bass": 2.986274,
+        "other": 2.977287,
+        "acoustic_guitar": 2.96977,
+        "electric_guitar": 2.977281,
+        "guitar_residual": 2.977273,
+        "piano": 2.977266
+      }
+    },
+    {
+      "t": 4121.0999999940395,
+      "spread": 0.026898999999999784,
+      "times": {
+        "lead_vocals": 2.988376,
+        "backing_vocals": 2.991678,
+        "drums": 2.973758,
+        "bass": 3.000657,
+        "other": 2.991673,
+        "acoustic_guitar": 2.980788,
+        "electric_guitar": 2.991655,
+        "guitar_residual": 2.991652,
+        "piano": 2.991635
+      }
+    },
+    {
+      "t": 4142.0999999940395,
+      "spread": 0.026899999999999924,
+      "times": {
+        "lead_vocals": 3.002099,
+        "backing_vocals": 3.005407,
+        "drums": 2.987489,
+        "bass": 3.014389,
+        "other": 3.005406,
+        "acoustic_guitar": 3.006878,
+        "electric_guitar": 3.005389,
+        "guitar_residual": 3.005386,
+        "piano": 3.00537
+      }
+    },
+    {
+      "t": 4161.5999999940395,
+      "spread": 0.025951000000000057,
+      "times": {
+        "lead_vocals": 3.022626,
+        "backing_vocals": 3.025926,
+        "drums": 3.008951,
+        "bass": 3.034902,
+        "other": 3.025916,
+        "acoustic_guitar": 3.026389,
+        "electric_guitar": 3.025892,
+        "guitar_residual": 3.025887,
+        "piano": 3.025877
+      }
+    },
+    {
+      "t": 4181.0999999940395,
+      "spread": 0.027260000000000062,
+      "times": {
+        "lead_vocals": 3.046721,
+        "backing_vocals": 3.050026,
+        "drums": 3.031741,
+        "bass": 3.059001,
+        "other": 3.050008,
+        "acoustic_guitar": 3.045926,
+        "electric_guitar": 3.050004,
+        "guitar_residual": 3.05,
+        "piano": 3.049992
+      }
+    },
+    {
+      "t": 4200.70000000298,
+      "spread": 0.038432000000000244,
+      "times": {
+        "lead_vocals": 3.06967,
+        "backing_vocals": 3.072976,
+        "drums": 3.043519,
+        "bass": 3.081951,
+        "other": 3.072967,
+        "acoustic_guitar": 3.0656,
+        "electric_guitar": 3.072955,
+        "guitar_residual": 3.07295,
+        "piano": 3.072924
+      }
+    },
+    {
+      "t": 4223.29999999702,
+      "spread": 0.025209999999999955,
+      "times": {
+        "lead_vocals": 3.081808,
+        "backing_vocals": 3.085112,
+        "drums": 3.068876,
+        "bass": 3.094086,
+        "other": 3.085101,
+        "acoustic_guitar": 3.088243,
+        "electric_guitar": 3.085084,
+        "guitar_residual": 3.085078,
+        "piano": 3.085074
+      }
+    },
+    {
+      "t": 4243,
+      "spread": 0.026130999999999904,
+      "times": {
+        "lead_vocals": 3.105528,
+        "backing_vocals": 3.108835,
+        "drums": 3.091681,
+        "bass": 3.117812,
+        "other": 3.108817,
+        "acoustic_guitar": 3.106259,
+        "electric_guitar": 3.108815,
+        "guitar_residual": 3.108812,
+        "piano": 3.108805
+      }
+    },
+    {
+      "t": 4260.899999991059,
+      "spread": 0.015099999999999891,
+      "times": {
+        "lead_vocals": 3.126993,
+        "backing_vocals": 3.130301,
+        "drums": 3.128127,
+        "bass": 3.139278,
+        "other": 3.130294,
+        "acoustic_guitar": 3.124178,
+        "electric_guitar": 3.130291,
+        "guitar_residual": 3.130287,
+        "piano": 3.130283
+      }
+    },
+    {
+      "t": 4284.79999999702,
+      "spread": 0.012288999999999994,
+      "times": {
+        "lead_vocals": 3.142467,
+        "backing_vocals": 3.145775,
+        "drums": 3.148048,
+        "bass": 3.154756,
+        "other": 3.145752,
+        "acoustic_guitar": 3.149407,
+        "electric_guitar": 3.14575,
+        "guitar_residual": 3.145749,
+        "piano": 3.145748
+      }
+    },
+    {
+      "t": 4302.79999999702,
+      "spread": 0.01228999999999969,
+      "times": {
+        "lead_vocals": 3.163727,
+        "backing_vocals": 3.167037,
+        "drums": 3.169723,
+        "bass": 3.176017,
+        "other": 3.167036,
+        "acoustic_guitar": 3.16781,
+        "electric_guitar": 3.167038,
+        "guitar_residual": 3.167038,
+        "piano": 3.167036
+      }
+    },
+    {
+      "t": 4320.899999991059,
+      "spread": 0.013274000000000008,
+      "times": {
+        "lead_vocals": 3.184979,
+        "backing_vocals": 3.188289,
+        "drums": 3.183993,
+        "bass": 3.197267,
+        "other": 3.188289,
+        "acoustic_guitar": 3.18535,
+        "electric_guitar": 3.188287,
+        "guitar_residual": 3.188286,
+        "piano": 3.188286
+      }
+    },
+    {
+      "t": 4344.79999999702,
+      "spread": 0.016148000000000273,
+      "times": {
+        "lead_vocals": 3.212196,
+        "backing_vocals": 3.215504,
+        "drums": 3.208331,
+        "bass": 3.224479,
+        "other": 3.215492,
+        "acoustic_guitar": 3.209689,
+        "electric_guitar": 3.215492,
+        "guitar_residual": 3.215491,
+        "piano": 3.215491
+      }
+    },
+    {
+      "t": 4363,
+      "spread": 0.01229199999999997,
+      "times": {
+        "lead_vocals": 3.221999,
+        "backing_vocals": 3.22531,
+        "drums": 3.226733,
+        "bass": 3.234291,
+        "other": 3.22531,
+        "acoustic_guitar": 3.227999,
+        "electric_guitar": 3.225313,
+        "guitar_residual": 3.225312,
+        "piano": 3.225309
+      }
+    },
+    {
+      "t": 4385.399999991059,
+      "spread": 0.012288999999999994,
+      "times": {
+        "lead_vocals": 3.247599,
+        "backing_vocals": 3.25091,
+        "drums": 3.248808,
+        "bass": 3.259888,
+        "other": 3.250904,
+        "acoustic_guitar": 3.250162,
+        "electric_guitar": 3.250905,
+        "guitar_residual": 3.250904,
+        "piano": 3.250904
+      }
+    },
+    {
+      "t": 4400.899999991059,
+      "spread": 0.014275000000000038,
+      "times": {
+        "lead_vocals": 3.266309,
+        "backing_vocals": 3.269616,
+        "drums": 3.264318,
+        "bass": 3.278593,
+        "other": 3.26961,
+        "acoustic_guitar": 3.265675,
+        "electric_guitar": 3.269607,
+        "guitar_residual": 3.269599,
+        "piano": 3.269597
+      }
+    },
+    {
+      "t": 4433,
+      "spread": 0.016468999999999845,
+      "times": {
+        "lead_vocals": 3.311042,
+        "backing_vocals": 3.314108,
+        "drums": 3.299059,
+        "bass": 3.302366,
+        "other": 3.313996,
+        "acoustic_guitar": 3.297639,
+        "electric_guitar": 3.313888,
+        "guitar_residual": 3.313741,
+        "piano": 3.313588
+      }
+    },
+    {
+      "t": 4446,
+      "spread": 0.010256999999999739,
+      "times": {
+        "lead_vocals": 3.31715,
+        "backing_vocals": 3.320454,
+        "drums": 3.312031,
+        "bass": 3.318463,
+        "other": 3.320454,
+        "acoustic_guitar": 3.310197,
+        "electric_guitar": 3.320452,
+        "guitar_residual": 3.320436,
+        "piano": 3.320434
+      }
+    },
+    {
+      "t": 4464.29999999702,
+      "spread": 0.01623600000000014,
+      "times": {
+        "lead_vocals": 3.343632,
+        "backing_vocals": 3.343174,
+        "drums": 3.32923,
+        "bass": 3.339894,
+        "other": 3.343175,
+        "acoustic_guitar": 3.327396,
+        "electric_guitar": 3.343176,
+        "guitar_residual": 3.34316,
+        "piano": 3.343157
+      }
+    },
+    {
+      "t": 4482.70000000298,
+      "spread": 0.015763000000000194,
+      "times": {
+        "lead_vocals": 3.362083,
+        "backing_vocals": 3.354729,
+        "drums": 3.34632,
+        "bass": 3.361552,
+        "other": 3.354726,
+        "acoustic_guitar": 3.347633,
+        "electric_guitar": 3.354724,
+        "guitar_residual": 3.35472,
+        "piano": 3.35472
+      }
+    },
+    {
+      "t": 4500.70000000298,
+      "spread": 0.008448000000000011,
+      "times": {
+        "lead_vocals": 3.372685,
+        "backing_vocals": 3.372748,
+        "drums": 3.3643,
+        "bass": 3.372157,
+        "other": 3.372744,
+        "acoustic_guitar": 3.365636,
+        "electric_guitar": 3.372735,
+        "guitar_residual": 3.372729,
+        "piano": 3.372725
+      }
+    },
+    {
+      "t": 4525.399999991059,
+      "spread": 0.01253499999999974,
+      "times": {
+        "lead_vocals": 3.398072,
+        "backing_vocals": 3.401382,
+        "drums": 3.388847,
+        "bass": 3.399147,
+        "other": 3.401382,
+        "acoustic_guitar": 3.390205,
+        "electric_guitar": 3.401349,
+        "guitar_residual": 3.401346,
+        "piano": 3.401345
+      }
+    },
+    {
+      "t": 4540.5,
+      "spread": 0.016976000000000102,
+      "times": {
+        "lead_vocals": 3.417515,
+        "backing_vocals": 3.420823,
+        "drums": 3.403847,
+        "bass": 3.417572,
+        "other": 3.420822,
+        "acoustic_guitar": 3.405203,
+        "electric_guitar": 3.42081,
+        "guitar_residual": 3.420807,
+        "piano": 3.420804
+      }
+    },
+    {
+      "t": 4560.20000000298,
+      "spread": 0.009907999999999806,
+      "times": {
+        "lead_vocals": 3.430458,
+        "backing_vocals": 3.433771,
+        "drums": 3.423865,
+        "bass": 3.430522,
+        "other": 3.433773,
+        "acoustic_guitar": 3.425185,
+        "electric_guitar": 3.433762,
+        "guitar_residual": 3.433759,
+        "piano": 3.433756
+      }
+    },
+    {
+      "t": 4580.899999991059,
+      "spread": 0.009589999999999765,
+      "times": {
+        "lead_vocals": 3.451999,
+        "backing_vocals": 3.455246,
+        "drums": 3.446831,
+        "bass": 3.452712,
+        "other": 3.455243,
+        "acoustic_guitar": 3.445656,
+        "electric_guitar": 3.455241,
+        "guitar_residual": 3.455229,
+        "piano": 3.455227
+      }
+    },
+    {
+      "t": 4606.5999999940395,
+      "spread": 0.0452060000000003,
+      "times": {
+        "lead_vocals": 3.482651,
+        "backing_vocals": 3.485962,
+        "drums": 3.470169,
+        "bass": 3.515375,
+        "other": 3.48596,
+        "acoustic_guitar": 3.471524,
+        "electric_guitar": 3.485948,
+        "guitar_residual": 3.485946,
+        "piano": 3.485944
+      }
+    },
+    {
+      "t": 4623.20000000298,
+      "spread": 0.04629100000000008,
+      "times": {
+        "lead_vocals": 3.484381,
+        "backing_vocals": 3.48775,
+        "drums": 3.48394,
+        "bass": 3.530231,
+        "other": 3.48775,
+        "acoustic_guitar": 3.485274,
+        "electric_guitar": 3.487739,
+        "guitar_residual": 3.487736,
+        "piano": 3.487735
+      }
+    },
+    {
+      "t": 4642.79999999702,
+      "spread": 0.058381999999999934,
+      "times": {
+        "lead_vocals": 3.491515,
+        "backing_vocals": 3.494825,
+        "drums": 3.507991,
+        "bass": 3.549897,
+        "other": 3.494827,
+        "acoustic_guitar": 3.50786,
+        "electric_guitar": 3.494826,
+        "guitar_residual": 3.494812,
+        "piano": 3.494813
+      }
+    },
+    {
+      "t": 4663.5999999940395,
+      "spread": 0.04402700000000026,
+      "times": {
+        "lead_vocals": 3.515573,
+        "backing_vocals": 3.518886,
+        "drums": 3.527226,
+        "bass": 3.5596,
+        "other": 3.518875,
+        "acoustic_guitar": 3.528586,
+        "electric_guitar": 3.518875,
+        "guitar_residual": 3.518876,
+        "piano": 3.518875
+      }
+    },
+    {
+      "t": 4687.899999991059,
+      "spread": 0.04977000000000009,
+      "times": {
+        "lead_vocals": 3.542864,
+        "backing_vocals": 3.546176,
+        "drums": 3.551596,
+        "bass": 3.592634,
+        "other": 3.546176,
+        "acoustic_guitar": 3.552256,
+        "electric_guitar": 3.546177,
+        "guitar_residual": 3.546176,
+        "piano": 3.546174
+      }
+    },
+    {
+      "t": 4701.29999999702,
+      "spread": 0.04645199999999994,
+      "times": {
+        "lead_vocals": 3.559605,
+        "backing_vocals": 3.562903,
+        "drums": 3.564688,
+        "bass": 3.606057,
+        "other": 3.562902,
+        "acoustic_guitar": 3.566043,
+        "electric_guitar": 3.5629,
+        "guitar_residual": 3.562898,
+        "piano": 3.562895
+      }
+    },
+    {
+      "t": 4724.70000000298,
+      "spread": 0.04429700000000025,
+      "times": {
+        "lead_vocals": 3.574505,
+        "backing_vocals": 3.577814,
+        "drums": 3.588191,
+        "bass": 3.618802,
+        "other": 3.577808,
+        "acoustic_guitar": 3.589551,
+        "electric_guitar": 3.577808,
+        "guitar_residual": 3.577806,
+        "piano": 3.577805
+      }
+    },
+    {
+      "t": 4741.0999999940395,
+      "spread": 0.05064399999999969,
+      "times": {
+        "lead_vocals": 3.594244,
+        "backing_vocals": 3.597554,
+        "drums": 3.604761,
+        "bass": 3.644888,
+        "other": 3.597555,
+        "acoustic_guitar": 3.606089,
+        "electric_guitar": 3.597555,
+        "guitar_residual": 3.597555,
+        "piano": 3.597554
+      }
+    },
+    {
+      "t": 4761.20000000298,
+      "spread": 0.051098999999999783,
+      "times": {
+        "lead_vocals": 3.617312,
+        "backing_vocals": 3.620615,
+        "drums": 3.624347,
+        "bass": 3.668411,
+        "other": 3.620643,
+        "acoustic_guitar": 3.625733,
+        "electric_guitar": 3.620643,
+        "guitar_residual": 3.620642,
+        "piano": 3.620642
+      }
+    },
+    {
+      "t": 4784.899999991059,
+      "spread": 0.059356000000000186,
+      "times": {
+        "lead_vocals": 3.632792,
+        "backing_vocals": 3.658995,
+        "drums": 3.650659,
+        "bass": 3.692148,
+        "other": 3.658994,
+        "acoustic_guitar": 3.649846,
+        "electric_guitar": 3.658992,
+        "guitar_residual": 3.658971,
+        "piano": 3.658943
+      }
+    },
+    {
+      "t": 4800.5999999940395,
+      "spread": 0.05673299999999992,
+      "times": {
+        "lead_vocals": 3.65177,
+        "backing_vocals": 3.670878,
+        "drums": 3.663828,
+        "bass": 3.708503,
+        "other": 3.670878,
+        "acoustic_guitar": 3.665179,
+        "electric_guitar": 3.670865,
+        "guitar_residual": 3.670862,
+        "piano": 3.670861
+      }
+    },
+    {
+      "t": 4821.20000000298,
+      "spread": 0.05127399999999982,
+      "times": {
+        "lead_vocals": 3.675618,
+        "backing_vocals": 3.685238,
+        "drums": 3.680568,
+        "bass": 3.726892,
+        "other": 3.685241,
+        "acoustic_guitar": 3.681925,
+        "electric_guitar": 3.685228,
+        "guitar_residual": 3.685226,
+        "piano": 3.685224
+      }
+    },
+    {
+      "t": 4848.79999999702,
+      "spread": 0.04795000000000016,
+      "times": {
+        "lead_vocals": 3.706534,
+        "backing_vocals": 3.711707,
+        "drums": 3.712362,
+        "bass": 3.754484,
+        "other": 3.711703,
+        "acoustic_guitar": 3.713686,
+        "electric_guitar": 3.7117,
+        "guitar_residual": 3.711694,
+        "piano": 3.711691
+      }
+    },
+    {
+      "t": 4861.899999991059,
+      "spread": 0.04525800000000002,
+      "times": {
+        "lead_vocals": 3.710946,
+        "backing_vocals": 3.729169,
+        "drums": 3.725151,
+        "bass": 3.756204,
+        "other": 3.729164,
+        "acoustic_guitar": 3.726501,
+        "electric_guitar": 3.729143,
+        "guitar_residual": 3.729139,
+        "piano": 3.729135
+      }
+    },
+    {
+      "t": 4881.5999999940395,
+      "spread": 0.04678099999999974,
+      "times": {
+        "lead_vocals": 3.733953,
+        "backing_vocals": 3.75369,
+        "drums": 3.745053,
+        "bass": 3.780734,
+        "other": 3.753686,
+        "acoustic_guitar": 3.746409,
+        "electric_guitar": 3.753682,
+        "guitar_residual": 3.753658,
+        "piano": 3.753653
+      }
+    },
+    {
+      "t": 4900.5,
+      "spread": 0.051614999999999966,
+      "times": {
+        "lead_vocals": 3.756171,
+        "backing_vocals": 3.767731,
+        "drums": 3.761492,
+        "bass": 3.807786,
+        "other": 3.767736,
+        "acoustic_guitar": 3.762847,
+        "electric_guitar": 3.767734,
+        "guitar_residual": 3.76771,
+        "piano": 3.767705
+      }
+    },
+    {
+      "t": 4930.79999999702,
+      "spread": 0.0387369999999998,
+      "times": {
+        "lead_vocals": 3.805599,
+        "backing_vocals": 3.795094,
+        "drums": 3.795727,
+        "bass": 3.833617,
+        "other": 3.795084,
+        "acoustic_guitar": 3.79488,
+        "electric_guitar": 3.79508,
+        "guitar_residual": 3.795075,
+        "piano": 3.795054
+      }
+    },
+    {
+      "t": 4940.79999999702,
+      "spread": 0.04854700000000012,
+      "times": {
+        "lead_vocals": 3.815582,
+        "backing_vocals": 3.795094,
+        "drums": 3.804222,
+        "bass": 3.843601,
+        "other": 3.795084,
+        "acoustic_guitar": 3.805579,
+        "electric_guitar": 3.79508,
+        "guitar_residual": 3.795075,
+        "piano": 3.795054
+      }
+    },
+    {
+      "t": 4965.0999999940395,
+      "spread": 0.05004300000000006,
+      "times": {
+        "lead_vocals": 3.836955,
+        "backing_vocals": 3.819665,
+        "drums": 3.828849,
+        "bass": 3.869707,
+        "other": 3.819664,
+        "acoustic_guitar": 3.83008,
+        "electric_guitar": 3.819665,
+        "guitar_residual": 3.819665,
+        "piano": 3.819664
+      }
+    },
+    {
+      "t": 4983.70000000298,
+      "spread": 0.05096999999999996,
+      "times": {
+        "lead_vocals": 3.845986,
+        "backing_vocals": 3.84145,
+        "drums": 3.847432,
+        "bass": 3.892413,
+        "other": 3.841445,
+        "acoustic_guitar": 3.848598,
+        "electric_guitar": 3.841444,
+        "guitar_residual": 3.841444,
+        "piano": 3.841443
+      }
+    },
+    {
+      "t": 5004.20000000298,
+      "spread": 0.047662000000000315,
+      "times": {
+        "lead_vocals": 3.870436,
+        "backing_vocals": 3.865196,
+        "drums": 3.871365,
+        "bass": 3.91285,
+        "other": 3.865192,
+        "acoustic_guitar": 3.869037,
+        "electric_guitar": 3.865192,
+        "guitar_residual": 3.86519,
+        "piano": 3.865188
+      }
+    },
+    {
+      "t": 5022,
+      "spread": 0.050278000000000045,
+      "times": {
+        "lead_vocals": 3.892675,
+        "backing_vocals": 3.87461,
+        "drums": 3.885261,
+        "bass": 3.924888,
+        "other": 3.874612,
+        "acoustic_guitar": 3.886618,
+        "electric_guitar": 3.874613,
+        "guitar_residual": 3.874612,
+        "piano": 3.874613
+      }
+    },
+    {
+      "t": 5041.5,
+      "spread": 0.05241099999999976,
+      "times": {
+        "lead_vocals": 3.914918,
+        "backing_vocals": 3.897333,
+        "drums": 3.905243,
+        "bass": 3.949743,
+        "other": 3.897332,
+        "acoustic_guitar": 3.90643,
+        "electric_guitar": 3.897333,
+        "guitar_residual": 3.897332,
+        "piano": 3.897334
+      }
+    },
+    {
+      "t": 5068,
+      "spread": 0.04975899999999989,
+      "times": {
+        "lead_vocals": 3.937201,
+        "backing_vocals": 3.926944,
+        "drums": 3.934437,
+        "bass": 3.976698,
+        "other": 3.92694,
+        "acoustic_guitar": 3.931723,
+        "electric_guitar": 3.92694,
+        "guitar_residual": 3.926939,
+        "piano": 3.926939
+      }
+    },
+    {
+      "t": 5080.70000000298,
+      "spread": 0.0465279999999999,
+      "times": {
+        "lead_vocals": 3.949819,
+        "backing_vocals": 3.942845,
+        "drums": 3.947057,
+        "bass": 3.989319,
+        "other": 3.942837,
+        "acoustic_guitar": 3.944345,
+        "electric_guitar": 3.942831,
+        "guitar_residual": 3.942799,
+        "piano": 3.942791
+      }
+    },
+    {
+      "t": 5106.70000000298,
+      "spread": 0.05217300000000025,
+      "times": {
+        "lead_vocals": 3.980158,
+        "backing_vocals": 3.973177,
+        "drums": 3.971333,
+        "bass": 4.012165,
+        "other": 3.973171,
+        "acoustic_guitar": 3.959992,
+        "electric_guitar": 3.973158,
+        "guitar_residual": 3.973152,
+        "piano": 3.973122
+      }
+    },
+    {
+      "t": 5122.20000000298,
+      "spread": 0.0488660000000003,
+      "times": {
+        "lead_vocals": 3.984745,
+        "backing_vocals": 3.988036,
+        "drums": 3.986185,
+        "bass": 4.027579,
+        "other": 3.988034,
+        "acoustic_guitar": 3.978713,
+        "electric_guitar": 3.988014,
+        "guitar_residual": 3.988009,
+        "piano": 3.988005
+      }
+    },
+    {
+      "t": 5143.70000000298,
+      "spread": 0.03449200000000019,
+      "times": {
+        "lead_vocals": 4.010148,
+        "backing_vocals": 4.00931,
+        "drums": 4.007457,
+        "bass": 4.037963,
+        "other": 4.009306,
+        "acoustic_guitar": 4.003471,
+        "electric_guitar": 4.0093,
+        "guitar_residual": 4.009297,
+        "piano": 4.009292
+      }
+    },
+    {
+      "t": 5162.20000000298,
+      "spread": 0.04207199999999922,
+      "times": {
+        "lead_vocals": 4.034535,
+        "backing_vocals": 4.025825,
+        "drums": 4.023977,
+        "bass": 4.066049,
+        "other": 4.02583,
+        "acoustic_guitar": 4.025215,
+        "electric_guitar": 4.025826,
+        "guitar_residual": 4.025823,
+        "piano": 4.02582
+      }
+    },
+    {
+      "t": 5189.899999991059,
+      "spread": 0.05411000000000055,
+      "times": {
+        "lead_vocals": 4.052059,
+        "backing_vocals": 4.05536,
+        "drums": 4.053505,
+        "bass": 4.0986,
+        "other": 4.055356,
+        "acoustic_guitar": 4.04449,
+        "electric_guitar": 4.055353,
+        "guitar_residual": 4.055349,
+        "piano": 4.055284
+      }
+    },
+    {
+      "t": 5201.5999999940395,
+      "spread": 0.05090299999999992,
+      "times": {
+        "lead_vocals": 4.067133,
+        "backing_vocals": 4.066526,
+        "drums": 4.068573,
+        "bass": 4.110267,
+        "other": 4.066519,
+        "acoustic_guitar": 4.059364,
+        "electric_guitar": 4.066515,
+        "guitar_residual": 4.066506,
+        "piano": 4.066499
+      }
+    },
+    {
+      "t": 5222.5999999940395,
+      "spread": 0.04113599999999984,
+      "times": {
+        "lead_vocals": 4.097041,
+        "backing_vocals": 4.0882,
+        "drums": 4.086349,
+        "bass": 4.124849,
+        "other": 4.0882,
+        "acoustic_guitar": 4.083713,
+        "electric_guitar": 4.088197,
+        "guitar_residual": 4.088193,
+        "piano": 4.088189
+      }
+    },
+    {
+      "t": 5242.5999999940395,
+      "spread": 0.05428000000000033,
+      "times": {
+        "lead_vocals": 4.117004,
+        "backing_vocals": 4.105032,
+        "drums": 4.103181,
+        "bass": 4.149502,
+        "other": 4.105031,
+        "acoustic_guitar": 4.095222,
+        "electric_guitar": 4.10503,
+        "guitar_residual": 4.105027,
+        "piano": 4.105026
+      }
+    },
+    {
+      "t": 5275.399999991059,
+      "spread": 0.04196900000000081,
+      "times": {
+        "lead_vocals": 4.141156,
+        "backing_vocals": 4.140983,
+        "drums": 4.142603,
+        "bass": 4.176491,
+        "other": 4.140979,
+        "acoustic_guitar": 4.134522,
+        "electric_guitar": 4.140975,
+        "guitar_residual": 4.140969,
+        "piano": 4.140963
+      }
+    },
+    {
+      "t": 5280.70000000298,
+      "spread": 0.048178000000000054,
+      "times": {
+        "lead_vocals": 4.146422,
+        "backing_vocals": 4.14625,
+        "drums": 4.14787,
+        "bass": 4.188001,
+        "other": 4.146279,
+        "acoustic_guitar": 4.139823,
+        "electric_guitar": 4.146276,
+        "guitar_residual": 4.146271,
+        "piano": 4.146265
+      }
+    },
+    {
+      "t": 5300.5999999940395,
+      "spread": 0.04298900000000039,
+      "times": {
+        "lead_vocals": 4.172964,
+        "backing_vocals": 4.166108,
+        "drums": 4.164255,
+        "bass": 4.205942,
+        "other": 4.166106,
+        "acoustic_guitar": 4.162953,
+        "electric_guitar": 4.166102,
+        "guitar_residual": 4.166099,
+        "piano": 4.166095
+      }
+    },
+    {
+      "t": 5322.29999999702,
+      "spread": 0.05098999999999965,
+      "times": {
+        "lead_vocals": 4.184925,
+        "backing_vocals": 4.187646,
+        "drums": 4.185793,
+        "bass": 4.227122,
+        "other": 4.187641,
+        "acoustic_guitar": 4.176132,
+        "electric_guitar": 4.187639,
+        "guitar_residual": 4.187634,
+        "piano": 4.187571
+      }
+    },
+    {
+      "t": 5340.29999999702,
+      "spread": 0.03746500000000008,
+      "times": {
+        "lead_vocals": 4.206917,
+        "backing_vocals": 4.205789,
+        "drums": 4.203935,
+        "bass": 4.234732,
+        "other": 4.205784,
+        "acoustic_guitar": 4.197267,
+        "electric_guitar": 4.205781,
+        "guitar_residual": 4.205776,
+        "piano": 4.205712
+      }
+    },
+    {
+      "t": 5363.20000000298,
+      "spread": 0.04138599999999926,
+      "times": {
+        "lead_vocals": 4.237142,
+        "backing_vocals": 4.228628,
+        "drums": 4.226775,
+        "bass": 4.264949,
+        "other": 4.228629,
+        "acoustic_guitar": 4.223563,
+        "electric_guitar": 4.228627,
+        "guitar_residual": 4.228626,
+        "piano": 4.228625
+      }
+    },
+    {
+      "t": 5383.399999991059,
+      "spread": 0.055005999999999666,
+      "times": {
+        "lead_vocals": 4.257384,
+        "backing_vocals": 4.24874,
+        "drums": 4.246889,
+        "bass": 4.290283,
+        "other": 4.248736,
+        "acoustic_guitar": 4.235277,
+        "electric_guitar": 4.248731,
+        "guitar_residual": 4.248727,
+        "piano": 4.248721
+      }
+    },
+    {
+      "t": 5403.29999999702,
+      "spread": 0.05170199999999969,
+      "times": {
+        "lead_vocals": 4.266733,
+        "backing_vocals": 4.268807,
+        "drums": 4.268173,
+        "bass": 4.310159,
+        "other": 4.268803,
+        "acoustic_guitar": 4.258457,
+        "electric_guitar": 4.268798,
+        "guitar_residual": 4.26879,
+        "piano": 4.268786
+      }
+    },
+    {
+      "t": 5424.79999999702,
+      "spread": 0.04180500000000009,
+      "times": {
+        "lead_vocals": 4.297251,
+        "backing_vocals": 4.290139,
+        "drums": 4.288295,
+        "bass": 4.325062,
+        "other": 4.290135,
+        "acoustic_guitar": 4.283257,
+        "electric_guitar": 4.290124,
+        "guitar_residual": 4.290117,
+        "piano": 4.290112
+      }
+    },
+    {
+      "t": 5440.5999999940395,
+      "spread": 0.04718599999999995,
+      "times": {
+        "lead_vocals": 4.312943,
+        "backing_vocals": 4.306098,
+        "drums": 4.293607,
+        "bass": 4.340793,
+        "other": 4.306092,
+        "acoustic_guitar": 4.31849,
+        "electric_guitar": 4.306088,
+        "guitar_residual": 4.306082,
+        "piano": 4.306078
+      }
+    },
+    {
+      "t": 5463.399999991059,
+      "spread": 0.06062700000000021,
+      "times": {
+        "lead_vocals": 4.325553,
+        "backing_vocals": 4.328813,
+        "drums": 4.306947,
+        "bass": 4.367574,
+        "other": 4.328804,
+        "acoustic_guitar": 4.336652,
+        "electric_guitar": 4.328799,
+        "guitar_residual": 4.328792,
+        "piano": 4.32875
+      }
+    },
+    {
+      "t": 5485.0999999940395,
+      "spread": 0.0464140000000004,
+      "times": {
+        "lead_vocals": 4.350511,
+        "backing_vocals": 4.350521,
+        "drums": 4.331918,
+        "bass": 4.378332,
+        "other": 4.350512,
+        "acoustic_guitar": 4.361621,
+        "electric_guitar": 4.350507,
+        "guitar_residual": 4.350502,
+        "piano": 4.35046
+      }
+    },
+    {
+      "t": 5504,
+      "spread": 0.05284499999999959,
+      "times": {
+        "lead_vocals": 4.374311,
+        "backing_vocals": 4.369486,
+        "drums": 4.354,
+        "bass": 4.406845,
+        "other": 4.369488,
+        "acoustic_guitar": 4.377302,
+        "electric_guitar": 4.369484,
+        "guitar_residual": 4.369479,
+        "piano": 4.369477
+      }
+    },
+    {
+      "t": 5521.5999999940395,
+      "spread": 0.05365299999999973,
+      "times": {
+        "lead_vocals": 4.384259,
+        "backing_vocals": 4.386579,
+        "drums": 4.374739,
+        "bass": 4.428392,
+        "other": 4.386568,
+        "acoustic_guitar": 4.394403,
+        "electric_guitar": 4.386564,
+        "guitar_residual": 4.386555,
+        "piano": 4.386467
+      }
+    },
+    {
+      "t": 5545.20000000298,
+      "spread": 0.061967000000000105,
+      "times": {
+        "lead_vocals": 4.408617,
+        "backing_vocals": 4.41066,
+        "drums": 4.390049,
+        "bass": 4.452016,
+        "other": 4.410657,
+        "acoustic_guitar": 4.419714,
+        "electric_guitar": 4.410653,
+        "guitar_residual": 4.410647,
+        "piano": 4.410643
+      }
+    },
+    {
+      "t": 5561.399999991059,
+      "spread": 0.047856999999999594,
+      "times": {
+        "lead_vocals": 4.429476,
+        "backing_vocals": 4.426785,
+        "drums": 4.409429,
+        "bass": 4.457286,
+        "other": 4.426777,
+        "acoustic_guitar": 4.434599,
+        "electric_guitar": 4.426766,
+        "guitar_residual": 4.426758,
+        "piano": 4.42675
+      }
+    },
+    {
+      "t": 5582.399999991059,
+      "spread": 0.05384000000000011,
+      "times": {
+        "lead_vocals": 4.45517,
+        "backing_vocals": 4.443847,
+        "drums": 4.433597,
+        "bass": 4.487437,
+        "other": 4.44384,
+        "acoustic_guitar": 4.451662,
+        "electric_guitar": 4.44383,
+        "guitar_residual": 4.443822,
+        "piano": 4.443814
+      }
+    },
+    {
+      "t": 5605,
+      "spread": 0.0622019999999992,
+      "times": {
+        "lead_vocals": 4.466972,
+        "backing_vocals": 4.470268,
+        "drums": 4.447835,
+        "bass": 4.510037,
+        "other": 4.470264,
+        "acoustic_guitar": 4.478078,
+        "electric_guitar": 4.470261,
+        "guitar_residual": 4.470256,
+        "piano": 4.470218
+      }
+    },
+    {
+      "t": 5623,
+      "spread": 0.047599000000000835,
+      "times": {
+        "lead_vocals": 4.488798,
+        "backing_vocals": 4.488519,
+        "drums": 4.469014,
+        "bass": 4.516613,
+        "other": 4.488513,
+        "acoustic_guitar": 4.499905,
+        "electric_guitar": 4.488509,
+        "guitar_residual": 4.488503,
+        "piano": 4.488498
+      }
+    },
+    {
+      "t": 5641.70000000298,
+      "spread": 0.05414500000000011,
+      "times": {
+        "lead_vocals": 4.512546,
+        "backing_vocals": 4.506633,
+        "drums": 4.490752,
+        "bass": 4.544897,
+        "other": 4.506629,
+        "acoustic_guitar": 4.514443,
+        "electric_guitar": 4.506622,
+        "guitar_residual": 4.506616,
+        "piano": 4.506612
+      }
+    },
+    {
+      "t": 5663.899999991059,
+      "spread": 0.054058000000000384,
+      "times": {
+        "lead_vocals": 4.528424,
+        "backing_vocals": 4.525997,
+        "drums": 4.516329,
+        "bass": 4.570387,
+        "other": 4.525988,
+        "acoustic_guitar": 4.533818,
+        "electric_guitar": 4.525981,
+        "guitar_residual": 4.525939,
+        "piano": 4.525932
+      }
+    },
+    {
+      "t": 5690.70000000298,
+      "spread": 0.061202999999999896,
+      "times": {
+        "lead_vocals": 4.558109,
+        "backing_vocals": 4.556802,
+        "drums": 4.53494,
+        "bass": 4.596143,
+        "other": 4.556769,
+        "acoustic_guitar": 4.568375,
+        "electric_guitar": 4.556761,
+        "guitar_residual": 4.556755,
+        "piano": 4.556735
+      }
+    },
+    {
+      "t": 5702.5,
+      "spread": 0.047897999999999996,
+      "times": {
+        "lead_vocals": 4.569912,
+        "backing_vocals": 4.567924,
+        "drums": 4.549826,
+        "bass": 4.597724,
+        "other": 4.567924,
+        "acoustic_guitar": 4.580178,
+        "electric_guitar": 4.567923,
+        "guitar_residual": 4.56792,
+        "piano": 4.567918
+      }
+    },
+    {
+      "t": 5720.20000000298,
+      "spread": 0.04954999999999998,
+      "times": {
+        "lead_vocals": 4.592543,
+        "backing_vocals": 4.58554,
+        "drums": 4.570798,
+        "bass": 4.620348,
+        "other": 4.585536,
+        "acoustic_guitar": 4.59779,
+        "electric_guitar": 4.585534,
+        "guitar_residual": 4.585529,
+        "piano": 4.585527
+      }
+    },
+    {
+      "t": 5746.5999999940395,
+      "spread": 0.061809000000000225,
+      "times": {
+        "lead_vocals": 4.608864,
+        "backing_vocals": 4.612165,
+        "drums": 4.588886,
+        "bass": 4.650695,
+        "other": 4.612165,
+        "acoustic_guitar": 4.619976,
+        "electric_guitar": 4.612163,
+        "guitar_residual": 4.612161,
+        "piano": 4.612155
+      }
+    },
+    {
+      "t": 5760.5,
+      "spread": 0.028491999999999962,
+      "times": {
+        "lead_vocals": 4.626941,
+        "backing_vocals": 4.626276,
+        "drums": 4.640164,
+        "bass": 4.654755,
+        "other": 4.626272,
+        "acoustic_guitar": 4.638045,
+        "electric_guitar": 4.626269,
+        "guitar_residual": 4.626265,
+        "piano": 4.626263
+      }
+    },
+    {
+      "t": 5781.20000000298,
+      "spread": 0.017715999999999177,
+      "times": {
+        "lead_vocals": 4.652011,
+        "backing_vocals": 4.646558,
+        "drums": 4.660872,
+        "bass": 4.664266,
+        "other": 4.646557,
+        "acoustic_guitar": 4.654366,
+        "electric_guitar": 4.646554,
+        "guitar_residual": 4.646553,
+        "piano": 4.64655
+      }
+    },
+    {
+      "t": 5805.0999999940395,
+      "spread": 0.016019000000000005,
+      "times": {
+        "lead_vocals": 4.67982,
+        "backing_vocals": 4.670628,
+        "drums": 4.684313,
+        "bass": 4.686627,
+        "other": 4.670625,
+        "acoustic_guitar": 4.678435,
+        "electric_guitar": 4.670616,
+        "guitar_residual": 4.670611,
+        "piano": 4.670608
+      }
+    },
+    {
+      "t": 5821.79999999702,
+      "spread": 0.02166099999999993,
+      "times": {
+        "lead_vocals": 4.684926,
+        "backing_vocals": 4.688171,
+        "drums": 4.700839,
+        "bass": 4.706587,
+        "other": 4.688169,
+        "acoustic_guitar": 4.696036,
+        "electric_guitar": 4.688167,
+        "guitar_residual": 4.688164,
+        "piano": 4.688071
+      }
+    },
+    {
+      "t": 5840.5,
+      "spread": 0.021730999999999945,
+      "times": {
+        "lead_vocals": 4.707677,
+        "backing_vocals": 4.706903,
+        "drums": 4.719572,
+        "bass": 4.728533,
+        "other": 4.706901,
+        "acoustic_guitar": 4.714768,
+        "electric_guitar": 4.706899,
+        "guitar_residual": 4.706896,
+        "piano": 4.706802
+      }
+    },
+    {
+      "t": 5861.20000000298,
+      "spread": 0.014048000000000727,
+      "times": {
+        "lead_vocals": 4.732289,
+        "backing_vocals": 4.726797,
+        "drums": 4.730438,
+        "bass": 4.740833,
+        "other": 4.726795,
+        "acoustic_guitar": 4.734607,
+        "electric_guitar": 4.726791,
+        "guitar_residual": 4.726788,
+        "piano": 4.726785
+      }
+    },
+    {
+      "t": 5882.20000000298,
+      "spread": 0.020520000000000316,
+      "times": {
+        "lead_vocals": 4.744564,
+        "backing_vocals": 4.747867,
+        "drums": 4.760563,
+        "bass": 4.765084,
+        "other": 4.747868,
+        "acoustic_guitar": 4.755678,
+        "electric_guitar": 4.747867,
+        "guitar_residual": 4.747865,
+        "piano": 4.747862
+      }
+    },
+    {
+      "t": 5900.20000000298,
+      "spread": 0.02181199999999972,
+      "times": {
+        "lead_vocals": 4.764431,
+        "backing_vocals": 4.765567,
+        "drums": 4.778574,
+        "bass": 4.786243,
+        "other": 4.76555,
+        "acoustic_guitar": 4.775537,
+        "electric_guitar": 4.765545,
+        "guitar_residual": 4.765538,
+        "piano": 4.765534
+      }
+    },
+    {
+      "t": 5920.399999991059,
+      "spread": 0.024017999999999873,
+      "times": {
+        "lead_vocals": 4.788776,
+        "backing_vocals": 4.785773,
+        "drums": 4.786926,
+        "bass": 4.80976,
+        "other": 4.785755,
+        "acoustic_guitar": 4.795744,
+        "electric_guitar": 4.785752,
+        "guitar_residual": 4.785746,
+        "piano": 4.785742
+      }
+    },
+    {
+      "t": 5940.5,
+      "spread": 0.015245000000000175,
+      "times": {
+        "lead_vocals": 4.812643,
+        "backing_vocals": 4.806042,
+        "drums": 4.810789,
+        "bass": 4.821276,
+        "other": 4.806041,
+        "acoustic_guitar": 4.813854,
+        "electric_guitar": 4.806036,
+        "guitar_residual": 4.806033,
+        "piano": 4.806031
+      }
+    },
+    {
+      "t": 5962.29999999702,
+      "spread": 0.021701000000000192,
+      "times": {
+        "lead_vocals": 4.824808,
+        "backing_vocals": 4.827892,
+        "drums": 4.841643,
+        "bass": 4.846509,
+        "other": 4.82789,
+        "acoustic_guitar": 4.835699,
+        "electric_guitar": 4.827889,
+        "guitar_residual": 4.827887,
+        "piano": 4.827867
+      }
+    },
+    {
+      "t": 5986.899999991059,
+      "spread": 0.021771000000000207,
+      "times": {
+        "lead_vocals": 4.858061,
+        "backing_vocals": 4.85237,
+        "drums": 4.857835,
+        "bass": 4.874129,
+        "other": 4.852367,
+        "acoustic_guitar": 4.864281,
+        "electric_guitar": 4.852365,
+        "guitar_residual": 4.852362,
+        "piano": 4.852358
+      }
+    },
+    {
+      "t": 6001.899999991059,
+      "spread": 0.02506199999999925,
+      "times": {
+        "lead_vocals": 4.873043,
+        "backing_vocals": 4.867439,
+        "drums": 4.875425,
+        "bass": 4.892465,
+        "other": 4.867432,
+        "acoustic_guitar": 4.875257,
+        "electric_guitar": 4.867421,
+        "guitar_residual": 4.86741,
+        "piano": 4.867403
+      }
+    },
+    {
+      "t": 6027.5999999940395,
+      "spread": 0.019351999999999592,
+      "times": {
+        "lead_vocals": 4.899262,
+        "backing_vocals": 4.890364,
+        "drums": 4.905148,
+        "bass": 4.909691,
+        "other": 4.890361,
+        "acoustic_guitar": 4.898178,
+        "electric_guitar": 4.890358,
+        "guitar_residual": 4.890343,
+        "piano": 4.890339
+      }
+    },
+    {
+      "t": 6040.29999999702,
+      "spread": 0.021776000000000018,
+      "times": {
+        "lead_vocals": 4.903901,
+        "backing_vocals": 4.905769,
+        "drums": 4.91982,
+        "bass": 4.925677,
+        "other": 4.905765,
+        "acoustic_guitar": 4.915007,
+        "electric_guitar": 4.905763,
+        "guitar_residual": 4.905758,
+        "piano": 4.905755
+      }
+    },
+    {
+      "t": 6062.29999999702,
+      "spread": 0.0454939999999997,
+      "times": {
+        "lead_vocals": 4.929868,
+        "backing_vocals": 4.927926,
+        "drums": 4.941892,
+        "bass": 4.973408,
+        "other": 4.927924,
+        "acoustic_guitar": 4.935734,
+        "electric_guitar": 4.92792,
+        "guitar_residual": 4.927917,
+        "piano": 4.927914
+      }
+    },
+    {
+      "t": 6080.5999999940395,
+      "spread": 0.05140299999999964,
+      "times": {
+        "lead_vocals": 4.938016,
+        "backing_vocals": 4.945767,
+        "drums": 4.957903,
+        "bass": 4.989419,
+        "other": 4.945766,
+        "acoustic_guitar": 4.953574,
+        "electric_guitar": 4.945761,
+        "guitar_residual": 4.945759,
+        "piano": 4.945756
+      }
+    },
+    {
+      "t": 6105.70000000298,
+      "spread": 0.05689499999999992,
+      "times": {
+        "lead_vocals": 4.959416,
+        "backing_vocals": 4.970033,
+        "drums": 4.984795,
+        "bass": 5.016311,
+        "other": 4.970029,
+        "acoustic_guitar": 4.977847,
+        "electric_guitar": 4.970025,
+        "guitar_residual": 4.96999,
+        "piano": 4.969984
+      }
+    },
+    {
+      "t": 6126.899999991059,
+      "spread": 0.04595299999999991,
+      "times": {
+        "lead_vocals": 4.983795,
+        "backing_vocals": 4.992414,
+        "drums": 4.998233,
+        "bass": 5.029748,
+        "other": 4.992412,
+        "acoustic_guitar": 5.004246,
+        "electric_guitar": 4.99241,
+        "guitar_residual": 4.992405,
+        "piano": 4.992403
+      }
+    },
+    {
+      "t": 6141.79999999702,
+      "spread": 0.04951400000000028,
+      "times": {
+        "lead_vocals": 5.001853,
+        "backing_vocals": 5.007068,
+        "drums": 5.019854,
+        "bass": 5.051367,
+        "other": 5.007065,
+        "acoustic_guitar": 5.014879,
+        "electric_guitar": 5.007058,
+        "guitar_residual": 5.007053,
+        "piano": 5.007048
+      }
+    },
+    {
+      "t": 6162.399999991059,
+      "spread": 0.05921299999999974,
+      "times": {
+        "lead_vocals": 5.014164,
+        "backing_vocals": 5.027509,
+        "drums": 5.041864,
+        "bass": 5.073377,
+        "other": 5.027504,
+        "acoustic_guitar": 5.035326,
+        "electric_guitar": 5.027452,
+        "guitar_residual": 5.027436,
+        "piano": 5.02743
+      }
+    },
+    {
+      "t": 6187.5,
+      "spread": 0.05601400000000023,
+      "times": {
+        "lead_vocals": 5.042511,
+        "backing_vocals": 5.053049,
+        "drums": 5.067011,
+        "bass": 5.098525,
+        "other": 5.053042,
+        "acoustic_guitar": 5.062246,
+        "electric_guitar": 5.053038,
+        "guitar_residual": 5.053031,
+        "piano": 5.053028
+      }
+    },
+    {
+      "t": 6203.5999999940395,
+      "spread": 0.039406000000000496,
+      "times": {
+        "lead_vocals": 5.061851,
+        "backing_vocals": 5.069096,
+        "drums": 5.069742,
+        "bass": 5.101257,
+        "other": 5.06909,
+        "acoustic_guitar": 5.078293,
+        "electric_guitar": 5.069086,
+        "guitar_residual": 5.06908,
+        "piano": 5.069076
+      }
+    },
+    {
+      "t": 6221.5999999940395,
+      "spread": 0.05698700000000034,
+      "times": {
+        "lead_vocals": 5.071514,
+        "backing_vocals": 5.087229,
+        "drums": 5.096988,
+        "bass": 5.128501,
+        "other": 5.087228,
+        "acoustic_guitar": 5.095039,
+        "electric_guitar": 5.087222,
+        "guitar_residual": 5.08722,
+        "piano": 5.087216
+      }
+    },
+    {
+      "t": 6244.399999991059,
+      "spread": 0.05372800000000044,
+      "times": {
+        "lead_vocals": 5.097585,
+        "backing_vocals": 5.110039,
+        "drums": 5.1198,
+        "bass": 5.151313,
+        "other": 5.110037,
+        "acoustic_guitar": 5.117846,
+        "electric_guitar": 5.110031,
+        "guitar_residual": 5.110027,
+        "piano": 5.110024
+      }
+    },
+    {
+      "t": 6260.79999999702,
+      "spread": 0.039188999999999474,
+      "times": {
+        "lead_vocals": 5.117217,
+        "backing_vocals": 5.126413,
+        "drums": 5.124891,
+        "bass": 5.156406,
+        "other": 5.126409,
+        "acoustic_guitar": 5.137855,
+        "electric_guitar": 5.126406,
+        "guitar_residual": 5.126402,
+        "piano": 5.126399
+      }
+    },
+    {
+      "t": 6282.5999999940395,
+      "spread": 0.03995499999999996,
+      "times": {
+        "lead_vocals": 5.142205,
+        "backing_vocals": 5.148157,
+        "drums": 5.150645,
+        "bass": 5.18216,
+        "other": 5.148155,
+        "acoustic_guitar": 5.1596,
+        "electric_guitar": 5.148152,
+        "guitar_residual": 5.148148,
+        "piano": 5.148145
+      }
+    },
+    {
+      "t": 6300.70000000298,
+      "spread": 0.05589699999999986,
+      "times": {
+        "lead_vocals": 5.152875,
+        "backing_vocals": 5.166004,
+        "drums": 5.177255,
+        "bass": 5.208772,
+        "other": 5.166003,
+        "acoustic_guitar": 5.173812,
+        "electric_guitar": 5.166001,
+        "guitar_residual": 5.165999,
+        "piano": 5.165997
+      }
+    },
+    {
+      "t": 6324.29999999702,
+      "spread": 0.05371600000000054,
+      "times": {
+        "lead_vocals": 5.178709,
+        "backing_vocals": 5.190158,
+        "drums": 5.200908,
+        "bass": 5.232425,
+        "other": 5.190155,
+        "acoustic_guitar": 5.197967,
+        "electric_guitar": 5.190153,
+        "guitar_residual": 5.19014,
+        "piano": 5.190138
+      }
+    },
+    {
+      "t": 6343.29999999702,
+      "spread": 0.03911500000000068,
+      "times": {
+        "lead_vocals": 5.200804,
+        "backing_vocals": 5.208855,
+        "drums": 5.208405,
+        "bass": 5.239919,
+        "other": 5.208852,
+        "acoustic_guitar": 5.221221,
+        "electric_guitar": 5.20885,
+        "guitar_residual": 5.208847,
+        "piano": 5.208843
+      }
+    },
+    {
+      "t": 6362.5999999940395,
+      "spread": 0.04632600000000053,
+      "times": {
+        "lead_vocals": 5.223394,
+        "backing_vocals": 5.222543,
+        "drums": 5.237327,
+        "bass": 5.268842,
+        "other": 5.22254,
+        "acoustic_guitar": 5.231761,
+        "electric_guitar": 5.222536,
+        "guitar_residual": 5.222519,
+        "piano": 5.222516
+      }
+    },
+    {
+      "t": 6395.399999991059,
+      "spread": 0.0454460000000001,
+      "times": {
+        "lead_vocals": 5.262428,
+        "backing_vocals": 5.260947,
+        "drums": 5.274852,
+        "bass": 5.306367,
+        "other": 5.260944,
+        "acoustic_guitar": 5.280278,
+        "electric_guitar": 5.26093,
+        "guitar_residual": 5.260924,
+        "piano": 5.260921
+      }
+    },
+    {
+      "t": 6402.29999999702,
+      "spread": 0.04508200000000073,
+      "times": {
+        "lead_vocals": 5.26921,
+        "backing_vocals": 5.26773,
+        "drums": 5.281272,
+        "bass": 5.312789,
+        "other": 5.267728,
+        "acoustic_guitar": 5.287063,
+        "electric_guitar": 5.267715,
+        "guitar_residual": 5.26771,
+        "piano": 5.267707
+      }
+    },
+    {
+      "t": 6422.20000000298,
+      "spread": 0.04715700000000034,
+      "times": {
+        "lead_vocals": 5.286067,
+        "backing_vocals": 5.28751,
+        "drums": 5.301709,
+        "bass": 5.333224,
+        "other": 5.287507,
+        "acoustic_guitar": 5.310053,
+        "electric_guitar": 5.287497,
+        "guitar_residual": 5.287492,
+        "piano": 5.287485
+      }
+    },
+    {
+      "t": 6442,
+      "spread": 0.05026799999999998,
+      "times": {
+        "lead_vocals": 5.301075,
+        "backing_vocals": 5.302519,
+        "drums": 5.319828,
+        "bass": 5.351343,
+        "other": 5.305626,
+        "acoustic_guitar": 5.333183,
+        "electric_guitar": 5.305617,
+        "guitar_residual": 5.305612,
+        "piano": 5.305605
+      }
+    },
+    {
+      "t": 6465.5,
+      "spread": 0.046966000000000285,
+      "times": {
+        "lead_vocals": 5.329657,
+        "backing_vocals": 5.331104,
+        "drums": 5.345108,
+        "bass": 5.376623,
+        "other": 5.331102,
+        "acoustic_guitar": 5.348489,
+        "electric_guitar": 5.331097,
+        "guitar_residual": 5.331094,
+        "piano": 5.33109
+      }
+    },
+    {
+      "t": 6483,
+      "spread": 0.046826000000000256,
+      "times": {
+        "lead_vocals": 5.347232,
+        "backing_vocals": 5.34868,
+        "drums": 5.362542,
+        "bass": 5.394058,
+        "other": 5.34868,
+        "acoustic_guitar": 5.369204,
+        "electric_guitar": 5.348676,
+        "guitar_residual": 5.348675,
+        "piano": 5.348672
+      }
+    },
+    {
+      "t": 6501.70000000298,
+      "spread": 0.0476220000000005,
+      "times": {
+        "lead_vocals": 5.364178,
+        "backing_vocals": 5.365593,
+        "drums": 5.380287,
+        "bass": 5.4118,
+        "other": 5.36559,
+        "acoustic_guitar": 5.391079,
+        "electric_guitar": 5.365581,
+        "guitar_residual": 5.365575,
+        "piano": 5.365567
+      }
+    },
+    {
+      "t": 6524.70000000298,
+      "spread": 0.044490000000000585,
+      "times": {
+        "lead_vocals": 5.388767,
+        "backing_vocals": 5.390213,
+        "drums": 5.401746,
+        "bass": 5.433257,
+        "other": 5.390211,
+        "acoustic_guitar": 5.417231,
+        "electric_guitar": 5.390206,
+        "guitar_residual": 5.390205,
+        "piano": 5.390201
+      }
+    },
+    {
+      "t": 6540.29999999702,
+      "spread": 0.04305700000000012,
+      "times": {
+        "lead_vocals": 5.406603,
+        "backing_vocals": 5.405918,
+        "drums": 5.41745,
+        "bass": 5.448962,
+        "other": 5.405915,
+        "acoustic_guitar": 5.424541,
+        "electric_guitar": 5.405911,
+        "guitar_residual": 5.405909,
+        "piano": 5.405905
+      }
+    },
+    {
+      "t": 6561.5,
+      "spread": 0.05703299999999967,
+      "times": {
+        "lead_vocals": 5.425371,
+        "backing_vocals": 5.426815,
+        "drums": 5.440521,
+        "bass": 5.472038,
+        "other": 5.426812,
+        "acoustic_guitar": 5.482404,
+        "electric_guitar": 5.426807,
+        "guitar_residual": 5.426803,
+        "piano": 5.426799
+      }
+    },
+    {
+      "t": 6583.899999991059,
+      "spread": 0.06757100000000005,
+      "times": {
+        "lead_vocals": 5.436216,
+        "backing_vocals": 5.437664,
+        "drums": 5.452493,
+        "bass": 5.483984,
+        "other": 5.437628,
+        "acoustic_guitar": 5.503787,
+        "electric_guitar": 5.437628,
+        "guitar_residual": 5.437627,
+        "piano": 5.437627
+      }
+    },
+    {
+      "t": 6604.20000000298,
+      "spread": 0.06418899999999983,
+      "times": {
+        "lead_vocals": 5.459903,
+        "backing_vocals": 5.46135,
+        "drums": 5.476177,
+        "bass": 5.507692,
+        "other": 5.461341,
+        "acoustic_guitar": 5.524092,
+        "electric_guitar": 5.461339,
+        "guitar_residual": 5.461338,
+        "piano": 5.461335
+      }
+    },
+    {
+      "t": 6620.70000000298,
+      "spread": 0.0575379999999992,
+      "times": {
+        "lead_vocals": 5.470189,
+        "backing_vocals": 5.471643,
+        "drums": 5.486473,
+        "bass": 5.517989,
+        "other": 5.47164,
+        "acoustic_guitar": 5.527727,
+        "electric_guitar": 5.471642,
+        "guitar_residual": 5.471643,
+        "piano": 5.471643
+      }
+    },
+    {
+      "t": 6641.5,
+      "spread": 0.060851999999999684,
+      "times": {
+        "lead_vocals": 5.491822,
+        "backing_vocals": 5.493273,
+        "drums": 5.508104,
+        "bass": 5.539599,
+        "other": 5.493249,
+        "acoustic_guitar": 5.552674,
+        "electric_guitar": 5.49325,
+        "guitar_residual": 5.493249,
+        "piano": 5.493249
+      }
+    },
+    {
+      "t": 6664,
+      "spread": 0.0658000000000003,
+      "times": {
+        "lead_vocals": 5.517576,
+        "backing_vocals": 5.519024,
+        "drums": 5.533853,
+        "bass": 5.565371,
+        "other": 5.519021,
+        "acoustic_guitar": 5.583376,
+        "electric_guitar": 5.519022,
+        "guitar_residual": 5.51902,
+        "piano": 5.51902
+      }
+    },
+    {
+      "t": 6684.20000000298,
+      "spread": 0.0743109999999998,
+      "times": {
+        "lead_vocals": 5.529243,
+        "backing_vocals": 5.530694,
+        "drums": 5.545522,
+        "bass": 5.577041,
+        "other": 5.530693,
+        "acoustic_guitar": 5.603554,
+        "electric_guitar": 5.530694,
+        "guitar_residual": 5.530693,
+        "piano": 5.530693
+      }
+    },
+    {
+      "t": 6702.20000000298,
+      "spread": 0.06074199999999941,
+      "times": {
+        "lead_vocals": 5.550569,
+        "backing_vocals": 5.552021,
+        "drums": 5.566848,
+        "bass": 5.598369,
+        "other": 5.552019,
+        "acoustic_guitar": 5.611311,
+        "electric_guitar": 5.552019,
+        "guitar_residual": 5.552018,
+        "piano": 5.552017
+      }
+    },
+    {
+      "t": 6735.5,
+      "spread": 0.058419999999999916,
+      "times": {
+        "lead_vocals": 5.617435,
+        "backing_vocals": 5.618884,
+        "drums": 5.606809,
+        "bass": 5.665229,
+        "other": 5.618877,
+        "acoustic_guitar": 5.653138,
+        "electric_guitar": 5.618873,
+        "guitar_residual": 5.618868,
+        "piano": 5.618865
+      }
+    },
+    {
+      "t": 6745.79999999702,
+      "spread": 0.058419999999999916,
+      "times": {
+        "lead_vocals": 5.627687,
+        "backing_vocals": 5.629134,
+        "drums": 5.617059,
+        "bass": 5.675479,
+        "other": 5.629127,
+        "acoustic_guitar": 5.663388,
+        "electric_guitar": 5.629122,
+        "guitar_residual": 5.629118,
+        "piano": 5.629114
+      }
+    },
+    {
+      "t": 6762.29999999702,
+      "spread": 0.0558740000000002,
+      "times": {
+        "lead_vocals": 5.63318,
+        "backing_vocals": 5.634621,
+        "drums": 5.625056,
+        "bass": 5.68093,
+        "other": 5.634572,
+        "acoustic_guitar": 5.668885,
+        "electric_guitar": 5.634564,
+        "guitar_residual": 5.634542,
+        "piano": 5.634533
+      }
+    },
+    {
+      "t": 6780.70000000298,
+      "spread": 0.05766700000000036,
+      "times": {
+        "lead_vocals": 5.656651,
+        "backing_vocals": 5.6581,
+        "drums": 5.646769,
+        "bass": 5.704436,
+        "other": 5.658085,
+        "acoustic_guitar": 5.692352,
+        "electric_guitar": 5.658083,
+        "guitar_residual": 5.658075,
+        "piano": 5.658071
+      }
+    },
+    {
+      "t": 6806.0999999940395,
+      "spread": 0.05921999999999983,
+      "times": {
+        "lead_vocals": 5.686733,
+        "backing_vocals": 5.688183,
+        "drums": 5.675302,
+        "bass": 5.734522,
+        "other": 5.688172,
+        "acoustic_guitar": 5.722433,
+        "electric_guitar": 5.68817,
+        "guitar_residual": 5.688163,
+        "piano": 5.688161
+      }
+    },
+    {
+      "t": 6821.899999991059,
+      "spread": 0.05604500000000012,
+      "times": {
+        "lead_vocals": 5.691038,
+        "backing_vocals": 5.692484,
+        "drums": 5.682786,
+        "bass": 5.738831,
+        "other": 5.692477,
+        "acoustic_guitar": 5.726741,
+        "electric_guitar": 5.692461,
+        "guitar_residual": 5.692459,
+        "piano": 5.692455
+      }
+    },
+    {
+      "t": 6842.5,
+      "spread": 0.06282000000000032,
+      "times": {
+        "lead_vocals": 5.721654,
+        "backing_vocals": 5.723104,
+        "drums": 5.706623,
+        "bass": 5.769443,
+        "other": 5.72309,
+        "acoustic_guitar": 5.757353,
+        "electric_guitar": 5.723087,
+        "guitar_residual": 5.723081,
+        "piano": 5.723079
+      }
+    },
+    {
+      "t": 6863.70000000298,
+      "spread": 0.059637999999999636,
+      "times": {
+        "lead_vocals": 5.74279,
+        "backing_vocals": 5.744239,
+        "drums": 5.73094,
+        "bass": 5.790578,
+        "other": 5.744226,
+        "acoustic_guitar": 5.784068,
+        "electric_guitar": 5.744222,
+        "guitar_residual": 5.744216,
+        "piano": 5.744213
+      }
+    },
+    {
+      "t": 6888.399999991059,
+      "spread": 0.05088400000000082,
+      "times": {
+        "lead_vocals": 5.762177,
+        "backing_vocals": 5.763624,
+        "drums": 5.759071,
+        "bass": 5.809955,
+        "other": 5.763601,
+        "acoustic_guitar": 5.807642,
+        "electric_guitar": 5.763597,
+        "guitar_residual": 5.763584,
+        "piano": 5.763579
+      }
+    },
+    {
+      "t": 6901.29999999702,
+      "spread": 0.04779599999999995,
+      "times": {
+        "lead_vocals": 5.776065,
+        "backing_vocals": 5.777512,
+        "drums": 5.778655,
+        "bass": 5.823861,
+        "other": 5.777511,
+        "acoustic_guitar": 5.821867,
+        "electric_guitar": 5.777511,
+        "guitar_residual": 5.777511,
+        "piano": 5.777509
+      }
+    },
+    {
+      "t": 6921.70000000298,
+      "spread": 0.052515000000000533,
+      "times": {
+        "lead_vocals": 5.799828,
+        "backing_vocals": 5.801273,
+        "drums": 5.795106,
+        "bass": 5.847621,
+        "other": 5.80127,
+        "acoustic_guitar": 5.839599,
+        "electric_guitar": 5.80127,
+        "guitar_residual": 5.801269,
+        "piano": 5.801268
+      }
+    },
+    {
+      "t": 6948.29999999702,
+      "spread": 0.05528200000000005,
+      "times": {
+        "lead_vocals": 5.829583,
+        "backing_vocals": 5.831033,
+        "drums": 5.8221,
+        "bass": 5.877382,
+        "other": 5.831033,
+        "acoustic_guitar": 5.866234,
+        "electric_guitar": 5.831033,
+        "guitar_residual": 5.831032,
+        "piano": 5.831031
+      }
+    },
+    {
+      "t": 6963.5999999940395,
+      "spread": 0.058838999999999864,
+      "times": {
+        "lead_vocals": 5.84819,
+        "backing_vocals": 5.849637,
+        "drums": 5.837146,
+        "bass": 5.895985,
+        "other": 5.849626,
+        "acoustic_guitar": 5.872245,
+        "electric_guitar": 5.849624,
+        "guitar_residual": 5.849624,
+        "piano": 5.849623
+      }
+    },
+    {
+      "t": 6981,
+      "spread": 0.050319,
+      "times": {
+        "lead_vocals": 5.856518,
+        "backing_vocals": 5.85797,
+        "drums": 5.854002,
+        "bass": 5.904321,
+        "other": 5.857971,
+        "acoustic_guitar": 5.892373,
+        "electric_guitar": 5.857971,
+        "guitar_residual": 5.857971,
+        "piano": 5.85797
+      }
+    },
+    {
+      "t": 7006.5999999940395,
+      "spread": 0.05335799999999935,
+      "times": {
+        "lead_vocals": 5.885947,
+        "backing_vocals": 5.887393,
+        "drums": 5.880384,
+        "bass": 5.933742,
+        "other": 5.887392,
+        "acoustic_guitar": 5.926502,
+        "electric_guitar": 5.887392,
+        "guitar_residual": 5.887392,
+        "piano": 5.887391
+      }
+    },
+    {
+      "t": 7022.70000000298,
+      "spread": 0.05415500000000062,
+      "times": {
+        "lead_vocals": 5.905335,
+        "backing_vocals": 5.906779,
+        "drums": 5.898972,
+        "bass": 5.953127,
+        "other": 5.906778,
+        "acoustic_guitar": 5.942566,
+        "electric_guitar": 5.906777,
+        "guitar_residual": 5.906774,
+        "piano": 5.90677
+      }
+    },
+    {
+      "t": 7043.70000000298,
+      "spread": 0.05770699999999973,
+      "times": {
+        "lead_vocals": 5.917982,
+        "backing_vocals": 5.919434,
+        "drums": 5.908075,
+        "bass": 5.965782,
+        "other": 5.919433,
+        "acoustic_guitar": 5.954343,
+        "electric_guitar": 5.919433,
+        "guitar_residual": 5.919431,
+        "piano": 5.919429
+      }
+    },
+    {
+      "t": 7062.70000000298,
+      "spread": 0.059917999999999694,
+      "times": {
+        "lead_vocals": 5.939979,
+        "backing_vocals": 5.94143,
+        "drums": 5.92786,
+        "bass": 5.987778,
+        "other": 5.941428,
+        "acoustic_guitar": 5.976342,
+        "electric_guitar": 5.94143,
+        "guitar_residual": 5.94143,
+        "piano": 5.94143
+      }
+    },
+    {
+      "t": 7082.0999999940395,
+      "spread": 0.05991999999999997,
+      "times": {
+        "lead_vocals": 5.96255,
+        "backing_vocals": 5.964,
+        "drums": 5.950428,
+        "bass": 6.010348,
+        "other": 5.963996,
+        "acoustic_guitar": 5.998876,
+        "electric_guitar": 5.963995,
+        "guitar_residual": 5.963995,
+        "piano": 5.963994
+      }
+    },
+    {
+      "t": 7100.0999999940395,
+      "spread": 0.0599280000000002,
+      "times": {
+        "lead_vocals": 5.984028,
+        "backing_vocals": 5.985476,
+        "drums": 5.971894,
+        "bass": 6.031822,
+        "other": 5.985472,
+        "acoustic_guitar": 6.020376,
+        "electric_guitar": 5.98547,
+        "guitar_residual": 5.985463,
+        "piano": 5.985462
+      }
+    },
+    {
+      "t": 7122.79999999702,
+      "spread": 0.0599160000000003,
+      "times": {
+        "lead_vocals": 5.998272,
+        "backing_vocals": 5.999722,
+        "drums": 5.986155,
+        "bass": 6.046071,
+        "other": 5.999722,
+        "acoustic_guitar": 6.034637,
+        "electric_guitar": 5.999722,
+        "guitar_residual": 5.999722,
+        "piano": 5.99972
+      }
+    },
+    {
+      "t": 7144.5,
+      "spread": 0.05993600000000043,
+      "times": {
+        "lead_vocals": 6.023225,
+        "backing_vocals": 6.024674,
+        "drums": 6.011086,
+        "bass": 6.071022,
+        "other": 6.024672,
+        "acoustic_guitar": 6.059566,
+        "electric_guitar": 6.024671,
+        "guitar_residual": 6.024654,
+        "piano": 6.024651
+      }
+    },
+    {
+      "t": 7161.399999991059,
+      "spread": 0.05992900000000034,
+      "times": {
+        "lead_vocals": 6.043456,
+        "backing_vocals": 6.044891,
+        "drums": 6.031311,
+        "bass": 6.09124,
+        "other": 6.044884,
+        "acoustic_guitar": 6.079791,
+        "electric_guitar": 6.044884,
+        "guitar_residual": 6.044882,
+        "piano": 6.044879
+      }
+    },
+    {
+      "t": 7184.399999991059,
+      "spread": 0.05992500000000067,
+      "times": {
+        "lead_vocals": 6.057913,
+        "backing_vocals": 6.059355,
+        "drums": 6.045779,
+        "bass": 6.105704,
+        "other": 6.059355,
+        "acoustic_guitar": 6.094261,
+        "electric_guitar": 6.059355,
+        "guitar_residual": 6.059354,
+        "piano": 6.059354
+      }
+    },
+    {
+      "t": 7203.29999999702,
+      "spread": 0.059917999999999694,
+      "times": {
+        "lead_vocals": 6.080042,
+        "backing_vocals": 6.081492,
+        "drums": 6.067916,
+        "bass": 6.127834,
+        "other": 6.081484,
+        "acoustic_guitar": 6.116396,
+        "electric_guitar": 6.081483,
+        "guitar_residual": 6.081481,
+        "piano": 6.081481
+      }
+    },
+    {
+      "t": 7221.0999999940395,
+      "spread": 0.059922999999999504,
+      "times": {
+        "lead_vocals": 6.10108,
+        "backing_vocals": 6.102529,
+        "drums": 6.088953,
+        "bass": 6.148876,
+        "other": 6.102526,
+        "acoustic_guitar": 6.137434,
+        "electric_guitar": 6.102524,
+        "guitar_residual": 6.10252,
+        "piano": 6.102518
+      }
+    },
+    {
+      "t": 7243.5,
+      "spread": 0.05992400000000053,
+      "times": {
+        "lead_vocals": 6.12677,
+        "backing_vocals": 6.128213,
+        "drums": 6.114635,
+        "bass": 6.174559,
+        "other": 6.128207,
+        "acoustic_guitar": 6.163108,
+        "electric_guitar": 6.128205,
+        "guitar_residual": 6.128202,
+        "piano": 6.1282
+      }
+    },
+    {
+      "t": 7260.70000000298,
+      "spread": 0.0599160000000003,
+      "times": {
+        "lead_vocals": 6.13564,
+        "backing_vocals": 6.137092,
+        "drums": 6.123525,
+        "bass": 6.183441,
+        "other": 6.137093,
+        "acoustic_guitar": 6.172004,
+        "electric_guitar": 6.137094,
+        "guitar_residual": 6.137094,
+        "piano": 6.137094
+      }
+    },
+    {
+      "t": 7280.399999991059,
+      "spread": 0.05992100000000011,
+      "times": {
+        "lead_vocals": 6.158428,
+        "backing_vocals": 6.15988,
+        "drums": 6.146308,
+        "bass": 6.206229,
+        "other": 6.159879,
+        "acoustic_guitar": 6.194791,
+        "electric_guitar": 6.15988,
+        "guitar_residual": 6.159879,
+        "piano": 6.159876
+      }
+    },
+    {
+      "t": 7300.399999991059,
+      "spread": 0.05992100000000011,
+      "times": {
+        "lead_vocals": 6.181521,
+        "backing_vocals": 6.182971,
+        "drums": 6.169397,
+        "bass": 6.229318,
+        "other": 6.182967,
+        "acoustic_guitar": 6.217877,
+        "electric_guitar": 6.182965,
+        "guitar_residual": 6.182964,
+        "piano": 6.182962
+      }
+    },
+    {
+      "t": 7321.899999991059,
+      "spread": 0.05993000000000048,
+      "times": {
+        "lead_vocals": 6.206404,
+        "backing_vocals": 6.207843,
+        "drums": 6.194259,
+        "bass": 6.254189,
+        "other": 6.207833,
+        "acoustic_guitar": 6.242734,
+        "electric_guitar": 6.20783,
+        "guitar_residual": 6.207827,
+        "piano": 6.207825
+      }
+    },
+    {
+      "t": 7340.399999991059,
+      "spread": 0.059916999999999554,
+      "times": {
+        "lead_vocals": 6.216409,
+        "backing_vocals": 6.217861,
+        "drums": 6.204295,
+        "bass": 6.264212,
+        "other": 6.21786,
+        "acoustic_guitar": 6.252776,
+        "electric_guitar": 6.217859,
+        "guitar_residual": 6.21786,
+        "piano": 6.217859
+      }
+    },
+    {
+      "t": 7363.70000000298,
+      "spread": 0.059914999999999274,
+      "times": {
+        "lead_vocals": 6.24301,
+        "backing_vocals": 6.244461,
+        "drums": 6.230895,
+        "bass": 6.29081,
+        "other": 6.244462,
+        "acoustic_guitar": 6.279376,
+        "electric_guitar": 6.244462,
+        "guitar_residual": 6.244461,
+        "piano": 6.244461
+      }
+    },
+    {
+      "t": 7384.79999999702,
+      "spread": 0.059937999999999825,
+      "times": {
+        "lead_vocals": 6.267421,
+        "backing_vocals": 6.268866,
+        "drums": 6.255273,
+        "bass": 6.315211,
+        "other": 6.268849,
+        "acoustic_guitar": 6.303751,
+        "electric_guitar": 6.268846,
+        "guitar_residual": 6.268843,
+        "piano": 6.26884
+      }
+    },
+    {
+      "t": 7400.70000000298,
+      "spread": 0.059937999999999825,
+      "times": {
+        "lead_vocals": 6.274864,
+        "backing_vocals": 6.276308,
+        "drums": 6.262714,
+        "bass": 6.322652,
+        "other": 6.27629,
+        "acoustic_guitar": 6.311191,
+        "electric_guitar": 6.276285,
+        "guitar_residual": 6.276283,
+        "piano": 6.276279
+      }
+    },
+    {
+      "t": 7423.20000000298,
+      "spread": 0.05991400000000002,
+      "times": {
+        "lead_vocals": 6.300557,
+        "backing_vocals": 6.302005,
+        "drums": 6.288441,
+        "bass": 6.348355,
+        "other": 6.302006,
+        "acoustic_guitar": 6.336923,
+        "electric_guitar": 6.302006,
+        "guitar_residual": 6.302006,
+        "piano": 6.302005
+      }
+    },
+    {
+      "t": 7441,
+      "spread": 0.05992300000000039,
+      "times": {
+        "lead_vocals": 6.321477,
+        "backing_vocals": 6.322929,
+        "drums": 6.309355,
+        "bass": 6.369278,
+        "other": 6.322925,
+        "acoustic_guitar": 6.357837,
+        "electric_guitar": 6.322925,
+        "guitar_residual": 6.322925,
+        "piano": 6.322925
+      }
+    },
+    {
+      "t": 7461.5999999940395,
+      "spread": 0.059930999999999734,
+      "times": {
+        "lead_vocals": 6.34535,
+        "backing_vocals": 6.346794,
+        "drums": 6.333211,
+        "bass": 6.393142,
+        "other": 6.346792,
+        "acoustic_guitar": 6.381689,
+        "electric_guitar": 6.346791,
+        "guitar_residual": 6.346785,
+        "piano": 6.346783
+      }
+    },
+    {
+      "t": 7480.399999991059,
+      "spread": 0.05993000000000048,
+      "times": {
+        "lead_vocals": 6.356651,
+        "backing_vocals": 6.358095,
+        "drums": 6.344511,
+        "bass": 6.404441,
+        "other": 6.358091,
+        "acoustic_guitar": 6.392987,
+        "electric_guitar": 6.358088,
+        "guitar_residual": 6.358082,
+        "piano": 6.358079
+      }
+    },
+    {
+      "t": 7503.5,
+      "spread": 0.05991299999999988,
+      "times": {
+        "lead_vocals": 6.382074,
+        "backing_vocals": 6.383525,
+        "drums": 6.369962,
+        "bass": 6.429875,
+        "other": 6.383526,
+        "acoustic_guitar": 6.418444,
+        "electric_guitar": 6.383528,
+        "guitar_residual": 6.383527,
+        "piano": 6.383529
+      }
+    },
+    {
+      "t": 7521,
+      "spread": 0.059967000000000326,
+      "times": {
+        "lead_vocals": 6.402934,
+        "backing_vocals": 6.404378,
+        "drums": 6.390756,
+        "bass": 6.450723,
+        "other": 6.40437,
+        "acoustic_guitar": 6.439237,
+        "electric_guitar": 6.404366,
+        "guitar_residual": 6.404358,
+        "piano": 6.404352
+      }
+    },
+    {
+      "t": 7541.399999991059,
+      "spread": 0.059935000000000294,
+      "times": {
+        "lead_vocals": 6.414953,
+        "backing_vocals": 6.416432,
+        "drums": 6.402848,
+        "bass": 6.462783,
+        "other": 6.416433,
+        "acoustic_guitar": 6.451331,
+        "electric_guitar": 6.416432,
+        "guitar_residual": 6.41643,
+        "piano": 6.416415
+      }
+    },
+    {
+      "t": 7563.0999999940395,
+      "spread": 0.059925999999999924,
+      "times": {
+        "lead_vocals": 6.439662,
+        "backing_vocals": 6.441114,
+        "drums": 6.427536,
+        "bass": 6.487462,
+        "other": 6.441115,
+        "acoustic_guitar": 6.476019,
+        "electric_guitar": 6.441103,
+        "guitar_residual": 6.441103,
+        "piano": 6.441102
+      }
+    },
+    {
+      "t": 7580.79999999702,
+      "spread": 0.05991500000000016,
+      "times": {
+        "lead_vocals": 6.46075,
+        "backing_vocals": 6.462201,
+        "drums": 6.448636,
+        "bass": 6.508551,
+        "other": 6.462202,
+        "acoustic_guitar": 6.497117,
+        "electric_guitar": 6.462202,
+        "guitar_residual": 6.4622,
+        "piano": 6.462201
+      }
+    },
+    {
+      "t": 7605.70000000298,
+      "spread": 0.059925999999999924,
+      "times": {
+        "lead_vocals": 6.488882,
+        "backing_vocals": 6.490326,
+        "drums": 6.476745,
+        "bass": 6.536671,
+        "other": 6.490318,
+        "acoustic_guitar": 6.525226,
+        "electric_guitar": 6.490317,
+        "guitar_residual": 6.490313,
+        "piano": 6.490312
+      }
+    },
+    {
+      "t": 7622.899999991059,
+      "spread": 0.059918999999999834,
+      "times": {
+        "lead_vocals": 6.497673,
+        "backing_vocals": 6.499122,
+        "drums": 6.48555,
+        "bass": 6.545469,
+        "other": 6.499119,
+        "acoustic_guitar": 6.534031,
+        "electric_guitar": 6.499119,
+        "guitar_residual": 6.499118,
+        "piano": 6.499116
+      }
+    },
+    {
+      "t": 7647.5,
+      "spread": 0.05991999999999997,
+      "times": {
+        "lead_vocals": 6.525493,
+        "backing_vocals": 6.526945,
+        "drums": 6.513374,
+        "bass": 6.573294,
+        "other": 6.526945,
+        "acoustic_guitar": 6.561855,
+        "electric_guitar": 6.526945,
+        "guitar_residual": 6.526942,
+        "piano": 6.526941
+      }
+    },
+    {
+      "t": 7660.5,
+      "spread": 0.059931999999999874,
+      "times": {
+        "lead_vocals": 6.541445,
+        "backing_vocals": 6.542896,
+        "drums": 6.529313,
+        "bass": 6.589245,
+        "other": 6.542896,
+        "acoustic_guitar": 6.577795,
+        "electric_guitar": 6.542895,
+        "guitar_residual": 6.542894,
+        "piano": 6.542891
+      }
+    },
+    {
+      "t": 7681.0999999940395,
+      "spread": 0.05992300000000039,
+      "times": {
+        "lead_vocals": 6.565471,
+        "backing_vocals": 6.566915,
+        "drums": 6.553341,
+        "bass": 6.613264,
+        "other": 6.566913,
+        "acoustic_guitar": 6.601823,
+        "electric_guitar": 6.566913,
+        "guitar_residual": 6.566912,
+        "piano": 6.566911
+      }
+    },
+    {
+      "t": 7706.5,
+      "spread": 0.059926999999999175,
+      "times": {
+        "lead_vocals": 6.582439,
+        "backing_vocals": 6.583887,
+        "drums": 6.570306,
+        "bass": 6.630233,
+        "other": 6.583883,
+        "acoustic_guitar": 6.618788,
+        "electric_guitar": 6.58388,
+        "guitar_residual": 6.583877,
+        "piano": 6.583874
+      }
+    },
+    {
+      "t": 7724.29999999702,
+      "spread": 0.059936999999999685,
+      "times": {
+        "lead_vocals": 6.603301,
+        "backing_vocals": 6.604752,
+        "drums": 6.591163,
+        "bass": 6.6511,
+        "other": 6.604749,
+        "acoustic_guitar": 6.639643,
+        "electric_guitar": 6.604748,
+        "guitar_residual": 6.604747,
+        "piano": 6.604747
+      }
+    },
+    {
+      "t": 7741.899999991059,
+      "spread": 0.05992400000000053,
+      "times": {
+        "lead_vocals": 6.624265,
+        "backing_vocals": 6.625707,
+        "drums": 6.612131,
+        "bass": 6.672055,
+        "other": 6.625704,
+        "acoustic_guitar": 6.660611,
+        "electric_guitar": 6.625703,
+        "guitar_residual": 6.625701,
+        "piano": 6.625699
+      }
+    },
+    {
+      "t": 7760.29999999702,
+      "spread": 0.059924999999999784,
+      "times": {
+        "lead_vocals": 6.635476,
+        "backing_vocals": 6.63692,
+        "drums": 6.623344,
+        "bass": 6.683269,
+        "other": 6.636917,
+        "acoustic_guitar": 6.671824,
+        "electric_guitar": 6.636917,
+        "guitar_residual": 6.636915,
+        "piano": 6.636912
+      }
+    },
+    {
+      "t": 7785.20000000298,
+      "spread": 0.05991400000000002,
+      "times": {
+        "lead_vocals": 6.662138,
+        "backing_vocals": 6.663589,
+        "drums": 6.650022,
+        "bass": 6.709936,
+        "other": 6.663587,
+        "acoustic_guitar": 6.698505,
+        "electric_guitar": 6.663592,
+        "guitar_residual": 6.663591,
+        "piano": 6.663591
+      }
+    },
+    {
+      "t": 7802.5999999940395,
+      "spread": 0.059918999999999834,
+      "times": {
+        "lead_vocals": 6.68305,
+        "backing_vocals": 6.684501,
+        "drums": 6.670931,
+        "bass": 6.73085,
+        "other": 6.6845,
+        "acoustic_guitar": 6.719413,
+        "electric_guitar": 6.684499,
+        "guitar_residual": 6.684497,
+        "piano": 6.684496
+      }
+    },
+    {
+      "t": 7821.5,
+      "spread": 0.059927000000000064,
+      "times": {
+        "lead_vocals": 6.705169,
+        "backing_vocals": 6.706618,
+        "drums": 6.693039,
+        "bass": 6.752966,
+        "other": 6.70661,
+        "acoustic_guitar": 6.741518,
+        "electric_guitar": 6.706611,
+        "guitar_residual": 6.70661,
+        "piano": 6.706609
+      }
+    },
+    {
+      "t": 7841.0999999940395,
+      "spread": 0.059927999999999315,
+      "times": {
+        "lead_vocals": 6.716318,
+        "backing_vocals": 6.717767,
+        "drums": 6.704189,
+        "bass": 6.764117,
+        "other": 6.717764,
+        "acoustic_guitar": 6.752667,
+        "electric_guitar": 6.717761,
+        "guitar_residual": 6.717758,
+        "piano": 6.717755
+      }
+    },
+    {
+      "t": 7863.5999999940395,
+      "spread": 0.059918999999999834,
+      "times": {
+        "lead_vocals": 6.742117,
+        "backing_vocals": 6.743569,
+        "drums": 6.729999,
+        "bass": 6.789918,
+        "other": 6.743566,
+        "acoustic_guitar": 6.778471,
+        "electric_guitar": 6.743565,
+        "guitar_residual": 6.743565,
+        "piano": 6.743564
+      }
+    },
+    {
+      "t": 7881.399999991059,
+      "spread": 0.059924999999999784,
+      "times": {
+        "lead_vocals": 6.763086,
+        "backing_vocals": 6.764532,
+        "drums": 6.750953,
+        "bass": 6.810878,
+        "other": 6.764528,
+        "acoustic_guitar": 6.79943,
+        "electric_guitar": 6.764525,
+        "guitar_residual": 6.764523,
+        "piano": 6.764521
+      }
+    },
+    {
+      "t": 7903.0999999940395,
+      "spread": 0.05991299999999988,
+      "times": {
+        "lead_vocals": 6.776384,
+        "backing_vocals": 6.777835,
+        "drums": 6.764271,
+        "bass": 6.824184,
+        "other": 6.777835,
+        "acoustic_guitar": 6.812752,
+        "electric_guitar": 6.777836,
+        "guitar_residual": 6.777836,
+        "piano": 6.777835
+      }
+    },
+    {
+      "t": 7921.399999991059,
+      "spread": 0.05991800000000058,
+      "times": {
+        "lead_vocals": 6.79789,
+        "backing_vocals": 6.799342,
+        "drums": 6.785773,
+        "bass": 6.845691,
+        "other": 6.799341,
+        "acoustic_guitar": 6.834251,
+        "electric_guitar": 6.799341,
+        "guitar_residual": 6.79934,
+        "piano": 6.799338
+      }
+    },
+    {
+      "t": 7944.29999999702,
+      "spread": 0.05991500000000016,
+      "times": {
+        "lead_vocals": 6.824075,
+        "backing_vocals": 6.825527,
+        "drums": 6.811961,
+        "bass": 6.871876,
+        "other": 6.825525,
+        "acoustic_guitar": 6.860442,
+        "electric_guitar": 6.825527,
+        "guitar_residual": 6.825526,
+        "piano": 6.825526
+      }
+    },
+    {
+      "t": 7963.899999991059,
+      "spread": 0.05993000000000048,
+      "times": {
+        "lead_vocals": 6.846833,
+        "backing_vocals": 6.848281,
+        "drums": 6.8347,
+        "bass": 6.89463,
+        "other": 6.84828,
+        "acoustic_guitar": 6.883177,
+        "electric_guitar": 6.848279,
+        "guitar_residual": 6.848278,
+        "piano": 6.848269
+      }
+    },
+    {
+      "t": 7989.70000000298,
+      "spread": 0.059918999999999834,
+      "times": {
+        "lead_vocals": 6.864279,
+        "backing_vocals": 6.86573,
+        "drums": 6.852162,
+        "bass": 6.912081,
+        "other": 6.865731,
+        "acoustic_guitar": 6.900645,
+        "electric_guitar": 6.865733,
+        "guitar_residual": 6.865731,
+        "piano": 6.86573
+      }
+    },
+    {
+      "t": 8004.79999999702,
+      "spread": 0.059915999999999414,
+      "times": {
+        "lead_vocals": 6.882626,
+        "backing_vocals": 6.884076,
+        "drums": 6.870509,
+        "bass": 6.930425,
+        "other": 6.884073,
+        "acoustic_guitar": 6.91899,
+        "electric_guitar": 6.884073,
+        "guitar_residual": 6.884074,
+        "piano": 6.884073
+      }
+    },
+    {
+      "t": 8020.79999999702,
+      "spread": 0.05991199999999974,
+      "times": {
+        "lead_vocals": 6.901891,
+        "backing_vocals": 6.903344,
+        "drums": 6.88978,
+        "bass": 6.949692,
+        "other": 6.903344,
+        "acoustic_guitar": 6.938262,
+        "electric_guitar": 6.903345,
+        "guitar_residual": 6.903345,
+        "piano": 6.903345
+      }
+    },
+    {
+      "t": 8040.899999991059,
+      "spread": 0.059940000000000104,
+      "times": {
+        "lead_vocals": 6.925295,
+        "backing_vocals": 6.926737,
+        "drums": 6.91314,
+        "bass": 6.97308,
+        "other": 6.926727,
+        "acoustic_guitar": 6.961619,
+        "electric_guitar": 6.926722,
+        "guitar_residual": 6.926716,
+        "piano": 6.926711
+      }
+    },
+    {
+      "t": 8065.5999999940395,
+      "spread": 0.059918999999999834,
+      "times": {
+        "lead_vocals": 6.941503,
+        "backing_vocals": 6.942955,
+        "drums": 6.929379,
+        "bass": 6.989298,
+        "other": 6.94295,
+        "acoustic_guitar": 6.977862,
+        "electric_guitar": 6.942949,
+        "guitar_residual": 6.942948,
+        "piano": 6.942948
+      }
+    },
+    {
+      "t": 8084,
+      "spread": 0.059935999999999545,
+      "times": {
+        "lead_vocals": 6.962759,
+        "backing_vocals": 6.964209,
+        "drums": 6.950623,
+        "bass": 7.010559,
+        "other": 6.964208,
+        "acoustic_guitar": 6.999106,
+        "electric_guitar": 6.964206,
+        "guitar_residual": 6.964205,
+        "piano": 6.964192
+      }
+    },
+    {
+      "t": 8110.79999999702,
+      "spread": 0.059925999999999924,
+      "times": {
+        "lead_vocals": 6.993117,
+        "backing_vocals": 6.994562,
+        "drums": 6.980983,
+        "bass": 7.040909,
+        "other": 6.994558,
+        "acoustic_guitar": 7.029466,
+        "electric_guitar": 6.99456,
+        "guitar_residual": 6.994558,
+        "piano": 6.994556
+      }
+    },
+    {
+      "t": 8122.79999999702,
+      "spread": 0.05992300000000039,
+      "times": {
+        "lead_vocals": 6.996654,
+        "backing_vocals": 6.998103,
+        "drums": 6.984513,
+        "bass": 7.044436,
+        "other": 6.998086,
+        "acoustic_guitar": 7.032995,
+        "electric_guitar": 6.998088,
+        "guitar_residual": 6.998086,
+        "piano": 6.998082
+      }
+    },
+    {
+      "t": 8140.29999999702,
+      "spread": 0.05992100000000011,
+      "times": {
+        "lead_vocals": 7.01743,
+        "backing_vocals": 7.01888,
+        "drums": 7.005307,
+        "bass": 7.065228,
+        "other": 7.018878,
+        "acoustic_guitar": 7.053788,
+        "electric_guitar": 7.018877,
+        "guitar_residual": 7.018876,
+        "piano": 7.018875
+      }
+    },
+    {
+      "t": 8171.5,
+      "spread": 0.05991900000000072,
+      "times": {
+        "lead_vocals": 7.051923,
+        "backing_vocals": 7.053374,
+        "drums": 7.039806,
+        "bass": 7.099725,
+        "other": 7.053377,
+        "acoustic_guitar": 7.08829,
+        "electric_guitar": 7.053378,
+        "guitar_residual": 7.053378,
+        "piano": 7.053376
+      }
+    },
+    {
+      "t": 8188.79999999702,
+      "spread": 0.05992400000000053,
+      "times": {
+        "lead_vocals": 7.072446,
+        "backing_vocals": 7.073891,
+        "drums": 7.060318,
+        "bass": 7.120242,
+        "other": 7.073889,
+        "acoustic_guitar": 7.1088,
+        "electric_guitar": 7.073889,
+        "guitar_residual": 7.073886,
+        "piano": 7.073886
+      }
+    },
+    {
+      "t": 8200.79999999702,
+      "spread": 0.059923999999999644,
+      "times": {
+        "lead_vocals": 7.077543,
+        "backing_vocals": 7.078987,
+        "drums": 7.065413,
+        "bass": 7.125337,
+        "other": 7.078983,
+        "acoustic_guitar": 7.113894,
+        "electric_guitar": 7.078982,
+        "guitar_residual": 7.07898,
+        "piano": 7.078979
+      }
+    },
+    {
+      "t": 8221.39999999106,
+      "spread": 0.05992100000000011,
+      "times": {
+        "lead_vocals": 7.099918,
+        "backing_vocals": 7.101368,
+        "drums": 7.087796,
+        "bass": 7.147717,
+        "other": 7.101367,
+        "acoustic_guitar": 7.136278,
+        "electric_guitar": 7.101367,
+        "guitar_residual": 7.101367,
+        "piano": 7.101366
+      }
+    },
+    {
+      "t": 8245.09999999404,
+      "spread": 0.05992200000000025,
+      "times": {
+        "lead_vocals": 7.126907,
+        "backing_vocals": 7.128356,
+        "drums": 7.114783,
+        "bass": 7.174705,
+        "other": 7.128352,
+        "acoustic_guitar": 7.163263,
+        "electric_guitar": 7.128352,
+        "guitar_residual": 7.12835,
+        "piano": 7.12835
+      }
+    },
+    {
+      "t": 8263.89999999106,
+      "spread": 0.05991500000000016,
+      "times": {
+        "lead_vocals": 7.137114,
+        "backing_vocals": 7.138565,
+        "drums": 7.124999,
+        "bass": 7.184914,
+        "other": 7.138563,
+        "acoustic_guitar": 7.173479,
+        "electric_guitar": 7.138564,
+        "guitar_residual": 7.138564,
+        "piano": 7.138562
+      }
+    },
+    {
+      "t": 8282.29999999702,
+      "spread": 0.05991300000000077,
+      "times": {
+        "lead_vocals": 7.15869,
+        "backing_vocals": 7.160141,
+        "drums": 7.146576,
+        "bass": 7.206489,
+        "other": 7.16014,
+        "acoustic_guitar": 7.195057,
+        "electric_guitar": 7.160141,
+        "guitar_residual": 7.16014,
+        "piano": 7.160141
+      }
+    },
+    {
+      "t": 8302.39999999106,
+      "spread": 0.059917999999999694,
+      "times": {
+        "lead_vocals": 7.181918,
+        "backing_vocals": 7.18337,
+        "drums": 7.1698,
+        "bass": 7.229718,
+        "other": 7.183368,
+        "acoustic_guitar": 7.21828,
+        "electric_guitar": 7.183367,
+        "guitar_residual": 7.183366,
+        "piano": 7.183366
+      }
+    },
+    {
+      "t": 8324,
+      "spread": 0.059925999999999924,
+      "times": {
+        "lead_vocals": 7.207047,
+        "backing_vocals": 7.208496,
+        "drums": 7.194917,
+        "bass": 7.254843,
+        "other": 7.208486,
+        "acoustic_guitar": 7.243396,
+        "electric_guitar": 7.208485,
+        "guitar_residual": 7.208483,
+        "piano": 7.208482
+      }
+    },
+    {
+      "t": 8341.29999999702,
+      "spread": 0.059927999999999315,
+      "times": {
+        "lead_vocals": 7.217384,
+        "backing_vocals": 7.21884,
+        "drums": 7.205263,
+        "bass": 7.265191,
+        "other": 7.218835,
+        "acoustic_guitar": 7.253746,
+        "electric_guitar": 7.218835,
+        "guitar_residual": 7.218834,
+        "piano": 7.218833
+      }
+    },
+    {
+      "t": 8363.5,
+      "spread": 0.05991400000000002,
+      "times": {
+        "lead_vocals": 7.241317,
+        "backing_vocals": 7.242768,
+        "drums": 7.229201,
+        "bass": 7.289115,
+        "other": 7.242765,
+        "acoustic_guitar": 7.277683,
+        "electric_guitar": 7.242766,
+        "guitar_residual": 7.242765,
+        "piano": 7.242765
+      }
+    },
+    {
+      "t": 8383.70000000298,
+      "spread": 0.0599160000000003,
+      "times": {
+        "lead_vocals": 7.264628,
+        "backing_vocals": 7.266079,
+        "drums": 7.252514,
+        "bass": 7.31243,
+        "other": 7.26608,
+        "acoustic_guitar": 7.300997,
+        "electric_guitar": 7.266081,
+        "guitar_residual": 7.266081,
+        "piano": 7.266082
+      }
+    },
+    {
+      "t": 8402.29999999702,
+      "spread": 0.059928999999999455,
+      "times": {
+        "lead_vocals": 7.286431,
+        "backing_vocals": 7.287877,
+        "drums": 7.274294,
+        "bass": 7.334223,
+        "other": 7.28787,
+        "acoustic_guitar": 7.322763,
+        "electric_guitar": 7.287866,
+        "guitar_residual": 7.287864,
+        "piano": 7.287861
+      }
+    },
+    {
+      "t": 8422.20000000298,
+      "spread": 0.059930999999999734,
+      "times": {
+        "lead_vocals": 7.298302,
+        "backing_vocals": 7.299762,
+        "drums": 7.286181,
+        "bass": 7.346112,
+        "other": 7.29976,
+        "acoustic_guitar": 7.334655,
+        "electric_guitar": 7.299759,
+        "guitar_residual": 7.299758,
+        "piano": 7.299755
+      }
+    },
+    {
+      "t": 8452.09999999404,
+      "spread": 0.05991500000000016,
+      "times": {
+        "lead_vocals": 7.331055,
+        "backing_vocals": 7.33251,
+        "drums": 7.318947,
+        "bass": 7.378862,
+        "other": 7.332513,
+        "acoustic_guitar": 7.367424,
+        "electric_guitar": 7.332516,
+        "guitar_residual": 7.332515,
+        "piano": 7.332516
+      }
+    },
+    {
+      "t": 8463.89999999106,
+      "spread": 0.059923999999999644,
+      "times": {
+        "lead_vocals": 7.346249,
+        "backing_vocals": 7.347697,
+        "drums": 7.33412,
+        "bass": 7.394044,
+        "other": 7.347693,
+        "acoustic_guitar": 7.3826,
+        "electric_guitar": 7.347691,
+        "guitar_residual": 7.34769,
+        "piano": 7.347689
+      }
+    },
+    {
+      "t": 8480.70000000298,
+      "spread": 0.059925999999999924,
+      "times": {
+        "lead_vocals": 7.356777,
+        "backing_vocals": 7.358233,
+        "drums": 7.344658,
+        "bass": 7.404584,
+        "other": 7.358233,
+        "acoustic_guitar": 7.393141,
+        "electric_guitar": 7.358233,
+        "guitar_residual": 7.358232,
+        "piano": 7.358231
+      }
+    },
+    {
+      "t": 8501.59999999404,
+      "spread": 0.059934000000000154,
+      "times": {
+        "lead_vocals": 7.378621,
+        "backing_vocals": 7.380072,
+        "drums": 7.366487,
+        "bass": 7.426421,
+        "other": 7.380072,
+        "acoustic_guitar": 7.414969,
+        "electric_guitar": 7.380071,
+        "guitar_residual": 7.380054,
+        "piano": 7.380053
+      }
+    },
+    {
+      "t": 8523.29999999702,
+      "spread": 0.05991400000000002,
+      "times": {
+        "lead_vocals": 7.403478,
+        "backing_vocals": 7.404925,
+        "drums": 7.39136,
+        "bass": 7.451274,
+        "other": 7.404924,
+        "acoustic_guitar": 7.439841,
+        "electric_guitar": 7.404926,
+        "guitar_residual": 7.404924,
+        "piano": 7.404925
+      }
+    },
+    {
+      "t": 8544.5,
+      "spread": 0.059934000000000154,
+      "times": {
+        "lead_vocals": 7.428014,
+        "backing_vocals": 7.429451,
+        "drums": 7.415862,
+        "bass": 7.475796,
+        "other": 7.429445,
+        "acoustic_guitar": 7.464343,
+        "electric_guitar": 7.429442,
+        "guitar_residual": 7.429431,
+        "piano": 7.429429
+      }
+    },
+    {
+      "t": 8562.70000000298,
+      "spread": 0.059920999999999225,
+      "times": {
+        "lead_vocals": 7.437609,
+        "backing_vocals": 7.43906,
+        "drums": 7.425487,
+        "bass": 7.485408,
+        "other": 7.439056,
+        "acoustic_guitar": 7.473969,
+        "electric_guitar": 7.439056,
+        "guitar_residual": 7.439054,
+        "piano": 7.439052
+      }
+    },
+    {
+      "t": 8587.59999999404,
+      "spread": 0.05992900000000034,
+      "times": {
+        "lead_vocals": 7.465828,
+        "backing_vocals": 7.467277,
+        "drums": 7.453695,
+        "bass": 7.513624,
+        "other": 7.467275,
+        "acoustic_guitar": 7.502178,
+        "electric_guitar": 7.467274,
+        "guitar_residual": 7.467269,
+        "piano": 7.467265
+      }
+    },
+    {
+      "t": 8605.5,
+      "spread": 0.059922999999999504,
+      "times": {
+        "lead_vocals": 7.486995,
+        "backing_vocals": 7.488439,
+        "drums": 7.474864,
+        "bass": 7.534787,
+        "other": 7.488434,
+        "acoustic_guitar": 7.523342,
+        "electric_guitar": 7.488433,
+        "guitar_residual": 7.488432,
+        "piano": 7.48843
+      }
+    },
+    {
+      "t": 8621.79999999702,
+      "spread": 0.05992400000000053,
+      "times": {
+        "lead_vocals": 7.496019,
+        "backing_vocals": 7.49747,
+        "drums": 7.483897,
+        "bass": 7.543821,
+        "other": 7.497469,
+        "acoustic_guitar": 7.532378,
+        "electric_guitar": 7.497471,
+        "guitar_residual": 7.49747,
+        "piano": 7.497468
+      }
+    },
+    {
+      "t": 8642.39999999106,
+      "spread": 0.05993600000000043,
+      "times": {
+        "lead_vocals": 7.51861,
+        "backing_vocals": 7.520056,
+        "drums": 7.506443,
+        "bass": 7.566379,
+        "other": 7.520025,
+        "acoustic_guitar": 7.554922,
+        "electric_guitar": 7.52002,
+        "guitar_residual": 7.520014,
+        "piano": 7.52001
+      }
+    },
+    {
+      "t": 8661.5,
+      "spread": 0.059920999999999225,
+      "times": {
+        "lead_vocals": 7.541081,
+        "backing_vocals": 7.542517,
+        "drums": 7.528946,
+        "bass": 7.588867,
+        "other": 7.542516,
+        "acoustic_guitar": 7.577428,
+        "electric_guitar": 7.542516,
+        "guitar_residual": 7.542514,
+        "piano": 7.542513
+      }
+    },
+    {
+      "t": 8680.79999999702,
+      "spread": 0.05992400000000053,
+      "times": {
+        "lead_vocals": 7.563435,
+        "backing_vocals": 7.564879,
+        "drums": 7.551303,
+        "bass": 7.611227,
+        "other": 7.564878,
+        "acoustic_guitar": 7.599765,
+        "electric_guitar": 7.564878,
+        "guitar_residual": 7.564874,
+        "piano": 7.564873
+      }
+    },
+    {
+      "t": 8704.20000000298,
+      "spread": 0.05991800000000058,
+      "times": {
+        "lead_vocals": 7.578338,
+        "backing_vocals": 7.579789,
+        "drums": 7.566221,
+        "bass": 7.626139,
+        "other": 7.579788,
+        "acoustic_guitar": 7.614705,
+        "electric_guitar": 7.57979,
+        "guitar_residual": 7.579789,
+        "piano": 7.579789
+      }
+    },
+    {
+      "t": 8722.39999999106,
+      "spread": 0.059916999999999554,
+      "times": {
+        "lead_vocals": 7.59996,
+        "backing_vocals": 7.601412,
+        "drums": 7.587841,
+        "bass": 7.647758,
+        "other": 7.601408,
+        "acoustic_guitar": 7.636311,
+        "electric_guitar": 7.601407,
+        "guitar_residual": 7.601407,
+        "piano": 7.601406
+      }
+    },
+    {
+      "t": 8740.79999999702,
+      "spread": 0.059923999999999644,
+      "times": {
+        "lead_vocals": 7.621514,
+        "backing_vocals": 7.622965,
+        "drums": 7.609389,
+        "bass": 7.669313,
+        "other": 7.622961,
+        "acoustic_guitar": 7.657873,
+        "electric_guitar": 7.622961,
+        "guitar_residual": 7.62296,
+        "piano": 7.622958
+      }
+    },
+    {
+      "t": 8765.29999999702,
+      "spread": 0.0599280000000002,
+      "times": {
+        "lead_vocals": 7.649204,
+        "backing_vocals": 7.650653,
+        "drums": 7.637073,
+        "bass": 7.697001,
+        "other": 7.650646,
+        "acoustic_guitar": 7.685552,
+        "electric_guitar": 7.650644,
+        "guitar_residual": 7.650643,
+        "piano": 7.65064
+      }
+    },
+    {
+      "t": 8782.09999999404,
+      "spread": 0.05991700000000044,
+      "times": {
+        "lead_vocals": 7.657651,
+        "backing_vocals": 7.659103,
+        "drums": 7.645536,
+        "bass": 7.705453,
+        "other": 7.659103,
+        "acoustic_guitar": 7.694019,
+        "electric_guitar": 7.659105,
+        "guitar_residual": 7.659104,
+        "piano": 7.659103
+      }
+    },
+    {
+      "t": 8803.59999999404,
+      "spread": 0.05991800000000058,
+      "times": {
+        "lead_vocals": 7.682459,
+        "backing_vocals": 7.68391,
+        "drums": 7.670341,
+        "bass": 7.730259,
+        "other": 7.683908,
+        "acoustic_guitar": 7.718821,
+        "electric_guitar": 7.683908,
+        "guitar_residual": 7.683907,
+        "piano": 7.683907
+      }
+    },
+    {
+      "t": 8824.59999999404,
+      "spread": 0.05995299999999926,
+      "times": {
+        "lead_vocals": 7.706652,
+        "backing_vocals": 7.708091,
+        "drums": 7.69448,
+        "bass": 7.754433,
+        "other": 7.70808,
+        "acoustic_guitar": 7.742951,
+        "electric_guitar": 7.708076,
+        "guitar_residual": 7.708069,
+        "piano": 7.708063
+      }
+    },
+    {
+      "t": 8842.70000000298,
+      "spread": 0.059953000000000145,
+      "times": {
+        "lead_vocals": 7.716491,
+        "backing_vocals": 7.717936,
+        "drums": 7.704328,
+        "bass": 7.764281,
+        "other": 7.717928,
+        "acoustic_guitar": 7.752799,
+        "electric_guitar": 7.717925,
+        "guitar_residual": 7.717918,
+        "piano": 7.717912
+      }
+    }
+  ],
+  "seeks": {
+    "lead_vocals": 1,
+    "backing_vocals": 1,
+    "drums": 1,
+    "bass": 1,
+    "other": 1,
+    "acoustic_guitar": 1,
+    "electric_guitar": 1,
+    "guitar_residual": 1,
+    "piano": 1,
+    "mix": 2
+  },
+  "max_spread_ms": 74.3109999999998,
+  "last_spread_ms": 59.953000000000145
+}

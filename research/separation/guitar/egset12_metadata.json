@@ -1,0 +1,445 @@
+{
+  "created": "2024-05-31T22:30:26.533312+00:00",
+  "modified": "2025-03-17T22:46:00.488098+00:00",
+  "id": 11406378,
+  "conceptrecid": "11406377",
+  "doi": "10.48550/arXiv.2405.14679",
+  "doi_url": "https://doi.org/10.48550/arXiv.2405.14679",
+  "metadata": {
+    "title": "EGSet12: twelve real & original solo electric guitar performances with diverse playing styles to evaluate guitar tablature transcription.",
+    "doi": "10.48550/arXiv.2405.14679",
+    "publication_date": "2024-06-01",
+    "description": "<div>\n<p>EGSet12 is a small dataset with twelve original and real solo electric guitar performances (31.65 seconds avg. duration, totaling 379.8 seconds). These pieces were composed by a professional musician and guitar player, showcasing the full tonal range of the electric guitar across diverse melodies and chord complexities. EGSet12 encompasses a broad spectrum of styles, including pop, funk, jazz and twelve-tone, reflecting varied tonalities, keys, rhythms, and modes.</p>\n</div>\n<div>\n<p>EGSet12 was performed by a single professional guitarist using a Sire T7 Telecaster guitar and a Yamaha B15 amplifier. The performance setup allowed the performer to freely select the guitar&rsquo;s volume and tone knobs, also allowing techniques like alternate picking, hybrid picking, and palm mute. We captured the performance using an ECM8000 microphone positioned 15 centimeters from the amplifier and connected to a UMC202 HD audio interface (original sampling rate of 48000Hz; each file's stereo channels are a copy of each other; in reality the signal is mono). This recording setup differs significantly from those used in datasets meant to train guitar tablature transcription models. Other than the amplifier, no additional audio effects were used in EGSet12.</p>\n<p>EGSet12&rsquo;s realism, tone diversity, and playing styles make it useful to assess methods for guitar tablature transcription.&nbsp;</p>\n<p>Introduced in the DAFx 2024 paper:&nbsp;<a href=\"https://paperswithcode.com/paper/leveraging-electric-guitar-tones-and-effects\">LEVERAGING ELECTRIC GUITAR TONES AND EFFECTS TO IMPROVE ROBUSTNESS IN GUITAR TABLATURE TRANSCRIPTION MODELING</a></p>\n<p>The weights for the best performing model (TabCNN trained with \"GuitarProFX\") in the paper are also provided. &nbsp;</p>\n<p><strong>Please cite this paper if using EGSet12:</strong></p>\n<p>Pedroza HE, Abreu W, Corey R, Roman IR. \"Leveraging real electric guitar tones and effects to improve robustness in guitar tablature transcription modeling.\" <em>In 27th International Conference on Digital Audio Effects (DAFx),</em> 2024.</p>\n</div>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Pedroza, Hegel",
+        "affiliation": null
+      },
+      {
+        "name": "Abreu, Wallace",
+        "affiliation": null
+      },
+      {
+        "name": "Corey, Ryan",
+        "affiliation": null
+      },
+      {
+        "name": "Roman, Iran",
+        "affiliation": null
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "communities": [
+      {
+        "id": "ismir"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "11406377"
+          }
+        }
+      ]
+    }
+  },
+  "title": "EGSet12: twelve real & original solo electric guitar performances with diverse playing styles to evaluate guitar tablature transcription.",
+  "links": {
+    "self": "https://zenodo.org/api/records/11406378",
+    "self_html": "https://zenodo.org/records/11406378",
+    "preview_html": "https://zenodo.org/records/11406378?preview=1",
+    "doi": "https://doi.org/10.48550/arXiv.2405.14679",
+    "self_doi": "https://doi.org/10.48550/arXiv.2405.14679",
+    "self_doi_html": "https://zenodo.org/doi/10.48550/arXiv.2405.14679",
+    "reserve_doi": "https://zenodo.org/api/records/11406378/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/11406377",
+    "parent_html": "https://zenodo.org/records/11406377",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:11406378/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:11406378/sequence/default",
+    "files": "https://zenodo.org/api/records/11406378/files",
+    "media_files": "https://zenodo.org/api/records/11406378/media-files",
+    "latest": "https://zenodo.org/api/records/11406378/versions/latest",
+    "latest_html": "https://zenodo.org/records/11406378/latest",
+    "versions": "https://zenodo.org/api/records/11406378/versions",
+    "draft": "https://zenodo.org/api/records/11406378/draft",
+    "access_links": "https://zenodo.org/api/records/11406378/access/links",
+    "access_grants": "https://zenodo.org/api/records/11406378/access/grants",
+    "access_users": "https://zenodo.org/api/records/11406378/access/users",
+    "access_request": "https://zenodo.org/api/records/11406378/access/request",
+    "access": "https://zenodo.org/api/records/11406378/access",
+    "communities": "https://zenodo.org/api/records/11406378/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/11406378/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/11406378/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/11406378/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/11406378/quota-increase",
+    "requests": "https://zenodo.org/api/records/11406378/requests"
+  },
+  "updated": "2025-03-17T22:46:00.488098+00:00",
+  "recid": "11406378",
+  "revision": 10,
+  "files": [
+    {
+      "id": "34363e3f-7ff5-4d93-b1c3-244c40e31dea",
+      "key": "09.gp",
+      "size": 14756,
+      "checksum": "md5:e4e6e78962d560037cd0fc9cd60c0959",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/09.gp/content"
+      }
+    },
+    {
+      "id": "32f3b852-13de-481a-b0c9-908e4447b71a",
+      "key": "02.gp",
+      "size": 14835,
+      "checksum": "md5:dca6ce7f304ab28b7c3fdfbf8780a2ff",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/02.gp/content"
+      }
+    },
+    {
+      "id": "dd7c5ccd-b7aa-42d9-b1a0-547482c934b8",
+      "key": "02.jams",
+      "size": 120087,
+      "checksum": "md5:848f984b17b261a65585e25fba977a33",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/02.jams/content"
+      }
+    },
+    {
+      "id": "27a83222-c5af-4d90-ba4a-48eba8e72834",
+      "key": "08.jams",
+      "size": 48855,
+      "checksum": "md5:513e00c522d53adac0ed9966a5b4c8cd",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/08.jams/content"
+      }
+    },
+    {
+      "id": "0d343159-0352-42b5-949b-a3c5c4ba9b5e",
+      "key": "07.jams",
+      "size": 38330,
+      "checksum": "md5:e693844f4b46fd3831c7c4ee0a2c3aa8",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/07.jams/content"
+      }
+    },
+    {
+      "id": "78182e25-39a0-4ce5-b1a4-e47758bead0c",
+      "key": "04.jams",
+      "size": 86938,
+      "checksum": "md5:87426719ac4353d73e1af09970c31eb1",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/04.jams/content"
+      }
+    },
+    {
+      "id": "2885e7dd-bd0e-4e9c-85cd-3f7a90f1e49a",
+      "key": "05.gp",
+      "size": 15069,
+      "checksum": "md5:21a5166d9d16e8ac90c6ce16256a4ce8",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/05.gp/content"
+      }
+    },
+    {
+      "id": "756a7538-d2d8-4ab3-b52d-bc54d69c2868",
+      "key": "06.gp",
+      "size": 13771,
+      "checksum": "md5:dad00cbe2d7a28399106f0ec7221a8f0",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/06.gp/content"
+      }
+    },
+    {
+      "id": "316857d8-8e81-4c1f-966e-0a5650ce28ff",
+      "key": "07.wav",
+      "size": 8755244,
+      "checksum": "md5:77f752ab3e7a5c606a21ac7b0df4fa1c",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/07.wav/content"
+      }
+    },
+    {
+      "id": "67696243-0c38-4d59-8189-13908fe7d6be",
+      "key": "01.jams",
+      "size": 52172,
+      "checksum": "md5:083c7dae8e6556c20b9a2d762e2c977f",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/01.jams/content"
+      }
+    },
+    {
+      "id": "8bed718f-8f81-47c1-b8d8-38f3d52b9c38",
+      "key": "02.wav",
+      "size": 8886896,
+      "checksum": "md5:69b8701ea9a81428a6346e0d3d4b9b85",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/02.wav/content"
+      }
+    },
+    {
+      "id": "be4712ef-0ff6-449d-ab2c-d43d03a32bf8",
+      "key": "01.wav",
+      "size": 8640044,
+      "checksum": "md5:2eb739c5fb73e6327bb47267afe3eddf",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/01.wav/content"
+      }
+    },
+    {
+      "id": "dd570740-1215-4f4e-a1a7-7a81e02f8fa7",
+      "key": "05.jams",
+      "size": 56724,
+      "checksum": "md5:c5c2fd376031177e87a3eb4ad12d220c",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/05.jams/content"
+      }
+    },
+    {
+      "id": "e3fdb124-4d2b-4dfd-908b-72af2ff9fccd",
+      "key": "10.jams",
+      "size": 42653,
+      "checksum": "md5:8cbf70e1b086f4a8fe5cac79572635ae",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/10.jams/content"
+      }
+    },
+    {
+      "id": "46235b5f-672e-498c-926c-4d5aad292be9",
+      "key": "07.gp",
+      "size": 14243,
+      "checksum": "md5:ff4998113e7524e3063c27a7229f0c72",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/07.gp/content"
+      }
+    },
+    {
+      "id": "837e09f3-8796-4823-af3a-a386e221320a",
+      "key": "03.wav",
+      "size": 10368044,
+      "checksum": "md5:28141f17e46399553c52f5ed27bc10e2",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/03.wav/content"
+      }
+    },
+    {
+      "id": "87052856-7e97-4548-bfac-71ac5fefd6bb",
+      "key": "05.wav",
+      "size": 9600044,
+      "checksum": "md5:3435348c2b6702524dade471be70e4eb",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/05.wav/content"
+      }
+    },
+    {
+      "id": "b5ba70bb-f96e-4619-bbac-749468636f3f",
+      "key": "12.wav",
+      "size": 6702584,
+      "checksum": "md5:e1ee73508f37d5c28c69877a588665d2",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/12.wav/content"
+      }
+    },
+    {
+      "id": "b74f60c9-e2ea-424c-801f-9c5303ccea00",
+      "key": "12.jams",
+      "size": 47846,
+      "checksum": "md5:21217bda094eb8f29edfd1ed2f23ba45",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/12.jams/content"
+      }
+    },
+    {
+      "id": "9326b90e-e642-49a9-ba10-03ae22e3e583",
+      "key": "06.wav",
+      "size": 8723924,
+      "checksum": "md5:9f7ead382f373259b466ccd1884ed173",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/06.wav/content"
+      }
+    },
+    {
+      "id": "83831f01-8775-4e5e-90da-256ed8a816b6",
+      "key": "10.gp",
+      "size": 13857,
+      "checksum": "md5:3583cd15d0e1ae170ea2f2d77e99ef07",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/10.gp/content"
+      }
+    },
+    {
+      "id": "05777846-2de5-4512-85b3-3379fa363c3c",
+      "key": "best_TabCNN_tablature_trancription_model",
+      "size": 3345122,
+      "checksum": "md5:ce168b2cd426f81a2a78499214e40605",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/best_TabCNN_tablature_trancription_model/content"
+      }
+    },
+    {
+      "id": "a39e447f-9f3c-4210-b15b-1033c067a66b",
+      "key": "03.jams",
+      "size": 45984,
+      "checksum": "md5:721ec50f570892f9cfa88fb1e22a6113",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/03.jams/content"
+      }
+    },
+    {
+      "id": "c9443139-1548-475f-8ab9-32b00928ecbc",
+      "key": "11.gp",
+      "size": 15356,
+      "checksum": "md5:9d7b278dd3fda47cf7a717b0a6cdec86",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/11.gp/content"
+      }
+    },
+    {
+      "id": "509ffd53-56ca-41bf-99df-2b4809a31227",
+      "key": "08.gp",
+      "size": 15050,
+      "checksum": "md5:25a607d5bc6f7df2a6864bf09d770542",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/08.gp/content"
+      }
+    },
+    {
+      "id": "482931a4-aa52-4acb-bdf4-0a69fcdd001c",
+      "key": "09.wav",
+      "size": 8730980,
+      "checksum": "md5:593aec1394a905a0c8b255a847f54139",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/09.wav/content"
+      }
+    },
+    {
+      "id": "fd56347e-a92b-43c7-90ec-e9192adae927",
+      "key": "03.gp",
+      "size": 14398,
+      "checksum": "md5:820a2337cc43c1b1b606151cfae4e6bb",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/03.gp/content"
+      }
+    },
+    {
+      "id": "5d2ca7d3-196b-43ab-b853-2fe72e82762a",
+      "key": "11.jams",
+      "size": 57003,
+      "checksum": "md5:f392b5bba5f3b99866bba91cb4d35a9a",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/11.jams/content"
+      }
+    },
+    {
+      "id": "4ce1b9cb-2e5c-44d4-bd97-fe12146e4ffa",
+      "key": "12.gp",
+      "size": 15194,
+      "checksum": "md5:a21a8f645d41186eb1194571110f5686",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/12.gp/content"
+      }
+    },
+    {
+      "id": "519929bc-169e-4c39-8f70-3b54088ce087",
+      "key": "06.jams",
+      "size": 186045,
+      "checksum": "md5:5ababdcf7741400dc93768334f6c899d",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/06.jams/content"
+      }
+    },
+    {
+      "id": "5d77f584-215b-4e49-a347-0cdbde54e14a",
+      "key": "11.wav",
+      "size": 9032774,
+      "checksum": "md5:4bbaecaaa3e58bef6bb15a6cd0979fe2",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/11.wav/content"
+      }
+    },
+    {
+      "id": "4da88e5a-dbb9-487e-a4bd-4f173f099bab",
+      "key": "04.wav",
+      "size": 8797130,
+      "checksum": "md5:6fe2f6f915953e8ae28b8a84a7677d0f",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/04.wav/content"
+      }
+    },
+    {
+      "id": "f4dc9389-7e75-4710-9110-1d35f3347aa6",
+      "key": "10.wav",
+      "size": 8730980,
+      "checksum": "md5:123818ef1020102252192d9e7a231e07",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/10.wav/content"
+      }
+    },
+    {
+      "id": "439c6fcb-b164-4932-aa3e-fdab17aeb137",
+      "key": "08.wav",
+      "size": 9169016,
+      "checksum": "md5:a59f373c00b8a327b37ce28f6601404c",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/08.wav/content"
+      }
+    },
+    {
+      "id": "3a3a66d5-c61e-4174-af6c-39cc04d2bbe9",
+      "key": "09.jams",
+      "size": 49728,
+      "checksum": "md5:9f08cae003c6c3d9dc745c2e319496d4",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/09.jams/content"
+      }
+    },
+    {
+      "id": "2e2b6030-ca9d-4dfe-8126-f344fe0490e4",
+      "key": "04.gp",
+      "size": 15221,
+      "checksum": "md5:53aa7e4d86996aaeedeeef2e47dfacf3",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/04.gp/content"
+      }
+    },
+    {
+      "id": "8e39e508-41ea-49a2-96a1-9ad2d4056a1f",
+      "key": "01.gp",
+      "size": 14513,
+      "checksum": "md5:811dde6c5ffd1754dcbd468100a869af",
+      "links": {
+        "self": "https://zenodo.org/api/records/11406378/files/01.gp/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "397929"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 9124,
+    "unique_downloads": 8589,
+    "views": 989,
+    "unique_views": 920,
+    "version_downloads": 9124,
+    "version_unique_downloads": 8589,
+    "version_unique_views": 920,
+    "version_views": 989
+  },
+  "state": "done",
+  "submitted": true
+}

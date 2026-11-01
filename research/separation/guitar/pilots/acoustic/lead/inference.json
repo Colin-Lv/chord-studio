@@ -1,0 +1,11 @@
+{
+  "source": "research\\separation\\refinement\\controls\\acoustic.wav",
+  "model": "lead",
+  "seconds": 2.41578889999073,
+  "chunk": 132300,
+  "device": "cuda",
+  "peak_vram_mb": 577.78369140625,
+  "input_sha256": "3952a380ad243f8a919fc590570d12b62011717912c904240eeeb57f15c1096d",
+  "strict_load": true,
+  "relative_energy_db": -0.022112077102065086
+}

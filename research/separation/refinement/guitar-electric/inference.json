@@ -1,0 +1,16 @@
+{
+  "repo_commit": "79ed5bb75e5c3a40cd319d9d990cee913fc65c26",
+  "checkpoint_sha256": "657295888781e62ef50593002720d2edb3858b9e5bbfabf0c54f715a0da4b9e2",
+  "input_sha256": "0872c4d826661ae2b04a9d036366fecc7ce72f72a5a051b157bf6ab03bb282e3",
+  "query_sha256": "256979029820a881bca98996dbdb764d7a387c779ecbb7e2202437861262459f",
+  "runner_sha256": "f365d4670236dda59708887c8bede0ea9ef90fdd0b2eb30e30c916c8d04b2d59",
+  "seconds": 3.795178800006397,
+  "device": "cuda",
+  "peak_vram_mb": 1029.35009765625,
+  "sample_rate": 44100,
+  "samples": 617400,
+  "chunk_seconds": 6,
+  "hop_seconds": 3,
+  "strict_load": true,
+  "note": "Target estimate and mixture-minus-target; not independent sources or a verified track identity"
+}

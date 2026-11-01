@@ -1,0 +1,40 @@
+{
+  "status": "files_updated_existing_desktop_process_not_restarted",
+  "files": [
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\app\\web\\server.py",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\web\\server.py",
+      "sha256": "77521526a1ca5e745dac037612d29dd18107c57788ca1e3cc5ec3c3ff64daed9"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\app\\web\\jobs.py",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\web\\jobs.py",
+      "sha256": "cbc400f11b96641508f7b45cb3eb6d4882013414c23d9064b8b333c88795ea3b"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\app\\web\\worker.py",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\web\\worker.py",
+      "sha256": "3853677503d970deedadfd8169e0d92285437d796059e7ab578813a61699eb2e"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\frontend\\stems.js",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\frontend\\stems.js",
+      "sha256": "15fc4fdce2e8dc30e138ad09f5f8865cacfd4b7a1e03bfba9aef3d9a87147625"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\frontend\\stems.html",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\frontend\\stems.html",
+      "sha256": "fb8b0e10fb88ff57a7b93c4f3f7b1bdd85ef22aa38b8464a470e38c78c1ad067"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\app\\web\\vocal_parts_runner.py",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\web\\vocal_parts_runner.py",
+      "sha256": "e3a369f3935e238d6de6a93769e62da90a1f362bfad97dbb9758de3fbfb8ec3f"
+    },
+    {
+      "source": "D:\\ChordStudio\\Dialogue\\app\\web\\vocal_parts_worker.py",
+      "installed": "C:\\Users\\33573\\AppData\\Local\\Programs\\Chord Studio\\backend\\app\\web\\vocal_parts_worker.py",
+      "sha256": "232ad81340ed038756c14b750251ad3bf5c91abba257976bfc02ccc84f994d47"
+    }
+  ]
+}

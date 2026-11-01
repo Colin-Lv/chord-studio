@@ -1,0 +1,33 @@
+{
+  "guitar-acoustic": {
+    "seconds": 3.2979230000055395,
+    "peak_vram_mb": 1029.35009765625,
+    "target_energy_relative_db": -32.413459375740395
+  },
+  "guitar-electric": {
+    "seconds": 3.795178800006397,
+    "peak_vram_mb": 1029.35009765625,
+    "target_energy_relative_db": -91.48975082188683
+  },
+  "guitar-absent": {
+    "seconds": 3.5882257999910507,
+    "peak_vram_mb": 1029.35009765625,
+    "target_energy_relative_db": -90.44146859052317
+  },
+  "guitar-acoustic-official": {
+    "seconds": 59.67904730000009,
+    "peak_vram_mb": 2083.38330078125,
+    "target_energy_relative_db": -33.52362761555378,
+    "acoustic_si_sdr": -16.485832125748992
+  },
+  "xuni-guitar-query": {
+    "seconds": 5.578585900002508,
+    "peak_vram_mb": 1029.35009765625,
+    "target_energy_relative_db": -21.542607964209086
+  },
+  "xuni-guitar-own-query": {
+    "seconds": 5.487195299996529,
+    "peak_vram_mb": 1029.35009765625,
+    "target_energy_relative_db": -20.914580025837594
+  }
+}

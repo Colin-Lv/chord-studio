@@ -9,9 +9,12 @@ const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", 
 const state = {
   projectId: PROJECT, project: null, manifest: null,
   audios: {}, mix: null, tracks: [], bars: [], stepsPerCell: 16,
-  playing: false, solo: null, muted: {}, master: 1,
+  playing: false, starting: false, playRequest: 0, position: 0, solo: null, muted: {}, master: 1,
   referenceOn: false, loopBar: false, loopIndex: -1,
-  drumParts: null, expandDrums: false,
+  drumParts: null, expandDrums: false, vocalParts: null, expandVocals: false,
+  vocalCatalog: {}, vocalReads: {}, vocalJob: null, vocalPolling: false, vocalNotice: "",
+  guitarParts: null, expandGuitars: false,
+  viewRequest: 0, keysAttached: false,
   cellW: 20, rowH: 74, hoverBar: -1, raf: null,
 };
 
@@ -21,6 +24,22 @@ const fmt = seconds => {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 };
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const preferenceKey = `stems:${PROJECT}`;
+function readPreference() {
+  try { return JSON.parse(localStorage.getItem(preferenceKey)) || {}; } catch (_) { return {}; }
+}
+function savePreference(patch) {
+  try { localStorage.setItem(preferenceKey, JSON.stringify({ ...readPreference(), ...patch })); } catch (_) { /* private storage */ }
+}
+function saveExpansion(model, expanded) {
+  savePreference({ expanded: { ...readPreference().expanded, [model]: expanded } });
+}
+function modelLabel(model) {
+  return state.manifest?.model_options?.find(item => item.id === model)?.label || model;
+}
+async function optionalResult(url) {
+  try { return await api(url); } catch (error) { if (error.status === 404) return null; throw error; }
+}
 
 function toast(message) {
   const node = $("toast");
@@ -58,13 +77,16 @@ async function boot() {
     $("backToWorkbench").href = "/";
   } catch (error) { showError(error.message); return; }
   try {
-    const query = MODEL ? `?model=${encodeURIComponent(MODEL)}` : "";
+    const selected = MODEL || readPreference().model;
+    const query = selected ? `?model=${encodeURIComponent(selected)}` : "";
     const manifest = await api(`/api/projects/${PROJECT}/stems${query}`);
     await start(manifest);
   } catch (error) {
     if (error.status === 404) showPending();
     else showError(error.message);
   }
+  await resumeVocalJob();
+  await GuitarParts.resume();
 }
 
 function showPending() {
@@ -122,6 +144,7 @@ async function followJob(jobId, model) {
 /* ------------------------------------------------------------------ main */
 function resetPlayback() {
   stop();
+  state.position = 0;
   state.audios = {};
   state.mix = null;
   state.solo = null;
@@ -150,7 +173,9 @@ function renderModelSelect(manifest) {
 }
 
 async function switchModel(model) {
-  if (!model || model === state.manifest?.model_key) return;
+  if (!model) return;
+  const request = ++state.viewRequest;
+  if (model === state.manifest?.model_key) return;
   const option = (state.manifest.model_options || []).find(item => item.id === model);
   if (!option?.ready) {
     const note = option?.note ? `\n\n${option.note}` : "";
@@ -163,16 +188,34 @@ async function switchModel(model) {
   }
   try {
     const manifest = await api(`/api/projects/${PROJECT}/stems?model=${encodeURIComponent(model)}`);
-    resetPlayback();
-    await start(manifest);
+    if (request !== state.viewRequest) return;
+    await start(manifest, request);
   } catch (error) {
+    if (request !== state.viewRequest) return;
     $("modelSelect").value = state.manifest.model_key;
     toast(error.message);
   }
 }
 
-async function start(manifest) {
+async function start(manifest, request = ++state.viewRequest) {
+  const model = manifest.model_key || "htdemucs";
+  const [result, drums] = await Promise.all([
+    optionalResult(`/api/projects/${PROJECT}/result`),
+    optionalResult(`/api/projects/${PROJECT}/stems/drums-parts?model=${encodeURIComponent(model)}`),
+    refreshVocalCatalog(manifest),
+    GuitarParts.refresh(),
+  ]);
+  if (request !== state.viewRequest) return;
+  resetPlayback();
   state.manifest = manifest;
+  GuitarParts.apply();
+  state.drumParts = drums;
+  state.vocalParts = state.vocalCatalog[model]?.result || null;
+  state.expandVocals = readPreference().expanded?.[model] ?? !!state.vocalParts;
+  savePreference({ model });
+  const url = new URL(location.href);
+  url.searchParams.set("model", model);
+  history.replaceState(null, "", url);
   state.tracks = manifest.tracks || [];
   state.bars = manifest.bars || [];
   $("pending").hidden = true;
@@ -193,13 +236,14 @@ async function start(manifest) {
   $("reSeparate").onclick = () => runSeparation(true, manifest.model_key || "htdemucs");
   renderModelSelect(manifest);
 
-  const result = await api(`/api/projects/${PROJECT}/result`).catch(() => null);
   const key = result?.key_analysis?.key;
   $("keyLabel").textContent = key ? key.replace(/m$/, "") + (key.endsWith("m") ? " 小调" : " 大调") : "—";
   state.chords = chordTimeline(result);
-  state.drumParts = await api(`/api/projects/${PROJECT}/stems/drums-parts?model=${encodeURIComponent(manifest.model_key || "htdemucs")}`).catch(() => null);
   state.tracks = composedTracks();
+  $("songMeta").textContent = `${fmt(manifest.duration)} · ${state.tracks.length} 轨 · ${sourceText}`;
   renderDrumButton();
+  renderVocalButton();
+  GuitarParts.render();
 
   buildAudio();
   buildHeads();
@@ -213,36 +257,28 @@ async function start(manifest) {
   renderClock();
 }
 
-function master() { return state.audios[state.tracks[0]?.id]; }
-
 function buildAudio() {
-  document.querySelectorAll("audio.stem-audio").forEach(node => node.remove());
+  StemAudio.reset(state.manifest.duration, () => { if (state.playing) stop(); });
+  state.audios = {};
   for (const track of state.tracks) {
-    const audio = document.createElement("audio");
-    audio.className = "stem-audio";
-    audio.preload = "auto";
-    audio.src = state.manifest.urls?.[track.id] || state.drumParts?.urls?.[track.id]
+    const src = state.manifest.urls?.[track.id] || state.drumParts?.urls?.[track.id] || state.vocalParts?.urls?.[track.id] || state.guitarParts?.urls?.[track.id]
       || `/api/projects/${PROJECT}/stems/${track.file}`;
-    audio.dataset.track = track.id;
-    audio.addEventListener("ended", () => { if (audio === master()) stop(); });
-    document.body.appendChild(audio);
-    state.audios[track.id] = audio;
+    state.audios[track.id] = { id: track.id, src, muted: false, volume: state.master };
   }
-  const mix = document.createElement("audio");
-  mix.className = "stem-audio";
-  mix.preload = "auto";
-  mix.src = state.manifest.audio_url || `/api/projects/${PROJECT}/audio`;
-  mix.dataset.track = "mix";
-  document.body.appendChild(mix);
-  state.mix = mix;
+  state.mix = { id: "mix", src: state.manifest.audio_url || `/api/projects/${PROJECT}/audio`, muted: true, volume: state.master };
+  updateAudioLoop();
 }
 
 function composedTracks() {
   const base = state.manifest?.tracks || [];
-  if (!state.expandDrums || !state.drumParts?.tracks?.length) return base;
+  
   const out = [];
   for (const track of base) {
-    if (track.id === "drums") {
+    if (track.id === "guitar" && state.expandGuitars && state.guitarParts?.tracks?.length) {
+      for (const part of state.guitarParts.tracks) out.push({ ...part, group: "guitar" });
+    } else if (track.id === "vocals" && state.expandVocals && state.vocalParts?.tracks?.length) {
+      for (const part of state.vocalParts.tracks) out.push({ ...part, group: "vocals" });
+    } else if (track.id === "drums" && state.expandDrums && state.drumParts?.tracks?.length) {
       for (const part of state.drumParts.tracks) out.push({ ...part, group: "drums" });
     } else {
       out.push(track);
@@ -266,6 +302,7 @@ function renderDrumButton() {
 function rebuildTracks() {
   const time = currentTime();
   stop();
+  state.solo = null;
   state.tracks = composedTracks();
   state.audios = {};
   $("trackHeads").replaceChildren();
@@ -278,6 +315,8 @@ function rebuildTracks() {
   seek(time);
   $("songMeta").textContent = `${fmt(state.manifest.duration)} · ${state.tracks.length} 轨 · ${state.metaSuffix || ""}`;
   renderDrumButton();
+  renderVocalButton();
+  GuitarParts.render();
 }
 
 function toggleDrums() {
@@ -315,6 +354,179 @@ async function runDrumParts() {
   }
 }
 
+async function readVocalResult(model) {
+  const serial = state.vocalReads[model] = (state.vocalReads[model] || 0) + 1;
+  let entry;
+  try {
+    entry = { result: await optionalResult(`/api/projects/${PROJECT}/stems/vocal-parts?model=${encodeURIComponent(model)}`) };
+  } catch (error) { entry = { result: null, error: error.message }; }
+  // A slow pre-completion read must not replace a newer completed result.
+  if (serial === state.vocalReads[model]) state.vocalCatalog[model] = entry;
+  return state.vocalCatalog[model];
+}
+
+async function refreshVocalCatalog(manifest) {
+  const models = new Set([manifest.model_key || "htdemucs",
+    ...(manifest.model_options || []).filter(item => item.ready).map(item => item.id)]);
+  await Promise.all([...models].map(readVocalResult));
+}
+
+async function showVocalResult(model) {
+  saveExpansion(model, true);
+  if (state.manifest?.model_key !== model) await switchModel(model);
+  if (state.manifest?.model_key !== model || !state.vocalParts) return;
+  state.expandVocals = true;
+  rebuildTracks();
+  document.querySelector('.track-head[data-track="lead_vocals"]')?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function renderVocalPanel() {
+  if (!state.manifest) return;
+  const model = state.manifest.model_key || "htdemucs";
+  $("vocalSource").textContent = `当前来源：${modelLabel(model)} · 人声轨`;
+  const entry = state.vocalCatalog[model];
+  $("vocalStatus").textContent = entry?.error ? `结果读取失败：${entry.error}。请刷新重试，已有文件不会因此删除。`
+    : state.vocalParts ? (state.expandVocals ? "已保存 · 主唱与和声已展开在下方音轨列表。" : "已保存 · 当前已收起，点击下方「查看结果」展开。")
+    : "本版暂无可用的人声细分结果（尚未生成或源人声已更新）。其他版本的结果仍可从下方打开。";
+  const job = state.vocalJob;
+  $("vocalJobStatus").hidden = !job && !state.vocalNotice;
+  $("vocalJobStatus").textContent = job
+    ? `${modelLabel(job.model)} · ${job.stage_label || "正在细分人声…"}。切换版本或刷新页面不影响此任务。`
+    : state.vocalNotice;
+  const container = $("vocalSavedResults");
+  container.replaceChildren();
+  for (const [source, saved] of Object.entries(state.vocalCatalog)) {
+    if (!saved.result) continue;
+    const button = document.createElement("button");
+    button.className = "secondary";
+    button.dataset.model = source;
+    button.textContent = `查看结果 · ${modelLabel(source)}`;
+    button.title = "切换到对应版本并展开主唱与和声";
+    button.onclick = () => showVocalResult(source);
+    container.appendChild(button);
+  }
+  const errors = Object.entries(state.vocalCatalog).filter(([source, saved]) => source !== model && saved.error);
+  if (errors.length) {
+    const note = document.createElement("span");
+    note.className = "muted";
+    note.textContent = `${errors.map(([source]) => modelLabel(source)).join("、")}的结果暂时无法读取，请刷新重试。`;
+    container.appendChild(note);
+  }
+}
+
+function renderVocalButton() {
+  const button = $("vocalPartsBtn");
+  button.hidden = !(state.manifest?.tracks || []).some(t => t.id === "vocals");
+  button.disabled = !state.vocalParts && !!state.vocalJob;
+  button.textContent = state.vocalParts ? (state.expandVocals ? "收起人声细分" : "展开主唱／和声")
+    : state.vocalJob ? "人声细分进行中" : "细分主唱／和声";
+  button.title = "主唱为模型估计；和声轨还包含混响、串音与分离余量。";
+  button.onclick = () => {
+    if (state.vocalParts) {
+      state.expandVocals = !state.expandVocals;
+      saveExpansion(state.manifest.model_key || "htdemucs", state.expandVocals);
+      rebuildTracks();
+    }
+    else runVocalParts();
+  };
+  renderVocalPanel();
+}
+
+async function runVocalParts() {
+  if (state.vocalJob) return;
+  const model = state.manifest.model_key || "htdemucs";
+  state.vocalJob = { model, stage_label: "正在提交任务" };
+  state.vocalNotice = "";
+  renderVocalButton();
+  try {
+    const job = await api(`/api/projects/${PROJECT}/vocal-parts`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ model }),
+    });
+    if (job.profile !== "vocal_parts") throw new Error("当前有其他任务在运行，请待完成后再细分人声");
+    state.vocalJob = job;
+    savePreference({ vocalJobId: job.id });
+    await watchVocalJob();
+  } catch (error) {
+    state.vocalJob = null;
+    state.vocalNotice = error.message;
+    toast(error.message);
+  } finally { renderVocalButton(); }
+}
+
+async function resumeVocalJob() {
+  const ids = [...new Set([state.project?.active_job, readPreference().vocalJobId].filter(Boolean))];
+  for (const id of ids) {
+    try {
+      const job = await api(`/api/jobs/${id}`);
+      if (job.profile !== "vocal_parts") continue;
+      state.vocalJob = job;
+      savePreference({ vocalJobId: job.id });
+      renderVocalButton();
+      void watchVocalJob();
+      return;
+    } catch (error) {
+      if (error.status === 404) { savePreference({ vocalJobId: null }); continue; }
+      state.vocalNotice = `无法恢复人声任务状态：${error.message}。请刷新重试。`;
+      renderVocalPanel();
+      return;
+    }
+  }
+}
+
+async function watchVocalJob() {
+  if (state.vocalPolling) return;
+  state.vocalPolling = true;
+  try {
+    while (state.vocalJob?.id) {
+      const job = state.vocalJob;
+      let row;
+      try { row = await api(`/api/jobs/${job.id}`); }
+      catch (error) {
+        if (error.status === 404) throw error;
+        state.vocalJob.stage_label = "暂时无法读取进度，正在重连";
+        renderVocalButton();
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        continue;
+      }
+      state.vocalJob = row;
+      renderVocalButton();
+      if (["failed", "interrupted"].includes(row.status)) throw new Error(row.error || "人声细分失败，请重试");
+      if (row.status === "completed") {
+        const model = row.model || "htdemucs";
+        const entry = await readVocalResult(model);
+        if (entry?.error) {
+          state.vocalJob.stage_label = "细分已完成，正在重试读取结果";
+          renderVocalButton();
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          continue;
+        }
+        if (!entry?.result) throw new Error("任务已完成，但结果不可用；源人声可能已更新，请重新细分。");
+        saveExpansion(model, true);
+        state.vocalJob = null;
+        savePreference({ vocalJobId: null });
+        state.vocalNotice = `${modelLabel(model)}的人声细分已保存。点击「查看结果」即可试听和下载。`;
+        if (state.manifest?.model_key === model) {
+          state.vocalParts = entry.result;
+          state.expandVocals = true;
+          rebuildTracks();
+        }
+        toast(state.vocalNotice);
+        break;
+      }
+      await new Promise(resolve => setTimeout(resolve, 2000));
+    }
+  } catch (error) {
+    state.vocalNotice = error.message;
+    state.vocalJob = null;
+    savePreference({ vocalJobId: null });
+    toast(error.message);
+  } finally {
+    state.vocalPolling = false;
+    renderVocalButton();
+  }
+}
+
 function buildHeads() {
   const container = $("trackHeads");
   container.replaceChildren();
@@ -335,6 +547,7 @@ function buildHeads() {
     name.className = "track-name";
     const strong = document.createElement("strong");
     strong.textContent = track.name;
+    strong.title = track.name;
     const small = document.createElement("small");
     small.textContent = `${track.short} · ${track.instrument} · ${track.rms_db} dB`;
     small.title = small.textContent;
@@ -346,7 +559,7 @@ function buildHeads() {
     download.className = "track-download";
     download.textContent = "↓";
     download.title = `下载 ${track.name} WAV`;
-    download.href = state.manifest.wav_urls?.[track.id] || state.drumParts?.wav_urls?.[track.id]
+    download.href = state.manifest.wav_urls?.[track.id] || state.drumParts?.wav_urls?.[track.id] || state.vocalParts?.wav_urls?.[track.id] || state.guitarParts?.wav_urls?.[track.id]
       || `/api/projects/${PROJECT}/stems/${track.wav}`;
     download.download = `${track.id}.wav`;
     const mute = document.createElement("button");
@@ -380,6 +593,8 @@ function applyAudioState() {
     state.mix.muted = !reference;
     state.mix.volume = state.master;
   }
+  StemAudio.setMix(Object.fromEntries([...Object.values(state.audios), state.mix].filter(Boolean)
+    .map(track => [track.id, track.muted ? 0 : track.volume])));
   for (const head of document.querySelectorAll(".track-head")) {
     const id = head.dataset.track;
     const audible = state.solo ? state.solo === id : !state.muted[id];
@@ -645,34 +860,36 @@ function buildRuler() {
 
 /* ------------------------------------------------------------------ transport */
 function currentTime() {
-  const audio = master();
-  return audio && Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+  if (state.starting) return state.position;
+  return StemAudio.position();
 }
 
 function seek(time) {
   const t = clamp(time, 0, Math.max(0, (state.manifest?.duration || 0) - 0.05));
-  for (const track of state.tracks) {
-    const audio = state.audios[track.id];
-    if (audio && audio.readyState >= 1) audio.currentTime = t;
-  }
-  if (state.mix && state.mix.readyState >= 1) state.mix.currentTime = t;
+  state.position = t;
+  StemAudio.seek(t);
   renderClock(t);
   drawOverlay();
 }
 
 async function play() {
-  const audio = master();
-  if (!audio) return;
+  if (!state.tracks.length) return;
   const t = clamp(currentTime(), 0, Math.max(0, state.manifest.duration - 0.1));
-  for (const track of state.tracks) {
-    const node = state.audios[track.id];
-    if (!node) continue;
-    try { node.currentTime = t; } catch (_) { /* not ready yet */ }
+  const request = ++state.playRequest;
+  state.position = t;state.starting = true;
+  $("play").textContent = "…";$("play").setAttribute("aria-label", "取消准备试听");
+  try {
+    await StemAudio.unlock();
+    if (request !== state.playRequest) return;
+    await StemAudio.load([...Object.values(state.audios), state.mix].filter(Boolean));
+    if (request !== state.playRequest) return;
+    applyAudioState();
+    StemAudio.start(state.position);
+  } catch (error) {
+    if (request !== state.playRequest) return;
+    stop();toast(error.message);return;
   }
-  if (state.mix) { try { state.mix.currentTime = t; } catch (_) { /* ignore */ } }
-  applyAudioState();
-  await Promise.allSettled([...state.tracks.map(track => state.audios[track.id]?.play()),
-                            state.mix ? state.mix.play() : Promise.resolve()]);
+  state.starting = false;
   state.playing = true;
   $("play").textContent = "❚❚";
   $("play").setAttribute("aria-label", "暂停");
@@ -680,8 +897,14 @@ async function play() {
 }
 
 function stop() {
-  for (const track of state.tracks) state.audios[track.id]?.pause();
-  state.mix?.pause();
+  state.position = currentTime();
+  ++state.playRequest;
+  if (state.starting) {
+    // Cancelling pending decode discards that generation, retaining the seek.
+    StemAudio.reset(state.manifest?.duration || 0, () => { if (state.playing) stop(); });
+    StemAudio.seek(state.position);updateAudioLoop();
+  } else StemAudio.pause();
+  state.starting = false;
   state.playing = false;
   $("play").textContent = "▶";
   $("play").setAttribute("aria-label", "播放");
@@ -693,22 +916,7 @@ function stop() {
 
 function loop() {
   if (!state.playing) return;
-  const audio = master();
   const t = currentTime();
-  for (const track of state.tracks) {
-    const node = state.audios[track.id];
-    if (!node || node === audio) continue;
-    if (Math.abs(node.currentTime - t) > 0.08 && node.readyState >= 1) {
-      try { node.currentTime = t; } catch (_) { /* ignore */ }
-    }
-  }
-  if (state.mix && Math.abs(state.mix.currentTime - t) > 0.08 && state.mix.readyState >= 1) {
-    try { state.mix.currentTime = t; } catch (_) { /* ignore */ }
-  }
-  if (state.loopBar && state.loopIndex >= 0 && state.bars[state.loopIndex]) {
-    const bar = state.bars[state.loopIndex];
-    if (t >= bar.end - 0.02) seek(bar.start);
-  }
   renderClock(t);
   drawOverlay();
   if ($("follow").checked) {
@@ -726,21 +934,23 @@ function renderClock(t = currentTime()) {
   $("clock").textContent = fmt(t);
 }
 
+function updateAudioLoop() {
+  const bar = state.loopBar && state.bars[state.loopIndex];
+  StemAudio.setLoop(bar ? [bar.start, bar.end] : null);
+}
+
 function attachTransport() {
-  $("play").onclick = () => (state.playing ? stop() : play());
+  $("play").onclick = () => (state.playing || state.starting ? stop() : play());
   $("master").oninput = event => { state.master = Number(event.target.value); applyAudioState(); };
   $("reference").onchange = event => {
     state.referenceOn = event.target.checked;
-    if (state.referenceOn && state.mix) {
-      try { state.mix.currentTime = currentTime(); } catch (_) { /* ignore */ }
-      if (state.playing) state.mix.play().catch(() => {});
-    }
     applyAudioState();
     drawGrid();
   };
   $("loopBar").onchange = event => {
     state.loopBar = event.target.checked;
     state.loopIndex = state.loopBar ? currentBarIndex() : -1;
+    updateAudioLoop();
     drawOverlay();
   };
   applyAudioState();
@@ -757,17 +967,22 @@ function attachGridEvents() {
   wrap.onclick = event => {
     const rect = wrap.getBoundingClientRect();
     const x = event.clientX - rect.left;
+    if (state.loopBar) {
+      state.loopIndex = clamp(Math.floor(x / state.cellW), 0, state.bars.length - 1);
+      updateAudioLoop();
+    }
     seek(timeForX(x));
-    if (state.loopBar) state.loopIndex = clamp(Math.floor(x / state.cellW), 0, state.bars.length - 1);
     if (!state.playing) play();
     drawOverlay();
   };
 }
 
 function attachKeys() {
+  if (state.keysAttached) return;
+  state.keysAttached = true;
   document.addEventListener("keydown", event => {
     if (event.target.closest("input,textarea,select,button,a")) return;
-    if (event.code === "Space") { event.preventDefault(); state.playing ? stop() : play(); }
+    if (event.code === "Space") { event.preventDefault(); state.playing || state.starting ? stop() : play(); }
     else if (event.code === "ArrowLeft") { event.preventDefault(); seek(currentTime() - 5); }
     else if (event.code === "ArrowRight") { event.preventDefault(); seek(currentTime() + 5); }
   });

@@ -1,0 +1,374 @@
+{
+  "cases": [
+    {
+      "id": "real_timbre_01",
+      "kind": "acoustic_electric_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\real_timbre_01",
+      "source_rms": [
+        0.05249999836087227,
+        0.05249999463558197
+      ]
+    },
+    {
+      "id": "wood_only",
+      "kind": "negative_acoustic",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+        null
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\wood_only",
+      "source_rms": [
+        0.05249999836087227,
+        1.000000013351432e-10
+      ]
+    },
+    {
+      "id": "electric_only",
+      "kind": "negative_electric",
+      "sources": [
+        null,
+        "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\electric_only",
+      "source_rms": [
+        1.000000013351432e-10,
+        0.05249999463558197
+      ]
+    },
+    {
+      "id": "real_timbre_quiet_electric",
+      "kind": "acoustic_electric_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\egset12\\01.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\real_timbre_quiet_electric",
+      "source_rms": [
+        0.05249999836087227,
+        0.026249997317790985
+      ]
+    },
+    {
+      "id": "real_timbre_02",
+      "kind": "acoustic_electric_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\egset12\\02.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\real_timbre_02",
+      "source_rms": [
+        0.05250000208616257,
+        0.05249999463558197
+      ]
+    },
+    {
+      "id": "real_timbre_03",
+      "kind": "acoustic_electric_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\Valses Poeticos 6\\guitar2.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\egset12\\03.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\real_timbre_03",
+      "source_rms": [
+        0.05250000208616257,
+        0.05249999836087227
+      ]
+    },
+    {
+      "id": "duet_demo1",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo1\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo1\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo1",
+      "source_rms": [
+        0.06981313973665237,
+        0.03486719727516174
+      ]
+    },
+    {
+      "id": "duet_demo2",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo2\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo2\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo2",
+      "source_rms": [
+        0.054399315267801285,
+        0.03906210511922836
+      ]
+    },
+    {
+      "id": "duet_demo3",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo3\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo3\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo3",
+      "source_rms": [
+        0.04020632058382034,
+        0.02749495953321457
+      ]
+    },
+    {
+      "id": "duet_demo4",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo4\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo4\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo4",
+      "source_rms": [
+        0.05571812018752098,
+        0.03170858696103096
+      ]
+    },
+    {
+      "id": "duet_demo5",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo5\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo5\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo5",
+      "source_rms": [
+        0.08213025331497192,
+        0.04157455638051033
+      ]
+    },
+    {
+      "id": "duet_demo6",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo6\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo6\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo6",
+      "source_rms": [
+        0.05031173303723335,
+        0.06950448453426361
+      ]
+    },
+    {
+      "id": "duet_demo7",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo7\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo7\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo7",
+      "source_rms": [
+        0.09289482980966568,
+        0.038819991052150726
+      ]
+    },
+    {
+      "id": "duet_demo8",
+      "kind": "real_duet",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo8\\guitar1.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\GuitarDuets\\Real\\test\\demo8\\guitar2.wav"
+      ],
+      "duration": 16.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\duet_demo8",
+      "source_rms": [
+        0.05588039755821228,
+        0.049472879618406296
+      ]
+    },
+    {
+      "id": "role_00_Rock2-142-D",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Rock2-142-D_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Rock2-142-D_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_00_Rock2-142-D",
+      "source_rms": [
+        0.05250000208616257,
+        0.052500005811452866
+      ]
+    },
+    {
+      "id": "role_00_Jazz1-200-B",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Jazz1-200-B_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Jazz1-200-B_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_00_Jazz1-200-B",
+      "source_rms": [
+        0.04692179709672928,
+        0.04692179709672928
+      ]
+    },
+    {
+      "id": "role_03_Rock2-142-D",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Rock2-142-D_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Rock2-142-D_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_03_Rock2-142-D",
+      "source_rms": [
+        0.05249999836087227,
+        0.05249999836087227
+      ]
+    },
+    {
+      "id": "role_03_Jazz1-200-B",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Jazz1-200-B_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Jazz1-200-B_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_03_Jazz1-200-B",
+      "source_rms": [
+        0.05250000208616257,
+        0.05249999836087227
+      ]
+    },
+    {
+      "id": "role_05_Rock2-142-D",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock2-142-D_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock2-142-D_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_05_Rock2-142-D",
+      "source_rms": [
+        0.05249999836087227,
+        0.05250000208616257
+      ]
+    },
+    {
+      "id": "role_05_Jazz1-200-B",
+      "kind": "same_guitar_comp_solo_remix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz1-200-B_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz1-200-B_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\role_05_Jazz1-200-B",
+      "source_rms": [
+        0.04700024053454399,
+        0.04700023680925369
+      ]
+    },
+    {
+      "id": "final_05_Funk1-97-C_mix",
+      "kind": "final_role_mix",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Funk1-97-C_mix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Funk1-97-C_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Funk1-97-C_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_BN1-129-Eb_mix",
+      "kind": "final_role_mix",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_BN1-129-Eb_mix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_BN1-129-Eb_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_BN1-129-Eb_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Rock3-117-Bb_mix",
+      "kind": "final_role_mix",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Rock3-117-Bb_mix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Rock3-117-Bb_comp_only",
+      "kind": "final_role_comp_only",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Rock3-117-Bb_comp_only",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Rock3-117-Bb_solo_only",
+      "kind": "final_role_solo_only",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Rock3-117-Bb_solo_only",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock3-117-Bb_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Jazz3-150-C_mix",
+      "kind": "final_role_mix",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Jazz3-150-C_mix",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Jazz3-150-C_comp_only",
+      "kind": "final_role_comp_only",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Jazz3-150-C_comp_only",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    },
+    {
+      "id": "final_05_Jazz3-150-C_solo_only",
+      "kind": "final_role_solo_only",
+      "folder": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\benchmark\\final_05_Jazz3-150-C_solo_only",
+      "sources": [
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_comp_mic.wav",
+        "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz3-150-C_solo_mic.wav"
+      ],
+      "duration": 12.0,
+      "split": "player05 excluded from adaptation; Rock3/Jazz3 also unseen composition"
+    }
+  ],
+  "note": "Exact linear remixes. No per-output normalization. Classical training recordings may contain microphone bleed; real_duet uses the dedicated test folders. Guitar1/2 are source identities, not lead/rhythm labels.",
+  "final_test_note": "Final cases predeclared before evaluation of adapted model. Pilot cases repeatedly inspected; do not call them a blind test. No claim about upstream pretrained model data overlap."
+}

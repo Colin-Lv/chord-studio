@@ -1,0 +1,35 @@
+{
+  "case": "wood_only",
+  "kind": "negative_acoustic",
+  "model": "acoustic",
+  "seconds": 5.866874600003939,
+  "si_sdr": [
+    [
+      36.151026812322286,
+      null
+    ],
+    [
+      -8.356965708856965,
+      null
+    ]
+  ],
+  "snr": [
+    [
+      35.610770785359634,
+      null
+    ],
+    [
+      0.0504842921535643,
+      null
+    ]
+  ],
+  "mixture_baseline": [
+    234.649684342524,
+    null
+  ],
+  "energy_fraction": [
+    0.9884428977966309,
+    0.0002747406542766839
+  ],
+  "sum_error": 0.0
+}

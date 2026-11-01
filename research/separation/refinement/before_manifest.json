@@ -1,0 +1,22 @@
+[
+  {
+    "path": "app/web/server.py",
+    "sha256": "288e9f9d309b7c07e814a5f92b1ee4d5a7ce1bcd54bd7f3ce9aaad97f11e5f83"
+  },
+  {
+    "path": "app/web/jobs.py",
+    "sha256": "75fb3279dc970d3099c2f35fb58fe3790acd5780fab939720d784b5a3c79890c"
+  },
+  {
+    "path": "app/web/worker.py",
+    "sha256": "94f12765b516e9c6c3fda8eb3dc9c358eacdb9220fcc9f29d6b134faae5f6c09"
+  },
+  {
+    "path": "frontend/stems.js",
+    "sha256": "af6e40af82ff1d70844f82bdc112845359e5fb378216469afcd9920724d673fe"
+  },
+  {
+    "path": "frontend/stems.html",
+    "sha256": "05e79b1ef5c3403fe7192a910456034040c4fbf1c157d0750883b93514c6c951"
+  }
+]

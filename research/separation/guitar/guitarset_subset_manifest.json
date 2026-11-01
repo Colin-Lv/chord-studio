@@ -1,0 +1,122 @@
+[
+  {
+    "name": "03_Rock2-142-D_comp_mic.wav",
+    "size": 2385114,
+    "compressed_size": 1783585,
+    "offset": 9647235,
+    "crc": 1639848757,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Rock2-142-D_comp_mic.wav",
+    "sha256": "0e5f71ad66419d6ba9bc3caafd4e7c2aab0573e40d6136459344c286e9abe80e",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "00_Rock2-142-D_solo_mic.wav",
+    "size": 2385114,
+    "compressed_size": 1537888,
+    "offset": 16679763,
+    "crc": 1042238781,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Rock2-142-D_solo_mic.wav",
+    "sha256": "a85fbf8dec3090f8521b5d2878ee9e96229b11e2516c9adf9e188eddea810667",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "00_Jazz1-200-B_solo_mic.wav",
+    "size": 1270124,
+    "compressed_size": 677550,
+    "offset": 27750328,
+    "crc": 3423661171,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Jazz1-200-B_solo_mic.wav",
+    "sha256": "d8df477ac8d17da5df76bbfafe94449b9f1c398e120db99d5765deeab59fbfb6",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "03_Jazz1-200-B_comp_mic.wav",
+    "size": 1270124,
+    "compressed_size": 672055,
+    "offset": 35235053,
+    "crc": 3122437462,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Jazz1-200-B_comp_mic.wav",
+    "sha256": "2bcc479599713e00c934cdfd382e7f217438369cbf36ff6125ef0049a6761373",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Rock2-142-D_solo_mic.wav",
+    "size": 2385114,
+    "compressed_size": 1668252,
+    "offset": 236907168,
+    "crc": 3418320927,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock2-142-D_solo_mic.wav",
+    "sha256": "2869d66963c0661aeceda104666680274e1c52ffdfa6c6990187b296d9effa99",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Jazz1-200-B_solo_mic.wav",
+    "size": 1270124,
+    "compressed_size": 973890,
+    "offset": 276657189,
+    "crc": 988704755,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz1-200-B_solo_mic.wav",
+    "sha256": "ba093583329bf60c8fc1ffb79c2be919b8a58f4ac8831b7bfe3e276c2d62ae67",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "03_Rock2-142-D_solo_mic.wav",
+    "size": 2385114,
+    "compressed_size": 1693787,
+    "offset": 444192107,
+    "crc": 2044211326,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Rock2-142-D_solo_mic.wav",
+    "sha256": "c3a26f324d5e5f1c466fd4644d38c44d567627a01a02f9fe15e8b1c17ce6405d",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "00_Rock2-142-D_comp_mic.wav",
+    "size": 2385114,
+    "compressed_size": 2057982,
+    "offset": 448412420,
+    "crc": 1031960424,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Rock2-142-D_comp_mic.wav",
+    "sha256": "1f15351a6df0e47aa7b7aa82816317ca0921fcecc75189ec8f5d0ffb1606b159",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "00_Jazz1-200-B_comp_mic.wav",
+    "size": 1270124,
+    "compressed_size": 881124,
+    "offset": 463465626,
+    "crc": 1488940110,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\00_Jazz1-200-B_comp_mic.wav",
+    "sha256": "eb4be0b56d1100fc0b168a11c2f4dc6c7e5090a11847b3967e8b21ac2cd05252",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "03_Jazz1-200-B_solo_mic.wav",
+    "size": 1270124,
+    "compressed_size": 850017,
+    "offset": 469944428,
+    "crc": 4281316838,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\03_Jazz1-200-B_solo_mic.wav",
+    "sha256": "8b217d43c99a8fbb000b8296848b03038d95df5bf8a4140c7f99eb8001c250c3",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Rock2-142-D_comp_mic.wav",
+    "size": 2385114,
+    "compressed_size": 1928135,
+    "offset": 541477388,
+    "crc": 3256720908,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Rock2-142-D_comp_mic.wav",
+    "sha256": "5f5b02aa23a36c31f59e56ccec16212d60549d15d60f7f0f61f516c02ee0fa7c",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  },
+  {
+    "name": "05_Jazz1-200-B_comp_mic.wav",
+    "size": 1270124,
+    "compressed_size": 941152,
+    "offset": 577865885,
+    "crc": 1604217799,
+    "path": "D:\\ChordStudio\\data\\research\\guitar\\guitarset\\audio\\05_Jazz1-200-B_comp_mic.wav",
+    "sha256": "00cdf3460ef31be49312fb7f3c520045a85b83b6b1b70b9efd9a986431490281",
+    "url": "https://zenodo.org/records/3371780/files/audio_mono-mic.zip?download=1"
+  }
+]

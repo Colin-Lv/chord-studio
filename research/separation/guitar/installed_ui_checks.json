@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "both_real_results_visible_with_correct_parent",
+    "real_acoustic_audio_decodes_plays_and_solos",
+    "role_names_and_downloaded_wav_are_actual_output",
+    "role_selection_survives_reload",
+    "cross_parent_navigation_returns_to_saved_real_result",
+    "collapse_and_expand_survive_reload"
+  ],
+  "page_errors": []
+}

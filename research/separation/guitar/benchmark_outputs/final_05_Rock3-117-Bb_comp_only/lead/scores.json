@@ -1,0 +1,35 @@
+{
+  "case": "final_05_Rock3-117-Bb_comp_only",
+  "kind": "final_role_comp_only",
+  "model": "lead",
+  "seconds": 1.7355132000084268,
+  "si_sdr": [
+    [
+      -9.675822259850591,
+      null
+    ],
+    [
+      16.5490222344603,
+      null
+    ]
+  ],
+  "snr": [
+    [
+      0.31908151501905624,
+      null
+    ],
+    [
+      16.518773062042786,
+      null
+    ]
+  ],
+  "mixture_baseline": [
+    234.6496844019012,
+    null
+  ],
+  "energy_fraction": [
+    0.022290648892521858,
+    0.929162859916687
+  ],
+  "sum_error": 0.0
+}

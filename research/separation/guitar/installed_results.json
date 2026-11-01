@@ -1,0 +1,96 @@
+[
+  {
+    "mode": "timbre",
+    "job_id": "7aa91b049dd64c9dbaa6612b70f82ade",
+    "generation": "c671f6d78a87449882853ad31b190412",
+    "seconds": 124.40460039999743,
+    "duration": 238.1226530612245,
+    "samples": 10501209,
+    "reconstruction_max_error": 5.960464477539063e-08,
+    "tracks": [
+      {
+        "id": "acoustic_guitar",
+        "file": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\guitar_parts\\c671f6d78a87449882853ad31b190412\\acoustic_guitar.wav",
+        "rms_db": -18.4,
+        "peak": 0.6054325699806213
+      },
+      {
+        "id": "electric_guitar",
+        "file": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\guitar_parts\\c671f6d78a87449882853ad31b190412\\electric_guitar.wav",
+        "rms_db": -62.5,
+        "peak": 0.07886746525764465
+      },
+      {
+        "id": "guitar_residual",
+        "file": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\guitar_parts\\c671f6d78a87449882853ad31b190412\\guitar_residual.wav",
+        "rms_db": -26.0,
+        "peak": 0.5856368541717529
+      }
+    ],
+    "inference": {
+      "mode": "timbre",
+      "source_sha256": "aad77f64a0ff998d4466728cf2c6ee8c2fc443bf6dfdebd831cd723e5e6f26c2",
+      "model_files": {
+        "bs_mega_53stem_acoustic-guitar_mvsep.ckpt": "fa386b2e7b1ea4f12b9b5c557444c0dc78648ef4ee299de2759d86457e182b3e",
+        "bs_mega_53stem_acoustic-guitar_mvsep_config.yaml": "040148363929b68fd4a4e323358a245938568692ca201fc2f703b6449dc8b569",
+        "bs_mega_53stem_electric-guitar_mvsep.ckpt": "cd506bfce9474f91a31001967f2c4935ce4e67f643da3df20d04058da927c553",
+        "bs_mega_53stem_electric-guitar_mvsep_config.yaml": "e89d0646a99f08e99e56d71de22b5accee2628fd11a91928ad556fc7b8617ecb"
+      },
+      "runner_sha256": "d1608024fd5900c102cab1a94968e8a1c3a0974418d0407c126816d5a3f51d9a",
+      "engine_sha256": "c49eab71d9a2c666f5d47a13eb8458cb1664b2f7ea5d1ae0fc1c4cad025c40eb",
+      "samples": 10501209,
+      "sample_rate": 44100,
+      "channels": 2,
+      "device": "cuda",
+      "torch": "2.14.1+cu126",
+      "seconds": 113.57252070000686,
+      "overlap_swaps": 0,
+      "peak_vram_mb": 777.5732421875,
+      "sum_max_abs_error": 5.960464477539063e-08,
+      "notes": "Timbre outputs are independent estimates plus algebraic residual. Role outputs estimate melody and accompaniment, not verified performer identities."
+    }
+  },
+  {
+    "mode": "duet",
+    "job_id": "15898867a16a4d16bf7bf7e72d8fdff5",
+    "generation": "327110b2ba4942e0be6b5d93e0386f45",
+    "seconds": 44.034687300008954,
+    "duration": 238.1226530612245,
+    "samples": 10501209,
+    "reconstruction_max_error": 2.9802322387695312e-08,
+    "tracks": [
+      {
+        "id": "guitar_one",
+        "file": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\guitar_parts\\327110b2ba4942e0be6b5d93e0386f45\\guitar_one.wav",
+        "rms_db": -22.6,
+        "peak": 0.5567383766174316
+      },
+      {
+        "id": "guitar_two",
+        "file": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\guitar_parts\\327110b2ba4942e0be6b5d93e0386f45\\guitar_two.wav",
+        "rms_db": -20.8,
+        "peak": 0.5663921236991882
+      }
+    ],
+    "inference": {
+      "mode": "duet",
+      "source_sha256": "aad77f64a0ff998d4466728cf2c6ee8c2fc443bf6dfdebd831cd723e5e6f26c2",
+      "model_files": {
+        "guitar_role_v1.ckpt": "1b332fc280365c076d3b97d5e77a20626515320653e64116fdb0fb27e5f2b9b9",
+        "mbr_lead_rhythm_guitar_listra92_config.yaml": "a26685bc9ab10aab4dc153b74ec3559f1b4bd2251d129a13b6b22fe3a27d382d"
+      },
+      "runner_sha256": "d1608024fd5900c102cab1a94968e8a1c3a0974418d0407c126816d5a3f51d9a",
+      "engine_sha256": "c49eab71d9a2c666f5d47a13eb8458cb1664b2f7ea5d1ae0fc1c4cad025c40eb",
+      "samples": 10501209,
+      "sample_rate": 44100,
+      "channels": 2,
+      "device": "cuda",
+      "torch": "2.14.1+cu126",
+      "seconds": 35.085577599995304,
+      "overlap_swaps": 0,
+      "peak_vram_mb": 577.78369140625,
+      "sum_max_abs_error": 2.9802322387695312e-08,
+      "notes": "Timbre outputs are independent estimates plus algebraic residual. Role outputs estimate melody and accompaniment, not verified performer identities."
+    }
+  }
+]

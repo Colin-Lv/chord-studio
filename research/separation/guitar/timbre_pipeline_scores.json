@@ -1,0 +1,86 @@
+[
+  {
+    "case": "real_timbre_01",
+    "kind": "acoustic_electric_remix",
+    "acoustic_si_sdr": 9.3435928662993,
+    "electric_si_sdr": 8.803161978725065,
+    "input_si_sdr": [
+      -0.039078023054572905,
+      -0.03908102052790057
+    ],
+    "acoustic_energy_fraction": 0.4196639955043793,
+    "electric_energy_fraction": 0.4620872139930725,
+    "residual_energy_fraction": 0.0043021137826144695,
+    "reconstruction_error": 0.0
+  },
+  {
+    "case": "wood_only",
+    "kind": "negative_acoustic",
+    "acoustic_si_sdr": 36.151026812322286,
+    "electric_si_sdr": null,
+    "input_si_sdr": [
+      234.649684342524,
+      null
+    ],
+    "acoustic_energy_fraction": 0.9884428977966309,
+    "electric_energy_fraction": 6.1622527027793694e-06,
+    "residual_energy_fraction": 0.0002556667022872716,
+    "reconstruction_error": 0.0
+  },
+  {
+    "case": "electric_only",
+    "kind": "negative_electric",
+    "acoustic_si_sdr": null,
+    "electric_si_sdr": 9.056136734593684,
+    "input_si_sdr": [
+      null,
+      234.64968285156056
+    ],
+    "acoustic_energy_fraction": 0.0003111963451374322,
+    "electric_energy_fraction": 0.797119140625,
+    "residual_energy_fraction": 0.11194614320993423,
+    "reconstruction_error": 0.0
+  },
+  {
+    "case": "real_timbre_quiet_electric",
+    "kind": "acoustic_electric_remix",
+    "acoustic_si_sdr": 12.948877665956356,
+    "electric_si_sdr": 6.089061290888969,
+    "input_si_sdr": [
+      6.001127679766297,
+      -6.0990257923362705
+    ],
+    "acoustic_energy_fraction": 0.734696626663208,
+    "electric_energy_fraction": 0.16313908994197845,
+    "residual_energy_fraction": 0.0019536823965609074,
+    "reconstruction_error": 0.0
+  },
+  {
+    "case": "real_timbre_02",
+    "kind": "acoustic_electric_remix",
+    "acoustic_si_sdr": 12.39125155280621,
+    "electric_si_sdr": 12.886650382146703,
+    "input_si_sdr": [
+      0.02885202333949579,
+      0.028846094332988723
+    ],
+    "acoustic_energy_fraction": 0.48217251896858215,
+    "electric_energy_fraction": 0.4525722861289978,
+    "residual_energy_fraction": 0.0035435096360743046,
+    "reconstruction_error": 0.0
+  },
+  {
+    "case": "real_timbre_03",
+    "kind": "acoustic_electric_remix",
+    "acoustic_si_sdr": 10.923752158996361,
+    "electric_si_sdr": 11.724744533787009,
+    "input_si_sdr": [
+      -0.12613917509981984,
+      -0.126141043481762
+    ],
+    "acoustic_energy_fraction": 0.44041529297828674,
+    "electric_energy_fraction": 0.44175881147384644,
+    "residual_energy_fraction": 0.002067431341856718,
+    "reconstruction_error": 0.0
+  }
+]

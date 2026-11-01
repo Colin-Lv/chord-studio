@@ -1,0 +1,11 @@
+{
+  "source": "research\\separation\\refinement\\controls\\electric.wav",
+  "model": "lead",
+  "seconds": 2.3939428000012413,
+  "chunk": 132300,
+  "device": "cuda",
+  "peak_vram_mb": 577.78369140625,
+  "input_sha256": "4ca40ed4ed0359e6b75d1cef6b99a7e1a0196a1573895f9d0cec5d6219064528",
+  "strict_load": true,
+  "relative_energy_db": 0.004265465307980776
+}

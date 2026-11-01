@@ -32,6 +32,11 @@ class SeparateRequest(BaseModel):
     model: str = "htdemucs"
 
 
+class GuitarPartsRequest(SeparateRequest):
+    model: str = "bs_roformer_sw"
+    mode: Literal["timbre", "duet"] = "timbre"
+
+
 class LinkRequest(AnalyzeRequest):
     url: str = Field(max_length=2000)
 
@@ -208,25 +213,94 @@ def create_app(store_root=None, manager_factory=Jobs):
     def drums_parts(project_id: str, body: SeparateRequest | None = None):
         from .stems_worker import MODELS
         body = body or SeparateRequest()
-        model = body.model if body.model in MODELS else "htdemucs"
+        if body.model not in MODELS:
+            raise HTTPException(400, "未知的分轨模型")
+        model = body.model
         return application.state.jobs.submit(project_id, "drums_parts", key_mode="madmom",
                                              force=body.force, model=model)
 
     @application.get("/api/projects/{project_id}/stems/drums-parts")
     def drums_parts_manifest(project_id: str, model: str | None = None):
         from .drums_worker import parts_manifest
-        from .stems_worker import available_models
+        from .stems_worker import MODELS, available_models
         project = store.project(project_id)
         sha = _stems_sha(project_id, project)
         ready = [item["id"] for item in available_models(sha) if item["ready"]]
         model = model or ("htdemucs" if "htdemucs" in ready else (ready[0] if ready else "htdemucs"))
+        if model not in MODELS:
+            raise HTTPException(404, "未知的分轨模型")
         path = parts_manifest(sha, model)
         if not path.is_file():
             raise HTTPException(404, "尚未细分鼓组")
         manifest = read_json(path)
-        manifest["urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['file']}"
+        manifest["urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['file']}?model={model}"
                             for track in manifest.get("tracks", [])}
+        manifest["wav_urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['wav']}?model={model}"
+                                for track in manifest.get("tracks", [])}
         return manifest
+
+    @application.post("/api/projects/{project_id}/vocal-parts", status_code=202)
+    def vocal_parts(project_id: str, body: SeparateRequest | None = None):
+        from .stems_worker import MODELS
+        body = body or SeparateRequest()
+        if body.model not in MODELS:
+            raise HTTPException(400, "未知的分轨模型")
+        return application.state.jobs.submit(project_id, "vocal_parts", key_mode="madmom",
+                                             force=body.force, model=body.model)
+
+    @application.get("/api/projects/{project_id}/stems/vocal-parts")
+    def vocal_parts_manifest(project_id: str, model: str = "htdemucs"):
+        from .vocal_parts_worker import valid_manifest
+        project = store.project(project_id)
+        manifest = valid_manifest(_stems_sha(project_id, project), model)
+        if not manifest:
+            raise HTTPException(404, "尚未细分人声，或源人声轨已更新")
+        for key, field in (("urls", "file"), ("wav_urls", "wav")):
+            manifest[key] = {t["id"]: f"/api/projects/{project_id}/stems/{t[field]}?model={model}"
+                             for t in manifest["tracks"]}
+        return manifest
+
+    @application.post("/api/projects/{project_id}/guitar-parts", status_code=202)
+    def guitar_parts(project_id: str, body: GuitarPartsRequest):
+        from .guitar_parts_worker import fingerprint
+        from .stems_worker import MODELS, stems_dir
+        if body.model not in MODELS:
+            raise HTTPException(400, "未知的分轨模型")
+        sha = _stems_sha(project_id, store.project(project_id))
+        if not (stems_dir(sha, body.model)/"wav/guitar.wav").is_file():
+            raise HTTPException(409, "请先生成并切换到六轨精细版，再细分其中的吉他轨")
+        if not fingerprint(body.mode):
+            raise HTTPException(503, "此吉他细分模型尚未准备完整")
+        return application.state.jobs.submit(project_id, "guitar_parts", key_mode="madmom",
+            force=body.force, model=body.model, guitar_mode=body.mode)
+
+    def guitar_urls(project_id, manifest):
+        model = manifest['model']
+        for key,field in [('urls','file'),('wav_urls','wav')]:
+            manifest[key] = {t['id']:f"/api/projects/{project_id}/stems/{t[field]}?model={model}" for t in manifest['tracks']}
+        return manifest
+
+    @application.get("/api/projects/{project_id}/stems/guitar-parts")
+    def guitar_parts_manifest(project_id: str, model: str = "bs_roformer_sw", mode: Literal['timbre','duet'] = 'timbre'):
+        from .guitar_parts_worker import valid_manifest
+        manifest = valid_manifest(_stems_sha(project_id,store.project(project_id)),model,mode)
+        if not manifest:
+            raise HTTPException(404, "尚未细分吉他，或源吉他及模型已更新")
+        return guitar_urls(project_id,manifest)
+
+    @application.get("/api/projects/{project_id}/stems/guitar-parts-catalog")
+    def guitar_parts_catalog(project_id: str):
+        from .guitar_parts_worker import RECIPES,valid_manifest,fingerprint
+        from .stems_worker import available_models,stems_dir
+        project = store.project(project_id);sha = _stems_sha(project_id,project)
+        results = []
+        for model in available_models(sha):
+            if not model['ready'] or not (stems_dir(sha,model['id'])/'wav/guitar.wav').is_file():continue
+            for mode in RECIPES:
+                manifest = valid_manifest(sha,model['id'],mode)
+                if manifest:results.append(guitar_urls(project_id,manifest))
+        return dict(results=results,active_job=project.get('active_job'),
+            modes=[dict(id=mode,label=row['label'],note=row['note'],ready=bool(fingerprint(mode))) for mode,row in RECIPES.items()])
 
     def _stems_sha(project_id: str, project: dict) -> str:
         audio = store.project_dir(project_id) / project["audio"]
@@ -263,14 +337,16 @@ def create_app(store_root=None, manager_factory=Jobs):
 
     @application.get("/api/projects/{project_id}/stems/{name:path}")
     def stem_audio(project_id: str, name: str, model: str | None = None):
-        from .stems_worker import MODEL_NAME, available_models, stems_dir
-        if not re.fullmatch(r"(drums_parts/)?(wav/)?[a-z_]+\.(mp3|wav)", name):
+        from .stems_worker import MODEL_NAME, MODELS, available_models, stems_dir
+        if not re.fullmatch(r"(?:(?:drums_parts/)?(?:wav/)?|(?:vocal_parts|guitar_parts)/[a-f0-9]{32}/)[a-z_]+\.(mp3|wav)", name):
             raise HTTPException(404, "未知文件")
         project = store.project(project_id)
         sha = _stems_sha(project_id, project)
         if model is None:
             ready = [item["id"] for item in available_models(sha) if item["ready"]]
             model = "htdemucs" if "htdemucs" in ready else (ready[0] if ready else MODEL_NAME)
+        if model not in MODELS:
+            raise HTTPException(404, "未知的分轨模型")
         path = stems_dir(sha, model) / name
         if name.startswith("drums_parts/"):
             path = stems_dir(sha, model) / name

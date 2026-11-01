@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "existing_result_auto_expands_with_source",
+    "saved_result_accessible_from_other_model",
+    "explicit_collapse_preserved_across_switch_and_reload",
+    "job_survives_switch_and_reload_completion_keeps_source_identity",
+    "completed_result_and_model_persist_on_reload",
+    "server_active_job_resume_and_failure_keeps_saved_results",
+    "late_model_response_cannot_overwrite_new_selection",
+    "read_failure_distinguished_from_missing_result",
+    "solo_and_download_still_use_selected_source",
+    "real_xuni_cached_children_display_and_wav_download"
+  ],
+  "errors": [],
+  "submitted_mock_jobs": [
+    {
+      "model": "htdemucs_ft"
+    }
+  ]
+}

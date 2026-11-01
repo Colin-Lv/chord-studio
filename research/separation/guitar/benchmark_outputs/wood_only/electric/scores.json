@@ -1,0 +1,35 @@
+{
+  "case": "wood_only",
+  "kind": "negative_acoustic",
+  "model": "electric",
+  "seconds": 4.727615499999956,
+  "si_sdr": [
+    [
+      4.999837589485469,
+      null
+    ],
+    [
+      58.276979067539294,
+      null
+    ]
+  ],
+  "snr": [
+    [
+      0.01880778723756343,
+      null
+    ],
+    [
+      52.10260515679831,
+      null
+    ]
+  ],
+  "mixture_baseline": [
+    234.649684342524,
+    null
+  ],
+  "energy_fraction": [
+    6.1622527027793694e-06,
+    0.9956787824630737
+  ],
+  "sum_error": 0.0
+}

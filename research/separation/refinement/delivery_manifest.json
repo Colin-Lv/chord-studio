@@ -1,0 +1,454 @@
+{
+  "date": "2026-11-01",
+  "status": "vocal_refinement_installed_restart_required_guitar_experimental_failed_controls",
+  "tests": {
+    "targeted_passed": 20,
+    "browser_checks": 7,
+    "existing_web_failures": 8,
+    "baseline_same_failures": true
+  },
+  "baseline_tests": "Unmodified installed backend: 35 passed, 8 failed; modified plus initial 3 new tests: 38 passed, same 8 failed. Two further queue tests passed in final targeted 20.",
+  "deployment": "deployment.json",
+  "banquet_weight_sha256": "657295888781e62ef50593002720d2edb3858b9e5bbfabf0c54f715a0da4b9e2",
+  "banquet_commit": "79ed5bb75e5c3a40cd319d9d990cee913fc65c26",
+  "files": [
+    {
+      "path": "banquet.source.txt",
+      "sha256": "e60a1b2019ac297883288de4e7c9d8612b2dd5915e39eebb9ec9a79a850ac170",
+      "bytes": 3825
+    },
+    {
+      "path": "banquet_weights_metadata.json",
+      "sha256": "ba35dda4e60eab271a29690bb3e8bba64b8e6dd3cb0299bd85d6b03c13bee44a",
+      "bytes": 8184
+    },
+    {
+      "path": "before_manifest.json",
+      "sha256": "22a1774f093e2b116d2ceb4d8cbe8a21fc923f44a23ff1893908db95ebd2925b",
+      "bytes": 638
+    },
+    {
+      "path": "build_controls.py",
+      "sha256": "376aa2c4ebe4f519a04a1688912f4f62aacd45be72a6d379a535c39c79b594ab",
+      "bytes": 2604
+    },
+    {
+      "path": "check_ui.py",
+      "sha256": "162729afd2850a511f6b8e650202aae1a7e85558278f140588563f0f4d489af6",
+      "bytes": 2331
+    },
+    {
+      "path": "control_scores.json",
+      "sha256": "b7d2aebea4cf5898a51d26dd362a6a6be77cc427954bb0fc98d9d48de39698ad",
+      "bytes": 1542
+    },
+    {
+      "path": "controls\\acoustic.wav",
+      "sha256": "3952a380ad243f8a919fc590570d12b62011717912c904240eeeb57f15c1096d",
+      "bytes": 4939288
+    },
+    {
+      "path": "controls\\electric.wav",
+      "sha256": "4ca40ed4ed0359e6b75d1cef6b99a7e1a0196a1573895f9d0cec5d6219064528",
+      "bytes": 4939288
+    },
+    {
+      "path": "controls\\guitar_mix.wav",
+      "sha256": "0872c4d826661ae2b04a9d036366fecc7ce72f72a5a051b157bf6ab03bb282e3",
+      "bytes": 4939288
+    },
+    {
+      "path": "controls\\protocol.json",
+      "sha256": "e444e7876e7a07a747fe5b4809f2128d0610422cc42af0e017f6d4b30508d91a",
+      "bytes": 1276
+    },
+    {
+      "path": "controls\\query_acoustic.wav",
+      "sha256": "f8137ece67e6e409131505a5c4bd0e37cd3d896c04cecf54b7fcb789427c2f87",
+      "bytes": 4939288
+    },
+    {
+      "path": "controls\\query_electric.wav",
+      "sha256": "256979029820a881bca98996dbdb764d7a387c779ecbb7e2202437861262459f",
+      "bytes": 4939288
+    },
+    {
+      "path": "controls\\voice_harmony_truth.wav",
+      "sha256": "0cf20c45872a71a000217a2dabef68c981d76c9794992c09322f50334a236944",
+      "bytes": 4233688
+    },
+    {
+      "path": "controls\\voice_lead_truth.wav",
+      "sha256": "022435dbedf28ff82552e9b1f00bb78e01259fc45ddff5baae69286e3d78b4cc",
+      "bytes": 4233688
+    },
+    {
+      "path": "controls\\voice_mix.wav",
+      "sha256": "fcd09db808c9f5d58a953b383846560b6706d786627f4c6861e6cd5aa3af0d1a",
+      "bytes": 4233688
+    },
+    {
+      "path": "controls\\voice_solo.wav",
+      "sha256": "022435dbedf28ff82552e9b1f00bb78e01259fc45ddff5baae69286e3d78b4cc",
+      "bytes": 4233688
+    },
+    {
+      "path": "delivered\\app\\web\\jobs.py",
+      "sha256": "cbc400f11b96641508f7b45cb3eb6d4882013414c23d9064b8b333c88795ea3b",
+      "bytes": 6791
+    },
+    {
+      "path": "delivered\\app\\web\\server.py",
+      "sha256": "77521526a1ca5e745dac037612d29dd18107c57788ca1e3cc5ec3c3ff64daed9",
+      "bytes": 23907
+    },
+    {
+      "path": "delivered\\app\\web\\vocal_parts_runner.py",
+      "sha256": "e3a369f3935e238d6de6a93769e62da90a1f362bfad97dbb9758de3fbfb8ec3f",
+      "bytes": 3434
+    },
+    {
+      "path": "delivered\\app\\web\\vocal_parts_worker.py",
+      "sha256": "232ad81340ed038756c14b750251ad3bf5c91abba257976bfc02ccc84f994d47",
+      "bytes": 5022
+    },
+    {
+      "path": "delivered\\app\\web\\worker.py",
+      "sha256": "3853677503d970deedadfd8169e0d92285437d796059e7ab578813a61699eb2e",
+      "bytes": 14859
+    },
+    {
+      "path": "delivered\\frontend\\stems.html",
+      "sha256": "fb8b0e10fb88ff57a7b93c4f3f7b1bdd85ef22aa38b8464a470e38c78c1ad067",
+      "bytes": 4736
+    },
+    {
+      "path": "delivered\\frontend\\stems.js",
+      "sha256": "15fc4fdce2e8dc30e138ad09f5f8865cacfd4b7a1e03bfba9aef3d9a87147625",
+      "bytes": 33156
+    },
+    {
+      "path": "delivered\\tests\\test_vocal_parts.py",
+      "sha256": "bda780794e3b5b9c3fc0df74f78227af1c512eee47d9a3c6517c2a5126641a7c",
+      "bytes": 5805
+    },
+    {
+      "path": "deployment.json",
+      "sha256": "8b288e6278cd4eab2abe405fd7e31eb4045d461d0708f8318439f2fc5c82f987",
+      "bytes": 2067
+    },
+    {
+      "path": "guitar-absent\\inference.json",
+      "sha256": "cab62b614d21da22297d2a2603f09d86700e71e747c24f2f5da5e35c9c9e578f",
+      "bytes": 735
+    },
+    {
+      "path": "guitar-absent\\residual.wav",
+      "sha256": "ece808915a6910fff2bd71a6baff35ed9b2c8f426c5e0fc787c1b9ac5a3fa3ae",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-absent\\target.wav",
+      "sha256": "b4db8a0745d6608cbed5b6b068aa5429573f6d6082bf94001933a34a5760f063",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-absent.log",
+      "sha256": "171a6952470440b4cffa719a2d3521b16469f6816c2de0eb9a83a9b21ac7e929",
+      "bytes": 11472
+    },
+    {
+      "path": "guitar-acoustic\\inference.json",
+      "sha256": "94e4be0779f67170be6c390d7dbba76d3cbbee08f14553e25cea3ce01279433d",
+      "bytes": 735
+    },
+    {
+      "path": "guitar-acoustic\\residual.wav",
+      "sha256": "a2967429ea164f2287f585f0200166c4d3ba6813882dd59bb9079d25bb97ed93",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-acoustic\\target.wav",
+      "sha256": "0effc08644e50a12ad5cabe963038c586ec10ae779a8e72fca29137795ce03a6",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-acoustic-official\\inference.json",
+      "sha256": "2eaf45c893d019f10fb12cb1d652d27bfa7431f3e62f2116503a1cd9d1ef9dfe",
+      "bytes": 669
+    },
+    {
+      "path": "guitar-acoustic-official\\residual.wav",
+      "sha256": "014a229f04c05f2498855764a01d95ef9c5ac6935777e92603d99224d120edcf",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-acoustic-official\\target.wav",
+      "sha256": "955ad8adf062c909798e917bc9a05b1d366cc221b588895fa58f089558ee729a",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-acoustic-official.log",
+      "sha256": "0961b7faed79269734fa6044cc17cb5badb16b3a2d9b1848fe7bb243fd123726",
+      "bytes": 21061
+    },
+    {
+      "path": "guitar-acoustic.log",
+      "sha256": "3f7aa338663a318fde11eb76bb3307b7685cbca43d64e3ebb7a949f8ff93c135",
+      "bytes": 11472
+    },
+    {
+      "path": "guitar-electric\\inference.json",
+      "sha256": "7711d8879b9ddbaa6d91fe103d7b3b37b855746459c4a5f52cd9e7d09d78f604",
+      "bytes": 734
+    },
+    {
+      "path": "guitar-electric\\residual.wav",
+      "sha256": "476605c1337014f11845d084daf95c4c948824d24e3d303cdaa6798ca412b766",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-electric\\target.wav",
+      "sha256": "750d78a6fb460cf85b524e88170b5ae48a868fc5b72ff12c02aa5b981ec5c8ba",
+      "bytes": 4939288
+    },
+    {
+      "path": "guitar-electric.log",
+      "sha256": "5eea8eb257b3d4a5a7dcf323cd555e4d66b054c73ef13640ad1ee5d1c7595ee3",
+      "bytes": 11472
+    },
+    {
+      "path": "guitar_diagnostics.json",
+      "sha256": "354175b70a4849c418c55921b37de4f805504f3f6075728c6cc284dca077c6ba",
+      "bytes": 1010
+    },
+    {
+      "path": "installed_before\\app\\web\\jobs.py",
+      "sha256": "75fb3279dc970d3099c2f35fb58fe3790acd5780fab939720d784b5a3c79890c",
+      "bytes": 6579
+    },
+    {
+      "path": "installed_before\\app\\web\\server.py",
+      "sha256": "288e9f9d309b7c07e814a5f92b1ee4d5a7ce1bcd54bd7f3ce9aaad97f11e5f83",
+      "bytes": 22188
+    },
+    {
+      "path": "installed_before\\app\\web\\worker.py",
+      "sha256": "94f12765b516e9c6c3fda8eb3dc9c358eacdb9220fcc9f29d6b134faae5f6c09",
+      "bytes": 14692
+    },
+    {
+      "path": "installed_before\\frontend\\stems.html",
+      "sha256": "05e79b1ef5c3403fe7192a910456034040c4fbf1c157d0750883b93514c6c951",
+      "bytes": 4518
+    },
+    {
+      "path": "installed_before\\frontend\\stems.js",
+      "sha256": "af6e40af82ff1d70844f82bdc112845359e5fb378216469afcd9920724d673fe",
+      "bytes": 30774
+    },
+    {
+      "path": "karaoke-pilot\\vocal_excerpt_(Instrumental)_mel_band_roformer_karaoke_aufr33_viperx_sdr_10.wav",
+      "sha256": "83719cfe6ce67c970114ab58359333a4617001de56673df6da22485fbff07d98",
+      "bytes": 10584102
+    },
+    {
+      "path": "karaoke-pilot\\vocal_excerpt_(Vocals)_mel_band_roformer_karaoke_aufr33_viperx_sdr_10.wav",
+      "sha256": "9c34165295d704cd0148210b3c1b941a85d2524a2642f9fa65e516b9fa5b497d",
+      "bytes": 10584102
+    },
+    {
+      "path": "models.source.txt",
+      "sha256": "d1a47e3a180f3f3a3ec92b91eafc693fd20bf8127f4ca7c2bc12a747f46b2b33",
+      "bytes": 16433
+    },
+    {
+      "path": "mus3d.source.txt",
+      "sha256": "ed589bcc3559b6b679972f451c22789b7f98df234dc8dcd3c3d9b07569dbbffc",
+      "bytes": 10413
+    },
+    {
+      "path": "pretrained.source.txt",
+      "sha256": "4f1e81310f8140713aec19ca107961a101aad7bffca6107f389857aeaf0f8b75",
+      "bytes": 23205
+    },
+    {
+      "path": "query_xuni_guitar.wav",
+      "sha256": "f9d2961e05bbe94f10febedc9685b6997c8ca72e3ede7464b140d9cf93471bae",
+      "bytes": 3528088
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "7b6f77b332eb1f3e654211252e3e8270d065d5daf7141ddf1a24f62541a89b12",
+      "bytes": 8978
+    },
+    {
+      "path": "RESEARCH.md",
+      "sha256": "ca73dd20c577d384ef18021c7fbf46e3acee1a686ad7d71068681f0a211247a6",
+      "bytes": 7599
+    },
+    {
+      "path": "run_banquet.py",
+      "sha256": "fc7b7890814e4940ba30459b83024cc5ef5f6ebc3288ad55997892fc60a9feb9",
+      "bytes": 6090
+    },
+    {
+      "path": "run_banquet_fast_snapshot.py",
+      "sha256": "88d39f47c01736223965719364ff32ba11758de663a545047df625829efaa4eb",
+      "bytes": 4343
+    },
+    {
+      "path": "score_controls.py",
+      "sha256": "be845fb9fa0524c03f89266bb01c95beff966bfd00a497ad8ef3ab1ad0559f8b",
+      "bytes": 2519
+    },
+    {
+      "path": "score_summary.txt",
+      "sha256": "bf06f615e4694444d95348860f7e1a22f4ef9779fd17068fbe159025a665d239",
+      "bytes": 1544
+    },
+    {
+      "path": "sources.json",
+      "sha256": "86d6e486d53e6e0cb710b1787f60ac6512a27247bfea4fe5955e2052da40184b",
+      "bytes": 900
+    },
+    {
+      "path": "tests.txt",
+      "sha256": "c59eeae7605e30c42ac93b9b9320095f791f0157ed5307fa0901f740128fe0e9",
+      "bytes": 512
+    },
+    {
+      "path": "ui_results.json",
+      "sha256": "956bbee962e57208bec3bec786abde683f9f1505273ad0305abd616a8a92e3bd",
+      "bytes": 2458
+    },
+    {
+      "path": "vocal-float-pilot\\backing_vocals.wav",
+      "sha256": "2abae8e3f0f0c8db8a4dafa8f316fe00c196e77659a280ee1af4d5f68ab05bae",
+      "bytes": 10584088
+    },
+    {
+      "path": "vocal-float-pilot\\inference.json",
+      "sha256": "6626ce00309372733ba50f0726925947770e319e51ba3c5f7d44df271f217d8a",
+      "bytes": 785
+    },
+    {
+      "path": "vocal-float-pilot\\lead_vocals.wav",
+      "sha256": "7ee93af005b568189a1d29f7f573235a97af4fa4c9489a9c30bfee4b7bab5f9c",
+      "bytes": 10584088
+    },
+    {
+      "path": "vocal_control_results.json",
+      "sha256": "bd054e08100bb17a461e766ab8ec606d62c0fe092d9f61407ffb03e136f10b1c",
+      "bytes": 293
+    },
+    {
+      "path": "vocal_excerpt.wav",
+      "sha256": "d7a5654b9b6a1a67cdedb5d474488a4f4c40beb326c2edbce99078f705a7b472",
+      "bytes": 10584088
+    },
+    {
+      "path": "vocal_parts_ui.png",
+      "sha256": "aa14e2aa51fbe213f6aa22ac8dadfa6323d4d032dd9b7e0e83ac42b2276642cc",
+      "bytes": 137512
+    },
+    {
+      "path": "voice-control-mix\\backing_vocals.wav",
+      "sha256": "66c265e6de9ebbb70a7bc06bb92bdd4c5d5540c306dc487eee64c701df1a121d",
+      "bytes": 4233688
+    },
+    {
+      "path": "voice-control-mix\\inference.json",
+      "sha256": "01f52df72b02b799653c346a0825bd03777ae718f16600a819923e8626fe6ec2",
+      "bytes": 784
+    },
+    {
+      "path": "voice-control-mix\\lead_vocals.wav",
+      "sha256": "fd0a0ddfe2095f3d07b4edb9ce86d9d5a57e925f7b8dc43329e6e677bfaab956",
+      "bytes": 4233688
+    },
+    {
+      "path": "voice-control-solo\\backing_vocals.wav",
+      "sha256": "090eab50c5309b08f8a3d27657a8ee62552aaedcaa4c921433e40fb2be83b283",
+      "bytes": 4233688
+    },
+    {
+      "path": "voice-control-solo\\inference.json",
+      "sha256": "a01c8390686fae1f6588f34b7a76763f3f5b533d7f56e82c79a25d4571060e9c",
+      "bytes": 784
+    },
+    {
+      "path": "voice-control-solo\\lead_vocals.wav",
+      "sha256": "429802c4588bcda95387d8ad33a7c54f28206be6927415caf1ec06340b079b2e",
+      "bytes": 4233688
+    },
+    {
+      "path": "xuni-guitar-own-query\\inference.json",
+      "sha256": "5e1ca839bd3620770f185a116a9f7413c6236c9a783fb4bb62c6141bdf25afff",
+      "bytes": 735
+    },
+    {
+      "path": "xuni-guitar-own-query\\residual.wav",
+      "sha256": "ec61555578f6a57a1388a927f9471378f653e5fba2ed043adb48d0e0156171cd",
+      "bytes": 10584088
+    },
+    {
+      "path": "xuni-guitar-own-query\\target.wav",
+      "sha256": "62cbdb033656f11524fc6ca94b8d76a3f4d30ab513d38876b076aac2cdcde80f",
+      "bytes": 10584088
+    },
+    {
+      "path": "xuni-guitar-own-query.log",
+      "sha256": "72f84dddbb7d94c0339b03ea99a711712adf0a5f6f3f111725a687bcad024747",
+      "bytes": 11577
+    },
+    {
+      "path": "xuni-guitar-query\\inference.json",
+      "sha256": "31f2256ed4a60712db4957783b538888833b0ca6ff35e122344998a460859d7e",
+      "bytes": 735
+    },
+    {
+      "path": "xuni-guitar-query\\residual.wav",
+      "sha256": "8c3f086ce9e900846b61c84db8a166325f0f728747e591b169f5d0d0e27ee414",
+      "bytes": 10584088
+    },
+    {
+      "path": "xuni-guitar-query\\target.wav",
+      "sha256": "cdc435f865176dfc91ffc2f7ed0fb7b95aea811a5a92e0403482fc11290fd79c",
+      "bytes": 10584088
+    },
+    {
+      "path": "xuni-guitar-query.log",
+      "sha256": "fcaf4bb7da3c6a3e173553602f570591cdaad04993eb4d342067bebe2f2b63e7",
+      "bytes": 11577
+    },
+    {
+      "path": "xuni_guitar_excerpt.wav",
+      "sha256": "1fdd083c6878dadec84552bd9d65c19f286e021cf90b827ac8e141cf33ab4482",
+      "bytes": 10584088
+    },
+    {
+      "path": "xuni_vocal_result.json",
+      "sha256": "c1b478e692f5f2e0977eda5df60f8ac714896a78f0443505a9856cbcaf375d34",
+      "bytes": 74728
+    }
+  ],
+  "installed_audio": [
+    {
+      "path": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\vocal_parts\\764d942c5f654ca888656855a9c1f088\\lead_vocals.mp3",
+      "sha256": "802226969ea150bfa775aeec2802fc3ff9a07bf37df7b15ca238a600ae376a0f"
+    },
+    {
+      "path": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\vocal_parts\\764d942c5f654ca888656855a9c1f088\\lead_vocals.wav",
+      "sha256": "5b9c2ae359a8aa51e0984fcdcad10173baf8d6cc43cabcbdc3b4223cb1a8fd30"
+    },
+    {
+      "path": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\vocal_parts\\764d942c5f654ca888656855a9c1f088\\backing_vocals.mp3",
+      "sha256": "efef55b81cc2d8698dd443d9d1b0b78a14fe3e0df8eae1d3e99da3b6d1f6bc15"
+    },
+    {
+      "path": "D:\\ChordStudio\\data\\stems\\d4867eec9bec73fb4dbf0575cff26e3e6550cdba9553c8f886b3a4adab6ef72f\\bs_roformer_sw\\vocal_parts\\764d942c5f654ca888656855a9c1f088\\backing_vocals.wav",
+      "sha256": "6ca0f1fe55e376212f06f9b9e77d56edbb8db564730e2e14d5075601b945a193"
+    }
+  ]
+}

@@ -243,6 +243,12 @@ def main():
         elif job.get("profile") == "drums_parts":
             from .drums_worker import execute as execute_drums
             execute_drums(store, args.job)
+        elif job.get("profile") == "guitar_parts":
+            from .guitar_parts_worker import execute as execute_guitars
+            execute_guitars(store, args.job)
+        elif job.get("profile") == "vocal_parts":
+            from .vocal_parts_worker import execute as execute_vocals
+            execute_vocals(store, args.job)
         else:
             execute(store, args.job)
     except Exception as exc:

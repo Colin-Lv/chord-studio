@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "cancel_pending_downloads_stops_all_media",
+    "mode_change_cancels_old_play_request",
+    "missing_media_reports_failure_without_partial_playback",
+    "retry_recovers_and_preserves_seek_before_loading"
+  ],
+  "page_errors": []
+}

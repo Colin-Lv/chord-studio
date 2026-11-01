@@ -1,0 +1,35 @@
+{
+  "case": "electric_only",
+  "kind": "negative_electric",
+  "model": "lead",
+  "seconds": 0.0036496000102488324,
+  "si_sdr": [
+    [
+      null,
+      0.5328821104876403
+    ],
+    [
+      null,
+      0.48217355395007244
+    ]
+  ],
+  "snr": [
+    [
+      null,
+      3.2700901820814443
+    ],
+    [
+      null,
+      3.2432558650835452
+    ]
+  ],
+  "mixture_baseline": [
+    null,
+    234.64968285156056
+  ],
+  "energy_fraction": [
+    0.4738865792751312,
+    0.470967561006546
+  ],
+  "sum_error": 0.0
+}

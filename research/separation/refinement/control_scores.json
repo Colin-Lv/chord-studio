@@ -1,0 +1,80 @@
+{
+  "vocals": {
+    "rows": [
+      "lead_truth",
+      "shifted_harmony_truth"
+    ],
+    "columns": [
+      "lead_estimate",
+      "residual"
+    ],
+    "si_sdr_matrix": [
+      [
+        26.87675710112423,
+        -32.30336704053236
+      ],
+      [
+        -40.17532539529904,
+        15.806986810722332
+      ]
+    ],
+    "mixture_baseline": [
+      10.937938594699277,
+      -10.854646562889556
+    ],
+    "solo_false_residual_db": -9.8731808456474
+  },
+  "guitar_acoustic": {
+    "rows": [
+      "acoustic",
+      "electric"
+    ],
+    "columns": [
+      "query_target",
+      "residual"
+    ],
+    "si_sdr_matrix": [
+      [
+        -16.250910336483145,
+        -0.008154145639321063
+      ],
+      [
+        -26.58488554310919,
+        0.05412959229519885
+      ]
+    ],
+    "mixture_baseline": [
+      0.027889104297312773,
+      0.0278910476678407
+    ],
+    "sum_max_abs_error": 2.9802322387695312e-08
+  },
+  "guitar_electric": {
+    "rows": [
+      "acoustic",
+      "electric"
+    ],
+    "columns": [
+      "query_target",
+      "residual"
+    ],
+    "si_sdr_matrix": [
+      [
+        -2.2131356211389703,
+        0.027822175594018797
+      ],
+      [
+        -6.985431183546331,
+        0.027957970689948503
+      ]
+    ],
+    "mixture_baseline": [
+      0.027889104297312773,
+      0.0278910476678407
+    ],
+    "sum_max_abs_error": 2.979231794597581e-08
+  },
+  "absent_electric_query": {
+    "target_energy_relative_db": -90.44146859052317
+  }
+}

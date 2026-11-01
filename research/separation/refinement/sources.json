@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "banquet_commit": "79ed5bb75e5c3a40cd319d9d990cee913fc65c26",
+  "sources": [
+    "https://github.com/ZFTurbo/Music-Source-Separation-Training",
+    "https://github.com/nomadkaraoke/python-audio-separator",
+    "https://mvsep.com/en/algorithms",
+    "https://arxiv.org/abs/2406.18747",
+    "https://github.com/kwatcharasupat/query-bandit",
+    "https://zenodo.org/records/13694558",
+    "https://arxiv.org/abs/2211.07302",
+    "https://github.com/jeonchangbin49/MedleyVox",
+    "https://arxiv.org/abs/2307.15913",
+    "https://github.com/moises-ai/moises-db",
+    "https://minjekim.com/wp-content/uploads/ismir2025_ywen.pdf",
+    "https://github.com/facebookresearch/sam-audio",
+    "https://arxiv.org/abs/2609.30912",
+    "https://github.com/REMUS-Aalto/Mus3D",
+    "https://github.com/b-sigpro/mixit-mss",
+    "https://arxiv.org/abs/2401.03856"
+  ]
+}

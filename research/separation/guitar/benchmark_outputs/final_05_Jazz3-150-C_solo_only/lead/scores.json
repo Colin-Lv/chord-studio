@@ -1,0 +1,35 @@
+{
+  "case": "final_05_Jazz3-150-C_solo_only",
+  "kind": "final_role_solo_only",
+  "model": "lead",
+  "seconds": 1.7431765000073938,
+  "si_sdr": [
+    [
+      null,
+      33.81868211205876
+    ],
+    [
+      null,
+      -12.636849620420428
+    ]
+  ],
+  "snr": [
+    [
+      null,
+      33.62686877640503
+    ],
+    [
+      null,
+      0.039410612759021496
+    ]
+  ],
+  "mixture_baseline": [
+    null,
+    234.64968152447193
+  ],
+  "energy_fraction": [
+    0.9909664392471313,
+    0.00043382353032939136
+  ],
+  "sum_error": 0.0
+}

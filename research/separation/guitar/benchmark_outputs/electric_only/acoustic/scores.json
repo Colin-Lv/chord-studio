@@ -1,0 +1,35 @@
+{
+  "case": "electric_only",
+  "kind": "negative_electric",
+  "model": "acoustic",
+  "seconds": 4.7915383000072325,
+  "si_sdr": [
+    [
+      null,
+      -1.2776514666511414
+    ],
+    [
+      null,
+      37.38745304010667
+    ]
+  ],
+  "snr": [
+    [
+      null,
+      0.09991004114251004
+    ],
+    [
+      null,
+      35.06965520851165
+    ]
+  ],
+  "mixture_baseline": [
+    null,
+    234.64968285156056
+  ],
+  "energy_fraction": [
+    0.0003111963451374322,
+    0.9772574305534363
+  ],
+  "sum_error": 0.0
+}

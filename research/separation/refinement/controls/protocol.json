@@ -1,0 +1,22 @@
+{
+  "guitar_soundfont": "D:\\ChordStudio\\assets\\soundfonts\\FluidR3_GM.sf2",
+  "guitar_programs": [
+    25,
+    29
+  ],
+  "guitar_registers_overlap": true,
+  "guitar_spatial_layout": "identical centred stereo; no panning shortcut",
+  "query": "same timbre, different notes; not the ground-truth waveform",
+  "voice": "estimated lead excerpt remixed with pitch-shifted duplicate; synthetic stress test only",
+  "files": {
+    "acoustic.wav": "3952a380ad243f8a919fc590570d12b62011717912c904240eeeb57f15c1096d",
+    "electric.wav": "4ca40ed4ed0359e6b75d1cef6b99a7e1a0196a1573895f9d0cec5d6219064528",
+    "guitar_mix.wav": "0872c4d826661ae2b04a9d036366fecc7ce72f72a5a051b157bf6ab03bb282e3",
+    "query_acoustic.wav": "f8137ece67e6e409131505a5c4bd0e37cd3d896c04cecf54b7fcb789427c2f87",
+    "query_electric.wav": "256979029820a881bca98996dbdb764d7a387c779ecbb7e2202437861262459f",
+    "voice_harmony_truth.wav": "0cf20c45872a71a000217a2dabef68c981d76c9794992c09322f50334a236944",
+    "voice_lead_truth.wav": "022435dbedf28ff82552e9b1f00bb78e01259fc45ddff5baae69286e3d78b4cc",
+    "voice_mix.wav": "fcd09db808c9f5d58a953b383846560b6706d786627f4c6861e6cd5aa3af0d1a",
+    "voice_solo.wav": "022435dbedf28ff82552e9b1f00bb78e01259fc45ddff5baae69286e3d78b4cc"
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "file": "app/web/guitar_engine.py",
+    "sha256": "c49eab71d9a2c666f5d47a13eb8458cb1664b2f7ea5d1ae0fc1c4cad025c40eb",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\guitar_engine.py"
+  },
+  {
+    "file": "app/web/guitar_parts_runner.py",
+    "sha256": "d1608024fd5900c102cab1a94968e8a1c3a0974418d0407c126816d5a3f51d9a",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\guitar_parts_runner.py"
+  },
+  {
+    "file": "app/web/guitar_parts_worker.py",
+    "sha256": "fc569de3ecc0df9bee0271565cb7769641f47bb024ac50f7c68fad4823d15274",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\guitar_parts_worker.py"
+  },
+  {
+    "file": "app/web/server.py",
+    "sha256": "64d098a42ff81a12790f03825ec10e62b2849dd9e633f3c97fb683fa8a7a9707",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\server.py"
+  },
+  {
+    "file": "app/web/jobs.py",
+    "sha256": "457a36c1f4d0f269c0272de905f531ea7a7cc73ed4abccda9405ec8e5f8dce59",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\jobs.py"
+  },
+  {
+    "file": "app/web/worker.py",
+    "sha256": "4fb893f81442634ee6d5dae54c8e08c34b5f8486e98f42509519d3ff2df51884",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\app\\web\\worker.py"
+  },
+  {
+    "file": "frontend/stem-audio.js",
+    "sha256": "f87a24d836ef46d62e1d7bdfa855c63940034a684f90cda30be5c48a7d9e0a7e",
+    "backup": null
+  },
+  {
+    "file": "frontend/guitar-parts.js",
+    "sha256": "2af4cc969e38b639c522dc22101be20533f9ed8e585102ab95f5d2c5ed5a4847",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\frontend\\guitar-parts.js"
+  },
+  {
+    "file": "frontend/stems.js",
+    "sha256": "92ef59c65a02857ea0100a6206d3d8843bfb881dc7bdb27f93795f7126805c59",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\frontend\\stems.js"
+  },
+  {
+    "file": "frontend/stems.html",
+    "sha256": "9356c35da7172e2f76c7030ba93dfd06b9ebdd6dfbf0878de77f9ad71f3fe3b5",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\frontend\\stems.html"
+  },
+  {
+    "file": "frontend/stems.css",
+    "sha256": "e2aa5ab1606d4440c201c975969448214941b11c92bf9a439e537ae6fd33f0ee",
+    "backup": "D:\\ChordStudio\\Dialogue\\research\\separation\\guitar\\installed_before\\frontend\\stems.css"
+  }
+]
