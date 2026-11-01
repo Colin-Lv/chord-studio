@@ -1,0 +1,26 @@
+{
+ "A_original": {
+  "segments": 62,
+  "seconds": 232.6
+ },
+ "B_accomp_plus_bass": {
+  "segments": 65,
+  "seconds": 232.6
+ },
+ "B_accomp_plus_bass_rms": {
+  "segments": 65,
+  "seconds": 232.6
+ },
+ "C_accomp_only": {
+  "segments": 66,
+  "seconds": 232.6
+ },
+ "C_accomp_only_rms": {
+  "segments": 66,
+  "seconds": 232.6
+ },
+ "D_no_vocals": {
+  "segments": 64,
+  "seconds": 232.6
+ }
+}

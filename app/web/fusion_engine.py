@@ -4,9 +4,9 @@ The frozen model is audio-in, so the only ways to use separation are: feed it a 
 signal, fuse its posterior with a second run, or add a bass-root prior. This module does all
 three in one place and is shared by the fusion job and the full pipeline.
 
-Measured on the one song that has an accepted golden timeline (虚拟, 62 segments):
-mix 40.3 %, harmonic 43.6 %, fused (lambda 0.7) 45.2 % segment accuracy. One song is one
-song; see research/separation/stem-chord/REPORT.md for the split-half check and the caveats.
+Legacy experiment only. Earlier raw-cell gains did not survive comparison with
+the released full decoder. Its posterior index alignment is also not a reliable
+cross-audio clock. New requests use stem_harmony.py, with exact interval pooling.
 """
 from __future__ import annotations
 

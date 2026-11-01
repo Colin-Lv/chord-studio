@@ -34,6 +34,7 @@ class PipelineRequest(BaseModel):
     drums_parts: bool = False
     guitar_mode: Literal["timbre", "duet"] = "timbre"
     harmony: bool = False
+    harmony_method: Literal['stem_evidence_v2', 'legacy_fusion'] = 'stem_evidence_v2'
     harmony_default: bool = False
     force_stems: bool = False
 
@@ -235,7 +236,10 @@ def create_app(store_root=None, manager_factory=Jobs):
 
     @application.post("/api/projects/{project_id}/fusion", status_code=202)
     def fusion(project_id: str, body: SeparateRequest | None = None):
+        from .stems_worker import MODELS
         body = body or SeparateRequest()
+        if body.model not in MODELS:
+            raise HTTPException(400, '未知的分轨模型')
         return application.state.jobs.submit(project_id, "fusion", key_mode="madmom",
                                              model=body.model)
 

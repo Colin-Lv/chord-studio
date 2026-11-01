@@ -16,7 +16,7 @@ STAGE_LABELS = {
     "vocal_parts": "人声细分",
     "guitar_parts": "吉他细分",
     "drums_parts": "鼓组细分",
-    "fusion": "分轨融合和声",
+    "fusion": "分轨构成音和弦",
 }
 
 
@@ -77,7 +77,7 @@ def execute(store, job_id):
             job["model"] = model
         if key == "fusion":
             job["model"] = model
-            job["make_default"] = bool(spec.get("harmony_default", True))
+            job["make_default"] = bool(spec.get("harmony_default", False))
         atomic_json(job_path, job)
         started = time.perf_counter()
         _worker(profile)(store, job_id)

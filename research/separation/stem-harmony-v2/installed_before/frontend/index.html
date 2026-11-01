@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chord Studio</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/bar-editor.css">
+  <script defer src="/assets/key-listening-handoff.js"></script><script defer src="/assets/notation.js"></script><script defer src="/assets/key-listening-history.js"></script><script defer src="/assets/local-key-review.js"></script><script defer src="/assets/source-comparison.js"></script><script defer src="/assets/bar-editor.js"></script><script defer src="/assets/score-reference.js"></script><script defer src="/assets/reference-comparison.js"></script><script defer src="/assets/source-draft.js"></script><script defer src="/assets/structure-review.js"></script><script defer src="/assets/app.js"></script>
+  <script defer src="/assets/pipeline.js"></script><script defer src="/assets/desktop.js"></script>
+</head>
+<body>
+  <header class="app-header"><a href="/" class="brand"><span class="brand-icon">♮</span><span>Chord <b>Studio</b></span></a><span class="text-link" id="appModelBadge">本地工作台</span><span class="local-badge"><i></i>本地工作台</span></header>
+  <div class="workspace">
+    <aside class="library"><div class="library-title"><h2>我的音乐</h2><button id="refreshProjects" class="icon-button" aria-label="刷新项目">↻</button></div><button id="newProject" class="new-project">＋ 新建分析</button><div id="projectList" class="project-list"></div><p class="library-note">音频、模型结果和人工修改<br>保存在本机项目目录中。</p></aside>
+    <main>
+      <section class="intro"><div><div class="eyebrow">LISTEN. UNDERSTAND. REFINE.</div><h1>从一首歌，开始理解和声。</h1><p>上传音乐，或粘贴 B 站链接。识别完成后，边听边查看、比较与修正。</p></div><span class="intro-mark" aria-hidden="true">♫</span></section>
+      <section id="inputPanel" class="input-panel panel">
+        <div class="input-tabs" role="tablist" aria-label="音频来源"><button id="tabFile" role="tab" aria-selected="true" aria-controls="filePanel">上传音乐</button><button id="tabLink" role="tab" aria-selected="false" aria-controls="linkPanel">B 站链接</button></div>
+        <div id="filePanel" role="tabpanel" aria-labelledby="tabFile"><label id="dropZone" class="drop-zone" for="audioFile"><span class="upload-symbol">↑</span><strong id="fileTitle">将音乐拖到这里，或点击选择</strong><span id="fileMeta">MP3 / WAV / FLAC / M4A · retained10 最长 10 分钟 · 最大 512 MB</span><input id="audioFile" type="file" accept="audio/*,.m4a,.flac,.opus,.wma,.webm"></label></div>
+        <div id="linkPanel" role="tabpanel" aria-labelledby="tabLink" hidden><label class="field-label" for="bilibiliUrl">视频链接或 BV 号</label><div class="url-field"><span aria-hidden="true">↗</span><input id="bilibiliUrl" type="text" placeholder="https://www.bilibili.com/video/BV…" autocomplete="off"></div><p class="muted">一步获取视频音频并开始识别，支持链接中的分 P 编号。</p></div>
+        <div class="input-actions"><label class="model-label">识别模型<select id="model"><option value="retained10" selected>当前冻结模型</option><option value="v1">多来源和声 · 冻结 v1</option><option value="v2">多来源和声 · 实验 v2</option><option value="madmom">madmom · 单来源</option></select></label><label class="model-label">主调判断<select id="keyMode"><option value="continuous" selected>连续评分 · 实验（未校准）</option><option value="madmom">CNN · 当前默认</option><option value="fused">分歧裁决 · 实验</option></select></label><button id="separate" class="secondary" title="分离成人声 / 鼓 / 贝斯 / 其他四轨">音轨分离</button><button id="analyze" class="primary" disabled>开始分析 <span>→</span></button></div><p id="inputStatus" class="status" role="status">选择音频后可以立即试听。</p>
+        <div id="pipelinePanel" class="pipeline-panel" hidden>
+          <div class="pipeline-head"><strong>完整流程</strong><span class="muted">一次设置好：和声分析 → 音轨分离 → 细分 → 融合</span></div>
+          <div class="pipeline-grid">
+            <label class="pipe-field">分轨模型<select id="pipeModel"></select></label>
+            <label class="pipe-check"><input type="checkbox" id="pipeHarmony"> 同时识别和声（分轨融合·实验）</label>
+            <label class="pipe-check"><input type="checkbox" id="pipeVocal"> 人声细分（主唱 / 和声）</label>
+            <label class="pipe-check"><input type="checkbox" id="pipeGuitar"> 吉他细分</label>
+            <label class="pipe-field">吉他方案<select id="pipeGuitarMode"><option value="timbre">木吉他与电吉他</option><option value="duet">旋律与伴奏</option></select></label>
+            <label class="pipe-check"><input type="checkbox" id="pipeDrums"> 鼓组细分（六件）</label>
+            <label class="pipe-check"><input type="checkbox" id="pipeHarmonyDefault"> 融合结果设为默认时间轴（目前未超过整混音）</label>
+          </div>
+          <div class="pipeline-foot"><button id="pipeStart" class="primary">开始完整流程 <span>→</span></button>
+            <span class="muted">约 3–6 分钟；分轨和细分结果按音频缓存，重复运行会复用。</span></div>
+        </div>
+      <p class="result-note" id="modelScope">当前冻结模型：10 类和弦 + N。支持 maj/min/7/maj7/min7/9/maj9/min9/sus2/sus4；后验未校准，不能表示准确率。主调另由 CNN 估计。</p></section>
+      <section id="jobPanel" class="panel job-panel" hidden aria-live="polite"><div class="section-heading"><div><div class="eyebrow">ANALYSIS</div><h2 id="jobTitle">准备分析</h2></div><span id="jobState" class="pill"></span></div><div id="jobActivity" class="activity"></div><ol id="stageList" class="stage-list"></ol><p id="jobError" class="error" hidden></p><div class="job-actions"><button id="retry" class="secondary" hidden>重试分析</button><a id="jobLog" class="text-link" target="_blank" rel="noopener">查看运行日志 ↗</a></div></section>
+      <section id="playerPanel" class="panel player" hidden>
+        <audio id="audio" preload="metadata"></audio><div class="player-top"><button id="play" class="play" aria-label="播放">▶</button><div class="now"><div id="nowChord" class="now-chord">准备试听</div><div id="nowSecondary" class="muted"></div></div><div class="player-meta"><strong id="songTitle"></strong><span id="clock">00:00 / 00:00</span></div><label class="speed-label">速度<select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select></label><button id="loop" class="secondary" aria-pressed="false" disabled>循环原区间</button></div>
+        <input id="seek" type="range" min="0" max="1" value="0" step="0.001" aria-label="播放位置"><p id="playStatus" class="status" role="status"></p>
+      </section>
+      <section id="resultPanel" hidden>
+        <div class="result-heading"><div><div class="eyebrow">YOUR HARMONY MAP</div><h2>和声与结构</h2></div><a id="stemsLink" class="text-link" hidden>分轨视图 →</a> <a id="analysisDownload" class="text-link" download="analysis.json">分析 JSON ↓</a></div>
+        <div class="tonality panel"><div class="key-summary"><span class="field-label">歌曲主调</span><strong id="globalKey">未确定</strong><span id="keyOrigin" class="muted"></span></div><div class="key-controls"><label for="keySelect">调整主调</label><select id="keySelect"></select><button id="resetKey" class="text-button">恢复自动估计</button><button id="adoptChordKey" class="secondary" hidden></button></div><div class="display-switch" aria-label="和弦记法"><button id="displayRoman" aria-pressed="true">级数记号</button><button id="displayName" aria-pressed="false">和弦名称</button></div><p id="keyHint" class="tonality-note"></p></div>
+        <section class="panel key-review"><label class="follow-label"><input id="keyReviewEnabled" type="checkbox">和声主调 v2 · 辅助审阅</label><div id="keyReviewContent"></div><button id="adoptKeySuggestion" class="secondary" hidden>采用此建议</button><p id="keyReviewStatus" class="status" role="status"></p><a id="keyAnnotationLink" class="text-link" target="_blank" rel="noopener">打开调性听辨记录（已见工作区） ↗</a> <a id="exportKeyReview" class="text-link" download="key_review.json">主调审阅 JSON ↓</a></section>
+        <section id="keyEvidence" class="panel key-evidence" hidden aria-live="polite"></section>
+        <section id="keyExperimental" class="panel key-experimental" hidden aria-live="polite"></section>
+        <div id="resultModel" class="result-note"></div><div id="warnings" class="result-note"></div>
+        <section class="panel overview"><div class="section-heading"><h3>全曲时间轴</h3><span id="structureSummary" class="muted"></span></div><canvas id="waveform" height="130" aria-label="波形、拍点和和弦时间轴，点击定位" tabindex="0"></canvas><div id="sections" class="sections"></div><p id="loopSourceNote" class="loop-source-note" hidden></p><div id="loops" class="loops" aria-label="循环线索"></div><p class="timeline-note">细线为拍点，粗线为小节起点；A/B 表示相似段落，尚未确认主歌或副歌。段落与循环基于原始预测，编辑和弦后不自动重算。</p></section>
+        <div id="sources" class="source-grid" aria-label="切换和弦来源"></div>
+        <div class="review-layout"><section class="panel chord-panel"><div class="section-heading"><h3 id="sourceTitle">和弦区间</h3><label class="follow-label"><input id="follow" type="checkbox" checked>跟随播放</label></div><div class="table-heading"><span>#</span><span>时间区间</span><span>和弦 / 级数</span><span>标记</span></div><div id="chordRows" class="chord-rows"></div><div class="list-footer"><span id="rowCount"></span><span>空格播放 · ← → 前后 5 秒</span></div></section>
+          <aside class="panel editor"><div class="editor-title"><h3>复核与修改</h3><span id="editCount" class="pill"></span></div><p id="editTime" class="edit-time"></p><p id="editOriginal" class="muted"></p><div id="sourceDraftPanel" class="source-draft-panel" hidden><p id="sourceDraftMessage" role="status"></p><div class="source-draft-actions"><button id="sourceDraftRestore" class="secondary">恢复此草稿</button><button id="sourceDraftExport" class="text-button">导出保留的原文</button><button id="sourceDraftReload" class="text-button">备份并重新读取</button></div><details><summary>查看保留内容</summary><pre id="sourceDraftRaw"></pre></details></div><div id="sourceDraftBackups"></div><label class="field-label" for="chordInput">和弦名称或级数</label><div class="edit-field"><input id="chordInput" type="text" autocomplete="off" spellcheck="false" placeholder="C#m7、V7、6m"><button id="applyEdit" class="secondary">应用</button></div><div class="editor-buttons"><button id="audition" class="secondary">试听区间</button><button id="restoreChord" class="text-button">恢复原标签</button></div><p id="editStatus" class="status" role="status"></p><hr><div class="candidate-heading"><h4>来源候选</h4><span class="muted">点击填入</span></div><div id="candidates"></div><p class="muted candidate-note">按来源支持展示，无校准置信分数。</p><hr><button id="saveCorrections" class="primary save-button">保存旧区间修订（独立）</button><p id="saveStatus" class="status" role="status"></p><div class="export-links"><a id="exportLab" download>旧区间修订 LAB ↓</a><a id="exportCorrections" download>修改记录 ↓</a><a id="exportOriginal" download>原始 LAB ↓</a><button id="exportDraft" class="text-button">导出当前草稿</button></div></aside></div>
+        <p class="result-note">机器预测用于辅助听辨。人工修改单独保存，原始模型结果可随时下载；当前页面不提供没有参考标注的准确率。</p>
+      </section>
+      <div id="emptyState" class="empty-state"><span>Ⅰ　Ⅳ　Ⅴ　Ⅵ</span><p>在这里听见一首歌的和声脉络。</p></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "audio_sha256": "b6402d8fac234845620450fa4c006d479eac6b470a3f408888295dd4e3941d71",
+  "model": {
+    "name": "bs_roformer_sw"
+  },
+  "tracks": [
+    {
+      "id": "vocals"
+    },
+    {
+      "id": "drums"
+    },
+    {
+      "id": "bass"
+    },
+    {
+      "id": "other"
+    },
+    {
+      "id": "guitar"
+    },
+    {
+      "id": "piano"
+    }
+  ]
+}

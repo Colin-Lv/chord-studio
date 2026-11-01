@@ -1,0 +1,17 @@
+.F...........FFFFFFF........                                             [100%]
+============================== warnings summary ===============================
+C:\Users\33573\miniconda3\Lib\site-packages\_pytest\config\__init__.py:1345
+  C:\Users\33573\miniconda3\Lib\site-packages\_pytest\config\__init__.py:1345: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_web_workbench.py::test_upload_separate_ids_safe_names_and_playback_range
+FAILED tests/test_web_workbench.py::test_corrections_preserve_raw_and_timestamps_and_survive_new_app
+FAILED tests/test_web_workbench.py::test_corrections_reject_conflict_stale_run_and_boundary_changes
+FAILED tests/test_web_workbench.py::test_invalid_corrections_are_not_committed[edits0]
+FAILED tests/test_web_workbench.py::test_invalid_corrections_are_not_committed[edits1]
+FAILED tests/test_web_workbench.py::test_invalid_corrections_are_not_committed[edits2]
+FAILED tests/test_web_workbench.py::test_invalid_corrections_are_not_committed[edits3]
+FAILED tests/test_web_workbench.py::test_unknown_n_and_x_are_preserved - Asse...
+8 failed, 20 passed, 1 warning in 1.38s

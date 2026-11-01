@@ -55,6 +55,7 @@
       const body = {
         model: modelSelect.value || "bs_roformer_sw",
         harmony: document.getElementById("pipeHarmony").checked,
+        harmony_method: "stem_evidence_v2",
         vocal_parts: document.getElementById("pipeVocal").checked,
         guitar_parts: document.getElementById("pipeGuitar").checked,
         drums_parts: document.getElementById("pipeDrums").checked,
@@ -63,11 +64,13 @@
         force_stems: false,
       };
       const job = await post(`/api/projects/${id}/pipeline`, body);
+      if (job.profile !== "pipeline") throw new Error("当前项目有任务在运行，请完成后再开始完整流程。");
       $("inputStatus").textContent = "完整流程已提交：分析 → 分轨 → 细分 → 融合";
       toast("完整流程开始，约 3–6 分钟；可以继续浏览其他页面");
-      await watchJob(job.id, state.navigation);
+      if (!await waitForCompletion(job.id, state.navigation)) return;
       $("inputStatus").textContent = body.harmony
-        ? "完成。默认时间轴已切到「分轨融合（实验）」，可在来源里切回。"
+        ? (body.harmony_default ? "完成。默认时间轴已切到「分轨构成音和弦 · V2」。"
+            : "完成。请在和弦来源中选择「分轨构成音和弦 · V2」与原结果比较。")
         : "完成。分轨结果已更新。";
     } catch (error) {
       $("inputStatus").textContent = error.message;
@@ -80,5 +83,35 @@
   }
 
   startBtn.addEventListener("click", start);
+  document.getElementById("pipeOpenResult")?.addEventListener("click", () => {
+    const setup = document.getElementById("beAnalysisSetup");
+    if (setup) setup.open = true;
+    panel.hidden = false;
+    ensureModels();panel.scrollIntoView({block: "center"});
+  });
+  async function waitForCompletion(id, navigation) {
+    watchJob(id, navigation);
+    for (;;) {
+      if (navigation !== state.navigation) return false;
+      const job = await api(`/api/jobs/${id}`);
+      if (job.status === "completed") return true;
+      if (["failed", "interrupted"].includes(job.status)) throw new Error(job.error || "识别未完成");
+      await new Promise(resolve => setTimeout(resolve, 1500));
+    }
+  }
+  document.getElementById("pipeChordsOnly")?.addEventListener("click", async event => {
+    const button = event.currentTarget;
+    if (running) return;
+    running = true;button.disabled = true;startBtn.disabled = true;
+    try {
+      const id = await ensureProject();
+      const job = await post(`/api/projects/${id}/fusion`, {model: modelSelect.value || "bs_roformer_sw"});
+      if (job.profile !== "fusion") throw new Error("当前项目有任务在运行，请完成后再识别分轨和弦。");
+      $("inputStatus").textContent = "正在识别分轨和弦；将复用已有分析和分轨。";
+      if (!await waitForCompletion(job.id, state.navigation)) return;
+      $("inputStatus").textContent = "完成。请在和弦来源中选择「分轨构成音和弦 · V2」试听比较。";
+    } catch (error) { toast(error.message);$("inputStatus").textContent = error.message; }
+    finally { running = false;button.disabled = false;startBtn.disabled = false; }
+  });
   window.openPipelinePanel = openPanel;
 })();

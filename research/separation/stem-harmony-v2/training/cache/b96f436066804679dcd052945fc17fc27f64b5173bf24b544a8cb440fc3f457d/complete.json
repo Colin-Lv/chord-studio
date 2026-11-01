@@ -1,0 +1,12 @@
+{
+  "identity": {
+    "audio": "3013782beb5acffcdef6b0a5192cdbbea360cd8b8b25db6c15bc1b8238200ff8",
+    "transform": "@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix vamp: <http://purl.org/ontology/vamp/> .\n@prefix : <#> .\n:transform a vamp:Transform ;\n vamp:plugin <http://vamp-plugins.org/rdf/plugins/nnls-chroma#nnls-chroma> ;\n vamp:step_size \"2048\"^^xsd:int ;\n vamp:block_size \"16384\"^^xsd:int ;\n vamp:sample_rate \"44100\"^^xsd:float ;\n vamp:plugin_version \"5\" ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"chromanormalize\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"rollon\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"s\" ] ; vamp:value \"0.7\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"tuningmode\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"useNNLS\" ] ; vamp:value \"1\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"whitening\" ] ; vamp:value \"1\"^^xsd:float ] ;\n vamp:output <http://vamp-plugins.org/rdf/plugins/nnls-chroma#nnls-chroma_output_semitonespectrum> .\n",
+    "tools": {
+      "ffmpeg": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+      "sonic_annotator": "be457f578a069ff432d61d73ae93b3eb519b9daf3b4341520aca6df632b18227",
+      "nnls_plugin": "9e6e8b0b9fdcec20807ed050d6a0a99d77c091fefe15058ad0466fbfd2e4ae71"
+    }
+  },
+  "sha256": "ac1b6ef1a83f0b0a3480a7ffff624750f7effb3d5183cb068177cc5b269f806b"
+}

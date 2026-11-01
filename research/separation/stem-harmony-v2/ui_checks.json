@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "actual_chords_only_button_runs_installed_queue_without_early_success",
+    "new_source_selectable_named_chords_and_export_available",
+    "failed_job_not_reported_as_complete"
+  ],
+  "page_errors": []
+}

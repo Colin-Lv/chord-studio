@@ -23,15 +23,16 @@
           <div class="pipeline-head"><strong>完整流程</strong><span class="muted">一次设置好：和声分析 → 音轨分离 → 细分 → 融合</span></div>
           <div class="pipeline-grid">
             <label class="pipe-field">分轨模型<select id="pipeModel"></select></label>
-            <label class="pipe-check"><input type="checkbox" id="pipeHarmony"> 同时识别和声（分轨融合·实验）</label>
+              <label class="pipe-check"><input type="checkbox" id="pipeHarmony"> 同时识别和弦（分轨构成音 · V2）</label>
             <label class="pipe-check"><input type="checkbox" id="pipeVocal"> 人声细分（主唱 / 和声）</label>
             <label class="pipe-check"><input type="checkbox" id="pipeGuitar"> 吉他细分</label>
             <label class="pipe-field">吉他方案<select id="pipeGuitarMode"><option value="timbre">木吉他与电吉他</option><option value="duet">旋律与伴奏</option></select></label>
             <label class="pipe-check"><input type="checkbox" id="pipeDrums"> 鼓组细分（六件）</label>
-            <label class="pipe-check"><input type="checkbox" id="pipeHarmonyDefault"> 融合结果设为默认时间轴（目前未超过整混音）</label>
+              <label class="pipe-check"><input type="checkbox" id="pipeHarmonyDefault"> 新和弦结果设为默认时间轴</label>
           </div>
-          <div class="pipeline-foot"><button id="pipeStart" class="primary">开始完整流程 <span>→</span></button>
-            <span class="muted">约 3–6 分钟；分轨和细分结果按音频缓存，重复运行会复用。</span></div>
+            <div class="pipeline-foot"><button id="pipeStart" class="primary">开始完整流程 <span>→</span></button>
+              <button id="pipeChordsOnly" class="secondary">仅识别分轨和弦 V2</button>
+              <span class="muted">已有分析可仅识别分轨和弦，保留主调及原和弦结果。新结果可在和弦来源中比较；完整流程约 3–6 分钟。</span></div>
         </div>
       <p class="result-note" id="modelScope">当前冻结模型：10 类和弦 + N。支持 maj/min/7/maj7/min7/9/maj9/min9/sus2/sus4；后验未校准，不能表示准确率。主调另由 CNN 估计。</p></section>
       <section id="jobPanel" class="panel job-panel" hidden aria-live="polite"><div class="section-heading"><div><div class="eyebrow">ANALYSIS</div><h2 id="jobTitle">准备分析</h2></div><span id="jobState" class="pill"></span></div><div id="jobActivity" class="activity"></div><ol id="stageList" class="stage-list"></ol><p id="jobError" class="error" hidden></p><div class="job-actions"><button id="retry" class="secondary" hidden>重试分析</button><a id="jobLog" class="text-link" target="_blank" rel="noopener">查看运行日志 ↗</a></div></section>
@@ -40,7 +41,7 @@
         <input id="seek" type="range" min="0" max="1" value="0" step="0.001" aria-label="播放位置"><p id="playStatus" class="status" role="status"></p>
       </section>
       <section id="resultPanel" hidden>
-        <div class="result-heading"><div><div class="eyebrow">YOUR HARMONY MAP</div><h2>和声与结构</h2></div><a id="stemsLink" class="text-link" hidden>分轨视图 →</a> <a id="analysisDownload" class="text-link" download="analysis.json">分析 JSON ↓</a></div>
+        <div class="result-heading"><div><div class="eyebrow">YOUR HARMONY MAP</div><h2>和声与结构</h2></div><button id="pipeOpenResult" class="secondary">分轨和弦 V2</button><a id="stemsLink" class="text-link" hidden>分轨视图 →</a> <a id="analysisDownload" class="text-link" download="analysis.json">分析 JSON ↓</a></div>
         <div class="tonality panel"><div class="key-summary"><span class="field-label">歌曲主调</span><strong id="globalKey">未确定</strong><span id="keyOrigin" class="muted"></span></div><div class="key-controls"><label for="keySelect">调整主调</label><select id="keySelect"></select><button id="resetKey" class="text-button">恢复自动估计</button><button id="adoptChordKey" class="secondary" hidden></button></div><div class="display-switch" aria-label="和弦记法"><button id="displayRoman" aria-pressed="true">级数记号</button><button id="displayName" aria-pressed="false">和弦名称</button></div><p id="keyHint" class="tonality-note"></p></div>
         <section class="panel key-review"><label class="follow-label"><input id="keyReviewEnabled" type="checkbox">和声主调 v2 · 辅助审阅</label><div id="keyReviewContent"></div><button id="adoptKeySuggestion" class="secondary" hidden>采用此建议</button><p id="keyReviewStatus" class="status" role="status"></p><a id="keyAnnotationLink" class="text-link" target="_blank" rel="noopener">打开调性听辨记录（已见工作区） ↗</a> <a id="exportKeyReview" class="text-link" download="key_review.json">主调审阅 JSON ↓</a></section>
         <section id="keyEvidence" class="panel key-evidence" hidden aria-live="polite"></section>

@@ -1,0 +1,28 @@
+{
+  "selection": [
+    {
+      "leaf": 8,
+      "clean": 0.9838235294117647,
+      "corrupted": 0.5691176470588235
+    },
+    {
+      "leaf": 32,
+      "clean": 0.9632352941176471,
+      "corrupted": 0.39558823529411763
+    }
+  ],
+  "reports": {
+    "validation": {
+      "n": 680,
+      "clean": 0.9838235294117647,
+      "corrupted": 0.5691176470588235
+    },
+    "test": {
+      "n": 855,
+      "clean": 0.9847953216374269,
+      "corrupted": 0.49122807017543857
+    }
+  },
+  "model_sha256": "425bd1e4d62977ab41bcb489f09648e18c0ae21da4cab79e0228efda9b7d01a4",
+  "limitations": "Feature perturbations are not real separator errors. Test songs exposed in first round; second round is development evidence."
+}

@@ -1,0 +1,35 @@
+{
+  "released_full": {
+    "exact": 0.6815918224707325,
+    "root": 0.8741918574174384,
+    "coverage": 1.0000000000000002,
+    "seconds": 228.92,
+    "segments": 62,
+    "boundary_precision": 0.9016393442622951,
+    "boundary_recall": 0.9016393442622951,
+    "boundary_f1": 0.9016393442622952,
+    "tolerance_seconds": 0.5
+  },
+  "stem_v2": {
+    "exact": 0.6815918224707325,
+    "root": 0.8741918574174384,
+    "coverage": 1.0000000000000002,
+    "seconds": 228.92,
+    "segments": 64,
+    "boundary_precision": 0.9016393442622951,
+    "boundary_recall": 0.9016393442622951,
+    "boundary_f1": 0.9016393442622952,
+    "tolerance_seconds": 0.5
+  },
+  "complete_coverage_without_stem_evidence": {
+    "exact": 0.6815918224707325,
+    "root": 0.8741918574174384,
+    "coverage": 1.0000000000000002,
+    "seconds": 228.92,
+    "segments": 64,
+    "boundary_precision": 0.9016393442622951,
+    "boundary_recall": 0.9016393442622951,
+    "boundary_f1": 0.9016393442622952,
+    "tolerance_seconds": 0.5
+  }
+}

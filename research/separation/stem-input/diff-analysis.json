@@ -1,0 +1,68 @@
+{
+ "B_accomp_plus_bass": {
+  "fixed": 2,
+  "broken": 4,
+  "same_right": 39,
+  "same_wrong": 17,
+  "examples": [
+   [
+    86.7,
+    "C:maj9",
+    "E:7",
+    "C:maj9"
+   ],
+   [
+    134.7,
+    "E:min7",
+    "E:7",
+    "E:min7"
+   ]
+  ]
+ },
+ "C_accomp_only": {
+  "fixed": 4,
+  "broken": 3,
+  "same_right": 40,
+  "same_wrong": 15,
+  "examples": [
+   [
+    86.7,
+    "C:maj9",
+    "E:7",
+    "C:maj9"
+   ],
+   [
+    127.4,
+    "F:maj7",
+    "F:maj9",
+    "F:maj7"
+   ],
+   [
+    134.7,
+    "E:min7",
+    "E:7",
+    "E:min7"
+   ],
+   [
+    168.0,
+    "F:maj7",
+    "F:maj",
+    "F:maj7"
+   ]
+  ]
+ },
+ "D_no_vocals": {
+  "fixed": 1,
+  "broken": 4,
+  "same_right": 39,
+  "same_wrong": 18,
+  "examples": [
+   [
+    134.7,
+    "E:min7",
+    "E:7",
+    "E:min7"
+   ]
+  ]
+ }
+}

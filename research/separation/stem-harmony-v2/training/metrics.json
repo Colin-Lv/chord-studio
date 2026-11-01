@@ -1,0 +1,119 @@
+{
+  "selection": [
+    {
+      "leaf": 2,
+      "validation_exact": 0.9955882352941177
+    },
+    {
+      "leaf": 8,
+      "validation_exact": 0.9897058823529412
+    },
+    {
+      "leaf": 20,
+      "validation_exact": 0.9779411764705882
+    }
+  ],
+  "selected_leaf": 2,
+  "reports": {
+    "validation": {
+      "chords": 680,
+      "songs": 25,
+      "exact": 0.9955882352941177,
+      "root": 1.0,
+      "by_quality": {
+        "maj": {
+          "n": 332,
+          "exact": 0.9939759036144579
+        },
+        "min": {
+          "n": 186,
+          "exact": 1.0
+        },
+        "7": {
+          "n": 12,
+          "exact": 1.0
+        },
+        "maj7": {
+          "n": 25,
+          "exact": 1.0
+        },
+        "min7": {
+          "n": 37,
+          "exact": 0.972972972972973
+        },
+        "maj9": {
+          "n": 25,
+          "exact": 1.0
+        },
+        "min9": {
+          "n": 17,
+          "exact": 1.0
+        },
+        "sus2": {
+          "n": 36,
+          "exact": 1.0
+        },
+        "sus4": {
+          "n": 10,
+          "exact": 1.0
+        }
+      },
+      "same_evidence_rule_exact": 0.25588235294117645,
+      "song_macro_exact": 0.9952706552706553
+    },
+    "test": {
+      "chords": 855,
+      "songs": 25,
+      "exact": 0.9964912280701754,
+      "root": 1.0,
+      "by_quality": {
+        "maj": {
+          "n": 372,
+          "exact": 1.0
+        },
+        "min": {
+          "n": 230,
+          "exact": 1.0
+        },
+        "7": {
+          "n": 27,
+          "exact": 1.0
+        },
+        "maj7": {
+          "n": 15,
+          "exact": 1.0
+        },
+        "min7": {
+          "n": 44,
+          "exact": 0.9318181818181818
+        },
+        "9": {
+          "n": 2,
+          "exact": 1.0
+        },
+        "maj9": {
+          "n": 52,
+          "exact": 1.0
+        },
+        "min9": {
+          "n": 39,
+          "exact": 1.0
+        },
+        "sus2": {
+          "n": 51,
+          "exact": 1.0
+        },
+        "sus4": {
+          "n": 23,
+          "exact": 1.0
+        }
+      },
+      "same_evidence_rule_exact": 0.24912280701754386,
+      "song_macro_exact": 0.9963213530655392
+    }
+  },
+  "train_chords": 3048,
+  "data_sha256": "11060dcde6dde57f9a54ffff58f0580b1bdab0f78d17cf7503f23562bfc05e81",
+  "model_sha256": "02417aaf82b5e1312a9055a6f4d1f4460abb798b258e37dbb2800574088ee435",
+  "limitation": "Synthetic stems and mixed extension renders, not separator outputs; true boundaries used. Not end-to-end or blind real-song accuracy."
+}

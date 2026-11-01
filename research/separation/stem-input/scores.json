@@ -1,0 +1,74 @@
+[
+ {
+  "condition": "A_original",
+  "frame": 0.6834061135371179,
+  "root": 0.8755458515283843,
+  "segment": 0.6935483870967742,
+  "segments": 62,
+  "boundary_f1": 0.9032258064516129,
+  "boundary_p": 0.9032258064516129,
+  "boundary_r": 0.9032258064516129,
+  "frames": 916,
+  "golden_segments": 62
+ },
+ {
+  "condition": "B_accomp_plus_bass",
+  "frame": 0.6299126637554585,
+  "root": 0.8558951965065502,
+  "segment": 0.6612903225806451,
+  "segments": 65,
+  "boundary_f1": 0.9291338582677167,
+  "boundary_p": 0.9076923076923077,
+  "boundary_r": 0.9516129032258065,
+  "frames": 916,
+  "golden_segments": 62
+ },
+ {
+  "condition": "B_accomp_plus_bass_rms",
+  "frame": 0.6299126637554585,
+  "root": 0.8558951965065502,
+  "segment": 0.6612903225806451,
+  "segments": 65,
+  "boundary_f1": 0.9291338582677167,
+  "boundary_p": 0.9076923076923077,
+  "boundary_r": 0.9516129032258065,
+  "frames": 916,
+  "golden_segments": 62
+ },
+ {
+  "condition": "C_accomp_only",
+  "frame": 0.6823144104803494,
+  "root": 0.8100436681222707,
+  "segment": 0.7096774193548387,
+  "segments": 66,
+  "boundary_f1": 0.90625,
+  "boundary_p": 0.8787878787878788,
+  "boundary_r": 0.9354838709677419,
+  "frames": 916,
+  "golden_segments": 62
+ },
+ {
+  "condition": "C_accomp_only_rms",
+  "frame": 0.6779475982532751,
+  "root": 0.8209606986899564,
+  "segment": 0.6935483870967742,
+  "segments": 66,
+  "boundary_f1": 0.890625,
+  "boundary_p": 0.8636363636363636,
+  "boundary_r": 0.9193548387096774,
+  "frames": 916,
+  "golden_segments": 62
+ },
+ {
+  "condition": "D_no_vocals",
+  "frame": 0.6462882096069869,
+  "root": 0.8318777292576419,
+  "segment": 0.6451612903225806,
+  "segments": 64,
+  "boundary_f1": 0.9365079365079365,
+  "boundary_p": 0.921875,
+  "boundary_r": 0.9516129032258065,
+  "frames": 916,
+  "golden_segments": 62
+ }
+]

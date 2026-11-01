@@ -1,0 +1,30 @@
+[
+  {
+    "file": "app/web/stem_harmony.py",
+    "sha256": "3679890a32e8c471845edc4e8615806d1e4d92fdf58ed8869cf1355bff67403b"
+  },
+  {
+    "file": "app/web/fusion_worker.py",
+    "sha256": "5ea6f8bc10c1ee3d9248c8ab3128956d79d2784f771ea48d3cd352e8e112b58a"
+  },
+  {
+    "file": "app/web/fusion_engine.py",
+    "sha256": "9247e6c32693a517415759ffcfb1311c90f8f966fe6fbc7b8b9b2ffb6550f338"
+  },
+  {
+    "file": "app/web/pipeline_worker.py",
+    "sha256": "01e6af69f456b8ab2d9046125be21068b119a063439968fdf88aa443cecd8a6c"
+  },
+  {
+    "file": "app/web/server.py",
+    "sha256": "be7d1ed87cf0ea9985e3fa1fee3ffca56253ea75bcd3307c7335b621c6a07b5e"
+  },
+  {
+    "file": "frontend/pipeline.js",
+    "sha256": "5e2095be11d37ec264894372b54f3384389630455cc6e61df57f70ef570d440a"
+  },
+  {
+    "file": "frontend/index.html",
+    "sha256": "43d72f927e6636e462b6d00fcd5616252b9e55dde6615cd709c62d86cc239d9a"
+  }
+]
