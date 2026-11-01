@@ -246,6 +246,12 @@ def main():
         elif job.get("profile") == "guitar_parts":
             from .guitar_parts_worker import execute as execute_guitars
             execute_guitars(store, args.job)
+        elif job.get("profile") == "pipeline":
+            from .pipeline_worker import execute as execute_pipeline
+            execute_pipeline(store, args.job)
+        elif job.get("profile") == "fusion":
+            from .fusion_worker import execute as execute_fusion
+            execute_fusion(store, args.job)
         elif job.get("profile") == "vocal_parts":
             from .vocal_parts_worker import execute as execute_vocals
             execute_vocals(store, args.job)

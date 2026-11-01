@@ -27,6 +27,17 @@ class AnalyzeRequest(BaseModel):
     key_mode: Literal["madmom", "fused", "continuous"] = "madmom"
 
 
+class PipelineRequest(BaseModel):
+    model: str = "bs_roformer_sw"
+    vocal_parts: bool = False
+    guitar_parts: bool = False
+    drums_parts: bool = False
+    guitar_mode: Literal["timbre", "duet"] = "timbre"
+    harmony: bool = False
+    harmony_default: bool = False
+    force_stems: bool = False
+
+
 class SeparateRequest(BaseModel):
     force: bool = False
     model: str = "htdemucs"
@@ -134,8 +145,11 @@ def create_app(store_root=None, manager_factory=Jobs):
 
     @application.get("/api/config")
     def config():
+        from .stems_worker import MODELS
         return dict(profiles=[dict(id=k, name=v) for k, v in PROFILES.items()], max_upload_bytes=MAX_UPLOAD,
                     default_profile="retained10", desktop_version="1.0.0", retained10_max_seconds=600,
+                    stems_models=[dict(id=m["id"], label=m["label"], note=m.get("note", ""),
+                                       stems=m.get("stems", 4)) for m in MODELS.values()],
                     editor_preview=os.environ.get("HARMONY_EDITOR_PREVIEW") == "1")
 
     @application.get("/api/projects")
@@ -208,6 +222,36 @@ def create_app(store_root=None, manager_factory=Jobs):
             project_id, "stems",
             download=not project.get("audio") and project.get("input_type") == "bilibili",
             force=body.force, model=body.model)
+
+    @application.post("/api/projects/{project_id}/pipeline", status_code=202)
+    def pipeline(project_id: str, body: PipelineRequest):
+        from .stems_worker import MODELS
+        if body.model not in MODELS:
+            raise HTTPException(400, "未知的分轨模型")
+        spec = body.model_dump()
+        return application.state.jobs.submit(project_id, "pipeline", key_mode="continuous",
+                                             model=body.model, pipeline=spec,
+                                             force=body.force_stems)
+
+    @application.post("/api/projects/{project_id}/fusion", status_code=202)
+    def fusion(project_id: str, body: SeparateRequest | None = None):
+        body = body or SeparateRequest()
+        return application.state.jobs.submit(project_id, "fusion", key_mode="madmom",
+                                             model=body.model)
+
+    @application.get("/api/projects/{project_id}/stem-fusion")
+    def stem_fusion(project_id: str):
+        project = store.project(project_id)
+        if not project.get("current_run"):
+            raise HTTPException(404, "尚未完成分析")
+        run_dir = store.run_dir(project_id, project["current_run"])
+        result = read_json(run_dir / "analysis.json")
+        source = next((item for item in result.get("sources", [])
+                       if item.get("id") == "stem_fusion"), None)
+        if source is None:
+            raise HTTPException(404, "这次分析还没有分轨融合结果")
+        return dict(source=source, meta=result.get("stem_fusion"),
+                    run_id=project["current_run"])
 
     @application.post("/api/projects/{project_id}/drums-parts", status_code=202)
     def drums_parts(project_id: str, body: SeparateRequest | None = None):
