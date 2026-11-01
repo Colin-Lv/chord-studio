@@ -15,7 +15,7 @@ const state = {
   vocalCatalog: {}, vocalReads: {}, vocalJob: null, vocalPolling: false, vocalNotice: "",
   guitarParts: null, expandGuitars: false,
   viewRequest: 0, keysAttached: false,
-  cellW: 20, rowH: 74, hoverBar: -1, raf: null,
+  cellW: 20, rowH: 74, headerH: 26, zoomed: false, hoverBar: -1, raf: null,
 };
 
 const fmt = seconds => {
@@ -253,6 +253,7 @@ async function start(manifest, request = ++state.viewRequest) {
   updateInfo();
   attachTransport();
   attachGridEvents();
+  attachZoom();
   attachKeys();
   renderClock();
 }
@@ -624,10 +625,13 @@ function layout() {
   const scroll = $("gridScroll");
   const width = scroll.clientWidth || 900;
   const bars = Math.max(1, state.bars.length);
-  state.cellW = clamp(Math.floor(width / bars), 14, 28);
+  const fit = width / bars;
+  if (!state.zoomed) state.cellW = clamp(fit, 3.2, 28);
   state.stepsPerCell = state.cellW >= 18 ? 16 : 4;
   state.rowH = 74;
   document.querySelectorAll(".track-head").forEach(node => { node.style.height = state.rowH + "px"; });
+  const label = $("zoomLabel");
+  if (label && fit > 0) label.textContent = Math.round((state.cellW / fit) * 100) + "%";
 }
 
 function timeForX(x) {
@@ -680,9 +684,10 @@ function cellValues(track, barIndex) {
 
 function drawGrid() {
   if (!state.tracks.length || !state.bars.length) return;
+  const headerH = state.headerH;
   const canvas = $("gridCanvas");
   const width = state.bars.length * state.cellW;
-  const height = state.tracks.length * state.rowH;
+  const height = headerH + state.tracks.length * state.rowH;
   const dpr = window.devicePixelRatio || 1;
   canvas.style.width = width + "px";
   canvas.style.height = height + "px";
@@ -698,18 +703,38 @@ function drawGrid() {
   overlay.height = Math.round(height * dpr);
 
   ctx.clearRect(0, 0, width, height);
+
+  /* chord names live inside the canvas, so they always sit on their bar */
+  ctx.fillStyle = "#232120";
+  ctx.fillRect(0, 0, width, headerH);
+  ctx.textBaseline = "middle";
+  ctx.font = "600 11px ui-monospace, Consolas, monospace";
+  let lastChordX = -Infinity;
+  for (const chord of state.chords || []) {
+    const x = chord.bar * state.cellW;
+    if (x - lastChordX < 34) continue;
+    ctx.fillStyle = "#e7ddc9";
+    ctx.fillText(chord.label, x + 5, headerH / 2 + 1);
+    lastChordX = x;
+  }
+  ctx.strokeStyle = "rgba(255,255,255,.08)";
+  ctx.beginPath();
+  ctx.moveTo(0, headerH + 0.5);
+  ctx.lineTo(width, headerH + 0.5);
+  ctx.stroke();
+
+  const loudest = Math.max(...state.tracks.map(item => item.rms_db ?? -100));
   state.tracks.forEach((track, row) => {
-    const y = row * state.rowH;
+    const y = headerH + row * state.rowH;
     const audible = state.solo ? state.solo === track.id : !state.muted[track.id];
-    ctx.fillStyle = row % 2 ? "#141d20" : "#151f22";
+    ctx.fillStyle = row % 2 ? "#1b1a18" : "#201e1b";
     ctx.fillRect(0, y, width, state.rowH);
-    ctx.globalAlpha = audible ? 1 : 0.32;
-    const loudest = Math.max(...state.tracks.map(item => item.rms_db ?? -100));
+    ctx.globalAlpha = audible ? 1 : 0.3;
     const levelScale = Math.max(0.18, Math.min(1, Math.pow(10, ((track.rms_db ?? -100) - loudest) / 30)));
     const inner = 7;
     state.bars.forEach((bar, b) => {
       const x = b * state.cellW;
-      ctx.fillStyle = hexToRgba(track.color, 0.06);
+      ctx.fillStyle = hexToRgba(track.color, 0.05);
       roundRect(ctx, x + 1, y + inner, state.cellW - 2, state.rowH - inner * 2, 5);
       ctx.fill();
       const values = cellValues(track, b);
@@ -723,7 +748,7 @@ function drawGrid() {
       });
     });
     ctx.globalAlpha = 1;
-    ctx.strokeStyle = "#ffffff10";
+    ctx.strokeStyle = "rgba(255,255,255,.06)";
     ctx.beginPath();
     ctx.moveTo(0, y + state.rowH + 0.5);
     ctx.lineTo(width, y + state.rowH + 0.5);
@@ -732,9 +757,9 @@ function drawGrid() {
 
   for (let b = 0; b <= state.bars.length; b += 1) {
     const x = b * state.cellW + 0.5;
-    ctx.strokeStyle = b % 4 === 0 ? "#ffffff22" : "#ffffff0c";
+    ctx.strokeStyle = b % 4 === 0 ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.05)";
     ctx.beginPath();
-    ctx.moveTo(x, 0);
+    ctx.moveTo(x, headerH);
     ctx.lineTo(x, height);
     ctx.stroke();
   }
@@ -743,31 +768,34 @@ function drawGrid() {
 
 function drawOverlay() {
   if (!state.tracks.length) return;
+  const headerH = state.headerH;
   const canvas = $("overlayCanvas");
   const ctx = canvas.getContext("2d");
   const dpr = window.devicePixelRatio || 1;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   const width = state.bars.length * state.cellW;
-  const height = state.tracks.length * state.rowH;
+  const height = headerH + state.tracks.length * state.rowH;
   ctx.clearRect(0, 0, width, height);
 
   if (state.hoverBar >= 0 && state.hoverBar < state.bars.length) {
-    ctx.fillStyle = "#ffffff08";
-    ctx.fillRect(state.hoverBar * state.cellW, 0, state.cellW, height);
+    ctx.fillStyle = "rgba(255,255,255,.045)";
+    ctx.fillRect(state.hoverBar * state.cellW, headerH, state.cellW, height - headerH);
   }
   const current = currentBarIndex();
-  if (current >= 0) {
-    ctx.strokeStyle = "#b6e7ce44";
-    ctx.strokeRect(current * state.cellW + 0.5, 0.5, state.cellW - 1, height - 1);
+  if (current >= 0 && !state.playing) {
+    ctx.strokeStyle = "rgba(255,255,255,.10)";
+    ctx.strokeRect(current * state.cellW + 0.5, headerH + 0.5, state.cellW - 1, height - headerH - 1);
   }
   if (state.loopBar && state.loopIndex >= 0) {
-    ctx.strokeStyle = "#ebc894aa";
+    ctx.fillStyle = "rgba(201,162,39,.10)";
+    ctx.fillRect(state.loopIndex * state.cellW, headerH, state.cellW, height - headerH);
+    ctx.strokeStyle = "#c9a227cc";
     ctx.lineWidth = 2;
-    ctx.strokeRect(state.loopIndex * state.cellW + 1, 1, state.cellW - 2, height - 2);
+    ctx.strokeRect(state.loopIndex * state.cellW + 1, headerH + 1, state.cellW - 2, height - headerH - 2);
     ctx.lineWidth = 1;
   }
   const x = xForTime(currentTime());
-  ctx.strokeStyle = "#ebc894";
+  ctx.strokeStyle = "#d2653a";
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(x, 0);
@@ -844,18 +872,6 @@ function buildRuler() {
     if (index % 4 === 0) span.className = "bar-start";
     ruler.appendChild(span);
   });
-  // Chord names above the bar numbers, only where a new chord starts and where they fit.
-  let lastX = -Infinity;
-  for (const chord of state.chords || []) {
-    const x = chord.bar * state.cellW;
-    if (x - lastX < 34) continue;
-    const node = document.createElement("span");
-    node.className = "chord";
-    node.textContent = chord.label;
-    node.style.left = x + "px";
-    ruler.appendChild(node);
-    lastX = x;
-  }
 }
 
 /* ------------------------------------------------------------------ transport */
@@ -958,13 +974,29 @@ function attachTransport() {
 
 function attachGridEvents() {
   const wrap = $("canvasWrap");
-  wrap.onmousemove = event => {
+  const scroll = $("gridScroll");
+  let drag = null;
+
+  wrap.addEventListener("pointerdown", event => {
+    if (event.button !== 0) return;
+    drag = { x: event.clientX, left: scroll.scrollLeft, moved: false };
+    wrap.style.cursor = "grabbing";
+    wrap.setPointerCapture(event.pointerId);
+  });
+  wrap.addEventListener("pointermove", event => {
     const rect = wrap.getBoundingClientRect();
     const bar = clamp(Math.floor((event.clientX - rect.left) / state.cellW), 0, state.bars.length - 1);
     if (bar !== state.hoverBar) { state.hoverBar = bar; drawOverlay(); }
-  };
-  wrap.onmouseleave = () => { state.hoverBar = -1; drawOverlay(); };
-  wrap.onclick = event => {
+    if (!drag) return;
+    const delta = event.clientX - drag.x;
+    if (Math.abs(delta) > 3) drag.moved = true;
+    if (drag.moved) scroll.scrollLeft = drag.left - delta;
+  });
+  const finish = event => {
+    wrap.style.cursor = "grab";
+    const moved = drag && drag.moved;
+    drag = null;
+    if (moved) return;
     const rect = wrap.getBoundingClientRect();
     const x = event.clientX - rect.left;
     if (state.loopBar) {
@@ -975,6 +1007,36 @@ function attachGridEvents() {
     if (!state.playing) play();
     drawOverlay();
   };
+  wrap.addEventListener("pointerup", finish);
+  wrap.addEventListener("pointercancel", () => { drag = null; wrap.style.cursor = "grab"; });
+  wrap.addEventListener("pointerleave", () => { state.hoverBar = -1; drawOverlay(); });
+  wrap.style.cursor = "grab";
+}
+
+function setZoom(next, anchorX) {
+  const scroll = $("gridScroll");
+  const bars = Math.max(1, state.bars.length);
+  const fit = (scroll.clientWidth || 900) / bars;
+  const target = clamp(next, Math.max(5, fit * 0.3), 160);
+  const px = anchorX === undefined ? scroll.clientWidth / 2 : anchorX;
+  const anchorTime = timeForX(scroll.scrollLeft + px);
+  state.cellW = target;
+  state.zoomed = Math.abs(target - fit) > 0.6;
+  layout(); buildRuler(); drawGrid();
+  scroll.scrollLeft = Math.max(0, xForTime(anchorTime) - px);
+}
+
+function attachZoom() {
+  $("zoomIn").onclick = () => setZoom(state.cellW * 1.35);
+  $("zoomOut").onclick = () => setZoom(state.cellW / 1.35);
+  $("zoomFit").onclick = () => { state.zoomed = false; layout(); buildRuler(); drawGrid(); };
+  const scroll = $("gridScroll");
+  scroll.addEventListener("wheel", event => {
+    if (!(event.ctrlKey || event.metaKey)) return;
+    event.preventDefault();
+    const rect = scroll.getBoundingClientRect();
+    setZoom(state.cellW * (event.deltaY < 0 ? 1.12 : 1 / 1.12), event.clientX - rect.left);
+  }, { passive: false });
 }
 
 function attachKeys() {

@@ -981,3 +981,78 @@ html[data-mode="user"] #sourceTitle::before {
 
 /* the chord strip is the musical map, not decoration */
 .chord-strip { filter: contrast(1.06); }
+
+/* ---------- stems console: charcoal instead of green-black ---------- */
+
+body.stems-page .stems-grid-panel {
+  background: #171512;
+  border-color: #2c2723;
+  padding: 10px 12px 12px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+body.stems-page .track-heads { background: #171512; }
+body.stems-page .ruler { height: 22px; }
+body.stems-page .ruler span { font-size: 9.5px; color: #8b8377; }
+body.stems-page .ruler span.bar-start { color: #ded5c4; }
+body.stems-page .ruler-spacer { height: 22px; }
+body.stems-page .grid-scroll { scrollbar-color: #4a443b transparent; }
+body.stems-page .track-head { border-bottom: 1px solid rgba(255, 255, 255, .06); }
+body.stems-page .track-head .track-name strong { color: #ece5d7; }
+body.stems-page .track-head .track-name small { color: #8b8377; }
+body.stems-page .track-head button,
+body.stems-page .track-download {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  background: rgba(255, 255, 255, .06);
+  color: #e9e2d4;
+  font-size: 11px;
+  text-decoration: none;
+  padding: 0;
+}
+body.stems-page .track-head button:hover,
+body.stems-page .track-download:hover { background: rgba(255, 255, 255, .12); }
+body.stems-page .track-head button[aria-pressed="true"] { background: #b4471f; border-color: #b4471f; color: #fff8f4; }
+
+body.stems-page .play {
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  line-height: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  background: #1c1a17;
+  color: #f6f1e7;
+  flex: 0 0 46px;
+}
+body.stems-page .play:hover { background: #b4471f; }
+
+.zoom-group { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.zoom-button {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1;
+}
+.zoom-button:hover { border-color: var(--ink-2); }
+.zoom-label { min-width: 40px; text-align: center; font: 11px var(--mono); color: var(--muted); }
+.zoom-fit {
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 11px;
+}
+.zoom-fit:hover { border-color: var(--ink-2); color: var(--ink); }
+body.stems-page .transport-right { margin-left: 12px; }
