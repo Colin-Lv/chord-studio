@@ -10,7 +10,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 
 
-def release(destination, version='1.1.0'):
+def release(destination, version='1.1.1'):
     destination = Path(destination).resolve()
     if destination.exists() and any(destination.iterdir()):
         raise ValueError('请使用空的发布目录')
@@ -46,5 +46,5 @@ def release(destination, version='1.1.0'):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--version',default='1.1.0')
+    p.add_argument('--version',default='1.1.1')
     a=p.parse_args();print(release(a.destination,a.version))

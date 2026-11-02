@@ -7,23 +7,40 @@ window.HarmonicKeyTimeline = (() => {
   const time=t=>`${String(Math.floor(t/60)).padStart(2,"0")}:${(t%60).toFixed(2).padStart(5,"0")}`;
   function render(result,source,seek){
     const panel=document.getElementById("harmonicKeyTimeline");if(!panel)return;
-    panel.replaceChildren(el("h3","局部调性与转调 · 和弦推理 v3"));
+    panel.replaceChildren(el("h3","主调与转调解析"));
     const data=result?.harmonic_keys?.[source?.id];
+    if(data && ((data.run_id && data.run_id!==result.run_id) || (data.source_sha256 && data.source_sha256!==source?.sha256))){
+      panel.append(el("p","调性记录与当前和弦来源不匹配，请重新分析后查看。","muted"));return;
+    }
     if(!data||data.status!=="computed"){
       panel.append(el("p",data?.reason||"此和弦来源尚无调性时间线。重新分析后生成。","muted"));return;
     }
-    panel.append(el("p",`${data.source_name} · 开始：${name(data.start_key)} → 结束：${name(data.end_key)} · 按有效时长汇总：${name(data.main_key)}`));
-    panel.append(el("p","点击区间定位试听。以下均为模型推断；转调边界是和弦边界上的候选位置。关系大小调、借用和弦仍可能有不同解释。","muted"));
+    const summary=el("div",undefined,"tonal-summary");
+    for(const [label,value] of [["和弦推理主调",name(data.main_key)],["开始调性",name(data.start_key)],["结束调性",name(data.end_key)],["转调候选",`${data.changes.length} 处`]]){
+      const item=el("div");item.append(el("span",label,"field-label"),el("strong",value));summary.append(item);
+    }
+    panel.append(summary);
+    panel.append(el("p",`依据：${data.source_name||source.name||source.id}。全曲主调按有效调区时长汇总；逐段比较和弦的调内关系、主和弦与属到主进行。`,"muted"));
+    panel.append(el("p","点击区间定位试听，展开下方段落查看和弦依据。以下为模型推断，转调位置仍可结合原曲校对。","muted"));
     const strip=el("div",undefined,"tonal-strip");strip.setAttribute("aria-label","调性段落时间线");
     for(const s of data.segments){
       const button=el("button",`${time(s.start)}–${time(s.end)}　${name(s.key)}${s.status==="ambiguous"?" · 存在竞争解释":""}`,"secondary tonal-region");
       button.style.flexGrow=String(Math.max(1,s.end-s.start));button.onclick=()=>seek(s.start);strip.append(button);
     }
     panel.append(strip);
+    if(!data.changes.length)panel.append(el("p","当前和弦序列未推断出独立转调段落。","tonal-change-note"));
+    else{
+      const changes=el("div",undefined,"tonal-changes");
+      for(const change of data.changes){
+        const jump=el("button",`${time(change.time)}　${name(change.from_key)} → ${name(change.to_key)}`,"text-button");
+        jump.onclick=()=>seek(change.time);changes.append(jump);
+      }
+      panel.append(changes);
+    }
     for(const [index,s] of data.segments.entries()){
       const details=el("details",undefined,"tonal-detail");
-      details.append(el("summary",`${index+1}. ${time(s.start)}–${time(s.end)}　${name(s.key)}${s.start_bar!=null?` · 小节 ${s.start_bar}–${s.end_bar??"?"}`:""}`));
-      const change=data.changes[index-1];
+      details.append(el("summary",`${index+1}. ${time(s.start)}–${time(s.end)}　${name(s.key)}${s.start_bar!=null?` · 小节 ${s.start_bar}–${s.end_bar??"?"}`:""} · 查看推理依据`));
+      const change=data.changes.find(c=>Math.abs(c.time-s.start)<1e-6);
       if(change)details.append(el("p",`${name(change.from_key)} → ${name(change.to_key)}：候选位置 ${time(change.time)}；相邻和弦范围 ${time(change.boundary_interval[0])}–${time(change.boundary_interval[1])}。这个范围不是统计置信区间。`));
       if(change?.first_distinctive_chord!=null)details.append(el("p",`首个新调调内、旧调非调内的和弦：${time(change.first_distinctive_chord)}${change.first_authentic_arrival!=null?`；属到主建立：${time(change.first_authentic_arrival)}`:"；尚无明确属到主到达"}。`));
       details.append(el("p",`竞争候选：${s.candidates.map(c=>`${name(c.key)}（${c.score.toFixed(2)}）`).join("、")}。分数仅用于排序，不是概率。`,"muted"));

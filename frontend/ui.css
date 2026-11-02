@@ -765,6 +765,23 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
 .tonal-detail { margin: 10px 0; padding: 10px 0; border-top: 1px solid var(--line); }
 .tonal-detail summary { cursor: pointer; }
 .harmonic-key-timeline { overflow-x: auto; padding: 20px 22px; }
+.tonal-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0; }
+.tonal-summary > div { background:var(--paper); padding:14px 18px; border-radius:12px; }
+.tonal-summary strong { display:block; margin-top:5px; font-size:22px; font-weight:600; color:var(--ink); }
+.tonal-changes { display:flex; flex-wrap:wrap; gap:8px 20px; padding:12px 0; }
+.tonal-detail { padding:12px 0; border-top:1px solid var(--line); }
+.tonal-detail > summary { line-height:1.7; color:var(--ink-2); }
+.tonal-detail table { margin-top:14px; }
+.tonal-change-note { color:var(--muted); }
+@media(max-width:650px){.tonal-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.tonal-summary strong{font-size:19px}}
+
+/* Explicit native scrollbar colors also cover desktop WebView system themes. */
+.chord-rows { color-scheme:light; scrollbar-color:#b8b0a1 var(--paper); }
+.chord-rows::-webkit-scrollbar { width:12px; height:12px; }
+.chord-rows::-webkit-scrollbar-track,.chord-rows::-webkit-scrollbar-corner { background:var(--paper); }
+.chord-rows::-webkit-scrollbar-thumb { background:#b8b0a1; border:3px solid var(--paper); border-radius:10px; }
+.chord-rows::-webkit-scrollbar-thumb:hover { background:#918777; }
+.chord-rows::-webkit-scrollbar-button { background:var(--paper); }
 
 .loop-source-note { margin: 15px 0 6px; font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
 .loop-evidence { flex: 1 1 270px; min-width: 0; border: 1px solid #e6d8b8; border-radius: 12px; background: #fdf9ef; }

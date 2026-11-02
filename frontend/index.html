@@ -5,9 +5,9 @@
   <title>Chord Studio</title>
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/bar-editor.css">
-  <link rel="stylesheet" href="/assets/ui.css">
+  <link rel="stylesheet" href="/assets/ui.css?v=20261102-tonality">
   <link rel="stylesheet" href="/assets/chord-grid.css?v=20261102">
-  <script defer src="/assets/modes.js"></script><script defer src="/assets/key-listening-handoff.js"></script><script defer src="/assets/notation.js"></script><script defer src="/assets/key-listening-history.js"></script><script defer src="/assets/local-key-review.js"></script><script defer src="/assets/source-comparison.js"></script><script defer src="/assets/bar-editor.js"></script><script defer src="/assets/score-reference.js"></script><script defer src="/assets/reference-comparison.js"></script><script defer src="/assets/source-draft.js"></script><script defer src="/assets/structure-review.js"></script><script defer src="/assets/harmonic-key.js"></script><script defer src="/assets/timeline-time.js"></script><script defer src="/assets/chord-grid.js?v=20261102"></script><script defer src="/assets/app.js?v=bar-grid-20261102"></script>
+  <script defer src="/assets/modes.js"></script><script defer src="/assets/key-listening-handoff.js"></script><script defer src="/assets/notation.js"></script><script defer src="/assets/key-listening-history.js"></script><script defer src="/assets/local-key-review.js"></script><script defer src="/assets/source-comparison.js"></script><script defer src="/assets/bar-editor.js"></script><script defer src="/assets/score-reference.js"></script><script defer src="/assets/reference-comparison.js"></script><script defer src="/assets/source-draft.js"></script><script defer src="/assets/structure-review.js"></script><script defer src="/assets/harmonic-key.js?v=20261102-tonality"></script><script defer src="/assets/timeline-time.js"></script><script defer src="/assets/chord-grid.js?v=20261102"></script><script defer src="/assets/app.js?v=bar-grid-20261102"></script>
   <script defer src="/assets/pipeline.js"></script><script defer src="/assets/desktop.js"></script>
 <link rel="stylesheet" href="/assets/task-queue.css"><script defer src="/assets/task-queue.js"></script>
 </head>
@@ -136,7 +136,7 @@
           <div class="key-controls">
             <label for="keySelect">调整主调</label>
             <select id="keySelect"></select>
-            <button id="resetKey" class="text-button audit-only">恢复自动估计</button>
+            <button id="resetKey" class="text-button">恢复自动估计</button>
             <button id="adoptChordKey" class="secondary" hidden></button>
           </div>
           <div class="display-switch" aria-label="和弦记法">
@@ -155,7 +155,7 @@
           <a id="exportKeyReview" class="text-link" download="key_review.json">主调审阅 JSON ↓</a>
         </section>
 
-        <section id="harmonicKeyTimeline" class="panel harmonic-key-timeline audit-only" aria-live="polite"></section>
+        <section id="harmonicKeyTimeline" class="panel harmonic-key-timeline" aria-live="polite" aria-label="主调与转调解析"></section>
         <section id="keyEvidence" class="panel key-evidence audit-only" hidden aria-live="polite"></section>
         <section id="keyExperimental" class="panel key-experimental audit-only" hidden aria-live="polite"></section>
         <div id="resultModel" class="result-note audit-only"></div>

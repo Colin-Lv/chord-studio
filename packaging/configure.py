@@ -21,7 +21,7 @@ def write(path, payload):
     pending.replace(path)
 
 
-def configure(home, data, backend_dir=None, publish=True, version='1.1.0'):
+def configure(home, data, backend_dir=None, publish=True, version='1.1.1'):
     home=Path(home).resolve();data=Path(data).resolve()
     backend=Path(backend_dir).resolve() if backend_dir else home/'backend'
     runtime=home/'runtime'
