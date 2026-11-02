@@ -289,11 +289,21 @@
     ]
   },
   "test_suite": {
-    "python_passed": 988,
+    "python_passed": 989,
     "python_skipped_private_corpora": 2,
     "python_expected_failures": 1,
     "python_subtests": 18,
     "frontend_passed": 17,
-    "gpu_kernel_mock_test": "passed in GPU environment"
+    "gpu_kernel_mock_test": "passed in GPU environment",
+    "clean_committed_source": true
+  },
+  "release_validation": {
+    "application_files": 419,
+    "application_matches_committed_source": true,
+    "independent_install_from_clean_source": true,
+    "native_webview_smoke_exit_code": 0,
+    "frozen_model_hashes_verified": true,
+    "windows_zip_bytes": 8057179,
+    "windows_zip_sha256": "fb7e813ab66da6f8b4b3d12b11a893177dc4ba4a0b50524d7b91459dc8cc9f5a"
   }
 }
