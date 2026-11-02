@@ -270,5 +270,30 @@
         "verification": "job record, project current_run and saved analysis; initial checker used incorrect GET endpoint"
       }
     ]
+  },
+  "installed_optional_workflows": {
+    "workflow_results": [
+      {
+        "task": "standard",
+        "status": "completed",
+        "seconds": 17.301,
+        "tracks": 4,
+        "duration": 16.0
+      },
+      {
+        "task": "reconstruction",
+        "status": "completed",
+        "seconds": 87.735,
+        "manifest_available": true
+      }
+    ]
+  },
+  "test_suite": {
+    "python_passed": 988,
+    "python_skipped_private_corpora": 2,
+    "python_expected_failures": 1,
+    "python_subtests": 18,
+    "frontend_passed": 17,
+    "gpu_kernel_mock_test": "passed in GPU environment"
   }
 }
