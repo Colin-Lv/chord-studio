@@ -27,4 +27,15 @@ def test_builder_refuses_to_overwrite_existing_installation(tmp_path):
     (tmp_path/'user-file.txt').write_text('keep me')
     with pytest.raises(ValueError,match='empty staging'):
         build.build(tmp_path)
+
+
+def test_frozen_model_bytes_survive_source_checkout():
+    import hashlib,json
+    folder=ROOT/'inference/model'
+    manifest=json.loads((folder/'manifest.json').read_text(encoding='utf8'))
+    for name,expected in manifest['files_sha256'].items():
+        assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==expected,name
+    migration=json.loads((ROOT/'app/web/models/strings_cache_migration.json').read_text(encoding='utf8'))
+    for name,expected in migration['new_code'].items():
+        assert hashlib.sha256((ROOT/'app/web'/name).read_bytes()).hexdigest()==expected,name
     assert (tmp_path/'user-file.txt').read_text()=='keep me'
