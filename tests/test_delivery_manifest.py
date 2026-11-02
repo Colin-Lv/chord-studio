@@ -27,6 +27,7 @@ def test_builder_refuses_to_overwrite_existing_installation(tmp_path):
     (tmp_path/'user-file.txt').write_text('keep me')
     with pytest.raises(ValueError,match='empty staging'):
         build.build(tmp_path)
+    assert (tmp_path/'user-file.txt').read_text()=='keep me'
 
 
 def test_frozen_model_bytes_survive_source_checkout():
@@ -38,4 +39,3 @@ def test_frozen_model_bytes_survive_source_checkout():
     migration=json.loads((ROOT/'app/web/models/strings_cache_migration.json').read_text(encoding='utf8'))
     for name,expected in migration['new_code'].items():
         assert hashlib.sha256((ROOT/'app/web'/name).read_bytes()).hexdigest()==expected,name
-    assert (tmp_path/'user-file.txt').read_text()=='keep me'
