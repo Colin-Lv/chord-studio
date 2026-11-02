@@ -17,7 +17,17 @@ def cnn_fixture():
 
 
 def harmonic_fixture():
-    return read_json(ROOT/'benchmarks/reports/harmonic_key_v2_20261006/regressions/xuni/report.json')['rows'][0]['prediction']
+    # Structural invariance tests need complete evidence, not a private song.
+    modes={}
+    for i,tonic in enumerate(NOTES):
+        modes[tonic]=[]
+        for j,mode in enumerate(['major','minor']):
+            components={field:(i+1)/(20+k+j) for k,field in enumerate(HARMONIC_FIELDS[4:])}
+            components['loop']=.1*(i%3)
+            modes[tonic].append(dict(mode=mode,score=.8-i*.02-j*.01+.2*components['loop'],
+                centre_score=.9-i*.03+.2*components['loop'],components=components))
+    return dict(schema='harmonic_tonic_mode_v2',stage='G_full',key='C',policy={'loop_weight':.2},
+                mode_candidates_by_tonic=modes)
 
 
 def toy_records(n=12):

@@ -52,7 +52,10 @@ class Jobs:
     def shutdown(self):pass
 
 
-def test_api_exports_only_manifest_files_and_preserves_harmony(tmp_path):
+def test_api_exports_only_manifest_files_and_preserves_harmony(tmp_path,monkeypatch):
+    import sys
+    # This is an API/manifest test with a fake queue, not a local model install.
+    monkeypatch.setattr('app.web.reconstruction_worker.PYTHON',Path(sys.executable))
     app=create_app(tmp_path,manager_factory=Jobs);store=app.state.store
     pid=uuid4().hex;gen=uuid4().hex;folder=store.project_dir(pid);folder.mkdir()
     audio=folder/'song.wav';audio.write_bytes(b'identity')
