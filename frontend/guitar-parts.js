@@ -104,7 +104,7 @@ const GuitarParts = (() => {
           job.stage_label = "进度读取中断，正在重连";render();await sleep();continue;
         }
         job = row;render();
-        if (["failed", "interrupted"].includes(row.status)) throw new Error(row.error || "吉他细分失败，请重试。");
+        if (["failed", "interrupted", "cancelled"].includes(row.status)) throw new Error(row.error || "吉他细分失败，请重试。");
         if (row.status === "completed") {
           await refresh();
           if (error) { job.stage_label = "任务完成，正在重试读取结果";render();await sleep();continue; }

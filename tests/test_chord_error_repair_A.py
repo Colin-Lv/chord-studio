@@ -157,7 +157,11 @@ def test_quality_target_is_independent_of_equivalent_base_quality_spelling():
 def test_real_legacy_cases_preserve_sixteenth_events_and_conflicts():
     root=Path(__file__).resolve().parents[1]
     cases=root/'exports/manual_model_comparison_20261006/cases'
+    if not all((cases/cid/'summary.json').is_file() for cid in ['01_yorushika','07_laonanhai','09_gurenge']):
+        pytest.skip('Optional private legacy comparison corpus is not installed')
     source=lambda cid:json.loads((cases/cid/'summary.json').read_text(encoding='utf-8'))['manual_source']
+    if not all((root/source(cid)).is_file() for cid in ['01_yorushika','07_laonanhai','09_gurenge']):
+        pytest.skip('Optional private manual annotations are not installed')
     y=json.loads((root/source('01_yorushika')).read_text(encoding='utf-8'))
     r=normalize(y);fast=[e for e in r['canonical_events'] if e['bar']==97]
     assert len(fast)==16 and min(e['end']-e['start'] for e in fast)>.11

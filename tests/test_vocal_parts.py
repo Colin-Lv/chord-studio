@@ -75,7 +75,7 @@ def test_drums_urls_keep_selected_model(tmp_path,monkeypatch):
 
 
 @pytest.mark.parametrize('profile',['stems','vocal_parts'])
-def test_jobs_preserve_analysis_and_model_cache(tmp_path,monkeypatch,profile):
+def test_jobs_preserve_analysis_and_model_cache(tmp_path,monkeypatch,profile,fake_job_process):
     import threading
     from app.web.jobs import Jobs as RealJobs
     from app.web.storage import Store,read_json
@@ -85,8 +85,8 @@ def test_jobs_preserve_analysis_and_model_cache(tmp_path,monkeypatch,profile):
         project.update(current_run='frozen-analysis',stems={'bs_roformer_sw':{'sha256':'unchanged'}})
         store.save_project(project)
         atomic_json(store.job_path(jid),dict(id=jid,project_id=pid,profile=profile,status='queued'))
-        manager=object.__new__(RealJobs);manager.store=store;manager.lock=threading.RLock();manager.python='python'
-        monkeypatch.setattr('app.web.jobs.subprocess.run',lambda *a,**kw:None)
+        manager=object.__new__(RealJobs);manager.store=store;manager.lock=threading.RLock();manager.python='python';manager.processes={};manager.cancel_requested=set()
+        fake_job_process()
         manager._execute(jid)
         actual=store.project(pid)
         assert actual['current_run']=='frozen-analysis'

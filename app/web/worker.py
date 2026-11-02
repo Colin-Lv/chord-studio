@@ -194,7 +194,8 @@ def execute(store, job_id):
             atomic_json(output / "key_fusion.json", result)
             return result
         key_fusion = stage("key_fusion", "独立和声证据与调性冲突检查 · 实验", fuse_key)
-    sources = [dict(id=name, name=title, path=str(path.relative_to(output)), **signature(path), rows=lab_rows(path)) for name, title, path in paths]
+    from .source_rows import source_for_audio
+    sources = [source_for_audio(name,title,path,output,duration) for name,title,path in paths]
     acoustic = [s for s in sources if s["id"] in {"raw_madmom", "chordino", "largevocab"}]
     for source in sources:
         review_candidates(source["rows"], acoustic)
@@ -232,6 +233,8 @@ def execute(store, job_id):
 
 
 def main():
+    from .job_process import wait_for_release
+    wait_for_release()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--store", type=Path, required=True)
     parser.add_argument("--job", required=True)
@@ -239,8 +242,14 @@ def main():
     store = Store(args.store)
     try:
         job = read_json(store.job_path(args.job))
-        if job.get("profile") == "stems":
-            from .stems_worker import execute as execute_stems
+        if job.get("profile") == "reconstruction":
+            from .reconstruction_worker import execute as execute_reconstruction
+            execute_reconstruction(store, args.job)
+        elif job.get("profile") == "piano":
+            from .piano_worker import execute as execute_piano
+            execute_piano(store, args.job)
+        elif job.get("profile") == "stems":
+            from .stems_worker import execute_with_parts as execute_stems
             execute_stems(store, args.job)
         elif job.get("profile") == "drums_parts":
             from .drums_worker import execute as execute_drums

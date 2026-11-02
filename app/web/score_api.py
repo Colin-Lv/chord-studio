@@ -64,6 +64,11 @@ def verified_label(store, project_id, event):
 def register_scores(application, store, save_lock):
     router = APIRouter()
 
+    @router.get('/api/score-capabilities')
+    def score_capabilities():
+        from .printed_score_ocr import available
+        return dict(printed_ocr=available())
+
     @router.get("/api/projects/{project_id}/score-references")
     def list_references(project_id: str):
         result = store.result(project_id)

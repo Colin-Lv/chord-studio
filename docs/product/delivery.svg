@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810"><style>text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#211e19}.muted{fill:#797369}.white{fill:#fff}.small{font-size:21px}.body{font-size:26px}.heading{font-size:34px;font-weight:700}</style>
+<rect width="1440" height="810" fill="#f6f3eb"/>
+<text x="64" y="60" font-size="19" style="fill:#b94720;font-weight:700">CHORD STUDIO</text>
+<text x="64" y="132" font-size="49" style="fill:#211e19;font-weight:700">安装一次，按需要扩展</text>
+<text x="64" y="181" font-size="23" style="fill:#797369;font-weight:400">主程序 + 自动配置的运行环境 + 可选模型包</text>
+<rect x="64" y="248" width="1312" height="106" rx="22" fill="#211e19"/>
+<text x="94" y="313" font-size="22" style="fill:#aedcc4;font-weight:700">01</text>
+<text x="164" y="313" font-size="31" style="fill:#fff;font-weight:700">主程序</text>
+<text x="510" y="313" font-size="25" style="fill:#fff;font-weight:400">桌面工作台 · 和弦模型 · 小节视图 · 任务队列</text>
+<rect x="64" y="374" width="1312" height="106" rx="22" fill="#e3eee7"/>
+<text x="94" y="439" font-size="22" style="fill:#b94720;font-weight:700">02</text>
+<text x="164" y="439" font-size="31" style="fill:#211e19;font-weight:700">自动运行环境</text>
+<text x="510" y="439" font-size="25" style="fill:#211e19;font-weight:400">独立 Python · 音频工具 · 共享 PyTorch / CUDA</text>
+<rect x="64" y="500" width="1312" height="106" rx="22" fill="#fff"/>
+<text x="94" y="565" font-size="22" style="fill:#b94720;font-weight:700">03</text>
+<text x="164" y="565" font-size="31" style="fill:#211e19;font-weight:700">可选模型包</text>
+<text x="510" y="565" font-size="25" style="fill:#211e19;font-weight:400">提琴组 / 吉他 / 人声 / 鼓组 / 钢琴 / 整曲 MIDI</text>
+<text x="64" y="692" font-size="29" style="fill:#211e19;font-weight:700">Windows 10 / 11 x64</text>
+<text x="64" y="734" font-size="24" style="fill:#797369;font-weight:400">模型校验与断点下载；升级保留项目，卸载保留音乐材料。</text>
+<text x="64" y="784" font-size="20" style="fill:#797369;font-weight:400">NVIDIA GPU 可用时启用 CUDA；无需自行安装 Python、CUDA Toolkit 或编译器。</text>
+</svg>

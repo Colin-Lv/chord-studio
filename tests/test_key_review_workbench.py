@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 import pytest
+from fastapi import HTTPException
 from fastapi.testclient import TestClient
 from app.web.server import create_app
 from app.web.storage import Store, atomic_json, signature
@@ -63,7 +64,12 @@ def test_identity_mismatch_not_reused(client):
 
 
 def test_actual_frozen_xuni_inputs():
-    store=Store();s=key_review.state(store,'087d8b0c86414fe6b675cc622f505128')
+    store=Store();pid='087d8b0c86414fe6b675cc622f505128'
+    try: project=store.project(pid)
+    except (FileNotFoundError,HTTPException): pytest.skip('Optional private song fixture is not installed')
+    if not (store.project_dir(pid)/project.get('audio','missing')).is_file():
+        pytest.skip('Optional private song audio is not installed')
+    s=key_review.state(store,pid)
     assert s['automatic']['key']=='G' and s['suggestion']['prediction']['key']=='C'
     assert not s['automatic_override_enabled']
     assert s['suggestion']['prediction']['mode_candidates_by_tonic']['C'][0]['components']['cadence_count']==0

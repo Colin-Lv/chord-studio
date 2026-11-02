@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "purpose": "Prebuilt unmodified upstream sdists; users need no C/C++ compiler.",
+  "files": [
+    {
+      "name": "antlr4_python3_runtime-4.9.3-py3-none-any.whl",
+      "package": "antlr4-python3-runtime",
+      "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/antlr4_python3_runtime-4.9.3-py3-none-any.whl",
+      "bytes": 144615,
+      "sha256": "2d8524372ec9282a66c194cb9e1d173cb53a025f6d31cc6ab2da64eac7c25233"
+    },
+    {
+      "name": "madmom-0.16.1-cp39-cp39-win_amd64.whl",
+      "package": "madmom",
+      "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/madmom-0.16.1-cp39-cp39-win_amd64.whl",
+      "bytes": 19995347,
+      "sha256": "b93205ff6cfe28af3ec45ce4d2cc541e575fd405fc1c405f9562465f04931b15"
+    },
+    {
+      "name": "ncls-0.0.71-cp313-cp313-win_amd64.whl",
+      "package": "ncls",
+      "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/ncls-0.0.71-cp313-cp313-win_amd64.whl",
+      "bytes": 970965,
+      "sha256": "0d608801ddc7664f402cecb44879c258a735d671abc3c5e8d4fca5f503848b77"
+    },
+    {
+      "name": "pretty_midi-0.2.11-py3-none-any.whl",
+      "package": "pretty-midi",
+      "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/pretty_midi-0.2.11-py3-none-any.whl",
+      "bytes": 5595990,
+      "sha256": "8c0813c61f9383db31ab4ee3436642bb132c8aa18d02f05064120aff36dd9988"
+    },
+    {
+      "name": "sox-1.5.0-py3-none-any.whl",
+      "package": "sox",
+      "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/sox-1.5.0-py3-none-any.whl",
+      "bytes": 40164,
+      "sha256": "88e494110d5fd0f2a784f6d5472e4c70028b58d4f54593d12f4160f9ccddb180"
+    }
+  ]
+}

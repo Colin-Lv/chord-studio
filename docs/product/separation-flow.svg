@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810"><style>text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#211e19}.muted{fill:#797369}.white{fill:#fff}.small{font-size:21px}.body{font-size:26px}.heading{font-size:34px;font-weight:700}</style>
+<rect width="1440" height="810" fill="#f6f3eb"/>
+<text x="64" y="60" font-size="19" style="fill:#b94720;font-weight:700">CHORD STUDIO</text>
+<text x="64" y="132" font-size="49" style="fill:#211e19;font-weight:700">一次分轨，逐层展开</text>
+<text x="64" y="181" font-size="23" style="fill:#797369;font-weight:400">默认组合：提琴组 + 六轨 + 木／电吉他细分</text>
+<rect x="64" y="254" width="205" height="100" rx="22" fill="#211e19"/>
+<text x="100" y="316" font-size="33" style="fill:white;font-weight:700">原曲</text>
+<path d="M269 304 L329 304" fill="none" stroke="#b94720" stroke-width="3"/><path d="M319 297 L329 304 L319 311" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="329" y="254" width="315" height="100" rx="22" fill="#e3eee7"/>
+<text x="359" y="316" font-size="31" style="fill:#211e19;font-weight:700">提琴组分离</text>
+<path d="M644 304 L714 304" fill="none" stroke="#b94720" stroke-width="3"/><path d="M704 297 L714 304 L704 311" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="714" y="254" width="662" height="100" rx="22" fill="white"/>
+<text x="745" y="300" font-size="29" style="fill:#211e19;font-weight:700">提琴组音频</text>
+<text x="745" y="334" font-size="22" style="fill:#797369;font-weight:400">原曲的弦乐内容；两个模型版本分别保存</text>
+<path d="M485 354 L485 402 L166 402 L166 444" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="64" y="444" width="205" height="100" rx="22" fill="#211e19"/>
+<text x="85" y="485" font-size="25" style="fill:white;font-weight:700">扣除提琴组</text>
+<text x="85" y="522" font-size="24" style="fill:white;font-weight:400">后的音频</text>
+<path d="M269 495 L329 495" fill="none" stroke="#b94720" stroke-width="3"/><path d="M319 488 L329 495 L319 502" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="329" y="444" width="315" height="100" rx="22" fill="#e3eee7"/>
+<text x="359" y="506" font-size="31" style="fill:#211e19;font-weight:700">六轨分离</text>
+<path d="M644 495 L714 495" fill="none" stroke="#b94720" stroke-width="3"/><path d="M704 488 L714 495 L704 502" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="714" y="403" width="662" height="141" rx="22" fill="white"/>
+<text x="745" y="447" font-size="27" style="fill:#211e19;font-weight:700">人声 · 鼓 · 低频 / 贝斯候选</text>
+<text x="745" y="488" font-size="27" style="fill:#211e19;font-weight:700">其他 · 吉他 · 钢琴</text>
+<text x="745" y="523" font-size="18" style="fill:#797369;font-weight:400">轨道名称是模型输出类别，不能单凭名称断言乐器存在。</text>
+<path d="M1045 544 L1045 585" fill="none" stroke="#b94720" stroke-width="3"/>
+<rect x="714" y="585" width="662" height="91" rx="22" fill="#efe2ef"/>
+<text x="745" y="624" font-size="27" style="fill:#211e19;font-weight:700">吉他继续细分</text>
+<text x="745" y="657" font-size="23" style="fill:#797369;font-weight:400">木吉他 / 电吉他 / 未分配的吉他内容</text>
+<text x="64" y="630" font-size="28" style="fill:#211e19;font-weight:700">已完成结果自动复用</text>
+<text x="64" y="669" font-size="22" style="fill:#797369;font-weight:400">切换视图无需重新推理；细分挂在对应母轨下。</text>
+<text x="64" y="779" font-size="18" style="fill:#797369;font-weight:400">功能与数据流示意 · 提琴组和六轨保持共同时间轴，试听使用一致增益。</text>
+</svg>

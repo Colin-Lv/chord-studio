@@ -11,6 +11,7 @@ import numpy as np
 import soundfile as sf
 
 from . import bass_voice
+from .stems_worker import resolve_stem
 from .full_decode import pooled_label, tone_support, span_tone
 from .fusion_engine import segments_from
 from .stem_harmony import build_views, pool, validate_cells, LABELS
@@ -113,15 +114,25 @@ def recognize(run_dir, base, output, publish=lambda message: None, model_path=No
         audio+=bass
     evidence=bass_voice.spectrum(audio,rate);model=bass_voice.load_model(model_path)
     support=tone_support(act)
-    cuts=sorted({0.,duration,*[float(r[k]) for r in baseline for k in ('start','end')],
-                 *[float(r['time']) for r in beats if int(r['beat'])==1 and 0<r['time']<duration]})
-    if cuts[0]<0 or cuts[-1]>duration+.05:
-        raise ValueError('原和弦时间轴超出音频')
-    cuts=[min(t,duration) for t in cuts]
+    original_baseline=baseline
+    from .harmony_boundaries import canonical_cuts,recover_sustained_chords
+    def bass_at(a,b):return bass_voice.summarize_beats(model,evidence,a,b,beat_times)
+    def coarse_label(row):
+        a,b=row['start'],row['end']
+        return refine_label(pool(posterior,bounds,a,b),row['label'],span_tone(support,times,a,b),bass_at(a,b)['note'])
+    baseline,repairs=recover_sustained_chords(baseline,posterior,nprob,bounds,beat_times,coarse_label,bass_at)
+    from .chord_onsets import align_recovered_onsets,resolve_recovered_attacks,reconcile_attack,spectral_profile,onset_evidence,POLICY as ONSET_POLICY
+    onset_audio=onset_evidence(audio,rate) if repairs else None
+    baseline,onsets=align_recovered_onsets(baseline,repairs,beat_times,
+        lambda a,b:spectral_profile(onset_audio,a,b),lambda a,b:float(pool(nprob,bounds,a,b)))
+    baseline,attacks=resolve_recovered_attacks(baseline,original_baseline,repairs,beat_times,onset_audio,
+        lambda a,b:float(pool(nprob,bounds,a,b)),
+        lambda attack,a,b:reconcile_attack(attack,pool(posterior,bounds,a,b),bass_at(a,b)))
+    cuts,snaps=canonical_cuts(baseline,[r['time'] for r in beats if int(r['beat'])==1],duration)
     diagnostics,labels,spans=[],[],[]
     publish('分别识别和弦与低音，保留转位和持续低音')
     for a,b in zip(cuts,cuts[1:]):
-        if b-a<1e-8:continue
+        if b<=a:continue
         prior=pool(posterior,bounds,a,b)
         original=next((r['label'] for r in baseline if r['start']<=(a+b)/2<r['end']),LABELS[int(prior.argmax())])
         bass=bass_voice.summarize_beats(model,evidence,a,b,beat_times)
@@ -130,25 +141,25 @@ def recognize(run_dir, base, output, publish=lambda message: None, model_path=No
         diagnostics.append(dict(start=a,end=b,original=original,label=label,bass=bass))
         labels.append(label);spans.append((a,b))
     rows=segments_from(labels,spans)
-    # The legacy fusion formatter rounds to milliseconds. Restore the LAB's
-    # microsecond clock so the final event cannot overrun the audio and make
-    # the generated editor document impossible to save.
-    for row in rows:
-        row['start']=float(row['start_text']);row['end']=float(row['end_text'])
-    rows=[r for r in rows if r['end']>r['start']]
-    for index,row in enumerate(rows):row['id']=index
+    from .source_rows import canonical_rows
+    rows=canonical_rows(rows,duration,complete=True)
     for name,digest in identities.items():
-        if signature(base/'wav'/f'{name}.wav')['sha256']!=digest:
+        if signature(resolve_stem(base,name))['sha256']!=digest:
             raise ValueError('分轨在识别期间发生变化')
     if signature(model_path)!=model_signature:
         raise ValueError('低音模型在识别期间发生变化')
-    meta=dict(version=VERSION,created_at=now(),model=manifest['model'],segments=len(rows),
+    meta=dict(version=VERSION,timeline_policy='validated-timeline-v3',created_at=now(),model=manifest['model'],segments=len(rows),
               seconds=round(time.perf_counter()-started,2),source_audio_sha256=prediction['input_sha256'],
               input_stems=identities,groups=groups,bass_model=model_signature,
               implementation_sha256={p.name:signature(p)['sha256'] for p in
-                                     [Path(__file__),Path(bass_voice.__file__),Path(__file__).with_name('full_decode.py')]},
+                                     [Path(__file__),Path(bass_voice.__file__),Path(__file__).with_name('full_decode.py'),
+                                      Path(__file__).with_name('harmony_boundaries.py'),
+                                      Path(__file__).with_name('source_rows.py'),Path(__file__).with_name('fusion_engine.py'),
+                                      Path(__file__).with_name('chord_onsets.py')]},
               posterior_sha256=signature(run_dir/'retained10/posterior.npz')['sha256'],
-              baseline_sha256=hashlib.sha256(__import__('json').dumps(baseline,sort_keys=True).encode()).hexdigest(),
+              baseline_sha256=hashlib.sha256(__import__('json').dumps(original_baseline,sort_keys=True).encode()).hexdigest(),
+              boundary_recovery=dict(grid_snaps=snaps,recovered_chords=repairs,grid_alias_tolerance_seconds=.020),
+              onset_alignment=dict(policy=ONSET_POLICY,decisions=onsets,attacks=attacks),
               key_used=False,reference_inputs=False,fitting=False,
               limitations=['Bass scores are uncalibrated; uncertain bass is omitted',
                            'Relative lowest voice within E1–B5; not a complete polyphonic transcription',
@@ -161,7 +172,8 @@ def recognize(run_dir, base, output, publish=lambda message: None, model_path=No
 
 def publish_result(run_dir,segments,meta,make_default=False,integrated=False):
     run_dir=Path(run_dir);path=run_dir/'analysis.json';result=read_json(path)
-    content=''.join(f"{r['start']:.6f} {r['end']:.6f} {r['label']}\n" for r in segments)
+    from .source_rows import serialize_rows
+    segments,content=serialize_rows(segments,result.get('duration'),complete=True)
     digest=hashlib.sha256(content.encode()).hexdigest()
     source_id=('retained10_bass' if integrated else SOURCE)+'_'+digest[:12]
     lab=run_dir/(source_id+'.lab');atomic_text(lab,content)

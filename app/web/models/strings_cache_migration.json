@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "reason": "Stage cache orchestration only; original predict kernel preserved; exact seven-track GPU sample parity verified including cancellation and resume.",
+  "evidence": "research/desktop-startup/separation-stage-cache-validation.json",
+  "old_code": {
+    "strings_runner.py": "ccf41fb7d50c84b6660313cd23b1c2d107c5ee5e49cbfa993b65771b32d0681e",
+    "strings_stems.py": "0950e1cc9913fb748bf46e27ad399bcde81f6c249fc2a5924d9e5781861ea6fe"
+  },
+  "new_code": {
+    "strings_runner.py": "641bc8033e85f0658d3237cce3c0f804884b1392654a9b8135ec28d0fe431ee6",
+    "strings_stems.py": "0dffafd50c8cd68d1881be19f582f22e8500e27cd3077f79ccb6d8723f0920c0",
+    "separation_cache.py": "7252e620d7d52f16bfd957fa759593234af6ff81906be3b9f1669626d09334db"
+  }
+}

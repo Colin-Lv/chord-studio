@@ -1,0 +1,1618 @@
+{
+  "schema": "multisource_hgb_deployment_contract_v2",
+  "feature_schema": "nnls_named_sources_full_chord_explicit_bass_139_v2",
+  "feature_dimension": 139,
+  "feature_names": [
+    "nnls_mean_relative_pc_0",
+    "nnls_mean_relative_pc_1",
+    "nnls_mean_relative_pc_2",
+    "nnls_mean_relative_pc_3",
+    "nnls_mean_relative_pc_4",
+    "nnls_mean_relative_pc_5",
+    "nnls_mean_relative_pc_6",
+    "nnls_mean_relative_pc_7",
+    "nnls_mean_relative_pc_8",
+    "nnls_mean_relative_pc_9",
+    "nnls_mean_relative_pc_10",
+    "nnls_mean_relative_pc_11",
+    "nnls_q25_relative_pc_0",
+    "nnls_q25_relative_pc_1",
+    "nnls_q25_relative_pc_2",
+    "nnls_q25_relative_pc_3",
+    "nnls_q25_relative_pc_4",
+    "nnls_q25_relative_pc_5",
+    "nnls_q25_relative_pc_6",
+    "nnls_q25_relative_pc_7",
+    "nnls_q25_relative_pc_8",
+    "nnls_q25_relative_pc_9",
+    "nnls_q25_relative_pc_10",
+    "nnls_q25_relative_pc_11",
+    "nnls_q75_relative_pc_0",
+    "nnls_q75_relative_pc_1",
+    "nnls_q75_relative_pc_2",
+    "nnls_q75_relative_pc_3",
+    "nnls_q75_relative_pc_4",
+    "nnls_q75_relative_pc_5",
+    "nnls_q75_relative_pc_6",
+    "nnls_q75_relative_pc_7",
+    "nnls_q75_relative_pc_8",
+    "nnls_q75_relative_pc_9",
+    "nnls_q75_relative_pc_10",
+    "nnls_q75_relative_pc_11",
+    "nnls_support_relative_pc_0",
+    "nnls_support_relative_pc_1",
+    "nnls_support_relative_pc_2",
+    "nnls_support_relative_pc_3",
+    "nnls_support_relative_pc_4",
+    "nnls_support_relative_pc_5",
+    "nnls_support_relative_pc_6",
+    "nnls_support_relative_pc_7",
+    "nnls_support_relative_pc_8",
+    "nnls_support_relative_pc_9",
+    "nnls_support_relative_pc_10",
+    "nnls_support_relative_pc_11",
+    "nnls_low_mean_relative_pc_0",
+    "nnls_low_mean_relative_pc_1",
+    "nnls_low_mean_relative_pc_2",
+    "nnls_low_mean_relative_pc_3",
+    "nnls_low_mean_relative_pc_4",
+    "nnls_low_mean_relative_pc_5",
+    "nnls_low_mean_relative_pc_6",
+    "nnls_low_mean_relative_pc_7",
+    "nnls_low_mean_relative_pc_8",
+    "nnls_low_mean_relative_pc_9",
+    "nnls_low_mean_relative_pc_10",
+    "nnls_low_mean_relative_pc_11",
+    "nnls_mid_mean_relative_pc_0",
+    "nnls_mid_mean_relative_pc_1",
+    "nnls_mid_mean_relative_pc_2",
+    "nnls_mid_mean_relative_pc_3",
+    "nnls_mid_mean_relative_pc_4",
+    "nnls_mid_mean_relative_pc_5",
+    "nnls_mid_mean_relative_pc_6",
+    "nnls_mid_mean_relative_pc_7",
+    "nnls_mid_mean_relative_pc_8",
+    "nnls_mid_mean_relative_pc_9",
+    "nnls_mid_mean_relative_pc_10",
+    "nnls_mid_mean_relative_pc_11",
+    "nnls_high_mean_relative_pc_0",
+    "nnls_high_mean_relative_pc_1",
+    "nnls_high_mean_relative_pc_2",
+    "nnls_high_mean_relative_pc_3",
+    "nnls_high_mean_relative_pc_4",
+    "nnls_high_mean_relative_pc_5",
+    "nnls_high_mean_relative_pc_6",
+    "nnls_high_mean_relative_pc_7",
+    "nnls_high_mean_relative_pc_8",
+    "nnls_high_mean_relative_pc_9",
+    "nnls_high_mean_relative_pc_10",
+    "nnls_high_mean_relative_pc_11",
+    "nnls_longest_support_relative_pc_0",
+    "nnls_longest_support_relative_pc_1",
+    "nnls_longest_support_relative_pc_2",
+    "nnls_longest_support_relative_pc_3",
+    "nnls_longest_support_relative_pc_4",
+    "nnls_longest_support_relative_pc_5",
+    "nnls_longest_support_relative_pc_6",
+    "nnls_longest_support_relative_pc_7",
+    "nnls_longest_support_relative_pc_8",
+    "nnls_longest_support_relative_pc_9",
+    "nnls_longest_support_relative_pc_10",
+    "nnls_longest_support_relative_pc_11",
+    "nnls_base_is_minor",
+    "raw_madmom_root_support",
+    "raw_madmom_triad_support",
+    "raw_madmom_full_support",
+    "chordino_root_support",
+    "chordino_triad_support",
+    "chordino_full_support",
+    "largevocab_root_support",
+    "largevocab_triad_support",
+    "largevocab_full_support",
+    "raw_madmom_coverage",
+    "chordino_coverage",
+    "largevocab_coverage",
+    "log_duration",
+    "state_chord",
+    "state_N",
+    "state_X",
+    "state_missing",
+    "chord_relative_pc_0",
+    "chord_relative_pc_1",
+    "chord_relative_pc_2",
+    "chord_relative_pc_3",
+    "chord_relative_pc_4",
+    "chord_relative_pc_5",
+    "chord_relative_pc_6",
+    "chord_relative_pc_7",
+    "chord_relative_pc_8",
+    "chord_relative_pc_9",
+    "chord_relative_pc_10",
+    "chord_relative_pc_11",
+    "explicit_bass_relative_pc_0",
+    "explicit_bass_relative_pc_1",
+    "explicit_bass_relative_pc_2",
+    "explicit_bass_relative_pc_3",
+    "explicit_bass_relative_pc_4",
+    "explicit_bass_relative_pc_5",
+    "explicit_bass_relative_pc_6",
+    "explicit_bass_relative_pc_7",
+    "explicit_bass_relative_pc_8",
+    "explicit_bass_relative_pc_9",
+    "explicit_bass_relative_pc_10",
+    "explicit_bass_relative_pc_11",
+    "bass_unannotated"
+  ],
+  "objective": {
+    "schema": "legacy_root_triad_tetrad_for_E1_only",
+    "weights": {
+      "root": 0.25,
+      "triad": 0.5,
+      "tetrad": 0.25
+    }
+  },
+  "margin": 0.02,
+  "implementation": {
+    "chord_semantics_v2.py": "e8c917ab6ac35a17c33de78a2123971d05c8049d91c024c31b1b87f03158af87",
+    "multisource_candidates_v2.py": "309df82acec012fd212e65d86dd3cef8be7015b85667a2d59c5dc5615182be0f",
+    "candidate_targets_v2.py": "6de563904244a3ce4ccb7ac06e6d3dafbac8ffabc01e21e58d3cb6714388b72f",
+    "multisource_features_v2.py": "cebacb17a23afa781bbdf1a240e720d9d20e89962a188e28ff5d36547fdda7d5",
+    "multisource_model_v2.py": "0c77ad766b85e799f2b15fd20fac2413a841529d7f7cafc1b94f237c523cc34f",
+    "experiment_protocol_v2.py": "5592b0466620f5d0a3435d66b2323dcbbc702f444699be2340ebe56086387c44",
+    "harmonic_note_features.py": "b210d462b36e39130f689c6bfcc01c4d737fad080571104c3c3cbe00f36a1911",
+    "nnls_seventh_model.py": "b441026f5b61f741eb76e59ab3bfebbc721c5afda63505c555e091a8aa276c5a",
+    "chord_extension_model.py": "846e7740dae4eed9d543f33721851f0c20615e9d0efceb96001c3a9f6fceea8f",
+    "chord_recognizer.py": "16c3f162e5ea6bbc9db6a30c0716d53a93b1e4d49c0d32eb9f1222ca19e22e73",
+    "candidate_data_v2.py": "eddb4b3cdd151d45fff7fa9a2f6c61194c05c794eb844f49d89b0b836a19a2f6",
+    "multisource_root_guard.py": "7e1aeb301cef52ce43a72e7187bc95afd1c3ec4b9f474841f0086d0279417ce1",
+    "multisource_root_guard_v2.py": "a357c6e7b31181ac444b215e3194c51c6704750814ffe662c696f881ad56c1b0",
+    "evaluate_chords.py": "451ac6d0d8ecadb5c2d31ad4e87f2635695d04e2df08b094c45d99f0ed46fc17",
+    "apply_multisource_candidates_v2.py": "1b4231f5eccaea6d468b5c251ae4ab83e0f70017d639b57655184d9d59c06f11"
+  },
+  "training": {
+    "protocol": {
+      "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\reports\\model_v2_20261003\\semantic_e1\\protocol.json",
+      "sha256": "a8417bfb206d404fe6791fb6463ad60df067c7acef80c683f4efbff8596e0f34"
+    },
+    "implementation": {
+      "path": "C:\\Users\\33573\\Desktop\\对话\\app\\run_semantic_experiment_v2.py",
+      "sha256": "4349773590bba1519ba96f81c66c9aa2e2a96b932f8405ba95d81f7ffc402dfa"
+    },
+    "utility_implementation": {
+      "path": "C:\\Users\\33573\\Desktop\\对话\\app\\train_multisource_candidate_reliability.py",
+      "sha256": "a081513acdd402f92523540e053b94cbc7d042bd5499034acb9e84266ba337b2"
+    },
+    "training_inputs": [
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\02 - Misery.mp3",
+          "sha256": "f4aa8b549392a8508c628c22cd510bb84c1fec4f5550a6bb760df4f2777cedc7"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery.lab",
+          "sha256": "dc2490d668a254ac30319b647b887b263e249f11be6b053ed93e9dcf9059630e"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery.lab",
+          "sha256": "2801e56ca189e5924442d1cb30f31c1a3b7c5fd07e3611aebc9d0572ad6c0725"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery.lab",
+          "sha256": "f5588fd809ed7b46be496357a65b0735bf1a3c51291002e7c1811cd56c2f4e4e"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\4309dcf89202c792374d0425f63faf477812eeee1905981023702fb461601984.npz",
+          "sha256": "acefcd7a7504fd65caa90e5f3c9536df185d55d93121a0f85da41df5c5f642b0"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_02_-_Misery\\chords.lab",
+          "sha256": "91e7d443d6f4476a0b47d81bde8a6eb8cd110efe73f62c7205ec8c388067a02b"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\10 - For No One.mp3",
+          "sha256": "4d5be727fad1bb750bb2e6b0da7713d2c490e5097dc7c8d24845407268c8a499"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One.lab",
+          "sha256": "ba1c3a1efe67a4feb743b9d8d62b7af852fc3f3f018ff43f3be38aefdd7f19b5"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One.lab",
+          "sha256": "c8e1990ebf562a1b4a728d3e9420e967ee0aead9f8919ab40b405b4da7ae3df3"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One.lab",
+          "sha256": "7e8d4b89d6087584f04b67cabb6ed8feef6d4440b1d5499a5bfc0fb263b02546"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\5d694850a7336593221c5d2c4546e4d6ad5f8df9bf80833d9ee0d846616a03cf.npz",
+          "sha256": "3dcb245028ac748e1b02d87ff286ac9c5403679ee94030b0dbcf9fac44474702"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_10_-_For_No_One\\chords.lab",
+          "sha256": "2ddf13af4638987021cfe93e005d142be28c0883c0a21fac01bf2c710bb1c942"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\03 - A Hard Day's Night\\11 - When I Get Home.mp3",
+          "sha256": "4bddcb99f729c50087749af0e5d7a13f2f64f9b32f127fab9bf8fd3f1e7f7507"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home.lab",
+          "sha256": "07f520edc5b3ddbc464a98205c38272947383722962a0ffa77019f811380b882"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home.lab",
+          "sha256": "ef526cb9105dd651c85cd2e6cfbca19e8e6c89acc5d7afd5f1cc2a4e561db330"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home.lab",
+          "sha256": "a0e910ad43fed071fe480dd570c33263ba6b26630df54e83c8219089b1c0d93a"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\7942df65caf3dfc4ff3146a16601bd222c99fb5d3cca58a607881195c268fc42.npz",
+          "sha256": "47953d289eb1e1f824c6492974bf36af43a49d4c09eb082de63427e085ce1818"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_11_-_When_I_Get_Home\\chords.lab",
+          "sha256": "4a524018fabbedbe559d397eeda9e2b0df212b24ac3c6842029116027b81a265"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\14 - Dizzy Miss Lizzy.mp3",
+          "sha256": "2def30d708cf85b79768a1c23b9bddbd200c39446660115f8c868cdd6ae94c63"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy.lab",
+          "sha256": "611d47426e7947f29b731631900462cd80196404a3904e67fd15be778f9ce5fd"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy.lab",
+          "sha256": "2234ef7cf0eaa38f23c8d0e1f9e9831fae46453c2073b8a3ed4c1de4fe6c16cf"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy.lab",
+          "sha256": "06b816c53b8b15a9ea2d01c9cc56ee48a9586c3a74ea68a0a6395c2fa4a0c62a"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\3fa2d1b88e3326adf8e1740b059533f22d6f076635e5184d20f80f22afe89e4c.npz",
+          "sha256": "da4c05459ac81fa1af9de6ac070371f3faf17b9677a93685dc8c7883726cffa5"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_14_-_Dizzy_Miss_Lizzy\\chords.lab",
+          "sha256": "f326067171728b24bf4cbfee10149c1e5aeaf968c54712145aa6524bf1bc90e0"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\05 - Boys.mp3",
+          "sha256": "016e5ed41fda2c4379e56b6fb3c138ebdbd5303c5b2395dc012d8424d2d6ad9f"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys.lab",
+          "sha256": "05fb6ad57de8ad62560c3695cbf08feacf2ff7b066d28d18901edf09b9941777"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys.lab",
+          "sha256": "c70a9376b4852d7e6efdca82fbf9200447192cd0dd32af1d3f332f7e6ffa10cd"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys.lab",
+          "sha256": "f62530f9f37faecf96537d953554331181e9d7a40e30571de79d3254de1e05e9"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\fc09b5440ec952b1678bc77e566f706421f500913dc665891f48d4cabd2fee57.npz",
+          "sha256": "11acf8f6d0d98700df87f092de18ad8e05b98a9f8a3da754240a194625124851"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_05_-_Boys\\chords.lab",
+          "sha256": "29fa920306e5bd1221f4b88f737af3a1edd401d9a80f5c6b64170995c0e83e81"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\08 - What Goes On.mp3",
+          "sha256": "60b84f75670d395cf8a7637fff87dd81992bf2ba6bdd195d0761c58087be1095"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On.lab",
+          "sha256": "1e1e5d57459bb95328e73cb3edfe3e57ad88041aa10667dca8dfd558f59cb2e2"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On.lab",
+          "sha256": "c099df22d8b692b59fb1e67638fccdf734812b513a6c5d50dfe2e2901398192b"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On.lab",
+          "sha256": "184de8e1bb015fcd0ca267ceafc3cdfc61c5889234f791c9ca86a0817c77af56"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\0f526c7ea07947ae52fafcf043caf81a4cfe09a85b3390817e1a4ad5a6af5c25.npz",
+          "sha256": "b06aad3dd2569914f1e8ad1e23827ce8fa9b950bf947402bba2dd876fbea3f41"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_08_-_What_Goes_On\\chords.lab",
+          "sha256": "b492ef6e6e4c99653edecd71c09ce995c150c993e86539aa36780baa4c1f8e1e"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\12 - Wait.mp3",
+          "sha256": "4af5aa40b4bd93c8940cbad2d46c29c1467a11d513d90c28fb6de1b3b67279e4"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait.lab",
+          "sha256": "39354b5b40d7e3732497ba7aa3f40191e72089cdca25dc85c109c911d4f47ba9"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait.lab",
+          "sha256": "9d453e3445e6822a527ec91a67b5e6bd21cc63fee037bb8ee29f72e41aea1b5f"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait.lab",
+          "sha256": "c8215c8bba6a1d1c69d4d538f8df3325ef62392d0c420a46f409870773bdd10f"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\c14cbbad3e626e3c6ffedb350df7d0228cb2a16f4d33329f81a96cab85ba9fd1.npz",
+          "sha256": "883051359fd958d833d69a5ee448e089e477130ebc2f0b27867ecf3f3e96c93b"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_12_-_Wait\\chords.lab",
+          "sha256": "90593c95775c55e8edbe364e6d6fd1711795676b617aa6c72b0e5cb954b8d5ba"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\08 - Good Day Sunshine.mp3",
+          "sha256": "bf0f4fd36531aeed06a8748694e473b277eae05db166c5caf4de3eb5522b02e3"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine.lab",
+          "sha256": "3cedf9033ef42c2b266eb3bf17bd67ef56db0a64b067373584809f35fa64abf1"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine.lab",
+          "sha256": "8caaf5da33d54316dcfdfd0a35a827f726f3de86a4c2f06204e09ac748e94f84"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine.lab",
+          "sha256": "0ae4fa50286f4cd5bf52dda8679651c5b873bb336d1dbb6a2fb3d293879be51f"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\64bde559951205c1d966e30d127fee03cbaaa622d678a5ed514d88f9a41f76d2.npz",
+          "sha256": "118f029755f9e580fe09350370a4322ce38ee0ed4eb67cf0eaa654be27935855"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_08_-_Good_Day_Sunshine\\chords.lab",
+          "sha256": "f1cf98c01a1be799f592deb3d40077a5c3469fdf4506a9873e63f7404cb59851"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\09 - It's Only Love.mp3",
+          "sha256": "cd1362b7480b9ecc086cb03e5405964911b2733b2d14e16588913ead00021c7b"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love.lab",
+          "sha256": "6947922a88b224ef39a14ad23eb18f54f932b81656bebd1989031862366fd314"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love.lab",
+          "sha256": "79848f704b7aed09aefdd3de2edcb64a6abae6d8d7c4ea3ab3e769482f180f73"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love.lab",
+          "sha256": "e919716baa3c8b0e31149e46f01407d36b88f8d8ec4ba4944fcba413edc52a22"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\af634bd4da2e1c41d538cb43645a97faee0ae38fa0df5b3b69a7180c5aa873c1.npz",
+          "sha256": "c56527215bc6481f6e7cb9a1ab90592911ecd1c3c918d2e9eb9971e96ca2d74d"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_09_-_It_s_Only_Love\\chords.lab",
+          "sha256": "fc8d564b878b0bb9ae17573a9a5fd19532f8a1e5a8cbf2e5fb85cf38ccaf40c5"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\02 - Eleanor Rigby.mp3",
+          "sha256": "1c43151380666dd7f6af59eba65fc5a86421e7f813f8e292b69cf3bbe2c90b1c"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby.lab",
+          "sha256": "7cb0bd60119abe96a08f3c15fbdd2de1fba569c68b87788973488744fddf7dbd"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby.lab",
+          "sha256": "6991470d72f130fae9cd6556706cae81effb8aacff35568d84146bee1f67f80c"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby.lab",
+          "sha256": "4390443c71a58ad50f50f96edb0cfdda254e98eecb5589f7e127b861933b73e7"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\0e1e75f82be5e2665a072ec3c754378f5548633fefa586fe58c9749fa560a3cf.npz",
+          "sha256": "c7db225ed0c3e352fb8a5cb7a8a12f303b3653df16cbc3c48ad3a0c0618ea9d5"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_02_-_Eleanor_Rigby\\chords.lab",
+          "sha256": "7b87e32f61e71573411ff69dcc83b8101e032b307e6818cd72bcd1a532c905a4"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\03 - You Won't See Me.mp3",
+          "sha256": "eb638042fcebd4f6e00f632baa7be121a70f51ccdbe9e60171c1b77d2131f3a2"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me.lab",
+          "sha256": "0c148492764fd12118a79c66f97bd56eca9e6dd0d995fe6dd92d061d3e4929bf"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me.lab",
+          "sha256": "204a58f822b8d3c335ffd5d830df68cb9899f5c9e0801302a5d368831520a9b2"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me.lab",
+          "sha256": "86ada076b65501f20e36535d269de997d7630295840496d7dc4e2ee3ae2094f0"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\cff4d8f20729992cc395a82f9abe483f87eb6baad56f190187ff09a094a3558f.npz",
+          "sha256": "f0e554c6ff6ff734821665ea655f6922d600a4c41e558ec77eeaee8940c4daa8"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_03_-_You_Won_t_See_Me\\chords.lab",
+          "sha256": "f76085d3cd4d456da4436ebe9532b55d00c64c502b59f315e42ae70520cbc268"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\03 - All My Loving.mp3",
+          "sha256": "4c687dd7ecddee353a37011368b6dc35d26bed55eb56872ba691fbd5e8c82d94"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving.lab",
+          "sha256": "7318d092b69d87773b9d188ff33d3d5a6a2e304462ee8f43e544aff40c5b04a0"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving.lab",
+          "sha256": "868657ea106a2f9ebbb959af1319177eefba260fd9b2f7c1fdb8596052f21b90"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving.lab",
+          "sha256": "c8a5b5dc4bf48357c3b8d0b6c22ee128e3653fc4e2e69b868620ceed32c91198"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\f7099d74096af02c454c4a09f21b1e9836af6c041a5965d5f16c0caa7c8d44e5.npz",
+          "sha256": "9821abfb54b830c2c32962a6f72a68a2cff80df7eddbc0080aa02804f642a289"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_03_-_All_My_Loving\\chords.lab",
+          "sha256": "6db4c71f6d26b786e65bb4ce71e6f11496bbf107d48ab20574c35eea3017f8df"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\03 - You've Got To Hide Your Love Away.mp3",
+          "sha256": "3ff48277ef4195649464efabf51d41c660965b8ec0f4889c4135824055430378"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away.lab",
+          "sha256": "1a724f6b77358e6d9aeb47c658f76d72d9f21c327b59e0307d9ab95936bc64db"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away.lab",
+          "sha256": "594e3575331a837ccc7246243560463c8f00f228282bde3475975f737a9bd082"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away.lab",
+          "sha256": "77f5e5acbeb3aa4e11ff90b7f4cee5113d9a1f81a9ba75c0564348f132ab451e"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\ab49ff24d0f64e821ca9175edb764f2c0bf6162ba23b3c9f20712e70c2227a63.npz",
+          "sha256": "0ac3f9d34abfe7304f3047ab54a96ec5ea0b4ac2b06acd7d7a78bb560cebc229"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_03_-_You_ve_Got_To_Hide_Your_Love_Away\\chords.lab",
+          "sha256": "1982586c1f6a5877049953f588f9fc33767ffa0c844f7cfa2c83978501f78b1e"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\02 - Norwegian Wood.mp3",
+          "sha256": "aae69b498bfa850ed43eb7c526f0df3a006df4266f04f1a400e2925aa421c31e"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown.lab",
+          "sha256": "632854bb187199e311978711f0ca9a5f2c3d7dfac5f55859c386c8e03c15f622"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown.lab",
+          "sha256": "73be7626b16b960861e5eb9ad377349f4efc0e3983c1e9f9dfdf99f63f595b22"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown.lab",
+          "sha256": "c00cf365c99b06fcb9fba6b3e231a00b00c62cf2c6d682dec5dbb5a4e2039e54"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\16dd4ffe178d31ac6ddb5f137101d1820a6cdf5c13678998f44dd5fb1f53d1e1.npz",
+          "sha256": "6d4f3686ed4731d96479770d1a9c5297ce42e84704a326cdeedcaed4a87ffa3b"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_02_-_Norwegian_Wood__This_Bird_Has_Flown\\chords.lab",
+          "sha256": "5050816e6eda4ae7ed78417d9264e77b399921bb34265a0dc58297e25fd27c05"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\06 - Yellow Submarine.mp3",
+          "sha256": "fd1eab7a16c6c1cc4fa06248b82f51bb8d18289ab512c6aa5b7a85d8f9361a16"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine.lab",
+          "sha256": "f62fef5783bb6f6fc0960a7110dcc1f54c93ff33421e63e1ca56cac88b386c0a"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine.lab",
+          "sha256": "9b050156907ff17262f6b692f7ed061cde119b87d037fef84db4bc3600fe16b5"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine.lab",
+          "sha256": "77726842cb4691d6247ebfc02fa5745a772e2b7943d947721d0328e08d2708ee"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\972a115ca8e761800b4a670f39224299945c7f8dcb32fa9ce7198d90c578e873.npz",
+          "sha256": "b1bb8c862f6c6dba13e2e64c8105b020c8e7108880bd5e47d1c326cb5a682ed2"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_06_-_Yellow_Submarine\\chords.lab",
+          "sha256": "cef00bed308e23c7bcb9b76e83046cfb5dc8ab6cbc02b0a654ffa4bc1b386ce8"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\11 - Tell Me What You See.mp3",
+          "sha256": "a3c8964e5a015b98b1b9d40757c0ac7675ab26394da51b7edeb1998c52406873"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See.lab",
+          "sha256": "f56dfcc84ffa838884b82409fb62083931cf17a6df1cce66b06e61064872c4dc"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See.lab",
+          "sha256": "e1c0f223ccc41008ab451aa5013ae93ee37ba51fde02723cdeae7887ea34b75e"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See.lab",
+          "sha256": "d2e23ac0d2db874fba344ad642ddc3c18063fc4df8725d24c6b7175f6a4f5daa"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\ca9e384a515cffef1ccde866aed53fec7978c98204d33fc8e6904d1277fe16a1.npz",
+          "sha256": "8f43405d29865cb46c39e655e53e33aebf2235eb8a85f6ce2f996c3599fbc92d"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_11_-_Tell_Me_What_You_See\\chords.lab",
+          "sha256": "aa9e2e9175195fbea8d0032386e3510b1cfb5da03fe407ec8ee766b3b42f11f7"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\13 - Yesterday.mp3",
+          "sha256": "db084ce6d32962a481483321baa22252fb9f88e73d7e0553c25bac26e147f913"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday.lab",
+          "sha256": "4c243a81e60703f53af2a9e6f4faa2931b812138e98cf311840232d696354f27"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday.lab",
+          "sha256": "e55f7bc369b3219ecb05169260362f49d6cbfbd2f040dcfbedd57730ff023bb0"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday.lab",
+          "sha256": "3d544965ae3bf78c26c065dfa0fe332cc8af5c580570bf33dcc19b8bd7c85488"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\bfce2fac0b5fb84c144def7121795ec85f6f2308a2b46dc840b0d8b3956ddca4.npz",
+          "sha256": "e06c028ab2a0e9eb06258701c9137564d635df2dac3c2d9417bfc10788aac4bb"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_13_-_Yesterday\\chords.lab",
+          "sha256": "c4ab02134d7a36121f0dbb81247f3645eed3a7000b582e6e56467eaefaab4dd2"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\06 - You're Going To Lose That Girl.mp3",
+          "sha256": "16a03df7d9ed74e1c1cc4eb2dca44f3aae489cc63a21545e0421c262151003c9"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl.lab",
+          "sha256": "5d21bec0ff00f99a634c020560eafbeb4fd3e437ee98e131b72c6238f20bc775"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl.lab",
+          "sha256": "a85b210b730a7a4b2cd0aa9ee681521a7bd629ae6436c29d63ac775793c685da"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl.lab",
+          "sha256": "c5feabbe3145c607da2c5e026ff9519bf6600298f988a1f06390d3b6604bd10d"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\5d4c1bc4817de7620271732c439cf86e9027d42f8eb750f1e3f53a9bc001b088.npz",
+          "sha256": "caa424605b1693b7004f78aa6fb3173b8979da85d98124c2694a198f65f3743e"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_06_-_You_re_Going_To_Lose_That_Girl\\chords.lab",
+          "sha256": "a4ac16e47720ececb4dfdcd403d0aaf1868b572a7dc2c0d84315b1b9910f727b"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\03 - A Hard Day's Night\\03 - If I Fell.mp3",
+          "sha256": "7d78600713aada22a0f6819beea83c3d690ba2fc070673dbd4a9a0a9730baa76"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell.lab",
+          "sha256": "19817c8a337ed6aec24b8da98b5d92f8bd5848bae1aec9dafa0dc0ea20461c93"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell.lab",
+          "sha256": "ec83783eb4076874245bf8be72cac4938a88c75974c88c6380a569e88b006eae"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell.lab",
+          "sha256": "663ee1b5869fda5810033caf4eb27524bb06c082deed6b8d68d620d6da8c6432"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\3b26b56ed708635105b31fefdb8cde5cabb2cef8546c0db235fca90b1f3cac13.npz",
+          "sha256": "a6067f806f526820eeb28099ef99ed90435ba4f335021b7b169f57dbf07ea5ac"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_03_-_If_I_Fell\\chords.lab",
+          "sha256": "7fa9b59d2754ff3c23e8031ae7688a797a61eadacaf631f9aac008b2936021dd"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\13 - Got To Get You Into My Life.mp3",
+          "sha256": "ddfdb460c9cedc11dfd05e98736295af0ad1c0bf0d2ff894e88a9687cab0277c"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life.lab",
+          "sha256": "0bcf238b21070bb85105186901390c545a0a3b42a92d3d878181d83e64a3935a"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life.lab",
+          "sha256": "771353e9e85257ac7764e02b537dbfce786337d7aaa2ca7b1e9b3ef955d9a212"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life.lab",
+          "sha256": "3da5cdeb3b1b7a75ef4c730f0085b7531dd05125a31f4c1c81052c000edf4c94"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\9452d2a4be6d26873dda69833fba451a5569760d620b3c0b97ed5c0e40868436.npz",
+          "sha256": "f87ddae0ba8ac06ca6d26b4a4edbd332f21d9db2f66efe7942efaa20b85a2a3a"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_13_-_Got_To_Get_You_Into_My_Life\\chords.lab",
+          "sha256": "94327bdfba3d476958905139616b65aad4f2630888dd2f000bf3ea9ca3855eb9"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\03 - A Hard Day's Night\\04 - I'm Happy Just To Dance With You.mp3",
+          "sha256": "8b5986a22917bd3042c9e74bda91241429bbde0c9586e7a4a3d255c59ffde8c7"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You.lab",
+          "sha256": "3ed76c5121a97cf1121c872dda5b14ed08f407359189d95977d30fca14b7d0a3"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You.lab",
+          "sha256": "84da3a41429c622d13cde9fde6fcc5b51ac843a088084b28b08f2f67ac1f7a13"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You.lab",
+          "sha256": "58cec4e2562563e36a2d7932a32448bcb932fcfba4d7a4fafb0ca87f5b93620a"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\17cd32daf5c65d56e8b80e63441aa593af364348eb1b4344b0a9c6a0b93bc347.npz",
+          "sha256": "a8b1792742ac1133a71e5def5ce1ab3e6a712ce7e75696144cfc82d5b5c4b7d5"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_04_-_I_m_Happy_Just_To_Dance_With_You\\chords.lab",
+          "sha256": "e615b9e8e3733ee59cc644aa4d49321fbbc768110e6666c3c4a0220b57b8a333"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\11 - Doctor Robert.mp3",
+          "sha256": "3f6098d799aa053bfd0e63b0707c85a374147e6a15116ee14fc0cc7e3bee0f9b"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert.lab",
+          "sha256": "b52d275f07c83dfffa26c7840734f559a3e8da4db2e024ce561d8d66ca8534da"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert.lab",
+          "sha256": "4e16a34421801f1d9b8729cda7ecfb08b5cac07dedc10b53233db66c44e2f6a4"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert.lab",
+          "sha256": "714a66b7a9dcee086233f4b2532d7f9af3640850248df2ace9b5a900935a57ea"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\940ab01c3905ac8588fedbe0c2edb0610bac23799cc3636c876a044eba31636b.npz",
+          "sha256": "1a284fb1be1665d8f27399e9832815f0c5bab285fa291c9714c4528c9878040e"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_11_-_Doctor_Robert\\chords.lab",
+          "sha256": "fc47879f763ce67dc5f83ce2d20c6458c9e84676f894b5f340cbd983dfb97aaa"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\04 - Don't Bother Me.mp3",
+          "sha256": "c388c22827ed092cce3f07cb635404728aa98f79870d8b44a53b01b3f6a78c78"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me.lab",
+          "sha256": "f9129fbb9ad30b4fc85d356ef24c16be13ab91e596391ba0c9f39bee2c0c53d4"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me.lab",
+          "sha256": "ffddd53707bfb65a3082613c0105a80091f1a13ae8feae7b93cae7a66c59258a"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me.lab",
+          "sha256": "039375517aeead7e7acb683bfb6eea0d63962dcd5faad7e84d41d3e35189813c"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\e3b81918fca6ddcf0def453112deed557567929525bc4a2c939ad754c2478d2d.npz",
+          "sha256": "5aa5bef60b56d6c2cd910cd88c22c92bbd93ca070682322a943508dbefb23707"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_04_-_Don_t_Bother_Me\\chords.lab",
+          "sha256": "5138a64a4626c5015cac5bb284637464d122b033f72af446daded2edb9be6ad3"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\05 - Another Girl.mp3",
+          "sha256": "438a0245d14240b0fed25bdcec2ebf929cfb874a39c11d2a4b8cb72ae8ed9dbb"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl.lab",
+          "sha256": "cf1a7f432c74bac2262c30246b4775bef1d5b7c02cef58e5109dcc3507fca07b"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl.lab",
+          "sha256": "300074be244182ffae9955dd9a685f21e5f2edc68495649de189d8aea831590b"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl.lab",
+          "sha256": "f7b159b17acd8d6ed17fbcb87e73ec8b948d6d06e5c2d5cc4b9d50abfbe8d248"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\6d86f6ce688a1902ed51eda8cb1e6b10053839d1c909bffb5a82147b959df588.npz",
+          "sha256": "507e94233057837aeeef0f05410469a6323c3022ae9ba53b2c81caf801dfb86d"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_05_-_Another_Girl\\chords.lab",
+          "sha256": "8195c865eda7f26c4da6955df76ed872d65e793872312f68d317d922a8813ec4"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\04 - Chains.mp3",
+          "sha256": "adb5add83d4436ec29a5f619565d58458e528204e3841ad7903a091330a84b09"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains.lab",
+          "sha256": "acb6198ea3489a733e15094e45eb7be499fe58d6ea5a006b23cd29aa4c0486cf"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains.lab",
+          "sha256": "654d66a8a416c612600e87ded42e110d31c11c5d83df7dcb9e3f7895fb133135"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains.lab",
+          "sha256": "4a7a567fdac74f4d1c7e52e89c5cffa890001a5947a1da40d158f5ace3a06921"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\0b4a3f03a28d55a32b693d3c87f92831e32cfb2a87d3b884b69846ad6cfef8c8.npz",
+          "sha256": "fb35cd572fe1058167889c0093936ed874674dc4c3bc4d982552f8e4ede15544"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_04_-_Chains\\chords.lab",
+          "sha256": "ab439697e55070739fa5e823ab463b04940a26182693ac5b396d2cbafda1ae38"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\08 - Roll Over Beethoven.mp3",
+          "sha256": "f829ae9b3dafa562c817454f90eee94246d03d50f5281fa5a84f0f1fa9cf0984"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven.lab",
+          "sha256": "813cba95d52936160c2282d44115408272adf37ed43830d99a4ab88ac5cdd049"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven.lab",
+          "sha256": "4a34348f90d9c2d5de7edd7738d0071762b0acb1c2c9dacee2d1ccecf9b240ef"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven.lab",
+          "sha256": "ae83f02039ed6ba05d17cfe5244e4e7033808f03e177ee4f69ad771d0ca3cbb0"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\929cba665d918f03aaec83f16b64eb517c3f6d6a50234516f48ea504c9508f40.npz",
+          "sha256": "2c855c6c879e354a1058cd715a869cef96566ae63020e2f25d948b978942908b"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_08_-_Roll_Over_Beethoven\\chords.lab",
+          "sha256": "61eeffea430044771caab8661859ba14ad540574307f8281349e1fdda16141e2"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\07 - Please Mister Postman.mp3",
+          "sha256": "70a81518f429c19f6980e834efa7be04e66649b16e8e5885bcfb13f1cb1f1bba"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman.lab",
+          "sha256": "378b3c60ba766d9cc0f23e43003f20a655f7bd6f99a471c2fa25357ae0d46887"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman.lab",
+          "sha256": "c42ffa5d822cc1664dc3aea795eb6fd039df6969dc93e24ebeb5adc99e7868df"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman.lab",
+          "sha256": "0a166ac4ea756dfac009df26eda115c438349df5c4b0974e82e7e88ca1e860e0"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\ee65b20c8d62d4440d2f3a079fec7b6cbb6a0ed99c8cb8d5a291d733d88ea56b.npz",
+          "sha256": "700750e3fc8b37420342e783ff57b0f3fbe70cb1fc035227b28b9ebb168ae8bd"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_07_-_Please_Mister_Postman\\chords.lab",
+          "sha256": "c469134dc51ddccb815db4e758587550ad066668a4601e2f3e2991f1f0193af2"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\06 - Till There Was You.mp3",
+          "sha256": "15a78c5fb776bb42a9ce4953407bd302357d322ade9bf5afa87964af3f74e4e3"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You.lab",
+          "sha256": "e7eb5b9c32b523349fce4f543355ee12312fbe3d36c4d0bd3a73b1a04d437bfc"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You.lab",
+          "sha256": "d07350ec5aec2d200c732a84968421cc9285d5be0e828130c077616614ad001d"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You.lab",
+          "sha256": "0f077bf6fb76eb6e5960a4e49d258e0a67c35c5d6bbb4f868c6b4fd67ced167d"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\ece61770d44225bdaf8e055994a80ac2492d6800b842535239f756a205d65428.npz",
+          "sha256": "0b9ba5ce8637b4dc7fec42f6e22779a06524dec65063f466ccdbdabcd540b143"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_06_-_Till_There_Was_You\\chords.lab",
+          "sha256": "fbe8c677c7500e9f13e52e0fe1e68dd60b7a0d29114700d7f16d5a8dd17a13d2"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\03 - Anna (Go To Him).mp3",
+          "sha256": "b799803ee72542623cd154900e912feb7075f1e0f16a32c17167007381e2abf0"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him.lab",
+          "sha256": "18625c8dfe19f5977d663a807aecd5996a8d9ab961d109b4287f8bcf251fdc7f"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him.lab",
+          "sha256": "5e146d4c168369510ee022b5968fb7712e3ee3d5fc110c85cf13080e06fe52d8"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him.lab",
+          "sha256": "8c5dab021a4178004f3515558a6496fad9215f26816a1a251007c7f94ef8cad9"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\99baa01e12b221870bc0a5265c7736203a8a04742e44d408b3d6c53c0aab3103.npz",
+          "sha256": "bd3d7604cfcee27cc4fc9f8f37e998e1daf3a234339916bf09a848169a381c1a"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_03_-_Anna__Go_To_Him\\chords.lab",
+          "sha256": "1e76fb727138b357369f602f77ac5f93b7802449d59b0e63448e94d6d9167d70"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\05 - Here There And Everywhere.mp3",
+          "sha256": "e6bfd4151de9243d53364410295704526f3898d680905e8a792ae4d45cffe328"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere.lab",
+          "sha256": "cc818b4ef878f26203f88008d74489da18f4befcc60add3096318fb9375c49c7"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere.lab",
+          "sha256": "c1a962f743cf37afde091c5b85afa023272a28ee5fda03805415bcf218cbaa05"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere.lab",
+          "sha256": "9cb141560961dcb0d972f48c692984e1bd662b8b8265f937d045583d5688203e"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\2d5e89cfcfb7350e029fa45098ca5bf3d3d7dcb2c9e46217408aa02aa2fc94c3.npz",
+          "sha256": "629187407f405dbeb7db4964ac4bacd950a4ea4c0fefd9ee42e39a3b7a83372b"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_05_-_Here__There_And_Everywhere\\chords.lab",
+          "sha256": "fd2d1713d7d1135c80b0e21cd9bc24f16e2e5d97f1b7dbcc327a521ad97f8ea5"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\09 - And Your Bird Can Sing.mp3",
+          "sha256": "5c540eafd48c041cecfb9c544ae662c3a48ec8eb9825035a3d06f2dabdae8de9"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing.lab",
+          "sha256": "8514fac56bc62576853a5a576a78849db40eb34b16fd0c36ffb1ac1936c4075f"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing.lab",
+          "sha256": "49f6da5145512a293228d1531537fc4ffb54d8dee686ad4272d6367a6c24e254"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing.lab",
+          "sha256": "0d8488df65b1c7a965702cb42688ea43ab8d326baea5546c6458705bfa8d0345"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\1eab52adbb73370a47206d114d25352c234089f45ae97d3561a1b6b07897b2a1.npz",
+          "sha256": "75bc054bb7102a000ad4f9f63632abd1003181057dbbfc793c112c4a30bfd7bb"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_09_-_And_Your_Bird_Can_Sing\\chords.lab",
+          "sha256": "4c2850567cd4afc980309aca8b556844f8e77401e00f3e9b0537e869a8b8d833"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\12 - I've Just Seen A Face.mp3",
+          "sha256": "90b91d7f047723ff6f3f3d41276ab28e72c28d0f1c4674f4d507a7c22f4cda46"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face.lab",
+          "sha256": "42605b6f2581f05c18306737217c3341e6524f281a209e17672080983ac0f038"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face.lab",
+          "sha256": "422158f0853f5b318da25ccaab8436a69ed7fa3ae1eab12dfcf1aa63841dea47"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face.lab",
+          "sha256": "5dc1187c454b6603db0eea35139af089544fd2d3bad5208873bcf44af804ac82"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\18af8dd9e93a7cf1ee0e32901f099f8176f9164db6823215160c55f80f1cfcaa.npz",
+          "sha256": "71f8f689dab7f46a645178b21b33f5a56b67dc452e9f1db074cf66e07bb975f7"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_12_-_I_ve_Just_Seen_a_Face\\chords.lab",
+          "sha256": "fa5f101d7d6f8cd1a72122e171e3df5bf259a9bceb7e34cc65c1e6a5d8f8fc34"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\13 - There's A Place.mp3",
+          "sha256": "ea9ac67b70765dced0bfbf2bd6e1ae3fd6366da512371aa889e5b7a1858c18ce"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place.lab",
+          "sha256": "ec0283d6e227ebf91f4ac92e898f14604a4581c279af395ef6721aae742b1dc1"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place.lab",
+          "sha256": "7ed6c0a1d3726729c3fed396e06e98bc33a71877df244fb45645b62ff5988f1b"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place.lab",
+          "sha256": "308569a49f2a8dc7c79a7a662e8ca8675daf0a7a6e537fe323912828d7cd11c7"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\15002785debfe1da551a6151a533b34726a188b39f79a12112697f5fef1dd856.npz",
+          "sha256": "8f79b6699c60c6c30c5292543dc88771e8c7895fb4e6403273e33f3001b878a1"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_13_-_There_s_A_Place\\chords.lab",
+          "sha256": "e79234a17097f4b824fedf1f9fb8ee2385a2c9aca9ef3fff009956f231490c06"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\11 - In My Life.mp3",
+          "sha256": "21c89afe786f33461448039f901eaf84ddb52ad2147199026889305870208779"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life.lab",
+          "sha256": "99fac62ec2a98c91397090b303daf19a5597e356e15929c7da45e972cdeb62f6"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life.lab",
+          "sha256": "de2c29dc7eacfef7bc4a7b8145dd3b0b6a6b1cc619d150cd0088d74d1a2a0251"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life.lab",
+          "sha256": "ba8991395822640942d7243cbfa47d2c637794d48a1eb5a7e645ea9ce52350a8"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\0a99c771e50adab1f455ab40b990502baf24c2907568c24027e44cc8ade18da5.npz",
+          "sha256": "5f8a56f8f58cc4b8162754bf8539ebeb274556993c0ba1b3ae80be2b402ac44c"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_11_-_In_My_Life\\chords.lab",
+          "sha256": "fd8b24163b1f992323be1725b7774d27ed6c57eddfef4ce2a10085c738c914e1"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\08 - Act Naturally.mp3",
+          "sha256": "eb726bea2f8b0822ce8ef2a4398d15b36ada94211e62c1ed1ee0163db538e40f"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally.lab",
+          "sha256": "904c955e66732010a2def4cb22f1a480e89fc2b735e40f97b66c1b1b6146c9a6"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally.lab",
+          "sha256": "5685bb151a0eeaf0ed4dad24abfc88f77d4c1d42c15b13f8419e16c65fe99d58"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally.lab",
+          "sha256": "32b611f608874c868b5c3c12e626edb198119e6b7c5ccda9b530465c74016a72"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\366394787d8c78580677aff734587db321962e814fdfa635b3452968375315d1.npz",
+          "sha256": "b54cdb1377e14b71d9895ba25d8e6a30c5a90a1431b6cb29953d0efe6e412f83"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_08_-_Act_Naturally\\chords.lab",
+          "sha256": "6e2e519b9f003661edde22c31602c9f608f9d0c071e6518dd4c4ddd8519c83d1"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\04 - Love You To.mp3",
+          "sha256": "00898fc95502e1a53c4dcd6dd97746345bc9e3a1522e93a3ab2d511e6629e07d"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To.lab",
+          "sha256": "665f6aa9ce45dde82572056d0dc4d5108bb62968d568bbceb62183b12de9d4eb"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To.lab",
+          "sha256": "2dfc52a86e23e06a6dbdbc25cf25710776645dfdaad17c08f356d7805612515e"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To.lab",
+          "sha256": "4e27d218ba193d8fb1b707782f9a36f62dd72b7586057fe9bdc67b04a04a60e9"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\569210ed18b9ee6be4e149ccb96d5c07c98c4339603bda59ac5b5213a9cbfe34.npz",
+          "sha256": "c0dde8fc97a588a5a31e3e23ec6da6dd4979e2d5c13d087916be6090c8cf4770"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_04_-_Love_You_To\\chords.lab",
+          "sha256": "13c69ce589aa37a63c1e9b4dc2dc5928cc71b5127d897864282e7f891ce97249"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\11 - I Wanna Be Your Man.mp3",
+          "sha256": "cee340fedc0ac77b21ae075e01778a1de62708f27a7f3bb05b46635d66c6aae9"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man.lab",
+          "sha256": "2b882373a2d8147343c59bad12fc6a34389c7e74bd41274e0fb079bb49522921"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man.lab",
+          "sha256": "0391b8683b592860b48740ae930b8b176da4cc7dff452ef2a967deebb234610b"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man.lab",
+          "sha256": "4acd551ae2b9305347dff285ae6fc692ce9d4e31e89e8dfe53f6946a23b796ec"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\8bab0b3bb9b84cf4484d094a14c4fddf3b1814f6389875d5d505e240130d3edd.npz",
+          "sha256": "6013ec0495531f889161013382f692d668e778d2e6113678539a2bd11436004b"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_11_-_I_Wanna_Be_Your_Man\\chords.lab",
+          "sha256": "e5719df3c1b8362d98e83317eef7da6738d7b4a42afe2bd287d2d9521ce1968c"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\07 - Michelle.mp3",
+          "sha256": "e9224abf21c0b6eaeb2f520672b3840973602b16290214d9dd201b007ebbe8fe"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle.lab",
+          "sha256": "bdbf38c6a997af82f47477527094c8a26d2f8ca1d7144fd465d7775141910ffc"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle.lab",
+          "sha256": "db8ce5efa4f64a8ae7c3761f3e1a16c64150c28f4fc408d171a0018f9593b45e"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle.lab",
+          "sha256": "cd3ddc8b47ddada7279c7e2ee24294082a60728ed284c97cb8494ce2fbe84622"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\b57a5278956bdd8a48050ef3e47bef967bf84919496e7898b242935b70f473e5.npz",
+          "sha256": "a7a9a0749c02e6ea0380bec595c6ff855c4afa6736695a4ff3a403481b1729c5"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_07_-_Michelle\\chords.lab",
+          "sha256": "503925d97112e8d19f8756206879bdd9aad427626e62252575d991fee75e09e0"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\07 - Revolver\\03 - I'm Only Sleeping.mp3",
+          "sha256": "baa285202b93ef22dfbd3ce84e424983c485cc01416f74f0cdb31f87829bc980"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping.lab",
+          "sha256": "f465e3ca31c7404433b7ce7cf37e7b48c63b7c378ec57e5aa6c464ac8e2cea45"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping.lab",
+          "sha256": "673d735485e3736ad85d6f2dcea5cb22fa47cdd4bcb44c18c7a7b89dfb9971cb"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping.lab",
+          "sha256": "0b2b4a8a622011921d2a866913688979f0161f7bb23f76ac590e53e4a89c435f"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\183cb0155784e44da51e0e1427badce6e8749f70fa6404c14a4d0f4653f29d65.npz",
+          "sha256": "0f2a1cc287dd0ff4d7e36580086c5b0c365ddec843e37bfd256c35cce360adc1"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_07_-_Revolver_03_-_I_m_Only_Sleeping\\chords.lab",
+          "sha256": "f1dbc6f2afdff04114fd23ddcf6529110e94513c53ef8da8e6b7c97891b3e2fc"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\01 - It Won't Be Long.mp3",
+          "sha256": "6f50df004c14476cb97a6e480918326ddc2eb35bb72d21360475f03142b22ae0"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long.lab",
+          "sha256": "278e374f4ad5c9453462d59924e1c9cdd4c80d7e581e34fdca783dbf537c6748"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long.lab",
+          "sha256": "900f23a28c5ebe833eb3ece885fe954e514c616cdea25c7978c458e69073bb2a"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long.lab",
+          "sha256": "838212eb4cdb75708c0fb1e7ed569351400bc9d6e0eb6609cf855ba9a09c6369"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\a24911c12a191e9f8db8566d7a8f4a1eef71825e820dca579e75f4edd38f1e05.npz",
+          "sha256": "b889561ac75e706e849c4a748e5cdb9964d9d6db98ee1d35a71cf9a16c5b5c91"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_01_-_It_Won_t_Be_Long\\chords.lab",
+          "sha256": "4e8916c9947589d0118a918a5b29401c64c7fee931cc2869e7df5ebd66a1de42"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\03 - A Hard Day's Night\\13 - I'll Be Back.mp3",
+          "sha256": "0609011e09bbd3b576985be9d812141f10fd88c3e200f412fe0741cb0660726b"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back.lab",
+          "sha256": "619ee89c005aa96d98092bf4b6c53b6f5133b627c272a201ea572628c98e7fae"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back.lab",
+          "sha256": "4a6b45ad6ba7b1e721e449f82c215107befdbc598c3d4a1ac507ec45fe4ece43"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back.lab",
+          "sha256": "9de521f3f18a653eb0b5b95aee2cb611a0543246f5a4aa5f90a2a2e92e42bb8d"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\d23f61100c6c169fdb0dc0a3b0291638b1798583dcc79e09a32a637d9294b173.npz",
+          "sha256": "0888f89e28d8caf834e751aaa68e377b3176eaf7afa7dd9ade92eb5d9d193e08"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_13_-_I_ll_Be_Back\\chords.lab",
+          "sha256": "1b31addcb4f27d62c89a575b3634a3c312c741ec039ba06aad7c756d6ec21641"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\06 - The Word.mp3",
+          "sha256": "700fd12ad5d5fcf5ef162f3f2dc474c71f6c3e36a473bab24d63fd4945594f00"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word.lab",
+          "sha256": "9266d6f647b89f70fc595e6f301e803defb31a18fb0eeaf9ac7287166fce6721"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word.lab",
+          "sha256": "acbc952b9b58a478a21ae747517320738531a1692b5b776572bd0c03a153b708"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word.lab",
+          "sha256": "83c9a15a82668239573f6f0abc5300c5890cbe165ff7503cb704aad6e799149c"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\97dfdf5458f4c24a92c9e5f23a021df7d8df5eff7be2fc58ce9d0cbda16eb9f3.npz",
+          "sha256": "1631051cd6bfcdb65c4bcd156ed3856be8d172526b65a6a21b6595f17687f35e"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_06_-_The_Word\\chords.lab",
+          "sha256": "20bab4b77558dd79eb422ce34aa9d664b19e00f6df0aac5df8cc8f4ff3949195"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\07 - Ticket To Ride.mp3",
+          "sha256": "3144a1fb7e248708a8f5ffafab528e72069303b9cc42e5f3e25bebda978e46f5"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride.lab",
+          "sha256": "7ece1366ec509d56a309fb28ffd0024be9d17244c79fbbfb027ae56cba57aeb8"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride.lab",
+          "sha256": "e84360eef3daf75d3ed04a245d26c69f312efd0c2805242ded843967d460911f"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride.lab",
+          "sha256": "881949f919e6a206d3a969583c12bb40c3213e9167690ac1ad9fdd9f8cbcc906"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\e7fb5a82b95f9fb903265bcbe0eb2fcaa1428d37fdab349eaf3a432e6cc4cde1.npz",
+          "sha256": "62dddbeaa14f96577bfd4ddc5c477a6eb510cc4847cd22d6e2fd7a9ae2b41bec"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_07_-_Ticket_To_Ride\\chords.lab",
+          "sha256": "34aaf4dfa00cfad3306e39ac31f5834458df713b9a1091930c9a1c36a36e6bf2"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\03 - A Hard Day's Night\\01 - A Hard Day's Night.mp3",
+          "sha256": "fd7020131dd8217f82277c0fb405f40951fd4e69aa9d26ab453b37c26fa95ace"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night.lab",
+          "sha256": "52c9158f47dc02c72dfabd0f01e38cdf4653b143d327489eff302f52306284da"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night.lab",
+          "sha256": "fb628e67031228156a9296b8fb22c48f678b224e23b6c9fb8b76f1fe872e0ae0"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night.lab",
+          "sha256": "2bc8a78e9e0971a8dff74da88b326942343c336eb9cc80823b677c6bf47a5a4c"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\4953edddeea10be9833d986187c68fb287c16293cf338540a6a2747e0fbb17b9.npz",
+          "sha256": "a10ceb761b1f9cae1e1b7f97deb57c0fb638ba599e1fe22acffa22dcf8cd5362"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_03_-_A_Hard_Day_s_Night_01_-_A_Hard_Day_s_Night\\chords.lab",
+          "sha256": "2d119524cb1dbb1e49ba21f13cf4c771dd4dfb3c299c38c11123c66002875902"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\10 - Baby It's You.mp3",
+          "sha256": "07ac06a86fc2ed0d23d49de49b7fe93bad55ff15557cfef8631f8ff97e5014e3"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You.lab",
+          "sha256": "97e3397789fc181061003e1797444fc09101c8cc8c9f8f899277577bbfe2ebcf"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You.lab",
+          "sha256": "f86f4fed165614dce94116de250adecec70f1f4310b53bdae47ca0ff0b65d7d9"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You.lab",
+          "sha256": "9ed837c526af38c0b932a6192fb508f362e630ab5d8f185b4c4d00b97d12526d"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\8a96055061b28177460fe6b92ffa05ff5f63d3f52ad250e230cd3b4489fbb210.npz",
+          "sha256": "0ac3eae4fa246a62c1d24b07cfecf981b345deb9982289582ad61b6b93de8981"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_10_-_Baby_It_s_You\\chords.lab",
+          "sha256": "9a9f746e54582e6a692cb2d5b537250f3623b6db1e8d12925de5beb022b3c0b4"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\12 - Devil In Her Heart.mp3",
+          "sha256": "05251be409d8894ded53f66a0622f259e0b93f37f55138e6d78565d21607754a"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart.lab",
+          "sha256": "fec640ddc95dc6a8db09242842356ea087388ec7e2ab9d8f9bc6584843c61b9c"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart.lab",
+          "sha256": "e826f0da456ab4f44a56f3b4901d742f486426f255ae3d3b4b821473b341d698"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart.lab",
+          "sha256": "41d8c580c388b57c9f3bdc40605a90551aa3f703a2a9568ed5be6c9316b7839b"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\c8570fde287f6174e8f7aa783726110b67c3dc86f890b824cf286f0b3d896b22.npz",
+          "sha256": "c4df777f302eb7228ca5d84fc769b6306356c25674d1b5ccf330b06b8af2f618"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_12_-_Devil_In_Her_Heart\\chords.lab",
+          "sha256": "0d01579affde9b03e46e05832c99f7fb36f4e7d876b5d38a367dcea140c703bc"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\06 - Ask Me Why.mp3",
+          "sha256": "205c619222f3fa1a487bf8c0af133a0cb851cee9c4c98c7d5236156cd56d2797"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why.lab",
+          "sha256": "ff7a0bd10a28d179b3ef9f86c02e260d9d9b21f874740aedc2311d07e3217c35"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why.lab",
+          "sha256": "2b5c2a67f6985cc5f7716edf18560a163f4a2d58485f0428ebecd35613344fe2"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why.lab",
+          "sha256": "7fe05023258dc29d6fc0094abdd8b5bd0b8bc838f662045eeb365ac355068076"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\f704fcadba2dec61dc22c2b2ebe83591a75152a88afce998bc97078b0aba56ef.npz",
+          "sha256": "f29f0b193967fb95d820c76e40c68c3db8b319cb2fc63dc572d15e823cdf936f"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_06_-_Ask_Me_Why\\chords.lab",
+          "sha256": "8ce7deb66357d47cab55845734e5e2d59b06124acc4139a4bd6a8ebdd85c4027"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\05 - Help\\10 - You Like Me Too Much.mp3",
+          "sha256": "f55f24c896b617908f0fb58ea704d418eb4285b6d724e8d6d9c5e9ace2a02721"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much.lab",
+          "sha256": "94a1006e19f499f6dd4191d58f1c3a861e526f819dff2ad38adbbb9086575733"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much.lab",
+          "sha256": "a502984c16a7ae0775d97f2ea3bae1a3f5ddfa1849407990d0bf0f16b285bdf5"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much.lab",
+          "sha256": "9b30631c40babc14a1b704735589036e8171760e6dcd7fc18bb20370f99182fc"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\7d8ec39f2253796723f9b0b6d75c095aeb38cef6aa5c2afff1d100ab41a48275.npz",
+          "sha256": "c2c53f1832779f542261f6016364d631fe59fdbc69d62eb04e3dadf41de45d7f"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_05_-_Help_10_-_You_Like_Me_Too_Much\\chords.lab",
+          "sha256": "caccf06495045de02547c464961655fda1128810f30128cca5d8a428c1d5a71c"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\02 - With the Beatles\\02 - All I've Got To Do.mp3",
+          "sha256": "fbf5651e4128c0c25c7b25b128b2f08138e6c034fdf744071596c07c1069fcba"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do.lab",
+          "sha256": "a6846262bf6f28df84d890efe58b0ecb0998c8a16bf4fdb95d5bec1f7b9db054"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do.lab",
+          "sha256": "8fa5dad38005bd28066f10a96246e36574a701d9a69c2e6356a62244ab53fadf"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do.lab",
+          "sha256": "0c35b923f65cd4d2c9847245d45a3442c80ba9e5fadfb24bd408ce725c331bca"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\064ee6b6953cbdf5edfde60bfd67231827c8dfd63ea3a74fa7f73fb47371b2df.npz",
+          "sha256": "6fbdc85fd9f0ab07ad465abaa8085270dbecccb4df9f5592335fb86d9d1aa672"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_02_-_With_the_Beatles_02_-_All_I_ve_Got_To_Do\\chords.lab",
+          "sha256": "adacef160d475c5b151da54687143ebe72e4ef6a6dcf2d06cbc430b734225d56"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\07 - Please Please Me.mp3",
+          "sha256": "685eb63cd72f78fd9a2e3e51c499d61bd6b1ea739e2cb589a990df3c39bbfaf9"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me.lab",
+          "sha256": "82217ca7ca2c7bea60b70bd697263947eb0bd0185e73c4e743c13dd367da6013"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me.lab",
+          "sha256": "ab29cd8606fb3f2abab6fd8216fa1586a2c9f0e4b79e938bff59f695f939feec"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me.lab",
+          "sha256": "2ae47400eab291c964390259667a4966cbf6a299b7b36c6e34f4865da537b958"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\b7e7291dd5d5f44b874b9b8bdeb7b11193d652c3b9ca640f804329d01519e73b.npz",
+          "sha256": "18bdc83b68337fd64f5ccc78ee44ef6a61f97c6e9a0f894399c928f7775dbda7"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_07_-_Please_Please_Me\\chords.lab",
+          "sha256": "244892788dbc028d9a524a3aa10a01c34e8c12e6f90212da6944d10145be648a"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\01 - Please Please Me\\09 - P.S. I Love You.mp3",
+          "sha256": "abe0e566cf087d1d9afaa678021a14c7b2d88b61eba04c30b9f6045c1283a369"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You.lab",
+          "sha256": "eba90e8e732d31f0e0db6b732d80815654b3a1f4d3668f828c51902ae3278da6"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You.lab",
+          "sha256": "d5e357cf08ae1a0923631d0b90a82f1aeda57d77d7356eae039d85f6b7494a48"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You.lab",
+          "sha256": "ade31be824f8a335ddffc96d621f7def6dab7fb72bf1c42dfe45712857a9f632"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\6e111dd8ec922cb1e73f48cdede444276093f3394bfe2a0a307d4342864717af.npz",
+          "sha256": "cc297de2f27e4243d507e00515acc078978e7e50a99e5e61e63c3cbe217420ce"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_01_-_Please_Please_Me_09_-_P._S._I_Love_You\\chords.lab",
+          "sha256": "934496cfb471d324df9530d4d8a94c882955a8bc774ebc24bff5285eb607f75f"
+        }
+      },
+      {
+        "id": "isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You",
+        "audio": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\audio\\isophonics\\The Beatles\\06 - Rubber Soul\\10 - I'm Looking Through You.mp3",
+          "sha256": "56c4c258821dd8ae21f09908903db8d5323e15c168e8bc2c70e4c98e41667dbe"
+        },
+        "raw_madmom": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\madmom\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You.lab",
+          "sha256": "e5755a71df3c2b3def846ef969f21612edc0acd7c6e094a08a9d8086db3c7846"
+        },
+        "chordino": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\chordino\\beatles_selected6\\isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You.lab",
+          "sha256": "8f05af598a281d5b491f30df8eea0dcd145bb3940b58680cc24c0bd81cc2a496"
+        },
+        "largevocab": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\external_chords\\largevocab\\beatles_selected6_raw\\isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You.lab",
+          "sha256": "f97b45f472f8a207746770dc0e2cc82aa6102a8c9a9e3405a8ef041159947a51"
+        },
+        "notes": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\.tmp\\nnls_seventh_features\\notes\\70e8ef63faba117c5d453c35c9ea1870c8c7c52fa2cc801b730a3374241138ce.npz",
+          "sha256": "43847900a1cd2f8b8771db1e0845bbecac2c5550cce3a6df6ccd564742dbbb7a"
+        },
+        "reference": {
+          "path": "C:\\Users\\33573\\Desktop\\对话\\benchmarks\\imported\\isophonics\\isophonics_all_The_Beatles_06_-_Rubber_Soul_10_-_I_m_Looking_Through_You\\chords.lab",
+          "sha256": "72896f17d70c756638b67918e25d62fa8c3336af65e0a77d794ce95604c9ef9a"
+        }
+      }
+    ]
+  },
+  "nnls_contract": {
+    "sample_rate": 44100,
+    "block_size": 16384,
+    "hop_length": 2048,
+    "right_padding_samples": 16384,
+    "sonic_sha256": "be457f578a069ff432d61d73ae93b3eb519b9daf3b4341520aca6df632b18227",
+    "plugin_sha256": "9e6e8b0b9fdcec20807ed050d6a0a99d77c091fefe15058ad0466fbfd2e4ae71",
+    "decoder_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "decoder_implementation_sha256": "16c3f162e5ea6bbc9db6a30c0716d53a93b1e4d49c0d32eb9f1222ca19e22e73",
+    "bridge_implementation_sha256": "b210d462b36e39130f689c6bfcc01c4d737fad080571104c3c3cbe00f36a1911",
+    "transform_id": "vamp:nnls-chroma:nnls-chroma:semitonespectrum",
+    "transform_sha256": "b22ea84730119fbfd126ea4c3a8dc7e47650e2b7842ed55098eef300edceba8f",
+    "transform": "@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix vamp: <http://purl.org/ontology/vamp/> .\n@prefix : <#> .\n:transform a vamp:Transform ;\n vamp:plugin <http://vamp-plugins.org/rdf/plugins/nnls-chroma#nnls-chroma> ;\n vamp:step_size \"2048\"^^xsd:int ;\n vamp:block_size \"16384\"^^xsd:int ;\n vamp:sample_rate \"44100\"^^xsd:float ;\n vamp:plugin_version \"5\" ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"chromanormalize\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"rollon\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"s\" ] ; vamp:value \"0.7\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"tuningmode\" ] ; vamp:value \"0\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"useNNLS\" ] ; vamp:value \"1\"^^xsd:float ] ;\n vamp:parameter_binding [ vamp:parameter [ vamp:identifier \"whitening\" ] ; vamp:value \"1\"^^xsd:float ] ;\n vamp:output <http://vamp-plugins.org/rdf/plugins/nnls-chroma#nnls-chroma_output_semitonespectrum> .\n"
+  },
+  "selection_config": null,
+  "diagnostic_only": true,
+  "calibrated": false,
+  "selection_policy": "legacy_postselection_root_guard",
+  "versions": {
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.4",
+    "mir_eval": "0.8.2",
+    "joblib": "1.5.3"
+  },
+  "artifact_schema": "multisource_hgb_maskable_full_semantics_v2",
+  "model_sha256": "5fb79c3e684655ccead5ee45802fde5c76875704eeffa5edd1006b09bdbfdb46"
+}

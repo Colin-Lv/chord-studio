@@ -52,3 +52,34 @@
 .be-detail-hidden{display:none!important}
 .be-detail-hint{margin:10px 0;padding:10px 12px;border:1px dashed #3b5045;border-radius:7px;color:var(--muted);font-size:12px}
 @media(max-width:900px){.be-bar-head{flex-basis:60px}.be-chord-cell{font-size:12px;padding:0 4px}}
+
+/* Duration-proportional chord blocks. Borders never participate in time layout. */
+.be-grid{gap:20px;max-height:680px;padding:8px 8px 12px 0}
+.be-bar{gap:16px;padding:0;border:0;border-radius:0;background:transparent;align-items:center}
+.be-bar:hover,.be-bar.playing{background:transparent;border:0}
+.be-bar.selected{box-shadow:none;border:0}
+.be-bar-head{flex:0 0 66px;padding:8px 0;border:0;align-items:flex-start;gap:5px}
+.be-bar-head b{font-size:17px;color:#aeb9c0;font-weight:500}
+.be-bar .be-bar-time{font-size:10px;color:#75838b}
+.be-bar.selected .be-bar-head b{color:var(--gold)}
+.be-chords{position:relative;display:block;flex:1 1 0;min-width:0;height:76px}
+.be-chord-cell{position:absolute;top:0;bottom:0;box-sizing:border-box;min-width:0;margin:0;padding:0;
+  border:0;border-radius:7px;background:#272e32;box-shadow:inset 0 0 0 3px var(--panel,#192124);
+  color:#d4dbde;font-size:clamp(19px,2.3vw,30px);font-weight:600;line-height:1.2;
+  transition:background .1s ease,color .1s ease;overflow:hidden}
+.be-chord-cell .be-chord-name{display:block;min-width:0;margin:0 9px;overflow:hidden;text-overflow:ellipsis}
+.be-chord-cell:hover{background:#343f43}
+.be-chord-cell.manual{color:#f0d6a8}
+.be-chord-cell.score{color:#c7d3ff}
+.be-chord-cell[data-n="1"],.be-chord-cell.model[data-n="1"]{background:#20272b;color:#929fa5}
+.be-chord-cell.be-chord-gap{background:#1c2428;color:#75838b}
+.be-chord-cell.active{outline:1px solid var(--gold);outline-offset:-4px;background:#303a3e}
+.be-chord-cell.playing,.be-chord-cell.playing[data-n="1"]{background:#376b54;color:#f3fff8;
+  box-shadow:inset 0 0 0 3px var(--panel,#192124),inset 0 0 0 5px #9bd8b8}
+.be-chord-cell:focus-visible{outline:2px solid #e2f8ec;outline-offset:-5px}
+@media(max-width:650px){
+  .be-grid{gap:14px;padding-right:2px}.be-bar{gap:8px}.be-bar-head{flex-basis:49px}
+  .be-bar-head b{font-size:14px}.be-bar .be-bar-time{font-size:8px}
+  .be-chords{height:60px}.be-chord-cell{font-size:20px;padding:0}.be-chord-cell .be-chord-name{margin:0 5px}
+}
+@media(prefers-reduced-motion:reduce){.be-chord-cell{transition:none}}

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="stylesheet" href="/assets/stems.css">
 <link rel="stylesheet" href="/assets/ui.css">
+<link rel="stylesheet" href="/assets/task-queue.css"><script defer src="/assets/task-queue.js"></script>
 </head>
 <body class="stems-page">
   <header class="app-header"><a href="/" class="brand"><span class="brand-icon">♮</span><span>Chord <b>Studio</b></span></a><span class="text-link">分轨视图</span><a class="text-link" id="backToWorkbench" href="/">← 返回工作台</a></header>
@@ -15,8 +16,11 @@
     <section class="stems-title">
       <div><div class="eyebrow">STEMS</div><h1 id="songTitle">分轨</h1><p class="muted" id="songMeta">读取项目…</p></div>
       <div class="stems-actions">
+        <a id="pianoLink" class="text-link" href="/piano">钢琴扒谱 · MIDI</a>
+        <a id="reconstructionLink" class="text-link" href="/reconstruction">整曲重构</a>
         <button id="drumPartsBtn" class="secondary" hidden>细分鼓组</button>
         <button id="vocalPartsBtn" class="secondary" hidden>细分主唱／和声</button>
+        <button id="stringsBtn" class="secondary">提琴组＋六轨</button>
         <select id="modelSelect" class="model-select" hidden aria-label="分轨模型"></select>
         <button id="reSeparate" class="secondary" hidden>重新分离</button>
         <a id="downloadMix" class="text-link" href="#" hidden>下载原曲 ↓</a>
@@ -25,12 +29,17 @@
 
     <section id="pending" class="panel stems-pending" hidden>
       <h2 id="pendingTitle">还没有分轨</h2>
-      <p id="pendingNote" class="muted">把这首歌拆成人声 / 鼓 / 贝斯 / 其他四轨，分离后可以逐轨试听、静音和独奏。</p>
+      <p id="pendingNote" class="muted">默认提取提琴组，再分离其余六轨并细分木／电吉他。完成后可以逐轨试听、静音和独奏。</p>
       <button id="startSeparate" class="primary">开始分离 <span>→</span></button>
       <p id="separateStatus" class="status" role="status"></p>
     </section>
 
     <section id="workspace" hidden>
+      <section id="stringsSummary" class="panel vocal-results" aria-label="提琴组分离" hidden>
+        <div class="section-heading"><h3>提琴组已合并</h3></div>
+        <p>整组提琴显示在下方，可独奏、静音和下载。其余六轨来自扣除提琴组后的音频，可以一起播放。</p>
+          <p class="muted">默认同时生成木／电吉他细分。右上角可切换版本 1、版本 2 或原有分轨，已有结果直接读取；也可选择旋律／伴奏吉他，继续细分人声和鼓组。</p>
+      </section>
       <section class="panel vocal-results" aria-label="人声细分结果">
         <div class="section-heading"><h3>主唱与和声</h3><span id="vocalSource" class="muted"></span></div>
         <p id="vocalStatus" role="status"></p>

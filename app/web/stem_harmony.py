@@ -5,6 +5,7 @@ all 120 chord hypotheses from accompaniment notes and a separate bass view.
 No song-specific coefficients, annotation input, or silent decoder fallback.
 """
 from __future__ import annotations
+from .stems_worker import resolve_stem
 
 import csv
 import hashlib
@@ -33,7 +34,7 @@ def validate_cells(cells, count, duration):
     if (bounds.shape != (count, 2) or not np.isfinite(bounds).all()
             or np.any(bounds[:, 1] <= bounds[:, 0]) or abs(bounds[0, 0]) > 0.002
             or abs(bounds[-1, 1] - duration) > 0.05
-            or not np.allclose(bounds[1:, 0], bounds[:-1, 1], atol=1e-7)):
+            or not np.allclose(bounds[1:, 0], bounds[:-1, 1], atol=1e-7,rtol=0)):
         raise ValueError('和弦后验时间轴不完整或与音频不一致，请重新分析')
     return bounds
 
@@ -110,7 +111,7 @@ def extract_notes(audio, folder):
 def build_views(base, manifest, duration, output):
     import soundfile as sf
     ids = {t['id'] for t in manifest['tracks']}
-    harmonic = [s for s in ('other', 'guitar', 'piano') if s in ids]
+    harmonic = [s for s in ('other', 'guitar', 'piano', 'strings') if s in ids]
     if not harmonic and 'instrumental' in ids:
         harmonic = ['instrumental']
     if not harmonic:
@@ -123,7 +124,7 @@ def build_views(base, manifest, duration, output):
     for role, names in groups.items():
         total, rate = None, None
         for name in names:
-            path = base / 'wav' / f'{name}.wav'
+            path = resolve_stem(base,name,manifest)
             inputs[name] = signature(path)['sha256']
             audio, sr = sf.read(path, always_2d=True, dtype='float32')
             if not len(audio) or not np.isfinite(audio).all() or abs(len(audio)/sr-duration) > 0.05:
@@ -211,10 +212,11 @@ def recognize(run_dir, base, output, publish=lambda message: None):
         raise ValueError('完整段解码没有产出，请检查拍点分析')
     # Complete edge coverage with the original mixed-audio predictions, rather than
     # scoring only the convenient interior. Main boundaries remain identical.
-    intervals = sorted({0., duration, *[float(r[k]) for r in baseline for k in ('start', 'end')]})
+    from .harmony_boundaries import canonical_cuts
+    intervals,_ = canonical_cuts(baseline,[],duration)
     diagnostics, labels, cells = [], [], []
     for start, end in zip(intervals, intervals[1:]):
-        if end-start < 1e-6:
+        if end<=start:
             continue
         prior = pool(posterior, bounds, start, end)
         original = next((r['label'] for r in baseline if r['start'] <= (start+end)/2 < r['end']), LABELS[int(prior.argmax())])
@@ -236,7 +238,7 @@ def recognize(run_dir, base, output, publish=lambda message: None):
         labels.append(label);cells.append((start, end))
     segments = segments_from(labels, cells)
     for name, digest in identities.items():
-        if signature(base / 'wav' / (name + '.wav'))['sha256'] != digest:
+        if signature(resolve_stem(base,name))['sha256'] != digest:
             raise ValueError('分析期间分轨发生变化，请重试')
     meta = dict(version=VERSION, created_at=now(), params=PARAMS, model=manifest['model'],
                 source_audio_sha256=prediction['input_sha256'], input_stems=identities,
@@ -260,7 +262,8 @@ def publish_result(run_dir, segments, meta, make_default=False):
     path = run_dir / 'analysis.json'
     result = read_json(path)
     # Content-addressed source avoids invalidating a user's already saved correction.
-    content = ''.join(f"{r['start']:.6f} {r['end']:.6f} {r['label']}\n" for r in segments)
+    from .source_rows import serialize_rows
+    segments,content=serialize_rows(segments,result.get('duration'),complete=True)
     digest = hashlib.sha256(content.encode()).hexdigest()
     source_id = SOURCE + '_' + digest[:12]
     lab = run_dir / (source_id + '.lab')

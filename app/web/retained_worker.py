@@ -225,7 +225,8 @@ def execute(store, job_id):
         path=output/(source_id+'.lab')
         if not path.exists():
             continue
-        sources.append(dict(id=source_id,name=name,path=path.name,**signature(path),rows=lab_rows(path)))
+        from .source_rows import source_for_audio
+        sources.append(source_for_audio(source_id,name,path,output,duration))
     for source in sources:
         review_candidates(source['rows'],sources)
     _ids={source['id'] for source in sources}

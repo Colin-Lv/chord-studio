@@ -5,6 +5,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .venv/
+desktop/target/
+dist/
 venv/
 env/
 
@@ -31,6 +33,7 @@ tmp/
 *.tar.gz
 *.exe
 *.msi
+*.whl
 *.onnx
 *.pt
 *.pth

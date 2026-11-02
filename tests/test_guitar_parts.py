@@ -72,15 +72,15 @@ def test_reject_unsafe_manifest_and_request(fixture):
     assert client.post(f'/api/projects/{pid}/guitar-parts',headers=headers,json={'model':'htdemucs'}).status_code==409
     assert client.get(f'/api/projects/{pid}/stems/guitar_parts/invalid/private.wav?model=bs_roformer_sw').status_code==404
 
-def test_submission_keeps_recipe_and_completion_preserves_analysis(fixture,monkeypatch):
+def test_submission_keeps_recipe_and_completion_preserves_analysis(fixture,monkeypatch,fake_job_process):
     from app.web.jobs import Jobs
     client,p,sha,base,headers=fixture;pid=p['id'];store=client.app.state.store
     row=client.post(f'/api/projects/{pid}/guitar-parts',headers=headers,json={'mode':'duet','force':True}).json()
     assert row['profile']=='guitar_parts' and row['guitar_mode']=='duet' and row['force']
     p.update(current_run='locked-analysis',stems={'bs_roformer_sw':{'sha256':'kept'}});store.save_project(p)
     atomic_json(store.job_path(row['id']),dict(row,status='queued'))
-    manager=object.__new__(Jobs);manager.store=store;manager.lock=threading.RLock();manager.python='python'
-    monkeypatch.setattr('app.web.jobs.subprocess.run',lambda *a,**k:None)
+    manager=object.__new__(Jobs);manager.store=store;manager.lock=threading.RLock();manager.python='python';manager.processes={};manager.cancel_requested=set()
+    fake_job_process()
     manager._execute(row['id'])
     actual=store.project(pid)
     assert actual['current_run']=='locked-analysis' and actual['stems']==p['stems']

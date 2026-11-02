@@ -16,6 +16,7 @@ import tempfile
 import threading
 
 from app.chord_semantics_v2 import parse_chord
+from app.runtime_paths import configured_path,data_root,runtime_root
 
 MAX_BYTES = 12 * 1024 * 1024
 MAX_BLOCKS = 3000
@@ -34,12 +35,17 @@ def _filename(value):
     return name
 
 
+def available():
+    executable=configured_path('ocr_python','HARMONY_SCORE_OCR_PYTHON',runtime_root()/'ocr/Scripts/python.exe')
+    return executable.is_file() and (_ROOT/'helpers/printed_score_ocr_worker.py').is_file()
+
+
 def _run_worker(data, filename):
-    executable = Path(os.environ.get("HARMONY_SCORE_OCR_PYTHON", str(Path.home() / "miniconda3" / "python.exe")))
-    if not executable.is_file():
-        raise ValueError("Local OCR Python unavailable; set HARMONY_SCORE_OCR_PYTHON to an existing installation")
+    if not available():
+        raise ValueError('此安装尚未配置图片/PDF曲谱文字识别。可以导入 MusicXML、MIDI 或曲谱审核 JSON。')
+    executable=configured_path('ocr_python','HARMONY_SCORE_OCR_PYTHON',runtime_root()/'ocr/Scripts/python.exe')
     worker = _ROOT / "helpers" / "printed_score_ocr_worker.py"
-    scratch = _ROOT / ".tmp" / "score_ocr"
+    scratch = data_root() / 'cache/score_ocr'
     scratch.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="import-", dir=scratch) as directory:
         path = Path(directory) / ("input" + Path(filename).suffix.lower())

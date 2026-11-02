@@ -1,0 +1,391 @@
+{
+  "schema": 1,
+  "tools": {
+    "ffmpeg": {
+      "name": "ffmpeg-7.1-essentials_build.zip",
+      "url": "https://github.com/GyanD/codexffmpeg/releases/download/7.1/ffmpeg-7.1-essentials_build.zip",
+      "bytes": 92100272,
+      "sha256": "fa7d4d7e795db0e2503f49f105f46ed5852386f0cfdd819899be3b65ebde24fc",
+      "kind": "zip",
+      "feature": "core",
+      "files": [
+        {
+          "source": "ffmpeg-7.1-essentials_build/bin/ffmpeg.exe",
+          "path": "runtime/tools/ffmpeg/ffmpeg.exe",
+          "bytes": 87638016,
+          "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+        },
+        {
+          "source": "ffmpeg-7.1-essentials_build/LICENSE",
+          "path": "runtime/tools/ffmpeg/LICENSE",
+          "bytes": 35147,
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "source": "ffmpeg-7.1-essentials_build/README.txt",
+          "path": "runtime/tools/ffmpeg/README.txt",
+          "bytes": 40515,
+          "sha256": "cf9643d68f4149f534cf5e010760cb5125b109c1ec04cfdab4fd38e968212e69"
+        }
+      ]
+    },
+    "sonic": {
+      "name": "sonic-annotator-1.7-win64.zip",
+      "url": "https://github.com/sonic-visualiser/sonic-annotator/releases/download/sonic-annotator-1.7/sonic-annotator-1.7-win64.zip",
+      "bytes": 6618013,
+      "sha256": "c40717e029210cf1e1c97bc7dadea00cf4386327e67fdf9ca66027a91ea26693",
+      "kind": "zip",
+      "feature": "core",
+      "files": [
+        {
+          "source": "sonic-annotator-win64/CHANGELOG.txt",
+          "path": "runtime/tools/sonic-annotator/CHANGELOG.txt",
+          "bytes": 10589,
+          "sha256": "52fe7ab3e04cd36bd7c5f569c43925f115f8a842d5d40f6beb220f58e740a994"
+        },
+        {
+          "source": "sonic-annotator-win64/CITATION.txt",
+          "path": "runtime/tools/sonic-annotator/CITATION.txt",
+          "bytes": 339,
+          "sha256": "79dc31cbe4e2806d8f85b9dd03d3ed154790731e4d0bcfd9e03d53574ad9db40"
+        },
+        {
+          "source": "sonic-annotator-win64/COPYING.txt",
+          "path": "runtime/tools/sonic-annotator/COPYING.txt",
+          "bytes": 15130,
+          "sha256": "010517595e11fbdf1d443e5540462d75190d3d6799246934f14354b305de92fa"
+        },
+        {
+          "source": "sonic-annotator-win64/libsndfile-1.dll",
+          "path": "runtime/tools/sonic-annotator/libsndfile-1.dll",
+          "bytes": 1532752,
+          "sha256": "d40af1e4397f0d6c61ba8dad3932ff8bc24293e76a8b3831ef6e906f77f1166d"
+        },
+        {
+          "source": "sonic-annotator-win64/msvcp140.dll",
+          "path": "runtime/tools/sonic-annotator/msvcp140.dll",
+          "bytes": 567336,
+          "sha256": "497ae09a7912236de19bc34cd68a8acaabe1117cec95fd22f92841e264cde3bf"
+        },
+        {
+          "source": "sonic-annotator-win64/Qt6Core.dll",
+          "path": "runtime/tools/sonic-annotator/Qt6Core.dll",
+          "bytes": 6397776,
+          "sha256": "7e0432992f6fcc51ec87badeced78c27dc710ee2a424419d03772e0fa8f83e83"
+        },
+        {
+          "source": "sonic-annotator-win64/Qt6Network.dll",
+          "path": "runtime/tools/sonic-annotator/Qt6Network.dll",
+          "bytes": 1739088,
+          "sha256": "cee9a8644eb3e7beb09c3ec2367c8143cc35b24a17684bd58bfb1249997d9411"
+        },
+        {
+          "source": "sonic-annotator-win64/Qt6Test.dll",
+          "path": "runtime/tools/sonic-annotator/Qt6Test.dll",
+          "bytes": 359248,
+          "sha256": "a7399cae4cbf71a8e448a0b699c9ceda734e3dfedf4f10e3343a2fbc6b2fba88"
+        },
+        {
+          "source": "sonic-annotator-win64/Qt6Xml.dll",
+          "path": "runtime/tools/sonic-annotator/Qt6Xml.dll",
+          "bytes": 153936,
+          "sha256": "d4a83002ec929567ba2b33c3d06f0e2222fb840f6615221735163c0d15f7684b"
+        },
+        {
+          "source": "sonic-annotator-win64/README.txt",
+          "path": "runtime/tools/sonic-annotator/README.txt",
+          "bytes": 16746,
+          "sha256": "9dbb2cbe24daefc18b3c89952b7fd08678e868d04f81d346929c93db3c1a0b22"
+        },
+        {
+          "source": "sonic-annotator-win64/sonic-annotator.exe",
+          "path": "runtime/tools/sonic-annotator/sonic-annotator.exe",
+          "bytes": 3045200,
+          "sha256": "be457f578a069ff432d61d73ae93b3eb519b9daf3b4341520aca6df632b18227"
+        },
+        {
+          "source": "sonic-annotator-win64/vcruntime140.dll",
+          "path": "runtime/tools/sonic-annotator/vcruntime140.dll",
+          "bytes": 98328,
+          "sha256": "e31a84e35b01286f0b77b4e3b42967f4aafa092ec5be67e7c6af7871e7fb7757"
+        },
+        {
+          "source": "sonic-annotator-win64/vcruntime140_1.dll",
+          "path": "runtime/tools/sonic-annotator/vcruntime140_1.dll",
+          "bytes": 38424,
+          "sha256": "d3af25a94e8960b0e71da2e6e2d722dcdb90abd07e2eb1319f6da0a8b14458dd"
+        }
+      ]
+    },
+    "nnls": {
+      "name": "Vamp.Plugin.Pack.Installer.2.0.exe",
+      "url": "https://github.com/vamp-plugins/vamp-plugin-pack/releases/download/v2.0/Vamp.Plugin.Pack.Installer.2.0.exe",
+      "bytes": 35093344,
+      "sha256": "24d12812ffde04a20e7acbeb543860552d7aa05a729d9e9123b33c6e097c4d5f",
+      "kind": "resources",
+      "feature": "core",
+      "files": [
+        {
+          "source": "nnls-chroma.cat",
+          "path": "runtime/tools/vamp/nnls-chroma.cat",
+          "bytes": 122,
+          "sha256": "10e53533341c68c372ecef69fa542fe8530bad1ee49c38295cc3e12721a64a17",
+          "offset": 20729345,
+          "compressed_bytes": 122,
+          "compression": "none"
+        },
+        {
+          "source": "nnls-chroma.dll",
+          "path": "runtime/tools/vamp/nnls-chroma.dll",
+          "bytes": 531808,
+          "sha256": "9e6e8b0b9fdcec20807ed050d6a0a99d77c091fefe15058ad0466fbfd2e4ae71",
+          "offset": 21883161,
+          "compressed_bytes": 531808,
+          "compression": "none"
+        },
+        {
+          "source": "nnls-chroma.n3",
+          "path": "runtime/tools/vamp/nnls-chroma.n3",
+          "bytes": 15701,
+          "sha256": "71f6229c997058ea302e207241059e0753e4b42be9f97429f34cebd796421de6",
+          "offset": 29867742,
+          "compressed_bytes": 2674,
+          "compression": "zlib"
+        },
+        {
+          "source": "nnls-chroma_CITATION.txt",
+          "path": "runtime/tools/vamp/nnls-chroma_CITATION.txt",
+          "bytes": 309,
+          "sha256": "0914fce97c1eb347dd64dc5e082d30d5cce8981a45964c30a8a13c23f3734ed0",
+          "offset": 20294084,
+          "compressed_bytes": 309,
+          "compression": "none"
+        },
+        {
+          "source": "nnls-chroma_COPYING.txt",
+          "path": "runtime/tools/vamp/nnls-chroma_COPYING.txt",
+          "bytes": 15131,
+          "sha256": "67f82e045cf7acfef853ea0f426575a8359161a0a325e19f02b529a87c4b6c34",
+          "offset": 13996100,
+          "compressed_bytes": 15131,
+          "compression": "none"
+        },
+        {
+          "source": "nnls-chroma_README.txt",
+          "path": "runtime/tools/vamp/nnls-chroma_README.txt",
+          "bytes": 10172,
+          "sha256": "d0b25c9ec533a2159e865b43ee1dccac7141fce93efdffea58e043cac39c2ade",
+          "offset": 17223926,
+          "compressed_bytes": 10172,
+          "compression": "none"
+        }
+      ]
+    },
+    "soundfont": {
+      "name": "fluid-soundfont_3.1.orig.tar.gz",
+      "url": "https://ftp.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz",
+      "bytes": 134835922,
+      "sha256": "2621acaa1c78e4abdb24bdd163230cc577e61276936d6aa6e3180582142f0343",
+      "kind": "tar",
+      "feature": "piano",
+      "files": [
+        {
+          "source": "fluid-soundfont-3.1/FluidR3_GM.sf2",
+          "path": "assets/soundfonts/FluidR3_GM.sf2",
+          "bytes": 148398306,
+          "sha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0"
+        },
+        {
+          "source": "fluid-soundfont-3.1/COPYING",
+          "path": "assets/soundfonts/COPYING",
+          "bytes": 1086,
+          "sha256": "8ef830b65c97a976b86e34bb5fde08d99dfb1db13c4149b5b20bc837ac6c4568"
+        },
+        {
+          "source": "fluid-soundfont-3.1/README",
+          "path": "assets/soundfonts/README",
+          "bytes": 1042,
+          "sha256": "2f92d462684629f207e43815115b79d7f1ce130d30ca8792b7d82b398a8306f9"
+        }
+      ]
+    },
+    "fluidsynth": {
+      "name": "fluidsynth-v2.6.2-win10-x64-cpp11.zip",
+      "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.2/fluidsynth-v2.6.2-win10-x64-cpp11.zip",
+      "bytes": 2729665,
+      "sha256": "808295345d43c9c428f3fa87d29fbf97a9926f356df95559ff2689f3bd4072d7",
+      "kind": "zip",
+      "feature": "reconstruction",
+      "files": [
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth.h",
+          "bytes": 3622,
+          "sha256": "6d9397123c5b7279b75cf5ede240ceb1a3a9dff3ec52f894433e89a5a8ec8c16"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/mod.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/mod.h",
+          "bytes": 6401,
+          "sha256": "14ea8d09b608e24e4466540bc7575b3188d1c3b7c34dd706ccfb1b6fef90796b"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/gen.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/gen.h",
+          "bytes": 6270,
+          "sha256": "f8487b4eb2eaa0057de7d33bd01e6ca93de75e00e7091cecf07cd805956b7136"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/ladspa.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/ladspa.h",
+          "bytes": 2822,
+          "sha256": "7045101deaa1d43a557f33959c70ec83aaae4003f0e2b9570022c858f460caa2"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/version.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/version.h",
+          "bytes": 1535,
+          "sha256": "da199f006fa9239c96148d48c549afb1314bca0c3517a602ac69e2e97bd0a789"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/settings.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/settings.h",
+          "bytes": 6805,
+          "sha256": "d8a7bad37c4c53b325fca7cdef5f98504f1e2a8aa0dc7eb9861070b26927e496"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/audio.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/audio.h",
+          "bytes": 5693,
+          "sha256": "7533c47eb83cf2c7d219aaa71c9003cc3badcd73aaabc2914fbd4cb8d289377a"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/log.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/log.h",
+          "bytes": 3228,
+          "sha256": "d35798e1991c66749965211e91c776c10c45d8ba73a3bb8fd2fae2d32a6d1ed6"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/midi.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/midi.h",
+          "bytes": 12376,
+          "sha256": "126a941a4a7c598a0f8f58c7317a29a29d27906ba5573508719421c2003aa5c0"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/event.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/event.h",
+          "bytes": 6909,
+          "sha256": "36f4195a9fd12c42207c06b98deb563c6a48b61f4c76e84999ace79d7bd8479a"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/types.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/types.h",
+          "bytes": 3932,
+          "sha256": "17ad4c678f4d8d78398331c61818c2b6c9fd497e79077377f84cc4b320e26e75"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/shell.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/shell.h",
+          "bytes": 4783,
+          "sha256": "970646629660beb2c25d5f74ccfe32a30142e6b51f04fe8209491c57ccca3225"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/seq.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/seq.h",
+          "bytes": 4147,
+          "sha256": "0fe198fbcb56ee3c1c46db54a972525d9fff655d6c8a28a3b0d9e62ec42c165e"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/misc.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/misc.h",
+          "bytes": 1925,
+          "sha256": "b214f54217f519e5caf1df334462093116b1016daeca769634c78749b14ee49c"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/synth.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/synth.h",
+          "bytes": 29007,
+          "sha256": "3bfdad38cb2e776e6695f52ce64266397e2c030380efe5130a11d44191a4db3f"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/voice.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/voice.h",
+          "bytes": 5089,
+          "sha256": "ab8fe0270e12395b8acfaec9234b9502f6f630c0e2b972b6cff56e960cb2c5d6"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/sfont.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/sfont.h",
+          "bytes": 14919,
+          "sha256": "f31201b86ff0bb0df79f6076c4d077946e7b127164b53fc0ff5c2f2a9486d4be"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/seqbind.h",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/include/fluidsynth/seqbind.h",
+          "bytes": 1265,
+          "sha256": "d073f24841d5e8becf28ee4250d2cab9de30347585a513d69c660c9a47638176"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/bin/SDL3.dll",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/bin/SDL3.dll",
+          "bytes": 2453504,
+          "sha256": "2dfe1c60557c3e054ddda61bf7f29fdfd462c10faddf04dc6864961f43960df6"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/bin/libfluidsynth-3.dll",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/bin/libfluidsynth-3.dll",
+          "bytes": 903168,
+          "sha256": "3162c0881ab9646191c8327dfc413ea96670a3ac2e99299f28c2f0f257995f0e"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/bin/sndfile.dll",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/bin/sndfile.dll",
+          "bytes": 2603520,
+          "sha256": "4e3bd2de8e1485110eaebef8e1239471f73d608773831c323bf528e05645655e"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/bin/fluidsynth.exe",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/bin/fluidsynth.exe",
+          "bytes": 230912,
+          "sha256": "0da1d54ca018c5d2089d1d2fe1ad97c99f88128ac099f2675a8368e64af14253"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynth-shared-targets.cmake",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynth-shared-targets.cmake",
+          "bytes": 4738,
+          "sha256": "88ea095c31136013aa3af7ad716af3b7e50ef680d22474dcae8d5dc1dd279336"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynth-shared-targets-release.cmake",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynth-shared-targets-release.cmake",
+          "bytes": 1467,
+          "sha256": "be8255ea634ff1220543e7c3c5ae624034f1145b46405d3eefe3eae74ed8d4c3"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynthConfig.cmake",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynthConfig.cmake",
+          "bytes": 5978,
+          "sha256": "443b2536364b8cdb7649a3a1a5a406a0755666ee8258c89ba9ceea46d29044d1"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynthConfigVersion.cmake",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/cmake/fluidsynth/FluidSynthConfigVersion.cmake",
+          "bytes": 3760,
+          "sha256": "457de9ffb313d64813e35186ce8b407fc85f22475424b020907f8bd9eb58377c"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/pkgconfig/fluidsynth.pc",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/pkgconfig/fluidsynth.pc",
+          "bytes": 354,
+          "sha256": "54000ff165a0a96abac91a4e9cccd3a0319fcc5943928552fdade7796b0cdef1"
+        },
+        {
+          "source": "fluidsynth-v2.6.2-win10-x64-cpp11/lib/libfluidsynth-3.lib",
+          "path": "runtime/fluidsynth/fluidsynth-v2.6.2-win10-x64-cpp11/lib/libfluidsynth-3.lib",
+          "bytes": 101470,
+          "sha256": "37f1fd5fd9d4f4357d89db3e53cab7fa3b54aeddf7decda6b71eae17d0bc01bb"
+        }
+      ]
+    }
+  }
+}

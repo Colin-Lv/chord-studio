@@ -1,0 +1,32 @@
+[
+  {
+    "path": "torch/hub/checkpoints/955717e8-8726e21a.th",
+    "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/955717e8-8726e21a.th",
+    "bytes": 84141911,
+    "sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4"
+  },
+  {
+    "path": "torch/hub/checkpoints/f7e0c4bc-ba3fe64a.th",
+    "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/f7e0c4bc-ba3fe64a.th",
+    "bytes": 84141271,
+    "sha256": "ba3fe64ae8ef66ac9a4857222ce48efbdc5eb3ad375cb79dd13debee5aaa4066"
+  },
+  {
+    "path": "torch/hub/checkpoints/d12395a8-e57c48e6.th",
+    "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/d12395a8-e57c48e6.th",
+    "bytes": 84141271,
+    "sha256": "e57c48e6b0e38af4f7118d7bd08c49f0a0c0edf7d09143bdd902ea0d237303e6"
+  },
+  {
+    "path": "torch/hub/checkpoints/92cfc3b6-ef3bcb9c.th",
+    "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/92cfc3b6-ef3bcb9c.th",
+    "bytes": 84141271,
+    "sha256": "ef3bcb9c8b40d14ae5d51b6db2587339cc12c6b77c0be151ce6d69002e087bf2"
+  },
+  {
+    "path": "torch/hub/checkpoints/04573f0d-f3cf25b2.th",
+    "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/04573f0d-f3cf25b2.th",
+    "bytes": 84141271,
+    "sha256": "f3cf25b222c4eed7cd49dd8b2c9597d50c18bd154090f7b919cfa5f93cf22c49"
+  }
+]

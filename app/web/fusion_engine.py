@@ -23,15 +23,15 @@ from .storage import ROOT, atomic_json, now, read_json
 
 NAMES = ("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
 QUALITIES = ("maj", "min", "7", "maj7", "min7", "9", "maj9", "min9", "sus2", "sus4")
-HARMONIC_STEMS = ("bass", "other", "guitar", "piano")
+HARMONIC_STEMS = ("bass", "other", "guitar", "piano", "strings")
 DEFAULT_LAMBDA = 0.65
 DEFAULT_BETA = 0.0
 N_THRESHOLD = 0.5
 
 
 def _data_root() -> Path:
-    value = os.environ.get("CHORD_DESKTOP_DATA")
-    return Path(value) if value else Path(r"D:\ChordStudio\data")
+    from app.runtime_paths import data_root
+    return data_root()
 
 
 def harmonic_wav(manifest: dict, stems_wav_dir: Path, target: Path) -> Path:
@@ -44,7 +44,8 @@ def harmonic_wav(manifest: dict, stems_wav_dir: Path, target: Path) -> Path:
     total = None
     rate = None
     for stem_id in ids:
-        path = stems_wav_dir / f"{stem_id}.wav"
+        from .stems_worker import resolve_stem
+        path = resolve_stem(stems_wav_dir.parent, stem_id, manifest)
         if not path.is_file():
             continue
         audio, rate = sf.read(str(path), always_2d=True, dtype="float32")
@@ -133,18 +134,17 @@ def cells_for(count: int, duration: float):
 
 
 def segments_from(labels, cells):
+    from .source_rows import canonical_rows
+    if len(labels)!=len(cells):raise ValueError('Labels and intervals have different lengths')
+    checked=canonical_rows([dict(start=a,end=b,label=label,candidates=[]) for label,(a,b) in zip(labels,cells)])
     rows = []
-    for label, (start, end) in zip(labels, cells):
-        if rows and rows[-1]["label"] == label and abs(rows[-1]["end"] - start) < 1e-6:
+    for row in checked:
+        label,start,end=row['label'],row['start'],row['end']
+        if rows and rows[-1]["label"] == label and rows[-1]["end"] == start:
             rows[-1]["end"] = end
         else:
             rows.append(dict(start=start, end=end, label=label))
-    out = []
-    for index, row in enumerate(rows):
-        out.append(dict(id=index, start=round(row["start"], 3), end=round(row["end"], 3),
-                        start_text=f"{row['start']:.6f}", end_text=f"{row['end']:.6f}",
-                        label=row["label"], candidates=[]))
-    return out
+    return canonical_rows([dict(row,candidates=[]) for row in rows])
 
 
 def full_decode_segments(run_dir: Path, probability) -> list[dict]:
@@ -166,12 +166,7 @@ def full_decode_segments(run_dir: Path, probability) -> list[dict]:
         act=notes["activations"], note_times=notes["times"],
         beats=__import__("numpy").array([float(row["time"]) for row in beats_rows], dtype=float),
         beat_pos=__import__("numpy").array([int(row.get("beat", 0)) for row in beats_rows], dtype=int))
-    out = []
-    for index, (start, end, label) in enumerate(rows):
-        out.append(dict(id=index, start=round(float(start), 3), end=round(float(end), 3),
-                        start_text=f"{float(start):.6f}", end_text=f"{float(end):.6f}",
-                        label=str(label), candidates=[]))
-    return out
+    return segments_from([str(r[2]) for r in rows],[(float(r[0]),float(r[1])) for r in rows])
 
 
 def apply_to_analysis(run_dir: Path, segments, meta: dict, source_id: str = "stem_fusion",
@@ -181,9 +176,11 @@ def apply_to_analysis(run_dir: Path, segments, meta: dict, source_id: str = "ste
 
     path = run_dir / "analysis.json"
     result = read_json(path)
+    from .source_rows import serialize_rows
+    from .storage import atomic_text
+    segments,content=serialize_rows(segments,result.get('duration'))
     lab = run_dir / f"{source_id}.lab"
-    lab.write_text("".join(f"{row['start']:.17g} {row['end']:.17g} {row['label']}\n"
-                           for row in segments), encoding="utf-8", newline="\n")
+    atomic_text(lab,content)
     raw = lab.read_bytes()
     sources = [source for source in result["sources"] if source["id"] != source_id]
     sources.append(dict(id=source_id, name=label, path=lab.name,

@@ -19,7 +19,7 @@
         option.value = model.id;
         option.textContent = `${model.label}（${model.stems} 轨）`;
         option.title = model.note || "";
-        if (model.id === "bs_roformer_sw") option.selected = true;
+        if (model.id === "strings_v2") option.selected = true;
         modelSelect.appendChild(option);
       }
       configLoaded = true;
@@ -53,7 +53,7 @@
     try {
       const id = await ensureProject();
       const body = {
-        model: modelSelect.value || "bs_roformer_sw",
+        model: modelSelect.value || "strings_v2",
         harmony: document.getElementById("pipeHarmony").checked,
         harmony_method: "stem_evidence_v2",
         vocal_parts: document.getElementById("pipeVocal").checked,
@@ -95,7 +95,7 @@
       if (navigation !== state.navigation) return false;
       const job = await api(`/api/jobs/${id}`);
       if (job.status === "completed") return true;
-      if (["failed", "interrupted"].includes(job.status)) throw new Error(job.error || "识别未完成");
+      if (["failed", "interrupted", "cancelled"].includes(job.status)) throw new Error(job.error || "识别未完成");
       await new Promise(resolve => setTimeout(resolve, 1500));
     }
   }
@@ -105,7 +105,7 @@
     running = true;button.disabled = true;startBtn.disabled = true;
     try {
       const id = await ensureProject();
-      const job = await post(`/api/projects/${id}/fusion`, {model: modelSelect.value || "bs_roformer_sw"});
+      const job = await post(`/api/projects/${id}/fusion`, {model: modelSelect.value || "strings_v2"});
       if (job.profile !== "fusion") throw new Error("当前项目有任务在运行，请完成后再识别分轨和弦。");
       $("inputStatus").textContent = "正在识别分轨和弦；将复用已有分析和分轨。";
       if (!await waitForCompletion(job.id, state.navigation)) return;

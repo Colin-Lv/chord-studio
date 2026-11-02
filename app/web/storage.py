@@ -21,15 +21,16 @@ if str(ROOT).startswith("\\\\?\\"):
 DEFAULT_STORE = ROOT / "projects/web"
 AUDIO_EXTENSIONS = {".mp3", ".wav", ".flac", ".m4a", ".aac", ".ogg", ".opus", ".aiff", ".aif", ".wma", ".webm"}
 MAX_UPLOAD = 512 * 1024 * 1024
-LEGACY_ROOT = Path(os.environ.get("HARMONY_LEGACY_ROOT", r"D:\ChordStudio\Dialogue"))
+from app.runtime_paths import configured_path
+LEGACY_ROOT = configured_path('legacy_root', 'HARMONY_LEGACY_ROOT', ROOT)
 PROFILES = {
     "retained10": "当前冻结模型",
     "v1": "多来源和声 · 冻结 v1",
     "v2": "多来源和声 · 实验 v2",
     "madmom": "madmom · 单来源",
 }
-V1_MODEL = LEGACY_ROOT / "benchmarks/reports/session_20260926_accuracy2/multisource_candidate_reliability/selected_train66_head.joblib"
-V2_MODEL = LEGACY_ROOT / "benchmarks/reports/model_v2_20261003/semantic_e1/semantic_e1_B52_v2.joblib"
+V1_MODEL = configured_path('legacy_v1_model', 'HARMONY_V1_MODEL', LEGACY_ROOT / "benchmarks/reports/session_20260926_accuracy2/multisource_candidate_reliability/selected_train66_head.joblib")
+V2_MODEL = configured_path('legacy_v2_model', 'HARMONY_V2_MODEL', LEGACY_ROOT / "benchmarks/reports/model_v2_20261003/semantic_e1/semantic_e1_B52_v2.joblib")
 
 
 def now():

@@ -66,8 +66,14 @@ def read_lab(path):
 
 
 def write_lab(path, rows):
-    Path(path).write_text("\n".join(f"{a:.3f} {b:.3f} {label}" for a, b, label in rows),
-                          encoding="utf-8")
+    try:
+        from .source_rows import serialize_rows
+        from .storage import atomic_text
+    except ImportError:
+        from source_rows import serialize_rows
+        from storage import atomic_text
+    _,content=serialize_rows([dict(start=float(a),end=float(b),label=label) for a,b,label in rows])
+    atomic_text(path,content)
 
 
 # --------------------------------------------------------------------------- note evidence

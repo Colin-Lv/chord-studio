@@ -1,6 +1,7 @@
 """Private loopback server owned by the native window; no acoustic work at startup."""
 from __future__ import annotations
 import argparse
+import errno
 import json
 import os
 from pathlib import Path
@@ -13,6 +14,36 @@ import time
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
+
+
+def bind_loopback(port_file):
+    """The saved port is a preference, never a requirement for startup.
+
+    Keep the bound socket until uvicorn takes over: checking a free port and
+    opening it again leaves a race. Never reuse or terminate another listener.
+    """
+    try:
+        preferred = int(port_file.read_text(encoding='ascii').strip())
+        if not 0 <= preferred <= 65535:preferred = 0
+    except (OSError, ValueError, UnicodeError):
+        preferred = 0
+    def attempt(port):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            if os.name == 'nt':sock.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+            sock.bind(('127.0.0.1', port))
+            return sock
+        except BaseException:
+            sock.close()
+            raise
+    try:
+        return attempt(preferred)
+    except OSError as exc:
+        # Windows may report a reserved/exclusively bound port as access denied.
+        conflicts = {errno.EADDRINUSE, errno.EACCES, 10048, 10013}
+        if not preferred or (exc.errno not in conflicts and getattr(exc,'winerror',None) not in conflicts):
+            raise
+        return attempt(0)
 
 
 def main():
@@ -32,15 +63,15 @@ def main():
     data = args.data_dir.resolve()
     data.mkdir(parents=True, exist_ok=True)
     os.environ['HARMONY_WEB_STORE'] = str(data / 'projects')
-    os.environ['HARMONY_MODEL_PYTHON'] = config['model_python']
-    os.environ['HARMONY_LEGACY_ROOT'] = config['legacy_root']
     os.environ['CHORD_DESKTOP_DATA'] = str(data)
+    from app.runtime_paths import prepare_environment
+    prepare_environment()
     os.environ['PYTHONUTF8'] = '1'
     os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
     os.environ['PATH'] = str(Path(json.loads((ROOT/'inference/runtime.local.json').read_text())['ffmpeg']['path']).parent) + os.pathsep + os.environ.get('PATH','')
     # Import once into a staging directory, then rename; the original is read-only.
     marker = data / 'legacy-import.json'
-    old = Path(config['legacy_root']) / 'projects/web'
+    old = Path(os.environ['HARMONY_LEGACY_ROOT']) / 'projects/web'
     target = data / 'projects'
     if not marker.exists() and not target.exists() and old.is_dir() and not os.environ.get('CHORD_DESKTOP_SKIP_IMPORT'):
         pending = data / 'projects.importing'
@@ -68,24 +99,25 @@ def main():
         return response
     @app.get('/api/desktop/health')
     def health():
-        return {'application':'Chord Studio','version':'1.0.0','backend_pid':os.getpid(),'model':config['model_version']}
-    sock = socket.socket()
+        return {'application':'Chord Studio','version':config.get('application_version','1.0.0'),'backend_pid':os.getpid(),'model':config['model_version']}
     port_file = data / 'server-port.txt'
-    preferred_port = int(port_file.read_text()) if port_file.exists() else 0
-    sock.bind(('127.0.0.1', preferred_port))
+    sock = bind_loopback(port_file)
     port = sock.getsockname()[1]
-    port_file.write_text(str(port), encoding='ascii')
     server = uvicorn.Server(uvicorn.Config(app, log_level='warning', access_log=False, workers=1))
     def announce():
         while not server.started and not server.should_exit:
             time.sleep(.05)
         if server.started:
+            port_file.write_text(str(port), encoding='ascii')
             value = {'schema':1,'pid':os.getpid(),'owner_pid':args.owner_pid,'port':port,'token':token,'url':f'http://127.0.0.1:{port}/?session={token}','data_dir':str(data)}
             temporary = args.ready_file.with_suffix('.pending')
             temporary.write_text(json.dumps(value),encoding='utf-8')
             temporary.replace(args.ready_file)
     threading.Thread(target=announce, daemon=True).start()
-    server.run(sockets=[sock])
+    try:
+        server.run(sockets=[sock])
+    finally:
+        sock.close()
 
 if __name__ == '__main__':
     main()

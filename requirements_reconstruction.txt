@@ -1,0 +1,15 @@
+# Isolated reconstruction runtime; reuse the existing piano/GPU torch environment.
+# See research/song-reconstruction-plan/IMPLEMENTATION.md for pinned model sources.
+basic-pitch==0.4.0
+transformers==4.45.1
+tokenizers==0.20.3
+huggingface-hub==0.36.2
+omegaconf==2.3.0
+antlr4-python3-runtime==4.9.3
+resampy==0.4.3
+pytorch-lightning==2.5.6
+torchmetrics==1.8.2
+lightning-utilities==0.15.2
+regex==2025.11.3
+wandb==0.31.0
+deprecated==3.0.1

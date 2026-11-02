@@ -1,0 +1,34 @@
+[
+  {
+    "path": "bs_bowed_str_gilliaaan_config.yaml",
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str_gilliaaan_config.yaml",
+    "revision": "283025218e6447db47da1ad18df3c2f67ca8d66d",
+    "sha256": "abd85b92f52a8a46d894eef35fa651f239a21851d637ec0a7bcf86a3596537ca",
+    "expected_lfs_sha256": null,
+    "bytes": 1790
+  },
+  {
+    "path": "bs_bowed_str_gilliaaan.ckpt",
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str_gilliaaan.ckpt",
+    "revision": "283025218e6447db47da1ad18df3c2f67ca8d66d",
+    "sha256": "282fabc28fb106edcc5e5e8383ea36559602fe53d0c406c736e08f58d66710fc",
+    "expected_lfs_sha256": "282fabc28fb106edcc5e5e8383ea36559602fe53d0c406c736e08f58d66710fc",
+    "bytes": 303490678
+  },
+  {
+    "path": "bs_bowed_str2_gilliaaan_config.yaml",
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str2_gilliaaan_config.yaml",
+    "revision": "283025218e6447db47da1ad18df3c2f67ca8d66d",
+    "sha256": "f32c4491984d6d3656cb078626758bef30ed0367e0d19c50d96392812a6eca74",
+    "expected_lfs_sha256": null,
+    "bytes": 2431
+  },
+  {
+    "path": "bs_bowed_str2_gilliaaan.ckpt",
+    "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str2_gilliaaan.ckpt",
+    "revision": "283025218e6447db47da1ad18df3c2f67ca8d66d",
+    "sha256": "e49feede4125404930ea4dd2cd634b8a5850cc9e24dc0565a01ccac466a5bbff",
+    "expected_lfs_sha256": "e49feede4125404930ea4dd2cd634b8a5850cc9e24dc0565a01ccac466a5bbff",
+    "bytes": 303413749
+  }
+]

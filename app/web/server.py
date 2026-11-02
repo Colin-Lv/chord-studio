@@ -28,9 +28,9 @@ class AnalyzeRequest(BaseModel):
 
 
 class PipelineRequest(BaseModel):
-    model: str = "bs_roformer_sw"
+    model: str = "strings_v2"
     vocal_parts: bool = False
-    guitar_parts: bool = False
+    guitar_parts: bool = True
     drums_parts: bool = False
     guitar_mode: Literal["timbre", "duet"] = "timbre"
     harmony: bool = False
@@ -41,7 +41,9 @@ class PipelineRequest(BaseModel):
 
 class SeparateRequest(BaseModel):
     force: bool = False
-    model: str = "htdemucs"
+    model: str = "strings_v2"
+    guitar_parts: bool = True
+    guitar_mode: Literal["timbre", "duet"] = "timbre"
 
 
 class GuitarPartsRequest(SeparateRequest):
@@ -118,6 +120,10 @@ def create_app(store_root=None, manager_factory=Jobs):
     register_editor(application, store, save_lock)
     from .score_api import register_scores
     register_scores(application, store, save_lock)
+    from .piano_api import register_piano
+    register_piano(application, store)
+    from .reconstruction_api import register_reconstruction
+    register_reconstruction(application, store)
     application.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]", "testserver"])
 
     @application.middleware("http")
@@ -147,8 +153,9 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.get("/api/config")
     def config():
         from .stems_worker import MODELS
+        from app.runtime_paths import config as runtime_config
         return dict(profiles=[dict(id=k, name=v) for k, v in PROFILES.items()], max_upload_bytes=MAX_UPLOAD,
-                    default_profile="retained10", desktop_version="1.0.0", retained10_max_seconds=600,
+                    default_profile="retained10", desktop_version=runtime_config().get('application_version','1.0.0'), retained10_max_seconds=600,
                     stems_models=[dict(id=m["id"], label=m["label"], note=m.get("note", ""),
                                        stems=m.get("stems", 4)) for m in MODELS.values()],
                     editor_preview=os.environ.get("HARMONY_EDITOR_PREVIEW") == "1")
@@ -222,7 +229,8 @@ def create_app(store_root=None, manager_factory=Jobs):
         return application.state.jobs.submit(
             project_id, "stems",
             download=not project.get("audio") and project.get("input_type") == "bilibili",
-            force=body.force, model=body.model)
+            force=body.force, model=body.model,guitar_mode=body.guitar_mode,
+            split_guitar=body.guitar_parts and MODELS[body.model].get('stems',4)>=6)
 
     @application.post("/api/projects/{project_id}/pipeline", status_code=202)
     def pipeline(project_id: str, body: PipelineRequest):
@@ -230,6 +238,7 @@ def create_app(store_root=None, manager_factory=Jobs):
         if body.model not in MODELS:
             raise HTTPException(400, "未知的分轨模型")
         spec = body.model_dump()
+        spec['guitar_parts'] = body.guitar_parts and MODELS[body.model].get('stems',4)>=6
         return application.state.jobs.submit(project_id, "pipeline", key_mode="continuous",
                                              model=body.model, pipeline=spec,
                                              force=body.force_stems)
@@ -281,6 +290,11 @@ def create_app(store_root=None, manager_factory=Jobs):
         if not path.is_file():
             raise HTTPException(404, "尚未细分鼓组")
         manifest = read_json(path)
+        if manifest.get('parent_sha256'):
+            from .stems_worker import stem_wav
+            parent=stem_wav(sha,model,'drums')
+            if not parent.is_file() or signature(parent)['sha256']!=manifest['parent_sha256']:
+                raise HTTPException(404,'鼓组源轨已更新，请重新细分')
         manifest["urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['file']}?model={model}"
                             for track in manifest.get("tracks", [])}
         manifest["wav_urls"] = {track["id"]: f"/api/projects/{project_id}/stems/drums_parts/{track['wav']}?model={model}"
@@ -311,11 +325,11 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.post("/api/projects/{project_id}/guitar-parts", status_code=202)
     def guitar_parts(project_id: str, body: GuitarPartsRequest):
         from .guitar_parts_worker import fingerprint
-        from .stems_worker import MODELS, stems_dir
+        from .stems_worker import MODELS, stems_dir, stem_wav
         if body.model not in MODELS:
             raise HTTPException(400, "未知的分轨模型")
         sha = _stems_sha(project_id, store.project(project_id))
-        if not (stems_dir(sha, body.model)/"wav/guitar.wav").is_file():
+        if not stem_wav(sha, body.model,"guitar").is_file():
             raise HTTPException(409, "请先生成并切换到六轨精细版，再细分其中的吉他轨")
         if not fingerprint(body.mode):
             raise HTTPException(503, "此吉他细分模型尚未准备完整")
@@ -339,11 +353,11 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.get("/api/projects/{project_id}/stems/guitar-parts-catalog")
     def guitar_parts_catalog(project_id: str):
         from .guitar_parts_worker import RECIPES,valid_manifest,fingerprint
-        from .stems_worker import available_models,stems_dir
+        from .stems_worker import available_models,stems_dir,stem_wav
         project = store.project(project_id);sha = _stems_sha(project_id,project)
         results = []
         for model in available_models(sha):
-            if not model['ready'] or not (stems_dir(sha,model['id'])/'wav/guitar.wav').is_file():continue
+            if not model['ready'] or not stem_wav(sha,model['id'],'guitar').is_file():continue
             for mode in RECIPES:
                 manifest = valid_manifest(sha,model['id'],mode)
                 if manifest:results.append(guitar_urls(project_id,manifest))
@@ -366,14 +380,14 @@ def create_app(store_root=None, manager_factory=Jobs):
         options = available_models(sha)
         ready = [item["id"] for item in options if item["ready"]]
         if model is None:
-            model = "htdemucs" if "htdemucs" in ready else (ready[0] if ready else None)
+            model = "strings_v2" if "strings_v2" in ready else ("htdemucs" if "htdemucs" in ready else (ready[0] if ready else None))
         if model is None or model not in [item["id"] for item in options]:
             raise HTTPException(404, "尚未生成分轨")
         path = stems_dir(sha, model) / "manifest.json"
         if not path.is_file():
             raise HTTPException(404, "该模型尚未生成分轨")
         manifest = read_json(path)
-        manifest["audio_url"] = f"/api/projects/{project_id}/audio"
+        manifest["audio_url"] = (f"/api/projects/{project_id}/stems/{manifest['reference_file']}?model={model}" if manifest.get("reference_file") else f"/api/projects/{project_id}/audio")
         manifest["model_options"] = options
         manifest["model_key"] = model
         query = f"?model={model}"
@@ -386,13 +400,13 @@ def create_app(store_root=None, manager_factory=Jobs):
     @application.get("/api/projects/{project_id}/stems/{name:path}")
     def stem_audio(project_id: str, name: str, model: str | None = None):
         from .stems_worker import MODEL_NAME, MODELS, available_models, stems_dir
-        if not re.fullmatch(r"(?:(?:drums_parts/)?(?:wav/)?|(?:vocal_parts|guitar_parts)/[a-f0-9]{32}/)[a-z_]+\.(mp3|wav)", name):
+        if not re.fullmatch(r"(?:(?:drums_parts/)?(?:wav/)?|(?:vocal_parts|guitar_parts)/[a-f0-9]{32}/|generations/[a-f0-9]{32}/(?:wav/)?)[a-z_]+\.(mp3|wav)", name):
             raise HTTPException(404, "未知文件")
         project = store.project(project_id)
         sha = _stems_sha(project_id, project)
         if model is None:
             ready = [item["id"] for item in available_models(sha) if item["ready"]]
-            model = "htdemucs" if "htdemucs" in ready else (ready[0] if ready else MODEL_NAME)
+            model = "strings_v2" if "strings_v2" in ready else ("htdemucs" if "htdemucs" in ready else (ready[0] if ready else MODEL_NAME))
         if model not in MODELS:
             raise HTTPException(404, "未知的分轨模型")
         path = stems_dir(sha, model) / name
@@ -404,9 +418,18 @@ def create_app(store_root=None, manager_factory=Jobs):
         return FileResponse(path, media_type="audio/mpeg" if name.endswith(".mp3") else "audio/wav",
                             content_disposition_type=disposition)
 
+    @application.get("/api/jobs")
+    def job_queue():
+        return application.state.jobs.list()
+
+    @application.post("/api/jobs/{job_id}/cancel")
+    def cancel_job(job_id: str):
+        return application.state.jobs.cancel(job_id)
+
     @application.get("/api/jobs/{job_id}")
     def job(job_id: str):
-        return read_json(store.job_path(job_id))
+        manager = application.state.jobs
+        return manager.get(job_id) if hasattr(manager, 'get') else read_json(store.job_path(job_id))
 
     @application.get("/api/jobs/{job_id}/log", response_class=PlainTextResponse)
     def job_log(job_id: str):

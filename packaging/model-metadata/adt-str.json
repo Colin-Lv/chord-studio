@@ -1,0 +1,121 @@
+{
+  "repo": "Pierfrancesco/adt-str",
+  "revision": "a33c5c6b191a4ca1e0f6dc22140947485eb36ce8",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1520,
+      "sha256": "41f73c351dc10452a57694122850282616971b3bc7d284dfe7625bb5bca29ebd"
+    },
+    {
+      "path": "adt_config.yaml",
+      "bytes": 2659,
+      "sha256": "a565a66cbb39b03e83eb29babaf474ba83bd4500ae1025868c9f65f84d2d6a3f"
+    },
+    {
+      "path": "adt_transcriber.py",
+      "bytes": 11631,
+      "sha256": "279e2b4bbe0a5867b55027f0f1a4632c20281e7c8ae21125fefaf1e1cf4afae3"
+    },
+    {
+      "path": "build_model.py",
+      "bytes": 3566,
+      "sha256": "f7be1ae126c78fbe330ab42bebd48eaa79b806ad71ca9f4950615ef16b8caf97"
+    },
+    {
+      "path": "config.json",
+      "bytes": 405,
+      "sha256": "645ff73607cf8cebc71da07ad0016740cf82043fa56a62be4783074c8550cee9"
+    },
+    {
+      "path": "config.py",
+      "bytes": 2495,
+      "sha256": "4e18475062bef94b035f8cbf46e799d9b9c1fd9f06506e5f31770b9f94cd2904"
+    },
+    {
+      "path": "inference.py",
+      "bytes": 4087,
+      "sha256": "31eb136554309487fa215ce7f9743c858c1fe3919f1aecc644aa97e1f254f7b5"
+    },
+    {
+      "path": "model.py",
+      "bytes": 18855,
+      "sha256": "797c39feb53601f1a82a9118b26ffc85400e77e6bbaed1227fe2bf0f823d8124"
+    },
+    {
+      "path": "modules/clap_encoder.py",
+      "bytes": 4115,
+      "sha256": "2581fc629eeee0f7575a210258377e4832959f79d88c686fe00aafc5e1979e26"
+    },
+    {
+      "path": "modules/midi_tokenizer.py",
+      "bytes": 4039,
+      "sha256": "abda4569529c722a614cb8c34d9222e936616d9a41f2c150047363f7463979b8"
+    },
+    {
+      "path": "modules/segmenter.py",
+      "bytes": 2036,
+      "sha256": "ee8a6eb596b81ff7daa76e897967eb7430ba76b4d72b31d9dc16465227b92cad"
+    },
+    {
+      "path": "modules/synthetiser.py",
+      "bytes": 11216,
+      "sha256": "66540e9fe11673ff8b92eec72d290ee6c56beb3a740d452221df15c757990b80"
+    },
+    {
+      "path": "modules/utils.py",
+      "bytes": 1236,
+      "sha256": "32ac63b44897c98cead8b73931585f331747e5f4f212f997df4fb9bb91f316fe"
+    },
+    {
+      "path": "setting-tau-0.8/adt_config.yaml",
+      "bytes": 2659,
+      "sha256": "a565a66cbb39b03e83eb29babaf474ba83bd4500ae1025868c9f65f84d2d6a3f"
+    },
+    {
+      "path": "setting-tau-0.8/config.json",
+      "bytes": 405,
+      "sha256": "645ff73607cf8cebc71da07ad0016740cf82043fa56a62be4783074c8550cee9"
+    },
+    {
+      "path": "setting-tau-0.8/model.safetensors",
+      "bytes": 289134056,
+      "sha256": "f94d1773d929166e0a3f63d305975aa6667512f8a71d7706872e1f8b23ca930b"
+    },
+    {
+      "path": "utils/audio_utils.py",
+      "bytes": 2182,
+      "sha256": "48c21d0a9728c192d1731bebc22f8a18850aecdba549aa44f6b3d739d51569f0"
+    },
+    {
+      "path": "utils/config_utils.py",
+      "bytes": 924,
+      "sha256": "561081be0ddb3947935d24cb8c6d76ebac1662515edef9f931a376311bfbae63"
+    },
+    {
+      "path": "utils/drum_audio_render.py",
+      "bytes": 5665,
+      "sha256": "40e3671f103664707ea2041b10f060b195e85a5afadc84071a0e5c6299de87dc"
+    },
+    {
+      "path": "utils/inspect_hdf5.py",
+      "bytes": 2192,
+      "sha256": "979675f1717de9a4e1e5214d13d3a96f803303b27e29f935addfe924688a9f6a"
+    },
+    {
+      "path": "utils/mapping_utils.py",
+      "bytes": 8230,
+      "sha256": "f5b1fa9a7958b0108ac34d3e37f22eb6a172f412acd78be5488c381e180a359a"
+    },
+    {
+      "path": "utils/midi_utils.py",
+      "bytes": 2641,
+      "sha256": "d7a5d30855f1ec6c2aed3a40e52a0770833b802b2e4134c914368452f92b27fe"
+    },
+    {
+      "path": "utils/utils.py",
+      "bytes": 9212,
+      "sha256": "4bbb25dc3a5e3b5a753afc786323570ae5c9a6d5ca6aab177851694032d9bd3c"
+    }
+  ]
+}

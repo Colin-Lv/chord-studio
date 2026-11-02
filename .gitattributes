@@ -1,0 +1,8 @@
+# Frozen model contracts and cache migration records hash source bytes. Preserve
+# their original line endings across clone/build; do not apply autocrlf rewrites.
+*.py -text
+*.json -text
+*.ps1 -text
+*.lock -text
+*.in -text
+*.constraints -text

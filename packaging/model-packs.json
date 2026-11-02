@@ -1,0 +1,1005 @@
+{
+  "schema": 1,
+  "default": [
+    "strings_v2",
+    "guitar_timbre"
+  ],
+  "packs": {
+    "standard": {
+      "label": "标准四轨分离",
+      "requires": [],
+      "files": [
+        {
+          "path": "torch/hub/checkpoints/955717e8-8726e21a.th",
+          "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/955717e8-8726e21a.th",
+          "bytes": 84141911,
+          "sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 84141911
+    },
+    "fine": {
+      "label": "精细四轨分离（四模型）",
+      "requires": [],
+      "files": [
+        {
+          "path": "torch/hub/checkpoints/f7e0c4bc-ba3fe64a.th",
+          "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/f7e0c4bc-ba3fe64a.th",
+          "bytes": 84141271,
+          "sha256": "ba3fe64ae8ef66ac9a4857222ce48efbdc5eb3ad375cb79dd13debee5aaa4066"
+        },
+        {
+          "path": "torch/hub/checkpoints/d12395a8-e57c48e6.th",
+          "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/d12395a8-e57c48e6.th",
+          "bytes": 84141271,
+          "sha256": "e57c48e6b0e38af4f7118d7bd08c49f0a0c0edf7d09143bdd902ea0d237303e6"
+        },
+        {
+          "path": "torch/hub/checkpoints/92cfc3b6-ef3bcb9c.th",
+          "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/92cfc3b6-ef3bcb9c.th",
+          "bytes": 84141271,
+          "sha256": "ef3bcb9c8b40d14ae5d51b6db2587339cc12c6b77c0be151ce6d69002e087bf2"
+        },
+        {
+          "path": "torch/hub/checkpoints/04573f0d-f3cf25b2.th",
+          "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/04573f0d-f3cf25b2.th",
+          "bytes": 84141271,
+          "sha256": "f3cf25b222c4eed7cd49dd8b2c9597d50c18bd154090f7b919cfa5f93cf22c49"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 336565084
+    },
+    "strings_v2": {
+      "label": "提琴组 · 版本 2",
+      "requires": [
+        "six_stems"
+      ],
+      "files": [
+        {
+          "path": "bowed-strings/bs_bowed_str2_gilliaaan_config.yaml",
+          "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str2_gilliaaan_config.yaml",
+          "bytes": 2431,
+          "sha256": "f32c4491984d6d3656cb078626758bef30ed0367e0d19c50d96392812a6eca74"
+        },
+        {
+          "path": "bowed-strings/bs_bowed_str2_gilliaaan.ckpt",
+          "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str2_gilliaaan.ckpt",
+          "bytes": 303413749,
+          "sha256": "e49feede4125404930ea4dd2cd634b8a5850cc9e24dc0565a01ccac466a5bbff"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 303416180
+    },
+    "strings_v1": {
+      "label": "提琴组 · 版本 1",
+      "requires": [
+        "six_stems"
+      ],
+      "files": [
+        {
+          "path": "bowed-strings/bs_bowed_str_gilliaaan_config.yaml",
+          "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str_gilliaaan_config.yaml",
+          "bytes": 1790,
+          "sha256": "abd85b92f52a8a46d894eef35fa651f239a21851d637ec0a7bcf86a3596537ca"
+        },
+        {
+          "path": "bowed-strings/bs_bowed_str_gilliaaan.ckpt",
+          "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/283025218e6447db47da1ad18df3c2f67ca8d66d/bs_roformer/bs_bowed_str_gilliaaan.ckpt",
+          "bytes": 303490678,
+          "sha256": "282fabc28fb106edcc5e5e8383ea36559602fe53d0c406c736e08f58d66710fc"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 303492468
+    },
+    "six_stems": {
+      "label": "六轨分离",
+      "requires": [],
+      "files": [
+        {
+          "path": "audio_separator/BS-Roformer-SW.ckpt",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/BS-Roformer-SW.ckpt",
+          "bytes": 699412152,
+          "sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e"
+        },
+        {
+          "path": "audio_separator/BS-Roformer-SW.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/BS-Roformer-SW.yaml",
+          "bytes": 4653,
+          "sha256": "b558996f1e25eb48798bd6502505a5de94c4f966d6edfb1a0420f06cc40b501a"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 699416805
+    },
+    "vocal_detail": {
+      "label": "主唱与背景和声",
+      "requires": [],
+      "files": [
+        {
+          "path": "audio_separator/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+          "bytes": 913096801,
+          "sha256": "1de20d459332fe8869aeb01327a31df0032262706e1365114e852dc271779813"
+        },
+        {
+          "path": "audio_separator/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956_config.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956_config.yaml",
+          "bytes": 1726,
+          "sha256": "b35077d94861f068097cce1a5e54633c055e7dcc2613eade4e4dc7c7c9c3f48b"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 913098527
+    },
+    "drum_detail": {
+      "label": "鼓组细分",
+      "requires": [],
+      "files": [
+        {
+          "path": "drumsep/MDX23C-DrumSep-aufr33-jarredou.ckpt",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/MDX23C-DrumSep-aufr33-jarredou.ckpt",
+          "bytes": 437652699,
+          "sha256": "d2a4aa53eb584d21eead358a4e66d1882ad182911be018f052b5da73be9096d0"
+        },
+        {
+          "path": "drumsep/config_drumsep_mdx23c.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/config_drumsep_mdx23c.yaml",
+          "bytes": 2417,
+          "sha256": "17d1649a227f841165bdb4c11a42082898192a1ea3ceab7e7e0b9293d6589dd6"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 437655116
+    },
+    "vocal_priority": {
+      "label": "人声优先分离",
+      "requires": [],
+      "files": [
+        {
+          "path": "bsroformer/model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "bytes": 639331213,
+          "sha256": "5b84f37e8d444c8cb30c79d77f613a41c05868ff9c9ac6c7049c00aefae115aa"
+        },
+        {
+          "path": "bsroformer/model_bs_roformer_ep_317_sdr_12.9755.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/model_bs_roformer_ep_317_sdr_12.9755.yaml",
+          "bytes": 2273,
+          "sha256": "2bfdd16c656bd9519aba757cc4f8834b7ede675eb1e00ec4772d74ae1c41af7f"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 639333486
+    },
+    "guitar_timbre": {
+      "label": "木吉他／电吉他细分",
+      "requires": [
+        "six_stems"
+      ],
+      "files": [
+        {
+          "path": "guitar/bs_mega_53stem_acoustic-guitar_mvsep.ckpt",
+          "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_acoustic-guitar_mvsep.ckpt?download=true",
+          "bytes": 77624038,
+          "sha256": "fa386b2e7b1ea4f12b9b5c557444c0dc78648ef4ee299de2759d86457e182b3e"
+        },
+        {
+          "path": "guitar/bs_mega_53stem_acoustic-guitar_mvsep_config.yaml",
+          "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_acoustic-guitar_mvsep_config.yaml?download=true",
+          "bytes": 1584,
+          "sha256": "040148363929b68fd4a4e323358a245938568692ca201fc2f703b6449dc8b569"
+        },
+        {
+          "path": "guitar/bs_mega_53stem_electric-guitar_mvsep.ckpt",
+          "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_electric-guitar_mvsep.ckpt?download=true",
+          "bytes": 77624038,
+          "sha256": "cd506bfce9474f91a31001967f2c4935ce4e67f643da3df20d04058da927c553"
+        },
+        {
+          "path": "guitar/bs_mega_53stem_electric-guitar_mvsep_config.yaml",
+          "url": "https://huggingface.co/noblebarkrr/BS-Roformer-MVSep-Mega-53-stems/resolve/main/v1/bs_mega_53stem_electric-guitar_mvsep_config.yaml?download=true",
+          "bytes": 1584,
+          "sha256": "e89d0646a99f08e99e56d71de22b5accee2628fd11a91928ad556fc7b8617ecb"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 155251244
+    },
+    "guitar_roles": {
+      "label": "旋律／伴奏吉他细分",
+      "requires": [
+        "six_stems"
+      ],
+      "files": [
+        {
+          "path": "guitar/mbr_lead_rhythm_guitar_listra92_config.yaml",
+          "url": "https://huggingface.co/noblebarkrr/mvsepless_resources/resolve/main/mel_band_roformer/mbr_lead_rhythm_guitar_listra92_config.yaml?download=true",
+          "bytes": 1800,
+          "sha256": "a26685bc9ab10aab4dc153b74ec3559f1b4bd2251d129a13b6b22fe3a27d382d"
+        },
+        {
+          "path": "guitar/guitar_role_v1.ckpt",
+          "url": "https://github.com/Colin-Lv/chord-studio/releases/download/v1.1.0/guitar_role_v1.ckpt",
+          "bytes": 336959425,
+          "sha256": "1b332fc280365c076d3b97d5e77a20626515320653e64116fdb0fb27e5f2b9b9"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。 角色模型为项目已有适配版本；上游架构和预训练模型来源见模型说明。",
+      "download_bytes": 336961225
+    },
+    "reconstruction": {
+      "label": "整曲 MIDI 重构",
+      "requires": [],
+      "files": [
+        {
+          "path": "reconstruction/yourmt3/README.md",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/README.md",
+          "bytes": 301,
+          "sha256": "9a8468bd685eb0e9084566c5b6cca230481ea4e1c0a6212b4388c4b4618400b4"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/logs/2024/mc13_256_g4_all_v7_mt3f_sqr_rms_moe_wf4_n8k2_silu_rope_rp_b36_nops/checkpoints/last.ckpt",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/logs/2024/mc13_256_g4_all_v7_mt3f_sqr_rms_moe_wf4_n8k2_silu_rope_rp_b36_nops/checkpoints/last.ckpt",
+          "bytes": 561544628,
+          "sha256": "ae38e415c79efd5592dcb9b658cdb99ddb11d4c4e1eaa364cab04a052473fc25"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/config/config.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/config/config.py",
+          "bytes": 13602,
+          "sha256": "6803e1479c77a9c5f5ddec145291ee9b17cd9a15fbcd5f1bcf7ba39297218838"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/config/data_presets.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/config/data_presets.py",
+          "bytes": 37710,
+          "sha256": "0b47f4b711d63a355f3214a87a16750d82ff791a087e58f8e64a2dbac7494bb3"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/config/task.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/config/task.py",
+          "bytes": 5706,
+          "sha256": "b04b75554de2771c9787e9d74b2d8b7d93707117c16be8814a18c7abf590b93c"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/config/vocabulary.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/config/vocabulary.py",
+          "bytes": 11942,
+          "sha256": "9d693c320d6d912f4e756b90c132a0999aa1aaf8a75fcb627a69935cf63aea36"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/auth2/token_data.json",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/auth2/token_data.json",
+          "bytes": 477,
+          "sha256": "d1b113b50e1f3c335e8c190ba614a45f4eaae05c26ea0cc52714886ffacb155e"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/auth2/youtube-nsig/43bc9526.json",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/auth2/youtube-nsig/43bc9526.json",
+          "bytes": 5555,
+          "sha256": "018c509e15fecefbbc6cef8a15fc5e6bf23ea154e0329068e04a9cd8ffe64d03"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/auth2/youtube-sigfuncs/js_43bc9526_106.json",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/auth2/youtube-sigfuncs/js_43bc9526_106.json",
+          "bytes": 454,
+          "sha256": "9ac195de9ed1dfa2af781ed870bd403f4b76d64748d3a37a3e2382b577e6d610"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/check_drum_channel_slakh.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/check_drum_channel_slakh.py",
+          "bytes": 938,
+          "sha256": "e46a0eca56561905c21cbc36cce3161c84adeaa89aa4ce1526989c8f4a140054"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/dataset_mutable_var_sanity_check.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/dataset_mutable_var_sanity_check.py",
+          "bytes": 3875,
+          "sha256": "1228e3473399c6960aa6afe5ed5a032799a31903f9f04bc62b5994d54530c203"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/datasets_eval_testing.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/datasets_eval_testing.py",
+          "bytes": 922,
+          "sha256": "0d4fc8f1076cb874fc6028a4e90e8e334b13e3c1f76c9d58629e2068861379b5"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/demo_cross_augmentation.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/demo_cross_augmentation.py",
+          "bytes": 2327,
+          "sha256": "eb7913f17f39759870fc894829f4da51c670ffc2af130809e6b786c969c86072"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/demo_intra_augmentation.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/demo_intra_augmentation.py",
+          "bytes": 1694,
+          "sha256": "218bd5881ba98b01beb1e09a093819753e61afbe1f3f9abf6f6bcfc3d781dae7"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/download_mirst500.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/download_mirst500.py",
+          "bytes": 1563,
+          "sha256": "e32f8394564ea7c42cff3ea061fb6d069da3f8c7556eaf48618ee7468572dc3d"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/inspecting_slakh_bass.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/inspecting_slakh_bass.py",
+          "bytes": 1242,
+          "sha256": "560a2aedc92e5251fe0377d8bbfb351992e12a4610fa984425df30154e50e0f6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/label_smoothing.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/label_smoothing.py",
+          "bytes": 1739,
+          "sha256": "a81b228481fada9947586f42d35db3d1e5c392935d1e8c87042c9dc21149120b"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/multi_channel_seqlen_stats.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/multi_channel_seqlen_stats.py",
+          "bytes": 5406,
+          "sha256": "703e8124ee47d8b37cf9dd546232727bd6be16b85b0cd228f8e7a4fa39323843"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/npy_speed_benchmark.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/npy_speed_benchmark.py",
+          "bytes": 5356,
+          "sha256": "760e15400c6e48c392b3d39ca2f2e85c5b317836050c4ac988e14621565bca7e"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/perceivertf_inspect.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/perceivertf_inspect.py",
+          "bytes": 21001,
+          "sha256": "fbece7a84557e80bca1dc23ef29a2a484c5c627d2350614d9e5b2eee61d0e5b1"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/perceivertf_multi_inspect.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/perceivertf_multi_inspect.py",
+          "bytes": 26291,
+          "sha256": "dfdf422eeada9bec1849de3bc31637ec20d5b8a2fd129b2ffbe8ebbb6108347d"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/pitch_shift_benchmark.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/pitch_shift_benchmark.py",
+          "bytes": 5843,
+          "sha256": "ea36415031b6c5468b9fde02dbfb73a2dc40e8321023209cd7164d9e6abc74c7"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/remove_silence_musicnet_midi.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/remove_silence_musicnet_midi.py",
+          "bytes": 1116,
+          "sha256": "c27a273dc129b3d4b6d6f54a0f77803eed3e03bd921c36343fbad3d1092fe62d"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/rotary_positional_embedding.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/rotary_positional_embedding.py",
+          "bytes": 6938,
+          "sha256": "28a96cee77be4d47f8b0d8ded522a0aa2164f0e1ca006a1b3645ae9677cf5fff"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/swap_channel.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/swap_channel.py",
+          "bytes": 3823,
+          "sha256": "f03d3747374e32c653d7016b93ee575d62d64419c816869450f355ac91a7ff2c"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/t5_dev.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/t5_dev.py",
+          "bytes": 1342,
+          "sha256": "c88e50fc80473b4680ac739ecafb2c01c93308d0935fe5541fe7507401e7c228"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/t5perceiver.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/t5perceiver.py",
+          "bytes": 19888,
+          "sha256": "c94f10dea2defa8c9014e22de3ae35b473e737ed9f50f951d4c7b10944de3d79"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/unimax_sampler/demo.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/unimax_sampler/demo.py",
+          "bytes": 681,
+          "sha256": "94a05272a8481bacdf60d5b02946a29002dfad791af13c87f357ca67223f7a93"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/extras/unimax_sampler/unimax_sampler.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/extras/unimax_sampler/unimax_sampler.py",
+          "bytes": 5761,
+          "sha256": "a3a65e027724de6bbe590ee496c559ea5502e250fbb4791c006d7c2d85aa67c5"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/install_dataset.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/install_dataset.py",
+          "bytes": 13234,
+          "sha256": "6478c22021c9af2a8b2eb9be29fc7b5543e0db77afca2694f4c3618572a3e6e5"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/RoPE/RoPE.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/RoPE/RoPE.py",
+          "bytes": 10401,
+          "sha256": "b8046efd8f898b1c3cc157819b0371e7823d447cf506bc68d7692bc9a7ce008a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/conformer_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/conformer_helper.py",
+          "bytes": 8455,
+          "sha256": "ee1ecd79a1115bd8de114412261295f10d63984e4d4898d5fdf32ca983da6491"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/conformer_mod.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/conformer_mod.py",
+          "bytes": 18482,
+          "sha256": "c15da582b655ac099bddfc114c246e570300fecaa142995145c210efedf18de7"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/conv_block.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/conv_block.py",
+          "bytes": 9295,
+          "sha256": "f99cb054e1772c5c8ad882284c60ebdbdd196314f45129d496e277c9606ad0c4"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/ff_layer.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/ff_layer.py",
+          "bytes": 10376,
+          "sha256": "b098073babb815634f36587a7a944edf6b755c2b3bac11ba574a172cc09643e0"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/init_train.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/init_train.py",
+          "bytes": 14240,
+          "sha256": "3affcde16839445bb95c04988e2e177a657adfd3b0329e51983b56f1493833d1"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/lm_head.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/lm_head.py",
+          "bytes": 1498,
+          "sha256": "458891fcc0620c4b2b6aea1ed91d9dbb020f5dcb53aa09cbefa7a10cabb651f0"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/lr_scheduler.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/lr_scheduler.py",
+          "bytes": 2990,
+          "sha256": "8d38d649004e7f07e1ca6c807e84f8c45fb3a4da94e046004c4cf39094111162"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/ops.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/ops.py",
+          "bytes": 3556,
+          "sha256": "c169ce23fcd0251354786313ba8409aaba918fcecf15cec8a94f7889916e6cc3"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/optimizers.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/optimizers.py",
+          "bytes": 8679,
+          "sha256": "95b8bf82a1b0ef834a7ad492c96e120f78689395e0b148e71bbb5dfdef42d106"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/perceiver_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/perceiver_helper.py",
+          "bytes": 16384,
+          "sha256": "c23aa7ec1fa368a0a17ed318891ae3967d798fcde9d210bd10fe864b1af17d4f"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/perceiver_mod.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/perceiver_mod.py",
+          "bytes": 40849,
+          "sha256": "68e899abc3d620d5913b0f0d336a8494b8211d0577e432386799b072ad5f1e2e"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/pitchshift_layer.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/pitchshift_layer.py",
+          "bytes": 24312,
+          "sha256": "38a5be7559bfa18f0e90985e416ab6c9830050d68f35b854472f406d953360aa"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/positional_encoding.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/positional_encoding.py",
+          "bytes": 11684,
+          "sha256": "f2edca87fdc418bc48bad1105733a56dea5d940f064d074db0b5fa19544b87fe"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/projection_layer.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/projection_layer.py",
+          "bytes": 13549,
+          "sha256": "cedc45baec4e112fc6f64d081aaf8cfe8764a5d767eaa07defc9c988dba1da1a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/spectrogram.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/spectrogram.py",
+          "bytes": 8182,
+          "sha256": "772c8e32855ce9bc5990dec310cfdc35505629ce4f91da4d4276a1bed01216f6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/t5mod.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/t5mod.py",
+          "bytes": 29365,
+          "sha256": "2cedcbdc4d0abef869f99bff624508ca7e90a20f585f59f418af5ff19e25f147"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/t5mod_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/t5mod_helper.py",
+          "bytes": 6720,
+          "sha256": "118d9aff99511d0e706d55eec27795c5fdaa84c6e62587377d4c982097e47dea"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/model/ymt3.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/model/ymt3.py",
+          "bytes": 50131,
+          "sha256": "a7c83aa71ddfa0ac3b51fc7e98606a7416715a053f02c118a6c957dff4079c61"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/requirements.txt",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/requirements.txt",
+          "bytes": 238,
+          "sha256": "1b3eb38392cf065db1472abf378cdfe6a2c5f214c3b906208f4da3c730ee9ac5"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/test.py",
+          "bytes": 14989,
+          "sha256": "3c75d9eac01a8c527cac79c09e47159feed8d66b0232efe39365c972c57b73ea"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/assert_fns.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/assert_fns.py",
+          "bytes": 2642,
+          "sha256": "fae43c713964cb0041efcf713315f229032ed76bb54d6d059168f4788ba498af"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/audio_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/audio_test.py",
+          "bytes": 5136,
+          "sha256": "b9183c51489dee62853d3e74d6731180a13a8bec411b814bb42ce8d50712b813"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/event2note_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/event2note_test.py",
+          "bytes": 9704,
+          "sha256": "f74b4794e4aba37d8001db4189bb9698eea98df2fb05c3ffda4de08e1a4705d3"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/event_codec_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/event_codec_test.py",
+          "bytes": 5886,
+          "sha256": "6ffdaf204d19bf56b41bf06c9ef8e9c221c370992e5bea52a88082566e1ecdc6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/metrics_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/metrics_test.py",
+          "bytes": 4690,
+          "sha256": "4429b496eb5e5c1eaeff9027ca6effecb4a32220aa24b1a29e134d8c14e95c84"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/midi_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/midi_test.py",
+          "bytes": 3062,
+          "sha256": "33c29b7230b7fcfb0a3facac6015029407d4d044624eff6eaf7c3239bb9a63ea"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/model/ops_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/model/ops_test.py",
+          "bytes": 491,
+          "sha256": "572ab462183ec0c9cac22d42e0e5cd2661f9f8ab4cd9903a6516714f9c7746ab"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/model/spectrogram_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/model/spectrogram_test.py",
+          "bytes": 774,
+          "sha256": "e8a031199b4709e707693375725ef88a0fe09e7a169ef589bb68787f2729d565"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/note2event_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/note2event_test.py",
+          "bytes": 30148,
+          "sha256": "c8ff95f5ecd2e72992fef3a7339a37582706d5798e8462f123ee4040348ef13a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/note_event_roundtrip_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/note_event_roundtrip_test.py",
+          "bytes": 12471,
+          "sha256": "3037ab1e9bdde5c82aecdb34b7d9996f2abe6b13d9022daabc904a8ed4545079"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/tokenizer_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/tokenizer_test.py",
+          "bytes": 4576,
+          "sha256": "d7f15686eb42ad9b36b5153dea426751114faab3a7672c8ff837df0cd72545ac"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/tests/utils_test.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/tests/utils_test.py",
+          "bytes": 4170,
+          "sha256": "b0f60eed95f5aba8f7643376a5334e11682213c11700157da0c0574546ddc4d0"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/train.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/train.py",
+          "bytes": 17081,
+          "sha256": "9dd8442f96bc0d1fcd4d8abbc16673880cfd5af1cbd4921af85342dc07fe21fe"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/audio.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/audio.py",
+          "bytes": 11279,
+          "sha256": "ac08d1a6509e7f5c5b473cae0e86b6851a60c5dcd44e50c4a4463494d1a76258"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/augment.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/augment.py",
+          "bytes": 39133,
+          "sha256": "05bed9e28f29a5ece00045b206b9b60bcb4b9e64243daa50d119837e549f2852"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/data_modules.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/data_modules.py",
+          "bytes": 9538,
+          "sha256": "782f9382092733eec76863a3fc62a87e482dcf65e29abd6bbe3baa39ba9e86e6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/datasets_eval.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/datasets_eval.py",
+          "bytes": 8932,
+          "sha256": "8992adc5a1a32cc1c77cff23c342fc0c0e211d549cb49d2323d4bf6ed71351c0"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/datasets_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/datasets_helper.py",
+          "bytes": 11583,
+          "sha256": "366818b6fc270ba19b9a0f58d366fc9021e9ca9d6747b289250cac0795ad7d90"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/datasets_train.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/datasets_train.py",
+          "bytes": 33275,
+          "sha256": "ba99402358d22465085d02bb6324593a82aa4cd58c78bd94f43d2fb17bf6710b"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/event2note.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/event2note.py",
+          "bytes": 11968,
+          "sha256": "039ff94e2b7cd022a1ac09dc215fccf6280cf656c1bce0fd16fbd63db187efea"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/event_codec.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/event_codec.py",
+          "bytes": 12636,
+          "sha256": "c487e6c7ac855146dc81a9192efb35a4d45fc8cd42ddaa24a958c4675acbfe48"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/metrics.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/metrics.py",
+          "bytes": 21758,
+          "sha256": "244f2be91a51023081fa41f0537233b68df308e29daca5fc9a2d3e5f70c8076a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/metrics_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/metrics_helper.py",
+          "bytes": 13742,
+          "sha256": "d7a83f42aff34f82f58e4f464be3e1c95e5145ad715c54742a06244c28897eff"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/midi.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/midi.py",
+          "bytes": 17245,
+          "sha256": "5b8cb566bb47a2c94c171d507a071057a5434f944f8a2f4f05f4ab3b1245992f"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/mirdata_dev/datasets/slakh16k.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/mirdata_dev/datasets/slakh16k.py",
+          "bytes": 17079,
+          "sha256": "42492c6dcadf3f3c4251600c9b8641b03644b2894ecb5efbc6568b10ddc1bd6b"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/mirdata_dev/scripts/make_slakh_index.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/mirdata_dev/scripts/make_slakh_index.py",
+          "bytes": 4299,
+          "sha256": "6a1d0e7ebecc6c8b3b1f6c5b6c26712a2a409ad93f82dda1a54e389b1f11b9ec"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/note2event.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/note2event.py",
+          "bytes": 33109,
+          "sha256": "7aea803c628f98a26b248f8c6b886db48717aa8b0e68c89293b6bd6dfb94c7ed"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/note_event_dataclasses.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/note_event_dataclasses.py",
+          "bytes": 2528,
+          "sha256": "6ce49b909191178255fffcf539c01f1c8ec0e4f1adcb207cfd0c811a52bc1f40"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/dataset_stats.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/dataset_stats.py",
+          "bytes": 1449,
+          "sha256": "08d9acd44a82ace6c44993e7c956193c402b9fee079653b84aa2e10946e26ff6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/generate_dataset_stats.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/generate_dataset_stats.py",
+          "bytes": 2139,
+          "sha256": "faef71c46bc54e2a22c30ae037866f9a00e18300894b659af1a6a4e5d05f7b86"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_cmedia.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_cmedia.py",
+          "bytes": 11094,
+          "sha256": "e24d5388a57931fa07cbd071eaba22d9853427dbf51dc99718221474add9c7ce"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_egmd.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_egmd.py",
+          "bytes": 6905,
+          "sha256": "cd6c7f9b73a79e3cb0f64a0fdbb647f7102fe096e02a62c07cca3747cb39aa4e"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_enstdrums.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_enstdrums.py",
+          "bytes": 19617,
+          "sha256": "634eac84f50e2bc50cd9dd6177ee9c4e8dc9af713184529e01f292bc120b03c6"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_geerdes.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_geerdes.py",
+          "bytes": 20549,
+          "sha256": "031d98aa39cf81a93dbfbec3ae5c6a670c1454247b84245908363d5bba066b5a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_guitarset.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_guitarset.py",
+          "bytes": 17257,
+          "sha256": "0ee687f3b5c5072462c79ea9925da3f4a527aecd09bf8ac85e1cf049c66091c2"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_idmt_smt_bass.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_idmt_smt_bass.py",
+          "bytes": 10263,
+          "sha256": "8591bfcff9b28d654d09067aa239aea7975354d695dc9705f034af958df66b34"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_maestro.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_maestro.py",
+          "bytes": 6362,
+          "sha256": "09d7334c9853708f2c49882c41d63d40b59234ce9adcab86a764f88d8a6f717b"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_maps.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_maps.py",
+          "bytes": 6869,
+          "sha256": "b4ca18c337f4636c6b0898bfa4669719ab6bfdb60dc0f29c67005a82082bacc2"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_mir1k.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_mir1k.py",
+          "bytes": 4106,
+          "sha256": "442f35be292ee35600c669ac784a53fa9cd303f3bf1ec04d89e844f71b36bdba"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_mir_st500.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_mir_st500.py",
+          "bytes": 10342,
+          "sha256": "7fd6c15995fed9190c9a670f412a964d03ab05a5d0b333a2894c342fd51e98eb"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_musicnet.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_musicnet.py",
+          "bytes": 23483,
+          "sha256": "22783e68aa0e18defa8b96965c931a679fc731acc4e782945db36179a235aed3"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_rnsynth.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_rnsynth.py",
+          "bytes": 13593,
+          "sha256": "8156918d90d61b5c84b60511d8472e4d3788875f2c247cd6fc62ff323becec75"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_rwc_pop.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_rwc_pop.py",
+          "bytes": 5443,
+          "sha256": "4796d3647ea4f5d7dcf4c1723033fb1ff895327236067ecc3df07ccc32f778fc"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_rwc_pop_full.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_rwc_pop_full.py",
+          "bytes": 12849,
+          "sha256": "10deeb5dfc3bf64b6785ce967f2ad28dcbf507babac474f34573ad5687898e0a"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_slakh.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_slakh.py",
+          "bytes": 9796,
+          "sha256": "f9dace6bdc22a5104260b1f79b1e32445d6ac99688830de60bca8650c5d2f46b"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/preprocess/preprocess_urmp.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/preprocess/preprocess_urmp.py",
+          "bytes": 9195,
+          "sha256": "461485b2662fc25a8ffa1e5be16c5717bebefb4293420f0eec4bdf2705485d76"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/task_manager.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/task_manager.py",
+          "bytes": 20055,
+          "sha256": "5e480366febd0250e92eb25ca78f906cc0d61144814adce18ecce642412e5669"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/tokenizer.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/tokenizer.py",
+          "bytes": 17948,
+          "sha256": "81c691cdc49084b3e65f5a722686a61b769a2d3169830cf04c1fe6bbc97fa8a8"
+        },
+        {
+          "path": "reconstruction/yourmt3/amt/src/utils/utils.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/utils/utils.py",
+          "bytes": 21763,
+          "sha256": "eb9412923ea9a7a194ab38d433f2f00b017daf1ac1181b3162a8d3bfe8c18872"
+        },
+        {
+          "path": "reconstruction/yourmt3/model_helper.py",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/model_helper.py",
+          "bytes": 14446,
+          "sha256": "47706291e10a0d25aef768ef276de3bfcdf98175141d57802b571917c6de4d3a"
+        },
+        {
+          "path": "reconstruction/yourmt3/requirements.txt",
+          "url": "https://huggingface.co/spaces/mimbres/YourMT3/resolve/5e66c1ea173a8186e0d20432b841d3180cc015b5/requirements.txt",
+          "bytes": 319,
+          "sha256": "d13e950f5875b8b9d9c5c578e83dcf9f89f02b75a5d609029282a7b196793447"
+        },
+        {
+          "path": "reconstruction/yourmt3/download-manifest.json",
+          "bundled": "model-metadata/yourmt3.json",
+          "bytes": 17959,
+          "sha256": "e6820d1a0f2a2fc5186409e8274c66a7d08b895a671cfd6685cbdbcbeac44b71"
+        },
+        {
+          "path": "reconstruction/adt-str/README.md",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/README.md",
+          "bytes": 1520,
+          "sha256": "41f73c351dc10452a57694122850282616971b3bc7d284dfe7625bb5bca29ebd"
+        },
+        {
+          "path": "reconstruction/adt-str/adt_config.yaml",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/adt_config.yaml",
+          "bytes": 2659,
+          "sha256": "a565a66cbb39b03e83eb29babaf474ba83bd4500ae1025868c9f65f84d2d6a3f"
+        },
+        {
+          "path": "reconstruction/adt-str/adt_transcriber.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/adt_transcriber.py",
+          "bytes": 11631,
+          "sha256": "279e2b4bbe0a5867b55027f0f1a4632c20281e7c8ae21125fefaf1e1cf4afae3"
+        },
+        {
+          "path": "reconstruction/adt-str/build_model.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/build_model.py",
+          "bytes": 3566,
+          "sha256": "f7be1ae126c78fbe330ab42bebd48eaa79b806ad71ca9f4950615ef16b8caf97"
+        },
+        {
+          "path": "reconstruction/adt-str/config.json",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/config.json",
+          "bytes": 405,
+          "sha256": "645ff73607cf8cebc71da07ad0016740cf82043fa56a62be4783074c8550cee9"
+        },
+        {
+          "path": "reconstruction/adt-str/config.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/config.py",
+          "bytes": 2495,
+          "sha256": "4e18475062bef94b035f8cbf46e799d9b9c1fd9f06506e5f31770b9f94cd2904"
+        },
+        {
+          "path": "reconstruction/adt-str/inference.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/inference.py",
+          "bytes": 4087,
+          "sha256": "31eb136554309487fa215ce7f9743c858c1fe3919f1aecc644aa97e1f254f7b5"
+        },
+        {
+          "path": "reconstruction/adt-str/model.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/model.py",
+          "bytes": 18855,
+          "sha256": "797c39feb53601f1a82a9118b26ffc85400e77e6bbaed1227fe2bf0f823d8124"
+        },
+        {
+          "path": "reconstruction/adt-str/modules/clap_encoder.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/modules/clap_encoder.py",
+          "bytes": 4115,
+          "sha256": "2581fc629eeee0f7575a210258377e4832959f79d88c686fe00aafc5e1979e26"
+        },
+        {
+          "path": "reconstruction/adt-str/modules/midi_tokenizer.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/modules/midi_tokenizer.py",
+          "bytes": 4039,
+          "sha256": "abda4569529c722a614cb8c34d9222e936616d9a41f2c150047363f7463979b8"
+        },
+        {
+          "path": "reconstruction/adt-str/modules/segmenter.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/modules/segmenter.py",
+          "bytes": 2036,
+          "sha256": "ee8a6eb596b81ff7daa76e897967eb7430ba76b4d72b31d9dc16465227b92cad"
+        },
+        {
+          "path": "reconstruction/adt-str/modules/synthetiser.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/modules/synthetiser.py",
+          "bytes": 11216,
+          "sha256": "66540e9fe11673ff8b92eec72d290ee6c56beb3a740d452221df15c757990b80"
+        },
+        {
+          "path": "reconstruction/adt-str/modules/utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/modules/utils.py",
+          "bytes": 1236,
+          "sha256": "32ac63b44897c98cead8b73931585f331747e5f4f212f997df4fb9bb91f316fe"
+        },
+        {
+          "path": "reconstruction/adt-str/setting-tau-0.8/adt_config.yaml",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/setting-tau-0.8/adt_config.yaml",
+          "bytes": 2659,
+          "sha256": "a565a66cbb39b03e83eb29babaf474ba83bd4500ae1025868c9f65f84d2d6a3f"
+        },
+        {
+          "path": "reconstruction/adt-str/setting-tau-0.8/config.json",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/setting-tau-0.8/config.json",
+          "bytes": 405,
+          "sha256": "645ff73607cf8cebc71da07ad0016740cf82043fa56a62be4783074c8550cee9"
+        },
+        {
+          "path": "reconstruction/adt-str/setting-tau-0.8/model.safetensors",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/setting-tau-0.8/model.safetensors",
+          "bytes": 289134056,
+          "sha256": "f94d1773d929166e0a3f63d305975aa6667512f8a71d7706872e1f8b23ca930b"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/audio_utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/audio_utils.py",
+          "bytes": 2182,
+          "sha256": "48c21d0a9728c192d1731bebc22f8a18850aecdba549aa44f6b3d739d51569f0"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/config_utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/config_utils.py",
+          "bytes": 924,
+          "sha256": "561081be0ddb3947935d24cb8c6d76ebac1662515edef9f931a376311bfbae63"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/drum_audio_render.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/drum_audio_render.py",
+          "bytes": 5665,
+          "sha256": "40e3671f103664707ea2041b10f060b195e85a5afadc84071a0e5c6299de87dc"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/inspect_hdf5.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/inspect_hdf5.py",
+          "bytes": 2192,
+          "sha256": "979675f1717de9a4e1e5214d13d3a96f803303b27e29f935addfe924688a9f6a"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/mapping_utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/mapping_utils.py",
+          "bytes": 8230,
+          "sha256": "f5b1fa9a7958b0108ac34d3e37f22eb6a172f412acd78be5488c381e180a359a"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/midi_utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/midi_utils.py",
+          "bytes": 2641,
+          "sha256": "d7a5d30855f1ec6c2aed3a40e52a0770833b802b2e4134c914368452f92b27fe"
+        },
+        {
+          "path": "reconstruction/adt-str/utils/utils.py",
+          "url": "https://huggingface.co/Pierfrancesco/adt-str/resolve/a33c5c6b191a4ca1e0f6dc22140947485eb36ce8/utils/utils.py",
+          "bytes": 9212,
+          "sha256": "4bbb25dc3a5e3b5a753afc786323570ae5c9a6d5ca6aab177851694032d9bd3c"
+        },
+        {
+          "path": "reconstruction/adt-str/download-manifest.json",
+          "bundled": "model-metadata/adt-str.json",
+          "bytes": 3778,
+          "sha256": "c1895681178fdc82303e99f26f4ce00917722538bd269b8203d9827ee8068e6e"
+        }
+      ],
+      "terms": "模型权重遵循其作者发布的条款；应用代码的许可不替代模型许可。",
+      "download_bytes": 851928270
+    }
+  }
+}

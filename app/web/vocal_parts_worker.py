@@ -7,8 +7,9 @@ import time
 from uuid import uuid4
 
 from .storage import ROOT, atomic_json, now, read_json, signature
-from .stems_worker import _annotate, _load, _runtime, _to_mp3, stems_dir, MODELS
+from .stems_worker import _annotate, _load, _runtime, _to_mp3, stems_dir, MODELS, stem_wav
 from .vocal_parts_runner import MODEL, CONFIG
+from app.runtime_paths import models_root
 
 PARTS = (
     dict(id='lead_vocals', name='主唱（估计）', short='LEAD', instrument='主唱', color='#b6e7ce'),
@@ -22,7 +23,7 @@ def _file_hash(path, size, mtime_ns):
 
 
 def model_fingerprint():
-    folder=Path('D:/ChordStudio/data/models/audio_separator')
+    folder=models_root()/'audio_separator'
     result={}
     for key,name in [('weights_sha256',MODEL),('config_sha256',CONFIG)]:
         path=folder/name
@@ -40,7 +41,7 @@ def valid_manifest(sha, model):
     if model not in MODELS:
         return None
     path=parts_manifest(sha,model)
-    parent=stems_dir(sha,model)/'wav/vocals.wav'
+    parent=stem_wav(sha,model,'vocals')
     if not path.is_file() or not parent.is_file():
         return None
     data=read_json(path)
@@ -65,7 +66,7 @@ def execute(store, job_id):
     audio=store.project_dir(project['id'])/project['audio']
     sha=signature(audio)['sha256'];model=job.get('model') or 'htdemucs'
     if model not in MODELS:raise ValueError('未知的分轨模型')
-    base_dir=stems_dir(sha,model);parent=base_dir/'wav/vocals.wav'
+    base_dir=stems_dir(sha,model);parent=stem_wav(sha,model,'vocals')
     if not parent.is_file() or not (base_dir/'manifest.json').is_file():
         raise ValueError('请先生成人声轨，再细分主唱与和声')
     cached=valid_manifest(sha,model)
@@ -81,7 +82,8 @@ def execute(store, job_id):
     env=os.environ.copy();env['PYTHONUTF8']='1'
     start=time.perf_counter()
     proc=subprocess.run([python,'-B',str(ROOT/'app/web/vocal_parts_runner.py'),
-                         '--input',str(parent),'--outdir',str(target)],cwd=ROOT,
+                         '--input',str(parent),'--outdir',str(target),
+                         '--model-dir',str(models_root()/'audio_separator')],cwd=ROOT,
                         env=env,capture_output=True,text=True,timeout=3600,
                         creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
     (target.parent/(generation+'.log')).write_text(proc.stdout+'\n'+proc.stderr,encoding='utf-8')

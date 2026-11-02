@@ -1,0 +1,274 @@
+{
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "vram_mib": 6141,
+    "driver": "566.24"
+  },
+  "migration": {
+    "audio_seconds": 16,
+    "sample_rate": 44100,
+    "base_tracks_identical": 7,
+    "guitar_tracks_identical": 3,
+    "piano_notes": 41,
+    "piano_midi_bytes_identical": true
+  },
+  "cache": {
+    "combined_request_seconds": [
+      2.59,
+      2.1
+    ],
+    "same_generations_reused": true,
+    "first_inference": false
+  },
+  "installation": {
+    "configuration": "recommended: harmony + strings_v2 + six_stems + guitar_timbre + piano",
+    "files": 108340,
+    "logical_bytes": 13029663378,
+    "unique_file_bytes": 7968381688,
+    "hardlink_reused_bytes": 5061281690,
+    "torch_cuda_links": 2,
+    "includes_download_cache": true,
+    "excludes_user_audio": true,
+    "method": "Deduplicated by filesystem device+file ID; byte size, not cluster allocation",
+    "external_tool_archive_cache": true,
+    "external_prebuilt_wheelhouse": true,
+    "note": "Validation used separate tool archives and wheelhouse; their download storage is outside this measured installation directory."
+  },
+  "stage_cache": {
+    "input_seconds": 16,
+    "runs": {
+      "interrupted": {
+        "completed_stages": [
+          "strings"
+        ],
+        "whole_result_published": false,
+        "process_wall_seconds": 16.995
+      },
+      "resumed": {
+        "info": {
+          "version": "v2",
+          "input": "original mixture",
+          "second_stage_input": "original minus strings",
+          "output_frames": 705600,
+          "sample_rate": 44100,
+          "device": "cuda",
+          "strings_seconds": 0.20299570000497624,
+          "total_seconds": 11.56925699999556,
+          "independent_normalization": false,
+          "stage_cache_hits": {
+            "strings": true,
+            "six_stems": false
+          },
+          "stage_cache_keys": {
+            "strings": "67efb684467b670e520fce94d059a78c4f3d8a96313156022b0889385356a578",
+            "six_stems": "03d56076d5cb8ca5a4bbefcdeb114a6ebe0939d23ddf2f5e90d2e388692d96b4"
+          },
+          "sum_error_max": 0.0697140097618103,
+          "sum_error_relative_db": -34.396537480864225
+        },
+        "tracks": {
+          "strings": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "vocals": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "drums": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "bass": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "other": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "guitar": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "piano": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          }
+        },
+        "process_wall_seconds": 14.625
+      },
+      "cached": {
+        "info": {
+          "version": "v2",
+          "input": "original mixture",
+          "second_stage_input": "original minus strings",
+          "output_frames": 705600,
+          "sample_rate": 44100,
+          "device": "cuda",
+          "strings_seconds": 0.20774519999395125,
+          "total_seconds": 0.6757132000057027,
+          "independent_normalization": false,
+          "stage_cache_hits": {
+            "strings": true,
+            "six_stems": true
+          },
+          "stage_cache_keys": {
+            "strings": "67efb684467b670e520fce94d059a78c4f3d8a96313156022b0889385356a578",
+            "six_stems": "03d56076d5cb8ca5a4bbefcdeb114a6ebe0939d23ddf2f5e90d2e388692d96b4"
+          },
+          "sum_error_max": 0.0697140097618103,
+          "sum_error_relative_db": -34.396537480864225
+        },
+        "tracks": {
+          "strings": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "vocals": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "drums": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "bass": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "other": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "guitar": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "piano": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          }
+        },
+        "process_wall_seconds": 3.927
+      },
+      "forced": {
+        "info": {
+          "version": "v2",
+          "input": "original mixture",
+          "second_stage_input": "original minus strings",
+          "output_frames": 705600,
+          "sample_rate": 44100,
+          "device": "cuda",
+          "strings_seconds": 12.78214910000679,
+          "total_seconds": 21.55593780000345,
+          "independent_normalization": false,
+          "stage_cache_hits": {
+            "strings": false,
+            "six_stems": false
+          },
+          "stage_cache_keys": {
+            "strings": "67efb684467b670e520fce94d059a78c4f3d8a96313156022b0889385356a578",
+            "six_stems": "03d56076d5cb8ca5a4bbefcdeb114a6ebe0939d23ddf2f5e90d2e388692d96b4"
+          },
+          "sum_error_max": 0.0697140097618103,
+          "sum_error_relative_db": -34.396537480864225
+        },
+        "tracks": {
+          "strings": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "vocals": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "drums": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "bass": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "other": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "guitar": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          },
+          "piano": {
+            "frames": 705600,
+            "sample_rate": 44100,
+            "exact_equal": true
+          }
+        },
+        "process_wall_seconds": 24.565
+      }
+    }
+  },
+  "reconstruction_migration": {
+    "audio_seconds": 16,
+    "adapters": {
+      "drums": {
+        "model": "drums",
+        "notes": 14,
+        "midi_bytes_identical": true,
+        "sha256": "17de6803fe78cb8f099f469699e5806430f8fb74b5f5b96eb402b9875494434e"
+      },
+      "other": {
+        "model": "yourmt3",
+        "notes": 5,
+        "midi_bytes_identical": true,
+        "sha256": "8dbe1f8975d016b5f0bcb62d8d265d663408a4621f541395115a3eb11900b8e6"
+      }
+    }
+  },
+  "installed_workflows": {
+    "workflow_results": [
+      {
+        "task": "separate",
+        "status": "completed",
+        "seconds": 73.684,
+        "tracks": 7,
+        "duration": 16.0,
+        "guitar_parts": 3
+      },
+      {
+        "task": "piano",
+        "status": "completed",
+        "seconds": 41.423,
+        "manifest_available": true
+      },
+      {
+        "task": "analyze",
+        "status": "completed",
+        "seconds": 16.299174,
+        "analysis_saved": true,
+        "verification": "job record, project current_run and saved analysis; initial checker used incorrect GET endpoint"
+      }
+    ]
+  }
+}

@@ -113,6 +113,12 @@ def pool_lab(input_path: Path, output_path: Path, beats, chroma=None) -> list:
     if len(bars) < 2:
         raise ValueError("需要至少两个小节才能做小节池化")
     rows, _purity = pool_segments(segments, bars, half=False)
-    Path(output_path).write_text(
-        "\n".join(f"{a:.3f} {b:.3f} {label}" for a, b, label in rows), encoding="utf-8")
+    try:
+        from .source_rows import serialize_rows
+        from .storage import atomic_text
+    except ImportError:
+        from source_rows import serialize_rows
+        from storage import atomic_text
+    _,content=serialize_rows([dict(start=float(a),end=float(b),label=label) for a,b,label in rows])
+    atomic_text(output_path,content)
     return rows

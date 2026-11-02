@@ -12,8 +12,9 @@ import time
 from pathlib import Path
 
 from .storage import ROOT, atomic_json, now, read_json, signature
+from app.runtime_paths import models_root
 from .stems_worker import (_annotate, _load, _runtime, _to_mp3, beat_grid, data_root,
-                           stems_dir, stems_for)
+                           stems_dir, stems_for, stem_wav)
 
 PARTS = (
     dict(id="kick", name="底鼓", short="KICK", instrument="Kick", color="#e6c07b", match="kick"),
@@ -51,13 +52,13 @@ def execute(store, job_id):
     if not base_manifest_path.is_file():
         raise ValueError("请先完成这首歌的分轨，再细分鼓组")
     base = read_json(base_manifest_path)
-    drums = stems_dir(sha, model) / "wav" / "drums.wav"
+    drums = stem_wav(sha, model, "drums")
     if not drums.is_file():
         raise ValueError("这一版分轨没有鼓轨")
 
     target = parts_dir(sha, model)
     manifest_path = parts_manifest(sha, model)
-    if manifest_path.is_file() and not job.get("force"):
+    if manifest_path.is_file() and not job.get("force") and read_json(manifest_path).get("parent_sha256") == signature(drums)["sha256"]:
         manifest = read_json(manifest_path)
         manifest["cached"] = True
         project["drum_parts"] = dict(sha256=sha, model=model, manifest=str(manifest_path),
@@ -79,7 +80,8 @@ def execute(store, job_id):
         env["PYTHONUTF8"] = "1"
         env.setdefault("TORCH_HOME", str(Path.home() / ".cache" / "torch"))
         result = subprocess.run([python, "-B", str(ROOT / "app/web/drumsep_runner.py"),
-                                 "--input", str(drums), "--outdir", str(outdir)],
+                                 "--input", str(drums), "--outdir", str(outdir),
+                                 "--model-dir", str(models_root() / 'drumsep')],
                                 cwd=str(ROOT), env=env, capture_output=True, text=True,
                                 timeout=3600,
                                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
@@ -129,7 +131,7 @@ def execute(store, job_id):
         # the kick. Carry an explicit level factor so the UI can draw quiet parts faintly.
         track["level_factor"] = round(max(0.05, min(1.0, 10 ** ((track["rms_db"] - loudest) / 20))), 3)
     manifest = dict(
-        schema="chord_studio_drum_parts_v1",
+        schema="chord_studio_drum_parts_v1", parent_sha256=signature(drums)["sha256"],
         project_id=project["id"], audio_sha256=sha, model=model,
         created_at=now(), cached=False,
         model_info=dict(name="MDX23C-DrumSep-aufr33-jarredou", device=job.get("device"),

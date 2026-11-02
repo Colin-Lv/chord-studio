@@ -18,6 +18,7 @@ from pathlib import Path
 import numpy as np
 
 from .storage import AUDIO_EXTENSIONS, ROOT, atomic_json, now, read_json, signature
+from app.runtime_paths import data_root, python_path, models_root
 
 STEMS = (
     dict(id="vocals", name="人声", short="VOX", instrument="主唱 / 和声", color="#b6e7ce"),
@@ -33,6 +34,9 @@ STEMS_2 = (
     dict(id="vocals", name="人声", short="VOX", instrument="主唱 / 和声", color="#b6e7ce"),
     dict(id="instrumental", name="伴奏", short="INST", instrument="除人声以外的全部", color="#e6a06f"),
 )
+STEMS_7 = STEMS_6 + (
+    dict(id="strings", name="提琴组", short="STR", instrument="整组提琴", color="#e5b994"),
+)
 MODELS = {
     "htdemucs": dict(id="htdemucs", label="标准（快）", note="4 轨，GPU 约 20 秒，CPU 约 2.5 分钟"),
     "htdemucs_ft": dict(id="htdemucs_ft", label="精细（四模型）", note="4 个微调模型集成，GPU 约 45 秒；MUSDB 十首上并未优于标准版"),
@@ -40,16 +44,15 @@ MODELS = {
     "bs_roformer_sw": dict(id="bs_roformer_sw", label="六轨精细",
                            note="BS-Roformer-SW 六轨，GPU 约 1 分钟；吉他/钢琴为部分估计",
                            stems=6, runner="registry", model_file="BS-Roformer-SW.ckpt"),
+    "strings_v2": dict(id="strings_v2", label="提琴组＋六轨 · 版本 2", stems=7,
+                       note="先提取整个提琴组，再分离其余六轨；已生成结果直接读取。"),
+    "strings_v1": dict(id="strings_v1", label="提琴组＋六轨 · 版本 1", stems=7,
+                       note="保留版本 1 的提琴组音色，与其余六轨共同播放。"),
 }
-GPU_PYTHON = Path(r"D:\ChordStudio\runtime\gpu\Scripts\python.exe")
-MODEL_NAME = "htdemucs"
+GPU_PYTHON = python_path('gpu')
+MODEL_NAME = "strings_v2"
 STEPS_PER_BAR = 16
 ACTIVE_DBFS = -45.0
-
-
-def data_root() -> Path:
-    value = os.environ.get("CHORD_DESKTOP_DATA")
-    return Path(value) if value else Path(r"D:\ChordStudio\data")
 
 
 def stems_dir(sha: str, model: str = MODEL_NAME) -> Path:
@@ -58,11 +61,29 @@ def stems_dir(sha: str, model: str = MODEL_NAME) -> Path:
 
 def stems_for(model: str):
     count = MODELS.get(model, {}).get("stems", 4)
+    if count == 7:
+        return STEMS_7
     if count == 6:
         return STEMS_6
     if count == 2:
         return STEMS_2
     return STEMS
+
+
+def resolve_stem(base: Path, stem: str, manifest=None) -> Path:
+    """Resolve immutable generation paths, with compatibility for legacy manifests."""
+    base = Path(base)
+    if manifest is None:
+        manifest = read_json(base / 'manifest.json') if (base / 'manifest.json').is_file() else {}
+    track = next((t for t in manifest.get('tracks', []) if t['id'] == stem), {})
+    path = (base / track.get('wav', f'wav/{stem}.wav')).resolve()
+    if not path.is_relative_to(base.resolve()):
+        raise ValueError('无效的音轨路径')
+    return path
+
+
+def stem_wav(sha: str, model: str, stem: str) -> Path:
+    return resolve_stem(stems_dir(sha, model), stem)
 
 
 def available_models(sha: str) -> list[dict]:
@@ -78,18 +99,18 @@ def _ffmpeg() -> str:
 
 
 def _model_python() -> str:
-    value = read_json(ROOT / "desktop_runtime.json").get("model_python")
-    return str(value) if value else sys.executable
+    return str(python_path('model'))
 
 
 def _runtime() -> tuple[str, str]:
     """(interpreter, device): the CUDA runtime when importable, else the CPU model python."""
     candidates = []
-    configured = read_json(ROOT / "desktop_runtime.json").get("stems_python")
+    configured = python_path('gpu')
     if configured:
         candidates.append(Path(configured))
     candidates.append(GPU_PYTHON)
-    for candidate in candidates:
+    cpu_candidate = None
+    for candidate in dict.fromkeys(candidates):
         if not candidate.is_file():
             continue
         try:
@@ -98,9 +119,13 @@ def _runtime() -> tuple[str, str]:
                                    capture_output=True, timeout=180)
         except Exception:                              # noqa: BLE001
             continue
-        if probe.stdout.strip() == b"1":
+        if probe.returncode == 0 and probe.stdout.strip() == b"1":
             return str(candidate), "cuda"
-    return _model_python(), "cpu"
+        if probe.returncode == 0 and probe.stdout.strip() == b"0":
+            cpu_candidate = candidate
+    # The audio environment also supports CPU. The small harmony environment
+    # need not contain torch/audio-separator at all.
+    return str(cpu_candidate) if cpu_candidate else _model_python(), "cpu"
 
 
 def _run(cmd, timeout=1800):
@@ -325,6 +350,22 @@ def _latest_beats_run(folder: Path) -> Path | None:
     return candidates[-1].parent if candidates else None
 
 
+def execute_with_parts(store, job_id):
+    """Public separation request: reuse the parent, then fill missing guitar parts."""
+    result = execute(store, job_id)
+    path = store.job_path(job_id)
+    job = read_json(path)
+    if job.get('split_guitar'):
+        from .guitar_parts_worker import execute as split
+        requested_force = job.get('force',False)
+        job.update(force=False,guitar_mode=job.get('guitar_mode') or 'timbre')
+        atomic_json(path,job)
+        try:split(store,job_id)
+        finally:
+            current=read_json(path);current['force']=requested_force;atomic_json(path,current)
+    return result
+
+
 def execute(store, job_id, model_override=None, force_override=None):
     job_path = store.job_path(job_id)
     job = read_json(job_path)
@@ -375,6 +416,9 @@ def execute(store, job_id, model_override=None, force_override=None):
     target = stems_dir(sha, model)
     manifest_path = target / "manifest.json"
     force = bool(job.get("force")) if force_override is None else bool(force_override)
+    if model in {'strings_v1', 'strings_v2'}:
+        from .strings_stems import execute as separate_strings
+        return separate_strings(store, job_id, model, force)
     if manifest_path.is_file() and not force:
         manifest = read_json(manifest_path)
         manifest["cached"] = True
@@ -409,7 +453,8 @@ def execute(store, job_id, model_override=None, force_override=None):
             outdir = work / "registry"
             result = subprocess.run([python, "-B", str(ROOT / "app/web/separator_runner.py"),
                                      "--input", str(source_wav), "--outdir", str(outdir),
-                                     "--model", spec["model_file"]],
+                                     "--model", spec["model_file"],
+                                     "--model-dir", str(models_root() / 'audio_separator')],
                                     cwd=str(ROOT), env=env, capture_output=True, text=True,
                                     timeout=3600,
                                     creationflags=subprocess.CREATE_NO_WINDOW
@@ -427,7 +472,8 @@ def execute(store, job_id, model_override=None, force_override=None):
         if model == "bs_roformer":
             outdir = work / "roformer"
             result = subprocess.run([python, "-B", str(ROOT / "app/web/bsroformer_runner.py"),
-                                     "--input", str(source_wav), "--outdir", str(outdir)],
+                                     "--input", str(source_wav), "--outdir", str(outdir),
+                                     "--model-dir", str(models_root() / 'bsroformer')],
                                     cwd=str(ROOT), env=env, capture_output=True, text=True,
                                     timeout=3600,
                                     creationflags=subprocess.CREATE_NO_WINDOW

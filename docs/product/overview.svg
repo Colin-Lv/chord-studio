@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810"><style>text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#211e19}.muted{fill:#797369}.white{fill:#fff}.small{font-size:21px}.body{font-size:26px}.heading{font-size:34px;font-weight:700}</style>
+<rect width="1440" height="810" fill="#f6f3eb"/>
+<text x="64" y="60" font-size="19" style="fill:#b94720;font-weight:700">CHORD STUDIO</text>
+<text x="64" y="132" font-size="49" style="fill:#211e19;font-weight:700">听见层次，看懂和声，带走 MIDI</text>
+<text x="64" y="181" font-size="23" style="fill:#797369;font-weight:400">从原曲到可试听、可校对、可继续创作的音乐材料</text>
+<rect x="64" y="236" width="1312" height="75" rx="22" fill="#211e19"/>
+<text x="95" y="284" font-size="27" style="fill:#fff;font-weight:700">导入原曲 / 已分离声部</text>
+<text x="820" y="284" font-size="23" style="fill:#aedcc4;font-weight:400">本机分析 · 音频留在你的电脑</text>
+<rect x="64" y="340" width="420" height="273" rx="22" fill="#fff" stroke="#e2ddd3"/>
+<text x="92" y="385" font-size="20" style="fill:#b94720;font-weight:700">01</text>
+<text x="92" y="435" font-size="32" style="fill:#211e19;font-weight:700">和声工作台</text>
+<text x="92" y="487" font-size="22" style="fill:#797369;font-weight:400">按小节查看和弦与持续时间</text>
+<text x="92" y="525" font-size="22" style="fill:#797369;font-weight:400">斜杠低音、主调与段落线索</text>
+<text x="92" y="563" font-size="22" style="fill:#797369;font-weight:400">播放高亮、逐段试听与校对</text>
+<rect x="510" y="340" width="420" height="273" rx="22" fill="#fff" stroke="#e2ddd3"/>
+<text x="538" y="385" font-size="20" style="fill:#b94720;font-weight:700">02</text>
+<text x="538" y="435" font-size="32" style="fill:#211e19;font-weight:700">分轨工作台</text>
+<text x="538" y="487" font-size="22" style="fill:#797369;font-weight:400">提琴组＋六轨，默认一起准备</text>
+<text x="538" y="525" font-size="22" style="fill:#797369;font-weight:400">木／电吉他、主唱／和声细分</text>
+<text x="538" y="563" font-size="22" style="fill:#797369;font-weight:400">静音、独奏、同步播放与下载</text>
+<rect x="956" y="340" width="420" height="273" rx="22" fill="#fff" stroke="#e2ddd3"/>
+<text x="984" y="385" font-size="20" style="fill:#b94720;font-weight:700">03</text>
+<text x="984" y="435" font-size="32" style="fill:#211e19;font-weight:700">MIDI 工作台</text>
+<text x="984" y="487" font-size="22" style="fill:#797369;font-weight:400">钢琴音符、力度与按键时值</text>
+<text x="984" y="525" font-size="22" style="fill:#797369;font-weight:400">保留踏板，按拍点整理节奏</text>
+<text x="984" y="563" font-size="22" style="fill:#797369;font-weight:400">下载 MIDI；整曲重构可选</text>
+<rect x="64" y="650" width="1312" height="88" rx="22" fill="#e5eee7"/>
+<text x="94" y="701" font-size="27" style="fill:#211e19;font-weight:700">统一任务队列</text>
+<text x="345" y="701" font-size="23" style="fill:#211e19;font-weight:400">查看等待与运行任务  /  取消排队  /  安全停止  /  保留已完成结果</text>
+<text x="64" y="780" font-size="18" style="fill:#797369;font-weight:400">功能示意 · 模型预测需要结合原曲校对，自动重构不等于原始音乐工程。</text>
+</svg>

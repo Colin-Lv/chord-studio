@@ -25,6 +25,13 @@
     const index=low-1;
     return index>=0&&time<bars[index].end?index:-1;
   }
+  function barChordLayout(events,bar){
+    const duration=bar.end-bar.start;
+    if(!Number.isFinite(duration)||duration<=0)return [];
+    return timelineParts(events,bar).map(part=>({...part,
+      left:(part.start-bar.start)/duration*100,
+      width:(part.end-part.start)/duration*100}));
+  }
   function rangeSourceEvidence(sources,window) {
     if(!Number.isFinite(window.start)||!Number.isFinite(window.end)||window.start<0||window.end<=window.start)throw new Error("来源对照范围无效");
     return sources.map(source=>{
@@ -207,7 +214,7 @@
     }
     result.problem="";return result;
   }
-  const logic={replaceInterval,copyBars,moveBoundary,reviseGrid,splitBar,mergeBars,overlap,mergeSavedDocument,timeInput,timelineParts,rangeSourceEvidence,barIndexAt,readBrowserDraft,intervalSelection};
+  const logic={replaceInterval,copyBars,moveBoundary,reviseGrid,splitBar,mergeBars,overlap,mergeSavedDocument,timeInput,timelineParts,barChordLayout,rangeSourceEvidence,barIndexAt,readBrowserDraft,intervalSelection};
   if(typeof module!=="undefined"&&module.exports){module.exports=logic;return;}
   const $=id=>document.getElementById(id);
   const node=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
@@ -235,14 +242,14 @@
   function mount(){
     if($("barWorkspace"))return;
     const host=node("section","panel bar-workspace");host.id="barWorkspace";
-    host.innerHTML=`<div class="be-heading"><div><div class="eyebrow">BAR BY BAR · HUMAN REVIEW</div><h3>按小节听辨与修正</h3><p id="beTrack" class="muted"></p></div><div class="be-history"><button id="beUndo" class="secondary" title="撤销 Ctrl+Z">↶ 撤销</button><button id="beRedo" class="secondary" title="重做 Ctrl+Shift+Z">↷ 重做</button></div></div>
+    host.innerHTML=`<div class="be-heading"><div><div class="eyebrow">BAR BY BAR · HUMAN REVIEW</div><h3>小节和弦</h3><p id="beTrack" class="muted"></p></div><div class="be-history"><button id="beUndo" class="secondary" title="撤销 Ctrl+Z">↶ 撤销</button><button id="beRedo" class="secondary" title="重做 Ctrl+Shift+Z">↷ 重做</button></div></div>
       <div id="beSave" class="be-save" role="status" aria-live="polite">正在读取小节编辑记录…</div>
       <div class="be-export"><button id="beExportJson" class="text-button">导出编辑轨 JSON ↓</button><button id="beExportLab" class="text-button">导出编辑轨 LAB ↓</button><span class="muted">导出当前编辑轨草稿 · 不代表服务器已保存或已验证准确</span></div>
       <div id="beBrowserBackups" class="be-browser-backups"></div><div id="beRecovery" class="be-recovery" hidden><p id="beRecoveryText"></p><button id="beRestoreDraft" class="secondary">恢复此浏览器草稿</button><button id="beExport" class="secondary">导出当前草稿</button><button id="beReload" class="secondary">重新读取服务器版本</button></div>
       <div class="be-toolbar"><strong id="beRange">选择小节</strong><button id="beListen" class="secondary">试听范围</button><button id="beLoop" class="secondary" aria-pressed="false">循环范围</button><a id="beKeyListen" class="text-link" target="_blank" rel="noopener">记录所选片段调性 ↗</a><button id="beDisplayToggle" class="secondary" aria-pressed="true" title="切换和弦标记：级数 / 和弦名">级数</button><span id="beNow" class="muted"></span><span class="be-legend"><i class="model"></i>模型 <i class="manual"></i>人工 <i class="score"></i>曲谱参考</span></div>
       <div id="beSections" class="be-sections" aria-label="人工命名歌曲段落"></div>
       <div class="be-section-form"><label>段落名称<input id="beSectionName" placeholder="例如：主歌 1 / 副歌 / 间奏" maxlength="80"></label><button id="beSectionAdd" class="secondary">标注所选范围</button><label>复制到<select id="beCopyTarget" aria-label="复制目标起始小节"></select></label><label>对齐方式<select id="beCopyMode" aria-label="复制和声对齐方式"><option value="relative">小节相对时间</option><option value="beats">人工校正的对应拍点</option></select></label><button id="beCopy" class="secondary">复制和声…</button></div>
-      <p class="be-help">点击左侧小节号选择小节（Shift + 点击扩展范围）；点击任一和弦方框查看该和弦的详情并修改。方框按真实和弦变化切分，长短与持续时长成正比；播放时只高亮当前和弦，页面不会自动滚动。</p>
+      <p class="be-help">点击左侧小节号选择小节（Shift + 点击扩展范围）；点击任一和弦方框查看该和弦的详情并修改。每行一个小节，方框的位置和宽度对应和弦的实际起止时间；跨小节延续的和弦会继续显示。播放时高亮当前方框。</p>
       <div id="beGrid" class="be-grid" role="group" aria-label="歌曲小节编辑网格"></div>
       <div class="be-inspector"><section id="beChordDetail"><div class="section-heading"><h4 id="beEditHeading">所选小节</h4><span class="muted">局部替换，保留前后和弦</span></div><p id="beDetailHint" class="be-detail-hint">点击上方任一和弦方框，查看它的时间、来源与可编辑内容。</p><div id="beEvents" class="be-events"></div><div id="beEditFields" class="be-edit-fields"><label>起点（秒）<input id="beStart" type="number" step="0.001" min="0"></label><label>终点（秒）<input id="beEnd" type="number" step="0.001" min="0"></label><label>和弦<input id="beChord" placeholder="C、Am7、G/B" autocomplete="off"></label><button id="beListenEdit" class="secondary">试听此区间</button><button id="beApply" class="primary">应用局部修改</button></div><p id="beEditStatus" class="status" role="status"></p><div id="beModelCandidates" class="be-model-candidates"></div></section>
       <details class="be-timing"><summary>校正小节 / 起拍与拍号</summary><p class="muted">自动边界需听辨核对；第一个强拍之前可能是前奏、自由节奏或弱起，先保留待确认。修改边界不移动和弦。</p><div class="be-edit-fields"><label>小节起点（秒）<input id="beBoundary" type="number" step="0.001"></label><label>小节编号<input id="beNumber" type="number" step="1"></label><label>类型<select id="beKind"><option value="unconfirmed">待确认区间</option><option value="measure">完整小节</option><option value="pickup">弱起</option></select></label><label>拍号<input id="beMeter" placeholder="待确认；例如 3/4 或 6/8"></label><label class="be-beats-field">拍点（绝对秒，逗号分隔）<input id="beBeats" placeholder="0.5, 1.0, 1.5"></label><button id="beTimingApply" class="secondary">应用网格校正</button></div><div class="be-grid-actions"><label>新小节边界（秒）<input id="beSplitTime" type="number" step="0.001"></label><button id="beUsePlayhead" class="secondary">使用播放位置</button><button id="beSplit" class="secondary">拆分小节…</button><button id="beMerge" class="secondary">合并所选小节…</button><label class="be-renumber"><input id="beRenumber" type="checkbox" checked>从所选起点重新顺序编号</label></div><p class="muted">拆分、合并保留和弦和拍点的绝对时间，新小节拍号需重新确认。合并不能跨越已标注的段落边界。</p></details></div>
@@ -351,15 +358,17 @@
       header.onclick=e=>{s.activeChord=null;select(index,e.shiftKey);if(!e.shiftKey)s.audio.currentTime=bar.start;};
       cell.append(header);
       const strip=node("div","be-chords");strip.setAttribute("role","group");strip.setAttribute("aria-label",`第 ${bar.number} 小节和弦`);
-      for(const part of timelineParts(s.doc.events,bar)){
-        const {start:a,end:b,event}=part,duration=Math.max(.001,b-a);
+      for(const part of barChordLayout(s.doc.events,bar)){
+        const {start:a,end:b,event}=part,duration=b-a;
         const button=node("button",event?`be-chord-cell ${event.origin||"model"}`:"be-chord-cell be-chord-gap");
-        // Width follows the real duration; a small floor keeps 0.05 s fragments readable.
-        button.style.flexGrow=String(Math.max(.3,duration));
+        // Position and hit area use actual time, including off-beat changes.
+        // No minimum width or fixed beat subdivision may shift a boundary.
+        button.type="button";
+        button.style.left=part.left+"%";button.style.width=part.width+"%";
         button.append(node("span","be-chord-name",event?chordLabel(event.label):"—"));
         button.dataset.start=String(a);button.dataset.end=String(b);
         if(event?.label==="N")button.dataset.n="1";
-        button.title=`${time(a)}–${time(b)} · ${duration.toFixed(2)} 秒`+(event?` · ${origins[event.origin]||event.origin} · ${event.label}`:" · 该区间没有和弦预测（不等同于 N）");
+        button.title=`${root.HarmonyTime.range(a,b)} · ${Number(duration.toPrecision(4))} 秒`+(event?` · ${origins[event.origin]||event.origin} · ${event.label}`:" · 该区间没有和弦预测（不等同于 N）");
         button.setAttribute("aria-label",button.title);
         button.onclick=ev=>{
           s.activeChord={start:a,end:b,label:event?.label||"",origin:event?.origin||null,index};
@@ -436,15 +445,14 @@
     if(s!==current)return;const grid=$("beGrid");if(!grid)return;
     const index=barIndexAt(s.doc.bars,time);
     if(index!==s.playingIndex){
-      if(Number.isInteger(s.playingIndex)&&s.playingIndex>=0)grid.children[s.playingIndex]?.classList.remove("playing");
       s.playingIndex=index;
-      if(index>=0)grid.children[index]?.classList.add("playing");
     }
     const strip=index>=0?grid.children[index]?.querySelector(".be-chords"):null;
     let cell=null;
-    for(const el of strip?.children||[]){if(time>=Number(el.dataset.start)-1e-6&&time<Number(el.dataset.end)){cell=el;break;}}
+    for(const el of strip?.children||[]){if(time>=Number(el.dataset.start)&&time<Number(el.dataset.end)){cell=el;break;}}
     if(cell===s.playingCell)return;
-    s.playingCell?.classList.remove("playing");s.playingCell=cell;cell?.classList.add("playing");
+    s.playingCell?.classList.remove("playing");s.playingCell?.removeAttribute("aria-current");
+    s.playingCell=cell;cell?.classList.add("playing");cell?.setAttribute("aria-current","true");
   }
   function playFrame(){frame=null;const s=current;if(!s)return;const t=s.audio.currentTime,loop=s.loop;if(loop&&t>=loop.end-.008){if(loop.repeat){s.audio.currentTime=loop.start;if(s.audio.paused)s.audio.play().catch(e=>message(e.message));}else{s.audio.pause();s.loop=null;}}
     paintPlayback(s,s.audio.currentTime);

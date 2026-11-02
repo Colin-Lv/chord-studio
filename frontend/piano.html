@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>钢琴扒谱 · Chord Studio</title>
+<link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/ui.css">
+<link rel="stylesheet" href="/assets/piano.css?v=1"><script defer src="/assets/piano.js?v=1"></script><link rel="stylesheet" href="/assets/task-queue.css"><script defer src="/assets/task-queue.js"></script>
+</head>
+<body><header class="app-header"><a class="brand" href="/">♮ Chord Studio</a><strong>钢琴扒谱</strong><a id="reconstructionLink" href="/reconstruction">整曲重构</a><a href="/assets/midi-harmony-heart/index.html">使一颗心免于哀伤 · MIDI 和弦对照</a><a href="/">返回和声工作台</a></header>
+<main class="piano-main">
+  <section class="panel"><h1>把钢琴声部带回 MIDI</h1><p class="muted">从原曲提取钢琴，或直接上传钢琴独奏 / 分轨。保留力度、按键时长和踏板，并提供带拍点与小节的版本。</p>
+    <div class="piano-actions"><label>音乐项目 <select id="project" aria-label="音乐项目"></select></label>
+      <label class="upload-label">＋ 上传音频<input id="upload" type="file" accept="audio/*,.m4a,.flac,.wav,.mp3"></label></div>
+    <div class="piano-actions"><label>所选音频是 <select id="inputKind"><option value="mix">原曲（先分离钢琴）</option><option value="piano">钢琴独奏 / 已分离的钢琴轨</option></select></label><button id="generate" class="primary">生成钢琴 MIDI</button><a id="stemsLink" hidden>查看原曲分轨</a></div>
+    <details><summary>小节不准时：指定已知节拍</summary>
+      <p class="muted">默认自动识别并保留速度变化。固定速度的歌曲也可填写已知节拍；这会生成恒定速度网格，不改变音符识别或原始演奏时间。</p>
+      <label><input id="manualGrid" type="checkbox">使用下面的节拍设置</label>
+      <div class="piano-actions"><label>速度 BPM <input id="manualBpm" type="number" min="20" max="300" step="0.01" value="80"></label>
+      <label>第一小节起点（秒）<input id="manualDownbeat" type="number" min="0" max="1200" step="0.01" value="0"></label>
+      <label>拍号 <select id="manualMeter"><option value="4">4/4</option><option value="3">3/4</option><option value="2">2/4</option><option value="5">5/4</option><option value="6">6/4</option><option value="7">7/4</option></select></label></div>
+    </details>
+    <p id="status" role="status">选择音乐开始。</p><p id="error" role="alert" hidden></p>
+  </section>
+  <section id="result" class="panel" hidden>
+    <div class="section-heading"><h2>钢琴转写结果</h2><span id="summary" class="muted"></span></div>
+    <p id="sourceNote" class="muted"></p>
+    <div class="piano-actions"><a id="performance" class="primary" download>下载演奏版 MIDI</a><a id="grid" class="secondary" download>下载节拍整理版 MIDI</a><a id="details" download>下载音符明细</a></div>
+    <p class="muted">演奏版保留识别到的起奏时间；整理版在接近拍点时轻度对齐，保留三连音与可辨识的 swing。两版均保留全部识别音符。导入 DAW 时请选择导入文件的速度图。</p>
+    <div class="piano-actions"><label>试听 <select id="listen"><option value="preview">MIDI 钢琴重放</option><option value="source">转写用的钢琴音频</option><option value="original">原曲</option></select></label><audio id="audio" controls preload="metadata"></audio></div>
+    <p class="muted">重放使用通用钢琴音色，供检查音符与节奏，不代表原曲音色。</p>
+    <div class="piano-actions"><button id="previous" class="secondary">上一段</button><span id="windowLabel"></span><button id="next" class="secondary">下一段</button><label><input id="follow" type="checkbox" checked> 跟随播放</label></div>
+    <canvas id="roll" width="1200" height="470" aria-label="钢琴音符、力度与小节位置"></canvas>
+    <p id="noteDetail" class="muted">点音符查看音高、力度、起止时间和拍内位置；点空白处跳转试听。</p>
+    <details><summary>本版识别范围与限制</summary><ul id="limitations"></ul></details>
+  </section>
+</main></body></html>

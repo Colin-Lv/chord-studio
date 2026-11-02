@@ -51,13 +51,13 @@ def execute(store, job_id):
     job = read_json(job_path)
     spec = dict(job.get("pipeline") or {})
     project_id = job["project_id"]
-    model = spec.get("model") or "bs_roformer_sw"
+    model = spec.get("model") or "strings_v2"
     steps = [("retained10", "analysis")]
     steps.append(("stems", "stems"))
     steps.append(("joint_harmony", "joint_harmony"))
     if spec.get("vocal_parts"):
         steps.append(("vocal_parts", "vocal_parts"))
-    if spec.get("guitar_parts"):
+    if spec.get("guitar_parts", True):
         steps.append(("guitar_parts", "guitar_parts"))
     if spec.get("drums_parts"):
         steps.append(("drums_parts", "drums_parts"))

@@ -22,9 +22,11 @@ import numpy as np
 from chord_recognizer import decode_audio
 
 
-DEFAULT_MADMOM_PYTHON = (
-    Path.home() / ".codex" / "acr_envs" / "madmom39" / "Scripts" / "python.exe"
-)
+try:
+    from .runtime_paths import python_path
+except ImportError:  # Direct CLI invocation: app/ is on sys.path.
+    from runtime_paths import python_path
+DEFAULT_MADMOM_PYTHON = python_path('madmom')
 WORKSPACE_TMP = Path(__file__).resolve().parent.parent / "tmp" / "madmom_bridge"
 
 

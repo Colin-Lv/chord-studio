@@ -4,9 +4,10 @@ from pathlib import Path
 import os,subprocess,time
 from uuid import uuid4
 from .storage import ROOT,atomic_json,now,read_json,signature
-from .stems_worker import MODELS,stems_dir,_runtime,_annotate,_load,_to_mp3
+from .stems_worker import MODELS,stems_dir,_runtime,_annotate,_load,_to_mp3,stem_wav
+from app.runtime_paths import models_root
 
-MODEL_DIR=Path('D:/ChordStudio/data/models/guitar')
+MODEL_DIR=models_root()/'guitar'
 RECIPES={
     'timbre':dict(label='木吉他／电吉他',files=[f'bs_mega_53stem_{k}-guitar_mvsep{s}' for k in ['acoustic','electric'] for s in ['.ckpt','_config.yaml']],
         parts=[('acoustic_guitar','木吉他（估计）','ACOU','#d9b082'),('electric_guitar','电吉他（估计）','ELEC','#c49ce8'),('guitar_residual','吉他余量','REST','#8a9da6')],
@@ -27,7 +28,7 @@ def fingerprint(mode):
 def parts_manifest(sha,model,mode):return stems_dir(sha,model)/'guitar_parts'/mode/'manifest.json'
 def valid_manifest(sha,model,mode):
     if model not in MODELS or mode not in RECIPES:return None
-    base=stems_dir(sha,model);path=parts_manifest(sha,model,mode);parent=base/'wav/guitar.wav'
+    base=stems_dir(sha,model);path=parts_manifest(sha,model,mode);parent=stem_wav(sha,model,'guitar')
     if not path.is_file() or not parent.is_file():return None
     manifest=read_json(path)
     if manifest.get('parent_sha256')!=digest(parent) or manifest.get('fingerprint')!=fingerprint(mode):return None
@@ -42,7 +43,7 @@ def execute(store,jobid):
     model=job.get('model') or 'bs_roformer_sw';mode=job.get('guitar_mode') or 'timbre'
     if model not in MODELS or mode not in RECIPES:raise ValueError('未知的吉他细分选项')
     audio=store.project_dir(project['id'])/project['audio'];sha=signature(audio)['sha256']
-    base=stems_dir(sha,model);parent=base/'wav/guitar.wav'
+    base=stems_dir(sha,model);parent=stem_wav(sha,model,'guitar')
     if not parent.is_file() or not (base/'manifest.json').is_file():raise ValueError('请先生成六轨精细版的吉他轨')
     cached=valid_manifest(sha,model,mode)
     if cached and not job.get('force'):return dict(cached,cached=True)

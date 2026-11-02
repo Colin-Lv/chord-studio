@@ -58,7 +58,8 @@ def fixture_result(client):
     path = directory / "raw.lab"
     path.write_bytes(raw.encode("utf-8"))
     source = dict(id="raw_madmom", name="madmom", path="raw.lab", **signature(path), rows=lab_rows(path))
-    result = dict(schema="harmony_web_analysis_v1", project_id=project["id"], run_id=run_id, sources=[source])
+    result = dict(schema="harmony_web_analysis_v1", project_id=project["id"], run_id=run_id,
+                  audio=project['audio_identity'], sources=[source])
     atomic_json(directory / "analysis.json", result)
     project["current_run"] = run_id
     store.save_project(project)
@@ -198,7 +199,7 @@ def test_static_page_and_reused_notation_are_served(client):
     assert "__ANALYSIS_JSON__" not in script
 
 
-def test_queue_deduplicates_and_publishes_failure(tmp_path, monkeypatch):
+def test_queue_deduplicates_and_publishes_failure(tmp_path, monkeypatch,fake_job_process):
     import subprocess
     import threading
     import time
@@ -210,7 +211,7 @@ def test_queue_deduplicates_and_publishes_failure(tmp_path, monkeypatch):
         assert release.wait(5)
         raise subprocess.CalledProcessError(1, args[0])
 
-    monkeypatch.setattr("app.web.jobs.subprocess.run", failed_command)
+    fake_job_process(failed_command)
     store = Store(tmp_path)
     project = store.create("worker failure")
     jobs = Jobs(store)

@@ -58,9 +58,14 @@ def read_lab(path: Path) -> list[dict]:
 
 
 def write_lab(segments: list[dict], path: Path) -> None:
-    Path(path).write_text(
-        "".join(f'{s["start"]:.6f} {s["end"]:.6f} {s["chord"]}\n' for s in segments),
-        encoding="utf-8")
+    try:
+        from .source_rows import serialize_rows
+        from .storage import atomic_text
+    except ImportError:
+        from source_rows import serialize_rows
+        from storage import atomic_text
+    _,content=serialize_rows([dict(start=s['start'],end=s['end'],label=s['chord']) for s in segments])
+    atomic_text(path,content)
 
 
 def label_state(label: str) -> int:

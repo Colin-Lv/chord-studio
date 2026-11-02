@@ -4,6 +4,8 @@ const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const PROJECT = params.get("project");
 const MODEL = params.get("model");
+if (document.getElementById("pianoLink") && PROJECT) document.getElementById("pianoLink").href = `/piano?project=${PROJECT}`;
+if (document.getElementById("reconstructionLink") && PROJECT) document.getElementById("reconstructionLink").href = `/reconstruction?project=${PROJECT}`;
 const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 const state = {
@@ -75,6 +77,7 @@ async function boot() {
     $("downloadMix").href = `/api/projects/${PROJECT}/audio`;
     $("downloadMix").hidden = false;
     $("backToWorkbench").href = "/";
+    $("stringsBtn").onclick = () => switchModel("strings_v2");
   } catch (error) { showError(error.message); return; }
   try {
     const selected = MODEL || readPreference().model;
@@ -87,6 +90,15 @@ async function boot() {
   }
   await resumeVocalJob();
   await GuitarParts.resume();
+  const active = state.project?.active_job;
+  if (active) {
+    const job = await optionalResult(`/api/jobs/${active}`);
+    if (job?.profile === "stems" && ["running", "queued"].includes(job.status)) {
+      $("pending").hidden = false;
+      $("startSeparate").disabled = true;
+      void followJob(job.id, job.model);
+    }
+  }
 }
 
 function showPending() {
@@ -98,20 +110,23 @@ function showPending() {
 }
 
 async function runSeparation(force, model) {
+  $("startSeparate").onclick = () => runSeparation(!!force, model);
   $("pending").hidden = false;
   $("startSeparate").disabled = true;
   $("startSeparate").textContent = "正在分离…";
   $("pendingTitle").textContent = force ? "重新分离" : "正在分离";
-  $("pendingNote").textContent = "人声 / 鼓 / 贝斯 / 其他四轨；标准模型约 2–3 分钟，精细模型约 2 倍时间。";
+  $("pendingNote").textContent = !model || model.startsWith("strings_")
+    ? "先提取整个提琴组，再分离其余六轨和木／电吉他。已完成的阶段直接复用，结果在下方一起试听。"
+    : "正在按所选模型分离音轨，完成后可逐轨试听与下载。";
   try {
     const job = await api(`/api/projects/${PROJECT}/separate`, {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ force: !!force, model: model || "htdemucs" }),
+      body: JSON.stringify({ force: !!force, model: model || "strings_v2" }),
     });
     if (job.profile && job.profile !== "stems") {
       throw new Error("当前有分析任务在跑，等它结束再点「开始分离」");
     }
-    await followJob(job.id, model);
+    await followJob(job.id, job.model || model);
   } catch (error) {
     $("separateStatus").textContent = error.message;
     $("startSeparate").disabled = false;
@@ -132,7 +147,7 @@ async function followJob(jobId, model) {
       await start(await api(`/api/projects/${PROJECT}/stems${query}`));
       return;
     }
-    if (job.status === "failed" || job.status === "interrupted") {
+    if (["failed", "interrupted", "cancelled"].includes(job.status)) {
       $("separateStatus").textContent = job.error || "分轨失败，请重试。";
       $("startSeparate").disabled = false;
       $("startSeparate").textContent = "重试分离 →";
@@ -176,10 +191,10 @@ async function switchModel(model) {
   if (!model) return;
   const request = ++state.viewRequest;
   if (model === state.manifest?.model_key) return;
-  const option = (state.manifest.model_options || []).find(item => item.id === model);
+  const option = (state.manifest?.model_options || []).find(item => item.id === model);
   if (!option?.ready) {
     const note = option?.note ? `\n\n${option.note}` : "";
-    if (!window.confirm(`用「${option?.label || model}」再分离一遍？${note}`)) {
+    if (!model.startsWith("strings_") && !window.confirm(`用「${option?.label || model}」再分离一遍？${note}`)) {
       $("modelSelect").value = state.manifest.model_key;
       return;
     }
@@ -208,6 +223,11 @@ async function start(manifest, request = ++state.viewRequest) {
   if (request !== state.viewRequest) return;
   resetPlayback();
   state.manifest = manifest;
+  $("stringsSummary").hidden = !manifest.tracks?.some(t => t.id === "strings");
+  $("stringsBtn").textContent = model.startsWith("strings_") ? "定位提琴组" : "提琴组＋六轨";
+  $("stringsBtn").onclick = model.startsWith("strings_")
+    ? () => document.querySelector('.track-head[data-track="strings"]')?.scrollIntoView({behavior:"smooth",block:"center"})
+    : () => switchModel("strings_v2");
   GuitarParts.apply();
   state.drumParts = drums;
   state.vocalParts = state.vocalCatalog[model]?.result || null;
@@ -340,7 +360,7 @@ async function runDrumParts() {
       const row = await api(`/api/jobs/${job.id}`);
       button.textContent = row.stage_label || "正在细分…";
       if (row.status === "completed") break;
-      if (row.status === "failed" || row.status === "interrupted") {
+      if (["failed", "interrupted", "cancelled"].includes(row.status)) {
         throw new Error(row.error || "鼓组细分失败");
       }
     }
@@ -492,7 +512,7 @@ async function watchVocalJob() {
       }
       state.vocalJob = row;
       renderVocalButton();
-      if (["failed", "interrupted"].includes(row.status)) throw new Error(row.error || "人声细分失败，请重试");
+      if (["failed", "interrupted", "cancelled"].includes(row.status)) throw new Error(row.error || "人声细分失败，请重试");
       if (row.status === "completed") {
         const model = row.model || "htdemucs";
         const entry = await readVocalResult(model);
@@ -588,7 +608,9 @@ function applyAudioState() {
     if (!audio) continue;
     const audible = state.solo ? state.solo === track.id : !state.muted[track.id];
     audio.muted = reference || !audible;
-    audio.volume = state.master;
+    // Main previews already share the manifest gain. Sub-splits preserve raw parent level.
+    audio.volume = state.master * ((state.manifest.tracks || []).some(t => t.id === track.id)
+      ? 1 : (state.manifest.preview_gain || 1));
   }
   if (state.mix) {
     state.mix.muted = !reference;

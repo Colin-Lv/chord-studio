@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810"><style>text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#211e19}.muted{fill:#797369}.white{fill:#fff}.small{font-size:21px}.body{font-size:26px}.heading{font-size:34px;font-weight:700}</style>
+<rect width="1440" height="810" fill="#f6f3eb"/>
+<text x="64" y="60" font-size="19" style="fill:#b94720;font-weight:700">CHORD STUDIO</text>
+<text x="64" y="132" font-size="49" style="fill:#211e19;font-weight:700">保留声音细节，减少重复等待</text>
+<text x="64" y="181" font-size="23" style="fill:#797369;font-weight:400">独立环境保持已验证的输出，缓存让已完成的工作随时可用</text>
+<rect x="64" y="257" width="420" height="341" rx="22" fill="white" stroke="#e2ddd3"/>
+<text x="94" y="354" font-size="65" style="fill:#b94720;font-weight:700">7 + 3</text>
+<text x="94" y="404" font-size="28" style="fill:#211e19;font-weight:700">条分离音轨</text>
+<text x="94" y="481" font-size="25" style="fill:#211e19;font-weight:400">新旧环境逐采样一致</text>
+<text x="94" y="533" font-size="19" style="fill:#797369;font-weight:400">七轨主分离 + 三轨吉他细分</text>
+<rect x="510" y="257" width="420" height="341" rx="22" fill="white" stroke="#e2ddd3"/>
+<text x="540" y="354" font-size="65" style="fill:#b94720;font-weight:700">41</text>
+<text x="540" y="404" font-size="28" style="fill:#211e19;font-weight:700">个钢琴音符</text>
+<text x="540" y="481" font-size="25" style="fill:#211e19;font-weight:400">MIDI 文件逐字节一致</text>
+<text x="540" y="533" font-size="19" style="fill:#797369;font-weight:400">包含相同的力度、时值与踏板</text>
+<rect x="956" y="257" width="420" height="341" rx="22" fill="white" stroke="#e2ddd3"/>
+<text x="986" y="354" font-size="65" style="fill:#b94720;font-weight:700">2.10 s</text>
+<text x="986" y="404" font-size="28" style="fill:#211e19;font-weight:700">重复分轨请求</text>
+<text x="986" y="481" font-size="25" style="fill:#211e19;font-weight:400">命中已完成结果缓存</text>
+<text x="986" y="533" font-size="19" style="fill:#797369;font-weight:400">相同提琴组与吉他生成版本</text>
+<rect x="64" y="641" width="1312" height="94" rx="22" fill="#e5eee7"/>
+<text x="94" y="682" font-size="24" style="fill:#211e19;font-weight:700">实测场景</text>
+<text x="255" y="682" font-size="23" style="fill:#211e19;font-weight:400">输出一致性：同一段 16 秒歌曲片段，新旧环境顺序运行。</text>
+<text x="255" y="716" font-size="21" style="fill:#797369;font-weight:400">缓存为已完成任务的重复请求耗时；首次推理耗时另计。</text>
+<text x="64" y="780" font-size="17" style="fill:#797369;font-weight:400">实测依据：portable-gpu-parity / portable-guitar-piano-parity / portable-paths-separation-live。</text>
+</svg>
