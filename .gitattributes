@@ -6,3 +6,4 @@
 *.lock -text
 *.in -text
 *.constraints -text
+*.lab -text
